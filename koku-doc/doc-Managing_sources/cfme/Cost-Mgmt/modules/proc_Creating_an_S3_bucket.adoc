@@ -1,0 +1,28 @@
+// Module included in the following assemblies:
+// assembly_Adding_AWS_sources.adoc
+[id="proc_Creating_an_S3_bucket"]
+= Creating an S3 bucket for reporting
+
+// The URL for this procedure needs to go in the UI code in the Sources dialog - need to give to Dan & Boaz.
+
+Cost Management requires an Amazon S3 bucket to store billing reports with permissions configured.
+
+To configure your AWS account for cost and usage reporting:
+
+. In the AWS S3 console, create a new S3 bucket or use an existing bucket.
+. Grant permission to Amazon Billing and Cost Management to deliver reports to your S3 bucket.
+. In the AWS Billing and Cost Management console, create an AWS Cost and Usage report that includes the following values:
++
+----
+Report name: koku
+Time unit: Hourly
+Include: Resource IDs
+Enable support for…: Redshift, QuickSight
+Report path prefix: (leave blank)
+----
+
+See the AWS _Billing and Cost Management_ documentation for more details on configuration.
+
+
+
+
