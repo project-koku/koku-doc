@@ -1,0 +1,53 @@
+[id='Getting_started_Cost_Management']
+//Use prepositions in IDs and filenames?
+= Getting started with Cost Management
+
+To begin monitoring and tracking your cloud costs using Cost Management, you must connect at least one data source to Cost Management.
+
+Configuring user access is also necessary to control which users can access data.
+
+== Adding and removing data sources
+
+Currently, you can use Cost Management to manage costs for Amazon Web Services (AWS) and Red Hat OpenShift Container Platform sources.
+
+////
+Adding a source
+-> Adding an Amazon source
+----> Configuring your Amazon Account
+-------> Create an S3 bucket
+-------> Configure IAM
+-------> Configure SNS notifications
+----> Adding the Amazon account to Cost Management
+-> Adding an Openshift source
+----> Configuring your OCP cluster
+-------> Install the prerequisites on OCP
+-------> Obtain Operator Metering credentials
+-------> Download and configure Usage Collector
+-------> Create a cron job to upload data
+----> Adding the OCP cluster to Cost Management
+Removing a source (own topic)
+////
+
+=== Adding an AWS source
+
+To add an AWS source, complete the following steps.
+
+include::proc_Creating_an_S3_bucket.adoc[leveloffset=+2]
+include::proc_Enabling_AWS_account_access.adoc[leveloffset=+2]
+include::proc_Enabling_SNS_notifications[leveloffset=+2]
+include::proc_Adding_an_AWS_account.adoc[leveloffset=+1]
+
+
+=== Adding an OpenShift Container Platform source
+
+To add an OpenShift Container Platform source, complete the following steps.
+
+
+//=== Removing a source
+// Add instructions later.
+
+
+== Controlling user access
+
+// Write up RBAC topic assembly from Invision mocks and link here
+
