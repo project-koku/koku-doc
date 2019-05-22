@@ -1,5 +1,5 @@
-[id='Limiting_User_Access']
-= Limiting a user's access in Cost Management
+[id='Restricting_User_Access']
+= Restricting user access in Cost Management
 
 ////
 - intro 
