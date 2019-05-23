@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/project-koku/koku-doc.svg?branch=master)](https://travis-ci.org/project-koku/koku-doc)
+
 # Koku-doc README
 
 About
