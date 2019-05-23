@@ -4,20 +4,13 @@ services:
   - docker                  
 
 before_install:            
-  - mkdir -p output
-  - docker pull asciidoctor/docker-asciidoctor
+  - docker pull opennms/asciibinder
 
 script:
-  - docker run -v $TRAVIS_BUILD_DIR:/documents/ --name asciidoc-to-html asciidoctor/docker-asciidoctor asciidoctor -D /documents/output **/*.adoc 
-
-after_error: 
-  - docker logs asciidoc-to-html
-
-after_failure:
-  - docker logs asciidoc-to-html
+  - docker run --rm -v $(pwd):/docs opennms/asciibinder build -l debug 
 
 after_success:      
-  - cd output
+  - cd _preview/ascii_binder/latest/; mv master.html index.html;
   - git init
   - git config user.name "${GH_USER_NAME}"
   - git config user.email "{GH_USER_EMAIL}"
