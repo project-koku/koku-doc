@@ -1,8 +1,18 @@
 [id='Restricting_User_Access']
-= Restricting user access in Cost Management
+= Restricting user access
 
 ////
+WIP structure
 - intro 
 - prerequisites (admin access, which users) (is prereqs a concept module?)
 - procedures - user, role, group, etc 
 - ref - what the user roles mean 
+////
+
+To start configuring user access to various resources, you first need to create a group of users and apply access permissions to the users.
+
+//What kind of access is required to configure access management? Any other prerequisites?
+
+include::modules/con_Access_management.adoc[]
+
+include::modules/proc_Creating_a_group.adoc[]
