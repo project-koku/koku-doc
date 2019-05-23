@@ -460,9 +460,12 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </ul>
 </li>
 <li><a href="#proc_Obtaining_Operator_Metering_login">7. Obtaining Operator Metering login credentials</a></li>
-<li><a href="#Restricting_User_Access">8. Restricting user access</a></li>
-<li><a href="#con_Access_management_concepts">9. Access management concepts</a></li>
-<li><a href="#proc_Creating_a_group">10. Creating a group</a></li>
+<li><a href="#proc_Downloading_and_Configuring_Usage_Collector">8. Downloading and configuring the Usage Collector</a></li>
+<li><a href="#proc_Uploading_data_with_Usage_Collector">9. Uploading data with usage collector</a></li>
+<li><a href="#proc_Adding_an_OCP_cluster">10. Adding your OpenShift Container Platform cluster as a source</a></li>
+<li><a href="#Restricting_User_Access">11. Restricting user access</a></li>
+<li><a href="#con_Access_management_concepts">12. Access management concepts</a></li>
+<li><a href="#proc_Creating_a_group">13. Creating a group</a></li>
 </ul>
 </div>
 </div>
@@ -852,12 +855,231 @@ Cost Management requires an Amazon S3 bucket with permissions configured to stor
 </li>
 </ol>
 </div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="proc_Downloading_and_Configuring_Usage_Collector">8. Downloading and configuring the Usage Collector</h2>
+<div class="sectionbody">
 <div class="paragraph">
-<p>Unresolved directive in doc/assembly_Adding_OCP_sources.adoc - include::modules/proc_Downloading_and_Configuring_Usage_Collector[]
-Unresolved directive in doc/assembly_Adding_OCP_sources.adoc - include::modules/proc_Uploading_Data_with_Usage_Collector.adoc[]</p>
+<p>The Usage Collector connects to your OpenShift cluster and collects usage data required for cost management.</p>
 </div>
 <div class="paragraph">
-<p>Unresolved directive in doc/assembly_Adding_OCP_sources.adoc - include::modules/proc_Adding_an_OCP_cluster.adoc[]</p>
+<p>The Usage Collector is an Ansible playbook wrapped in a minimal script which performs setup and collecting tasks. During the setup phase, configuration is stored for connectivity to the OpenShift cluster and usage report resources are created to enable the ongoing collection of usage data. During the collect phase, usage data is retrieved from the Operator Metering endpoint and compressed into a package that is uploaded for processing by Cost Management via the Red Hat Insights Client.</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Download the Usage Collector on the same system where the Red Hat Insights Client was installed.</p>
+</li>
+<li>
+<p>Navigate to the korekuta-master directory to find the ocp_usage.sh script.</p>
+</li>
+<li>
+<p>Run the ocp_usage.sh script to set up the Usage Collector.</p>
+<div class="paragraph">
+<p>Use the following example, substituting values for your OpenShift API endpoint, Operator Metering namespace, and metering-operator token file path:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre># ./ocp_usage.sh --setup -e OCP_API="https://api.openshift-prod.mycompany.com"  -e OCP_METERING_NAMESPACE="metering" -e OCP_TOKEN_PATH="/path/to/ocp_usage_token"</pre>
+</div>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<div class="title">Note</div>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>If the oc command line is installed in a different location from /usr/bin/oc on your system, specify the path using -e OCP_CLI=&lt;/path/to/oc&gt; when executing the ocp_usage.sh command.</p>
+</div>
+<div class="paragraph">
+<p>+
+You will be prompted for your sudo password and the Ansible playbook will execute to capture the configuration information and create the usage reports on your OCP cluster. When complete you will see the following message:</p>
+</div>
+<div class="paragraph">
+<p>+</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>TASK [setup : Display New Cluster Identifier] **********************************
+ok: [localhost] =&gt; {
+    "msg": "Use the following value, &lt;YOUR_OCP_IDENTIFIER&gt;, for the cluster identifier when configuring an OCP provider in Cost Management."
+}</pre>
+</div>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</li>
+<li>
+<p>Record the cluster identifier and enter it into the field in the user interface.</p>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<div class="title">Note</div>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>The cluster identifier value is also stored in ~/.config/ocp_usage/config.json.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</li>
+</ol>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="proc_Uploading_data_with_Usage_Collector">9. Uploading data with usage collector</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>The Usage Collector retrieves usage data from the Operator Metering endpoint and compresses it into a package that is uploaded for processing by Cost Management via the Red Hat Insights Client. Collection of data is performed via the <em>ocp_usage.sh</em> script.</p>
+</div>
+<div class="paragraph">
+<p>Create a cron job to regularly upload data collected by the Usage Collector to Cost Management.</p>
+</div>
+<div class="admonitionblock important">
+<table>
+<tr>
+<td class="icon">
+<div class="title">Important</div>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>The cron user requires:
+* access to the file with metering-operator token
+* sudo access to interact with the Red Hat Insights client.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>To configure sudo access, add the following to the <em>/etc/sudoers</em> file, substituting <em>ocpcollector</em>  with the cron user:</p>
+<div class="listingblock">
+<div class="content">
+<pre>ocpcollector    ALL=(ALL)    NOPASSWD: ALL</pre>
+</div>
+</div>
+</li>
+<li>
+<p>Open the crontab for the user that will execute this scheduled upload:</p>
+<div class="listingblock">
+<div class="content">
+<pre># crontab -u &lt;username&gt; -e</pre>
+</div>
+</div>
+</li>
+<li>
+<p>Create a crontab entry to run the Usage Collector every 45 minutes:</p>
+<div class="listingblock">
+<div class="content">
+<pre> */45 * * * * /path/to/ocp_usage.sh --collect</pre>
+</div>
+</div>
+</li>
+<li>
+<p>Download the Usage Collector on the same system where the Red Hat Insights Client was installed.</p>
+</li>
+<li>
+<p>Navigate to the korekuta-master directory to find the ocp_usage.sh script.</p>
+</li>
+<li>
+<p>Run the ocp_usage.sh script to set up the Usage Collector.</p>
+<div class="paragraph">
+<p>Use the following example, substituting values for your OpenShift API endpoint, Operator Metering namespace, and metering-operator token file path:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre># ./ocp_usage.sh --setup -e OCP_API="https://api.openshift-prod.mycompany.com"  -e OCP_METERING_NAMESPACE="metering" -e OCP_TOKEN_PATH="/path/to/ocp_usage_token"</pre>
+</div>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<div class="title">Note</div>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>If the oc command line is installed in a different location from /usr/bin/oc on your system, specify the path using -e OCP_CLI=&lt;/path/to/oc&gt; when executing the ocp_usage.sh command.</p>
+</div>
+<div class="paragraph">
+<p>+
+You will be prompted for your sudo password and the Ansible playbook will execute to capture the configuration information and create the usage reports on your OCP cluster. When complete you will see the following message:</p>
+</div>
+<div class="paragraph">
+<p>+</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>TASK [setup : Display New Cluster Identifier] **********************************
+ok: [localhost] =&gt; {
+    "msg": "Use the following value, &lt;YOUR_OCP_IDENTIFIER&gt;, for the cluster identifier when configuring an OCP provider in Cost Management."
+}</pre>
+</div>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</li>
+<li>
+<p>Record the cluster identifier and enter it into the field in the user interface.</p>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<div class="title">Note</div>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>The cluster identifier value is also stored in ~/.config/ocp_usage/config.json.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</li>
+</ol>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="proc_Adding_an_OCP_cluster">10. Adding your OpenShift Container Platform cluster as a source</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Using the information from the previous steps, you can now add your OpenShift Container Platform cluster as a source. After adding an AWS source, the cost and usage data from your OpenShift Container Platform cluster will be processed and made viewable within the Cost Management application.</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>In Cost Management, click <strong>Add source</strong> to open the dialog.</p>
+</li>
+<li>
+<p>In the dialog, select <strong>OpenShift Container Platform</strong> as the source type.</p>
+</li>
+<li>
+<p>Enter a name for the source and click <strong>Next</strong>.</p>
+</li>
+<li>
+<p>Paste your S3 bucket name and click <strong>Next</strong>.</p>
+</li>
+<li>
+<p>Paste the role ARN and click <strong>Add source</strong>.</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>Cost Management will begin collecting cost and usage data from your OpenShift Container Platform cluster. This can take a few days to populate to show on your dashboard.</p>
 </div>
 <div class="paragraph">
 <p>You have completed adding your OpenShift Container Platform account as a source.</p>
@@ -865,7 +1087,7 @@ Unresolved directive in doc/assembly_Adding_OCP_sources.adoc - include::modules/
 </div>
 </div>
 <div class="sect1">
-<h2 id="Restricting_User_Access">8. Restricting user access</h2>
+<h2 id="Restricting_User_Access">11. Restricting user access</h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>To start configuring user access to various resources, you first need to create a group of users and apply access permissions to the users.</p>
@@ -873,7 +1095,7 @@ Unresolved directive in doc/assembly_Adding_OCP_sources.adoc - include::modules/
 </div>
 </div>
 <div class="sect1">
-<h2 id="con_Access_management_concepts">9. Access management concepts</h2>
+<h2 id="con_Access_management_concepts">12. Access management concepts</h2>
 <div class="sectionbody">
 <div class="dlist">
 <dl>
@@ -901,7 +1123,7 @@ Unresolved directive in doc/assembly_Adding_OCP_sources.adoc - include::modules/
 </div>
 </div>
 <div class="sect1">
-<h2 id="proc_Creating_a_group">10. Creating a group</h2>
+<h2 id="proc_Creating_a_group">13. Creating a group</h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>Groups consist of users identified by Red Hat account.</p>
@@ -971,7 +1193,7 @@ Unresolved directive in doc/assembly_Adding_OCP_sources.adoc - include::modules/
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2019-05-23 17:11:50 +0200
+Last updated 2019-05-23 17:59:15 +0200
 </div>
 </div>
 </body>

@@ -51,7 +51,7 @@ Configuring your account involves configuring the following OpenShift Container 
 
 
 include::modules/proc_Obtaining_Operator_Metering_login.adoc[]
-include::modules/proc_Downloading_and_Configuring_Usage_Collector[]
+include::modules/proc_Downloading_and_Configuring_Usage_Collector.adoc[]
 include::modules/proc_Uploading_Data_with_Usage_Collector.adoc[]
 
 
