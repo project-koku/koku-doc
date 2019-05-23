@@ -1,0 +1,14 @@
+<title>Getting Started with Red Hat Cost Management</title>
+<productname>Red Hat Cost Management</productname>
+<productnumber>1.0</productnumber>
+<subtitle></subtitle>
+<abstract>
+    <para>This guide describes how to get started using Cost Management, guiding you from connecting to a cloud source and controlling user access.</para>
+</abstract>
+<authorgroup id="Author_Group">
+        <author>
+                <firstname>Red Hat Cost Management</firstname>
+                <surname>Documentation Team</surname>
+                <email>catalog@redhat.com</email>
+        </author>
+</authorgroup>
