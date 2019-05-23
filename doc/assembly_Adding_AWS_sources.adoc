@@ -32,16 +32,16 @@ Before you can add your AWS account to Cost Management for monitoring, you must 
 . (Optional) An AWS simple notification service (SNS) to trigger processing of cost and usage data when created or updated
 
 
-include::proc_Creating_an_S3_bucket.adoc[]
-include::proc_Enabling_AWS_account_access.adoc[]
-include::proc_Enabling_SNS_notifications.adoc[]
+include::modules/proc_Creating_an_S3_bucket.adoc[]
+include::modules/proc_Enabling_AWS_account_access.adoc[]
+include::modules/proc_Enabling_SNS_notifications.adoc[]
 
 
 
 // This probably needs the title here - 'Adding your AWS account as a source', but I've put the title in the proc topic. Where should it go?
 // Adding an AWS account as a source
 
-include::proc_Adding_an_AWS_account.adoc[]
+include::modules/proc_Adding_an_AWS_account.adoc[]
 
 You have completed adding your AWS account as a source.
 
