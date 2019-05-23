@@ -26,7 +26,7 @@ Execute asciibinder.
 docker run --rm -v $(pwd):/docs opennms/asciibinder build
 ```
 
-View resulting HTML files in `_preview/ascii_binder/latests` directory.
+View resulting HTML files in `_preview/ascii_binder/latest/` directory.
 
 
 Contributing
