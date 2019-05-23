@@ -50,16 +50,16 @@ Configuring your account involves configuring the following OpenShift Container 
 . Creating a cron job to regularly collect and send operator metering usage data to the upload service. 
 
 
-include::proc_Obtaining_Operator_Metering_login.adoc[]
-include::proc_Downloading_and_Configuring_Usage_Collector[]
-include::proc_Uploading_Data_with_Usage_Collector.adoc[]
+include::modules/proc_Obtaining_Operator_Metering_login.adoc[]
+include::modules/proc_Downloading_and_Configuring_Usage_Collector[]
+include::modules/proc_Uploading_Data_with_Usage_Collector.adoc[]
 
 
 
 // This probably needs the title here - 'Adding your OpenShift Container Platform account as a source', but I've put the title in the proc topic. Where should it go?
 // Adding an OpenShift Container Platform cluster as a source
 
-include::proc_Adding_an_OCP_cluster.adoc[]
+include::modules/proc_Adding_an_OCP_cluster.adoc[]
 
 You have completed adding your OpenShift Container Platform account as a source.
 
