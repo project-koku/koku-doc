@@ -25,17 +25,13 @@ Before you can add your AWS account to Cost Management as a data source, you mus
 //ADD LINKS TO PROC TOPICS - this is a preview list//
 . An S3 bucket to store cost and usage data reporting for Cost Management
 . An Identity Access Management (IAM) policy and role for Cost Management to process the cost and usage data
-. (Optional) An AWS Simple Notification Service (SNS) alert to trigger processing of cost and usage data when created or updated
 
 
 include::modules/proc_Creating_an_S3_bucket.adoc[]
 include::modules/proc_Enabling_AWS_account_access.adoc[]
-include::modules/proc_Enabling_SNS_notifications.adoc[]
 
 
-
-// This probably needs the title here - 'Adding your AWS account as a source', but I've put the title in the proc topic. Where should it go?
-// Adding an AWS account as a source
+// This probably needs the title here - 'Adding your AWS account as a source', but I've put the title in the procedure topic. Where should it go?
 
 include::modules/proc_Adding_an_AWS_account.adoc[]
 

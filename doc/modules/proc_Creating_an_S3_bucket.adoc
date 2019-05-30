@@ -14,7 +14,7 @@ To configure your AWS account for cost and usage reporting:
 . In the AWS Billing and Cost Management console, create an AWS Cost and Usage report that includes the following values:
 +
 ----
-Report name: koku
+Report name: cost-management
 Time unit: Hourly
 Include: Resource IDs
 Enable support for…: Redshift, QuickSight
