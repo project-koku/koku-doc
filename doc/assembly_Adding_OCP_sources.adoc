@@ -1,11 +1,7 @@
 [id='Adding_an_OpenShift_source']
 = Adding an OpenShift Container Platform source to Cost Management
 
-To monitor and track your cloud costs using Cost Management, you must first connect a data source to Cost Management.
-
-Currently, you can use Cost Management to manage costs for OpenShift Container Platform and Red Hat OpenShift Container Platform sources.
-
-This section describes how to configure your OpenShift Container Platform cluster to provide Cost Management operator metering usage data. 
+This section describes how to connect your OpenShift Container Platform cluster to the Cost Management application. 
 
 ////
 Adding a source
@@ -18,11 +14,11 @@ Adding a source
 ////
 
 
-To add an OpenShift Container Platform account to Cost Management, you must configure your OpenShift cluster, then add the source in the Cost Management user interface.
+To add an OpenShift Container Platform account to Cost Management, you must configure your OpenShift cluster to provide operator metering usage data, then add the source in the Cost Management user interface.
 
 == Configuring your OpenShift Container Platform cluster
 
-//Should this section be its own assembly with the 3 topics? Then I could just link the last procedure with an include...)
+//Should this section be its own assembly with the 3 topics? Then link the last procedure with an include...)
 
 Before you can add your OpenShift cluster to Cost Management for monitoring, you must configure your OpenShift Container Platform account to allow Cost Management access to metrics. 
 
@@ -33,21 +29,23 @@ Before you can add your OpenShift cluster to Cost Management for monitoring, you
 
 To obtain the OpenShift operator metering usage data, Cost Management requires the following prerequisites installed:
 
-On your OpenShift cluster
+*On your OpenShift cluster*
+
 * OpenShift Container Platform 3.11 or newer
 * Operator Metering
 
-On a system with network access to your OpenShift cluster
+*On a system with network access to your OpenShift cluster*
+
 * Red Hat Insights Client
 * Ansible and EPEL repositories
 * OpenShift command line tools (oc)
 
-Configuring your account involves configuring the following OpenShift Container Platform services:
+For your OpenShift Container Platform cluster to provide metrics to Cost Management: 
 
-//ADD LINKS TO PROC TOPICS - this is a preview list//
-. Obtaining a login token for your metering-operator service account. 
-. Downloading and configuring the Usage Collector Ansible playbook to generate report resources for your OpenShift cluster. 
-. Creating a cron job to regularly collect and send operator metering usage data to the upload service. 
+//ADD LINKS TO PROCEDURE TOPICS - this is a preview list//
+. Obtain a login token for your metering-operator service account. 
+. Download and configure the Usage Collector Ansible playbook to generate report resources for your OpenShift cluster. 
+. Create a cron job to regularly collect and send operator metering usage data to the upload service. 
 
 
 include::modules/proc_Obtaining_Operator_Metering_login.adoc[]
