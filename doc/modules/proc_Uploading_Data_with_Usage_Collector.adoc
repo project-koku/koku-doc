@@ -1,7 +1,7 @@
 // Module included in the following assemblies:
 // assembly_Adding_OCP_sources.adoc
 [id="proc_Uploading_data_with_Usage_Collector"]
-= Uploading data with usage collector
+=== Uploading data with usage collector
 
 // The URL for this procedure needs to go in the UI code in the Sources dialog - need to give to Dan & Boaz.
 

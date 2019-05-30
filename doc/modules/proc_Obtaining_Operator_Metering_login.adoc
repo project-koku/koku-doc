@@ -1,7 +1,7 @@
 // Module included in the following assemblies:
 // assembly_Adding_OCP_sources.adoc
 [id="proc_Obtaining_Operator_Metering_login"]
-= Obtaining Operator Metering login credentials
+=== Obtaining Operator Metering login credentials
 
 // The URL for this procedure needs to go in the UI code in the Sources dialog - need to give to Dan & Boaz.
 

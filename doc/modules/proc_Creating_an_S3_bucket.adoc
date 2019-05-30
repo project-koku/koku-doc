@@ -1,11 +1,11 @@
 // Module included in the following assemblies:
 // assembly_Adding_AWS_sources.adoc
 [id="proc_Creating_an_S3_bucket"]
-= Creating an S3 bucket for reporting
+=== Creating an S3 bucket for reporting
 
 // The URL for this procedure needs to go in the UI code in the Sources dialog - need to give to Dan & Boaz.
 
-Cost Management requires an Amazon S3 bucket to store billing reports with permissions configured.
+Cost Management requires an Amazon S3 bucket with permissions configured to store billing reports.
 
 To configure your AWS account for cost and usage reporting:
 
