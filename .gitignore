@@ -106,6 +106,6 @@ ENV/
 # Mac file store
 .DS_Store
 
-# ascidoc output
-output/
+#asciibinder output
+_preview/
 *.html

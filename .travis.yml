@@ -4,22 +4,15 @@ services:
   - docker                  
 
 before_install:            
-  - mkdir -p output
-  - docker pull asciidoctor/docker-asciidoctor
+  - docker pull opennms/asciibinder
 
 script:
-  - docker run -v $TRAVIS_BUILD_DIR:/documents/ --name asciidoc-to-html asciidoctor/docker-asciidoctor asciidoctor -D /documents/output **/*.adoc 
-
-after_error: 
-  - docker logs asciidoc-to-html
-
-after_failure:
-  - docker logs asciidoc-to-html
+  - docker run --rm -v $(pwd):/docs opennms/asciibinder build -l debug 
 
 after_success:      
-  - cd output
-  - git init
-  - git config user.name "${GH_USER_NAME}"
-  - git config user.email "{GH_USER_EMAIL}"
-  - git add . ; git commit -m "Deploy to GitHub Pages"
-  - git push --force --quiet "https://${GH_TOKEN}@${GH_REF}" master:gh-pages > /dev/null 2>&1
+  - cd _preview/ascii_binder/detached/; sudo mv master.html index.html;
+  - sudo git init
+  - sudo git config user.name "${GH_USER_NAME}"
+  - sudo git config user.email "{GH_USER_EMAIL}"
+  - sudo git add . ; sudo git commit -m "Deploy to GitHub Pages"
+  - test $TRAVIS_BRANCH = "master" && sudo git push --force --quiet "https://${GH_TOKEN}@${GH_REF}" master:gh-pages > /dev/null 2>&1

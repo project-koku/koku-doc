@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/project-koku/koku-doc.svg?branch=master)](https://travis-ci.org/project-koku/koku-doc)
+
 # Koku-doc README
 
 About
@@ -16,20 +18,15 @@ Building Documentation
 
 Download the asciidoctor container.
 ```
-docker pull asciidoctor/docker-asciidoctor
+docker pull opennms/asciibinder
 ```
 
-Create an output directory.
+Execute asciibinder.
 ```
-mkdir -p output
-```
-
-Execute asciidoctor.
-```
-docker run -v ${PWD}:/documents/ --name asciidoc-to-html asciidoctor/docker-asciidoctor asciidoctor -D /documents/output **/*.adoc
+docker run --rm -v $(pwd):/docs opennms/asciibinder build
 ```
 
-View resulting HTML files in _output_ directory.
+View resulting HTML files in `_preview/ascii_binder/latest/` directory.
 
 
 Contributing
