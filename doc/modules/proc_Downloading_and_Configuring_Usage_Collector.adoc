@@ -1,17 +1,17 @@
 // Module included in the following assemblies:
 // assembly_Adding_OCP_sources.adoc
 [id="proc_Downloading_and_Configuring_Usage_Collector"]
-= Downloading and configuring the Usage Collector
+=== Downloading and configuring the Usage Collector
 
 // The URL for this procedure needs to go in the UI code in the Sources dialog - need to give to Dan & Boaz.
 
 The Usage Collector connects to your OpenShift cluster and collects usage data required for cost management.
 
-The Usage Collector is an Ansible playbook wrapped in a minimal script which performs setup and collecting tasks. During the setup phase, configuration is stored for connectivity to the OpenShift cluster and usage report resources are created to enable the ongoing collection of usage data. During the collect phase, usage data is retrieved from the Operator Metering endpoint and compressed into a package that is uploaded for processing by Cost Management via the Red Hat Insights Client.
+The Usage Collector is an Ansible playbook wrapped in a minimal script that performs setup and collecting tasks. During the setup phase, configuration is stored for connectivity to the OpenShift cluster and usage report resources are created to enable the ongoing collection of usage data. During the collection phase, usage data is retrieved from the Operator Metering endpoint and compressed into a package that is uploaded for processing by Cost Management via the Red Hat Insights Client.
 
 . Download the Usage Collector on the same system where the Red Hat Insights Client was installed.
-. Navigate to the korekuta-master directory to find the ocp_usage.sh script. 
-. Run the ocp_usage.sh script to set up the Usage Collector. 
+. Navigate to the _korekuta-master_ directory to find the _ocp_usage.sh_ script. 
+. Run the _ocp_usage.sh_ script to set up the Usage Collector. 
 +
 Use the following example, substituting values for your OpenShift API endpoint, Operator Metering namespace, and metering-operator token file path:
 +
@@ -21,9 +21,9 @@ Use the following example, substituting values for your OpenShift API endpoint, 
 +
 [NOTE]
 ====
-If the oc command line is installed in a different location from /usr/bin/oc on your system, specify the path using -e OCP_CLI=</path/to/oc> when executing the ocp_usage.sh command.
+If the oc command line is installed in a different location from _/usr/bin/oc_ on your system, specify the path using _-e OCP_CLI=</path/to/oc>_ when executing the _ocp_usage.sh_ command.
 +
-You will be prompted for your sudo password and the Ansible playbook will execute to capture the configuration information and create the usage reports on your OCP cluster. When complete you will see the following message:
+You will be prompted for your sudo password and the Ansible playbook will execute to capture the configuration information and create the usage reports on your OpenShift cluster. When complete you will see the following message:
 +
 ----
 TASK [setup : Display New Cluster Identifier] **********************************
@@ -37,6 +37,6 @@ ok: [localhost] => {
 +
 [NOTE]
 ====
-The cluster identifier value is also stored in ~/.config/ocp_usage/config.json.
+The cluster identifier value is also stored in _~/.config/ocp_usage/config.json_.
 ====
 

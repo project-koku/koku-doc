@@ -1,7 +1,7 @@
 // Module included in the following assemblies:
 // assembly_Adding_OCP_sources.adoc
 [id="proc_Uploading_data_with_Usage_Collector"]
-= Uploading data with usage collector
+=== Uploading data with usage collector
 
 // The URL for this procedure needs to go in the UI code in the Sources dialog - need to give to Dan & Boaz.
 
@@ -22,7 +22,7 @@ The cron user requires:
 ocpcollector    ALL=(ALL)    NOPASSWD: ALL
 ----
 +
-. Open the crontab for the user that will execute this scheduled upload:
+. Open the crontab for the user that will execute the scheduled upload:
 +
 ----
 # crontab -u <username> -e
@@ -34,40 +34,4 @@ ocpcollector    ALL=(ALL)    NOPASSWD: ALL
  */45 * * * * /path/to/ocp_usage.sh --collect
 ----
 
-
-
-
-
-
-
-. Download the Usage Collector on the same system where the Red Hat Insights Client was installed.
-. Navigate to the korekuta-master directory to find the ocp_usage.sh script. 
-. Run the ocp_usage.sh script to set up the Usage Collector. 
-+
-Use the following example, substituting values for your OpenShift API endpoint, Operator Metering namespace, and metering-operator token file path:
-+
-----
-# ./ocp_usage.sh --setup -e OCP_API="https://api.openshift-prod.mycompany.com"  -e OCP_METERING_NAMESPACE="metering" -e OCP_TOKEN_PATH="/path/to/ocp_usage_token"
-----
-+
-[NOTE]
-====
-If the oc command line is installed in a different location from /usr/bin/oc on your system, specify the path using -e OCP_CLI=</path/to/oc> when executing the ocp_usage.sh command.
-+
-You will be prompted for your sudo password and the Ansible playbook will execute to capture the configuration information and create the usage reports on your OCP cluster. When complete you will see the following message:
-+
-----
-TASK [setup : Display New Cluster Identifier] **********************************
-ok: [localhost] => {
-    "msg": "Use the following value, <YOUR_OCP_IDENTIFIER>, for the cluster identifier when configuring an OCP provider in Cost Management."
-}
-----
-====
-+
-. Record the cluster identifier and enter it into the field in the user interface. 
-+
-[NOTE]
-====
-The cluster identifier value is also stored in ~/.config/ocp_usage/config.json.
-====
 

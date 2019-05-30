@@ -1,11 +1,7 @@
 [id='Adding_an_AWS_source']
 = Adding an Amazon Web Services (AWS) source to Cost Management
 
-To monitor and track your cloud costs using Cost Management, you must first connect a data source to Cost Management.
-
-Currently, you can use Cost Management to manage costs for Amazon Web Services (AWS) and Red Hat OpenShift Container Platform sources.
-
-This section describes how to configure your AWS account to provide Cost Management operator metering usage data. 
+This section describes how to connect your AWS account to the Cost Management application. 
 
 ////
 Adding a source
@@ -24,12 +20,12 @@ To add an AWS account to Cost Management, you must configure your AWS account to
 
 //Should this section be its own assembly with the 3 topics? Then I could just link the last procedure with an include...)
 
-Before you can add your AWS account to Cost Management for monitoring, you must configure the following services on your AWS account to allow Cost Management access to metrics:
+Before you can add your AWS account to Cost Management as a data source, you must configure the following services on your AWS account to allow Cost Management access to metrics:
 
 //ADD LINKS TO PROC TOPICS - this is a preview list//
 . An S3 bucket to store cost and usage data reporting for Cost Management
 . An Identity Access Management (IAM) policy and role for Cost Management to process the cost and usage data
-. (Optional) An AWS simple notification service (SNS) to trigger processing of cost and usage data when created or updated
+. (Optional) An AWS Simple Notification Service (SNS) alert to trigger processing of cost and usage data when created or updated
 
 
 include::modules/proc_Creating_an_S3_bucket.adoc[]
