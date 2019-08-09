@@ -1,0 +1,36 @@
+= How to contribute to this repository
+
+....
+.
+|
+├── community
+├── downstream
+│   ├── attributes
+|   ├── assemblies
+│   │   ├── assembly-title-1.adoc
+│   │   ├── assembly-title-2.adoc
+│   │   └── modules -> ../modules/
+│   ├── images
+│   │   ├── image-1.png
+│   │   └── image-2.png
+│   ├── modules
+│   │   ├── module-title-1.adoc
+│   │   └── module-title-2.adoc
+|   └── titles
+│
+└── README.adoc
+....
+
+Top-level directories are:
+
+* community: A directory for upstream-specific assemblies and titles.
+* downstream: A directory that stores downstream modules, assemblies, and titles. 
+
+Lower-level directories are:
+
+* attributes: A common directory for attribute files. 
+* assemblies: A directory for all assemblies, each on in its own AsciiDoc tile. Assemblies are collections of modules linked together. 
+* images: A directory for all images and other digital content.
+* modules: A directory for all modules, each one in its own AsciiDoc file.
+* titles: A directory for titles, which are collections of assemblies linked together.
+

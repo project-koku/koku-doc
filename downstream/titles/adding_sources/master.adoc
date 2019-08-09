@@ -1,0 +1,11 @@
+= Adding Sources to Cost Management
+:imagesdir: images
+:numbered:
+
+To use Cost Management to monitor and track your cloud costs, you must first connect a data source to the Cost Management application.
+
+Currently, you can use Cost Management to manage costs for OpenShift Container Platform and Red Hat OpenShift Container Platform sources.
+
+include::assemblies/assembly_adding_aws_sources.adoc[]
+
+include::assemblies/assembly_adding_ocp_sources.adoc[]

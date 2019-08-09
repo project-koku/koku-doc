@@ -1,0 +1,45 @@
+// Module included in the following assemblies:
+// assembly_adding_aws_sources.adoc
+[id="proc_enabling_sns_notifications"]
+=== Enabling SNS Notifications (optional)
+
+// The URL for this procedure needs to go in the UI code in the Sources dialog - need to give to Dan & Boaz.
+
+To make data available as early as possible, AWS can send a Simple Notification Service (SNS) alert to Cost Management when writing or updating cost and usage data. 
+
+To enable SNS alerts:
+
+. Create an SNS topic in the same region as your S3 bucket with the following details:
+* Topic name: _koku-cost_
+* Display name: _koku-cost_
+. Edit the SNS topic policy to include a reference to the S3 bucket created previously. 
+. In the *Advanced view* tab, change the *Condition* portion of the JSON policy to match the below example, replacing _bucket_name_ with the name of your S3 bucket. To save the policy, click *Update policy*.
++
+Before:
++
+----
+"Condition": {
+    "StringEquals": {
+        "AWS:SourceOwner": "AccountID"
+    }
+}
+----
++
+After:
++
+----
+"Condition": {
+  "ArnLike": {
+    "aws:SourceArn": "arn:aws:s3:*:*:bucket_name"
+  }
+}
+----
++
+. Create a subscription for the SNS topic with the following details:
+* Protocol: _HTTPS_
+* Endpoint: _https://_
+. From the AWS S3 console, configure event notifications for your S3 bucket. Add a notification with a name of your choice and the following values:
+* ObjectCreate (All) checkbox: Selected
+* Prefix: (leave blank)
+* Suffix: (leave blank)
+* From *Send to*, enter the name of the SNS topic you just created.

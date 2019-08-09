@@ -1,0 +1,9 @@
+= Getting Started with Red Hat Cost Management
+:imagesdir: images
+:numbered:
+
+include::assemblies/assembly_adding_aws_sources.adoc[]
+
+include::assemblies/assembly_adding_ocp_sources.adoc[]
+
+include::assemblies/assembly_restricting_user_access.adoc[]

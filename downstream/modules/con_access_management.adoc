@@ -1,0 +1,21 @@
+// Module included in the following assemblies:
+// assembly_adding_aws_sources.adoc
+[id="con_access_management"]
+== Access management concepts
+
+//Future: Add a diagram describing this simply.
+
+User::
+A user is a Red Hat account holder. 
+
+Group::
+A group consists of multiple users identified by Red Hat account login. 
+
+Role::
+// Enter definition: A role is...
+Currently, all roles are defined in Cost Management and cannot be created. For a description of each role, click menu:Access Management[Roles].
+
+Policy::
+A policy controls permissions for all users in a group. 
++
+A policy can only be applied to one group. However, groups can have one or more policies.

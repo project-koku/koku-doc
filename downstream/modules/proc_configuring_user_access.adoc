@@ -1,0 +1,30 @@
+// Module included in the following assemblies:
+// assembly_restricting_user_access.adoc
+[id="proc_configuring_user_access"]
+== Configuring user access
+
+To provide a user with access to resources, create a group, add users to the group, then apply one or more policies to the group. Groups consist of users identified by Red Hat account. 
+
+. Click menu:Access Management[Groups] tab, and click *Create a group*.
+. Enter a name and description for the group and click *Next*.
+. Add members to the group by searching by Red Hat account login, and clicking *Add user to list below*. 
++
+[NOTE]
+====
+The Red Hat account login searched must be an exact match.
+====
++
+Continue to add users, and click *Next* when all the users you wish to add to the group are listed in the *Users to add* table. Click *Next*.
+. Create a policy to control permissions for the users in the group.
+.. Enter a name and description for the policy.
+.. Select one or more roles for the group and click *Next*. Select only the permissions the users within your group require.
++
+[NOTE]
+====
+A policy can only be applied to one group. However, groups can have one or more policies.
+====
++
+. Review the details for the group in the confirmation screen and click *Create group* to complete configuration, or click *Back* to revise any details.
+
+//Add result sentence.
+

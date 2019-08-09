@@ -1,0 +1,36 @@
+// Module included in the following assemblies:
+// assembly_adding_oco_sources.adoc
+[id="proc_uploading_data_with_usage_collector"]
+=== Uploading data with usage collector
+
+// The URL for this procedure needs to go in the UI code in the Sources dialog - need to give to Dan & Boaz.
+
+The Usage Collector retrieves usage data from the Operator Metering endpoint and compresses it into a package that is uploaded for processing by Cost Management via the Red Hat Insights Client. Collection of data is performed via the _ocp_usage.sh_ script.
+
+Create a cron job to regularly upload data collected by the Usage Collector to Cost Management.
+
+[IMPORTANT]
+====
+The cron user requires:
+* access to the file with metering-operator token 
+* sudo access to interact with the Red Hat Insights client.
+==== 
+
+. To configure sudo access, add the following to the _/etc/sudoers_ file, substituting _ocpcollector_  with the cron user:
++
+----
+ocpcollector    ALL=(ALL)    NOPASSWD: ALL
+----
++
+. Open the crontab for the user that will execute the scheduled upload:
++
+----
+# crontab -u <username> -e
+----
++
+. Create a crontab entry to run the Usage Collector every 45 minutes:
++
+----
+ */45 * * * * /path/to/ocp_usage.sh --collect
+----
+
