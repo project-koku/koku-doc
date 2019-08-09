@@ -1,5 +1,19 @@
 = How to contribute to this repository
 
+== About this project
+
+Koku is the upstream project for Red Hat Cost Management.
+We welcome all contributors!
+
+This repository contains documentation written in AsciiDoc. For more information on AsciiDoc markup and syntax, see https://asciidoctor.org/docs/asciidoc-syntax-quick-reference/.
+
+To test build the documentation, use Asciidoctor. For more information on installing and using Asciidoctor, see https://asciidoctor.org/.
+
+
+== Modular documentation structure
+
+The following is a map of this repository:
+
 ....
 .
 |
@@ -34,3 +48,8 @@ Lower-level directories are:
 * modules: A directory for all modules, each one in its own AsciiDoc file.
 * titles: A directory for titles, which are collections of assemblies linked together.
 
+=== Modules
+
+Modules are categorized written using templates.
+
+[to be expanded]
