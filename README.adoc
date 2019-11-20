@@ -50,6 +50,12 @@ Lower-level directories are:
 
 === Modules
 
-Modules are categorized written using templates.
+Modules are categorized by content type and written using templates.
 
-[to be expanded]
+Modules can be procedure, concept, or reference topics. The module type is labelled in each file name (for example, `_proc_TOPIC.adoc` for a procedure).
+
+Templates are available in this repository's _modules_ directory to copy and write from.
+
+See the Modular Documentation Reference Guide for information about these file types: https://redhat-documentation.github.io/modular-docs/.
+
+
