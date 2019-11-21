@@ -7,21 +7,31 @@
 
 Cost Management requires an Amazon S3 bucket with permissions configured to store billing reports.
 
-To configure your AWS account for cost and usage reporting:
+Log into your AWS master account to begin configuring cost and usage reporting:
 
-. In the AWS S3 console, create a new S3 bucket or use an existing bucket.
-. Grant permission to Amazon Billing and Cost Management to deliver reports to your S3 bucket.
-. In the AWS Billing and Cost Management console, create an AWS Cost and Usage report that includes the following values:
+
+. In the AWS S3 console, create a new S3 bucket or use an existing bucket. If you are configuring a new S3 bucket, accept the default settings.
+. In the AWS Billing console, create a Cost and Usage report that will be delivered to your S3 bucket. Specify the following values (and accept the defaults for any other values):
 +
 ----
-Report name: cost-management
-Time unit: Hourly
-Include: Resource IDs
-Enable support for…: Redshift, QuickSight
+Report name: _<any-name>_ (note this name as you will use it later)
+Additional report details: Include resource IDs
+S3 bucket: <the S3 bucket you configured previously>
+Time granularity: Hourly
+Enable report data integration for: Amazon Redshift, Amazon QuickSight
 Report path prefix: (leave blank)
 ----
-
++
+[NOTE]
+====
 See the AWS _Billing and Cost Management_ documentation for more details on configuration.
+====
++
+// These steps will need updating for the changes in the global sources flow - ie. enter name, select AWS, select Cost...);
+. In the Cost Management application (cloud.redhat.com):
+.. Navigate to *Settings > Cost Management sources* and click *Add source* to open the wizard.
+.. Provide a name for your source and select *Amazon Web Services (AWS)* and click *Next*.
+.. Paste the name of your S3 bucket and click *Next*.
 
 
 
