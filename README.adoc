@@ -38,7 +38,7 @@ The following is a map of this repository:
 Top-level directories are:
 
 * community: A directory for upstream-specific assemblies and titles.
-* downstream: A directory that stores downstream modules, assemblies, and titles. 
+* downstream: A directory that stores modules, assemblies, and titles relevant to both downstream and upstream. 
 
 Lower-level directories are:
 
@@ -52,10 +52,14 @@ Lower-level directories are:
 
 Modules are categorized by content type and written using templates.
 
-Modules can be procedure, concept, or reference topics. The module type is labelled in each file name (for example, `_proc_TOPIC.adoc` for a procedure).
+Modules can be procedure, concept, or reference topics. The module type is labelled in each file name:
+
+* Procedure: `_proc_TOPIC.adoc`
+* Concept: `_con_TOPIC.adoc`
+* Reference: `_ref_TOPIC.adoc`
 
 Templates are available in this repository's _modules_ directory to copy and write from.
 
-See the Modular Documentation Reference Guide for information about these file types: https://redhat-documentation.github.io/modular-docs/.
+See the _Modular Documentation Reference Guide_ for information about these file types: https://redhat-documentation.github.io/modular-docs/.
 
 
