@@ -1,0 +1,32 @@
+// Module included in the following assemblies:
+// assembly_adding_azure_sources.adoc
+[id="proc_creating_a_storage_account_azure"]
+=== Creating a storage account
+
+// The URL for this procedure needs to go in the UI code in the Sources dialog - need to give to Dan & Boaz.
+
+Cost export data is written to a storage account, which exists within a resource group. The resource group must be accessible by Cost Management in order to read the Azure cost data.
+
+Create a new storage account in Azure to contain the cost data and metrics that Cost Management will collect. This requires a resource group; Red Hat recommends creating a dedicated resource group for this storage account.
+
+. Create a storage account and resource group in your Azure account using the instructions in the See https://docs.microsoft.com/en-us/azure/storage/common/storage-quickstart-create-account?tabs=azure-portal[Azure documentation] _Create a storage account_. 
++
+[IMPORTANT]
+====
+Make a note of the storage account name and resource group. They will be needed in subsequent steps.
+====
++
+. In the Cost Management application (cloud.redhat.com):
+.. Navigate to https://cloud.redhat.com/beta/cost-management/cost-management/sources/ (_Settings > Cost Management Sources_). 
+.. Click *Add source* to open the wizard. 
+.. Provide a name for your source and click *Next*.
+.. Select *Cost Management* for the application, and *Azure* as the source type. Click *Next*.
+.. Enter the storage account name and resource group you just created.
+. In Azure Cloud Shell, run the following command to obtain your Subscription ID: 
++
+----
+$ az account show --query "{subscription_id: id }"
+----
++
+. In the Cost Management application, enter your Subscription ID in the sources wizard and click *Next*.
+
