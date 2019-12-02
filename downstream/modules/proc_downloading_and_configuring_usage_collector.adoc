@@ -3,20 +3,52 @@
 [id="proc_downloading_and_configuring_usage_collector"]
 === Downloading and configuring the Usage Collector
 
-// The URL for this procedure needs to go in the UI code in the Sources dialog - need to give to Dan & Boaz.
+// The URL for this procedure needs to go in the UI code in the Sources dialog.
 
 The Usage Collector connects to your OpenShift cluster and collects usage data required for cost management.
 
-The Usage Collector is an Ansible playbook wrapped in a minimal script that performs setup and collecting tasks. During the setup phase, configuration is stored for connectivity to the OpenShift cluster and usage report resources are created to enable the ongoing collection of usage data. During the collection phase, usage data is retrieved from the Operator Metering endpoint and compressed into a package that is uploaded for processing by Cost Management via the Red Hat Insights Client.
+The Usage Collector is an Ansible playbook wrapped in a minimal script that performs setup and collecting tasks. During the setup phase, configuration is stored for connectivity to the OpenShift cluster and usage report resources are created to enable the ongoing collection of usage data. 
 
-. Download the Usage Collector on the same system where the Red Hat Insights Client was installed.
-. Navigate to the _korekuta-master_ directory to find the _ocp_usage.sh_ script. 
-. Run the _ocp_usage.sh_ script to set up the Usage Collector. 
-+
-Use the following example, substituting values for your OpenShift API endpoint, Operator Metering namespace, and metering-operator token file path:
+During the collection phase, usage data is retrieved from the Operator Metering endpoint and compressed into a package that is uploaded for processing by Cost Management via the Red Hat Insights Client.
+
+. Download the Usage Collector on the same system where the Red Hat Insights Client was installed, using your See https://github.com/project-koku/korekuta/archive/master.zip[browser] or with the following command:
 +
 ----
-# ./ocp_usage.sh --setup -e OCP_API="https://api.openshift-prod.mycompany.com"  -e OCP_METERING_NAMESPACE="metering" -e OCP_TOKEN_PATH="/path/to/ocp_usage_token"
+# curl -LOk https://github.com/project-koku/korekuta/archive/master.zip
+----
++
+. Unzip the tool:
++
+----
+# unzip master.zip
+----
++
+. Navigate to the _korekuta-master_ directory to find the _ocp_usage.sh_ script.
++
+----
+# cd korekuta-master
+----
++
+. Run the _ocp_usage.sh_ script with your cluster’s variables to set up the Usage Collector.
++
+[NOTE]
+====
+To configure the Usage Collector, you need the following information:
+* OpenShift API endpoint (e.g. https://api.openshift-prod.mycompany.com)
+* OpenShift reporting-operator token file path
+* OpenShift Operator Metering namespace (e.g. metering)
+* The URL of the route exposed for the reporting operator in the Operator Metering namespace (e.g. https://metering.metering.api.ocp.com)
+* sudo password for installing dependencies
+====
++
+Use the following example, substituting values for your OpenShift API endpoint, Operator Metering namespace, metering-operator token file path, and Metering API endpoint:
++
+----
+# ./ocp_usage.sh --setup 
+-e OCP_API="https://api.openshift-prod.mycompany.com"  
+-e OCP_METERING_NAMESPACE="metering" 
+-e OCP_TOKEN_PATH="/path/to/ocp_usage_token"
+-e METERING_API="https://metering.metering.api.ocp.com”
 ----
 +
 [NOTE]
@@ -33,7 +65,7 @@ ok: [localhost] => {
 ----
 ====
 +
-. Record the cluster identifier and enter it into the field in the user interface. 
+. Copy the cluster identifier and enter it into the field in the Cost Management application. Click *Next* to move to the next screen in the wizard.
 +
 [NOTE]
 ====
