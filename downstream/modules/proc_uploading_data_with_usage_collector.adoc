@@ -1,11 +1,11 @@
 // Module included in the following assemblies:
 // assembly_adding_oco_sources.adoc
 [id="proc_uploading_data_with_usage_collector"]
-=== Uploading data with usage collector
+=== Uploading data with Usage Collector
 
 // The URL for this procedure needs to go in the UI code in the Sources dialog - need to give to Dan & Boaz.
 
-The Usage Collector retrieves usage data from the Operator Metering endpoint and compresses it into a package that is uploaded for processing by Cost Management via the Red Hat Insights Client. Collection of data is performed via the _ocp_usage.sh_ script.
+The Usage Collector retrieves usage data from the Operator Metering endpoint and compresses it into a package (an OpenShift Container Platform metrics report) that is uploaded for processing by Cost Management via the Red Hat Insights Client. Data collection is performed via the _ocp_usage.sh_ script.
 
 Create a cron job to regularly upload data collected by the Usage Collector to Cost Management.
 
@@ -31,6 +31,10 @@ ocpcollector    ALL=(ALL)    NOPASSWD: ALL
 . Create a crontab entry to run the Usage Collector every 45 minutes:
 +
 ----
- */45 * * * * /path/to/ocp_usage.sh --collect
+*/45 * * * * /path/to/ocp_usage.sh --collect --e OCP_CLUSTER_ID=<YOUR_OCP_IDENTIFIER>
 ----
++
+. In the Cost Management application, click *Next* to move to the confirmation screen.
+. In the Cost Management application, review the details and click *Add source* to finish adding the OpenShift Container Platform cluster.
+
 
