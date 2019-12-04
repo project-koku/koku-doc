@@ -46,6 +46,12 @@ Wait an hour for the data to refresh and be visible in Cost Management.
 
 To view your tags, navigate to a resource in the OpenShift web console. Any assigned labels are listed under the Labels heading, for example: openshift.io/cluster-monitoring=true.
 
-// .Additional resources
+.Additional resources
 
-// * A bulleted list of links to other material closely related to the contents of the procedure module.
+Information about creating OpenShift labels can be found here: 
+
+* https://docs.openshift.com/container-platform/4.1/nodes/nodes/nodes-nodes-working.html#nodes-nodes-working-updating_nodes-nodes-working
+* https://docs.okd.io/latest/architecture/core_concepts/pods_and_services.html#labels
+
+// Add later: For more detailed information on managing tags and labels and planning a tagging strategy, see Using tagging to manage cost data.
+
