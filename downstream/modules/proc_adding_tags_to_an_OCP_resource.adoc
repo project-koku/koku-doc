@@ -1,0 +1,51 @@
+// Module included in the following assemblies:
+//
+// assembly_organizing_cost_data_using_tags.adoc
+
+// Base the file name and the ID on the module title. For example:
+// * file name: proc_adding_labels_to_an_OCP_namespace.adoc
+// * ID: [id="proc_adding_labels_to_an_OCP_namespace"]
+// * Title: = Adding labels to an OpenShift namespace
+
+// The ID is used as an anchor for linking to the module. Avoid changing it after the module has been published to ensure existing links are not broken.
+[id="doing-one-procedure_{context}"]
+// The `context` attribute enables module reuse. Every module's ID includes {context}, which ensures that the module has a unique ID even if it is reused multiple times in a guide.
+= Adding labels to an OpenShift namespace
+// Start the title of a procedure module with a verb, such as Creating or Create. See also _Wording of headings_ in _The IBM Style Guide_.
+
+// This paragraph is the procedure module introduction: a short description of the procedure.
+
+The AWS tag equivalent in OpenShift is a label, which also consists of a key:value pair. Cost Management collects OpenShift tag data from pods and persistent volumes (or persistent volume claims) using Prometheus metrics and Operator Metering.
+
+One method of adding tags to OpenShift resources is to specify labels to add in a template. 
+
+//TODO [Need docs link how to do this]
+// Ask an OpenShift expert to review this -- that this is the best way for OCP 4.3
+
+Or to add labels manually:
+
+.Procedure
+
+To add a label to a namespace in OpenShift:
+
+. In the OpenShift web console, navigate to Administration > Namespaces.
+. Click your Namespace to open the Namespace overview.
+. From the Namespace Overview page, click Actions > Edit labels to open the dialog box showing labels assigned to your project.
+. Enter your labels, for example: openshift.io/cluster-monitoring=true
+. Click Save.
+. Run the Usage Collector script again to refresh the tags:
++
+----
+/path/to/ocp_usage.sh –collect
+----
+
+Wait an hour for the data to refresh and be visible in Cost Management. 
+
+
+.Verification steps
+
+To view your tags, navigate to a resource in the OpenShift web console. Any assigned labels are listed under the Labels heading, for example: openshift.io/cluster-monitoring=true.
+
+// .Additional resources
+
+// * A bulleted list of links to other material closely related to the contents of the procedure module.
