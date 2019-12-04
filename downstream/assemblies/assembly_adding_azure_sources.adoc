@@ -28,6 +28,6 @@ include::modules/proc_creating_a_storage_account_azure.adoc[]
 
 include::modules/proc_creating_a_service_principal_azure.adoc[]
 
-include::modules/proc_configuring_daily_data_exports_azure.adoc[]
+include::modules/proc_configuring_a_daily_export_schedule_azure.adoc[]
 
 You have completed adding your Azure account as a source.

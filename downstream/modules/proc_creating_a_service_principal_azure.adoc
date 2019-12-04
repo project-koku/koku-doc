@@ -1,0 +1,60 @@
+// Module included in the following assemblies:
+// assembly_adding_azure_sources.adoc
+[id="proc_creating_a_service_principal_azure"]
+=== Creating a service principal
+
+// The URL for this procedure needs to go in the UI code in the Sources dialog.
+
+Configuring an Azure Active Directory application and service principal provides Cost Management with the necessary (read-only) access to obtain cost data for Azure resources.
+
+To configure this access, see the Azure guide https://docs.microsoft.com/en-us/azure/active-directory/develop/howto-create-service-principal-portal[_How to: Use the portal to create an Azure AD application and service principal that can access resources_] , and complete the steps in these sections:
+
+. _Create an Azure Active Directory application_
+. _Assign the application to a role_
+. _Certificates and secrets_
+
+Any additional details or customization for Cost Management is described below.
+
+
+. In Azure, create a new Azure Active Directory application.
+* Enter a display name of your choice and default values for all other fields. 
+* Copy the display name to use in the next step.
+. In Azure, assign the application to a role at the subscription scope.
+* Use the subscription you used to create the storage account.
+* Add a new role assignment with the settings:
+** Role:   Storage Blob Data Reader
+** Assign access to:   Azure AD user, group, or service principal
+** Select:  <type the application display name from the previous step>
+. In Azure, create a new application secret.
+* From your application’s page, create a new client secret.
+* Enter a description and click Add.
+* Copy the Value for the secret.
++
+[IMPORTANT]
+====
+The secret value cannot be retrieved again later. Save it to a secure location, as you will need the secret value and application ID to sign in as the application.
+====
+. In the Cost Management application, enter your Azure Active Directory application credentials and client secret.
+. Retrieve these values by running the following command in Cloud Shell:
++
+----
+# command
+----
++
+. Paste your application secret and click *Next*.
+
+
+. In the Cost Management application (cloud.redhat.com):
+.. Navigate to https://cloud.redhat.com/beta/cost-management/cost-management/sources/ (_Settings > Cost Management Sources_). 
+.. Click *Add source* to open the wizard. 
+.. Provide a name for your source and click *Next*.
+.. Select *Cost Management* for the application, and *Azure* as the source type. Click *Next*.
+.. Enter the storage account name and resource group you just created.
+. In Azure Cloud Shell, run the following command to obtain your Subscription ID: 
++
+----
+$ az account show --query "{subscription_id: id }"
+----
++
+. In the Cost Management application, enter your Subscription ID in the sources wizard and click *Next*.
+

@@ -3,7 +3,7 @@
 [id="proc_creating_a_storage_account_azure"]
 === Creating a storage account
 
-// The URL for this procedure needs to go in the UI code in the Sources dialog - need to give to Dan & Boaz.
+// The URL for this procedure needs to go in the UI code in the Sources dialog.
 
 Cost export data is written to a storage account, which exists within a resource group. The resource group must be accessible by Cost Management in order to read the Azure cost data.
 
