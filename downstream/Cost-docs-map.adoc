@@ -1,0 +1,79 @@
+ACCOUNT AND USER ONBOARDING	 --> Getting Started with Cost Management
+
+Introduction	6
+About Cost Management and Koku	6
+Scope	6
+Terms and acronyms	6
+Planning	7
+
+Entitlements	8
+Prerequisites	8
+Adding the necessary entitlements for Cost Management	8
+
+
+[RBAC]
+
+Generating accounts and users	9
+Users in access.redhat.com	9
+Creating extra users in access.redhat.com	9
+Creating groups for Cost Management	11
+Assigning roles via the API	12
+
+[ADDING SOURCES]
+
+Adding sources	18
+
+[STORY]
+- Adding an Amazon Web Services (AWS) source	18
+-- Preparing an S3 bucket for reporting	19
+-- Activating tags for use by the cost management application	20
+-- Enabling account access for cost and usage consumption	20
+
+[STORY]
+- Adding a Microsoft Azure source	22
+-- Creating a storage account	22
+-- Creating a service principal	23
+-- Configure a daily Azure data export schedule	24
+
+[STORY]
+C - Adding an OpenShift Container Platform source	24
+? -- Prerequisites	25
+P -- Obtaining Metering Operator login credentials	26
+P -- Downloading and configuring the Usage Collector	27
+P -- Uploading data with Usage Collector	29
+
+[CONFIGURING TAGGING]
+Organizing cost data using tags [WIP]	30
+How cost management associates tags between sources	30
+Adding a tag to an AWS resource	31
+Adding a tag to an Azure resource	31
+Adding a label to an OpenShift namespace	32
+Finding additional documentation	33
+Appendix	33
+Configuring Operator Metering on OpenShift 4.1 and earlier	33
+Configuring Operator Metering in OpenShift 4.1	34
+Configuring Operator Metering in OpenShift 3.11	36
+Reference
+
+
+-----
+
+Using cost models
+
+- Introduction
+A -- Document Scope       in assembly
+C -- About cost management and Project Koku   ???
+R -- Terminology 
+
+- How Cost Management uses cost models
+C - What is a cost model? 
+C - The cost model workflow 
+
+- Assigning a cost to metrics and usage using a cost model 
+P -- Creating an AWS cost model 
+P -- Creating an OpenShift Container Platform cost model 
+
+
+
+
+
