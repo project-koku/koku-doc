@@ -1,0 +1,39 @@
+// Module included in the following assemblies:
+//
+// assembly_organizing_cost_data_using_tags.adoc
+
+// Base the file name and the ID on the module title. For example:
+// * file name: proc_adding_tags_to_an_AWS_resource.adoc
+// * ID: [id="proc_adding_tags_to_an_AWS_resource"]
+// * Title: = Adding tags to an AWS resource
+
+// The ID is used as an anchor for linking to the module. Avoid changing it after the module has been published to ensure existing links are not broken.
+[id="doing-one-procedure_{context}"]
+// The `context` attribute enables module reuse. Every module's ID includes {context}, which ensures that the module has a unique ID even if it is reused multiple times in a guide.
+= Adding tags to an AWS resource
+// Start the title of a procedure module with a verb, such as Creating or Create. See also _Wording of headings_ in _The IBM Style Guide_.
+
+// This paragraph is the procedure module introduction: a short description of the procedure.
+
+Amazon creates certain tags automatically, like the EC2 instance resource identifier (a number such as i-123456789).
+
+You can also add your own tags at the individual resource level. These tags must be activated for Cost and Usage reporting to export them to the cost management application.
+
+Configure AWS tags for Cost Management using the following steps:
+
+.Procedure
+
+. Create and apply tags to your AWS resources. 
++
+See _User-Defined Cost Allocation Tags_ in the AWS documentation for instructions: https://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/custom-tags.html
++
+. Activate the tags you want to be collected by the cost management application via the Cost and Usage Report. In the AWS Billing console, select the tags you want to activate from the Cost Allocation Tags area. 
++
+See _Activating the AWS-Generated Cost Allocation Tags_ in the AWS documentation for instructions: https://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/activate-built-in-tags.html 
+
+//.Verification steps
+//(Optional) Provide the user with verification method(s) for the procedure, such as expected output or commands that can be used to check for success or failure.
+
+// .Additional resources
+
+// * A bulleted list of links to other material closely related to the contents of the procedure module.
