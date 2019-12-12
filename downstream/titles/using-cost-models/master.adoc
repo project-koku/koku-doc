@@ -7,7 +7,7 @@ include::assemblies/assembly-using-cost-models.adoc[]
 
 
 
-
+////
 - Introduction
 A -- Document Scope       in assembly
 C -- About cost management and Project Koku   ???
