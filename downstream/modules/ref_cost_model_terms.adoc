@@ -1,11 +1,11 @@
 // Module included in the following assemblies:
 //
-// <List assemblies here, each on a new line>
+// assembly_using_cost_models.adoc
 
 // Base the file name and the ID on the module title. For example:
-// * file name: my-reference-a.adoc
-// * ID: [id="my-reference-a"]
-// * Title: = My reference A
+// * file name: ref_cost_model_terms.adoc
+// * ID: [id="ref_cost_model_terms"]
+// * Title: = Cost model terminology
 
 // The ID is used as an anchor for linking to the module. Avoid changing it after the module has been published to ensure existing links are not broken.
 [id="reference-material_{context}"]

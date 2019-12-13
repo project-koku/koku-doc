@@ -39,10 +39,14 @@ include::modules/con_what_is_a_cost_model.adoc[leveloffset=+1]
 
 include::modules/con_cost_model_workflow.adoc[leveloffset=+1]
 
+== Assigning a cost to metrics and usage using a cost model
 
 
+include::modules/proc_creating_an_AWS_cost_model.adoc[leveloffset=+1]
 
-include::modules/TEMPLATE_PROCEDURE_doing_one_procedure.adoc[leveloffset=+1]
+include::modules/proc_creating_an_OCP_cost_model.adoc[leveloffset=+1]
+
+
 
 == Additional resources (or Next steps)
 

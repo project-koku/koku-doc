@@ -1,0 +1,46 @@
+// Module included in the following assemblies:
+//
+// <List assemblies here, each on a new line>
+
+// Base the file name and the ID on the module title. For example:
+// * file name: proc_creating_an_OCP_cost_model.adoc
+// * ID: [id="proc_creating_an_OCP_cost_model"]
+// * Title: = Creating an OCP cost model
+
+// The ID is used as an anchor for linking to the module. Avoid changing it after the module has been published to ensure existing links are not broken.
+[id="doing-one-procedure_{context}"]
+// The `context` attribute enables module reuse. Every module's ID includes {context}, which ensures that the module has a unique ID even if it is reused multiple times in a guide.
+= Creating an OpenShift Container Platform cost model
+// Start the title of a procedure module with a verb, such as Creating or Create. See also _Wording of headings_ in _The IBM Style Guide_.
+
+For OpenShift Container Platform sources, creating a cost model includes assigning prices for usage and requests, as well as applying a markup or discount to determine the total costs of your OpenShift infrastructure.
+
+.Prerequisites
+
+//edit
+* A bulleted list of conditions that must be satisfied before the user starts following this module.
+* You can also link to other modules or assemblies the user must follow before starting this module.
+* Delete the section title and bullets if the module has no prerequisites.
+
+.Procedure
+
+
+. From the cost models menu item (left hand menu), click Create cost model to open the cost model wizard.
+. Enter a name and description for the cost model, and select Amazon Web Services (AWS) for the source type to apply the cost model to. Click Next.
+. Enter a percentage value to apply a markup to the costs, and click Next. 
+* To apply a discount instead of a markup, enter a minus sign with the value (for example, -15). 
+* If you don’t want to apply a markup or discount, enter 0.
++
+[NOTE]
+====
+You can use a markup to account for your overhead costs, such as the cost of administering the cluster, or support costs, for example. A markup is an estimation to cover your costs not shown by metrics or usage.
+====
++
+. Select one or multiple sources to assign the cost model to and click Next. Selecting a source with a cost model already assigned will override its previous cost model. 
+. Review the cost model details, and click Finish to create it.
+
+
+//.Verification steps
+//Now what? What is the result of this, or how can you see this has been applied? → add a verification step and a next step
+
+
