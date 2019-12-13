@@ -1,0 +1,12 @@
+= Organizing cost data with tags
+:imagesdir: images
+:numbered:
+
+// include::assemblies/assembly_NAME.adoc[]
+
+//source: https://gist.github.com/infinitewarp/53ed7179ea330b61c1e41f7b78c34f61
+
+
+
+
+
