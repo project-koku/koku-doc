@@ -30,12 +30,12 @@ Tags and labels can only be configured directly on a source. You cannot edit tag
 ====
 
 
-include::modules/con_how_cost_associates_tags_between_sources.adoc[leveloffset=+1]
+include::../modules/con_how_cost_associates_tags_between_sources.adoc[leveloffset=+1]
 // [leveloffset=+1] ensures that when a module starts with a level-1 heading (= Heading), the heading will be interpreted as a level-2 heading (== Heading) in the assembly.
 
-include::modules/proc_adding_tags_to_an_AWS_resource.adoc[leveloffset=+1]
+include::../modules/proc_adding_tags_to_an_AWS_resource.adoc[leveloffset=+1]
 
-include::modules/proc_adding_tags_to_an_OCP_resource.adoc[leveloffset=+1]
+include::../modules/proc_adding_tags_to_an_OCP_resource.adoc[leveloffset=+1]
 
 ////
 == Additional resources (or Next steps)
