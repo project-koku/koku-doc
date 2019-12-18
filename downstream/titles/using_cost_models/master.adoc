@@ -2,7 +2,7 @@
 :imagesdir: images
 :numbered:
 
-include::assemblies/assembly-using-cost-models.adoc[]
+include::assemblies/assembly_using_cost_models.adoc[]
 
 
 
@@ -20,3 +20,4 @@ C - The cost model workflow
 - Assigning a cost to metrics and usage using a cost model 
 P -- Creating an AWS cost model 
 P -- Creating an OpenShift Container Platform cost model 
+////

@@ -15,9 +15,8 @@ ifdef::context[:parent-context: {context}]
 // The ID is used as an anchor for linking to the module. Avoid changing it after the module has been published to ensure existing links are not broken.
 [id="a-collection-of-modules"]
 // If the assembly is reused in other assemblies in a guide, include {context} in the ID: [id="a-collection-of-modules_{context}"].
-= Using cost models
-//If the assembly covers a task, start the title with a verb in the gerund form, such as Creating or Configuring.
-:context: assembly-keyword
+== Using cost models
+//:context: assembly-keyword
 // The `context` attribute enables module reuse. Every module's ID includes {context}, which ensures that the module has a unique ID even if it is reused multiple times in a guide.
 
 This document describes how to use the cost model in Cost Management to apply a price to usage in
@@ -32,23 +31,23 @@ your cloud environment, then distribute the costs to resources.
 
 // The following include statements pull in the module files that comprise the assembly. Include any combination of concept, procedure, or reference modules required to cover the user story. You can also include other assemblies.
 
-include::modules/ref_cost_model_terms.adoc[leveloffset=+1]
+include::../modules/ref_cost_model_terms.adoc[leveloffset=+1]
 // [leveloffset=+1] ensures that when a module starts with a level-1 heading (= Heading), the heading will be interpreted as a level-2 heading (== Heading) in the assembly.
 
-include::modules/con_what_is_a_cost_model.adoc[leveloffset=+1]
+include::../modules/con_what_is_a_cost_model.adoc[leveloffset=+1]
 
-include::modules/con_cost_model_workflow.adoc[leveloffset=+1]
+include::../modules/con_cost_model_workflow.adoc[leveloffset=+1]
 
-== Assigning a cost to metrics and usage using a cost model
-
-
-include::modules/proc_creating_an_AWS_cost_model.adoc[leveloffset=+1]
-
-include::modules/proc_creating_an_OCP_cost_model.adoc[leveloffset=+1]
+=== Assigning a cost to metrics and usage using a cost model
 
 
+include::../modules/proc_creating_an_AWS_cost_model.adoc[leveloffset=+1]
 
-== Additional resources (or Next steps)
+include::../modules/proc_creating_an_OCP_cost_model.adoc[leveloffset=+1]
+
+
+
+=== Additional resources (or Next steps)
 
 * A bulleted list of links to other material closely related to the contents of the assembly, including xref links to other assemblies in your collection.
 * For more details on writing assemblies, see the link:https://github.com/redhat-documentation/modular-docs#modular-documentation-reference-guide[Modular Documentation Reference Guide].
