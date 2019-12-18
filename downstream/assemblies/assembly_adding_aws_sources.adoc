@@ -1,21 +1,6 @@
 [id="adding_an_aws_source"]
 = Adding an Amazon Web Services (AWS) Source to Cost Management
 
-To use Cost Management to monitor your cloud costs, you must first connect a data source to the Cost Management application.
-
-Currently, Cost Management can track costs for Amazon Web Services (AWS), Microsoft Azure, and Red Hat OpenShift Container Platform sources.
-
-
-////
-Adding a source
--> Adding an AWS source
-----> Configuring your AWS account
--------> Create an S3 bucket
--------> Configure IAM
--------> Configure SNS notifications
-----> Adding the AWS account to Cost Management
-////
-
 
 To add an AWS account to Cost Management, you must configure your AWS account to provide metrics, then add your AWS account as a source from the Cost Management user interface.
 
