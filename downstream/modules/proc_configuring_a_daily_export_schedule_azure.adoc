@@ -1,7 +1,7 @@
 // Module included in the following assemblies:
 // assembly_adding_azure_sources.adoc
 [id="proc_configuring_a_daily_export_schedule_azure"]
-=== Configuring a daily Azure data export schedule
+== Configuring a daily Azure data export schedule
 
 // The URL for this procedure needs to go in the UI code in the Sources dialog.
 
