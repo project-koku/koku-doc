@@ -8,7 +8,7 @@ include::assemblies/assembly_adding_ocp_sources.adoc[]
 
 include::assemblies/assembly_adding_azure_sources.adoc[]
 
-include::assemblies/assembly_organizing_cost_data_with_tagging.adoc[]
+include::assemblies/assembly_organizing_cost_data_using_tags.adoc[]
 
 //assembly: Organizing cost data using tags
 // concept: Organizing cost data using tags
