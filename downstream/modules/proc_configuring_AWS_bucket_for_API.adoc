@@ -1,0 +1,39 @@
+// Module included in the following assemblies:
+//
+// <List assemblies here, each on a new line>
+
+// Base the file name and the ID on the module title. For example:
+// * file name: proc_configuring_AWS_bucket_for_API.adoc
+// * ID: [id="proc_configuring_AWS_bucket_for_API"]
+// * Title: = Configuring an AWS bucket for API data
+
+// The ID is used as an anchor for linking to the module. Avoid changing it after the module has been published to ensure existing links are not broken.
+[id="proc_configuring_AWS_bucket_for_API"]
+// The `context` attribute enables module reuse. Every module's ID includes {context}, which ensures that the module has a unique ID even if it is reused multiple times in a guide.
+=  Configuring an AWS bucket for API data
+// Start the title of a procedure module with a verb, such as Creating or Create. See also _Wording of headings_ in _The IBM Style Guide_.
+
+This paragraph is the procedure module introduction: a short description of the procedure.
+
+.Prerequisites
+
+* Administrative access to your AWS account
+
+.Procedure
+
+. Create an AWS S3 bucket or choose one you wish to use for receiving data exports from Koku.
+. Edit this bucket's Permissions/Access Control List.
+. Add "Access for other AWS accounts" to allow Koku's canonical ID for "list objects" and "write objects"
+
+
+Koku's AWS account canonical ID is 0674b6ccec2e5d6212b35910e6c5fac24e94cee66371847b46c981edfa3df63c.
+
+//.Verification steps
+//how to verify?
+//(Optional) Provide the user with verification method(s) for the procedure, such as expected output or commands that can be used to check for success or failure.
+
+.Additional resources
+
+
+// Add AWS link to instructions * For more details on writing procedure modules, see the link:https://github.com/redhat-documentation/modular-docs#modular-documentation-reference-guide[Modular Documentation Reference Guide].
+

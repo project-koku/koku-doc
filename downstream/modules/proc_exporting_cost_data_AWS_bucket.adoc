@@ -1,0 +1,53 @@
+// Module included in the following assemblies:
+//
+// <List assemblies here, each on a new line>
+
+// Base the file name and the ID on the module title. For example:
+// * file name: proc_exporting_cost_data_AWS_bucket.adoc
+// * ID: [id="proc_exporting_cost_data_AWS_bucket"]
+// * Title: = Exporting cost data to an AWS bucket
+
+// The ID is used as an anchor for linking to the module. Avoid changing it after the module has been published to ensure existing links are not broken.
+[id="doing-one-procedure_{context}"]
+// The `context` attribute enables module reuse. Every module's ID includes {context}, which ensures that the module has a unique ID even if it is reused multiple times in a guide.
+= Exporting cost data to an AWS bucket
+
+Issue a POST request with an inclusive start date and exclusive end date to export the data to your AWS bucket as a CSV file.
+
+.Prerequisites
+
+* An AWS bucket configured to receive (list/write) files from Koku. See xref:proc_configuring_AWS_bucket_for_API[]. 
+
+.Procedure
+
+. Determine the time frame you want to obtain cost data for.
+. Create a data export POST request specifying:
+* `start_date`: The first date in the time frame to obtain data for, formatted as `yyyy-mm-dd`.
+* `end_date` : The date following the last date in your desired time frame, formatted as `yyyy-mm-dd`.
+* `bucket_name`: The name of your destination AWS S3 bucket.
+See the following example for reference:
++
+----
+http localhost:8000/api/cost-management/v1/dataexportrequests/ \
+    HTTP_X_RH_IDENTITY:"${IDENTITY}" \
+    start_date='2019-09-01' \
+    end_date='2019-10-01' \
+    bucket_name='koku-customer-sample-bucket'  
+----
+
+After running the request, Koku will return a response to indicate that it has started the process, but the remainder of the operations are asynchronous. To see the current state of your data export request, you must check back at the API.
+
+[NOTE]
+====
+Koku also checks for any in-progress requests with the same date parameters as that request. If Koku is already working on an export (for example, status is pending or processing) with the same dates, the new request is rejected with a 400 error and the message _"A pending or processing data export already exists with the given "start_date" and "end_date"."_ 
+====
+
+When complete, the exported files are written with hierarchical paths that include the Koku account ID, source/provider UUID, and date. An example file path looks like:
+
+`/data_archive/acct1460290/aws/4cef9a22-4302-4776-a4b7-fac050da23a0/2019/11/24/reporting_awscostentrylineitem_daily_summary.csv.gz`
+
+
+
+.Additional resources
+
+* For additional details about the data export API parameters, see xref:ref_data_export_API_parameters[].
