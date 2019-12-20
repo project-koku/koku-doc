@@ -1,0 +1,38 @@
+// Module included in the following assemblies:
+//
+// <List assemblies here, each on a new line>
+
+// Base the file name and the ID on the module title. For example:
+// * file name: ref_data_export_API_parameters.adoc
+// * ID: [id="ref_data_export_API_parameters"]
+// * Title: = Data Export API Parameters
+
+// The ID is used as an anchor for linking to the module. Avoid changing it after the module has been published to ensure existing links are not broken.
+[id="ref_data_export_API_parameters"]
+// The `context` attribute enables module reuse. Every module's ID includes {context}, which ensures that the module has a unique ID even if it is reused multiple times in a guide.
+= Data Export API Parameters
+//In the title of a reference module, include nouns that are used in the body text. For example, "Keyboard shortcuts for ___" or "Command options for ___." This helps readers and search engines find the information quickly.
+
+This table provides further details on the parameters available to use for data export requests in the API.
+
+
+.Data Export Request API parameters
+[options="header"]
+|====
+|Parameter|Format|Example|Details
+|start_date|ISO-8601 formatted start date (inclusive)|'2019-09-01'|The first day in a date range you want to view cost data for.
+|end_date|ISO-8601 formatted end date (exclusive)|'2019-10-01'|The end date is outside the desired date range for the request.
+|bucket_name|Destination Amazon S3 bucket name|'koku-customer-sample-bucket'|The bucket must be configured to allow cost management to write files to it.
+|====
+
+.Example request
+
+The following example requests data for the month of September, to be written to the 'koku-customer-sample-bucket' AWS S3 bucket:
+
+----
+http localhost:8000/api/cost-management/v1/dataexportrequests/ \
+    HTTP_X_RH_IDENTITY:"${IDENTITY}" \
+    start_date='2019-09-01' \
+    end_date='2019-10-01' \
+    bucket_name='koku-customer-sample-bucket'
+----
