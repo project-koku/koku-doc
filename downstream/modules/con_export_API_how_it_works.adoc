@@ -12,15 +12,17 @@
 // The `context` attribute enables module reuse. Every module's ID includes {context}, which ensures that the module has a unique ID even if it is reused multiple times in a guide.
 = How the data export API works
 
-The API exports cost data from Koku's database originating from your sources. 
+The API exports cost data originating from your sources from cost management's database. 
 
-The export generally includes results from Koku's "daily" and "daily summary" database tables and are generally bound by specific requested dates. Exported files are separated by Koku account, source/provider, date, and table name. 
+The cost management application runs a process every 24 hours to collect cost data from each AWS source, using AWS Cost and Usage Reports. Cost management stores these files in an AWS S3 bucket which only the application can access.
+
+When retrieving this data using an API request, the data export generally includes results from cost management's _daily_ and _daily summary_ database tables and are bound by specific requested dates. Exported files are separated by cost management account, source, date, and table name. 
 
 // generally? is there an occasion when they don't include these results and are bound by the dates?
 
 //exporting files are separated by, or the data in files is separated by...?
 
-Koku writes these files in CSV format to the AWS S3 bucket specified in the request.
+The API writes these files in CSV format to the AWS S3 bucket specified in the request.
 
 ////
 Upon initial request:
