@@ -10,10 +10,9 @@
 // The ID is used as an anchor for linking to the module. Avoid changing it after the module has been published to ensure existing links are not broken.
 [id="proc_configuring_AWS_bucket_for_API"]
 // The `context` attribute enables module reuse. Every module's ID includes {context}, which ensures that the module has a unique ID even if it is reused multiple times in a guide.
-=  Configuring an AWS bucket for API data
-// Start the title of a procedure module with a verb, such as Creating or Create. See also _Wording of headings_ in _The IBM Style Guide_.
+= Configuring an AWS bucket for API data
 
-This paragraph is the procedure module introduction: a short description of the procedure.
+An AWS S3 bucket is required to export cost data to.
 
 .Prerequisites
 

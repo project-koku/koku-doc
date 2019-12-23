@@ -12,22 +12,25 @@
 // The `context` attribute enables module reuse. Every module's ID includes {context}, which ensures that the module has a unique ID even if it is reused multiple times in a guide.
 = Viewing previous data export requests
 
-You can use the API to list previous data export requests. This can be useful as 
+You can use the API to list previous data export requests to prevent duplicating data. This also checks if the user requests the same data multiple times before the request has completed. 
+
+//This can be useful as 
 
 .Procedure
 
-. To retrieve a list of data export requests that were created by the authenticated user, run an HTTP GET request with the URL `/api/cost-management/v1/dataexportrequests/`. For example:
+. To retrieve a list of data export requests that were created by the authenticated user, run a GET request with the URL `/api/cost-management/v1/dataexportrequests/`. For example:
 +
 ----
 HTTP GET localhost:8000/api/cost-management/v1/dataexportrequests/
 ----
 +
 //add example output
-. To retrieve a requested data export request by UUID (assuming it is reachable by the authenticated user), run an HTTP GET request with the URL `/api/cost-management/v1/dataexportrequests/{uuid}/`. For example:
+. To retrieve a requested data export request by UUID (assuming it is reachable by the authenticated user), run a GET request with the URL `/api/cost-management/v1/dataexportrequests/{uuid}/`. For example:
 +
 ----
 HTTP GET localhost:8000/api/cost-management/v1/dataexportrequests/{uuid}/
 ----
+
 //add example output
 
 ////

@@ -73,7 +73,15 @@ C - The cost model workflow
 P -- Creating an AWS cost model 
 P -- Creating an OpenShift Container Platform cost model 
 
+-----
 
+Exporting cost data using the API
+
+A - Introduction
+C - How the data export API works
+P - Exporting cost data to an AWS bucket
+P - Viewing previous data export requests
+R - Data export API parameters
 
 
 
