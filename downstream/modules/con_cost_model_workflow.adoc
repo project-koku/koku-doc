@@ -4,11 +4,11 @@
 
 // Base the file name and the ID on the module title. For example:
 // * file name: con_cost_model_workflow.adoc
-// * ID: [id="con_cost_model_workflow{context}"]
+// * ID: [id="con_cost_model_workflow"]
 // * Title: = The cost model workflow
 
 // The ID is used as an anchor for linking to the module. Avoid changing it after the module has been published to ensure existing links are not broken.
-[id="concept-explanation_{context}"]
+[id="con_cost_model_workflow"]
 // The `context` attribute enables module reuse. Every module's ID includes {context}, which ensures that the module has a unique ID even if it is reused multiple times in a guide.
 = The cost model workflow
 //In the title of concept modules, include nouns or noun phrases that are used in the body text. This helps readers and search engines find the information quickly.
@@ -16,7 +16,7 @@
 
 The following diagram shows the cost model workflow that Cost Management uses to normalize cost data from different sources, apply a markup (or discount), then distribute the costs across the relevant resources.
 
-<insert cost model diagram>
+//<insert cost model diagram>
 
 . Cost data is collected in Cost Management from several sources:
 * *Inventory* - A list of all the resources that are or were present in your source, whether they are in use or not. For example, if your OpenShift Container Platform environment contains a host that is not in use, that host still costs $x amount per month. There are several ways of getting inventory into cost management, for instance, cost management can generate inventory from the AWS CUR files and OpenShift Metering Operator reports, or it can be provided by a topology service.
