@@ -16,17 +16,12 @@ ifdef::context[:parent-context: {context}]
 [id="assembly_managing_cost_data_tagging"]
 // If the assembly is reused in other assemblies in a guide, include {context} in the ID: [id="a-collection-of-modules_{context}"].
 = Managing cost data using tagging
-//If the assembly covers a task, start the title with a verb in the gerund form, such as Creating or Configuring.
 :context: assembly-keyword
 // The `context` attribute enables module reuse. Every module's ID includes {context}, which ensures that the module has a unique ID even if it is reused multiple times in a guide.
 
-This paragraph is the assembly introduction. It explains what the user will accomplish by working through the modules in the assembly and sets the context for the user story the assembly is based on. Can include more than one paragraph. Consider using the information from the user story.
+This guide explains in depth how tagging works in cost management, and how you can use tagging to best organize your resources to manage your costs.
 
-.Prerequisites
-
-* A bulleted list of conditions that must be satisfied before the user starts following this assembly.
-* You can also link to other modules or assemblies the user must follow before starting this assembly.
-* Delete the section title and bullets if the assembly has no prerequisites.
+// For instructions on adding tags to AWS and OpenShift Container Platform resources, see [LINK TO GETTING STARTED GUIDE]
 
 // The following include statements pull in the module files that comprise the assembly. Include any combination of concept, procedure, or reference modules required to cover the user story. You can also include other assemblies.
 

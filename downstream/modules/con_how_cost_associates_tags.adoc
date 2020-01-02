@@ -11,21 +11,88 @@
 [id="con_how_cost_associates_tags"]
 // The `context` attribute enables module reuse. Every module's ID includes {context}, which ensures that the module has a unique ID even if it is reused multiple times in a guide.
 = How cost management associates tags
-//In the title of concept modules, include nouns or noun phrases that are used in the body text. This helps readers and search engines find the information quickly.
-//Do not start the title of concept modules with a verb. See also _Wording of headings_ in _The IBM Style Guide_.
 
-A short introductory paragraph is required for the concept module.
-It will provide an overview of the module.
+Tagging is done in each source before cost management can use the tags to automatically organize your cost data.
 
-The contents of a concept module give the user descriptions and explanations needed to understand and use a product.
+Add your tags or labels to resources belonging to each source. Then, cost management imports the tags by different methods, depending on source type:
 
-* Look at nouns and noun phrases in related procedure modules and assemblies to find the concepts to explain to users.
-* Explain only things that are visible to users. Even if a concept is interesting, it probably does not require explanation if it is not visible to users.
-* Do not include any instructions to perform an action, such as executing a command. Action items belong in procedure modules.
+* AWS tags must be activated, and are then selected and exported to Cost Management in the Cost and Usage report. 
+* In OpenShift Container Platform, labels are exported by Metering and included in the metrics reports that Cost Management uses as input. 
 
-.Additional resources
+[NOTE]
+====
+See _Getting started with cost management_ for instructions on configuring sources and tags.
+====
+// Add link to Getting Started Guide
 
-* A bulleted list of links to other material closely related to the contents of the concept module.
-* Currently, modules cannot include xrefs, so you cannot include links to other content in your collection. If you need to link to another assembly, add the xref to the assembly that includes this module.
-* For more details on writing concept modules, see the link:https://github.com/redhat-documentation/modular-docs#modular-documentation-reference-guide[Modular Documentation Reference Guide].
-* Use a consistent system for file names, IDs, and titles. For tips, see _Anchor Names and File Names_ in link:https://github.com/redhat-documentation/modular-docs#modular-documentation-reference-guide[Modular Documentation Reference Guide].
+AWS tags and OpenShift labels both consist of key:value pairs. When the key:value pairs match, the AWS and OpenShift costs are automatically associated by Cost Management. Note that tag matching is not case sensitive: for example, an AWS resource AWS tagged _APP_ and an OpenShift resource tagged _app_ are a match:
+
+.Example: Tag matching
+‎[cols=3, options="header"]
+|====
+‎|Source and resource type|AWS Resource (RDS)|OpenShift pod
+‎|Key|APP|app
+‎|Value|Cost-Management|cost-management
+|====
+
+
+If an AWS resource tag matches with multiple OpenShift projects, the cost and usage of that resource are split evenly between the matched projects. 
+
+Note that this is not the case with AWS compute resources that are matched via the instance ID-node relationship. In that case, cost and usage are broken down using information about a project’s resource consumption within the OpenShift cluster.
+
+
+== Tag matching hierarchy 
+
+To identify your OpenShift resources running on AWS or Azure instances, Cost Management matches tags between sources in the following order:
+
+. Direct resource matching (EC2 instance ID)
+. Special OpenShift tags
+. Custom tags
+
+
+=== Direct resource matching (EC2 instance ID)
+
+The sources apply these tags automatically. This form of tagging provides a direct link between AWS EC2 instances and OpenShift nodes.
+
+AWS assigns every EC2 instance a resource identifier (a number such as `i-01f44b3d90ef90055`). OpenShift nodes are matched directly to the AWS EC2 instance the cluster is running on using the AWS resource identifier. The OpenShift reports in Cost Management (generated from Prometheus data) include this identifier for nodes.
+
+//.Example - screenshot?
+
+=== Special OpenShift tags
+
+There are three special-case AWS tags you can use to associate cost with OpenShift:
+
+* `openshift_cluster`
+* `openshift_node`
+* `openshift_project`
+
+These tags have matching priority over custom tags, and are especially useful in differentiating the costs of different OpenShift clusters running on the same AWS instance.
+
+To use this tagging method to identify an OpenShift cluster:
+
+. Name your OpenShift cluster (in this example, dev-cluster).
+. Tag your AWS instance with the key `openshift_cluster`, and provide the cluster name as the value (in this example, `dev-cluster`).
+
+
+.Example: Special AWS tags
+‎[options="header"]
+|====
+‎|Source and resource type|AWS Resource (RDS)|OpenShift cluster
+‎|Key|`openshift_cluster`|No tags needed. Name your OpenShift cluster `dev-cluster`.
+‎|Value|`dev-cluster`|No tags needed. Name your OpenShift cluster `dev-cluster`.
+|====
+
+
+=== Custom tags
+
+You can use any key:value combination as tags, and Cost Management will associate identical tag key and values together. You can then group costs by tag key, account, service, region, and more to view your costs and charge for that tag.
+
+.Example: Custom tags
+‎[options="header"]
+|====
+‎|Source and resource type|AWS Resource (RDS)|OpenShift pod
+‎|Key|`team`|`team`
+‎|Value|`engineering`|`engineering`.
+|====
+
+//.Additional resources
