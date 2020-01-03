@@ -18,19 +18,19 @@ When designing your tagging strategy, there are several considerations for deter
 
 Define the perspectives you want to report on. For example, your taxonomy for cost management could consider these different perspectives:
 
-::Ownership and usage:: 
+Ownership and usage:: 
 The owner and the user of the resource: for example, the unique identifier of the user who requested the resource and the one that is actually consuming the resource. 
 
-::Tenancy:: 
+Tenancy:: 
 If your environment is shared, it can be beneficial to understand which group or business unit has requested the resource. When the user is part of different groups, one needs to be selected. For cost reporting, this is achieved in many cases using cost center, but department, project, partner are also good candidates.
 
-::Location:: 
+Location:: 
 For organizations with software deployed globally, cloud providers already identify the region where your resources are running, but your private cloud may be different.
 
-::Environment or stage::
+Environment or stage::
 You may want to differentiate between development and production, so that different cost decisions can be made depending on the environment where you are creating or running the resources. If your development pipeline already includes stages, like development, testing, staging, pre-production and/or production, this is a good candidate.
 
-::Application / Project / Service / Event:: 
+Application / Project / Service / Event:: 
 What is the service that your resource is helping to provide? Is that a group of transient resources for an event (your yearly customer-focused demo show?). You could even include the application version.
 
 

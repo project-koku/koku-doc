@@ -34,11 +34,29 @@ include::../modules/con_designing_tagging_strategy.adoc[leveloffset=+1]
 
 include::../modules/ref_tagging_specifications.adoc[leveloffset=+1]
 
-== Additional resources (or Next steps)
+== Additional resources
 
-* A bulleted list of links to other material closely related to the contents of the assembly, including xref links to other assemblies in your collection.
-* For more details on writing assemblies, see the link:https://github.com/redhat-documentation/modular-docs#modular-documentation-reference-guide[Modular Documentation Reference Guide].
-* Use a consistent system for file names, IDs, and titles. For tips, see _Anchor Names and File Names_ in link:https://github.com/redhat-documentation/modular-docs#modular-documentation-reference-guide[Modular Documentation Reference Guide].
+The following links provide further guidance on tagging for each source type.
+//* A bulleted list of links to other material closely related to the contents of the assembly, including xref links to other assemblies in your collection.
+
+// Removed link as the content is here * https://www.redhat.com/en/blog/tagging-resources-it-and-business-alignment[Tagging resources for IT and business alignment]
+
+// To do: Add URL for Getting Started with Cost guide and tagging configuration section.
+
+* AWS:
+** https://aws.amazon.com/answers/account-management/aws-tagging-strategies/[AWS tagging strategies]
+** https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_examples_iam-add-tag-user-role.html[IAM: Add a specific tag with specific values]
+
+* OpenShift:
+** https://kubernetes.io/docs/concepts/overview/working-with-objects/labels/#syntax-and-character-set[Kubernetes labels and selectors]
+** https://github.com/kubernetes/kubernetes/blob/release-1.0/docs/user-guide/labels.md[Kubernetes user guide: labels]
+
+* Microsoft Azure:
+** https://docs.microsoft.com/en-us/azure/architecture/cloud-adoption/decision-guides/resource-tagging/[Azure resource naming and tagging decision guide]
+** https://docs.microsoft.com/en-us/azure/architecture/best-practices/naming-conventions[Azure naming best practices]
+** https://docs.microsoft.com/en-us/azure/azure-resource-manager/resource-group-using-tags[Using tags to organize your Azure resources]
+** https://docs.microsoft.com/en-us/azure/governance/policy/samples/enforce-tag-on-resource-groups[Enforce tags in Azure resource groups]
+
 
 // Restore the context to what it was before this assembly.
 ifdef::parent-context[:context: {parent-context}]

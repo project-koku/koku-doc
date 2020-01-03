@@ -27,12 +27,13 @@ See _Getting started with cost management_ for instructions on configuring sourc
 
 AWS tags and OpenShift labels both consist of key:value pairs. When the key:value pairs match, the AWS and OpenShift costs are automatically associated by Cost Management. Note that tag matching is not case sensitive: for example, an AWS resource AWS tagged _APP_ and an OpenShift resource tagged _app_ are a match:
 
+
 .Example: Tag matching
-‎[cols=3, options="header"]
+[options="header"]
 |====
-‎|Source and resource type|AWS Resource (RDS)|OpenShift pod
-‎|Key|APP|app
-‎|Value|Cost-Management|cost-management
+|Source and resource type|Key|Value
+|AWS Resource (RDS)|APP|Cost-Management
+|OpenShift pod|app|cost-management
 |====
 
 
@@ -50,7 +51,7 @@ To identify your OpenShift resources running on AWS or Azure instances, Cost Man
 . Custom tags
 
 
-=== Direct resource matching (EC2 instance ID)
+=== 1. Direct resource matching (EC2 instance ID)
 
 The sources apply these tags automatically. This form of tagging provides a direct link between AWS EC2 instances and OpenShift nodes.
 
@@ -58,7 +59,7 @@ AWS assigns every EC2 instance a resource identifier (a number such as `i-01f44b
 
 //.Example - screenshot?
 
-=== Special OpenShift tags
+=== 2. Special OpenShift tags
 
 There are three special-case AWS tags you can use to associate cost with OpenShift:
 
@@ -74,25 +75,32 @@ To use this tagging method to identify an OpenShift cluster:
 . Tag your AWS instance with the key `openshift_cluster`, and provide the cluster name as the value (in this example, `dev-cluster`).
 
 
-.Example: Special AWS tags
-‎[options="header"]
+.Example: Special OpenShift tags
+[options="header"]
 |====
-‎|Source and resource type|AWS Resource (RDS)|OpenShift cluster
-‎|Key|`openshift_cluster`|No tags needed. Name your OpenShift cluster `dev-cluster`.
-‎|Value|`dev-cluster`|No tags needed. Name your OpenShift cluster `dev-cluster`.
+|Source and resource type|Key|Value
+|AWS Resource (RDS)|`openshift_cluster`|`dev-cluster`
+|OpenShift cluster|
+No tags needed. Name your OpenShift cluster `dev-cluster`.
+
+|No tags needed. Name your OpenShift cluster `dev-cluster`.
 |====
 
 
-=== Custom tags
+=== 3. Custom tags
 
 You can use any key:value combination as tags, and Cost Management will associate identical tag key and values together. You can then group costs by tag key, account, service, region, and more to view your costs and charge for that tag.
 
 .Example: Custom tags
-‎[options="header"]
+[options="header"]
 |====
-‎|Source and resource type|AWS Resource (RDS)|OpenShift pod
-‎|Key|`team`|`team`
-‎|Value|`engineering`|`engineering`.
+|Source and resource type|Key|Value
+|AWS Resource (RDS)|`team`|`engineering`
+|OpenShift pod|`team`|`engineering`
 |====
 
+
+
 //.Additional resources
+
+
