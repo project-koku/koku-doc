@@ -1,12 +1,23 @@
-= Organizing cost data with tags
+= Managing cost data using tagging
 :imagesdir: images
 :numbered:
 
-// include::assemblies/assembly_NAME.adoc[]
-
-//source: https://gist.github.com/infinitewarp/53ed7179ea330b61c1e41f7b78c34f61
+include::assemblies/assembly_managing_cost_data_tagging.adoc[leveloffset=+1]
 
 
 
 
 
+
+////
+
+MAP
+C  How cost management associates tags between sources
+ --> Tag matching hierarchy	2
+C Designing your tagging strategy	3
+P  Tagging in a multi-cluster environment	5
+R Tag specifications by source type	5
+Additional resources
+
+
+////

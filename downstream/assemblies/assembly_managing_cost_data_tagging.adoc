@@ -1,0 +1,63 @@
+// This assembly is included in the following assemblies:
+//
+// <List assemblies here, each on a new line>
+
+// Retains the context of the parent assembly if this assembly is nested within another assembly.
+// For more information about nesting assemblies, see: https://redhat-documentation.github.io/modular-docs/#nesting-assemblies
+// See also the complementary step on the last line of this file.
+ifdef::context[:parent-context: {context}]
+
+// Base the file name and the ID on the assembly title. For example:
+// * file name: assembly_managing_cost_data_tagging.adoc
+// * ID: [id="assembly_managing_cost_data_tagging"]
+// * Title: = Managing cost data using tagging
+
+// The ID is used as an anchor for linking to the module. Avoid changing it after the module has been published to ensure existing links are not broken.
+[id="assembly_managing_cost_data_tagging"]
+// If the assembly is reused in other assemblies in a guide, include {context} in the ID: [id="a-collection-of-modules_{context}"].
+= Managing cost data using tagging
+:context: assembly-keyword
+// The `context` attribute enables module reuse. Every module's ID includes {context}, which ensures that the module has a unique ID even if it is reused multiple times in a guide.
+
+This guide explains in depth how tagging works in cost management, and how you can use tagging to best organize your resources to manage your costs.
+
+// For instructions on adding tags to AWS and OpenShift Container Platform resources, see [LINK TO GETTING STARTED GUIDE]
+
+// The following include statements pull in the module files that comprise the assembly. Include any combination of concept, procedure, or reference modules required to cover the user story. You can also include other assemblies.
+
+include::../modules/con_how_cost_associates_tags.adoc[leveloffset=+1]
+
+include::../modules/con_designing_tagging_strategy.adoc[leveloffset=+1]
+
+//include::modules/proc_tagging_multi_cluster_environments.adoc[leveloffset=+1]
+// do not have content for yet - future section
+
+include::../modules/ref_tagging_specifications.adoc[leveloffset=+1]
+
+== Additional resources
+
+The following links provide further guidance on tagging for each source type.
+//* A bulleted list of links to other material closely related to the contents of the assembly, including xref links to other assemblies in your collection.
+
+// Removed link as the content is here * https://www.redhat.com/en/blog/tagging-resources-it-and-business-alignment[Tagging resources for IT and business alignment]
+
+// To do: Add URL for Getting Started with Cost guide and tagging configuration section.
+
+* AWS:
+** https://aws.amazon.com/answers/account-management/aws-tagging-strategies/[AWS tagging strategies]
+** https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_examples_iam-add-tag-user-role.html[IAM: Add a specific tag with specific values]
+
+* OpenShift:
+** https://kubernetes.io/docs/concepts/overview/working-with-objects/labels/#syntax-and-character-set[Kubernetes labels and selectors]
+** https://github.com/kubernetes/kubernetes/blob/release-1.0/docs/user-guide/labels.md[Kubernetes user guide: labels]
+
+* Microsoft Azure:
+** https://docs.microsoft.com/en-us/azure/architecture/cloud-adoption/decision-guides/resource-tagging/[Azure resource naming and tagging decision guide]
+** https://docs.microsoft.com/en-us/azure/architecture/best-practices/naming-conventions[Azure naming best practices]
+** https://docs.microsoft.com/en-us/azure/azure-resource-manager/resource-group-using-tags[Using tags to organize your Azure resources]
+** https://docs.microsoft.com/en-us/azure/governance/policy/samples/enforce-tag-on-resource-groups[Enforce tags in Azure resource groups]
+
+
+// Restore the context to what it was before this assembly.
+ifdef::parent-context[:context: {parent-context}]
+ifndef::parent-context[:!context:]

@@ -1,0 +1,60 @@
+// Module included in the following assemblies:
+//
+// <List assemblies here, each on a new line>
+
+// Base the file name and the ID on the module title. For example:
+// * file name: ref_tagging_specifications.adoc
+// * ID: [id="ref_tagging_specifications"]
+// * Title: = Tag specifications by source type
+
+// The ID is used as an anchor for linking to the module. Avoid changing it after the module has been published to ensure existing links are not broken.
+[id="ref_tagging_specifications"]
+// The `context` attribute enables module reuse. Every module's ID includes {context}, which ensures that the module has a unique ID even if it is reused multiple times in a guide.
+= Tag specifications by source type
+//In the title of a reference module, include nouns that are used in the body text. For example, "Keyboard shortcuts for ___" or "Command options for ___." This helps readers and search engines find the information quickly.
+
+Tagging standards differ between source types. To use the same tags/labels across sources, you must use the most common of all the restrictions across the different providers.
+
+The following table summarizes tagging and labelling criteria across AWS, Azure and OpenShift Container Platform 4: 
+
+.Tagging specifications by source
+[options="header"]
+|====
+|Criteria|AWS|Azure|Red Hat OpenShift
+|Name|Tags|Tags|Labels
+|Format|Key & value|Name & value|Key & value
+Keys: [prefix/]name
+Prefix: must be a DNS subdomain
+|Allows empty value|Yes|Yes|Yes
+|Unique label per key|Yes|Yes|Yes
+|Case sensitive|Yes|No|Yes
+|Limit per resource|50|50 / 15 for storage|N/A
+|Length of key|128|512 (128 for storage)|253(prefix) / 63(name)
+
+|Length of value|256|256|63
+|Allowed characters
+|Letters, numbers, and spaces representable in UTF-8, and the following characters: + - = . _ : / @
+|Tag names cannot contain these characters: <, >, %, &, \, ?, /
+|The name segment is required and must be 63 characters or less, beginning and ending with an alphanumeric character ([a-z0-9A-Z]) with dashes (-), underscores (_), dots (.), and alphanumerics between
+
+|Restrictions
+|The prefix “aws:” is reserved.
+Tags applied to EC2 can use any character.
+Not all resource types support tags.
+|Not all resource types support tags.
+Generalized VM don’t support tags.
+Tags applied to the resource group are not inherited by the resources.
+Tags can’t be applied to classic resources.
+|Prefix kubernetes.io/ 
+And k8s.io/ are reserved.
+Not all resource types support tags.
+
+|Notes
+|You need to select the tags keys that will be included in cost and usage files and billing reports.
+|You can use a JSON string to go over the limit of keys.
+|If the prefix is omitted, the label Key is presumed to be private to the user.
+
+|====
+
+
+
