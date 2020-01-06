@@ -1,11 +1,11 @@
-<title>Getting Started with Cost Management</title>
-<productname>Cloud Management Services for Hybrid Operations</productname>
+<title>Exporting cost data using the API</title>
+<productname>Cost management</productname>
 <productnumber>1.0</productnumber>
-<subtitle>Learn About Cost Management</subtitle>
+<subtitle>Using the data export request API to obtain cost data</subtitle>
 <abstract>
     <para></para>
 </abstract>
 <authorgroup>
-    <orgname>Red Hat Customer Content Services </orgname>
+    <orgname>Red Hat Customer Content Services</orgname>
 </authorgroup>
 <xi:include href="Common_Content/Legal_Notice.xml" xmlns:xi="http://www.w3.org/2001/XInclude" />

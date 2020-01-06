@@ -10,7 +10,8 @@
 // The ID is used as an anchor for linking to the module. Avoid changing it after the module has been published to ensure existing links are not broken.
 [id="doing-one-procedure_{context}"]
 // The `context` attribute enables module reuse. Every module's ID includes {context}, which ensures that the module has a unique ID even if it is reused multiple times in a guide.
-= Authenticating to the data export API
+
+= Authenticating to the data export request API
 
 To authenticate to the data export request API, use your Red Hat login and password.
 

@@ -10,37 +10,59 @@
 // The ID is used as an anchor for linking to the module. Avoid changing it after the module has been published to ensure existing links are not broken.
 [id="proc_viewing_data_export_requests"]
 // The `context` attribute enables module reuse. Every module's ID includes {context}, which ensures that the module has a unique ID even if it is reused multiple times in a guide.
+
 = Viewing previous data export requests
 
-You can use the API to list previous data export requests to prevent duplicating data. This also checks if the user requests the same data multiple times before the request has completed. 
+You can use the API to list previous data export requests to prevent duplicating data. This also checks if the user has requested the same data multiple times before the request has completed. 
 
-//This can be useful as 
+Most data export requests complete in a few seconds, however, this can be useful for troubleshooting processing delays or other issues.
 
 .Procedure
 
-. To retrieve a list of data export requests that were created by the authenticated user, run a GET request with the URL `/api/cost-management/v1/dataexportrequests/`. For example:
+. To retrieve a list of all data export requests that were created by the authenticated user, run a GET request with the URL `/api/cost-management/v1/dataexportrequests/`:
 +
 ----
 HTTP GET localhost:8000/api/cost-management/v1/dataexportrequests/
 ----
 +
-//add example output
-. To retrieve a requested data export request by UUID (assuming it is reachable by the authenticated user), run a GET request with the URL `/api/cost-management/v1/dataexportrequests/{uuid}/`. For example:
+For example, using `curl`, run:
++
+----
+$  curl -s -u "$MYUSER:$MYPASS" -F start_date='2019-11-01' -F end_date='2019-11-10' -F bucket_name='koku-customer-sample-bucket' localhost:8000/api/cost-management/v1/dataexportrequests/ | jq                                                         
+{                                                                                                                                 
+ "uuid": "8c619402-3cf9-4b19-a01b-9942d0cd6c1b",                                                                                 
+ "created_timestamp": "2019-11-26T19:35:13.437243Z",                                                                             
+ "updated_timestamp": "2019-11-26T19:35:13.437275Z",                                                                             
+ "start_date": "2019-11-01",                                                                                                     
+ "end_date": "2019-11-10",                                                                                                       
+ "status": "pending",                                                                                                            
+ "bucket_name": "koku-customer-sample-bucket"                                                                                      
+}                          
+----
++
+The response provides the request UUID, and shows the request is still in progress.
++
+. To retrieve a requested data export request by UUID (assuming it is reachable by the authenticated user), run a GET request with the URL `/api/cost-management/v1/dataexportrequests/{uuid}/`, using the request UUID:
 +
 ----
 HTTP GET localhost:8000/api/cost-management/v1/dataexportrequests/{uuid}/
 ----
++
+For example, using `curl`, run:
++
+----
+$  curl -s -u "$MYUSER:$MYPASS" localhost:8000/api/cost-management/v1/dataexportrequests/8c619402-3cf9-4b19-a01b-994
+2d0cd6c1b/ | jq -C                                                                                                                
+{                                                                                                                                 
+ "uuid": "8c619402-3cf9-4b19-a01b-9942d0cd6c1b",                                                                                 
+ "created_timestamp": "2019-11-26T19:35:13.437243Z",                                                                             
+ "updated_timestamp": "2019-11-26T19:35:25.232298Z",                                                                             
+ "start_date": "2019-11-01",                                                                                                     
+ "end_date": "2019-11-10",                                                                                                       
+ "status": "complete",                                                                                                           
+ "bucket_name": "koku-customer-sample-bucket"                                                                                     
+}    
+----
 
-//add example output
+The response shows the request status is complete.
 
-////
-//.Verification steps
-//(Optional) Provide the user with verification method(s) for the procedure, such as expected output or commands that can be used to check for success or failure.
-
-.Additional resources
-
-* A bulleted list of links to other material closely related to the contents of the procedure module.
-* Currently, modules cannot include xrefs, so you cannot include links to other content in your collection. If you need to link to another assembly, add the xref to the assembly that includes this module.
-* For more details on writing procedure modules, see the link:https://github.com/redhat-documentation/modular-docs#modular-documentation-reference-guide[Modular Documentation Reference Guide].
-* Use a consistent system for file names, IDs, and titles. For tips, see _Anchor Names and File Names_ in link:https://github.com/redhat-documentation/modular-docs#modular-documentation-reference-guide[Modular Documentation Reference Guide].
-////
