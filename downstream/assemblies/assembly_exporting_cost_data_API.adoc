@@ -19,12 +19,11 @@ ifdef::context[:parent-context: {context}]
 :context: assembly-keyword
 // The `context` attribute enables module reuse. Every module's ID includes {context}, which ensures that the module has a unique ID even if it is reused multiple times in a guide.
 
-You can use the cost management data export request API to obtain cost data for your sources, such as information about usage, tags, cost model assignments, and more. 
+You can use the cost management data export request API to obtain cost data for your sources, including information about usage, tags, cost model assignments, and more. 
 
-Using the API, you can export cost data easily to your external business integration tools to generate custom reports, and to view and compare your data in additional ways to those provided by the cost management application. 
+You can then use the exported cost data with your external business integration tools to generate custom reports, and to view and compare your data in additional ways to those provided by the cost management application. 
 
-The API also allows you to view historical cost data beyond what is available to view in the cost management user interface (at the time of writing, the cost management user interface shows the previous 2-3 months of data).
-//Is this the name we want to refer to the API by? The data export request API?
+The API also allows you to view historical cost data beyond what is available to view in the cost management user interface, back to the date a source was originally added to cost management. (Currently, the cost management user interface shows the previous 2-3 months of data).
 
 // Does this also allow the user to obtain historical cost data that is not shown in the Koku graphs? 
 
@@ -35,7 +34,6 @@ This guide provides instructions for using the API to export your cost data.
 include::../modules/con_export_API_how_it_works.adoc[]
 
 //include::../modules/proc_configuring_AWS_bucket_for_API.adoc[]
-include::../modules/proc_authenticating_data_export_API.adoc[]
 
 include::../modules/proc_exporting_cost_data_AWS_bucket.adoc[]
 
@@ -56,3 +54,4 @@ include::../modules/ref_data_export_API_parameters.adoc[]
 ifdef::parent-context[:context: {parent-context}]
 ifndef::parent-context[:!context:]
 ////
+

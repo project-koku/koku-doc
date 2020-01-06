@@ -10,32 +10,38 @@
 // The ID is used as an anchor for linking to the module. Avoid changing it after the module has been published to ensure existing links are not broken.
 [id="proc_exporting_cost_data_AWS_bucket"]
 // The `context` attribute enables module reuse. Every module's ID includes {context}, which ensures that the module has a unique ID even if it is reused multiple times in a guide.
+
 = Exporting cost data to an AWS bucket
 
 To export cost data to your AWS bucket as a CSV file, provide a POST request with your desired start date, end date, and AWS bucket.
 
+You can request data as far back as the date you added the source to cost management.
+
 .Prerequisites
 
-* An AWS bucket configured to receive (list/write) files from cost management. 
+Using the cost management data export request API requires:
 
-As administrator for your AWS account, configure the following:
+* An AWS bucket configured to receive (list and write) files from cost management. As administrator for your AWS account:
 
 . Create a new AWS S3 bucket or choose an existing one to use for receiving data exports from cost management.
-. Edit this bucket's Permissions/Access Control List.
-. Add "Access for other AWS accounts" to allow cost management's canonical ID for "list objects" and "write objects"
-
-
-Koku's AWS account canonical ID is 0674b6ccec2e5d6212b35910e6c5fac24e94cee66371847b46c981edfa3df63c.
-
+. Edit this bucket's *Access Control List*.
+. Add *Access for other AWS accounts* to allow cost management to list and write files with the following settings:
+** Canonical ID (for cost management): _0674b6ccec2e5d6212b35910e6c5fac24e94cee66371847b46c981edfa3df63c_
+** List objects: Yes
+** Write objects: Yes
++
 //See xref:proc_configuring_AWS_bucket_for_API[]. 
++
+* Your Red Hat login and password to authenticate to the data export request API.
 
 .Procedure
 
 . Determine the time frame you want to obtain cost data for.
-. Create a data export POST request specifying:
-* `start_date` - Inclusive: this is the first date in the time frame to obtain data for, formatted as `yyyy-mm-dd`.
-* `end_date` - Exclusive: this is the date following the last date in your desired time frame, formatted as `yyyy-mm-dd`.
+. Create a POST request specifying:
+* `start_date` - This value is inclusive: the first date in the time frame to obtain data for, formatted as `yyyy-mm-dd`.
+* `end_date` - This value is exclusive: the date following the last date in your desired time frame, formatted as `yyyy-mm-dd`.
 * `bucket_name` - The name of your destination AWS S3 bucket.
++
 Use the following example for reference:
 +
 ----
@@ -46,13 +52,13 @@ http localhost:8000/api/cost-management/v1/dataexportrequests/ \
     bucket_name='cost management-customer-sample-bucket'  
 ----
 
-After running the request, cost management will return a response to indicate that it has started the process, but the remainder of the operations are asynchronous. To see the current state of your data export request, you must check back at the API.
+After running the request, cost management will return a response to confirm it has started the request process, but the remainder of the operations are asynchronous. To see the current state of your data export request, you must check back at the API.
 
 //HOW? What command to run?
 
 [NOTE]
 ====
-Cost management also checks for any in-progress requests with the same date parameters as that request. If cost management is already working on an export (for example, status is pending or processing) with the same dates, the new request is rejected with a 400 error and the message _"A pending or processing data export already exists with the given "start_date" and "end_date"."_ 
+Cost management also checks for any in-progress requests with the same date parameters as that request. If cost management is already working on an export with the same dates, the new request is rejected with a 400 error and the message _"A pending or processing data export already exists with the given "start_date" and "end_date"."_ 
 ====
 
 When complete, the exported files are written with hierarchical paths that include the cost management account ID, source/provider UUID, and date. An example file path looks like:
@@ -63,4 +69,4 @@ When complete, the exported files are written with hierarchical paths that inclu
 
 .Additional resources
 
-* For additional details about the data export API parameters, see xref:ref_data_export_API_parameters[].
+* For additional details about the data export request API parameters, see xref:ref_data_export_API_parameters[].

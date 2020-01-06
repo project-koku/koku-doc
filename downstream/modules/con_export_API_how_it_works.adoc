@@ -10,37 +10,14 @@
 // The ID is used as an anchor for linking to the module. Avoid changing it after the module has been published to ensure existing links are not broken.
 [id="concept-explanation_{context}"]
 // The `context` attribute enables module reuse. Every module's ID includes {context}, which ensures that the module has a unique ID even if it is reused multiple times in a guide.
-= How the data export API works
+= How the data export request API works
 
-The API exports cost data originating from your sources from cost management's database. 
+The API allows you to export cost data for your sources from cost management's database. 
 
 The cost management application runs a process every 24 hours to collect cost data from each AWS source, using AWS Cost and Usage Reports. Cost management stores these files in an AWS S3 bucket which only the application can access.
 
-When retrieving this data using an API request, the data export generally includes results from cost management's _daily_ and _daily summary_ database tables and are bound by specific requested dates. Exported files are separated by cost management account, source, date, and table name. 
+The data export request API retrieves this data using an API request. The data export includes results from cost management's _daily_ and _daily summary_ database tables and are bound by specific requested dates. Data in the exported files is separated by cost management account, source, date, and table name. 
 
-// generally? is there an occasion when they don't include these results and are bound by the dates?
-
-//exporting files are separated by, or the data in files is separated by...?
+Each individual exported file contains the data for one specific cost management account on one specific date from one database query.
 
 The API writes these files in CSV format to the AWS S3 bucket specified in the request.
-
-////
-Upon initial request:
-
-* Koku returns a synchronous response to indicate that it has started the process, but the remainder of the operations are asynchronous. You must check back at the API if you want to see the current state of your data export request.
-* Koku checks for any in-progress requests with the same date parameters as that request. If Koku is already working on an export (status is pending or processing) with the same dates, the new request is rejected with a 400 error and a message indicating as such ('A pending or processing data export already exists with the given "start_date" and "end_date".'). If either an export with the same dates does not exist or does exist with a terminal state, Koku allows the request to be created.
-////
-
-//== Limitations
-
-// How far back can a user search? Is there a limit to what Koku will store?
-
-////
-.Additional resources
-
-* A bulleted list of links to other material closely related to the contents of the concept module.
-* Currently, modules cannot include xrefs, so you cannot include links to other content in your collection. If you need to link to another assembly, add the xref to the assembly that includes this module.
-* For more details on writing concept modules, see the link:https://github.com/redhat-documentation/modular-docs#modular-documentation-reference-guide[Modular Documentation Reference Guide].
-* Use a consistent system for file names, IDs, and titles. For tips, see _Anchor Names and File Names_ in link:https://github.com/redhat-documentation/modular-docs#modular-documentation-reference-guide[Modular Documentation Reference Guide].
-
-////
