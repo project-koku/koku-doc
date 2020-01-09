@@ -16,7 +16,7 @@ Create a new role to manage and limit the scope of information that users can se
 
 .Prerequisites
 
-* Any to note? Admin account, user account?
+* Any to note? AWS Admin account, user account?
 
 .Procedure
 
@@ -39,27 +39,26 @@ Create a new role to manage and limit the scope of information that users can se
 +
 For example, to create a role with read-only permissions to AWS account data, set _aws.account_ as the *Resource type* and _read_ as the *Permission*. In the next step, you can specify the AWS account to apply this role to.
 +
-. (Optional) In the *Resource definitions* screen, you can provide more details about the resources the permission will be used for. For example, to configure this for ???, enter the following and click *Add to definitions*:
+. (Optional) In the *Resource definitions* screen, you can provide more details about the resources the permission will be used for. For example, to grant this role to access a specific AWS account, enter the following and click *Add to definitions*:
 * *Key*: _aws.account_
 * *Operation*: _equal_
 * *Value*: Your AWS account number or account alias.
 +
 [NOTE]
 ====
-The following options are available for the Resource definitions step:
-* *Key* : - _group_, _role_, _policy_, _aws.account_, _openshift.cluster_
-* *Operation*: Use _equal_ if you know the exact value, or _list_ to see a list of values that will work for this role.
-* *Value*: 
+The following options are available for the *Resource definitions* fields:
+
+- *Key* : _group_, _role_, _policy_, _aws.account_, _openshift.cluster_
+- *Operation*: Use _equal_ if you know the exact value, or _list_ to see a list of values that will work for this role.
+- *Value*: ??
 ====
 +
-You see a list of values that will work for this role
-- giving these permissions to these things.
-. Confirm the details for this role and click *Confirm* to create the role.
+. Review the details for this role and click *Confirm* to create the role.
 
 Your new role will be listed in the *Roles* tab on the *User Access Management* screen.
 
 .Next steps
 
-* Add your role to new policies that you create for new groups.
+* Add this role to a group to provide the role with access to resources.
 
 

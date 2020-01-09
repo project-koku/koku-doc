@@ -16,7 +16,7 @@ Add a role to a group to manage and limit the scope of information that users ca
 
 .Prerequisites
 
-* Any to note? Admin account, user account?
+* Any to note? AWS Admin account, user account?
 
 .Procedure
 
@@ -50,7 +50,7 @@ Roles available for cost management are:
 Your new group will be listed in the *Groups* tab on the *User Access Management* screen.
 
 //Correct?
-To verify you added the user correctly, log out of the cost management application and log in as a user you added.
+To verify your configuration, log out of the cost management application and log back in as a user added to the group.
 
 .Next steps
 
