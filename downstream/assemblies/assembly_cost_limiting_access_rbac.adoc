@@ -52,7 +52,7 @@ To learn more about Red Hat account roles, see See https://access.redhat.com/art
 
 include::../modules/proc_creating_a_role_cost.adoc[leveloffset=+1]
 
-include::../modules/proc_adding_role_to_policy_cost.adoc[leveloffset=+1]
+include::../modules/proc_adding_role_to_group_cost.adoc[leveloffset=+1]
 
 /////
 // Restore the context to what it was before this assembly.

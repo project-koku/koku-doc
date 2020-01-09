@@ -10,11 +10,9 @@
 // The ID is used as an anchor for linking to the module. Avoid changing it after the module has been published to ensure existing links are not broken.
 [id="proc_adding_role_to_policy_cost"]
 // The `context` attribute enables module reuse. Every module's ID includes {context}, which ensures that the module has a unique ID even if it is reused multiple times in a guide.
-= Adding a role to a policy
+= Adding a role to a group
 
-Add a group
-
-Add a role to a policy to manage and limit the scope of information that users can see within cost management.
+Add a role to a group to manage and limit the scope of information that users can see within cost management.
 
 .Prerequisites
 
@@ -30,25 +28,29 @@ Add a role to a policy to manage and limit the scope of information that users c
 // Can you list multiple users? Separated by commas? Is it case-sensitive?
 . (Optional) In the *Create policy* screen, 
 
-.. To create a policy, enter a *Name* and *Description* and click *Next*.
-.. Select the roles to add to the policy.
+.. To create a policy, enter a *Name* and *Description* and click *Next*. 
++
+[NOTE]
+====
+Policies are the permissions set for a group. Groups can have one or more policies. Policies are created for a group, they cannot be shared.
+====
++
+.. Select a role to add to the policy. While it is only possible to specify one role when creating a group, you can add additional roles to a group by editing the group later.
 //What does this do?
-
-Cost roles are:
-Cost Administrator
-Cost Cloud Viewer
-Cost OpenShift Viewer
-Cost Price List Administrator
-
++
+Roles available for cost management are:
+* Cost Administrator
+* Cost Cloud Viewer
+* Cost OpenShift Viewer
+* Cost Price List Administrator
 // what do each do? add a list defining when to use what.
-
-Policies are the permissions set for this group. Groups can have one or more policies. Policies are created for a group, they cannot be shared. You can only create one policy at this time. It is possible to create more for this group at a later time.
-
++
 . Confirm the details for this role and click *Confirm* to create the group.
 
 Your new group will be listed in the *Groups* tab on the *User Access Management* screen.
 
-? To verify you added the user correctly, log out of the cost management application and log in as a user you added.
+//Correct?
+To verify you added the user correctly, log out of the cost management application and log in as a user you added.
 
 .Next steps
 
