@@ -45,7 +45,15 @@ Edit and include a brief overview of steps.
 
 You will use this Red Hat login to look up users, add them to groups, and to assign policies controlling visibility to resources.
 
+[NOTE]
+====
+To learn more about Red Hat accounts, see [LINK].
+====
+
 include::modules/proc_creating_a_role_cost.adoc[leveloffset=+1]
+
+include::modules/proc_adding_role_to_policy_cost.adoc[leveloffset=+1]
+
 
 == Additional resources (or Next steps)
 

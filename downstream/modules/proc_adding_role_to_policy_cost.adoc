@@ -52,5 +52,5 @@ Your new group will be listed in the *Groups* tab on the *User Access Management
 
 .Next steps
 
-* 
+* EDIT: Anything we should instruct users to do next?
 
