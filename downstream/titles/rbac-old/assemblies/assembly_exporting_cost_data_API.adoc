@@ -1,0 +1,57 @@
+// This assembly is included in the following assemblies:
+//
+// <List assemblies here, each on a new line>
+
+// Retains the context of the parent assembly if this assembly is nested within another assembly.
+// For more information about nesting assemblies, see: https://redhat-documentation.github.io/modular-docs/#nesting-assemblies
+// See also the complementary step on the last line of this file.
+ifdef::context[:parent-context: {context}]
+
+// Base the file name and the ID on the assembly title. For example:
+// * file name: assembly_exporting_cost_data_API.adoc
+// * ID: [id="assembly_exporting_cost_data_API"]
+// * Title: = Exporting cost data using the API
+
+// The ID is used as an anchor for linking to the module. Avoid changing it after the module has been published to ensure existing links are not broken.
+[id="assembly_exporting_cost_data_API"]
+// If the assembly is reused in other assemblies in a guide, include {context} in the ID: [id="a-collection-of-modules_{context}"].
+= Exporting cost data using the API
+:context: assembly-keyword
+// The `context` attribute enables module reuse. Every module's ID includes {context}, which ensures that the module has a unique ID even if it is reused multiple times in a guide.
+
+You can use the cost management data export request API to obtain cost data for your sources, including information about usage, tags, cost model assignments, and more. 
+
+You can then use the exported cost data with your external business integration tools to generate custom reports, and to view and compare your data in additional ways to those provided by the cost management application. 
+
+The API also allows you to view historical cost data beyond what is available to view in the cost management user interface, back to the date a source was originally added to cost management. (Currently, the cost management user interface shows the previous 2-3 months of data).
+
+// Does this also allow the user to obtain historical cost data that is not shown in the Koku graphs? 
+
+This guide provides instructions for using the API to export your cost data.
+
+
+
+include::../modules/con_export_API_how_it_works.adoc[]
+
+//include::../modules/proc_configuring_AWS_bucket_for_API.adoc[]
+
+include::../modules/proc_exporting_cost_data_AWS_bucket.adoc[]
+
+include::../modules/proc_viewing_data_export_requests.adoc[]
+
+
+include::../modules/ref_data_export_API_parameters.adoc[]
+
+
+////
+== Additional resources (or Next steps)
+
+* A bulleted list of links to other material closely related to the contents of the assembly, including xref links to other assemblies in your collection.
+* For more details on writing assemblies, see the link:https://github.com/redhat-documentation/modular-docs#modular-documentation-reference-guide[Modular Documentation Reference Guide].
+* Use a consistent system for file names, IDs, and titles. For tips, see _Anchor Names and File Names_ in link:https://github.com/redhat-documentation/modular-docs#modular-documentation-reference-guide[Modular Documentation Reference Guide].
+
+// Restore the context to what it was before this assembly.
+ifdef::parent-context[:context: {parent-context}]
+ifndef::parent-context[:!context:]
+////
+
