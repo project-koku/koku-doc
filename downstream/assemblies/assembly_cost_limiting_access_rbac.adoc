@@ -21,8 +21,7 @@ ifdef::context[:parent-context: {context}]
 
 You may not want users to have access to all cost data, but instead only data specific to their projects or organization. Using role-based access control, you can limit the visibility of resources involved in cost management reports.
 
-[CHECK BELOW PARAGRAPHS ARE STILL TRUE] 
-Role-based access control works by organizing users into groups, which can be associated with one or more policies. A policy associates a group with a set of roles. A role defines a permission and a set of resource definitions.
+Role-based access control works by organizing users into groups, which can be associated with one or more roles. A role defines a permission and a set of resource definitions.
 
 By default, a user who is not an account administrator will not have access to data, but instead must be granted access to resources. Account administrators can view all data without any further role-based access control configuration.
 
@@ -43,14 +42,14 @@ Edit and include a brief overview of steps.
 // Is this still correct? Org admin?
 * At least one Red Hat account user with Organization Administrator entitlements. 
 
-You will use this Red Hat login to look up users, add them to groups, and to assign policies controlling visibility to resources.
+You will use this Red Hat login to look up users, add them to groups, and to assign roles controlling visibility to resources.
 
 [NOTE]
 ====
 To learn more about Red Hat account roles, see See https://access.redhat.com/articles/1757953[Roles and Permissions for Red Hat Subscription Management].
 ====
 
-include::../modules/proc_creating_a_role_cost.adoc[leveloffset=+1]
+include::../modules/proc_adding_a_role_cost-rbac.adoc[leveloffset=+1]
 
 include::../modules/proc_adding_role_to_group_cost.adoc[leveloffset=+1]
 
