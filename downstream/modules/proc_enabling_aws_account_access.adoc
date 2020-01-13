@@ -1,9 +1,10 @@
 // Module included in the following assemblies:
 // assembly_adding_aws_sources.adoc
+
 [id="proc_enabling_aws_account_access"]
 === Enabling account access for cost and usage consumption 
 
-// The URL for this procedure needs to go in the UI code in the Sources dialog - need to give to Dan & Boaz.
+// Add docs URL to UI.
 
 To provide data within the web interface and API, Cost Management needs to consume the Cost and Usage reports produced by AWS. For Cost Management to obtain this data with a minimal amount of access, create an IAM policy and role for Cost Management to use. This configuration will only provide access to the stored information and nothing else.
 
@@ -45,7 +46,7 @@ To configure account access:
 +
 [NOTE]
 ====
-* Including Action _iam:ListAccountAliases_ allows Cost Management to display the AWS account alias, rather than the account ID.
+* Including the Action _iam:ListAccountAliases_ allows Cost Management to display the AWS account alias, rather than the account ID.
 * (Optional) Including Actions _organization:List*_ and _organizations:Describe*_ allows Cost Management to obtain the display names of AWS member accounts if you are using consolidated billing rather than the account ID.
 ====
 + 
@@ -53,13 +54,18 @@ To configure account access:
 . In the Cost Management application, click *Next* to move to the next screen.
 . In the AWS IAM console, create a new IAM role:
 .. For the type of trusted entity, select *Another AWS account*.
-.. Enter _589173575009_ as the Account ID.
+.. Enter _589173575009_ as the Account ID to provide the cost management application with read access to the AWS account cost data.
 .. Attach the IAM policy you just configured.
 .. Enter a role name (and description if desired) and finish creating the policy.
 . In the Cost Management application, click *Next* to move to the next screen.
-. In the AWS IAM console under Roles, open the summary screen for the role you just created and copy the Role ARN.
+. In the AWS IAM console under Roles, open the summary screen for the role you just created and copy the Role ARN (a string beginning with _arn:aws:_).
 . In the Cost Management application, paste your Role ARN and click *Next*.
 . Review the details and click *Add source* to finish adding the AWS account to Cost Management.
+
+Cost Management will begin collecting cost and usage data from your master AWS account and any linked AWS accounts. 
+
+The data can take a few days to populate before it shows on the Cost Management dashboard.
+
 
 
 

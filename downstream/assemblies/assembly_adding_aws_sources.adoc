@@ -4,9 +4,14 @@
 
 To add an AWS account to Cost Management, you must configure your AWS account to provide metrics, then add your AWS account as a source from the Cost Management user interface.
 
-== Configuring your AWS account
+This creates a read-only connection to AWS in order to collect cost information hourly in Cost Management, but does not make any changes to the AWS account.
 
-//Should this section be its own assembly with the 3 topics? Then I could just link the last procedure with an include...)
+[IMPORTANT]
+====
+You must use an AWS master account for this procedure, as a linked AWS account does not have sufficient access to create billing accounts. After you add the master account as a source, Cost Management will collect data from any linked accounts as well.
+====
+
+== Configuring your AWS account
 
 Before you can add your AWS account to Cost Management as a data source, you must configure the following services on your AWS account to allow Cost Management access to metrics:
 
@@ -14,7 +19,16 @@ Before you can add your AWS account to Cost Management as a data source, you mus
 . An S3 bucket to store cost and usage data reporting for Cost Management
 . An Identity Access Management (IAM) policy and role for Cost Management to process the cost and usage data
 
+As you will complete some of the following steps in the AWS console, and some steps in the Cost Management user interface, keep both applications open in a web browser.
+
+[NOTE]
+====
+As non-Red Hat products and documentation can change without notice, instructions for configuring the third-party sources provided in this guide are general and correct at the time of publishing. See the https://docs.aws.amazon.com/[AWS documentation] for the most up-to-date and accurate information.
+====
+
 include::../modules/proc_creating_an_aws_s3_bucket.adoc[]
+
+include::../modules/proc_activating_aws_tags.adoc[]
 
 include::../modules/proc_enabling_aws_account_access.adoc[]
 
