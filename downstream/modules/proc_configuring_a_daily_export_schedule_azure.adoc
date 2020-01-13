@@ -7,15 +7,14 @@
 
 Create a recurring task to export your cost data on a daily basis automatically to your Azure storage account, where Cost Management will retrieve the data. 
 
-. Add a new export as described in the instructions in the https://docs.microsoft.com/en-us/azure/cost-management/tutorial-export-acm-data[Azure article] _Create and manage exported data_.
+. In Azure, add a new export as described in the instructions in the https://docs.microsoft.com/en-us/azure/cost-management/tutorial-export-acm-data[Azure article] _Create and manage exported data_.
 * For *Export type*, select *Daily export of billing-period-to-date costs*.
 * For *Storage account*, select the account you created earlier. 
 * Enter any value for the container name and directory path for the export.
+* Click *Run now* to start exporting data to the Azure storage container.
 . In Cost Management, click *Next* when you have created the export schedule and review the source details. 
 . Click *Finish* to complete adding the Azure source to Cost Management.
 
-After the schedule is created, Cost Management will begin polling Azure for cost data. Initial cost export data may take 6-12 hours to be available in the Azure storage container and consequently be viewed on the Cost Management dashboard.
-
-You have completed adding your Azure account as a source.
+After the schedule is created, Cost Management will begin polling Azure for cost data, which will appear on the Cost Management dashboard.
 
 

@@ -22,30 +22,30 @@ Any additional details or customization for Cost Management is described below.
 . In Azure, assign the application to a role at the subscription scope.
 * Use the subscription you used to create the storage account.
 * Add a new role assignment with the settings:
-** Role:   Storage Blob Data Reader
+** Role:   _Storage Blob Data Reader_
 ** Assign access to:   Azure AD user, group, or service principal
 ** Select:  <type the application display name from the previous step>
 . In Azure, create a new application secret.
 * From your application’s page, create a new client secret.
-* Enter a description and click Add.
-* Copy the Value for the secret.
+* Enter a description and click *Add*.
+* Copy the _Value_ for the secret.
 +
-[IMPORTANT]
+[NOTE]
 ====
-The secret value cannot be retrieved again later. Save it to a secure location, as you will need the secret value and application ID to sign in as the application.
+Save your secret to a secure location, as you will need the secret value and application ID to sign in as the application. As the secret value cannot be retrieved again later, if you lose the secret, you will need to create a new one and update it where it has been used.
 ====
 . In the Cost Management application, enter your Azure Active Directory application credentials and client secret.
 . Retrieve these values by running the following command in Cloud Shell:
 +
 ----
-# command
+$ az ad sp create-for-rbac --query '{"tenant": tenant, "client_id": appId, "secret": password}'
 ----
 +
 . Paste your application secret and click *Next*.
 
 
 . In the Cost Management application (cloud.redhat.com):
-.. Navigate to https://cloud.redhat.com/beta/cost-management/cost-management/sources/ (_Settings > Cost Management Sources_). 
+.. Navigate to menu:Settings[Cost Management Sources]. 
 .. Click *Add source* to open the wizard. 
 .. Provide a name for your source and click *Next*.
 .. Select *Cost Management* for the application, and *Azure* as the source type. Click *Next*.
