@@ -4,6 +4,8 @@
 
 // Intro - is this here in master.adoc or in another assembly?
 
+include::assemblies/assembly_introduction_cost_management.adoc[leveloffset=+1]
+
 include::assemblies/assembly_cost_limiting_access_rbac.adoc[leveloffset=+1]
 
 include::assemblies/assembly_adding_sources_cost.adoc[leveloffset=+1]
