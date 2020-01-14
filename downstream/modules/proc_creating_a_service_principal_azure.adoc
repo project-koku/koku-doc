@@ -5,7 +5,7 @@
 
 // The URL for this procedure needs to go in the UI code in the Sources dialog.
 
-Configuring an Azure Active Directory application and service principal provides Cost Management with the necessary (read-only) access to obtain cost data for Azure resources.
+Configuring an Azure Active Directory application and service principal provides cost management with the necessary (read-only) access to obtain cost data for Azure resources.
 
 To configure this access, see the Azure guide https://docs.microsoft.com/en-us/azure/active-directory/develop/howto-create-service-principal-portal[_How to: Use the portal to create an Azure AD application and service principal that can access resources_] , and complete the steps in these sections:
 
@@ -13,7 +13,7 @@ To configure this access, see the Azure guide https://docs.microsoft.com/en-us/a
 . _Assign the application to a role_
 . _Certificates and secrets_
 
-Any additional details or customization for Cost Management is described below.
+Any additional details or customization for cost management is described below.
 
 
 . In Azure, create a new Azure Active Directory application.
@@ -34,7 +34,7 @@ Any additional details or customization for Cost Management is described below.
 ====
 Save your secret to a secure location, as you will need the secret value and application ID to sign in as the application. As the secret value cannot be retrieved again later, if you lose the secret, you will need to create a new one and update it where it has been used.
 ====
-. In the Cost Management application, enter your Azure Active Directory application credentials and client secret.
+. In the cost management application, enter your Azure Active Directory application credentials and client secret.
 . Retrieve these values by running the following command in Cloud Shell:
 +
 ----
@@ -44,11 +44,11 @@ $ az ad sp create-for-rbac --query '{"tenant": tenant, "client_id": appId, "secr
 . Paste your application secret and click *Next*.
 
 
-. In the Cost Management application (cloud.redhat.com):
+. In the cost management application (cloud.redhat.com):
 .. Navigate to menu:Settings[Cost Management Sources]. 
 .. Click *Add source* to open the wizard. 
 .. Provide a name for your source and click *Next*.
-.. Select *Cost Management* for the application, and *Azure* as the source type. Click *Next*.
+.. Select *Cost management* for the application, and *Azure* as the source type. Click *Next*.
 .. Enter the storage account name and resource group you just created.
 . In Azure Cloud Shell, run the following command to obtain your Subscription ID: 
 +
@@ -56,5 +56,5 @@ $ az ad sp create-for-rbac --query '{"tenant": tenant, "client_id": appId, "secr
 $ az account show --query "{subscription_id: id }"
 ----
 +
-. In the Cost Management application, enter your Subscription ID in the sources wizard and click *Next*.
+. In the cost management application, enter your Subscription ID in the sources wizard and click *Next*.
 

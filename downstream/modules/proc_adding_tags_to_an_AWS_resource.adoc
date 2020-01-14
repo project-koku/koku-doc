@@ -19,7 +19,7 @@ Amazon creates certain tags automatically, like the EC2 instance resource identi
 
 You can also add your own tags at the individual resource level. These tags must be activated for Cost and Usage reporting to export them to the cost management application.
 
-Configure AWS tags for Cost Management using the following steps:
+Configure AWS tags for cost management using the following steps:
 
 .Procedure
 

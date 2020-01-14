@@ -8,9 +8,9 @@
 // If the assembly is reused in other assemblies in a guide, include {context} in the ID: [id="a-collection-of-modules_{context}"].
 = Adding sources to cost management
 
-To use Cost Management to monitor your cloud costs, you must first connect a data source to the Cost Management application.
+To use cost management to monitor your cloud costs, you must first connect a data source to the cost management application.
 
-Currently, Cost Management can track costs for Amazon Web Services (AWS), Microsoft Azure, and Red Hat OpenShift Container Platform sources.
+Currently, cost management can track costs for Amazon Web Services (AWS), Microsoft Azure, and Red Hat OpenShift Container Platform sources.
 
 
 ////
@@ -20,7 +20,7 @@ Adding a source
 -------> Create an S3 bucket
 -------> Configure IAM
 -------> Configure SNS notifications
-----> Adding the AWS account to Cost Management
+----> Adding the AWS account to cost management
 ////
 
 

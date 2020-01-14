@@ -5,7 +5,7 @@
 
 // The URL for this procedure needs to go in the UI code in the Sources dialog - need to give to Dan & Boaz.
 
-To make data available as early as possible, AWS can send a Simple Notification Service (SNS) alert to Cost Management when writing or updating cost and usage data. 
+To make data available as early as possible, AWS can send a Simple Notification Service (SNS) alert to cost management when writing or updating cost and usage data. 
 
 To enable SNS alerts:
 

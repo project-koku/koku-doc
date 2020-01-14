@@ -20,13 +20,13 @@ ifdef::context[:parent-context: {context}]
 :context: assembly-keyword
 // The `context` attribute enables module reuse. Every module's ID includes {context}, which ensures that the module has a unique ID even if it is reused multiple times in a guide.
 
-After adding your AWS and OpenShift Container Platform sources, in addition to showing cost data by source, Cost Management will automatically show AWS cost and usage related to running your OpenShift Container Platform clusters on AWS. 
+After adding your AWS and OpenShift Container Platform sources, in addition to showing cost data by source, cost management will automatically show AWS cost and usage related to running your OpenShift Container Platform clusters on AWS. 
 
-The cost management application tracks these costs using tags (called labels in OpenShift), which you can refine to filter and attribute to resources.Tags in Cost Management allow you to organize your resources by cost and to allocate the costs to different parts of your cloud infrastructure.
+The cost management application tracks these costs using tags (called labels in OpenShift), which you can refine to filter and attribute to resources.Tags in cost management allow you to organize your resources by cost and to allocate the costs to different parts of your cloud infrastructure.
 
 [IMPORTANT]
 ====
-Tags and labels can only be configured directly on a source. You cannot edit tags and labels in the Cost Management application.
+Tags and labels can only be configured directly on a source. You cannot edit tags and labels in the cost management application.
 ====
 
 

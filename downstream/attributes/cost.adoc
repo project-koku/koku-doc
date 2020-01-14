@@ -1,2 +1,2 @@
 
-:product-title: Cost Management
+:product-title: cost management

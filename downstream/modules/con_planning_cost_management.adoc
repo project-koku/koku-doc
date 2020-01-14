@@ -14,7 +14,7 @@
 //In the title of concept modules, include nouns or noun phrases that are used in the body text. This helps readers and search engines find the information quickly.
 //Do not start the title of concept modules with a verb. See also _Wording of headings_ in _The IBM Style Guide_.
 
-When configuring Cost Management for your needs, consider the scope of your environments that you want to manage costs for, and the users who will have access to the data.
+When configuring cost management for your needs, consider the scope of your environments that you want to manage costs for, and the users who will have access to the data.
 
 Some considerations in making a new Red Hat organization and users for different customer types include:
 
@@ -32,7 +32,7 @@ Data:
 * Enforcement. Is there any way for you to make sure that the proper tags and metadata is included in each item of the inventory?
 	
 
-Determine the required level of access for your users based on the following predefined roles in Cost Management:
+Determine the required level of access for your users based on the following predefined roles in cost management:
 
 * Cost Administrator:  grants read and write permissions
 * Cost Cloud Viewer:  grants read permissions on cost reports related to cloud sources

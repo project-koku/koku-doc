@@ -5,9 +5,9 @@
 
 // The URL for this procedure needs to go in the UI code in the Sources dialog.
 
-Cost export data is written to a storage account, which exists within a resource group. The resource group must be accessible by Cost Management in order to read the Azure cost data.
+Cost export data is written to a storage account, which exists within a resource group. The resource group must be accessible by cost management in order to read the Azure cost data.
 
-Create a new storage account in Azure to contain the cost data and metrics that Cost Management will collect. This requires a resource group; Red Hat recommends creating a dedicated resource group for this storage account.
+Create a new storage account in Azure to contain the cost data and metrics that cost management will collect. This requires a resource group; Red Hat recommends creating a dedicated resource group for this storage account.
 
 . Create a storage account and resource group in your Azure account using the instructions in the See https://docs.microsoft.com/en-us/azure/storage/common/storage-quickstart-create-account?tabs=azure-portal[Azure documentation] _Create a storage account_. 
 +
@@ -16,11 +16,11 @@ Create a new storage account in Azure to contain the cost data and metrics that 
 Make a note of the storage account name and resource group. They will be needed in subsequent steps.
 ====
 +
-. In the Cost Management application (cloud.redhat.com):
-.. Navigate to menu:Settings[Cost Management Sources]. 
+. In the cost management application (cloud.redhat.com):
+.. Navigate to menu:Settings[cost management Sources]. 
 .. Click *Add source* to open the wizard. 
 .. Provide a name for your Azure source and click *Next*.
-.. Select *Cost Management* for the application, and *Azure* as the source type. Click *Next*.
+.. Select *cost management* for the application, and *Azure* as the source type. Click *Next*.
 .. Enter the storage account name and resource group you just created.
 . In Azure Cloud Shell, run the following command to obtain your Subscription ID: 
 +
@@ -28,5 +28,5 @@ Make a note of the storage account name and resource group. They will be needed 
 $ az account show --query "{subscription_id: id }"
 ----
 +
-. In the Cost Management application, enter your Subscription ID in the sources wizard and click *Next*.
+. In the cost management application, enter your Subscription ID in the sources wizard and click *Next*.
 

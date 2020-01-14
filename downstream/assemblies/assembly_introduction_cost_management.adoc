@@ -20,7 +20,7 @@ ifdef::context[:parent-context: {context}]
 :context: assembly-keyword
 // The `context` attribute enables module reuse. Every module's ID includes {context}, which ensures that the module has a unique ID even if it is reused multiple times in a guide.
 
-This document provides instructions to begin using Cost Management, including prerequisites and instructions for connecting your cloud environments, and configuring users and permissions. 
+This document provides instructions to begin using cost management, including prerequisites and instructions for connecting your cloud environments, and configuring users and permissions. 
 
 After completing the setup described in this guide, you will be able to track cost and usage data for your AWS, Microsoft Azure, and OpenShift Container Platform environments.
 

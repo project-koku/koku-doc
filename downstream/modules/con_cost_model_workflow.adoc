@@ -14,16 +14,16 @@
 //In the title of concept modules, include nouns or noun phrases that are used in the body text. This helps readers and search engines find the information quickly.
 //Do not start the title of concept modules with a verb. See also _Wording of headings_ in _The IBM Style Guide_.
 
-The following diagram shows the cost model workflow that Cost Management uses to normalize cost data from different sources, apply a markup (or discount), then distribute the costs across the relevant resources.
+The following diagram shows the cost model workflow that cost management uses to normalize cost data from different sources, apply a markup (or discount), then distribute the costs across the relevant resources.
 
 //<insert cost model diagram>
 
-. Cost data is collected in Cost Management from several sources:
+. Cost data is collected in cost management from several sources:
 * *Inventory* - A list of all the resources that are or were present in your source, whether they are in use or not. For example, if your OpenShift Container Platform environment contains a host that is not in use, that host still costs $x amount per month. There are several ways of getting inventory into cost management, for instance, cost management can generate inventory from the AWS CUR files and OpenShift Metering Operator reports, or it can be provided by a topology service.
 * *Metrics* - A subset of the inventory showing usage and consumption for each resource.
-* *AWS Cost and Usage Report* - Amazon Web Services provides an hourly report to Cost Management listing consumption of AWS resources. The metrics in this report contain prices assigned by Amazon (*raw costs*), which Cost Management uses as is for base costs. As a result, configuring a custom price list is not necessary for AWS sources. 
+* *AWS Cost and Usage Report* - Amazon Web Services provides an hourly report to cost management listing consumption of AWS resources. The metrics in this report contain prices assigned by Amazon (*raw costs*), which cost management uses as is for base costs. As a result, configuring a custom price list is not necessary for AWS sources. 
 . The *cost model* normalizes costs from your different sources, and allows you to apply a markup or discount to account for other costs and overhead. These steps are completed within the cost model to produce the *calculated costs*:
 .. Since the metrics and inventory data do not have a price assigned to the usage, you must create and assign a *price list* to determine the base costs of these resources. A price list includes rates for usage and requests for storage, memory, CPU, and nodes. 
-.. The raw costs from AWS and metrics and inventory from OpenShift Container Platform (with rates applied from the price list) are collected together in Cost Management as *base costs*. In Cost Management, these are costs from different sources that are normalized so the total cost of the cloud environment can be calculated.
+.. The raw costs from AWS and metrics and inventory from OpenShift Container Platform (with rates applied from the price list) are collected together in cost management as *base costs*. In cost management, these are costs from different sources that are normalized so the total cost of the cloud environment can be calculated.
 .. To account for any extra costs or overhead in your environment, you can then apply a *markup* (or discount) as a percentage.
 . The calculated costs are then *distributed* to resources across the environment, according to tags and labels. Depending on your organization, these resources could include OpenShift projects, nodes, or clusters, or AWS services or accounts. You can also use tagging to distribute the costs by team, project, or group within your organization.

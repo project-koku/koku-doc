@@ -14,15 +14,15 @@
 //In the title of concept modules, include nouns or noun phrases that are used in the body text. This helps readers and search engines find the information quickly.
 //Do not start the title of concept modules with a verb. See also _Wording of headings_ in _The IBM Style Guide_.
 
-AWS tags and OpenShift labels both consist of key:value pairs. When the key:value pairs match, the AWS and OpenShift costs are automatically associated by Cost Management. Note that tag matching is not case sensitive: for example, an AWS resource AWS tagged “APP” and an OpenShift resource tagged “app” are a match.
+AWS tags and OpenShift labels both consist of key:value pairs. When the key:value pairs match, the AWS and OpenShift costs are automatically associated by cost management. Note that tag matching is not case sensitive: for example, an AWS resource AWS tagged “APP” and an OpenShift resource tagged “app” are a match.
 
-By default, Cost Management tracks AWS compute usage and costs by associating the Amazon EC2 instance ID with the OpenShift Container Platform node running on that instance. 
+By default, cost management tracks AWS compute usage and costs by associating the Amazon EC2 instance ID with the OpenShift Container Platform node running on that instance. 
 
-You can further organize the information you want to view in Cost Management by customizing your resource tagging to identify AWS resources associated with an OpenShift cluster running on AWS. For information on the hierarchy of tag matching and tips on planning your tagging strategy, see Using tagging to manage cost data.
+You can further organize the information you want to view in cost management by customizing your resource tagging to identify AWS resources associated with an OpenShift cluster running on AWS. For information on the hierarchy of tag matching and tips on planning your tagging strategy, see Using tagging to manage cost data.
 //TO DO: need to create doc and link to it.
 
 //TO DO: add Azure info.
 
 
-To import your tags and labels into Cost Management, follow the instructions for each source.
+To import your tags and labels into cost management, follow the instructions for each source.
 

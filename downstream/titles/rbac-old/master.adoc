@@ -13,7 +13,7 @@ A -- Document Scope       in assembly
 C -- About cost management and Project Koku   ???
 R -- Terminology 
 
-- How Cost Management uses cost models
+- How cost management uses cost models
 C - What is a cost model? 
 C - The cost model workflow 
 

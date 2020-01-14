@@ -53,7 +53,7 @@ Since untagged resources cannot be reported, tag as many elements as possible, i
 
 == Review your tags often and refine as needed
 
-Define your tags and use them as early as possible with Cost Management, even if you need to adjust your tagging scheme afterwards. 
+Define your tags and use them as early as possible with cost management, even if you need to adjust your tagging scheme afterwards. 
 
 Review the resulting reports with your business owner/stakeholders early on to ensure your tags are helping you to generate the desired reports, and review your tagging strategy every few weeks to optimize.
 
