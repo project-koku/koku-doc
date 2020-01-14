@@ -1,0 +1,45 @@
+// Module included in the following assemblies:
+//
+// assembly_introduction_cost_management.adoc
+
+// Base the file name and the ID on the module title. For example:
+// * file name: con_planning_cost_management.adoc
+// * ID: [id="con_planning_cost_management"]
+// * Title: = Planning for cost management
+
+// The ID is used as an anchor for linking to the module. Avoid changing it after the module has been published to ensure existing links are not broken.
+[id="con_planning_cost_management"]
+// The `context` attribute enables module reuse. Every module's ID includes {context}, which ensures that the module has a unique ID even if it is reused multiple times in a guide.
+= Planning for cost management
+//In the title of concept modules, include nouns or noun phrases that are used in the body text. This helps readers and search engines find the information quickly.
+//Do not start the title of concept modules with a verb. See also _Wording of headings_ in _The IBM Style Guide_.
+
+When configuring Cost Management for your needs, consider the scope of your environments that you want to manage costs for, and the users who will have access to the data.
+
+Some considerations in making a new Red Hat organization and users for different customer types include:
+
+Scope:
+
+* Customer company wide
+* Customer division or organization wide, etc.
+* Partner company managing several tenants
+* Internal Red Hat 
+
+Data:
+
+* How does your business need the data? Projects? Users?
+* Planning AWS tags to reflect the use cases before.
+* Enforcement. Is there any way for you to make sure that the proper tags and metadata is included in each item of the inventory?
+	
+
+Determine the required level of access for your users based on the following predefined roles in Cost Management:
+
+* Cost Administrator:  grants read and write permissions
+* Cost Cloud Viewer:  grants read permissions on cost reports related to cloud sources
+* Cost OpenShift Viewer:  grants read permissions on cost reports related to OpenShift sources
+* Cost Price List Administrator:  grants read and write permissions on price list rates
+* Organization Administrator: a Red Hat account user who can manage users and control their access and permissions
+
+
+
+

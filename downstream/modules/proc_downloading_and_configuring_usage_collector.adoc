@@ -1,7 +1,7 @@
 // Module included in the following assemblies:
 // assembly_adding_ocp_sources.adoc
 [id="proc_downloading_and_configuring_usage_collector"]
-=== Downloading and configuring the Usage Collector
+== Downloading and configuring the Usage Collector
 
 // The URL for this procedure needs to go in the UI code in the Sources dialog.
 
