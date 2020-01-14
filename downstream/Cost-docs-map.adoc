@@ -1,14 +1,14 @@
-ACCOUNT AND USER ONBOARDING	 --> Getting Started with Cost Management
+ACCOUNT AND USER ONBOARDING	 --> Getting Started with cost management
 
 Introduction	6
-About Cost Management and Koku	6
+About cost management and Koku	6
 Scope	6
 Terms and acronyms	6
 Planning	7
 
 Entitlements	8
 Prerequisites	8
-Adding the necessary entitlements for Cost Management	8
+Adding the necessary entitlements for cost management	8
 
 
 [RBAC]
@@ -16,7 +16,7 @@ Adding the necessary entitlements for Cost Management	8
 Generating accounts and users	9
 Users in access.redhat.com	9
 Creating extra users in access.redhat.com	9
-Creating groups for Cost Management	11
+Creating groups for cost management	11
 Assigning roles via the API	12
 
 [ADDING SOURCES]
@@ -65,7 +65,7 @@ A -- Document Scope       in assembly
 C -- About cost management and Project Koku   ???
 R -- Terminology 
 
-- How Cost Management uses cost models
+- How cost management uses cost models
 C - What is a cost model? 
 C - The cost model workflow 
 

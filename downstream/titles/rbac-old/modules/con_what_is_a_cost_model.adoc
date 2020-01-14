@@ -17,7 +17,7 @@
 It can be difficult to find out the real cost of the cloud. Different sources provide a variety of cost
 data and metrics, which can be complicated to calculate together and accurately distribute the costs.
 
-Using a cost model, Cost Management allows you to associate a price to metrics provided by your
+Using a cost model, cost management allows you to associate a price to metrics provided by your
 sources to charge for utilization of resources. In some cases, those costs are related to the raw costs
 of the infrastructure, while others will be based on a price list that associates usage to charges. The
 data must be normalized into base costs before you can add a markup to it to cover your overhead,

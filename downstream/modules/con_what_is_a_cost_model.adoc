@@ -17,7 +17,7 @@
 It can be difficult to find out the real cost of the cloud. Different sources provide a variety of cost
 data and metrics, which can be complicated to calculate together and accurately distribute the costs.
 
-Using a cost model, Cost Management allows you to associate a price to metrics provided by your
+Using a cost model, cost management allows you to associate a price to metrics provided by your
 sources to charge for utilization of resources. In some cases, those costs are related to the raw costs
 of the infrastructure, while others will be based on a price list that associates usage to charges. The
 data must be normalized into base costs before you can add a markup to it to cover your overhead,
@@ -27,18 +27,4 @@ Being able to charge based on usage is a key requirement for chargeback and show
 provides the ability to set up a price by usage. It helps to align costs to utilization: those customers
 that use a resource more will be charged more.
 
-////
-The contents of a concept module give the user descriptions and explanations needed to understand and use a product.
 
-* Look at nouns and noun phrases in related procedure modules and assemblies to find the concepts to explain to users.
-* Explain only things that are visible to users. Even if a concept is interesting, it probably does not require explanation if it is not visible to users.
-* Do not include any instructions to perform an action, such as executing a command. Action items belong in procedure modules.
-
-.Additional resources
-
-* A bulleted list of links to other material closely related to the contents of the concept module.
-* Currently, modules cannot include xrefs, so you cannot include links to other content in your collection. If you need to link to another assembly, add the xref to the assembly that includes this module.
-* For more details on writing concept modules, see the link:https://github.com/redhat-documentation/modular-docs#modular-documentation-reference-guide[Modular Documentation Reference Guide].
-* Use a consistent system for file names, IDs, and titles. For tips, see _Anchor Names and File Names_ in link:https://github.com/redhat-documentation/modular-docs#modular-documentation-reference-guide[Modular Documentation Reference Guide].
-
-////

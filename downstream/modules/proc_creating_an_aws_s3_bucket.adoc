@@ -5,7 +5,7 @@
 
 // Add this URL to the UI.
 
-Cost Management requires an Amazon S3 bucket with permissions configured to store billing reports.
+Cost management requires an Amazon S3 bucket with permissions configured to store billing reports.
 
 Log into your AWS master account to begin configuring cost and usage reporting:
 
@@ -27,8 +27,8 @@ See the AWS _Billing and Cost Management_ documentation for more details on conf
 ====
 +
 // These steps will need updating for the changes in the global sources flow - ie. enter name, select AWS, select Cost...);
-. In the Cost Management application (cloud.redhat.com):
-.. Navigate to *Settings > Cost Management sources* and click *Add source* to open the wizard.
+. In the cost management application (cloud.redhat.com):
+.. Navigate to *Settings > Cost Management Sources* and click *Add source* to open the wizard.
 .. Provide a name for your source, select *Amazon Web Services (AWS)* and click *Next*.
 .. Paste the name of your S3 bucket and click *Next*.
 

@@ -13,10 +13,10 @@
 = About cost management
 //In the title of concept modules, include nouns or noun phrases that are used in the body text. This helps readers and search engines find the information quickly.
 //Do not start the title of concept modules with a verb. See also _Wording of headings_ in _The IBM Style Guide_.
+  
+Cost management is an OpenShift Container Platform service that provides cost management for clouds and containers. It is based on the upstream project Koku.
 
-Cost Management is a product in the Red Hat portfolio that provides cost management for clouds and containers. It is based on the upstream project Koku.
-
-Cost Management allows customers to simplify management of resources and costs across various environments:
+Cost management allows customers to simplify management of resources and costs across various environments:
 
 * Public clouds  - such as Amazon Web Services (AWS), Microsoft Azure, Google Compute Engine, IBM Cloud
 * Private clouds - such as Red Hat OpenStack Platform
@@ -25,7 +25,7 @@ Cost Management allows customers to simplify management of resources and costs a
 * Bare metal servers
 
 
-The Cost Management application allows customers to:
+The cost management application allows customers to:
 
 * Visualize, understand and analyze the use of resources and costs
 * Forecast their future consumption and compare them with budgets
@@ -38,7 +38,7 @@ The Cost Management application allows customers to:
 == Terminology
 
 Source::
-A cloud provider account that is connected to Cost Management to be monitored, for example, an AWS or Azure account, or an OpenShift Container Platform deployment.
+A cloud provider account that is connected to cost management to be monitored, for example, an AWS or Azure account, or an OpenShift Container Platform deployment.
 
 Organization Administrator:: 
 
