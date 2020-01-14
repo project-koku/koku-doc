@@ -1,4 +1,4 @@
-= Getting Started with Red Hat cost management
+= Getting started with Red Hat cost management
 :imagesdir: images
 :numbered:
 

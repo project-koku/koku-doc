@@ -58,7 +58,7 @@ After running the request, cost management will return a response to confirm it 
 
 [NOTE]
 ====
-cost management also checks for any in-progress requests with the same date parameters as that request. If cost management is already working on an export with the same dates, the new request is rejected with a 400 error and the message _"A pending or processing data export already exists with the given "start_date" and "end_date"."_ 
+Cost management also checks for any in-progress requests with the same date parameters as that request. If cost management is already working on an export with the same dates, the new request is rejected with a 400 error and the message _"A pending or processing data export already exists with the given "start_date" and "end_date"."_ 
 ====
 
 When complete, the exported files are written with hierarchical paths that include the cost management account ID, source/provider UUID, and date. An example file path looks like:

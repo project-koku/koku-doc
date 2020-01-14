@@ -23,7 +23,7 @@ Report path prefix: (leave blank)
 +
 [NOTE]
 ====
-See the AWS _Billing and cost management_ documentation for more details on configuration.
+See the AWS _Billing and Cost Management_ documentation for more details on configuration.
 ====
 +
 // These steps will need updating for the changes in the global sources flow - ie. enter name, select AWS, select Cost...);
