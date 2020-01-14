@@ -3,7 +3,6 @@
 
 This section describes how to connect your OpenShift Container Platform cluster to the Cost Management application.
 
-
 To add an OpenShift Container Platform account to Cost Management, you must configure your OpenShift cluster to provide Operator Metering usage data (metrics), then add the source in the Cost Management user interface. 
 
 For your OpenShift Container Platform cluster to provide metrics to Cost Management:
@@ -13,10 +12,10 @@ For your OpenShift Container Platform cluster to provide metrics to Cost Managem
 . Download and configure the Usage Collector Ansible playbook to generate report resources for your OpenShift cluster.
 . Create a cron job to regularly collect and send Operator Metering usage data to the upload service.
 
-As you will complete some of the following steps in OpenShift Container Platform, and some steps in the Cost Management user interface, have both applications open in a web browser, plus the command line interface (CLI).
+As you will complete some of the following steps in OpenShift Container Platform, and some steps in the Cost Management user interface, have both applications open in a web browser, as well as a terminal to access the command line interface (CLI).
 
 
-== Prerequisites
+.Prerequisites
 //What kind of module does this go into? Reference? In the procedure?
 // Add links to other docs that show you how to install these.
 
@@ -27,11 +26,9 @@ To obtain the OpenShift Operator Metering usage data, Cost Management requires t
 * OpenShift Container Platform 4.3
 * Operator Metering
 +
-Operator Metering is not deployed out of the box in OpenShift Container Platform. See See https://docs.openshift.com/container-platform/4.2/metering/metering-installing-metering.html[Installing Metering] in the OpenShift 4.2 documentation for instructions to install metering from OperatorHub.
+Operator Metering is not deployed out of the box in OpenShift Container Platform. See See https://docs.openshift.com/container-platform/4.2/metering/metering-installing-metering.html[Installing Metering] in the OpenShift documentation for instructions to install metering from OperatorHub.
 
 // TODO: * Update to OCP 4.3 throughout, links and refs
-// provide instructions/links for pre-OCP 4.3 versions??? Left out from onboarding.
-
 
 *On a Red Hat Enterprise Linux (RHEL) system with network access to your OpenShift cluster*
 
@@ -82,6 +79,8 @@ See https://access.redhat.com/articles/3174981[How do I Download and Install Red
 +
 * OpenShift command line tools (oc)
 + See https://docs.openshift.com/container-platform/4.2/cli_reference/openshift_cli/getting-started-cli.html#cli-installing-cli_cli-developer-commands[Installing the CLI] in the _OpenShift documentation_.
+
+//update OCP 4.3 link
 
 
 include::../modules/proc_obtaining_metering_operator_login.adoc[]

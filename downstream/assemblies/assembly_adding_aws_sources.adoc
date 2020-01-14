@@ -11,8 +11,6 @@ This creates a read-only connection to AWS in order to collect cost information 
 You must use an AWS master account for this procedure, as a linked AWS account does not have sufficient access to create billing accounts. After you add the master account as a source, Cost Management will collect data from any linked accounts as well.
 ====
 
-== Configuring your AWS account
-
 Before you can add your AWS account to Cost Management as a data source, you must configure the following services on your AWS account to allow Cost Management access to metrics:
 
 //ADD LINKS TO PROC TOPICS - this is a preview list//
@@ -32,6 +30,7 @@ include::../modules/proc_activating_aws_tags.adoc[]
 
 include::../modules/proc_enabling_aws_account_access.adoc[]
 
-include::../modules/proc_adding_an_aws_account.adoc[]
+//include::../modules/proc_adding_an_aws_account.adoc[]
+// this topic is covered in the other subsections.
 
 You have completed adding your AWS account as a source.

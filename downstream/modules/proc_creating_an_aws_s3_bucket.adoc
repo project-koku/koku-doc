@@ -1,7 +1,7 @@
 // Module included in the following assemblies:
 // assembly_adding_aws_sources.adoc
 [id="proc_creating_an_aws_s3_bucket"]
-=== Creating an S3 bucket for reporting
+== Creating an S3 bucket for reporting
 
 // Add this URL to the UI.
 

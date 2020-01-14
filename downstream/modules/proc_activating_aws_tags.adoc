@@ -8,7 +8,7 @@
 // * Title: = Activating AWS tags
 
 [id="proc_activating_aws_tags"]
-= Activating AWS tags for cost management
+== Activating AWS tags for cost management
 
 To use tags to organize your AWS resources in the cost management application, activate your tags in AWS to allow them to be imported automatically.
 
