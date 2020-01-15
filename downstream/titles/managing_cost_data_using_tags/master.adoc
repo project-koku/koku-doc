@@ -1,6 +1,13 @@
 = Managing cost data using tagging
 :imagesdir: images
-:numbered:
+:toc: left
+:toclevels: 3
+:numbered!:
+:compat-mode:
+:experimental:
+
+// Custom attributes
+include::../../attributes/cost.adoc[]
 
 include::assemblies/assembly_managing_cost_data_tagging.adoc[leveloffset=+1]
 

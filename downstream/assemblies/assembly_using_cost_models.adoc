@@ -1,10 +1,5 @@
 // This assembly is included in the following assemblies:
-//
-// <List assemblies here, each on a new line>
 
-// Retains the context of the parent assembly if this assembly is nested within another assembly.
-// For more information about nesting assemblies, see: https://redhat-documentation.github.io/modular-docs/#nesting-assemblies
-// See also the complementary step on the last line of this file.
 ifdef::context[:parent-context: {context}]
 
 // Base the file name and the ID on the assembly title. For example:
@@ -16,20 +11,20 @@ ifdef::context[:parent-context: {context}]
 [id="using_cost_models"]
 // If the assembly is reused in other assemblies in a guide, include {context} in the ID: [id="a-collection-of-modules_{context}"].
 == Using cost models
-//:context: assembly-keyword
+:context: cost_models
 // The `context` attribute enables module reuse. Every module's ID includes {context}, which ensures that the module has a unique ID even if it is reused multiple times in a guide.
 
 This document describes how to use the cost model in cost management to apply a price to usage in
 your cloud environment, then distribute the costs to resources.
 
-//This paragraph is the assembly introduction. It explains what the user will accomplish by working through the modules in the assembly and sets the context for the user story the assembly is based on. Can include more than one paragraph. Consider using the information from the user story.
+ifdef::cost[]
+
+include::../modules/note_tech_preview.adoc[leveloffset=+1]
+
+endif::cost[]
+
 
 // .Prerequisites -- are there any?
-
-// * A bulleted list of conditions that must be satisfied before the user starts following this assembly.
-
-
-// The following include statements pull in the module files that comprise the assembly. Include any combination of concept, procedure, or reference modules required to cover the user story. You can also include other assemblies.
 
 include::../modules/ref_cost_model_terms.adoc[leveloffset=+1]
 // [leveloffset=+1] ensures that when a module starts with a level-1 heading (= Heading), the heading will be interpreted as a level-2 heading (== Heading) in the assembly.
@@ -54,6 +49,6 @@ include::../modules/proc_creating_an_OCP_cost_model.adoc[leveloffset=+2]
 * Use a consistent system for file names, IDs, and titles. For tips, see _Anchor Names and File Names_ in link:https://github.com/redhat-documentation/modular-docs#modular-documentation-reference-guide[Modular Documentation Reference Guide].
 
 // Restore the context to what it was before this assembly.
-ifdef::parent-context[:context: {parent-context}]
-ifndef::parent-context[:!context:]
+ifdef::parent-context[:cost_models: {parent-context}]
+ifndef::parent-context[:!cost_models:]
 ////

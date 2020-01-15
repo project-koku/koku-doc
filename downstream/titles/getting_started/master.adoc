@@ -1,6 +1,13 @@
 = Getting started with Red Hat cost management
 :imagesdir: images
-:numbered:
+:toc: left
+:toclevels: 3
+:numbered!:
+:compat-mode:
+:experimental:
+
+// Custom attributes
+include::../../attributes/cost.adoc[]
 
 // Intro - is this here in master.adoc or in another assembly?
 

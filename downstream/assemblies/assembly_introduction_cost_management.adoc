@@ -17,12 +17,16 @@ ifdef::context[:parent-context: {context}]
 // If the assembly is reused in other assemblies in a guide, include {context} in the ID: [id="a-collection-of-modules_{context}"].
 = Introduction to cost management
 //If the assembly covers a task, start the title with a verb in the gerund form, such as Creating or Configuring.
-:context: assembly-keyword
+:context: getting_started
 // The `context` attribute enables module reuse. Every module's ID includes {context}, which ensures that the module has a unique ID even if it is reused multiple times in a guide.
 
 This document provides instructions to begin using cost management, including prerequisites and instructions for connecting your cloud environments, and configuring users and permissions. 
 
 After completing the setup described in this guide, you will be able to track cost and usage data for your AWS, Microsoft Azure, and OpenShift Container Platform environments.
+
+ifdef::cost[]
+include::../modules/note_tech_preview.adoc[leveloffset=+1]
+endif::cost[]
 
 include::../modules/con_about_cost_management.adoc[leveloffset=+1]
 
@@ -30,5 +34,5 @@ include::../modules/con_planning_cost_management.adoc[leveloffset=+1]
 
 
 // Restore the context to what it was before this assembly.
-ifdef::parent-context[:context: {parent-context}]
-ifndef::parent-context[:!context:]
+ifdef::parent-context[:getting_started: {parent-context}]
+ifndef::parent-context[:!getting_started:]
