@@ -15,33 +15,29 @@
 
 Since Amazon AWS cost and usage data is collected into cost management with prices already assigned, you only need to assign a markup or discount (if desired) for your AWS sources.
 
-.Prerequisites
+//.Prerequisites
 
-//edit
-* A bulleted list of conditions that must be satisfied before the user starts following this module.
-* You can also link to other modules or assemblies the user must follow before starting this module.
-* Delete the section title and bullets if the module has no prerequisites.
 
 .Procedure
 
-. From the Cost models menu item (left hand menu), click Create cost model to open the cost model wizard.
-. Enter a name and description for the cost model, and select OpenShift Container Platform as the source type to apply the cost model to. Click Next.
+. From the *Cost model details* menu, click *Create cost model* to open the cost model wizard.
+. Enter a name and description for the cost model, and select *OpenShift Container Platform* as the source type to apply the cost model to. Click *Next*.
 . Set a price list to allow you to assign a rate to usage or requests. Cost management collects these metrics from OpenShift but there is no cost attached to them in cost management.
 .. Select a metric to apply a value to and click *Next*.
 .. Select a measurement.
 .. Enter a rate and save it.
-.. Add another rate by repeating the previous steps, or click Next to set a markup.
-. Enter a percentage value to apply a markup to the costs, and click Next. 
-.. To apply a discount instead of a markup, enter a minus sign with the value (for example, -15). 
-.. If you don’t want to apply a markup or discount, enter 0.
+.. Add another rate by repeating the previous steps, or click *Next* to set a markup.
+. Enter a percentage value to apply a markup to the costs, and click *Next*. 
+.. To apply a discount instead of a markup, enter a minus sign with the value (for example, _-15_). 
+.. If you do not want to apply a markup or discount, enter _0_.
 +
 [NOTE]
 ====
 You can use a markup to account for your overhead costs, such as the cost of administering the cluster, or support costs, for example. A markup is an estimation to cover your costs not shown by metrics or usage.
 ====
 +
-. Select one or multiple sources to assign the cost model to and click Next. Selecting a source with a cost model already assigned will override its previous cost model. 
-. Review the cost model details, and click Finish to create it.
+. Select one or multiple sources to assign the cost model to and click *Next*. Selecting a source with a cost model already assigned will override its previous cost model. 
+. Review the cost model details, and click *Finish* to create it.
 
 
 
@@ -51,7 +47,7 @@ You can use a markup to account for your overhead costs, such as the cost of adm
 .Next steps
 
 //add link to tagging doc
-Review your tags and tagging strategy to ensure that costs are being distributed to the correct resources, cost centers, or teams. See link:Using tagging to manage cost data for more information.
+Review your tags and tagging strategy to ensure that costs are being distributed to the correct resources, cost centers, or teams. See the guide _Using tagging to manage cost data_ for more information.
 
 
 

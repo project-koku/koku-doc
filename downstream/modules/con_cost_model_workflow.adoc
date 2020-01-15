@@ -16,7 +16,7 @@
 
 The following diagram shows the cost model workflow that cost management uses to normalize cost data from different sources, apply a markup (or discount), then distribute the costs across the relevant resources.
 
-//<insert cost model diagram>
+image:../images/costmodel-workflow.png[]
 
 . Cost data is collected in cost management from several sources:
 * *Inventory* - A list of all the resources that are or were present in your source, whether they are in use or not. For example, if your OpenShift Container Platform environment contains a host that is not in use, that host still costs $x amount per month. There are several ways of getting inventory into cost management, for instance, cost management can generate inventory from the AWS CUR files and OpenShift Metering Operator reports, or it can be provided by a topology service.

@@ -1,4 +1,6 @@
-ACCOUNT AND USER ONBOARDING	 --> Getting Started with cost management
+Getting started with cost management
+
+:context: getting_started
 
 Introduction	6
 About cost management and Koku	6
@@ -60,6 +62,8 @@ Reference
 
 Using cost models
 
+:context: cost_models
+
 - Introduction
 A -- Document Scope       in assembly
 C -- About cost management and Project Koku   ???
@@ -77,11 +81,22 @@ P -- Creating an OpenShift Container Platform cost model
 
 Exporting cost data using the API
 
+
+:context: exporting_api
+
 A - Introduction
 C - How the data export API works
 P - Exporting cost data to an AWS bucket
 P - Viewing previous data export requests
 R - Data export API parameters
+
+
+------
+
+Tagging
+
+:context: tagging
+
 
 
 

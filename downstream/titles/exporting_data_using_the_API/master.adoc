@@ -1,5 +1,16 @@
 = Exporting cost data using the API
 :imagesdir: images
+:toc: left
+:toclevels: 3
+:numbered!:
+:compat-mode:
+:experimental:
+
+// Custom attributes
+include::attributes/cost.adoc[]
+
+:cost:
+
 :numbered:
 
 include::assemblies/assembly_exporting_cost_data_API.adoc[leveloffset=+1]
