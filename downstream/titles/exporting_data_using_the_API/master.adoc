@@ -7,7 +7,7 @@
 :experimental:
 
 // Custom attributes
-include::../../attributes/cost.adoc[]
+include::attributes/cost.adoc[]
 
 :cost:
 

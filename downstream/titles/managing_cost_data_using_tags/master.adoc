@@ -7,7 +7,11 @@
 :experimental:
 
 // Custom attributes
-include::../../attributes/cost.adoc[]
+include::attributes/cost.adoc[]
+
+:cost:
+
+:numbered:
 
 include::assemblies/assembly_managing_cost_data_tagging.adoc[leveloffset=+1]
 

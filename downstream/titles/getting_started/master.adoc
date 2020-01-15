@@ -7,7 +7,11 @@
 :experimental:
 
 // Custom attributes
-include::../../attributes/cost.adoc[]
+include::attributes/cost.adoc[]
+
+:cost:
+
+:numbered:
 
 // Intro - is this here in master.adoc or in another assembly?
 
