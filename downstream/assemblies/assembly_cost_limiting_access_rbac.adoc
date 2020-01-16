@@ -39,10 +39,8 @@ Edit and include a brief overview of steps.
 
 .Prerequisites
 
-// Is this still correct? Org admin?
-* At least one Red Hat account user with Organization Administrator entitlements. 
-
-You will use this Red Hat login to look up users, add them to groups, and to assign roles controlling visibility to resources.
+* At least one Red Hat account user with Organization Administrator entitlements. You will use this Red Hat login to look up users, add them to groups, and to assign roles that control visibility to resources.
+* Additional Red Hat user(s) without Organization Administrator privileges. See https://access.redhat.com/start/how-to-create-and-manage-users[How To Create and Manage Users] in the Customer Portal for details.
 
 [NOTE]
 ====

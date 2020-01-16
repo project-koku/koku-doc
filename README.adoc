@@ -63,3 +63,9 @@ Templates are available in this repository's _modules_ directory to copy and wri
 See the _Modular Documentation Reference Guide_ for information about these file types: https://redhat-documentation.github.io/modular-docs/.
 
 
+=== Conventions
+
+Images::
+* UI icons, if needed, should be approximately 21px x 21px in size and saved in the _Images_ directory.
+
+

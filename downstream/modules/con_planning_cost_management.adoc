@@ -31,7 +31,7 @@ Data:
 * Planning AWS tags to reflect the use cases before.
 * Enforcement. Is there any way for you to make sure that the proper tags and metadata is included in each item of the inventory?
 	
-
+// Should this part be moved to the RBAC section?
 Determine the required level of access for your users based on the following predefined roles in cost management:
 
 * Cost Administrator:  grants read and write permissions
