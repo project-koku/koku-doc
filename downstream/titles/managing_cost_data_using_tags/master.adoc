@@ -15,6 +15,7 @@ include::attributes/cost.adoc[]
 
 include::assemblies/assembly_managing_cost_data_tagging.adoc[leveloffset=+1]
 
+include::assemblies/assembly_organizing_cost_data_using_tags.adoc[leveloffset=+1]
 
 
 

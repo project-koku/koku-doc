@@ -22,13 +22,12 @@ ifdef::context[:parent-context: {context}]
 
 After adding your AWS and OpenShift Container Platform sources, in addition to showing cost data by source, cost management will automatically show AWS cost and usage related to running your OpenShift Container Platform clusters on AWS. 
 
-The cost management application tracks these costs using tags (called labels in OpenShift), which you can refine to filter and attribute to resources.Tags in cost management allow you to organize your resources by cost and to allocate the costs to different parts of your cloud infrastructure.
+The cost management application tracks these costs using tags (called labels in OpenShift), which you can refine to filter and attribute to resources. Tags in cost management allow you to organize your resources by cost and to allocate the costs to different parts of your cloud infrastructure.
 
 [IMPORTANT]
 ====
 Tags and labels can only be configured directly on a source. You cannot edit tags and labels in the cost management application.
 ====
-
 
 include::../modules/con_how_cost_associates_tags_between_sources.adoc[leveloffset=+1]
 // [leveloffset=+1] ensures that when a module starts with a level-1 heading (= Heading), the heading will be interpreted as a level-2 heading (== Heading) in the assembly.
@@ -37,12 +36,12 @@ include::../modules/proc_adding_tags_to_an_AWS_resource.adoc[leveloffset=+1]
 
 include::../modules/proc_adding_tags_to_an_OCP_resource.adoc[leveloffset=+1]
 
-////
-== Additional resources (or Next steps)
 
-* A bulleted list of links to other material closely related to the contents of the assembly, including xref links to other assemblies in your collection.
-* For more details on writing assemblies, see the link:https://github.com/redhat-documentation/modular-docs#modular-documentation-reference-guide[Modular Documentation Reference Guide].
-* Use a consistent system for file names, IDs, and titles. For tips, see _Anchor Names and File Names_ in link:https://github.com/redhat-documentation/modular-docs#modular-documentation-reference-guide[Modular Documentation Reference Guide].
+== Next steps
+
+* Refine your tags and tagging strategy to better organize your view of cost data. See the _Managing cost data using tagging_ guide for more details. 
+
+
 
 // Restore the context to what it was before this assembly.
 ifdef::parent-context[:context: {parent-context}]

@@ -16,7 +16,7 @@ Tagging is done in each source before cost management can use the tags to automa
 
 Add your tags or labels to resources belonging to each source. Then, cost management imports the tags by different methods, depending on source type:
 
-* AWS tags must be activated, and are then selected and exported to cost management in the Cost and Usage report. 
+* AWS tags must be activated, and are then selected and exported to cost management in the Cost and Usage report. See the _Getting started with cost management_ guide for instructions on activating AWS tags. 
 * In OpenShift Container Platform, labels are exported by Metering and included in the metrics reports that cost management uses as input. 
 
 [NOTE]
