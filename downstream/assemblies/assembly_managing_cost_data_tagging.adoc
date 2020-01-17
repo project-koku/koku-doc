@@ -45,19 +45,22 @@ The following links provide further guidance on tagging for each source type.
 
 // To do: Add URL for Getting Started with Cost guide and tagging configuration section.
 
-* AWS:
-** https://aws.amazon.com/answers/account-management/aws-tagging-strategies/[AWS tagging strategies]
-** https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_examples_iam-add-tag-user-role.html[IAM: Add a specific tag with specific values]
+*AWS:*
 
-* OpenShift:
-** https://kubernetes.io/docs/concepts/overview/working-with-objects/labels/#syntax-and-character-set[Kubernetes labels and selectors]
-** https://github.com/kubernetes/kubernetes/blob/release-1.0/docs/user-guide/labels.md[Kubernetes user guide: labels]
+* https://aws.amazon.com/answers/account-management/aws-tagging-strategies/[AWS tagging strategies]
+* https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_examples_iam-add-tag-user-role.html[IAM: Add a specific tag with specific values]
 
-* Microsoft Azure:
-** https://docs.microsoft.com/en-us/azure/architecture/cloud-adoption/decision-guides/resource-tagging/[Azure resource naming and tagging decision guide]
-** https://docs.microsoft.com/en-us/azure/architecture/best-practices/naming-conventions[Azure naming best practices]
-** https://docs.microsoft.com/en-us/azure/azure-resource-manager/resource-group-using-tags[Using tags to organize your Azure resources]
-** https://docs.microsoft.com/en-us/azure/governance/policy/samples/enforce-tag-on-resource-groups[Enforce tags in Azure resource groups]
+*OpenShift:*
+
+* https://kubernetes.io/docs/concepts/overview/working-with-objects/labels/#syntax-and-character-set[Kubernetes labels and selectors]
+* https://github.com/kubernetes/kubernetes/blob/release-1.0/docs/user-guide/labels.md[Kubernetes user guide: labels]
+
+*Microsoft Azure:*
+
+* https://docs.microsoft.com/en-us/azure/architecture/cloud-adoption/decision-guides/resource-tagging/[Azure resource naming and tagging decision guide]
+* https://docs.microsoft.com/en-us/azure/architecture/best-practices/naming-conventions[Azure naming best practices]
+* https://docs.microsoft.com/en-us/azure/azure-resource-manager/resource-group-using-tags[Using tags to organize your Azure resources]
+* https://docs.microsoft.com/en-us/azure/governance/policy/samples/enforce-tag-on-resource-groups[Enforce tags in Azure resource groups]
 
 
 // Restore the context to what it was before this assembly.

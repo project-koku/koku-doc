@@ -12,7 +12,7 @@
 // The `context` attribute enables module reuse. Every module's ID includes {context}, which ensures that the module has a unique ID even if it is reused multiple times in a guide.
 = Adding a role to a group
 
-Add a role to a group to manage and limit the scope of information that users in that group can see within cost management.
+Add your role to a group to manage and limit the scope of information that users in that group can see within cost management.
 
 .Prerequisites
 

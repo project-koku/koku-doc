@@ -45,7 +45,7 @@ Not all resource types support tags.
 Generalized VM don’t support tags.
 Tags applied to the resource group are not inherited by the resources.
 Tags can’t be applied to classic resources.
-|Prefix kubernetes.io/ 
+|Prefixes kubernetes.io/ 
 And k8s.io/ are reserved.
 Not all resource types support tags.
 

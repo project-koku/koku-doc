@@ -1,9 +1,9 @@
-<title>Getting Started with cost management</title>
-<productname>Cloud Management Services for Hybrid Operations</productname>
+<title>Using cost models</title>
+<productname>cost management</productname>
 <productnumber>1.0</productnumber>
-<subtitle>Learn About cost management</subtitle>
+<subtitle>Configuring a cost model to reflect your cloud costs</subtitle>
 <abstract>
-    <para></para>
+    <para>This guide explains the cost model feature, configuration and related terminology.</para>
 </abstract>
 <authorgroup>
     <orgname>Red Hat Customer Content Services </orgname>

@@ -26,7 +26,7 @@ To obtain the OpenShift Operator Metering usage data, cost management requires t
 * OpenShift Container Platform 4.3
 * Operator Metering
 +
-Operator Metering is not deployed out of the box in OpenShift Container Platform. See See https://docs.openshift.com/container-platform/4.2/metering/metering-installing-metering.html[Installing Metering] in the OpenShift documentation for instructions to install metering from OperatorHub.
+Operator Metering is not deployed out of the box in OpenShift Container Platform. See https://docs.openshift.com/container-platform/4.2/metering/metering-installing-metering.html[Installing Metering] in the OpenShift documentation for instructions to install metering from OperatorHub.
 
 // TODO: * Update to OCP 4.3 throughout, links and refs
 
@@ -57,7 +57,7 @@ Register the system to Red Hat Insights:
 # insights-client --register
 ----
 +
-. Open the `insights-client.conf` config file, and change the authentication method to `BASIC` and provide the credentials for your Red Hat account. Edit the following lines:
+. Open the `insights-client.conf` config file, and change the authentication method to `BASIC` and provide the credentials for your Red Hat account. To do this, edit the following lines:
 ** Uncomment the line `authmethod=BASIC`
 ** Uncomment and add your Red Hat login username as `username=<yourRedHatlogin>`
 ** Uncomment and add the password for your Red Hat login as `password=<password>`

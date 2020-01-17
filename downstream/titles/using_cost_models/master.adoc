@@ -13,22 +13,8 @@ include::attributes/cost.adoc[]
 
 :numbered:
 
-include::assemblies/assembly_using_cost_models.adoc[]
+include::assemblies/assembly_using_cost_models.adoc[leveloffset=+1]
 
 
 
 
-////
-- Introduction
-A -- Document Scope       in assembly
-C -- About cost management and Project Koku   ???
-R -- Terminology 
-
-- How cost management uses cost models
-C - What is a cost model? 
-C - The cost model workflow 
-
-- Assigning a cost to metrics and usage using a cost model 
-P -- Creating an AWS cost model 
-P -- Creating an OpenShift Container Platform cost model 
-////

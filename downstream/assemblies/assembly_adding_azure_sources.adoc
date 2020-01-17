@@ -14,9 +14,10 @@ Adding a source
 This section describes how to configure your Microsoft Azure account to allow cost management access. 
 
 Configuring your Azure account to be a cost management source requires:
-* Creating a storage account and resource group
-* Setting up an application and service principal for access
-* Scheduling daily cost exports
+
+. Creating a storage account and resource group
+. Setting up an application and service principal for access
+. Scheduling daily cost exports
 
 [NOTE]
 ====

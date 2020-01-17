@@ -11,7 +11,7 @@ The Usage Collector is an Ansible playbook wrapped in a minimal script that perf
 
 During the collection phase, usage data is retrieved from the Operator Metering endpoint and compressed into a package that is uploaded for processing by cost management via the Red Hat Insights Client.
 
-. Download the Usage Collector on the same system where the Red Hat Insights Client was installed, using your See https://github.com/project-koku/korekuta/archive/master.zip[browser] or with the following command:
+. Download the Usage Collector from _https://github.com/project-koku/korekuta/archive/master.zip_ on the same system where the Red Hat Insights Client was installed, using your browser or with the following command:
 +
 ----
 # curl -LOk https://github.com/project-koku/korekuta/archive/master.zip
@@ -34,6 +34,7 @@ During the collection phase, usage data is retrieved from the Operator Metering 
 [NOTE]
 ====
 To configure the Usage Collector, you need the following information:
+
 * OpenShift API endpoint (e.g. https://api.openshift-prod.mycompany.com)
 * OpenShift reporting-operator token file path
 * OpenShift Operator Metering namespace (e.g. metering)
@@ -54,9 +55,10 @@ Use the following example, substituting values for your OpenShift API endpoint, 
 [NOTE]
 ====
 If the oc command line is installed in a different location from _/usr/bin/oc_ on your system, specify the path using _-e OCP_CLI=</path/to/oc>_ when executing the _ocp_usage.sh_ command.
-+
+
 You will be prompted for your sudo password and the Ansible playbook will execute to capture the configuration information and create the usage reports on your OpenShift cluster. When complete you will see the following message:
-+
+
+
 ----
 TASK [setup : Display New Cluster Identifier] **********************************
 ok: [localhost] => {
