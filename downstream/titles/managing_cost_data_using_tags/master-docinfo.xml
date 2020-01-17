@@ -1,9 +1,9 @@
-<title>Getting Started with cost management</title>
-<productname>Cloud Management Services for Hybrid Operations</productname>
+<title>Managing cost data using tagging</title>
+<productname>cost management</productname>
 <productnumber>1.0</productnumber>
-<subtitle>Learn About cost management</subtitle>
+<subtitle>Organize resources and allocate costs with tags</subtitle>
 <abstract>
-    <para></para>
+    <para>This guide explains how tagging works in cost management, and outlines strategies for managing your cost data with tags and labels.</para>
 </abstract>
 <authorgroup>
     <orgname>Red Hat Customer Content Services </orgname>

@@ -25,11 +25,11 @@ Configure AWS tags for cost management using the following steps:
 
 . Create and apply tags to your AWS resources. 
 +
-See _User-Defined Cost Allocation Tags_ in the AWS documentation for instructions: https://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/custom-tags.html
+See https://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/custom-tags.html[_User-Defined Cost Allocation Tags_] in the AWS documentation for instructions.
 +
 . Activate the tags you want to be collected by the cost management application via the Cost and Usage Report. In the AWS Billing console, select the tags you want to activate from the Cost Allocation Tags area. 
 +
-See _Activating the AWS-Generated Cost Allocation Tags_ in the AWS documentation for instructions: https://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/activate-built-in-tags.html 
+See https://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/activate-built-in-tags.html[_Activating the AWS-Generated Cost Allocation Tags_] in the AWS documentation for instructions.
 
 //.Verification steps
 //(Optional) Provide the user with verification method(s) for the procedure, such as expected output or commands that can be used to check for success or failure.

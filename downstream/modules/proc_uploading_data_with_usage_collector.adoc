@@ -12,6 +12,7 @@ Create a cron job to regularly upload data collected by the Usage Collector to c
 [IMPORTANT]
 ====
 The cron user requires:
+
 * access to the file with metering-operator token 
 * sudo access to interact with the Red Hat Insights client.
 ==== 

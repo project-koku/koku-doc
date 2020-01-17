@@ -1,4 +1,4 @@
-= Getting started with Red Hat cost management
+= Getting started with cost management
 :imagesdir: images
 :toc: left
 :toclevels: 3

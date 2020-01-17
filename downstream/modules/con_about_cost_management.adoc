@@ -14,9 +14,9 @@
 //In the title of concept modules, include nouns or noun phrases that are used in the body text. This helps readers and search engines find the information quickly.
 //Do not start the title of concept modules with a verb. See also _Wording of headings_ in _The IBM Style Guide_.
   
-Cost management is an OpenShift Container Platform service that provides cost management for clouds and containers. It is based on the upstream project Koku.
+Cost management is an OpenShift Container Platform service that enables you to better understand and track costs for clouds and containers. It is based on the upstream project Koku.
 
-Cost management allows customers to simplify management of resources and costs across various environments:
+Cost management allows you to simplify management of resources and costs across various environments, including:
 
 * Public clouds  - such as Amazon Web Services (AWS), Microsoft Azure, Google Compute Engine, IBM Cloud
 * Private clouds - such as Red Hat OpenStack Platform
@@ -25,10 +25,10 @@ Cost management allows customers to simplify management of resources and costs a
 * Bare metal servers
 
 
-The cost management application allows customers to:
+The cost management application allows you to:
 
 * Visualize, understand and analyze the use of resources and costs
-* Forecast their future consumption and compare them with budgets
+* Forecast your future consumption and compare them with budgets
 * Optimize resources and consumption
 * Identify patterns of usage that should be investigated
 * Integrate with third party tools that can benefit from cost and resourcing data
@@ -46,13 +46,5 @@ The highest permission level for Red Hat accounts, with full access to content a
 
 See https://access.redhat.com/articles/1757953[Roles and Permissions for Red Hat Subscription Management] for more details.
 
-/////
-.Additional resources
 
-* A bulleted list of links to other material closely related to the contents of the concept module.
-* Currently, modules cannot include xrefs, so you cannot include links to other content in your collection. If you need to link to another assembly, add the xref to the assembly that includes this module.
-* For more details on writing concept modules, see the link:https://github.com/redhat-documentation/modular-docs#modular-documentation-reference-guide[Modular Documentation Reference Guide].
-* Use a consistent system for file names, IDs, and titles. For tips, see _Anchor Names and File Names_ in link:https://github.com/redhat-documentation/modular-docs#modular-documentation-reference-guide[Modular Documentation Reference Guide].
-
-/////
 

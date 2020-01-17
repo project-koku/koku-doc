@@ -15,21 +15,5 @@ include::attributes/cost.adoc[]
 
 include::assemblies/assembly_managing_cost_data_tagging.adoc[leveloffset=+1]
 
-include::assemblies/assembly_organizing_cost_data_using_tags.adoc[leveloffset=+1]
+// Move from GSG? include::assemblies/assembly_organizing_cost_data_using_tags.adoc[leveloffset=+1]
 
-
-
-
-
-////
-
-MAP
-C  How cost management associates tags between sources
- --> Tag matching hierarchy	2
-C Designing your tagging strategy	3
-P  Tagging in a multi-cluster environment	5
-R Tag specifications by source type	5
-Additional resources
-
-
-////

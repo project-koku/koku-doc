@@ -11,25 +11,22 @@
 [id="con_planning_cost_management"]
 // The `context` attribute enables module reuse. Every module's ID includes {context}, which ensures that the module has a unique ID even if it is reused multiple times in a guide.
 = Planning for cost management
-//In the title of concept modules, include nouns or noun phrases that are used in the body text. This helps readers and search engines find the information quickly.
-//Do not start the title of concept modules with a verb. See also _Wording of headings_ in _The IBM Style Guide_.
 
 When configuring cost management for your needs, consider the scope of your environments that you want to manage costs for, and the users who will have access to the data.
 
-Some considerations in making a new Red Hat organization and users for different customer types include:
+Some considerations in creating a new Red Hat organization and users for different customer types include:
 
-Scope:
+*Scope:*
 
 * Customer company wide
-* Customer division or organization wide, etc.
+* Customer division or organization wide
 * Partner company managing several tenants
-* Internal Red Hat 
 
-Data:
+*Data:*
 
-* How does your business need the data? Projects? Users?
-* Planning AWS tags to reflect the use cases before.
-* Enforcement. Is there any way for you to make sure that the proper tags and metadata is included in each item of the inventory?
+* How does your business need the data? Do you want information about projects, or users, for example?
+* Planning AWS tags to reflect previous use cases.
+* Enforcement: Is there any way for you to ensure that the proper tags and metadata are included in each item of the inventory?
 	
 // Should this part be moved to the RBAC section?
 Determine the required level of access for your users based on the following predefined roles in cost management:

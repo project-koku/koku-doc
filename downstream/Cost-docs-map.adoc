@@ -2,60 +2,41 @@ Getting started with cost management
 
 :context: getting_started
 
-Introduction	6
-About cost management and Koku	6
-Scope	6
-Terms and acronyms	6
-Planning	7
-
-Entitlements	8
-Prerequisites	8
-Adding the necessary entitlements for cost management	8
-
+[INTRO]
+C Introduction to cost management
+C About cost management
+C Terminology
+C Planning
 
 [RBAC]
-
-Generating accounts and users	9
-Users in access.redhat.com	9
-Creating extra users in access.redhat.com	9
-Creating groups for cost management	11
-Assigning roles via the API	12
+Limiting access to cost management resources
+P Adding a role
+P Adding a role to a group
 
 [ADDING SOURCES]
+Adding sources
+A Adding an Amazon Web Services (AWS) source	
+P -- Creating an S3 bucket for reporting
+P -- Activating tags for cost management 	
+P -- Enabling account access for cost and usage consumption
 
-Adding sources	18
+A Adding a Microsoft Azure source	
+P -- Creating a storage account	
+P -- Creating a service principal	
+P -- Configuring a daily Azure data export schedule	
 
-[STORY]
-- Adding an Amazon Web Services (AWS) source	18
--- Preparing an S3 bucket for reporting	19
--- Activating tags for use by the cost management application	20
--- Enabling account access for cost and usage consumption	20
-
-[STORY]
-- Adding a Microsoft Azure source	22
--- Creating a storage account	22
--- Creating a service principal	23
--- Configure a daily Azure data export schedule	24
-
-[STORY]
-C - Adding an OpenShift Container Platform source	24
-? -- Prerequisites	25
-P -- Obtaining Metering Operator login credentials	26
-P -- Downloading and configuring the Usage Collector	27
-P -- Uploading data with Usage Collector	29
+A - Adding an OpenShift Container Platform source
+-- Prerequisites
+P -- Obtaining Metering Operator login credentials	
+P -- Downloading and configuring the Usage Collector
+P -- Uploading data with Usage Collector
 
 [CONFIGURING TAGGING]
-Organizing cost data using tags [WIP]	30
-How cost management associates tags between sources	30
-Adding a tag to an AWS resource	31
-Adding a tag to an Azure resource	31
-Adding a label to an OpenShift namespace	32
-Finding additional documentation	33
-Appendix	33
-Configuring Operator Metering on OpenShift 4.1 and earlier	33
-Configuring Operator Metering in OpenShift 4.1	34
-Configuring Operator Metering in OpenShift 3.11	36
-Reference
+A Organizing cost data using tags
+C How cost management associates tags between sources
+C Adding a tag to an AWS resource	
+C Adding a tag to an Azure resource	
+C Adding a label to an OpenShift namespace	
 
 
 -----
@@ -66,11 +47,10 @@ Using cost models
 
 - Introduction
 A -- Document Scope       in assembly
-C -- About cost management and Project Koku   ???
-R -- Terminology 
 
 - How cost management uses cost models
 C - What is a cost model? 
+R -- Terminology 
 C - The cost model workflow 
 
 - Assigning a cost to metrics and usage using a cost model 
@@ -93,10 +73,17 @@ R - Data export API parameters
 
 ------
 
-Tagging
+Managing cost data using tagging
 
 :context: tagging
 
+MAP
+C  How cost management associates tags between sources
+ --> Tag matching hierarchy
+C Designing your tagging strategy
+(P  Tagging in a multi-cluster environment)
+R Tag specifications by source type	
+Additional resources
 
 
 
