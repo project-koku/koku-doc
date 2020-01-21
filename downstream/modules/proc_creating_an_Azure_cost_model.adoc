@@ -3,16 +3,16 @@
 // <List assemblies here, each on a new line>
 
 // Base the file name and the ID on the module title. For example:
-// * file name: proc_creating_an_AWS_cost_model.adoc
-// * ID: [id="proc_creating_an_AWS_cost_model"]
-// * Title: = Creating an AWS cost model
+// * file name: proc_creating_an_Azure_cost_model.adoc
+// * ID: [id="proc_creating_an_Azure_cost_model"]
+// * Title: = Creating an Azure cost model
 
 // The ID is used as an anchor for linking to the module. Avoid changing it after the module has been published to ensure existing links are not broken.
-[id="proc_creating_an_AWS_cost_model"]
+[id="proc_creating_an_Azure_cost_model"]
 // The `context` attribute enables module reuse. Every module's ID includes {context}, which ensures that the module has a unique ID even if it is reused multiple times in a guide.
-= Creating an AWS cost model
+= Creating an Azure cost model
 
-Since Amazon AWS cost and usage data is collected into cost management with prices already assigned, you only need to assign a markup or discount (if desired) for your AWS sources.
+Since Microsoft Azure cost and usage data is collected into cost management with prices already assigned, you only need to assign a markup or discount (if desired) for your Azure sources.
 
 //.Prerequisites
 
@@ -20,7 +20,7 @@ Since Amazon AWS cost and usage data is collected into cost management with pric
 .Procedure
 
 . From the *Cost models* menu, click *Create cost model* to open the cost model wizard.
-. Enter a name and description for the cost model, and select *Amazon Web Services (AWS)* as the source type to apply the cost model to. Click *Next*.
+. Enter a name and description for the cost model, and select *Microsoft Azure* as the source type to apply the cost model to. Click *Next*.
 . To apply a markup to the base costs of your resources, enter a percentage value and click *Next*.  
 * To apply a discount rather than a markup, enter a minus sign with the value (for example, _-15_). 
 * If you do not want to apply a markup or discount, enter _0_.

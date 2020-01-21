@@ -11,18 +11,24 @@
 [id="proc_creating_an_OCP_cost_model"]
 // The `context` attribute enables module reuse. Every module's ID includes {context}, which ensures that the module has a unique ID even if it is reused multiple times in a guide.
 = Creating an OpenShift Container Platform cost model
-// Start the title of a procedure module with a verb, such as Creating or Create. See also _Wording of headings_ in _The IBM Style Guide_.
 
-For OpenShift Container Platform sources, creating a cost model includes assigning prices for usage and requests, as well as applying a markup or discount to determine the total costs of your OpenShift infrastructure.
+As metrics and inventory from OpenShift Container Platform sources do not have costs associated, you must create a cost model to associate a price to resources.
+
+Creating a cost model for an OpenShift source includes assigning prices for usage and requests, as well as applying a markup or discount to determine the total costs of your OpenShift infrastructure.
 
 // .Prerequisites
 
 .Procedure
 
 
-. From the *Cost model details* menu, click *Create cost model* to open the cost model wizard.
-. Enter a name and description for the cost model, and select *Amazon Web Services (AWS)* for the source type to apply the cost model to. Click *Next*.
-. Enter a percentage value to apply a markup to the costs, and click *Next*. 
+. From the *Cost models* menu, click *Create cost model* to open the cost model wizard.
+. Enter a name and description for the cost model, and select *OpenShift Container Platform* as the source type to apply the cost model to. Click *Next*.
+. Create a price list so you can assign rates to usage or requests. Cost management collects these metrics from OpenShift but there is no cost attached to them in cost management until you apply a cost model.
+.. Select a metric to apply a value to and click *Next*. Available metrics are *CPU*, *Memory*, *Node*, or *Storage*.
+.. Select a measurement for the metric.
+.. Enter a rate and save it.
+.. Add another rate by repeating the previous steps, or click *Next* to finish configuring your price list.
+. To apply a markup to the base costs of your resources, enter a percentage value and click *Next*. 
 * To apply a discount instead of a markup, enter a minus sign with the value (for example, _-15_). 
 * If you do not want to apply a markup or discount, enter _0_.
 +
@@ -31,15 +37,16 @@ For OpenShift Container Platform sources, creating a cost model includes assigni
 You can use a markup to account for your overhead costs, such as the cost of administering the cluster, or support costs, for example. A markup is an estimation to cover your costs not shown by metrics or usage.
 ====
 +
-. Select one or multiple sources to assign the cost model to and click *Next*. Selecting a source with a cost model already assigned will override its previous cost model. 
-. Review the cost model details, and click *Finish* to create it.
+. Optionally, select one or multiple sources to assign the cost model to and click *Next*. Selecting a source with a cost model already assigned will override its previous cost model. You can also assign sources to your cost model at a later time.
+. Review the cost model details, and click *Create*.
+. Click *Close* to exit the cost model wizard.
 
-
-//.Verification steps
-//Now what? What is the result of this, or how can you see this has been applied? → add a verification step and a next step
+Your new cost model will appear in the list on the *Cost models* page. 
 
 .Next steps
 
+* From the *Cost models* page, click the more options button to *View details* or *Delete* the cost model. From the *View details* option, you can edit the cost model, including source assignments, markup, and more settings.
+
 //add link to tagging doc
-Review your tags and tagging strategy to ensure that costs are being distributed to the correct resources, cost centers, or teams. See the guide _Using tagging to manage cost data_ for more information.
+* Review your tags and tagging strategy to ensure that costs are being distributed to the correct resources, cost centers, or teams. See the guide _Using tagging to manage cost data_ for more information.
 
