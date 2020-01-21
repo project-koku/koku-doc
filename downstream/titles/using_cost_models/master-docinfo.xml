@@ -1,9 +1,10 @@
 <title>Using cost models</title>
-<productname>cost management</productname>
-<productnumber>1.0</productnumber>
-<subtitle>Configuring a cost model to reflect your cloud costs</subtitle>
+<productname>OpenShift Container Platform</productname>
+<productnumber>4.3</productnumber>
+<subtitle>Configuring cost models to reflect your cloud costs</subtitle>
 <abstract>
     <para>This guide explains the cost model feature, configuration and related terminology.</para>
+    <para>If you have a suggestion for improving this guide or have found an error, please submit a Bugzilla report at <link xlink:href="https://bugzilla.redhat.com/enter_bug.cgi?product=Cloud%20Software%20Services%20(cloud.redhat.com)&component=Cost%20Management">http://bugzilla.redhat.com</link> against <emphasis role="strong">Cloud Software Services (cloud.redhat.com)</emphasis> for the <emphasis role="strong">Cost Management</emphasis> component.</para<name />
 </abstract>
 <authorgroup>
     <orgname>Red Hat Customer Content Services </orgname>
