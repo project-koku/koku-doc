@@ -14,26 +14,28 @@
 //In the title of concept modules, include nouns or noun phrases that are used in the body text. This helps readers and search engines find the information quickly.
 //Do not start the title of concept modules with a verb. See also _Wording of headings_ in _The IBM Style Guide_.
 
-The following diagram shows the cost model workflow that cost management uses to normalize cost data from different sources, apply a markup (or discount), then distribute the costs across the relevant resources.
+The following diagram shows the cost model workflow that cost management uses to apply a price to metrics and inventory, normalize cost data from different sources, apply a markup (or discount), then distribute the costs across the relevant resources. 
+
+The cost model also helps differentiate raw costs from the costs used in cost management. 
 
 image:../images/costmodel-workflow.png[]
 
 . Cost management collects cost data from several sources:
 * *Inventory* - A list of all the resources that are or were present in your source, whether they are in use or not. For example, if your OpenShift Container Platform environment contains a host that is not in use, that host still costs _$x_ amount per month. There are several ways of collecting inventory data into cost management: for instance, cost management can generate inventory from the AWS Cost and Usage Report files and OpenShift Metering Operator reports, or it can be provided by a topology service.
 * *Metrics* - A subset of the inventory showing usage and consumption for each resource.
-* *AWS Cost and Usage Report* - Amazon Web Services provides this hourly report to cost management listing consumption of AWS resources. The metrics in this report contain prices assigned by Amazon (*raw costs*), which cost management uses as is in calculations. As a result, configuring a custom price list is not necessary for AWS sources. 
+* *AWS Cost and Usage Report* - AWS provides an hourly report to cost management that lists consumption of AWS resources. The metrics in this report contain prices assigned by Amazon (*raw costs*), which cost management uses as is in calculations. As a result, configuring a custom price list is not necessary for AWS sources. 
 //Add information about Azure report that provides cost data
 . The *cost model* normalizes costs from your different sources, and allows you to apply a markup or discount of your choice to account for other costs and overhead. These steps are completed within the cost model to produce the *calculated costs*:
-.. For OpenShift Container Platform sources: Since the metrics and inventory data do not have a price assigned to the usage, you must create and assign a *price list* to your sources to determine the calculated costs of these resources. A price list includes rates for usage and requests for storage, memory, CPU, and nodes. 
-.. For AWS and Azure sources: You can also create cost models for these sources to account for any extra costs or overhead in your environment, you can apply a *markup* (or discount) as a percentage.
+.. For OpenShift Container Platform sources - Since the metrics and inventory data do not have a price assigned to usage, you must create and assign a *price list* to your sources to determine the calculated costs of these resources. A price list includes rates for usage and requests for storage, memory, CPU, and nodes. 
+.. For AWS and Azure sources - You can also create cost models for these sources to account for any extra costs or overhead in your environment, and apply a *markup* (or discount) as a percentage.
 +
 [NOTE]
 ====
 For more about configuring a cost model, see xref:configuring-cost-models[]. 
 ====
 +
-. The raw costs from AWS and Azure, and the calculated costs from OpenShift Container Platform (metrics and inventory with rates applied from the price list) are then collected together in cost management as *total costs*. The total costs include infrastructure costs and other costs not related to the cloud infrastructure.
-. The total costs are then *distributed* to resources across the environment, according to tags and labels. Depending on your organization, these resources may include OpenShift projects, nodes, or clusters, or AWS or Azure services or accounts. You can also use tagging to distribute the costs by team, project, or group within your organization.
+. The AWS and Azure raw costs and OpenShift Container Platform calculated costs (metrics and inventory with rates applied from the price list) are then collected together in cost management as *total costs*. The total costs include both infrastructure costs and other costs not related to the cloud infrastructure.
+. The total costs are then *distributed* to resources across the environment according to tags and labels. Depending on your organization, these resources may include OpenShift projects, nodes, or clusters, and AWS or Azure services or accounts. You can also use tagging to distribute the costs by team, project, or group within your organization.
 
 //Include Azure example of resources in total costs.
 

@@ -12,7 +12,9 @@
 // The `context` attribute enables module reuse. Every module's ID includes {context}, which ensures that the module has a unique ID even if it is reused multiple times in a guide.
 = Creating an OpenShift Container Platform cost model
 
-For OpenShift Container Platform sources, creating a cost model includes assigning prices for usage and requests, as well as applying a markup or discount to determine the total costs of your OpenShift infrastructure.
+As metrics and inventory from OpenShift Container Platform sources do not have costs associated, you must create a cost model to associate a price to resources.
+
+Creating a cost model for an OpenShift source includes assigning prices for usage and requests, as well as applying a markup or discount to determine the total costs of your OpenShift infrastructure.
 
 // .Prerequisites
 
