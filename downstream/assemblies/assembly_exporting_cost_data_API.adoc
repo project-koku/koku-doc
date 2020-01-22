@@ -31,6 +31,9 @@ This guide provides instructions for using the API to export your cost data.
 
 ifdef::cost[]
 include::../modules/note_tech_preview.adoc[leveloffset=+1]
+
+include::../modules/note_bugzilla.adoc[leveloffset=+1]
+
 endif::cost[]
 
 

@@ -1,0 +1,18 @@
+// Module included in the following assemblies:
+//
+// assembly_using_cost_models.adoc
+// assembly_introduction_cost_management.adoc
+// assembly_managing_cost_data_tagging.adoc
+// assembly_exporting_cost_data_API.adoc
+
+// * file name: note_bugzilla.adoc
+// * ID: [id="note_bugzilla"]
+// * Title: = bugzilla note
+
+// The ID is used as an anchor for linking to the module. Avoid changing it after the module has been published to ensure existing links are not broken.
+[id="note_bugzilla_{context}"]
+// The `context` attribute enables module reuse. Every module's ID includes {context}, which ensures that the module has a unique ID even if it is reused multiple times in a guide.
+
+If you have a suggestion for improving this guide or have found an error, please submit a Bugzilla report at 
+See https://bugzilla.redhat.com/enter_bug.cgi?product=Cloud%20Software%20Services%20(cloud.redhat.com)&component=Cost%20Management[http://bugzilla.redhat.com] against _Cloud Software Services (cloud.redhat.com)_ for the *Cost Management* component.
+

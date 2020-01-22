@@ -25,6 +25,8 @@ This guide explains in depth how tagging works in cost management, and how you c
 
 ifdef::cost[]
 include::../modules/note_tech_preview.adoc[leveloffset=+1]
+
+include::../modules/note_bugzilla.adoc[leveloffset=+1]
 endif::cost[]
 
 include::../modules/con_how_cost_associates_tags.adoc[leveloffset=+1]
