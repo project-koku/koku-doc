@@ -4,7 +4,7 @@
 <subtitle>Learn about and configure cost management</subtitle>
 <abstract>
     <para>This guide describes the initial steps to begin using cost management.</para>
-    <para>If you have a suggestion for improving this guide or have found an error, please submit a Bugzilla report at <link xlink:href="https://bugzilla.redhat.com/enter_bug.cgi?product=Cloud%20Software%20Services%20(cloud.redhat.com)&component=Cost%20Management">http://bugzilla.redhat.com</link> against <emphasis role="strong">Cloud Software Services (cloud.redhat.com)</emphasis> for the <emphasis role="strong">Cost Management</emphasis> component.</para<name />
+    <para>If you have a suggestion for improving this guide or have found an error, please submit a Bugzilla report at <link xlink:href="https://bugzilla.redhat.com/enter_bug.cgi?product=Cloud%20Software%20Services%20(cloud.redhat.com)&component=Cost%20Management">http://bugzilla.redhat.com</link> against <emphasis role="strong">Cloud Software Services (cloud.redhat.com)</emphasis> for the <emphasis role="strong">Cost Management</emphasis> component.</para>
 </abstract>
 <authorgroup>
     <orgname>Red Hat Customer Content Services</orgname>
