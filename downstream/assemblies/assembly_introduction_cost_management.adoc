@@ -26,6 +26,9 @@ After completing the setup described in this guide, you will be able to track co
 
 ifdef::cost[]
 include::../modules/note_tech_preview.adoc[leveloffset=+1]
+
+include::../modules/note_bugzilla.adoc[leveloffset=+1]
+
 endif::cost[]
 
 include::../modules/con_about_cost_management.adoc[leveloffset=+1]

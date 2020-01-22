@@ -46,4 +46,4 @@ include::../modules/proc_adding_tags_to_an_OCP_resource.adoc[leveloffset=+1]
 // Restore the context to what it was before this assembly.
 ifdef::parent-context[:context: {parent-context}]
 ifndef::parent-context[:!context:]
-////
+//
