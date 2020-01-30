@@ -1,6 +1,6 @@
 // Module included in the following assemblies:
 // assembly_adding_ocp_sources.adoc
-[id="proc_adding_an_ocp_cluster"]
+[id="adding_an_ocp_cluster"]
 == Adding your OpenShift Container Platform cluster as a source
 
 // The URL for this procedure needs to go in the UI code in the Sources dialog - need to give to Dan & Boaz.

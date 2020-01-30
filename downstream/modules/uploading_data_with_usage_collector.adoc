@@ -1,6 +1,6 @@
 // Module included in the following assemblies:
 // assembly_adding_oco_sources.adoc
-[id="proc_uploading_data_with_usage_collector"]
+[id="uploading_data_with_usage_collector"]
 == Uploading data with Usage Collector
 
 // The URL for this procedure needs to go in the UI code in the Sources dialog - need to give to Dan & Boaz.

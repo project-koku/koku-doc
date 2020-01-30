@@ -3,12 +3,12 @@
 // <List assemblies here, each on a new line>
 
 // Base the file name and the ID on the module title. For example:
-// * file name: proc_creating_an_AWS_cost_model.adoc
-// * ID: [id="proc_creating_an_AWS_cost_model"]
+// * file name: creating_an_AWS_cost_model.adoc
+// * ID: [id="creating_an_AWS_cost_model"]
 // * Title: = Creating an AWS cost model
 
 // The ID is used as an anchor for linking to the module. Avoid changing it after the module has been published to ensure existing links are not broken.
-[id="proc_creating_an_AWS_cost_model"]
+[id="creating_an_AWS_cost_model"]
 // The `context` attribute enables module reuse. Every module's ID includes {context}, which ensures that the module has a unique ID even if it is reused multiple times in a guide.
 = Creating an AWS cost model
 

@@ -1,6 +1,6 @@
 // Module included in the following assemblies:
 // assembly_restricting_user_access.adoc
-[id="proc_configuring_user_access"]
+[id="configuring_user_access"]
 == Configuring user access
 
 To provide a user with access to resources, create a group, add users to the group, then apply one or more policies to the group. Groups consist of users identified by Red Hat account. 

@@ -3,12 +3,12 @@
 // <List assemblies here, each on a new line>
 
 // Base the file name and the ID on the module title. For example:
-// * file name: proc_exporting_cost_data_AWS_bucket.adoc
-// * ID: [id="proc_exporting_cost_data_AWS_bucket"]
+// * file name: exporting_cost_data_AWS_bucket.adoc
+// * ID: [id="exporting_cost_data_AWS_bucket"]
 // * Title: = Exporting cost data to an AWS bucket
 
 // The ID is used as an anchor for linking to the module. Avoid changing it after the module has been published to ensure existing links are not broken.
-[id="proc_exporting_cost_data_AWS_bucket"]
+[id="exporting_cost_data_AWS_bucket"]
 // The `context` attribute enables module reuse. Every module's ID includes {context}, which ensures that the module has a unique ID even if it is reused multiple times in a guide.
 
 = Exporting cost data to an AWS bucket
@@ -30,7 +30,7 @@ Using the cost management data export request API requires:
 ** List objects: Yes
 ** Write objects: Yes
 +
-//See xref:proc_configuring_AWS_bucket_for_API[]. 
+//See xref:configuring_AWS_bucket_for_API[]. 
 +
 * Your Red Hat login and password to authenticate to the data export request API.
 

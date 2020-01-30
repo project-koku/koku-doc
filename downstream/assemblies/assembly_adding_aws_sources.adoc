@@ -24,13 +24,13 @@ As you will complete some of the following steps in the AWS console, and some st
 As non-Red Hat products and documentation can change without notice, instructions for configuring the third-party sources provided in this guide are general and correct at the time of publishing. See the https://docs.aws.amazon.com/[AWS documentation] for the most up-to-date and accurate information.
 ====
 
-include::../modules/proc_creating_an_aws_s3_bucket.adoc[]
+include::../modules/creating_an_aws_s3_bucket.adoc[]
 
-include::../modules/proc_activating_aws_tags.adoc[]
+include::../modules/activating_aws_tags.adoc[]
 
-include::../modules/proc_enabling_aws_account_access.adoc[]
+include::../modules/enabling_aws_account_access.adoc[]
 
-//include::../modules/proc_adding_an_aws_account.adoc[]
+//include::../modules/adding_an_aws_account.adoc[]
 // this topic is covered in the other subsections.
 
 You have completed adding your AWS account as a source.

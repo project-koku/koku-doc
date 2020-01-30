@@ -54,7 +54,7 @@ Modules are categorized by content type and written using templates.
 
 Modules can be procedure, concept, or reference topics. The module type is labelled in each file name:
 
-* Procedure: `_proc_TOPIC.adoc`
+* Procedure: `_TOPIC.adoc`
 * Concept: `_con_TOPIC.adoc`
 * Reference: `_ref_TOPIC.adoc`
 

@@ -3,12 +3,12 @@
 // <List assemblies here, each on a new line>
 
 // Base the file name and the ID on the module title. For example:
-// * file name: proc_openshift_source_preqrequisites.adoc
-// * ID: [id="proc_openshift_source_preqrequisites"]
+// * file name: openshift_source_preqrequisites.adoc
+// * ID: [id="openshift_source_preqrequisites"]
 // * Title: = Doing procedure A
 
 // The ID is used as an anchor for linking to the module. Avoid changing it after the module has been published to ensure existing links are not broken.
-[id="proc_openshift_source_preqrequisites"]
+[id="openshift_source_preqrequisites"]
 // The `context` attribute enables module reuse. Every module's ID includes {context}, which ensures that the module has a unique ID even if it is reused multiple times in a guide.
 = Prerequisites for OpenShift sources
 // Start the title of a procedure module with a verb, such as Creating or Create. See also _Wording of headings_ in _The IBM Style Guide_.

@@ -3,8 +3,8 @@
 // assembly_organizing_cost_data_using_tags.adoc
 
 // Base the file name and the ID on the module title. For example:
-// * file name: proc_adding_tags_to_an_AWS_resource.adoc
-// * ID: [id="proc_adding_tags_to_an_AWS_resource"]
+// * file name: adding_tags_to_an_AWS_resource.adoc
+// * ID: [id="adding_tags_to_an_AWS_resource"]
 // * Title: = Adding tags to an AWS resource
 
 // The ID is used as an anchor for linking to the module. Avoid changing it after the module has been published to ensure existing links are not broken.

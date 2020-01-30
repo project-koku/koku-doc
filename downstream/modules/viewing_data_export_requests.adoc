@@ -3,12 +3,12 @@
 // <List assemblies here, each on a new line>
 
 // Base the file name and the ID on the module title. For example:
-// * file name: proc_viewing_data_export_requests.adoc
-// * ID: [id="proc_viewing_data_export_requests"]
+// * file name: viewing_data_export_requests.adoc
+// * ID: [id="viewing_data_export_requests"]
 // * Title: = Viewing previous data export requests
 
 // The ID is used as an anchor for linking to the module. Avoid changing it after the module has been published to ensure existing links are not broken.
-[id="proc_viewing_data_export_requests"]
+[id="viewing_data_export_requests"]
 // The `context` attribute enables module reuse. Every module's ID includes {context}, which ensures that the module has a unique ID even if it is reused multiple times in a guide.
 
 = Viewing previous data export requests

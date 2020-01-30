@@ -3,8 +3,8 @@
 // <List assemblies here, each on a new line>
 
 // Base the file name and the ID on the module title. For example:
-// * file name: proc_authenticating_data_export_API.adoc
-// * ID: [id="proc_authenticating_data_export_API"]
+// * file name: authenticating_data_export_API.adoc
+// * ID: [id="authenticating_data_export_API"]
 // * Title: = Authenticating to the data export API
 
 // The ID is used as an anchor for linking to the module. Avoid changing it after the module has been published to ensure existing links are not broken.

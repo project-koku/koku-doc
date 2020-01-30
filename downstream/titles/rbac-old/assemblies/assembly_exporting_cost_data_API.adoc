@@ -33,11 +33,11 @@ This guide provides instructions for using the API to export your cost data.
 
 include::../modules/con_export_API_how_it_works.adoc[]
 
-//include::../modules/proc_configuring_AWS_bucket_for_API.adoc[]
+//include::../modules/configuring_AWS_bucket_for_API.adoc[]
 
-include::../modules/proc_exporting_cost_data_AWS_bucket.adoc[]
+include::../modules/exporting_cost_data_AWS_bucket.adoc[]
 
-include::../modules/proc_viewing_data_export_requests.adoc[]
+include::../modules/viewing_data_export_requests.adoc[]
 
 
 include::../modules/ref_data_export_API_parameters.adoc[]

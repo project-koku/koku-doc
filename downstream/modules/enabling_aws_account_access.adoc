@@ -1,7 +1,7 @@
 // Module included in the following assemblies:
 // assembly_adding_aws_sources.adoc
 
-[id="proc_enabling_aws_account_access"]
+[id="enabling_aws_account_access"]
 == Enabling account access for cost and usage consumption 
 
 // Add docs URL to UI.
