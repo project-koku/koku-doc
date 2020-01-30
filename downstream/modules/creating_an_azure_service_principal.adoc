@@ -1,7 +1,8 @@
 // Module included in the following assemblies:
 // assembly_adding_azure_sources.adoc
-[id="creating_a_service_principal_azure"]
-== Creating a service principal
+[id="creating_an_azure_service_principal"]
+[[creating_an_azure_service_principal]]
+== Creating an Azure service principal
 
 // The URL for this procedure needs to go in the UI code in the Sources dialog.
 

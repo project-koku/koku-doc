@@ -3,6 +3,7 @@
 
 
 ////
+Structure:
 Adding a source
 -> Adding an Azure source
 -------> Creating a storage account
@@ -25,10 +26,10 @@ As non-Red Hat products and documentation can change without notice, instruction
 ====
 
 
-include::../modules/creating_a_storage_account_azure.adoc[]
+include::../modules/creating_an_azure_storage_account.adoc[]
 
-include::../modules/creating_a_service_principal_azure.adoc[]
+include::../modules/creating_an_azure_service_principal.adoc[]
 
-include::../modules/configuring_a_daily_export_schedule_azure.adoc[]
+include::../modules/configuring_an_azure_daily_export_schedule.adoc[]
 
 You have completed adding your Azure account as a source.

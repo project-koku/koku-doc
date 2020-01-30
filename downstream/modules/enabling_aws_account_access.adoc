@@ -2,6 +2,7 @@
 // assembly_adding_aws_sources.adoc
 
 [id="enabling_aws_account_access"]
+[[enabling_aws_account_access]]
 == Enabling account access for cost and usage consumption 
 
 // Add docs URL to UI.
