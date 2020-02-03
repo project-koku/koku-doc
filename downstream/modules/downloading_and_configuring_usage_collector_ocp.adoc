@@ -49,7 +49,7 @@ Use the following example, substituting values for your OpenShift API endpoint, 
 ----
 # ./ocp_usage.sh --setup 
 -e OCP_API="https://api.openshift-prod.mycompany.com"  
--e OCP_METERING_NAMESPACE="metering" 
+-e OCP_METERING_NAMESPACE="openshift-metering" 
 -e OCP_TOKEN_PATH="/path/to/ocp_usage_token"
 -e METERING_API="https://metering.metering.api.ocp.com”
 ----
