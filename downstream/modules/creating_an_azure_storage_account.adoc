@@ -1,7 +1,8 @@
 // Module included in the following assemblies:
 // assembly_adding_azure_sources.adoc
-[id="proc_creating_a_storage_account_azure"]
-== Creating a storage account
+[id="creating_an_azure_storage_account"]
+[[creating_an_azure_storage_account]]
+== Creating an Azure storage account
 
 // The URL for this procedure needs to go in the UI code in the Sources dialog.
 

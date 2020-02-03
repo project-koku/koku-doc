@@ -3,11 +3,12 @@
 // assembly_adding_aws_sources.adoc
 
 // Base the file name and the ID on the module title. For example:
-// * file name: proc_activating_aws_tags.adoc
-// * ID: [id="proc_activating_aws_tags"]
+// * file name: activating_aws_tags.adoc
+// * ID: [id="activating_aws_tags"]
 // * Title: = Activating AWS tags
 
-[id="proc_activating_aws_tags"]
+[id="activating_aws_tags"]
+[[activating_aws_tags]]
 == Activating AWS tags for cost management
 
 To use tags to organize your AWS resources in the cost management application, activate your tags in AWS to allow them to be imported automatically.

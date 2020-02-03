@@ -84,11 +84,11 @@ See https://access.redhat.com/articles/3174981[How do I Download and Install Red
 + See https://docs.openshift.com/container-platform/4.2/cli_reference/openshift_cli/getting-started-cli.html#cli-installing-cli_cli-developer-commands[Installing the CLI] in the _OpenShift documentation_.
 
 
-include::../modules/proc_obtaining_metering_operator_login.adoc[]
+include::../modules/obtaining_metering_operator_login.adoc[]
 
-include::../modules/proc_downloading_and_configuring_usage_collector.adoc[]
+include::../modules/downloading_and_configuring_usage_collector.adoc[]
 
-include::../modules/proc_uploading_data_with_usage_collector.adoc[]
+include::../modules/uploading_data_with_usage_collector.adoc[]
 
 
 cost management will begin collecting cost and usage data from your OpenShift Container Platform cluster. The data can take a few days to populate before it shows on the cost management dashboard.

@@ -1,6 +1,8 @@
 // Module included in the following assemblies:
 // assembly_adding_ocp_sources.adoc
-[id="proc_downloading_and_configuring_usage_collector"]
+
+[id="downloading_and_configuring_usage_collector_ocp"]
+[[downloading_and_configuring_usage_collector_ocp]]
 == Downloading and configuring the Usage Collector
 
 // The URL for this procedure needs to go in the UI code in the Sources dialog.
@@ -47,7 +49,7 @@ Use the following example, substituting values for your OpenShift API endpoint, 
 ----
 # ./ocp_usage.sh --setup 
 -e OCP_API="https://api.openshift-prod.mycompany.com"  
--e OCP_METERING_NAMESPACE="metering" 
+-e OCP_METERING_NAMESPACE="openshift-metering" 
 -e OCP_TOKEN_PATH="/path/to/ocp_usage_token"
 -e METERING_API="https://metering.metering.api.ocp.com”
 ----

@@ -3,12 +3,12 @@
 // assembly_cost_limiting_access_rbac.adoc
 
 // Base the file name and the ID on the module title. For example:
-// * file name: proc_adding_a_role_cost_rbac.adoc
-// * ID: [id="proc_adding_a_role_cost_rbac"]
+// * file name: adding_a_role_cost_rbac.adoc
+// * ID: [id="adding_a_role_cost_rbac"]
 // * Title: = Adding a role
 
 // The ID is used as an anchor for linking to the module. Avoid changing it after the module has been published to ensure existing links are not broken.
-[id="proc_adding_a_role_cost_rbac"]
+[id="adding_a_role_cost_rbac"]
 // The `context` attribute enables module reuse. Every module's ID includes {context}, which ensures that the module has a unique ID even if it is reused multiple times in a guide.
 = Adding a role
 

@@ -16,7 +16,7 @@ Role-based access control works by organizing users into groups, which can be as
 By default, a user who is not an account administrator will not have access to data, but instead must be granted access to resources. Account administrators can view all data without any further role-based access control configuration.
 
 
-include::modules/proc_configuring_user_access.adoc[]
+include::modules/configuring_user_access.adoc[]
 
 == Configuring user access to AWS data
 

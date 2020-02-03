@@ -3,26 +3,33 @@
 // <List assemblies here, each on a new line>
 
 // Base the file name and the ID on the module title. For example:
-// * file name: proc_creating_an_Azure_cost_model.adoc
-// * ID: [id="proc_creating_an_Azure_cost_model"]
-// * Title: = Creating an Azure cost model
+// * file name: creating_an_OCP_cost_model.adoc
+// * ID: [id="creating_an_OCP_cost_model"]
+// * Title: = Creating an OCP cost model
 
 // The ID is used as an anchor for linking to the module. Avoid changing it after the module has been published to ensure existing links are not broken.
-[id="proc_creating_an_Azure_cost_model"]
+[id="creating_an_OCP_cost_model"]
 // The `context` attribute enables module reuse. Every module's ID includes {context}, which ensures that the module has a unique ID even if it is reused multiple times in a guide.
-= Creating an Azure cost model
+= Creating an OpenShift Container Platform cost model
 
-Since Microsoft Azure cost and usage data is collected into cost management with prices already assigned, you only need to assign a markup or discount (if desired) for your Azure sources.
+As metrics and inventory from OpenShift Container Platform sources do not have costs associated, you must create a cost model to associate a price to resources.
 
-//.Prerequisites
+Creating a cost model for an OpenShift source includes assigning prices for usage and requests, as well as applying a markup or discount to determine the total costs of your OpenShift infrastructure.
 
+// .Prerequisites
 
 .Procedure
 
+
 . From the *Cost models* menu, click *Create cost model* to open the cost model wizard.
-. Enter a name and description for the cost model, and select *Microsoft Azure* as the source type to apply the cost model to. Click *Next*.
-. To apply a markup to the base costs of your resources, enter a percentage value and click *Next*.  
-* To apply a discount rather than a markup, enter a minus sign with the value (for example, _-15_). 
+. Enter a name and description for the cost model, and select *OpenShift Container Platform* as the source type to apply the cost model to. Click *Next*.
+. Create a price list so you can assign rates to usage or requests. Cost management collects these metrics from OpenShift but there is no cost attached to them in cost management until you apply a cost model.
+.. Select a metric to apply a value to and click *Next*. Available metrics are *CPU*, *Memory*, *Node*, or *Storage*.
+.. Select a measurement for the metric.
+.. Enter a rate and save it.
+.. Add another rate by repeating the previous steps, or click *Next* to finish configuring your price list.
+. To apply a markup to the base costs of your resources, enter a percentage value and click *Next*. 
+* To apply a discount instead of a markup, enter a minus sign with the value (for example, _-15_). 
 * If you do not want to apply a markup or discount, enter _0_.
 +
 [NOTE]
@@ -42,6 +49,4 @@ Your new cost model will appear in the list on the *Cost models* page.
 
 //add link to tagging doc
 * Review your tags and tagging strategy to ensure that costs are being distributed to the correct resources, cost centers, or teams. See the guide _Using tagging to manage cost data_ for more information.
-
-
 

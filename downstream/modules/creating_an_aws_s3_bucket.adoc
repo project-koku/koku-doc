@@ -1,9 +1,10 @@
 // Module included in the following assemblies:
 // assembly_adding_aws_sources.adoc
-[id="proc_creating_an_aws_s3_bucket"]
+[id="creating_an_aws_s3_bucket"]
+[[creating_an_aws_s3_bucket]]
 == Creating an S3 bucket for reporting
 
-// Add this URL to the UI.
+// Add this URL to the UI. Link to the double bracket label: creating_an_aws_s3_bucket
 
 Cost management requires an Amazon S3 bucket with permissions configured to store billing reports.
 

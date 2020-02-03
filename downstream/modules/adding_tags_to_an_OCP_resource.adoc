@@ -3,12 +3,12 @@
 // assembly_organizing_cost_data_using_tags.adoc
 
 // Base the file name and the ID on the module title. For example:
-// * file name: proc_adding_labels_to_an_OCP_namespace.adoc
-// * ID: [id="proc_adding_labels_to_an_OCP_namespace"]
+// * file name: adding_labels_to_an_OCP_namespace.adoc
+// * ID: [id="adding_labels_to_an_OCP_namespace"]
 // * Title: = Adding labels to an OpenShift namespace
 
 // The ID is used as an anchor for linking to the module. Avoid changing it after the module has been published to ensure existing links are not broken.
-[id="proc_adding_labels_to_an_OCP_namespace"]
+[id="adding_labels_to_an_OCP_namespace"]
 // The `context` attribute enables module reuse. Every module's ID includes {context}, which ensures that the module has a unique ID even if it is reused multiple times in a guide.
 = Adding labels to an OpenShift namespace
 // Start the title of a procedure module with a verb, such as Creating or Create. See also _Wording of headings_ in _The IBM Style Guide_.

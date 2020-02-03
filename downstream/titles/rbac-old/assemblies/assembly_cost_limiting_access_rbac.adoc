@@ -50,9 +50,9 @@ You will use this Red Hat login to look up users, add them to groups, and to ass
 To learn more about Red Hat account roles, see See https://access.redhat.com/articles/1757953[Roles and Permissions for Red Hat Subscription Management].
 ====
 
-include::../modules/proc_creating_a_role_cost.adoc[leveloffset=+1]
+include::../modules/creating_a_role_cost.adoc[leveloffset=+1]
 
-include::../modules/proc_adding_role_to_policy_cost.adoc[leveloffset=+1]
+include::../modules/adding_role_to_policy_cost.adoc[leveloffset=+1]
 
 /////
 // Restore the context to what it was before this assembly.
