@@ -16,14 +16,13 @@ Tagging is done in each source before cost management can use the tags to automa
 
 Add your tags or labels to resources belonging to each source. Then, cost management imports the tags by different methods, depending on source type:
 
-* AWS tags must be activated, and are then selected and exported to cost management in the Cost and Usage report. See the _Getting started with cost management_ guide for instructions on activating AWS tags. 
+* AWS tags must be activated, and are then selected and exported to cost management in the Cost and Usage report. See https://access.redhat.com/documentation/en-us/openshift_container_platform/4.3/html-single/getting_started_with_cost_management/index#activating_aws_tags[Activating AWS tags for cost management] in the _Getting started with cost management_ guide for instructions on activating AWS tags. 
 * In OpenShift Container Platform, labels are exported by Metering and included in the metrics reports that cost management uses as input. 
 
 [NOTE]
 ====
-See _Getting started with cost management_ for instructions on configuring sources and tags.
+See the https://access.redhat.com/documentation/en-us/openshift_container_platform/4.3/html-single/getting_started_with_cost_management/index[_Getting started with cost management_] guide for instructions on configuring sources and tags.
 ====
-// Add link to Getting Started Guide
 
 AWS tags and OpenShift labels both consist of key:value pairs. When the key:value pairs match, the AWS and OpenShift costs are automatically associated by cost management. Note that tag matching is not case sensitive: for example, an AWS resource AWS tagged _APP_ and an OpenShift resource tagged _app_ are a match:
 
