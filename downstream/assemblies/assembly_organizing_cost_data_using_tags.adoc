@@ -39,7 +39,7 @@ include::../modules/adding_tags_to_an_OCP_resource.adoc[leveloffset=+1]
 
 == Next steps
 
-* Refine your tags and tagging strategy to better organize your view of cost data. See the _Managing cost data using tagging_ guide for more details. 
+* Refine your tags and tagging strategy to better organize your view of cost data. See the https://access.redhat.com/documentation/en-us/openshift_container_platform/4.3/html-single/managing_cost_data_using_tagging/index[_Managing cost data using tagging_] guide for more details. 
 
 
 

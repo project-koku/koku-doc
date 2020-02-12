@@ -60,14 +60,13 @@ Review the resulting reports with your business owner/stakeholders early on to e
 
 == Select your tag terminology
 
-* Name your resources with names that allow you to identify your resources without accessing metadata (many clouds have a guide about how to do this properly; see Additional resources for links), and then continue by adding metadata to it.
+* Name your resources with names that allow you to identify your resources without accessing metadata (many clouds have a guide about how to do this properly; see xref:additional-resources-tagging[] for links), and then continue by adding metadata to it.
 * Map your resources into keys and values. Keys will map to perspectives, while values will define the different options allowed for each key. In some cases, the value will be Null.
 
 [NOTE]
 ====
-Not all sources allow the same identifiers, and have different limitations. See the _Tag specifications by source type_ table in this guide for limitations by source.
+Not all sources allow the same identifiers, and have different limitations. See xref:tag-specifications[] for limitations by source.
 ====
-// add link to table
 
 
 

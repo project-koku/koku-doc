@@ -18,11 +18,8 @@ Cost management is an OpenShift Container Platform service that enables you to b
 
 Cost management allows you to simplify management of resources and costs across various environments, including:
 
-* Public clouds  - such as Amazon Web Services (AWS), Microsoft Azure, Google Compute Engine, IBM Cloud
-* Private clouds - such as Red Hat OpenStack Platform
-* Virtualized environments  - such as Red Hat Virtualization (RHV), VMware
-* Container platforms  - such as OpenShift Container Platform
-* Bare metal servers
+* Public clouds such as Amazon Web Services (AWS) and Microsoft Azure
+* Container platforms such as OpenShift Container Platform
 
 
 The cost management application allows you to:

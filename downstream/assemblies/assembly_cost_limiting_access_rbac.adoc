@@ -44,7 +44,7 @@ Edit and include a brief overview of steps.
 
 [NOTE]
 ====
-To learn more about Red Hat account roles, see See https://access.redhat.com/articles/1757953[Roles and Permissions for Red Hat Subscription Management].
+To learn more about Red Hat account roles, see https://access.redhat.com/articles/1757953[Roles and Permissions for Red Hat Subscription Management].
 ====
 
 include::../modules/adding_a_role_cost_rbac.adoc[leveloffset=+1]
