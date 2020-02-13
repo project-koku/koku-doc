@@ -19,6 +19,9 @@ Before you can add your AWS account to cost management as a data source, you mus
 
 As you will complete some of the following steps in the AWS console, and some steps in the cost management user interface, keep both applications open in a web browser.
 
+Add your AWS source to cost management from 
+https://cloud.redhat.com/beta/settings/sources/.
+
 [NOTE]
 ====
 As non-Red Hat products and documentation can change without notice, instructions for configuring the third-party sources provided in this guide are general and correct at the time of publishing. See the https://docs.aws.amazon.com/[AWS documentation] for the most up-to-date and accurate information.
