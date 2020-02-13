@@ -27,10 +27,10 @@ Report path prefix: (leave blank)
 See the AWS _Billing and Cost Management_ documentation for more details on configuration.
 ====
 +
-// These steps will need updating for the changes in the global sources flow - ie. enter name, select AWS, select Cost...);
-. In the cost management application (cloud.redhat.com):
-.. Navigate to *Settings > Cost Management Sources* and click *Add source* to open the wizard.
-.. Provide a name for your source, select *Amazon Web Services (AWS)* and click *Next*.
+. In the cloud.redhat.com platform, open the *Sources* menu (https://cloud.redhat.com/beta/settings/sources/) to begin adding an AWS source to cost management:
+.. Navigate to *Sources* and click *Add a source* to open the Sources wizard.
+.. Enter a name for your source and click *Next*.
+.. Select *Cost Management* as the application and *Amazon Web Services (AWS)* as the source type. Click *Next*.
 .. Paste the name of your S3 bucket and click *Next*.
 
 
