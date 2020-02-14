@@ -69,7 +69,11 @@ ok: [localhost] => {
 ----
 ====
 +
-. Copy the cluster identifier and enter it into the field in the cost management application. Click *Next* to move to the next screen in the wizard.
+. Copy the cluster identifier to enter into the cloud.redhat.com *Sources* area.
+.. In the cloud.redhat.com platform, open the *Sources* menu (https://cloud.redhat.com/beta/settings/sources/) to begin adding your OpenShift source to cost management:
+.. Navigate to *Sources* and click *Add a source* to open the Sources wizard.
+.. Enter a name for your source and click *Next*.
+.. Select *Cost Management* as the application and *OpenShift Container Platform* as the source type. Click *Next*.
 +
 [NOTE]
 ====

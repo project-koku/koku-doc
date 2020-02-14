@@ -17,11 +17,10 @@ Create a new storage account in Azure to contain the cost data and metrics that 
 Make a note of the storage account name and resource group. They will be needed in subsequent steps.
 ====
 +
-. In the cost management application (cloud.redhat.com):
-.. Navigate to menu:Settings[Cost Management Sources]. 
-.. Click *Add source* to open the wizard. 
-.. Provide a name for your Azure source and click *Next*.
-.. Select *Cost Management* for the application, and *Azure* as the source type. Click *Next*.
+. In the cloud.redhat.com platform, open the *Sources* menu (https://cloud.redhat.com/beta/settings/sources/) to begin adding an AWS source to cost management:
+.. Navigate to *Sources* and click *Add a source* to open the Sources wizard.
+.. Enter a name for your source and click *Next*.
+.. Select *Cost Management* as the application and *Microsoft Azure* as the source type. Click *Next*.
 .. Enter the storage account name and resource group you just created.
 . In Azure Cloud Shell, run the following command to obtain your Subscription ID: 
 +
@@ -29,5 +28,5 @@ Make a note of the storage account name and resource group. They will be needed 
 $ az account show --query "{subscription_id: id }"
 ----
 +
-. In the cost management application, enter your Subscription ID in the sources wizard and click *Next*.
+. In the cloud.redhat.com *Sources* wizard, enter your Subscription ID in the sources wizard and click *Next*.
 

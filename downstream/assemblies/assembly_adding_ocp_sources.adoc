@@ -12,7 +12,7 @@ For your OpenShift Container Platform cluster to provide metrics to cost managem
 . Download and configure the Usage Collector Ansible playbook to generate report resources for your OpenShift cluster.
 . Create a cron job to regularly collect and send Operator Metering usage data to the upload service.
 
-As you will complete some of the following steps in OpenShift Container Platform, and some steps in the cost management user interface, have both applications open in a web browser, as well as a terminal to access the command line interface (CLI).
+As you will complete some of the following steps in OpenShift Container Platform, and some steps in the cloud.redhat.com platform (https://cloud.redhat.com/beta/settings/sources/), have both applications open in a web browser, as well as a terminal to access the command line interface (CLI).
 
 
 .Prerequisites
