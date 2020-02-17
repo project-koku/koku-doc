@@ -1,8 +1,8 @@
 // Module included in the following assemblies:
 // assembly_adding_azure_sources.adoc
-[id="creating_an_azure_service_principal"]
-[[creating_an_azure_service_principal]]
-== Creating an Azure service principal
+[id="configuring_an_azure_service_principal"]
+[[configuring_an_azure_service_principal]]
+== Configuring an Azure service principal
 
 // The URL for this procedure needs to go in the UI code in the Sources dialog.
 
@@ -35,19 +35,17 @@ Any additional details or customization for cost management is described below.
 ====
 Save your secret to a secure location, as you will need the secret value and application ID to sign in as the application. As the secret value cannot be retrieved again later, if you lose the secret, you will need to create a new one and update it where it has been used.
 ====
-. In the cost management application, enter your Azure Active Directory application credentials and client secret.
-. Retrieve these values by running the following command in Cloud Shell:
-+
-----
-$ az ad sp create-for-rbac --query '{"tenant": tenant, "client_id": appId, "secret": password}'
-----
-+
-. Paste your application secret and click *Next*.
 . In Azure Cloud Shell, run the following command to obtain your Subscription ID: 
 +
 ----
 $ az account show --query "{subscription_id: id }"
 ----
 +
-. In the cost management application, enter your Subscription ID in the sources wizard and click *Next*.
-
+. In the cloud.redhat.com *Sources* wizard, enter your *Subscription ID*.
+. In Azure Cloud Shell, run the following command to obtain your tenant ID, client (application) ID, and client secret: 
++
+----
+$ az ad sp create-for-rbac --query '{"tenant": tenant, "client_id": appId, "secret": password}'
+----
++
+. In the cloud.redhat.com *Sources* wizard, enter your Azure Active Directory *Tenant ID*, *Client ID*, and *Client Secret*, and click *Next*.

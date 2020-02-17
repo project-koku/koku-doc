@@ -69,7 +69,7 @@ ok: [localhost] => {
 ----
 ====
 +
-. Copy the cluster identifier and enter it into the field in the cost management application. Click *Next* to move to the next screen in the wizard.
+. Copy the cluster identifier to enter into the cloud.redhat.com *Sources* screen and click *Next*.
 +
 [NOTE]
 ====

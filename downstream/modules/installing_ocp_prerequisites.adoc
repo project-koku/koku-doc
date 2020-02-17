@@ -1,0 +1,81 @@
+// Module included in the following assemblies:
+// assembly_adding_ocp_sources.adoc
+[id="installing_ocp_prerequisites"]
+[[installing_ocp_prerequisites]]
+== Installing the OpenShift Container Platform prerequisites
+
+Begin adding your OpenShift Container Platform cluster as a source to cost management, then install the prerequisites.
+
+. In the cloud.redhat.com platform, open the *Sources* menu (https://cloud.redhat.com/beta/settings/sources/) to begin adding an AWS source to cost management:
+.. Navigate to *Sources* and click *Add a source* to open the Sources wizard.
+.. Enter a name for your source and click *Next*.
+.. Select *Cost Management* as the application and *OpenShift Container Platform* as the source type. Click *Next*.
+
+Install the prerequisites as described in the Sources wizard.
+
+To obtain the OpenShift Operator Metering usage data, cost management requires the following:
+
+*On your OpenShift cluster*
+
+* OpenShift Container Platform 4.3
+* Operator Metering
++
+Operator Metering is not deployed out of the box in OpenShift Container Platform. See https://docs.openshift.com/container-platform/4.3/metering/metering-installing-metering.html[Installing Metering] in the OpenShift documentation for instructions to install metering from OperatorHub.
+
+// TODO: * Update to OCP 4.3 throughout, links and refs
+
+*On a Red Hat Enterprise Linux (RHEL) system with network access to your OpenShift cluster*
+
+* Red Hat Insights client - installed and registered:
++
+. Register your RHEL system with Red Hat Subscription Manager and automatically attach subscriptions:
++
+----
+# subscription-manager register  --auto-attach
+----
++
+. Install the Insights client if using a RHEL 7 system:
++
+----
+# yum install -y insights-client
+----
++
+[NOTE]
+====
+The Insights client is installed by default on Red Hat Enterprise Linux 8.
+====
++
+Register the system to Red Hat Insights:
++
+----
+# insights-client --register
+----
++
+. Open the `insights-client.conf` config file, and change the authentication method to `BASIC` and provide the credentials for your Red Hat account. To do this, edit the following lines:
+** Uncomment the line `authmethod=BASIC`
+** Uncomment and add your Red Hat login username as `username=<yourRedHatlogin>`
+** Uncomment and add the password for your Red Hat login as `password=<password>`
++
+----
+# sudo vi /etc/insights-client/insights-client.conf
+----
++
+Save your changes to the file.
++
+[NOTE]
+====
+See https://access.redhat.com/products/red-hat-insights/#getstarted[Get Started with Red Hat Insights] for more information.
+====
+* Ansible (included in the RHEL “extras” repository): 
+https://access.redhat.com/articles/3174981
++
+See https://access.redhat.com/articles/3174981[How do I Download and Install Red Hat Ansible Engine?] for more information.
++
+* OpenShift command line tools (oc)
++ 
+See https://docs.openshift.com/container-platform/4.3/cli_reference/openshift_cli/getting-started-cli.html#cli-installing-cli_cli-developer-commands[Installing the CLI] in the _OpenShift documentation_.
+
+When you have finished installing all of the listed prerequisites, check the boxes in the Sources wizard and click *Next*.
+
+
+

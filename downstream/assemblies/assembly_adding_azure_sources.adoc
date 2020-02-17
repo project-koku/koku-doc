@@ -25,10 +25,13 @@ Configuring your Azure account to be a cost management source requires:
 As non-Red Hat products and documentation can change without notice, instructions for configuring the third-party sources provided in this guide are general and correct at the time of publishing. See the https://docs.microsoft.com/en-us/azure/[Microsoft Azure documentation] for the most up-to-date and accurate information.
 ====
 
+Add your Azure source to cost management from 
+https://cloud.redhat.com/beta/settings/sources/.
+
 
 include::../modules/creating_an_azure_storage_account.adoc[]
 
-include::../modules/creating_an_azure_service_principal.adoc[]
+include::../modules/configuring_an_azure_service_principal.adoc[]
 
 include::../modules/configuring_an_azure_daily_export_schedule.adoc[]
 
