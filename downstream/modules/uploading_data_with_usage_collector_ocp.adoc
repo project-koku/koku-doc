@@ -38,6 +38,6 @@ ocpcollector    ALL=(ALL)    NOPASSWD: ALL
 ----
 +
 . In the cloud.redhat.com *Sources* wizard, click *Next* to move to the confirmation screen.
-. In the cloud.redhat.com *Sources* wizard, review the details and click *Add source* to finish adding the OpenShift Container Platform cluster.
+. In the cloud.redhat.com *Sources* wizard, review the details and click *Finish* to finish adding the OpenShift Container Platform cluster.
 
 
