@@ -61,11 +61,14 @@ To configure account access:
 . In the cloud.redhat.com *Sources* wizard, click *Next* to move to the next screen.
 . In the AWS IAM console under Roles, open the summary screen for the role you just created and copy the Role ARN (a string beginning with _arn:aws:_).
 . In the cloud.redhat.com *Sources* wizard, paste your Role ARN and click *Next*.
-. Review the details and click *Add source* to finish adding the AWS account to cost management.
+. Review the details and click *Finish* to add the AWS account to cost management.
 
 Cost management will begin collecting cost and usage data from your master AWS account and any linked AWS accounts. 
 
-The data can take a few days to populate before it shows on the cost management dashboard.
+The data can take a few days to populate before it shows on the cost management dashboard (https://cloud.redhat.com/beta/cost-management/).
+
+You have completed adding your AWS account as a source.
+
 
 
 
