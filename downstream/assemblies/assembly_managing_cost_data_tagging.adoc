@@ -19,7 +19,7 @@ ifdef::context[:tagging: {context}]
 :context: tagging
 // The `context` attribute enables module reuse. Every module's ID includes {context}, which ensures that the module has a unique ID even if it is reused multiple times in a guide.
 
-This guide explains in depth how tagging works in cost management, and how you can use tagging to best organize your resources to manage your costs.
+This guide explains in depth how tagging works in cost management, and how you can use tagging to best organize and view your resources to manage your costs.
 
 // For instructions on adding tags to AWS and OpenShift Container Platform resources, see [LINK TO GETTING STARTED GUIDE]
 
@@ -29,17 +29,44 @@ include::../modules/note_tech_preview.adoc[leveloffset=+1]
 include::../modules/note_bugzilla.adoc[leveloffset=+1]
 endif::cost[]
 
+= Planning your tagging strategy
+
+include::../modules/con_planning_tagging_strategy.adoc[leveloffset=+1]
+
+= Configuring tags and labels in cost management
+
 include::../modules/con_how_cost_associates_tags.adoc[leveloffset=+1]
 
-include::../modules/con_designing_tagging_strategy.adoc[leveloffset=+1]
 
 //include::modules/tagging_multi_cluster_environments.adoc[leveloffset=+1]
 // do not have content for yet - future section
 
-include::../modules/ref_tagging_specifications.adoc[leveloffset=+1]
+
+= Viewing your cost data
+
+//customized views of cost data?
+
+// viewing cost data by tag -- basic example - needed?
+
+// filtering tags / group by - more fine grained filtering
+
+
+include::../modules/viewing_cost_data_tag_category.adoc[leveloffset=+1]
+
+include::../modules/exporting_data_by_tag_category.adoc[leveloffset=+1]
+
+
+
+
+
+
 
 [[additional-resources-tagging]]
-== Additional resources
+= Additional resources
+
+include::../modules/ref_tagging_specifications.adoc[leveloffset=+1]
+
+== Further reading
 
 The following links provide further guidance on tagging for each source type.
 //* A bulleted list of links to other material closely related to the contents of the assembly, including xref links to other assemblies in your collection.
