@@ -41,7 +41,7 @@ If an AWS resource tag matches with multiple OpenShift projects, the cost and us
 Note that this is not the case with AWS compute resources that are matched via the instance ID-node relationship. In that case, cost and usage are broken down using information about a project’s resource consumption within the OpenShift cluster.
 
 
-== Tag matching hierarchy 
+= Tag matching hierarchy in cost management
 
 To identify your OpenShift resources running on AWS or Azure instances, cost management matches tags between sources in the following order:
 
@@ -50,7 +50,7 @@ To identify your OpenShift resources running on AWS or Azure instances, cost man
 . Custom tags
 
 
-=== Direct resource matching (EC2 instance ID)
+== Direct resource matching (EC2 instance ID)
 
 The sources apply these tags automatically. This form of tagging provides a direct link between AWS EC2 instances and OpenShift nodes.
 
@@ -58,7 +58,7 @@ AWS assigns every EC2 instance a resource identifier (a number such as `i-01f44b
 
 //.Example - screenshot?
 
-=== Special OpenShift tags
+== Special OpenShift tags
 
 There are three special-case AWS tags you can use to associate cost with OpenShift:
 
@@ -86,7 +86,7 @@ No tags needed. Name your OpenShift cluster `dev-cluster`.
 |====
 
 
-=== Custom tags
+== Custom tags
 
 You can use any key:value combination as tags, and cost management will associate identical tag key and values together. You can then group costs by tag key, account, service, region, and more to view your costs and charge for that tag.
 

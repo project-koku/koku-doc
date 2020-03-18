@@ -29,18 +29,20 @@ include::../modules/note_tech_preview.adoc[leveloffset=+1]
 include::../modules/note_bugzilla.adoc[leveloffset=+1]
 endif::cost[]
 
-include::../modules/con_designing_tagging_strategy.adoc[leveloffset=+1]
+= Planning your tagging strategy
 
-== Configuring tags and labels in cost management
+include::../modules/con_planning_tagging_strategy.adoc[leveloffset=+1]
 
-include::../modules/con_how_cost_associates_tags.adoc[leveloffset=+2]
+= Configuring tags and labels in cost management
+
+include::../modules/con_how_cost_associates_tags.adoc[leveloffset=+1]
 
 
 //include::modules/tagging_multi_cluster_environments.adoc[leveloffset=+1]
 // do not have content for yet - future section
 
 
-== Viewing your cost data
+= Viewing your cost data
 
 //customized views of cost data?
 
@@ -49,9 +51,9 @@ include::../modules/con_how_cost_associates_tags.adoc[leveloffset=+2]
 // filtering tags / group by - more fine grained filtering
 
 
-include::../modules/viewing_cost_data_tag_category.adoc[leveloffset=+2]
+include::../modules/viewing_cost_data_tag_category.adoc[leveloffset=+1]
 
-include::../modules/exporting_data_by_tag_category.adoc[leveloffset=+2]
+include::../modules/exporting_data_by_tag_category.adoc[leveloffset=+1]
 
 
 
@@ -60,11 +62,11 @@ include::../modules/exporting_data_by_tag_category.adoc[leveloffset=+2]
 
 
 [[additional-resources-tagging]]
-== Additional resources
+= Additional resources
 
-include::../modules/ref_tagging_specifications.adoc[leveloffset=+2]
+include::../modules/ref_tagging_specifications.adoc[leveloffset=+1]
 
-=== Further reading
+== Further reading
 
 The following links provide further guidance on tagging for each source type.
 //* A bulleted list of links to other material closely related to the contents of the assembly, including xref links to other assemblies in your collection.
