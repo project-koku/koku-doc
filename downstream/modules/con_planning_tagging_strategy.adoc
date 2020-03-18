@@ -5,11 +5,11 @@
 // Base the file name and the ID on the module title. For example:
 // * file name: con_planning_tagging_strategy.adoc
 // * ID: [id="con_planning_tagging_strategy"]
-// * Title: = Planning your tagging strategy
+// * Title: Planning your tagging strategy
 
 // The ID is used as an anchor for linking to the module. Avoid changing it after the module has been published to ensure existing links are not broken.
 [id="con_planning_tagging_strategy"]
-// The `context` attribute enables module reuse. Every module's ID includes {context}, which ensures that the module has a unique ID even if it is reused multiple times in a guide.
+= Planning your tagging strategy
 
 When planning your tagging strategy, these considerations can help you decide how to organize and report costs for your sources.
 
