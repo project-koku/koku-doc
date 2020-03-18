@@ -1,0 +1,53 @@
+// Module included in the following assemblies:
+//
+// assembly_managing_cost_data_tagging.adoc
+
+// Base the file name and the ID on the module title. For example:
+// * file name: filtering_cost_data_multiple_tags.adoc
+// * ID: [id="filtering_cost_data_multiple_tags"]
+// * Title: = Filtering cost data by multiple tags
+
+// The ID is used as an anchor for linking to the module. Avoid changing it after the module has been published to ensure existing links are not broken.
+[id="filtering_cost_data_multiple_tags{context}"]
+// The `context` attribute enables module reuse. Every module's ID includes {context}, which ensures that the module has a unique ID even if it is reused multiple times in a guide.
+= Filtering cost data by multiple tags
+
+You can use multiple tag filters simultaneously to create a view of cost data that is specific to your needs. You also may want to filter by one dimension, while grouping by another dimension.
+
+This is useful for finding the root cause of a cost or problem, or investigating part of the environment that acts independently of the rest, such as a cost center or an specific environment. 
+
+Filtering allows you to hide information about the rest of the environment to help avoid unneeded complexity in cost data results and allow you to find the desired information, which can otherwise be hidden among other data.
+
+This example shows how an educational course provider that is running a lab environment on OpenShift Container Platform can use multiple filters to view cost information broken down by student and course.
+
+.Prerequisites
+
+* Your OpenShift cluster added as a cost management data source. See https://access.redhat.com/documentation/en-us/openshift_container_platform/4.3/html/getting_started_with_cost_management/assembly_adding_sources_cost#assembly_adding_ocp_sources[Adding an OpenShift Container Platform source to cost management] in _Getting started with cost management_ for instructions.
+* Your cloud infrastructure account added as a cost management data source. See https://access.redhat.com/documentation/en-us/openshift_container_platform/4.3/html/getting_started_with_cost_management/assembly_adding_sources_cost[Adding sources to cost management] in _Getting started with cost management_ for instructions for your cloud provider type.
+* Configure tags on your sources. For tips and configuration instructions, see LINK.
+
+.Procedure
+
+. From the *OpenShift details* page in the *Group cost by:* field, select the tag key to group the cost by. In this case, select _Tag Key:user_ to show results grouped by student user. 
+. In the filter area, select *Tag*.
+. In the *Choose key* list, select the tag key _user_.
+. In the *Choose value* dropdown list, check the values _course_id_ and _course_type_ to identify how many students have taken the course X and the costs for that course.
+//course_id=XYZ and course_type=ILT
+
+////
+What would you want to do next? Ask GPTE.
+. To view more information about each resource:
+* Click image:more-options.png[](*more options*) to reveal more viewing options:
+** Click *View historical data* to open the daily usage comparison view, which compares usage, request, and limits by day between months for that resource.
+** Click *Export data* to create a .csv file for for reporting. Specify a daily or monthly aggregate and click *Generate and download*.
+* Click the arrow icon for each resource to see more information such as the cluster(s) the resource belongs to, and CPU and memory usage, limits, and requests.
+* Click *View Historical Data* to open the daily usage comparison view, which compares by month the usage, request, and limits per day for that resource.
+////
+. Click *Clear all filters* to reset your OpenShift details view.
+
+
+
+//.Additional resources
+
+//* A bulleted list of links to other material closely related to the contents of the procedure module.
+

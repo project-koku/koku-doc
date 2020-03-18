@@ -53,6 +53,8 @@ include::../modules/con_how_cost_associates_tags.adoc[leveloffset=+1]
 
 include::../modules/viewing_cost_data_tag_category.adoc[leveloffset=+1]
 
+include::../modules/filtering_cost_data_multiple_tags.adoc[leveloffset=+1]
+
 include::../modules/exporting_data_by_tag_category.adoc[leveloffset=+1]
 
 
