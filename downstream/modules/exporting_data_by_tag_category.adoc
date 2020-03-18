@@ -18,6 +18,8 @@ This example shows how to view data for specific OpenShift resources, and export
 
 .Prerequisites
 
+* Your OpenShift cluster added as a cost management data source. See https://access.redhat.com/documentation/en-us/openshift_container_platform/4.3/html/getting_started_with_cost_management/assembly_adding_sources_cost#assembly_adding_ocp_sources[Adding an OpenShift Container Platform source to cost management] in _Getting started with cost management_ for instructions.
+* Your cloud infrastructure account added as a cost management data source. See https://access.redhat.com/documentation/en-us/openshift_container_platform/4.3/html/getting_started_with_cost_management/assembly_adding_sources_cost[Adding sources to cost management] in _Getting started with cost management_ for instructions for your cloud provider type.
 * Configure tags on your sources. For tips and configuration instructions, see LINK.
 
 .Procedure

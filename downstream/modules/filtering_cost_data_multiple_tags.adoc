@@ -18,7 +18,7 @@ This is useful for finding the root cause of a cost or problem, or investigating
 
 Filtering allows you to hide information about the rest of the environment to help avoid unneeded complexity in cost data results and allow you to find the desired information, which can otherwise be hidden among other data.
 
-This example shows how an educational course provider that is running a lab environment on OpenShift Container Platform can use multiple filters to view cost information broken down by student and course.
+This example shows how an educational course provider who is running a lab environment on OpenShift Container Platform can use multiple filters to view cost information broken down by student and course.
 
 .Prerequisites
 
@@ -35,7 +35,7 @@ This example shows how an educational course provider that is running a lab envi
 //course_id=XYZ and course_type=ILT
 
 ////
-What would you want to do next? Ask GPTE.
+What would you want to do next? What's the result? Ask GPTE.
 . To view more information about each resource:
 * Click image:more-options.png[](*more options*) to reveal more viewing options:
 ** Click *View historical data* to open the daily usage comparison view, which compares usage, request, and limits by day between months for that resource.
