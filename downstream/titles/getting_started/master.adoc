@@ -21,7 +21,7 @@ include::assemblies/assembly_cost_limiting_access_rbac.adoc[leveloffset=+1]
 
 include::assemblies/assembly_adding_sources_cost.adoc[leveloffset=+1]
 
-include::assemblies/assembly_organizing_cost_data_using_tags.adoc[leveloffset=+1]
+include::assemblies/assembly_cost_management_next_steps.adoc[leveloffset=+1]
 
 
 

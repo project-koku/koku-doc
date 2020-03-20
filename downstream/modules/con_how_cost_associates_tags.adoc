@@ -12,7 +12,7 @@
 // The `context` attribute enables module reuse. Every module's ID includes {context}, which ensures that the module has a unique ID even if it is reused multiple times in a guide.
 = How cost management associates tags
 
-Tagging is done in each source before cost management can use the tags to automatically organize your cost data.
+You must configure tags in each source before cost management can use the tags to automatically organize your cost data.
 
 Add your tags or labels to resources belonging to each source. Then, cost management imports the tags by different methods, depending on source type:
 
@@ -39,6 +39,8 @@ AWS tags and OpenShift labels both consist of key:value pairs. When the key:valu
 If an AWS resource tag matches with multiple OpenShift projects, the cost and usage of that resource are split evenly between the matched projects. 
 
 Note that this is not the case with AWS compute resources that are matched via the instance ID-node relationship. In that case, cost and usage are broken down using information about a project’s resource consumption within the OpenShift cluster.
+
+By default, cost management tracks AWS compute usage and costs by associating the Amazon EC2 instance ID with the OpenShift Container Platform node running on that instance. 
 
 
 = Tag matching hierarchy in cost management

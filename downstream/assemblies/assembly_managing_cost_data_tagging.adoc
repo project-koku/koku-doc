@@ -37,6 +37,9 @@ include::../modules/con_planning_tagging_strategy.adoc[leveloffset=+1]
 
 include::../modules/con_how_cost_associates_tags.adoc[leveloffset=+1]
 
+include::../assemblies/assembly_configuring_tags_sources.adoc[leveloffset=+1]
+
+
 
 //include::modules/tagging_multi_cluster_environments.adoc[leveloffset=+1]
 // do not have content for yet - future section
