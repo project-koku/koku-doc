@@ -10,19 +10,24 @@
 // The ID is used as an anchor for linking to the module. Avoid changing it after the module has been published to ensure existing links are not broken.
 [id="con_how_cost_associates_tags"]
 // The `context` attribute enables module reuse. Every module's ID includes {context}, which ensures that the module has a unique ID even if it is reused multiple times in a guide.
-= How cost management associates tags
+You must configure tags in each source before cost management can use the tags to automatically organize your cost data. 
 
-You must configure tags in each source before cost management can use the tags to automatically organize your cost data.
+After adding your sources to cost management:
 
-Add your tags or labels to resources belonging to each source. Then, cost management imports the tags by different methods, depending on source type:
-
-* AWS tags must be activated, and are then selected and exported to cost management in the Cost and Usage report. See https://access.redhat.com/documentation/en-us/openshift_container_platform/4.3/html-single/getting_started_with_cost_management/index#activating_aws_tags[Activating AWS tags for cost management] in the _Getting started with cost management_ guide for instructions on activating AWS tags. 
-* In OpenShift Container Platform, labels are exported by Metering and included in the metrics reports that cost management uses as input. 
+. Tag or label resources on each of your sources. See xref:assembly_configuring_tags_sources[].
+. Enable OpenShift tag grouping to further organize your cost data views for each source. See xref:enabling_tag_grouping_OCP[].
+. Refine and add to your tags to optimize your view of cost data. See xref:con_planning_tagging_strategy[].
 
 [NOTE]
 ====
-See the https://access.redhat.com/documentation/en-us/openshift_container_platform/4.3/html-single/getting_started_with_cost_management/index[_Getting started with cost management_] guide for instructions on configuring sources and tags.
+See the https://access.redhat.com/documentation/en-us/openshift_container_platform/4.3/html-single/getting_started_with_cost_management/index[_Getting started with cost management_] guide for instructions on configuring sources.
 ====
+
+
+
+= How cost management associates tags
+
+
 
 AWS tags and OpenShift labels both consist of key:value pairs. When the key:value pairs match, the AWS and OpenShift costs are automatically associated by cost management. Note that tag matching is not case sensitive: for example, an AWS resource AWS tagged _APP_ and an OpenShift resource tagged _app_ are a match:
 

@@ -3,19 +3,19 @@
 // assembly_managing_cost_data_tagging.adoc
 
 // Base the file name and the ID on the module title. For example:
-// * file name: viewing_cost_data_tag_category.adoc
-// * ID: [id="viewing_cost_data_tag_category"]
-// * Title: = Viewing cost data by tag category
+// * file name: grouping_cost_data_tag_category.adoc
+// * ID: [id="grouping_cost_data_tag_category"]
+// * Title: = Grouping cost data by tag category
 
 // The ID is used as an anchor for linking to the module. Avoid changing it after the module has been published to ensure existing links are not broken.
-[id="viewing_cost_data_tag_category{context}"]
+[id="grouping_cost_data_tag_category{context}"]
 // The `context` attribute enables module reuse. Every module's ID includes {context}, which ensures that the module has a unique ID even if it is reused multiple times in a guide.
-= Viewing cost data by tag category
+= Grouping cost data by tag category
 // Start the title of a procedure module with a verb, such as Creating or Create. See also _Wording of headings_ in _The IBM Style Guide_.
 
 Tags allow you to customize your view of cost data. You can group resources by tag in order to to investigate why certain resources show an increase in cost, or when data looks abnormal.
 
-This example shows how to see OpenShift ???
+This example shows how to see OpenShift (Question: what do we want to show here?)
 
 .Prerequisites
 

@@ -54,7 +54,7 @@ include::../assemblies/assembly_configuring_tags_sources.adoc[leveloffset=+1]
 // filtering tags / group by - more fine grained filtering
 
 
-include::../modules/viewing_cost_data_tag_category.adoc[leveloffset=+1]
+include::../modules/grouping_cost_data_tag_category.adoc[leveloffset=+1]
 
 include::../modules/filtering_cost_data_multiple_tags.adoc[leveloffset=+1]
 
