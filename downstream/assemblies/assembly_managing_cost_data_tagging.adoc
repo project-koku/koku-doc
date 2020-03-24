@@ -35,6 +35,19 @@ include::../modules/con_planning_tagging_strategy.adoc[leveloffset=+1]
 
 = Configuring tags and labels in cost management
 
+You must configure tags in each source before cost management can use the tags to automatically organize your cost data. 
+
+After adding your sources to cost management:
+
+. Tag or label resources on each of your sources. See xref:assembly_configuring_tags_sources[].
+. (Optional) Enable OpenShift tag grouping to further organize your cost data views for each source. See xref:enabling_tag_grouping_OCP[].
+. Refine and add to your tags to optimize your view of cost data. See xref:con_planning_tagging_strategy[].
+
+[NOTE]
+====
+See the https://access.redhat.com/documentation/en-us/openshift_container_platform/4.3/html-single/getting_started_with_cost_management/index[_Getting started with cost management_] guide for instructions on configuring sources.
+====
+
 include::../modules/con_how_cost_associates_tags.adoc[leveloffset=+1]
 
 include::../assemblies/assembly_configuring_tags_sources.adoc[leveloffset=+1]
@@ -44,8 +57,8 @@ include::../assemblies/assembly_configuring_tags_sources.adoc[leveloffset=+1]
 //include::modules/tagging_multi_cluster_environments.adoc[leveloffset=+1]
 // do not have content for yet - future section
 
-
-= Viewing your cost data
+[[viewing_cost_data]]
+= Viewing and exporting your cost data
 
 //customized views of cost data?
 
@@ -54,11 +67,11 @@ include::../assemblies/assembly_configuring_tags_sources.adoc[leveloffset=+1]
 // filtering tags / group by - more fine grained filtering
 
 
+include::../modules/filtering_cost_data_views.adoc[leveloffset=+1]
+
 include::../modules/grouping_cost_data_tag_category.adoc[leveloffset=+1]
 
-include::../modules/filtering_cost_data_multiple_tags.adoc[leveloffset=+1]
-
-include::../modules/exporting_data_by_tag_category.adoc[leveloffset=+1]
+include::../modules/exporting_cost_data_reporting.adoc[leveloffset=+1]
 
 
 

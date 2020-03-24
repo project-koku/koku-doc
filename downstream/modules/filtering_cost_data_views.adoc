@@ -3,45 +3,44 @@
 // assembly_managing_cost_data_tagging.adoc
 
 // Base the file name and the ID on the module title. For example:
-// * file name: grouping_cost_data_tag_category.adoc
-// * ID: [id="grouping_cost_data_tag_category"]
-// * Title: = Grouping cost data by tag category
+// * file name: filtering_cost_data_views.adoc
+// * ID: [id="filtering_cost_data_views"]
+// * Title: = Filtering cost data views
 
 // The ID is used as an anchor for linking to the module. Avoid changing it after the module has been published to ensure existing links are not broken.
-[id="grouping_cost_data_tag_category{context}"]
+[id="filtering_cost_data_views{context}"]
 // The `context` attribute enables module reuse. Every module's ID includes {context}, which ensures that the module has a unique ID even if it is reused multiple times in a guide.
-= Grouping cost data by tag category
-// Start the title of a procedure module with a verb, such as Creating or Create. See also _Wording of headings_ in _The IBM Style Guide_.
+= Filtering your cost data view
 
-You can group resources by tag category to further investigate your cost data.
+// Very basic overview of viewing cost data by tag or label
 
-Grouping and filtering is useful for finding the root cause of a cost or problem, or investigating part of the environment that acts independently of the rest, such as a cost center or an specific environment. 
+Tags allow you to customize your view of cost data. You can view resources by tag or label in order to to investigate why certain resources show an increase in cost, or when data looks abnormal.
 
-This allows you to hide information about the rest of the environment to help avoid unneeded complexity in cost data results and allow you to find the desired information, which can otherwise be hidden among other data.
+This example shows how to see how much each OpenShift pod within a project is costing.
+//*(Question: what do we want to show here? Does this make sense and can we make it more specific?)*
 
-This example shows how an educational course provider who is running a lab environment on OpenShift Container Platform can use tag grouping to filter cost information by student and course.
+//Maybe, from COST-E-189 Aha: Being able to filter information that is inherited from higher level groups in the environment, like using tags in the project when filtering by pod
+
+
 
 .Prerequisites
 
 * Your OpenShift cluster added as a cost management data source. See https://access.redhat.com/documentation/en-us/openshift_container_platform/4.3/html/getting_started_with_cost_management/assembly_adding_sources_cost#assembly_adding_ocp_sources[Adding an OpenShift Container Platform source to cost management] in _Getting started with cost management_ for instructions.
 * Your cloud infrastructure account added as a cost management data source. See https://access.redhat.com/documentation/en-us/openshift_container_platform/4.3/html/getting_started_with_cost_management/assembly_adding_sources_cost[Adding sources to cost management] in _Getting started with cost management_ for instructions for your cloud provider type.
 * Configure tags on your sources. For tips and configuration instructions, see xref:assembly_configuring_tags_sources[].
-* OpenShift tag grouping enabled. See xref:enabling_tag_grouping_OCP[] for instructions.
 
 .Procedure
 
-. From the *OpenShift details* page in the *Group cost by:* field, select the tag key to group the cost by. In this case, select _Tag Key:user_ to show results grouped by student user. 
-. In the filter area, select *Tag*.
-. In the *Choose key* list, select the tag key _user_.
-. In the *Choose value* dropdown list, check the values _course_id_ and _course_type_ to identify how many students have taken the course X and the costs for that course.
-// course_id=XYZ and course_type=ILT
-//What would you want to do next? What's the result? Ask GPTE.
-. To view more information about each resource, for example, how much course X has cost:
+. From the *OpenShift details* menu, click the filter button and select *Tag*.
+. In the *Choose key* dropdown list, select the key to filter by. For example, select _version_ to view projects with the _version_ tag. Selecting a tag key reveals another dropdown to choose the value to filter by.
+. In the *Choose value* dropdown list, select one or more values to filter by. For example, select _qe_ and _dev_ to show cost data for OpenShift pods with these tags.
+//Is that right? How can this be more useful?
+. To view more information about each pod:
 * Click the arrow icon for each resource to see more information such as the cluster(s) the resource belongs to, and CPU and memory usage, limits, and requests.
+//This repeats.
 * Click *View Historical Data* to open the daily usage comparison view, which compares by month the usage, request, and limits per day for that resource.
 * Click image:more-options.png[](*more options*) to reveal more viewing options:
 ** Click *View historical data* to open the daily usage comparison view, which compares usage, request, and limits by day between months for that resource.
-** Click *Export data* to create a .csv file for for reporting. Specify a daily or monthly aggregate and click *Generate and download*.
 . Click *Clear all filters* to reset your OpenShift details view.
 
 

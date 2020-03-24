@@ -10,21 +10,6 @@
 // The ID is used as an anchor for linking to the module. Avoid changing it after the module has been published to ensure existing links are not broken.
 [id="con_how_cost_associates_tags"]
 // The `context` attribute enables module reuse. Every module's ID includes {context}, which ensures that the module has a unique ID even if it is reused multiple times in a guide.
-You must configure tags in each source before cost management can use the tags to automatically organize your cost data. 
-
-After adding your sources to cost management:
-
-. Tag or label resources on each of your sources. See xref:assembly_configuring_tags_sources[].
-. Enable OpenShift tag grouping to further organize your cost data views for each source. See xref:enabling_tag_grouping_OCP[].
-. Refine and add to your tags to optimize your view of cost data. See xref:con_planning_tagging_strategy[].
-
-[NOTE]
-====
-See the https://access.redhat.com/documentation/en-us/openshift_container_platform/4.3/html-single/getting_started_with_cost_management/index[_Getting started with cost management_] guide for instructions on configuring sources.
-====
-
-
-
 = How cost management associates tags
 
 

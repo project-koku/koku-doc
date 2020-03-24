@@ -12,6 +12,8 @@
 // The `context` attribute enables module reuse. Every module's ID includes {context}, which ensures that the module has a unique ID even if it is reused multiple times in a guide.
 = Filtering cost data by multiple tags
 
+//OLD and repeated in another example. Delete likely in April.
+
 You can use multiple tag filters simultaneously to create a view of cost data that is specific to your needs. You also may want to filter by one dimension, while grouping by another dimension.
 
 This is useful for finding the root cause of a cost or problem, or investigating part of the environment that acts independently of the rest, such as a cost center or an specific environment. 
@@ -24,7 +26,7 @@ This example shows how an educational course provider who is running a lab envir
 
 * Your OpenShift cluster added as a cost management data source. See https://access.redhat.com/documentation/en-us/openshift_container_platform/4.3/html/getting_started_with_cost_management/assembly_adding_sources_cost#assembly_adding_ocp_sources[Adding an OpenShift Container Platform source to cost management] in _Getting started with cost management_ for instructions.
 * Your cloud infrastructure account added as a cost management data source. See https://access.redhat.com/documentation/en-us/openshift_container_platform/4.3/html/getting_started_with_cost_management/assembly_adding_sources_cost[Adding sources to cost management] in _Getting started with cost management_ for instructions for your cloud provider type.
-* Configure tags on your sources. For tips and configuration instructions, see LINK.
+* Configure tags on your sources. For tips and configuration instructions, see xref:assembly_configuring_tags_sources[].
 
 .Procedure
 

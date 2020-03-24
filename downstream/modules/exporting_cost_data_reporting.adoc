@@ -3,14 +3,14 @@
 // assembly_managing_cost_data_tagging.adoc
 
 // Base the file name and the ID on the module title. For example:
-// * file name: exporting_data_by_tag_category.adoc
-// * ID: [id="exporting_data_by_tag_category"]
+// * file name: exporting_cost_data_reporting.adoc
+// * ID: [id="exporting_cost_data_reporting"]
 // * Title: = Exporting data by tag category
 
 // The ID is used as an anchor for linking to the module. Avoid changing it after the module has been published to ensure existing links are not broken.
-[id="exporting_data_by_tag_category_{context}"]
+[id="exporting_cost_data_reporting_{context}"]
 // The `context` attribute enables module reuse. Every module's ID includes {context}, which ensures that the module has a unique ID even if it is reused multiple times in a guide.
-= Exporting data by tag category
+= Exporting cost data to a reporting tool
 
 Tags allow you to customize your view of cost data. This is useful when you want to investigate further why certain resources show an increase in cost, or data looks abnormal.
 
@@ -35,7 +35,7 @@ The CSV file will download to your local system, and you can use it in your desi
 
 [NOTE]
 ====
-You can also export your data as a .csv file from the menu:more options[Export data] menu.
+You can also export your data as a .csv file from the image:more-options.png[](*more options*) > *Export data* menu.
 ====
 
 Click *Clear all filters* to reset your OpenShift details view.
