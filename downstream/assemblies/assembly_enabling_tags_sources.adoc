@@ -8,15 +8,16 @@
 ifdef::context[:parent-context: {context}]
 
 // Base the file name and the ID on the assembly title. For example:
-// * file name: assembly_configuring_tags_sources.adoc
-// * ID: [id="assembly_configuring_tags_sources"]
-// * Title: = Configuring tags on your sources
+// * file name: assembly_enabling_tags_sources.adoc
+// * ID: [id="assembly_enabling_tags_sources"]
+// * Title: = Enabling tags on your sources
 
-
-[id="assembly_configuring_tags_sources"]
+// The ID is used as an anchor for linking to the module. Avoid changing it after the module has been published to ensure existing links are not broken.
+[id="assembly_enabling_tags_sources"]
 // If the assembly is reused in other assemblies in a guide, include {context} in the ID: [id="a-collection-of-modules_{context}"].
-[[assembly_configuring_tags_sources]]
-= Configuring tags on your sources
+[[assembly_enabling_tags_sources]]
+= Enabling tags on your sources
+//If the assembly covers a task, start the title with a verb in the gerund form, such as Creating or Configuring.
 :context: assembly-keyword
 // The `context` attribute enables module reuse. Every module's ID includes {context}, which ensures that the module has a unique ID even if it is reused multiple times in a guide.
 ////
@@ -29,13 +30,12 @@ The cost management application tracks these costs using tags (called labels in 
 Tags and labels can only be configured directly on a source. You cannot edit tags and labels in the cost management application.
 ====
 ////
+In order to control which tags cost management imports, activate or enable the tags you want to view by source.
 
 
-In order to control which tags cost management imports, activate or enable the tags you want to view by source:
 
-* AWS tags must be activated, and are then selected and exported to cost management in the Cost and Usage report. See https://access.redhat.com/documentation/en-us/openshift_container_platform/4.3/html-single/getting_started_with_cost_management/index#activating_aws_tags[Activating AWS tags for cost management] in the _Getting started with cost management_ guide for instructions. 
+* AWS tags must be activated, and are then selected and exported to cost management in the Cost and Usage report. See https://access.redhat.com/documentation/en-us/openshift_container_platform/4.3/html-single/getting_started_with_cost_management/index#activating_aws_tags[Activating AWS tags for cost management] in the _Getting started with cost management_ guide for instructions on activating AWS tags. 
 * In OpenShift Container Platform, labels are exported by Metering and included in the metrics reports that cost management uses as input. 
-
 
 include::../modules/adding_tags_to_an_AWS_resource.adoc[leveloffset=+1]
 
@@ -43,7 +43,7 @@ include::../modules/adding_tags_to_an_AWS_resource.adoc[leveloffset=+1]
 
 include::../modules/adding_tags_to_an_OCP_resource.adoc[leveloffset=+1]
 
-include::../modules/enabling_tag_grouping_OCP.adoc[leveloffset=+1]
+
 
 
 // Restore the context to what it was before this assembly.

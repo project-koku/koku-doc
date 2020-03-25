@@ -1,0 +1,42 @@
+// Module included in the following assemblies:
+//
+// assembly_organizing_cost_data_using_tags.adoc
+
+// Base the file name and the ID on the module title. For example:
+// * file name: enabling_tag_grouping_OCP.adoc
+// * ID: [id="enabling_tag_grouping_OCP"]
+// * Title: = Enabling OpenShift tag grouping
+
+// The ID is used as an anchor for linking to the module. Avoid changing it after the module has been published to ensure existing links are not broken.
+[id="enabling_tag_grouping_OCP"]
+// The `context` attribute enables module reuse. Every module's ID includes {context}, which ensures that the module has a unique ID even if it is reused multiple times in a guide.
+[[enabling_tag_grouping_OCP]]
+= Enabling OpenShift tag grouping
+
+By default, cost management groups OpenShift cost data by cluster, node, and project on the *OpenShift details* page. Grouping data by tag key can be useful to further customize your view.
+
+To group your cost data by tag key, you must enable the tag keys in the cloud.redhat.com application settings. 
+
+.Prerequisites
+
+* *Question: do you need to have a certain role/RBAC privileges to control this?*
+// * You must be an Account Administrator or a member of a group with the _RBAC Administrator_ role to create a role.
+// In AWS, an Account Admin? where is the group RBAC Admin - AWS or RH Insights?
+
+.Procedure
+
+To enable OpenShift tag keys for grouping:
+
+. Click image:configuration-gear.png[] (*Settings*) to navigate to *Applications* > *Cost management*.
+. Click *OpenShift Tag Management*.
+. Select the keys you want to group by in the cost management application from the *Available Tag Keys* list, and use the arrows to move the tags to the *Enabled Tag Keys* list. 
+. Click *Submit* to save your changes.
+
+.Verification steps
+
+The enabled tag keys will now be available to group costs by from the *OpenShift details* area of cost management, in the *Group cost by* list. For example:
+
+image:ocp-grouping-enabled.png[]
+
+ 
+

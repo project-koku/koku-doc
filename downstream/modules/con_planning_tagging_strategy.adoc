@@ -9,6 +9,7 @@
 
 // The ID is used as an anchor for linking to the module. Avoid changing it after the module has been published to ensure existing links are not broken.
 [id="con_planning_tagging_strategy"]
+[[con_planning_tagging_strategy]]
 = Considerations for your tagging strategy
 
 When planning your tagging strategy, these considerations can help you decide how to organize and report costs for your sources.
