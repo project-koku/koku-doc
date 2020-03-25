@@ -28,14 +28,14 @@ This example shows how to view data for specific OpenShift resources, and export
 . In the *Choose key* dropdown list, select the key to filter by. For example, select _version_. Selecting a tag key reveals another dropdown to choose the value to filter by.
 . In the *Choose value* dropdown list, select one or more values to filter by. For example, select _qe_ and _dev_ to show cost data for OpenShift resources with these tags.
 //Is that right? How can this be more useful?
-. To export data about your resources, check the boxes next to each tag you want to export data for. Click *Export* to open the export options dialog.
+. To export data about your resources, check the boxes next to each resource you want to export data for. Click *Export* to open the export options dialog.
 . Specify a daily or monthly aggregate and click *Generate and download*.
 
 The CSV file will download to your local system, and you can use it in your desired reporting tool.
 
 [NOTE]
 ====
-You can also export your data as a .csv file from the image:more-options.png[](*more options*) > *Export data* menu.
+You can also export your data as a .csv file from the image:more-options.png[](*more options*) > *Export data* menu on each resource.
 ====
 
 Click *Clear all filters* to reset your OpenShift details view.

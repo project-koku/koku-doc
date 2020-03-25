@@ -19,7 +19,7 @@ To group your cost data by tag key, you must enable the tag keys in the cloud.re
 
 .Prerequisites
 
-* Question: do you need to have a certain role/RBAC privileges to control this?
+* *Question: do you need to have a certain role/RBAC privileges to control this?*
 // * You must be an Account Administrator or a member of a group with the _RBAC Administrator_ role to create a role.
 // In AWS, an Account Admin? where is the group RBAC Admin - AWS or RH Insights?
 
@@ -27,9 +27,9 @@ To group your cost data by tag key, you must enable the tag keys in the cloud.re
 
 To enable OpenShift tag keys for grouping:
 
-. Click image:configuration-gear.png[] (*Settings*) to navigate to *Applications*.
-. Click the *OpenShift Tag Management*.
-. Select the keys you want to report on in the cost management application from the *Available Tag Keys* list and use the arrows to move the tags to the *Enabled Tag Keys* list. 
+. Click image:configuration-gear.png[] (*Settings*) to navigate to *Applications* > *Cost management*.
+. Click *OpenShift Tag Management*.
+. Select the keys you want to group by in the cost management application from the *Available Tag Keys* list, and use the arrows to move the tags to the *Enabled Tag Keys* list. 
 . Click *Submit* to save your changes.
 
 .Verification steps

@@ -14,9 +14,9 @@
 
 // Very basic overview of viewing cost data by tag or label
 
-Tags allow you to customize your view of cost data. You can view resources by tag or label in order to to investigate why certain resources show an increase in cost, or when data looks abnormal.
+Tags allow you to customize your view of cost data. You can view resources by type (for example, project, node, cluster) or tag or label in order to investigate why certain resources show an increase in cost, or when data looks abnormal.
 
-This example shows how to see how much each OpenShift pod within a project is costing.
+This example shows how to see how much each OpenShift project within a cluster is costing.
 //*(Question: what do we want to show here? Does this make sense and can we make it more specific?)*
 
 //Maybe, from COST-E-189 Aha: Being able to filter information that is inherited from higher level groups in the environment, like using tags in the project when filtering by pod
@@ -32,15 +32,15 @@ This example shows how to see how much each OpenShift pod within a project is co
 .Procedure
 
 . From the *OpenShift details* menu, click the filter button and select *Tag*.
-. In the *Choose key* dropdown list, select the key to filter by. For example, select _version_ to view projects with the _version_ tag. Selecting a tag key reveals another dropdown to choose the value to filter by.
-. In the *Choose value* dropdown list, select one or more values to filter by. For example, select _qe_ and _dev_ to show cost data for OpenShift pods with these tags.
+. In the *Choose key* dropdown list, select the key to filter by. For example, select _environment_ to view clusters with the _environment_ tag. Selecting a tag key reveals another dropdown to choose the value to filter by.
+. In the *Choose value* dropdown list, select one or more values to filter by. For example, select _qe_ and _dev_ to show cost data for OpenShift projects with these tags.
 //Is that right? How can this be more useful?
-. To view more information about each pod:
+. To view more information about each project:
 * Click the arrow icon for each resource to see more information such as the cluster(s) the resource belongs to, and CPU and memory usage, limits, and requests.
-//This repeats.
-* Click *View Historical Data* to open the daily usage comparison view, which compares by month the usage, request, and limits per day for that resource.
 * Click image:more-options.png[](*more options*) to reveal more viewing options:
+** Click *View price lists* to see rates applied to the OpenShift metrics to calculate the costs.
 ** Click *View historical data* to open the daily usage comparison view, which compares usage, request, and limits by day between months for that resource.
+** Click *View all projects* or *View all tags* to see related resources and metadata.
 . Click *Clear all filters* to reset your OpenShift details view.
 
 

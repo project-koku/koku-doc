@@ -1,0 +1,22 @@
+// Module included in the following assemblies:
+//
+// assembly_managing_cost_data_tagging.adoc
+
+// Base the file name and the ID on the module title. For example:
+// * file name: con_why_use_tags.adoc
+// * ID: [id="con_con_why_use_tags"]
+// * Title: Why use tags?
+
+[id="con_why_use_tags"]
+[[con_why_use_tags]]
+= Why use tags?
+
+Tags allow you to differentiate and allocate costs between various parts of your environment for a more accurate view of your cost data. 
+
+As a business service can be supported by many projects and technical services
+(for example, environment, region, cost center), tags provide clarity by mapping business concepts to reports. 
+
+Tagging can be used to split resources, such as a shared cluster that will be used by many services to provide different business capabilities. For example, an AWS account can run different services for different projects.
+
+Tags also help you identify relationships between sources, allowing you to group applications across multiple clusters that are tagged with the same environment, cost center or team. Tagging also helps identify dependencies, such as the link between an RDS database and the OpenShift project using it.
+

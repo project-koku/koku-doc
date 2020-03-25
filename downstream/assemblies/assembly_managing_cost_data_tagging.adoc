@@ -31,6 +31,8 @@ endif::cost[]
 
 = Planning your tagging strategy
 
+include::../modules/con_why_use_tags.adoc[leveloffset=+1]
+
 include::../modules/con_planning_tagging_strategy.adoc[leveloffset=+1]
 
 = Configuring tags and labels in cost management
