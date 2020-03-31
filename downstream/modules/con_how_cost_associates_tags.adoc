@@ -1,4 +1,4 @@
-AWS resource// Module included in the following assemblies:
+// Module included in the following assemblies:
 //
 // assembly_managing_cost_data_tagging.adoc
 
