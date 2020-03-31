@@ -57,17 +57,10 @@ include::../assemblies/assembly_configuring_tags_sources.adoc[leveloffset=+1]
 
 
 //include::modules/tagging_multi_cluster_environments.adoc[leveloffset=+1]
-// do not have content for yet - future section
+// do not have content for yet but it's waiting in JIRA - future section
 
 [[viewing_cost_data]]
 = Viewing and exporting your cost data
-
-//customized views of cost data?
-
-// viewing cost data by tag -- basic example - needed?
-
-// filtering tags / group by - more fine grained filtering
-
 
 include::../modules/filtering_cost_data_views.adoc[leveloffset=+1]
 
@@ -89,11 +82,6 @@ include::../modules/ref_tagging_specifications.adoc[leveloffset=+1]
 == Further reading
 
 The following links provide further guidance on tagging for each source type.
-//* A bulleted list of links to other material closely related to the contents of the assembly, including xref links to other assemblies in your collection.
-
-// Removed link as the content is here * https://www.redhat.com/en/blog/tagging-resources-it-and-business-alignment[Tagging resources for IT and business alignment]
-
-// To do: Add URL for Getting Started with Cost guide and tagging configuration section.
 
 *AWS:*
 
@@ -108,9 +96,10 @@ The following links provide further guidance on tagging for each source type.
 *Microsoft Azure:*
 
 * https://docs.microsoft.com/en-us/azure/architecture/cloud-adoption/decision-guides/resource-tagging/[Azure resource naming and tagging decision guide]
-* https://docs.microsoft.com/en-us/azure/architecture/best-practices/naming-conventions[Azure naming best practices]
-* https://docs.microsoft.com/en-us/azure/azure-resource-manager/resource-group-using-tags[Using tags to organize your Azure resources]
+* https://docs.microsoft.com/en-us/azure/architecture/best-practices/naming-conventions[Azure recommended naming and tagging conventions]
+* https://docs.microsoft.com/en-us/azure/azure-resource-manager/resource-group-using-tags[Use tags to organize your Azure resources and management hierarchy]
 * https://docs.microsoft.com/en-us/azure/governance/policy/samples/enforce-tag-on-resource-groups[Enforce tags in Azure resource groups]
+
 
 
 // Restore the context to what it was before this assembly.

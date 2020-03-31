@@ -34,16 +34,17 @@ Tags and labels can only be configured directly on a source. You cannot edit tag
 In order to control which tags cost management imports, activate or enable the tags you want to view by source:
 
 * AWS tags must be activated, and are then selected and exported to cost management in the Cost and Usage report. See https://access.redhat.com/documentation/en-us/openshift_container_platform/4.3/html-single/getting_started_with_cost_management/index#activating_aws_tags[Activating AWS tags for cost management] in the _Getting started with cost management_ guide for instructions. 
-* In OpenShift Container Platform, labels are exported by Metering and included in the metrics reports that cost management uses as input. 
+* Azure tags are exported to cost management in the Cost Export report.
+* OpenShift Container Platform labels are exported by Metering and included in the metrics reports that cost management uses as input. Enable tag key grouping in the cloud.redhat.com application settings to specify which tags to group your cost data by.
 
 
 include::../modules/adding_tags_to_an_AWS_resource.adoc[leveloffset=+1]
 
-//include::../modules/adding_tags_to_an_Azure_resource.adoc[leveloffset=+1]
+include::../modules/adding_tags_to_an_Azure_resource.adoc[leveloffset=+1]
 
 include::../modules/adding_tags_to_an_OCP_resource.adoc[leveloffset=+1]
 
-include::../modules/enabling_tag_grouping_OCP.adoc[leveloffset=+1]
+include::../modules/enabling_tag_grouping_OCP.adoc[leveloffset=+2]
 
 
 // Restore the context to what it was before this assembly.

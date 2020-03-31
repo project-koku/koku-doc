@@ -15,7 +15,7 @@
 
 // This paragraph is the procedure module introduction: a short description of the procedure.
 
-The AWS tag equivalent in OpenShift is a label, which also consists of a key:value pair. Cost management collects OpenShift tag data from pods and persistent volumes (or persistent volume claims) using Prometheus metrics and Operator Metering.
+The AWS or Azure tag equivalent in OpenShift is a label, which also consists of a key:value pair. Cost management collects OpenShift tag data from pods and persistent volumes (or persistent volume claims) using Prometheus metrics and Operator Metering.
 
 One method of adding tags to OpenShift resources is to specify labels to add in a template. See https://docs.openshift.com/container-platform/4.3/openshift_images/using-templates.html#templates-cli-labels_using-templates[Using templates] in the OpenShift Container Platform documentation.
 

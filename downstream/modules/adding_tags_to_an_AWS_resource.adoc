@@ -11,11 +11,8 @@
 [id="doing-one-procedure_{context}"]
 // The `context` attribute enables module reuse. Every module's ID includes {context}, which ensures that the module has a unique ID even if it is reused multiple times in a guide.
 = Adding tags to an AWS resource
-// Start the title of a procedure module with a verb, such as Creating or Create. See also _Wording of headings_ in _The IBM Style Guide_.
 
-// This paragraph is the procedure module introduction: a short description of the procedure.
-
-Amazon creates certain tags automatically, like the EC2 instance resource identifier (a number such as i-123456789).
+Amazon creates certain identifiers automatically, like the EC2 instance resource identifier (a number such as `i-123456789`), which cost management uses similarly to a tag.
 
 You can also add your own tags at the individual resource level. These tags must be activated for Cost and Usage reporting to export them to the cost management application.
 
@@ -31,9 +28,3 @@ See https://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/custom-tags.htm
 +
 See https://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/activate-built-in-tags.html[_Activating the AWS-Generated Cost Allocation Tags_] in the AWS documentation for instructions.
 
-//.Verification steps
-//(Optional) Provide the user with verification method(s) for the procedure, such as expected output or commands that can be used to check for success or failure.
-
-// .Additional resources
-
-// * A bulleted list of links to other material closely related to the contents of the procedure module.
