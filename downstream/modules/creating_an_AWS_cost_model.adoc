@@ -1,36 +1,45 @@
 // Module included in the following assemblies:
 //
-// <List assemblies here, each on a new line>
+// assembly_using_cost_models.adoc
 
 // Base the file name and the ID on the module title. For example:
 // * file name: creating_an_AWS_cost_model.adoc
 // * ID: [id="creating_an_AWS_cost_model"]
 // * Title: = Creating an AWS cost model
 
-// The ID is used as an anchor for linking to the module. Avoid changing it after the module has been published to ensure existing links are not broken.
 [id="creating_an_AWS_cost_model"]
 // The `context` attribute enables module reuse. Every module's ID includes {context}, which ensures that the module has a unique ID even if it is reused multiple times in a guide.
-= Creating an AWS cost model
+= Creating an AWS cost model with a markup
 
-Since Amazon AWS cost and usage data is collected into cost management with prices already assigned, you only need to assign a markup or discount (if desired) for your AWS sources.
+As cloud infrastructure sources collect cost and usage data into cost management with prices already assigned, you only need to assign a markup or discount (if desired) to accurately reflect your costs. These _raw costs_ are collected in cost management from AWS Cost and Usage reports or Azure export reports.
 
-//.Prerequisites
+Adding a markup to your _raw costs_ can help to account for your overhead costs, such as the cost of administering your AWS account, or support costs. A markup is an estimation to cover your costs not shown by metrics or usage.
 
+This example shows how to add a 10% markup to the information collected from the AWS Cost and Usage reports, and how to specify the costs as infrastructure-type costs (WHY).
+
+*QUESTION* Does creating the cost model for AWS automatically call everything 'infrastructure'? Is this important to call out to users here?
+
+
+
+.Prerequisites
+
+* *TODO* What permissions/role is needed?
+* Your AWS account added to cost management as a data source. See https://access.redhat.com/documentation/en-us/openshift_container_platform/4.3/html/getting_started_with_cost_management/assembly_adding_sources_cost[Adding an Amazon Web Services (AWS) source to cost management] in _Getting started with cost management_ for instructions.
+* *TODO* Is an OpenShift source needed?
 
 .Procedure
 
 . From the *Cost models* menu, click *Create cost model* to open the cost model wizard.
 . Enter a name and description for the cost model, and select *Amazon Web Services (AWS)* as the source type to apply the cost model to. Click *Next*.
-. To apply a markup to the base costs of your resources, enter a percentage value and click *Next*.  
-* To apply a discount rather than a markup, enter a minus sign with the value (for example, _-15_). 
-* If you do not want to apply a markup or discount, enter _0_.
+. To apply a 10% markup to the base costs of your resources, enter _10_ in the percentage value and click *Next*.
 +
 [NOTE]
 ====
-You can use a markup to account for your overhead costs, such as the cost of administering the cluster, or support costs, for example. A markup is an estimation to cover your costs not shown by metrics or usage.
-====
+* To apply a discount rather than a markup, enter a minus sign with the value (for example, _-15_). 
+* If you do not want to apply a markup or discount, enter _0_.
+====  
 +
-. Optionally, select one or multiple sources to assign the cost model to and click *Next*. Selecting a source with a cost model already assigned will override its previous cost model. You can also assign sources to your cost model at a later time.
+. Select one or multiple AWS sources to assign the cost model to and click *Next*. Selecting a source with a cost model already assigned will override its previous cost model. You can also assign sources to your cost model at a later time.
 . Review the cost model details, and click *Create*.
 . Click *Close* to exit the cost model wizard.
 
@@ -38,10 +47,9 @@ Your new cost model will appear in the list on the *Cost models* page.
 
 .Next steps
 
-* From the *Cost models* page, click the more options button to *View details* or *Delete* the cost model. From the *View details* option, you can edit the cost model, including source assignments, markup, and more settings.
+* From the *Cost models* page, click the more options button to *View details* or *Delete* the cost model. From the *View details* option, you can edit the cost model, including source assignments, markup, and other settings.
 
-//add link to tagging doc
-* Review your tags and tagging strategy to ensure that costs are being distributed to the correct resources, cost centers, or teams. See the guide _Using tagging to manage cost data_ for more information.
+* Review your tags and tagging strategy to ensure that costs are being distributed to the correct resources, cost centers, or teams. See See https://access.redhat.com/documentation/en-us/openshift_container_platform/4.3/html-single/managing_cost_data_using_tagging/index[_Using tagging to manage cost data_] for more information.
 
 
 
