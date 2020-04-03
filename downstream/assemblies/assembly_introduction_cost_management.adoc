@@ -25,7 +25,6 @@ This document provides instructions to begin using cost management, including pr
 After completing the setup described in this guide, you will be able to track cost and usage data for your Amazon Web Services (AWS), Microsoft Azure, and OpenShift Container Platform environments.
 
 ifdef::cost[]
-include::../modules/note_tech_preview.adoc[leveloffset=+1]
 
 include::../modules/note_bugzilla.adoc[leveloffset=+1]
 

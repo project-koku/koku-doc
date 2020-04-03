@@ -30,7 +30,6 @@ The API also allows you to view historical cost data beyond what is available to
 This guide provides instructions for using the API to export your cost data.
 
 ifdef::cost[]
-include::../modules/note_tech_preview.adoc[leveloffset=+1]
 
 include::../modules/note_bugzilla.adoc[leveloffset=+1]
 

@@ -18,7 +18,6 @@ This document describes how to use cost models in cost management to apply a pri
 
 ifdef::cost[]
 
-include::../modules/note_tech_preview.adoc[leveloffset=+1]
 
 include::../modules/note_bugzilla.adoc[leveloffset=+1]
 
