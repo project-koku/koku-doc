@@ -44,7 +44,6 @@ include::../modules/creating_an_AWS_cost_model.adoc[leveloffset=+1]
 include::../modules/creating_an_OCP_onprem_cost_model.adoc[leveloffset=+1]
 
 
-
 ////
 === Additional resources (or Next steps)
 
