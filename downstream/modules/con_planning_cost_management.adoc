@@ -28,14 +28,12 @@ Some considerations in creating a new Red Hat organization and users for differe
 * Planning AWS tags to reflect previous use cases.
 * Enforcement: Is there any way for you to ensure that the proper tags and metadata are included in each item of the inventory?
 	
-// Should this part be moved to the RBAC section?
-Determine the required level of access for your users based on the following predefined roles in cost management:
+	
+*User access:*
 
-* Cost Administrator:  grants read and write permissions
-* Cost Cloud Viewer:  grants read permissions on cost reports related to cloud sources
-* Cost OpenShift Viewer:  grants read permissions on cost reports related to OpenShift sources
-* Cost Price List Administrator:  grants read and write permissions on price list rates
-* Organization Administrator: a Red Hat account user who can manage users and control their access and permissions
+* What level of access do you want your users to have?
+* Do you want some users to have access to all cost data, while other users can view only a portion of the environment or certain sources?
+
 
 
 

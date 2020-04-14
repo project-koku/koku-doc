@@ -19,11 +19,24 @@ ifdef::context[:parent-context: {context}]
 //:context: assembly-keyword
 // The `context` attribute enables module reuse. Every module's ID includes {context}, which ensures that the module has a unique ID even if it is reused multiple times in a guide.
 
-You may not want users to have access to all cost data, but instead only data specific to their projects or organization. Using role-based access control, you can limit the visibility of resources involved in cost management reports.
+You may not want users to have access to all cost data, but instead only data specific to their projects or organization. Using role-based access control, you can limit the visibility of resources involved in cost management reports. For example, you may want to restrict a user's view to only AWS sources, instead of the entire environment.
 
 Role-based access control works by organizing users into groups, which can be associated with one or more roles. A role defines a permission and a set of resource definitions.
 
 By default, a user who is not an account administrator will not have access to data, but instead must be granted access to resources. Account administrators can view all data without any further role-based access control configuration.
+
+== Default user roles in cost management
+
+You can configure your own user access roles for cost management, or assign each user a predefined role.
+
+To use a default role, determine the required level of access to permit your users based on the following predefined roles in cost management:
+
+* Cost Administrator:  grants read and write permissions
+* Cost Cloud Viewer:  grants read permissions on cost reports related to cloud sources
+* Cost OpenShift Viewer:  grants read permissions on cost reports related to OpenShift sources
+* Cost Price List Administrator:  grants read and write permissions on price list rates
+* Cost Price List Viewer:  grants read and write permissions on price list rates
+* Organization Administrator: a Red Hat account user who can manage users and control their access and permissions
 
 /////
 Edit and include a brief overview of steps.
