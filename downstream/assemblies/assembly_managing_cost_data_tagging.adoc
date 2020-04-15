@@ -24,7 +24,6 @@ This guide explains in depth how tagging works in cost management, and how you c
 // For instructions on adding tags to AWS and OpenShift Container Platform resources, see [LINK TO GETTING STARTED GUIDE]
 
 ifdef::cost[]
-include::../modules/note_tech_preview.adoc[leveloffset=+1]
 
 include::../modules/note_bugzilla.adoc[leveloffset=+1]
 endif::cost[]

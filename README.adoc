@@ -2,8 +2,9 @@
 
 == About this project
 
-Koku is the upstream project for Red Hat Cost Management.
-We welcome all contributors!
+Koku is the upstream project for Red Hat OpenShift Container Platform cost management, available  at https://cloud.redhat.com/beta/cost-management/.
+
+We welcome all contributors! See the Developer Certificate of Origin (DCO) for guidelines for contributors.
 
 This repository contains documentation written in AsciiDoc. For more information on AsciiDoc markup and syntax, see https://asciidoctor.org/docs/asciidoc-syntax-quick-reference/.
 
@@ -55,8 +56,8 @@ Modules are categorized by content type and written using templates.
 Modules can be procedure, concept, or reference topics. The module type is labelled in each file name:
 
 * Procedure: `TOPIC.adoc`
-* Concept: `_con_TOPIC.adoc`
-* Reference: `_ref_TOPIC.adoc`
+* Concept: `con_TOPIC.adoc`
+* Reference: `ref_TOPIC.adoc`
 
 Templates are available in this repository's _modules_ directory to copy and write from.
 
@@ -66,6 +67,7 @@ See the _Modular Documentation Reference Guide_ for information about these file
 === Conventions
 
 Images::
+* The _Images_ directory contains any screenshots, saved in .png format. Use screenshots minimally and only if necessary, as they require more maintenance than text edits do in a rapidly-developing product, and additional localization work. Text documentation allows for greater accessibility for all users, and can be used with screen reading software.
 * UI icons, if needed, should be approximately 21px x 21px in size and saved in the _Images_ directory.
 
 
