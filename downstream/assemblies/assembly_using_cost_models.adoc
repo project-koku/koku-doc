@@ -14,10 +14,9 @@ ifdef::context[:parent-context: {context}]
 :context: cost_models
 // The `context` attribute enables module reuse. Every module's ID includes {context}, which ensures that the module has a unique ID even if it is reused multiple times in a guide.
 
-This document describes how to use cost models in cost management to apply a price to usage in your cloud environment, then distribute the costs to resources.
+This document describes how to use cost models in cost management to apply a price to usage in your hybrid cloud environment, then distribute the costs to resources.
 
 ifdef::cost[]
-
 
 include::../modules/note_bugzilla.adoc[leveloffset=+1]
 
@@ -33,15 +32,14 @@ include::../modules/ref_cost_model_terms.adoc[leveloffset=+1]
 include::../modules/con_cost_model_workflow.adoc[leveloffset=+1]
 
 [[configuring-cost-models]]
-= Assigning a cost to metrics and usage using a cost model
+= Setting up a cost model
 
 include::../modules/creating_an_AWS_cost_model.adoc[leveloffset=+1]
 
-include::../modules/creating_an_Azure_cost_model.adoc[leveloffset=+1]
+//include::../modules/creating_an_Azure_cost_model.adoc[leveloffset=+1]
 
 
-include::../modules/creating_an_OCP_cost_model.adoc[leveloffset=+1]
-
+include::../modules/creating_an_OCP_onprem_cost_model.adoc[leveloffset=+1]
 
 
 ////

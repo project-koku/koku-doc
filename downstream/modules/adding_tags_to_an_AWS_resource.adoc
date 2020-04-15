@@ -14,7 +14,7 @@
 
 Amazon creates certain identifiers automatically, like the EC2 instance resource identifier (a number such as `i-123456789`), which cost management uses similarly to a tag.
 
-You can also add your own tags at the individual resource level. These tags must be activated for Cost and Usage reporting to export them to the cost management application.
+You can also add your own tags at the individual resource level. These tags must be activated for Cost and Usage Reporting to export them to the cost management application.
 
 Configure AWS tags for cost management using the following steps:
 
