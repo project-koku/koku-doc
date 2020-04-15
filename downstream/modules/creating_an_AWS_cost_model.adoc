@@ -9,21 +9,20 @@
 
 [id="creating_an_AWS_cost_model"]
 // The `context` attribute enables module reuse. Every module's ID includes {context}, which ensures that the module has a unique ID even if it is reused multiple times in a guide.
-= Creating an AWS cost model with a markup
+= Creating an AWS or Azure cost model with a markup
 
-As cloud infrastructure sources collect cost and usage data into cost management with prices already assigned, you only need to assign a markup or discount (if desired) to accurately reflect your costs. These _raw costs_ are collected in cost management from AWS Cost and Usage reports or Azure export reports.
+As cloud infrastructure sources collect cost and usage data into cost management with prices already assigned, you only need to assign a markup or discount (if desired) to accurately reflect your costs. These _raw costs_ are collected in cost management from AWS Cost and Usage Reports or Azure exports.
 
-Adding a markup to your _raw costs_ can allow you to account for your overhead costs, such as the cost of administering your AWS account, or other support costs. A markup is an estimation to cover your costs not shown by metrics or usage.
+Adding a markup to your _raw costs_ can allow you to account for your overhead costs, such as the cost of administering your AWS account, Azure subscription, or other support costs. A markup is an estimation to cover your costs not shown by metrics or usage.
 
-This example shows how to add a 10% markup to the information collected from the AWS Cost and Usage reports. The same method can be used to apply a markup to your Azure costs.
+This example shows how to add a 10% markup to the information collected from the AWS Cost and Usage Reports. The same method can be used to apply a markup to your Azure costs.
 
 *QUESTIONS* Does creating the cost model for AWS automatically call everything an 'infrastructure cost'? Is this important to call out to users here? Will there be an option in the UI for the user to determine the cost type in an AWS cost model?
 
 .Prerequisites
 
-* *TODO* What permissions/role is needed?
+* A user with Cost Administrator or Cost Price List Administrator permissions. See https://access.redhat.com/documentation/en-us/openshift_container_platform/4.3/html/getting_started_with_cost_management/assembly_cost_limiting_access_rbac[Limiting access to cost management resources] for instructions on configuring user roles.
 * Your AWS account added to cost management as a data source. See https://access.redhat.com/documentation/en-us/openshift_container_platform/4.3/html/getting_started_with_cost_management/assembly_adding_sources_cost[Adding an Amazon Web Services (AWS) source to cost management] in _Getting started with cost management_ for instructions.
-* *TODO* Is an OpenShift source needed for this example?
 
 .Procedure
 
@@ -54,7 +53,7 @@ To see more information or edit a cost model:
 +
 Click image:more-options.png[] (*more options*), then *View details* or *Delete* the cost model. From the *View details* option, you can edit the cost model, including source assignments, markup, and other settings.
 
-* Review your tags and tagging strategy to ensure that costs are being distributed to the correct resources, cost centers, or teams. See See https://access.redhat.com/documentation/en-us/openshift_container_platform/4.3/html-single/managing_cost_data_using_tagging/index[_Using tagging to manage cost data_] for more information.
+* Review your tags and tagging strategy to ensure that costs are being distributed to the correct resources, cost centers, or teams. See https://access.redhat.com/documentation/en-us/openshift_container_platform/4.3/html-single/managing_cost_data_using_tagging/index[_Using tagging to manage cost data_] for more information.
 
 
 

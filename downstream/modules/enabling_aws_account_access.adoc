@@ -7,7 +7,7 @@
 
 // Add docs URL to UI.
 
-To provide data within the web interface and API, cost management needs to consume the Cost and Usage reports produced by AWS. For cost management to obtain this data with a minimal amount of access, create an IAM policy and role for cost management to use. This configuration will only provide access to the stored information and nothing else.
+To provide data within the web interface and API, cost management needs to consume the Cost and Usage Reports produced by AWS. For cost management to obtain this data with a minimal amount of access, create an IAM policy and role for cost management to use. This configuration will only provide access to the stored information and nothing else.
 
 To configure account access:
 

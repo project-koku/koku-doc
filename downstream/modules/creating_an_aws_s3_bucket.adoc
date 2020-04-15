@@ -11,7 +11,7 @@ Cost management requires an Amazon S3 bucket with permissions configured to stor
 Log into your AWS master account to begin configuring cost and usage reporting:
 
 . In the AWS S3 console, create a new S3 bucket or use an existing bucket. If you are configuring a new S3 bucket, accept the default settings.
-. In the AWS Billing console, create a Cost and Usage report that will be delivered to your S3 bucket. Specify the following values (and accept the defaults for any other values):
+. In the AWS Billing console, create a Cost and Usage Report that will be delivered to your S3 bucket. Specify the following values (and accept the defaults for any other values):
 +
 ----
 Report name: _<any-name>_ (note this name as you will use it later)

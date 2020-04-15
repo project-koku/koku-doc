@@ -28,7 +28,7 @@ This example shows how to design and apply a cost model to your OpenShift on-pre
 
 .Prerequisites
 
-* *TODO* What permissions/role is needed?
+* A user with Cost Administrator or Cost Price List Administrator permissions. See https://access.redhat.com/documentation/en-us/openshift_container_platform/4.3/html/getting_started_with_cost_management/assembly_cost_limiting_access_rbac[Limiting access to cost management resources] for instructions on configuring user roles.
 * *Is this necessary or optional if running 'on-prem' OCP ?* Your cloud infrastructure account added as a cost management data source. See https://access.redhat.com/documentation/en-us/openshift_container_platform/4.3/html/getting_started_with_cost_management/assembly_adding_sources_cost[Adding sources to cost management] in _Getting started with cost management_ for instructions for your cloud provider type.
 * Your OpenShift cluster added as a cost management data source. See https://access.redhat.com/documentation/en-us/openshift_container_platform/4.3/html/getting_started_with_cost_management/assembly_adding_sources_cost#assembly_adding_ocp_sources[Adding an OpenShift Container Platform source to cost management] in _Getting started with cost management_ for instructions.
 
@@ -42,13 +42,13 @@ This example shows how to design and apply a cost model to your OpenShift on-pre
 ... For *Metric*, select *Node*.
 ... For *Measurement*, select *Price (node-month)*.
 ... In the *Rate* field, enter _1000_ to assign a $1,000 per  price to each node in the sources you select (in a later step).
-... Cost management classifies node and cluster costs as _infrastructure costs_ by default. To change the cost type you are calculating, use the toggle under *Rate*. See xref:cost-types[] to learn more. 
+... Cost management classifies node and cluster costs as _infrastructure costs_ by default. To change the cost type you are calculating, use the toggle under *Rate*. See xref:cost-layers[] to learn more. 
 ... Click *Add rate* to save the node rate.
 .. To apply a rate to CPU requests:
 ... For *Metric*, select *CPU*.
 ... For *Measurement*, select *Request (core-hours)*.
 ... In the *Rate* field, enter _0.09_ to apply a $0.09 cost to each core-hour of CPU requests.
-... Cost management classifies metrics-based data such as CPU requests as _supplementary costs_ by default. To change the cost type you are calculating, use the toggle under *Rate*. See xref:cost-types[] to learn more.
+... Cost management classifies metrics-based data such as CPU requests as _supplementary costs_ by default. To change the cost type you are calculating, use the toggle under *Rate*. See xref:cost-layers[] to learn more.
 ... Click *Add rate* to save the CPU request rate.
 .. Add additional rates by repeating the previous steps, or click *Next* to finish configuring your price list.
 . If desired, set a markup or discount. To apply a 10% markup to the base costs of your resources, enter _10_ in the as the *Markup rate* and click *Next*.
