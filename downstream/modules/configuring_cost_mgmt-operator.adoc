@@ -1,0 +1,32 @@
+// Module included in the following assemblies:
+// assembly_adding_ocp_sources.adoc
+[id="configuring_cost_mgmt-operator"]
+[[configuring_cost_mgmt-operator]]
+== Installing and configuring the Cost Management Operator
+
+The Cost Management Operator collects the data required for cost management.    
+
+Begin adding your OpenShift Container Platform cluster as a source to cost management, then install and configure the Cost Management Operator from OperatorHub.
+
+[NOTE]
+====
+See https://docs.openshift.com/container-platform/4.3/operators/olm-understanding-operatorhub.html[Understanding the OperatorHub] in the OpenShift documentation for more information about OperatorHub.
+====
+
+.Prerequisites
+
+* OpenShift Container Platform 4.3 or newer
+
+.Procedure
+
+. In the cloud.redhat.com platform, open the *Sources* menu (https://cloud.redhat.com/beta/settings/sources/) to begin adding an AWS source to cost management:
+.. Navigate to *Sources* and click *Add a source* to open the Sources wizard.
+.. Enter a name for your source and click *Next*.
+.. Select *Cost Management* as the application and *OpenShift Container Platform* as the source type. Click *Next*.
+. In OpenShift, install and configure the Cost Management Operator from OperatorHub on your cluster, by searching for _cost management_.
+//Add link to instructions.
+. When configuration is complete, enter the cluster identifier into the cloud.redhat.com *Sources* wizard, click *Next*.
+// Add where to find the cluster identifier.
+. In the cloud.redhat.com *Sources* wizard, review the details and click *Finish* to finish adding the OpenShift Container Platform cluster.
+
+
