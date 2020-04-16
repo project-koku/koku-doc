@@ -27,6 +27,6 @@ See https://docs.openshift.com/container-platform/4.3/operators/olm-understandin
 //Add link to instructions.
 . When configuration is complete, enter the cluster identifier into the cloud.redhat.com *Sources* wizard, click *Next*.
 // Add where to find the cluster identifier.
-. In the cloud.redhat.com *Sources* wizard, review the details and click *Finish* to finish adding the OpenShift Container Platform cluster.
+. In the cloud.redhat.com *Sources* wizard, review the details and click *Finish* add the OpenShift Container Platform cluster.
 
 
