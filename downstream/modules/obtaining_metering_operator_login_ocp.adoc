@@ -1,5 +1,5 @@
 // Module included in the following assemblies:
-// assembly_adding_oco_sources.adoc
+// assembly_adding_ocp_sources.adoc
 [id="obtaining_metering_operator_login_ocp"]
 [[obtaining_metering_operator_login_ocp]]
 == Obtaining Metering Operator login credentials

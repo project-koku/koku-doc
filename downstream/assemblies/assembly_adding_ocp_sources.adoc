@@ -5,25 +5,41 @@ This section describes how to connect your OpenShift Container Platform cluster 
 
 To add an OpenShift Container Platform account to cost management, you must configure your OpenShift cluster to provide Operator Metering usage data (metrics), then add the source in the cost management user interface. 
 
+[NOTE]
+====
+An OpenShift Container Platform 4.3 or newer cluster is required to use the Cost Management Operator to provide usage and metrics data.
+====
+
 For your OpenShift Container Platform cluster to provide metrics to cost management:
 
-. Install and configure the prerequisites.
+. Install and configure the Cost Management Operator in OpenShift
+. Provide the cluster identifier to cost management
+
+////
+
+OLD
 . Obtain a login token for your reporting-operator service account.
 . Download and configure the Usage Collector Ansible playbook to generate report resources for your OpenShift cluster.
 . Create a cron job to regularly collect and send Operator Metering usage data to the upload service.
 
 As you will complete some of the following steps in OpenShift Container Platform, and some steps in the cloud.redhat.com platform (https://cloud.redhat.com/beta/settings/sources/), have both applications open in a web browser, as well as a terminal to access the command line interface (CLI).
 
+////
+
 
 // Add links to other docs that show you how to install these.
 
-include::../modules/installing_ocp_prerequisites.adoc[]
+// include::../modules/installing_ocp_prerequisites.adoc[]
 
-include::../modules/obtaining_metering_operator_login_ocp.adoc[]
+include::../modules/configuring_cost_mgmt-operator.adoc[]
 
-include::../modules/downloading_and_configuring_usage_collector_ocp.adoc[]
 
-include::../modules/uploading_data_with_usage_collector_ocp.adoc[]
+
+//include::../modules/obtaining_metering_operator_login_ocp.adoc[]
+
+//include::../modules/downloading_and_configuring_usage_collector_ocp.adoc[]
+
+//include::../modules/uploading_data_with_usage_collector_ocp.adoc[]
 
 
 Cost management will begin collecting cost and usage data from your OpenShift Container Platform cluster. The data can take a few days to populate before it shows on the cost management dashboard.
