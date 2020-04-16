@@ -21,7 +21,7 @@ To obtain the OpenShift Operator Metering usage data, cost management requires t
 * Cost Management Operator
 ////
 +
-The Cost Management Operator is not deployed out of the box in OpenShift Container Platform. See https://docs.openshift.com/container-platform/4.3/metering/metering-installing-metering.html[Installing Metering] in the OpenShift documentation for instructions to install the Operator from OperatorHub.
+The Cost Management Operator is not deployed out of the box in OpenShift Container Platform. See https://access.redhat.com/documentation/en-us/openshift_container_platform/4.3/html/metering/installing-metering[Installing Metering] in the OpenShift documentation for instructions to install the Operator from OperatorHub.
 
 Update link. Is there a live downstream doc/link?
 
@@ -80,6 +80,5 @@ See https://docs.openshift.com/container-platform/4.3/cli_reference/openshift_cl
 ////
 
 When you have finished installing all of the listed prerequisites, check the boxes in the Sources wizard and click *Next*.
-
 
 
