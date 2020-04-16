@@ -26,7 +26,12 @@ See https://docs.openshift.com/container-platform/4.3/operators/olm-understandin
 . In OpenShift, install and configure the Cost Management Operator from OperatorHub on your cluster, by searching for _cost management_.
 //Add link to instructions.
 . When configuration is complete, enter the cluster identifier into the cloud.redhat.com *Sources* wizard, click *Next*.
-// Add where to find the cluster identifier.
-. In the cloud.redhat.com *Sources* wizard, review the details and click *Finish* add the OpenShift Container Platform cluster.
++
+[NOTE]
+====
+The cluster identifier can be found in *Help* > *About* in OpenShift.
+====
++
+. In the cloud.redhat.com *Sources* wizard, review the details and click *Finish* to add the OpenShift Container Platform cluster.
 
 
