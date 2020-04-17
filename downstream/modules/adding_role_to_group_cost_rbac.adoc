@@ -7,7 +7,6 @@
 // * ID: [id="adding_role_to_group_cost_rbac"]
 // * Title: = Adding a role to a policy
 
-// The ID is used as an anchor for linking to the module. Avoid changing it after the module has been published to ensure existing links are not broken.
 [id="adding_role_to_group_cost_rbac"]
 // The `context` attribute enables module reuse. Every module's ID includes {context}, which ensures that the module has a unique ID even if it is reused multiple times in a guide.
 = Adding a role to a group
@@ -17,13 +16,12 @@ Add your role to a group to manage and limit the scope of information that users
 .Prerequisites
 
 * You must be an Account Administrator or a member of a group with the _RBAC Administrator_ role to create a role.
-// In AWS, an Account Admin? where is the group RBAC Admin - AWS or RH Insights?
 
 .Procedure
 
-. Click image:configuration-gear.png[] (*Settings*) to navigate to *User Access Management*.
+. From cost management, click image:configuration-gear.png[] (*Settings*) to navigate to *User Access*.
 . Click the *Groups* tab.
-. Click *Create a group*.
+. Click *Create group*.
 . In the *General information* screen, enter a name for the new group, and optionally, a description. Click *Next*.
 . In the *Add members* screen, select the user(s) in your organization to add to the new group. Click *Next*.
 . (Optional) In the *Select roles* screen, select one or more role(s) to add to the group.
@@ -38,7 +36,7 @@ Default roles available for cost management are:
 +
 . Review the details for this group and click *Confirm* to create the group.
 
-Your new group will be listed in the *Groups* list on the *User Access Management* screen.
+Your new group will be listed in the *Groups* list on the *User Access* screen.
 
 To verify your configuration, log out of the cost management application and log back in as a user added to the group.
 
