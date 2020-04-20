@@ -16,14 +16,16 @@ Create a new role to manage and limit the scope of information that users can se
 
 .Prerequisites
 
+
+
+
 * You must be an Account Administrator or a member of a group with the _RBAC Administrator_ role to create a role.
-// In AWS, an Account Admin? where is the group RBAC Admin - AWS or RH Insights?
 
 .Procedure
 
-. Click image:configuration-gear.png[] (*Settings*) to navigate to *User Access Management*.
+. From cost management, click image:configuration-gear.png[] (*Settings*) to navigate to *User Access*.
 . Click the *Roles* tab.
-. Click *Add Role* to open the *Add role* wizard.
+. Click *Create Role* to open the *Add role* wizard.
 . In the *Name and Description* screen, enter a name for the new role, and optionally, a description. Click *Next*.
 . In the *Permission* screen, specify the Red Hat Cloud Services application you are creating the role for (in this case, cost management) as well as the resource and permission type:
 .. For *Application*, enter _cost-management_.
@@ -49,6 +51,7 @@ For example, to create a role with read-only permissions to AWS account data, se
 ** This is specific to the resource defined in the *Key* field. Examples include the AWS account ID or alias, Azure subscription ID, OpenShift cluster ID, OpenShift node name, or OpenShift project name. 
 +
 You can also enter *** in this field as a wildcard to create a role that matches everything of the resource type defined in *Key*.
+. Add more resource definitions if desired and click *Next* when finished.
 . Review the details for this role and click *Confirm* to create the role.
 
 Your new role will be listed in the *Roles* tab on the *User Access Management* screen.
