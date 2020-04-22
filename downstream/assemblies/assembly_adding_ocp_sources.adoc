@@ -10,8 +10,6 @@ The Cost Management Operator collects the data required for cost management by:
 * Using operator-metering to create cost and usage reports specific to cost management.
 * Collecting and packaging these reports to a tarball which is uploaded to cost management through https://cloud.redhat.com/.
 
-Begin adding your OpenShift Container Platform cluster as a source to cost management, then install and configure the Cost Management Operator from OperatorHub.
-
 [NOTE]
 ====
 An OpenShift Container Platform 4.3 or newer cluster is required to use the Cost Management Operator.
@@ -19,8 +17,8 @@ An OpenShift Container Platform 4.3 or newer cluster is required to use the Cost
 
 For your OpenShift Container Platform cluster to provide metrics to cost management:
 
-. Install the Cost Management Operator in OpenShift
-. Configure the Cost Management Operator to *DO WHAT*
+. Install the Cost Management Operator in OpenShift from OperatorHub
+. Configure the Cost Management Operator to collect OpenShift usage data (metrics) using Operator Metering
 . Provide the cluster identifier to cost management
 
 As you will complete some of the following steps in OpenShift Container Platform, and some steps in the cloud.redhat.com platform (https://cloud.redhat.com/settings/sources/), have both applications open in a web browser, as well as a terminal to access the command line interface (CLI).
