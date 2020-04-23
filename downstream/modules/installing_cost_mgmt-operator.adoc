@@ -4,7 +4,7 @@
 [[installing_cost_mgmt-operator]]
 == Installing the Cost Management Operator
 
-The Cost Management Operator collects the data required for cost management.    
+The Cost Management Operator collects the metrics required for cost management.    
 
 Begin adding your OpenShift Container Platform cluster as a source to cost management, then install the Cost Management Operator from OperatorHub.
 
@@ -20,22 +20,18 @@ See https://docs.openshift.com/container-platform/4.3/operators/olm-understandin
 .Procedure
 
 . In the cloud.redhat.com platform, open the *Sources* menu (https://cloud.redhat.com/settings/sources/) to begin adding an OpenShift source to cost management:
-.. Navigate to *Sources* and click *Add a source* to open the Sources wizard.
+.. Navigate to *Sources* and click *Add source* to open the Sources wizard.
 .. Enter a name for your source and click *Next*.
 .. Select *Cost Management* as the application and *OpenShift Container Platform* as the source type. Click *Next*.
-. In OpenShift, install the Cost Management Operator on your cluster.
+. In OpenShift, install the Cost Management Operator on your cluster, using either the OpenShift web console (search for _cost management_ in OperatorHub) or the CLI.
 +
 [IMPORTANT]
 ====
 You must install the Cost Management Operator in the `openshift-metering` namespace. Other namespaces are not supported for installation.
 ====
 +
-You can install the Cost Management Operator in one of the following ways:
+See https://access.redhat.com/documentation/en-us/openshift_container_platform/4.3/html/operators/olm-adding-operators-to-a-cluster[Adding operators to a cluster] in the OpenShift documentation for instructions for installing an Operator.
 
-* From the OpenShift web console, search for _cost management_ in OperatorHub and follow the instructions in the Operator.
-* From the command line interface:
-
-.. ADD CLI STEPS HERE
 
 
 

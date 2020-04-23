@@ -4,9 +4,9 @@
 [[configuring_cost_mgmt-operator]]
 == Configuring the Cost Management Operator
 
-The Cost Management Operator (`cost-mgmt-operator`) collects the data required for cost management.    
+The Cost Management Operator (`cost-mgmt-operator`) collects the metrics required for cost management.    
 
-After installing the Cost Management Operator, configure authentication and the `operator-metering` namespace, then the Cost Management Operator.
+After installing the Cost Management Operator, configure authentication and the `operator-metering` namespace, then configure the Cost Management Operator.
 
 .Prerequisites
 
@@ -45,7 +45,7 @@ data:
 .. Choose a name for your authentication secret and replace the `metadata.name` value with it.
 .. To configure token authentication (the default method), obtain the correct _auth_ token and then edit the secret to replace the token value:
 +
-... Install the https://stedolan.github.io/jq/download/[`jq` JSON processor].
+... Install the https://stedolan.github.io/jq/download/[`jq`] JSON processor.
 ... Change to the `openshift-config` namespace:
 +
 ----
@@ -73,7 +73,7 @@ For both methods of authentication, the name of the secret should match the _aut
 +
 . Configure the `operator-metering` namespace.
 +
-The Cost Management Operator installs the `operator-metering` namespace as a dependency. It uses https://github.com/operator-framework/operator-metering[`operator-metering`] to create, collect, package, and upload metric and usage reports to cost management. In order for metering to work properly, configure `operator-metering` using the https://docs.openshift.com/container-platform/4.3/metering/configuring_metering/metering-about-configuring.html[OpenShift documentation] to create a MeteringConfig resource.
+The Cost Management Operator installs the `operator-metering` namespace as a dependency. It uses the Metering Operator to create, collect, package, and upload metrics and usage reports to cost management. In order for metering to work properly, configure `operator-metering` using the https://access.redhat.com/documentation/en-us/openshift_container_platform/4.3/html-single/metering/index#configuring-metering[OpenShift documentation] to create a MeteringConfig resource.
 +
 . Configure the Cost Management Operator by creating the `CostManagement` and `CostManagementData` custom resources.
 +
@@ -99,7 +99,7 @@ spec:
   authentication_secret_name: 'basic_auth_creds-123ab'
 ----
 +
-.. Change the following values in your `cost-mgmt-resource.yaml` file:
+.. Edit the following values in your `cost-mgmt-resource.yaml` file:
 +
 * The `clusterID` value to your cluster ID. Obtain your cluster ID by running: 
 +
@@ -114,7 +114,7 @@ $ oc get secret -n openshift-metering | grep reporting-operator-token
 ----
 +
 * Specify the authentication type you are using (`token` or `basic`). If you are using `token` authentication, you can remove the authentication field as token authentication is the default.
-* The `authentication_secret_name` to the name of your authentication secret you created earlier.
+* Change the `authentication_secret_name` to the name of your authentication secret you created earlier.
 +
 .. Deploy the `CostManagement` resource:
 +
@@ -137,7 +137,7 @@ metadata:
 $ oc create -f cost-mgmt-data-resource.yaml
 ----
 +
-Now your Cost Management Operator will create, collect, package, and upload your OpenShift cost and usage reports to cost management.
+Now the Cost Management Operator will create, collect, package, and upload your OpenShift cost and usage reports to cost management.
 +
 . When configuration is complete, enter the cluster identifier into the cloud.redhat.com *Sources* wizard, click *Next*.
 +
@@ -146,7 +146,7 @@ Now your Cost Management Operator will create, collect, package, and upload your
 The cluster identifier can be found in *Help* > *About* in OpenShift.
 ====
 +
-. In the cloud.redhat.com *Sources* wizard, review the details and click *Finish* to add the OpenShift Container Platform cluster.
+. In the cloud.redhat.com *Sources* wizard, review the details and click *Finish* to add the OpenShift Container Platform cluster to cost management.
 
 
 .Additional resources
