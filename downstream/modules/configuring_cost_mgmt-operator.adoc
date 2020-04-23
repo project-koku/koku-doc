@@ -11,7 +11,7 @@ After installing the Cost Management Operator, configure authentication and the 
 .Prerequisites
 
 * OpenShift Container Platform 4.3 or newer
-* The Cost Management Operator installed in the `operator-metering` namespace
+* The Cost Management Operator installed in the `openshift-metering` namespace
 * A user with access to the `openshift-config` namespace
 
 .Procedure
