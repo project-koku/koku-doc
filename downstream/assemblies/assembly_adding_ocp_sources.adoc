@@ -30,6 +30,6 @@ include::../modules/configuring_cost_mgmt-operator.adoc[]
 
 
 
-Cost management will begin collecting cost and usage data from your OpenShift Container Platform cluster. The data can take a few days to populate before it shows on the cost management dashboard.
+Cost management will begin collecting usage data (metrics) from your OpenShift Container Platform cluster. The data can take a few days to populate before it shows on the cost management dashboard.
 
 You have completed adding your OpenShift Container Platform cluster as a source.
