@@ -4,19 +4,19 @@
 [[configuring_cost_mgmt-operator]]
 == Configuring the Cost Management Operator
 
-The Cost Management Operator collects the data required for cost management.    
+The Cost Management Operator (`cost-mgmt-operator`) collects the data required for cost management.    
 
-After installing the Cost Management Operator, you must configure authentication and the operator-metering namespace before configuring the Cost Management Operator.
+After installing the Cost Management Operator, configure authentication and the `operator-metering` namespace, then the Cost Management Operator.
 
 .Prerequisites
 
 * OpenShift Container Platform 4.3 or newer
-* The Cost Management Operator installed in the _operator-metering_ namespace
-* A user with access to the _openshift-config_ namespace
+* The Cost Management Operator installed in the `operator-metering` namespace
+* A user with access to the `openshift-config` namespace
 
 .Procedure
 
-. Configure authentication inside the `openshift-metering` project. This allows you to upload OpenShift data to https://cloud.redhat.com/. 
+. Configure authentication inside the `openshift-metering` project. This allows you to upload OpenShift data to cloud.redhat.com. 
 +
 [NOTE]
 ====
@@ -43,7 +43,7 @@ data:
 ----
 +
 .. Choose a name for your authentication secret and replace the `metadata.name` value with it.
-.. To configure token authentication (the default method), obtain the correct auth token and then edit the secret to replace the token value:
+.. To configure token authentication (the default method), obtain the correct _auth_ token and then edit the secret to replace the token value:
 +
 ... Install the https://stedolan.github.io/jq/download/[`jq` JSON processor].
 ... Change to the `openshift-config` namespace:
@@ -52,7 +52,7 @@ data:
 $ oc project openshift-config
 ----
 +
-... Replace the token value in `auth_secret.yaml` with the authentication token for cloud.openshift.com. Obtain the token by running the following command:
+... Replace the token value in `auth_secret.yaml` with the authentication token for _cloud.openshift.com_. Obtain the token by running the following command:
 +
 ----
 $ oc get secret pull-secret -o "jsonpath={.data.\.dockerconfigjson}" | base64 --decode | jq '.auths."cloud.openshift.com".auth'
@@ -60,7 +60,7 @@ $ oc get secret pull-secret -o "jsonpath={.data.\.dockerconfigjson}" | base64 --
 +
 [NOTE]
 ====
-To use basic authentication, edit the secret to replace the username and password values with your base64 encoded username and password for connecting to cloud.redhat.com.
+To use basic authentication, edit the secret to replace the username and password values with your base64-encoded username and password for connecting to cloud.redhat.com.
 ====
 +
 .. Deploy the secret to your OpenShift cluster in the `openshift-metering` namespace:
@@ -69,19 +69,19 @@ To use basic authentication, edit the secret to replace the username and passwor
 $ oc create -f auth-secret.yaml
 ----
 +
-For both methods of authentication, the name of the secret should match the _authentication_secret_name_ set in the `CostManagement` custom resource that is configured in the next section.
+For both methods of authentication, the name of the secret should match the _authentication_secret_name_ set in the `CostManagement` custom resource configured in the next steps.
 +
-. Configure `operator-metering`.
+. Configure the `operator-metering` namespace.
 +
-The `cost-mgmt-operator` installs `operator-metering` as a dependency. It uses https://github.com/operator-framework/operator-metering[`operator-metering`] to create, collect, package, and upload cost and usage reports (metrics??) to cost management. In order for metering to work properly, configure `operator-metering` using the https://docs.openshift.com/container-platform/4.3/metering/configuring_metering/metering-about-configuring.html[OpenShift documentation] to create a MeteringConfig resource.
+The Cost Management Operator installs the `operator-metering` namespace as a dependency. It uses https://github.com/operator-framework/operator-metering[`operator-metering`] to create, collect, package, and upload metric and usage reports to cost management. In order for metering to work properly, configure `operator-metering` using the https://docs.openshift.com/container-platform/4.3/metering/configuring_metering/metering-about-configuring.html[OpenShift documentation] to create a MeteringConfig resource.
 +
-. Configure the `cost-mgmt-operator` by creating the `CostManagement` and `CostManagementData` custom resources.
+. Configure the Cost Management Operator by creating the `CostManagement` and `CostManagementData` custom resources.
 +
-Creating these resources also starts the roles that create the resources to obtain the cost and usage reports. The cost usage reports take about an hour to run and are collected, packaged, and uploaded every six hours.
+Creating these resources also starts the roles that create the resources to obtain the metrics and usage reports. The metrics and usage reports take about an hour to run and are collected, packaged, and uploaded every six hours.
 +
 [NOTE]
 ====
-The `cost-mgmt-operator` requires the `clusterID`, `reporting_operator_token_name`, and `authentication_secret_name` to be specified in a `CostManagement` custom resource.
+The Cost Management Operator requires the `clusterID`, `reporting_operator_token_name`, and `authentication_secret_name` to be specified in a `CostManagement` custom resource.
 ====
 +
 .. Copy the following `CostManagement` resource template and save it to a file called `cost-mgmt-resource.yaml`:
@@ -113,8 +113,8 @@ $ oc get clusterversion -o jsonpath='{.items[].spec.clusterID}{"\n"}'
 $ oc get secret -n openshift-metering | grep reporting-operator-token
 ----
 +
+* Specify the authentication type you are using (`token` or `basic`). If you are using `token` authentication, you can remove the authentication field as token authentication is the default.
 * The `authentication_secret_name` to the name of your authentication secret you created earlier.
-* Specify the authentication type you are using (`token` or `basic`). If you are using `token` authentication, you can remove the authentication field since token authentication is the default.
 +
 .. Deploy the `CostManagement` resource:
 +
@@ -137,7 +137,7 @@ metadata:
 $ oc create -f cost-mgmt-data-resource.yaml
 ----
 +
-Now your `cost-mgmt-operator` will create, collect, package, and upload your OpenShift cost and usage reports to cost management.
+Now your Cost Management Operator will create, collect, package, and upload your OpenShift cost and usage reports to cost management.
 +
 . When configuration is complete, enter the cluster identifier into the cloud.redhat.com *Sources* wizard, click *Next*.
 +

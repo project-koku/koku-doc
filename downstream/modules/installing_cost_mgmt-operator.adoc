@@ -19,7 +19,7 @@ See https://docs.openshift.com/container-platform/4.3/operators/olm-understandin
 
 .Procedure
 
-. In the cloud.redhat.com platform, open the *Sources* menu (https://cloud.redhat.com/beta/settings/sources/) to begin adding an OpenShift source to cost management:
+. In the cloud.redhat.com platform, open the *Sources* menu (https://cloud.redhat.com/settings/sources/) to begin adding an OpenShift source to cost management:
 .. Navigate to *Sources* and click *Add a source* to open the Sources wizard.
 .. Enter a name for your source and click *Next*.
 .. Select *Cost Management* as the application and *OpenShift Container Platform* as the source type. Click *Next*.
@@ -27,7 +27,7 @@ See https://docs.openshift.com/container-platform/4.3/operators/olm-understandin
 +
 [IMPORTANT]
 ====
-You must install the Cost Management Operator in the _openshift-metering_ namespace. Other namespaces are not supported for installation.
+You must install the Cost Management Operator in the `openshift-metering` namespace. Other namespaces are not supported for installation.
 ====
 +
 You can install the Cost Management Operator in one of the following ways:
