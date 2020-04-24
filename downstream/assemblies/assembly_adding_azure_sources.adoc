@@ -26,7 +26,7 @@ As non-Red Hat products and documentation can change without notice, instruction
 ====
 
 Add your Azure source to cost management from 
-https://cloud.redhat.com/beta/settings/sources/.
+https://cloud.redhat.com/settings/sources/.
 
 
 include::../modules/creating_an_azure_storage_account.adoc[]
