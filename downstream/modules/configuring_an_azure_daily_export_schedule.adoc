@@ -17,6 +17,6 @@ Create a recurring task to export your cost data on a daily basis automatically 
 . In the cloud.redhat.com *Sources* wizard, click *Next* when you have created the export schedule and review the source details. 
 . Click *Finish* to complete adding the Azure source to cost management.
 
-After the schedule is created, cost management will begin polling Azure for cost data, which will appear on the cost management dashboard (https://cloud.redhat.com/beta/cost-management/).
+After the schedule is created, cost management will begin polling Azure for cost data, which will appear on the cost management dashboard (https://cloud.redhat.com/cost-management/).
 
 

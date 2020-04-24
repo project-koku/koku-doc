@@ -67,7 +67,7 @@ To configure account access:
 
 Cost management will begin collecting cost and usage data from your master AWS account and any linked AWS accounts. 
 
-The data can take a few days to populate before it shows on the cost management dashboard (https://cloud.redhat.com/beta/cost-management/).
+The data can take a few days to populate before it shows on the cost management dashboard (https://cloud.redhat.com/cost-management/).
 
 You have completed adding your AWS account as a source.
 

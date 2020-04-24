@@ -10,7 +10,7 @@ Cost export data is written to a storage account, which exists within a resource
 
 Create a new storage account in Azure to contain the cost data and metrics that cost management will collect. This requires a resource group; Red Hat recommends creating a dedicated resource group for this storage account.
 
-. In the cloud.redhat.com platform, open the *Sources* menu (https://cloud.redhat.com/beta/settings/sources/) to begin adding an Azure source to cost management:
+. In the cloud.redhat.com platform, open the *Sources* menu (https://cloud.redhat.com/settings/sources/) to begin adding an Azure source to cost management:
 .. Navigate to *Sources* and click *Add a source* to open the Sources wizard.
 .. Enter a name for your source and click *Next*.
 .. Select *Cost Management* as the application and *Microsoft Azure* as the source type. Click *Next*.

@@ -6,7 +6,7 @@
 
 Begin adding your OpenShift Container Platform cluster as a source to cost management, then install the prerequisites.
 
-. In the cloud.redhat.com platform, open the *Sources* menu (https://cloud.redhat.com/beta/settings/sources/) to begin adding an AWS source to cost management:
+. In the cloud.redhat.com platform, open the *Sources* menu (https://cloud.redhat.com/settings/sources/) to begin adding an AWS source to cost management:
 .. Navigate to *Sources* and click *Add a source* to open the Sources wizard.
 .. Enter a name for your source and click *Next*.
 .. Select *Cost Management* as the application and *OpenShift Container Platform* as the source type. Click *Next*.
