@@ -13,7 +13,6 @@ You must use an AWS master account for this procedure, as a linked AWS account d
 
 Before you can add your AWS account to cost management as a data source, you must configure the following services on your AWS account to allow cost management access to metrics:
 
-//ADD LINKS TO PROC TOPICS - this is a preview list//
 . An S3 bucket to store cost and usage data reporting for cost management
 . An Identity Access Management (IAM) policy and role for cost management to process the cost and usage data
 
@@ -33,7 +32,5 @@ include::../modules/activating_aws_tags.adoc[]
 
 include::../modules/enabling_aws_account_access.adoc[]
 
-//include::../modules/adding_an_aws_account.adoc[]
-// this topic is covered in the other subsections.
 
 You have completed adding your AWS account as a source.
