@@ -27,16 +27,13 @@ endif::cost[]
 include::../modules/con_what_is_a_cost_model.adoc[leveloffset=+1]
 
 include::../modules/ref_cost_model_terms.adoc[leveloffset=+1]
-// [leveloffset=+1] ensures that when a module starts with a level-1 heading (= Heading), the heading will be interpreted as a level-2 heading (== Heading) in the assembly.
 
 include::../modules/con_cost_model_workflow.adoc[leveloffset=+1]
 
 [[configuring-cost-models]]
 = Setting up a cost model
 
-include::../modules/creating_an_AWS_cost_model.adoc[leveloffset=+1]
-
-//include::../modules/creating_an_Azure_cost_model.adoc[leveloffset=+1]
+include::../modules/creating_an_AWS_Azure_cost_model.adoc[leveloffset=+1]
 
 
 include::../modules/creating_an_OCP_onprem_cost_model.adoc[leveloffset=+1]
