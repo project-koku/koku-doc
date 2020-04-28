@@ -43,7 +43,7 @@ Raw cost:: The costs reported by a cloud provider without any cost model calcula
 
 //Previously: Raw metrics and costs:: Raw metrics and costs are the metrics and costs provided by a third party that have not been modified in any way, such as the AWS costs provided by the AWS Cost and Usage Report files or the API, and the OpenShift metrics provided through Operator Metering.
 
-Markup:: The portion of cost calculated by applying markup or discount to raw cost in the cost management application.
+Markup:: The portion of cost calculated by applying markup or discount to infrastructure raw cost in the cost management application.
 +
 _Example: For a raw cost of $100 and a markup of 10%, the markup would be $10, and the cost would be $110 (sum of both)._
 
@@ -66,7 +66,7 @@ _Example: For an OpenShift cluster with 10 nodes at a rate of $10,000 per node p
 
 Price list:: A list of rates used within the application’s cost model to calculate the usage cost of resources.
 
-Distributed costs:: The costs calculated by the cost model are distributed to higher level application concepts, such as user, team, project, account, service, and so on. How the costs are distributed depends on tags and labels, and the cost type (infrastructure or supplementary) assigned in the cost model.
+Distributed costs:: The costs calculated by the cost model are distributed to higher level application concepts, such as project, account, service, and so on. How the costs are distributed depends on the cost type (infrastructure or supplementary) assigned in the cost model.
 
 
 

@@ -23,9 +23,7 @@ sources to charge for utilization of resources.
 In some cases, those costs are related to the raw costs
 of the infrastructure, while others will be based on a price list that associates usage to costs. The
 data must be normalized before you can add a markup to it to cover your overhead,
-and then distribute the charges to your resources and/or end customers.
-
-//It helps to align costs to utilization: those customers that use a resource more will be charged more.
+and then distribute the charges to your resources and/or end customers. It helps to align costs to utilization: those customers that use a resource more will be charged more.
 
 
 

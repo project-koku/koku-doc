@@ -16,7 +16,6 @@ The following diagram shows the cost model workflow that cost management uses to
 
 The cost model also helps differentiate raw costs from the costs used in cost management. 
 
-//Replace image with revision when ready (April 2020)
 image:../images/costmodel-workflow.png[]
 
 . Cost management collects cost data from several sources:
@@ -27,7 +26,7 @@ image:../images/costmodel-workflow.png[]
 .. For OpenShift Container Platform sources - Since the metrics and inventory data do not have a price assigned to usage, you must create and assign a *price list* to your sources to determine the *usage cost* of these resources. A price list includes rates for storage, memory, CPU usage and requests, and clusters and nodes. 
 .. For AWS and Azure sources - You can create cost models for these sources to account for any extra costs or overhead in your environment by applying a *markup* percentage, or a negative percentage to calculate a discount.
 . Costs from sources are then collected together and allocated as *infrastructure cost* and *supplementary cost*.
-. The cost is then *distributed* to resources across the environment according to tags and labels. Depending on your organization, these resources may include OpenShift projects, nodes, or clusters, and AWS or Azure services or accounts. You can also use tagging to distribute the costs by team, project, or group within your organization.
+. The cost is then *distributed* to resources across the environment. Depending on your organization, these resources may include OpenShift projects, nodes, or clusters, and AWS or Azure services or accounts. You can also use tagging to distribute the costs by team, project, or group within your organization.
 
 [NOTE]
 ====

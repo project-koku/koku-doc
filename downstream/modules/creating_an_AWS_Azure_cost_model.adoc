@@ -3,11 +3,11 @@
 // assembly_using_cost_models.adoc
 
 // Base the file name and the ID on the module title. For example:
-// * file name: creating_an_AWS_cost_model.adoc
-// * ID: [id="creating_an_AWS_cost_model"]
-// * Title: = Creating an AWS cost model
+// * file name: creating_an_AWS_Azure_cost_model.adoc
+// * ID: [id="creating_an_AWS_Azure_cost_model"]
+// * Title: = Creating an AWS or Azure cost model
 
-[id="creating_an_AWS_cost_model"]
+[id="creating_an_AWS_Azure_cost_model"]
 // The `context` attribute enables module reuse. Every module's ID includes {context}, which ensures that the module has a unique ID even if it is reused multiple times in a guide.
 = Creating an AWS or Azure cost model with a markup
 
