@@ -23,8 +23,8 @@ This example shows how an educational course provider who is running a lab envir
 
 .Prerequisites
 
-* Your OpenShift cluster added as a cost management data source. See https://access.redhat.com/documentation/en-us/openshift_container_platform/4.3/html/getting_started_with_cost_management/assembly_adding_sources_cost#assembly_adding_ocp_sources[Adding an OpenShift Container Platform source to cost management] in _Getting started with cost management_ for instructions.
-* Your cloud infrastructure account added as a cost management data source. See https://access.redhat.com/documentation/en-us/openshift_container_platform/4.3/html/getting_started_with_cost_management/assembly_adding_sources_cost[Adding sources to cost management] in _Getting started with cost management_ for instructions for your cloud provider type.
+* Your OpenShift cluster added as a cost management data source. See https://access.redhat.com/documentation/en-us/openshift_container_platform/4.4/html/getting_started_with_cost_management/assembly_adding_sources_cost#assembly_adding_ocp_sources[Adding an OpenShift Container Platform source to cost management] in _Getting started with cost management_ for instructions.
+* Your cloud infrastructure account added as a cost management data source. See https://access.redhat.com/documentation/en-us/openshift_container_platform/4.4/html/getting_started_with_cost_management/assembly_adding_sources_cost[Adding sources to cost management] in _Getting started with cost management_ for instructions for your cloud provider type.
 * Configure tags on your sources. For tips and configuration instructions, see xref:assembly_configuring_tags_sources[].
 * OpenShift tag grouping enabled. See xref:enabling_tag_grouping_OCP[] for instructions.
 
@@ -35,7 +35,7 @@ This example shows how an educational course provider who is running a lab envir
 . In the *Choose key* list, select the tag key _user_.
 . In the *Choose value* dropdown list, check the values _course_id_ and _course_type_ to identify how many students have taken the course X and the costs for that course.
 // course_id=XYZ and course_type=ILT
-//What would you want to do next? What's the result? Ask GPTE.
+//What would you want to do next? What's the result?
 . To view more information about each resource, for example, how much course X has cost:
 * Click the arrow icon for each resource to see more information such as the cluster(s) the resource belongs to, and CPU and memory usage, limits, and requests.
 * Click *View Historical Data* to open the daily usage comparison view, which compares by month the usage, request, and limits per day for that resource.
@@ -44,9 +44,4 @@ This example shows how an educational course provider who is running a lab envir
 ** Click *Export data* to create a .csv file for for reporting. Specify a daily or monthly aggregate and click *Generate and download*.
 . Click *Clear all filters* to reset your OpenShift details view.
 
-
-
-//.Additional resources
-
-//* A bulleted list of links to other material closely related to the contents of the procedure module.
 

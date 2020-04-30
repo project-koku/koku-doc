@@ -2,18 +2,17 @@
 //
 // assembly_using_cost_models.adoc
 
-// Base the file name and the ID on the module title. For example:
+// Base the file name and the ID on the module title.
 // * file name: creating_an_OCP_onprem_cost_model.adoc
 // * ID: [id="creating_an_OCP_onprem_cost_model"]
 // * Title: = Creating a cost model for an OpenShift Container Platform environment
 
 [id="creating_an_OCP_onprem_cost_model"]
-// The `context` attribute enables module reuse. Every module's ID includes {context}, which ensures that the module has a unique ID even if it is reused multiple times in a guide.
 = Creating a cost model for an OpenShift Container Platform cluster
 
-*QUESTION: Use 'on premises' as a term for this example? Is this important/relevant for users?*
-
 As metrics and inventory from OpenShift Container Platform sources do not have costs associated, you must create a cost model to associate a price to resources.
+
+This example shows an OpenShift cluster running on-premises, meaning that while your cluster is running on cloud infrastructure (for example, AWS or Azure) you are not managing the infrastructure yourself. The cloud infrastructure costs are seen in cost management as part of the cluster cost, so creating a cost model allows you to distribute the underlying infrastructure cost to OpenShift.
 
 Creating a cost model for an OpenShift source includes assigning prices for usage and requests, and applying a markup or discount to determine the total costs of your OpenShift infrastructure.
 
@@ -28,9 +27,8 @@ This example shows how to design and apply a cost model to your OpenShift on-pre
 
 .Prerequisites
 
-* A user with Cost Administrator or Cost Price List Administrator permissions. See https://access.redhat.com/documentation/en-us/openshift_container_platform/4.3/html/getting_started_with_cost_management/assembly_cost_limiting_access_rbac[Limiting access to cost management resources] for instructions on configuring user roles.
-* *Is this necessary or optional if running 'on-prem' OCP ?* Your cloud infrastructure account added as a cost management data source. See https://access.redhat.com/documentation/en-us/openshift_container_platform/4.3/html/getting_started_with_cost_management/assembly_adding_sources_cost[Adding sources to cost management] in _Getting started with cost management_ for instructions for your cloud provider type.
-* Your OpenShift cluster added as a cost management data source. See https://access.redhat.com/documentation/en-us/openshift_container_platform/4.3/html/getting_started_with_cost_management/assembly_adding_sources_cost#assembly_adding_ocp_sources[Adding an OpenShift Container Platform source to cost management] in _Getting started with cost management_ for instructions.
+* A user with Cost Administrator or Cost Price List Administrator permissions. See https://access.redhat.com/documentation/en-us/openshift_container_platform/4.4/html/getting_started_with_cost_management/assembly_cost_limiting_access_rbac[Limiting access to cost management resources] for instructions on configuring user roles.
+* Your OpenShift cluster added as a cost management data source. See https://access.redhat.com/documentation/en-us/openshift_container_platform/4.4/html/getting_started_with_cost_management/assembly_adding_sources_cost#assembly_adding_ocp_sources[Adding an OpenShift Container Platform source to cost management] in _Getting started with cost management_ for instructions.
 
 .Procedure
 
@@ -72,9 +70,9 @@ Your new cost model will appear in the list on the *Cost models* page.
 ** The number of sources assigned to the cost model
 ** The date the cost model was last modified
 +
-To see more information or edit a cost model:
+* To see more information or edit a cost model: 
 +
-Click image:more-options.png[] (*more options*), then *View details* or *Delete* the cost model. From the *View details* option, you can edit the cost model, including source assignments, markup, and other settings.
+** From the *Cost models* summary page, click image:more-options.png[] (*more options*), then *View details* or *Delete* the cost model. From the *View details* option, you can edit the cost model, including source assignments, markup, and other settings.
 
-* Review your tags and tagging strategy to ensure that costs are being distributed to the correct resources, cost centers, or teams. See https://access.redhat.com/documentation/en-us/openshift_container_platform/4.3/html-single/managing_cost_data_using_tagging/index[_Using tagging to manage cost data_] for more information.
+* Review your tags and tagging strategy to ensure that costs are being distributed to the correct resources, cost centers, or teams. See https://access.redhat.com/documentation/en-us/openshift_container_platform/4.4/html-single/managing_cost_data_using_tagging/index[_Using tagging to manage cost data_] for more information.
 

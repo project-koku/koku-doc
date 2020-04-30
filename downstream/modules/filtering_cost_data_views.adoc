@@ -17,16 +17,13 @@
 Tags allow you to customize your view of cost data. You can view resources by type (for example, project, node, cluster) or tag or label in order to investigate why certain resources show an increase in cost, or when data looks abnormal.
 
 This example shows how to see how much each OpenShift project within a cluster is costing.
-//*(Question: what do we want to show here? Does this make sense and can we make it more specific?)*
-
-//Maybe, from COST-E-189 Aha: Being able to filter information that is inherited from higher level groups in the environment, like using tags in the project when filtering by pod
 
 
 
 .Prerequisites
 
-* Your OpenShift cluster added as a cost management data source. See https://access.redhat.com/documentation/en-us/openshift_container_platform/4.3/html/getting_started_with_cost_management/assembly_adding_sources_cost#assembly_adding_ocp_sources[Adding an OpenShift Container Platform source to cost management] in _Getting started with cost management_ for instructions.
-* Your cloud infrastructure account added as a cost management data source. See https://access.redhat.com/documentation/en-us/openshift_container_platform/4.3/html/getting_started_with_cost_management/assembly_adding_sources_cost[Adding sources to cost management] in _Getting started with cost management_ for instructions for your cloud provider type.
+* Your OpenShift cluster added as a cost management data source. See https://access.redhat.com/documentation/en-us/openshift_container_platform/4.4/html/getting_started_with_cost_management/assembly_adding_sources_cost#assembly_adding_ocp_sources[Adding an OpenShift Container Platform source to cost management] in _Getting started with cost management_ for instructions.
+* Your cloud infrastructure account added as a cost management data source. See https://access.redhat.com/documentation/en-us/openshift_container_platform/4.4/html/getting_started_with_cost_management/assembly_adding_sources_cost[Adding sources to cost management] in _Getting started with cost management_ for instructions for your cloud provider type.
 * Configure tags on your sources. For tips and configuration instructions, see xref:assembly_configuring_tags_sources[].
 
 .Procedure
@@ -34,7 +31,6 @@ This example shows how to see how much each OpenShift project within a cluster i
 . From the *OpenShift details* menu, click the filter button and select *Tag*.
 . In the *Choose key* dropdown list, select the key to filter by. For example, select _environment_ to view clusters with the _environment_ tag. Selecting a tag key reveals another dropdown to choose the value to filter by.
 . In the *Choose value* dropdown list, select one or more values to filter by. For example, select _qe_ and _dev_ to show cost data for OpenShift projects with these tags.
-//Is that right? How can this be more useful?
 . To view more information about each project:
 * Click the arrow icon for each resource to see more information such as the cluster(s) the resource belongs to, and CPU and memory usage, limits, and requests.
 * Click image:more-options.png[](*more options*) to reveal more viewing options:
@@ -44,8 +40,4 @@ This example shows how to see how much each OpenShift project within a cluster i
 . Click *Clear all filters* to reset your OpenShift details view.
 
 
-
-//.Additional resources
-
-//* A bulleted list of links to other material closely related to the contents of the procedure module.
 
