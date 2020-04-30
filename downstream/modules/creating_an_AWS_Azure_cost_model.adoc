@@ -17,12 +17,10 @@ Adding a markup to your _raw costs_ can allow you to account for your overhead c
 
 This example shows how to add a 10% markup to the information collected from the AWS Cost and Usage Reports. The same method can be used to apply a markup to your Azure costs.
 
-*QUESTIONS* Does creating the cost model for AWS automatically call everything an 'infrastructure cost'? Is this important to call out to users here? Will there be an option in the UI for the user to determine the cost type in an AWS cost model?
-
 .Prerequisites
 
-* A user with Cost Administrator or Cost Price List Administrator permissions. See https://access.redhat.com/documentation/en-us/openshift_container_platform/4.3/html/getting_started_with_cost_management/assembly_cost_limiting_access_rbac[Limiting access to cost management resources] for instructions on configuring user roles.
-* Your AWS account added to cost management as a data source. See https://access.redhat.com/documentation/en-us/openshift_container_platform/4.3/html/getting_started_with_cost_management/assembly_adding_sources_cost[Adding an Amazon Web Services (AWS) source to cost management] in _Getting started with cost management_ for instructions.
+* A user with Cost Administrator or Cost Price List Administrator permissions. See https://access.redhat.com/documentation/en-us/openshift_container_platform/4.4/html/getting_started_with_cost_management/assembly_cost_limiting_access_rbac[Limiting access to cost management resources] for instructions on configuring user roles.
+* Your AWS account added to cost management as a data source. See https://access.redhat.com/documentation/en-us/openshift_container_platform/4.4/html/getting_started_with_cost_management/assembly_adding_sources_cost[Adding an Amazon Web Services (AWS) source to cost management] in _Getting started with cost management_ for instructions.
 
 .Procedure
 
@@ -49,11 +47,11 @@ Your new cost model will appear in the list on the *Cost models* page.
 ** The number of sources assigned to the cost model
 ** The date the cost model was last modified
 +
-To see more information or edit a cost model: 
+* To see more information or edit a cost model: 
 +
-Click image:more-options.png[] (*more options*), then *View details* or *Delete* the cost model. From the *View details* option, you can edit the cost model, including source assignments, markup, and other settings.
+** From the *Cost models* summary page, click image:more-options.png[] (*more options*), then *View details* or *Delete* the cost model. From the *View details* option, you can edit the cost model, including source assignments, markup, and other settings.
 
-* Review your tags and tagging strategy to ensure that costs are being distributed to the correct resources, cost centers, or teams. See https://access.redhat.com/documentation/en-us/openshift_container_platform/4.3/html-single/managing_cost_data_using_tagging/index[_Using tagging to manage cost data_] for more information.
+* Review your tags and tagging strategy to ensure that costs are being distributed to the correct resources, cost centers, or teams. See https://access.redhat.com/documentation/en-us/openshift_container_platform/4.4/html-single/managing_cost_data_using_tagging/index[_Using tagging to manage cost data_] for more information.
 
 
 

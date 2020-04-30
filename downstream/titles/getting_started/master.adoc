@@ -13,7 +13,6 @@ include::attributes/cost.adoc[]
 
 :numbered:
 
-// Intro - is this here in master.adoc or in another assembly?
 
 include::assemblies/assembly_introduction_cost_management.adoc[leveloffset=+1]
 

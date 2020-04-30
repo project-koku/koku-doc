@@ -44,13 +44,13 @@ Wait an hour for the data to refresh and be visible in cost management.
 
 .Verification steps
 
-To view your tags, navigate to a resource in the OpenShift web console. Any assigned labels are listed under the *Labels* heading, for example: openshift.io/cluster-monitoring=true.
+To view your tags, navigate to a resource in the OpenShift web console. Any assigned labels are listed under the *Labels* heading, for example: _openshift.io/cluster-monitoring=true_.
 
 .Additional resources
 
-More information about creating OpenShift labels can be found here: 
+For more information about creating OpenShift labels, see https://access.redhat.com/documentation/en-us/openshift_container_platform/4.4/html-single/nodes/index#nodes-nodes-working-updating_nodes-nodes-working[Nodes] in the OpenShift Container Platform documentation.
 
-* https://docs.openshift.com/container-platform/4.3/nodes/nodes/nodes-nodes-working.html#nodes-nodes-working-updating_nodes-nodes-working
+
 
 
  
