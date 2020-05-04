@@ -22,16 +22,3 @@ Create a new storage account in Azure to contain the cost data and metrics that 
 Make a note of the resource group and storage account. They will be needed in subsequent steps.
 ====
 . In the cloud.redhat.com *Sources* wizard, enter the *Resource group name* and *Storage account name* and click *Next*.
-
-////
-NOTE: Commenting out for now as these steps aren't in the wizard (Feb 17, 2020)
-.. Enter the storage account name and resource group you just created.
-. In Azure Cloud Shell, run the following command to obtain your Subscription ID: 
-+
-----
-$ az account show --query "{subscription_id: id }"
-----
-+
-. In the cloud.redhat.com *Sources* wizard, enter your Subscription ID in the sources wizard and click *Next*.
-////
-
