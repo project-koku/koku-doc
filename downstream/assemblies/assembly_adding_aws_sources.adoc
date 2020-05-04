@@ -25,7 +25,6 @@ https://cloud.redhat.com/settings/sources/.
 ====
 As non-Red Hat products and documentation can change without notice, instructions for configuring the third-party sources provided in this guide are general and correct at the time of publishing. See the https://docs.aws.amazon.com/[AWS documentation] for the most up-to-date and accurate information.
 ====
-
 include::../modules/creating_an_aws_s3_bucket.adoc[]
 
 include::../modules/activating_aws_tags.adoc[]
