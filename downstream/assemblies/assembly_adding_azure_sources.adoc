@@ -17,7 +17,7 @@ This section describes how to configure your Microsoft Azure account to allow co
 Configuring your Azure account to be a cost management source requires:
 
 . Creating a storage account and resource group
-. Setting up an application and service principal for access
+. Configuring a Storage Account Contributor and Reader roles for access
 . Scheduling daily cost exports
 
 [NOTE]
@@ -31,7 +31,7 @@ https://cloud.redhat.com/settings/sources/.
 
 include::../modules/creating_an_azure_storage_account.adoc[]
 
-include::../modules/configuring_an_azure_service_principal.adoc[]
+include::../modules/configuring_azure_roles.adoc[]
 
 include::../modules/configuring_an_azure_daily_export_schedule.adoc[]
 
