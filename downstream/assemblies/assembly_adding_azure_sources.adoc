@@ -31,8 +31,6 @@ https://cloud.redhat.com/settings/sources/.
 
 include::../modules/creating_an_azure_storage_account.adoc[]
 
-//include::../modules/configuring_an_azure_service_principal.adoc[]
-
 include::../modules/configuring_azure_roles.adoc[]
 
 include::../modules/configuring_an_azure_daily_export_schedule.adoc[]
