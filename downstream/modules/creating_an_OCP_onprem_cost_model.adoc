@@ -12,7 +12,7 @@
 
 As metrics and inventory from OpenShift Container Platform sources do not have costs associated, you must create a cost model to associate a price to resources.
 
-This example shows an OpenShift cluster running on-premises, meaning that while your cluster is running on cloud infrastructure (for example, AWS or Azure) you are not managing the infrastructure yourself. The cloud infrastructure costs are seen in cost management as part of the cluster cost, so creating a cost model allows you to distribute the underlying infrastructure cost to OpenShift.
+This example shows an OpenShift cluster running on-premises, meaning that while your cluster is running on cloud infrastructure (for example, AWS or Azure), you are not managing the infrastructure yourself. The cloud infrastructure costs are seen in cost management as part of the cluster cost, so creating a cost model allows you to distribute the underlying infrastructure cost to OpenShift.
 
 Creating a cost model for an OpenShift source includes assigning prices for usage and requests, and applying a markup or discount to determine the total costs of your OpenShift infrastructure.
 
@@ -27,7 +27,7 @@ This example shows how to design and apply a cost model to your OpenShift on-pre
 
 .Prerequisites
 
-* A user with Cost Administrator or Cost Price List Administrator permissions. See https://access.redhat.com/documentation/en-us/openshift_container_platform/4.4/html/getting_started_with_cost_management/assembly_cost_limiting_access_rbac[Limiting access to cost management resources] for instructions on configuring user roles.
+* A user with Cost Administrator or Cost Price List Administrator permissions. See https://access.redhat.com/documentation/en-us/openshift_container_platform/4.4/html/getting_started_with_cost_management/assembly_limiting_access_cost_resources_rbac[Limiting access to cost management resources] in _Getting started with cost management_ for instructions on configuring user roles.
 * Your OpenShift cluster added as a cost management data source. See https://access.redhat.com/documentation/en-us/openshift_container_platform/4.4/html/getting_started_with_cost_management/assembly_adding_sources_cost#assembly_adding_ocp_sources[Adding an OpenShift Container Platform source to cost management] in _Getting started with cost management_ for instructions.
 
 .Procedure

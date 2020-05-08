@@ -17,10 +17,7 @@
 
 The AWS or Azure tag equivalent in OpenShift is a label, which also consists of a key:value pair. Cost management collects OpenShift tag data from pods and persistent volumes (or persistent volume claims) using Prometheus metrics and Operator Metering.
 
-One method of adding tags to OpenShift resources is to specify labels to add in a template. See https://docs.openshift.com/container-platform/4.3/openshift_images/using-templates.html#templates-cli-labels_using-templates[Using templates] in the OpenShift Container Platform documentation.
-
-//TODO [Need docs link how to do this]
-// Ask an OpenShift expert to review this -- that this is the best way for OCP 4.3?
+One method of adding tags to OpenShift resources is to specify labels to add in a template. See https://access.redhat.com/documentation/en-us/openshift_container_platform/4.4/html/images/using-templates[Using templates] in the OpenShift Container Platform documentation.
 
 Or to add labels manually:
 
@@ -50,8 +47,4 @@ To view your tags, navigate to a resource in the OpenShift web console. Any assi
 
 For more information about creating OpenShift labels, see https://access.redhat.com/documentation/en-us/openshift_container_platform/4.4/html-single/nodes/index#nodes-nodes-working-updating_nodes-nodes-working[Nodes] in the OpenShift Container Platform documentation.
 
-
-
-
- 
 
