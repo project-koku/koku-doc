@@ -1,6 +1,6 @@
 <title>Managing cost data using tagging</title>
 <productname>OpenShift Container Platform</productname>
-<productnumber>4.3</productnumber>
+<productnumber>.4.4</productnumber>
 <subtitle>Organize resources and allocate costs with tags</subtitle>
 <abstract>
     <para>This guide explains how tagging works in cost management, and outlines strategies for managing your cost data with tags and labels.</para>
