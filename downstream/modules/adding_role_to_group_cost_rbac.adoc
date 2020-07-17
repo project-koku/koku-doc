@@ -19,7 +19,7 @@ Add your role to a group to manage and limit the scope of information that users
 
 .Procedure
 
-. From cost management, click image::configuration-gear.png[] (*Settings*) to navigate to *User Access*.
+. From cost management, click image:configuration-gear.png[] (*Settings*) to navigate to *User Access*.
 . Click the *Groups* tab.
 . Click *Create group*.
 . In the *General information* screen, enter a name for the new group, and optionally, a description. Click *Next*.

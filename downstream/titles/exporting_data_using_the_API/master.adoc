@@ -1,5 +1,5 @@
 = Exporting cost data using the API
-:imagesdir: ../images
+:imagesdir: images
 :toc: left
 :toclevels: 3
 :numbered!:

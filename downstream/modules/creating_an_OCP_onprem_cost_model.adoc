@@ -72,7 +72,7 @@ Your new cost model will appear in the list on the *Cost models* page.
 +
 * To see more information or edit a cost model: 
 +
-** From the *Cost models* summary page, click image::more-options.png[] (*more options*), then *View details* or *Delete* the cost model. From the *View details* option, you can edit the cost model, including source assignments, markup, and other settings.
+** From the *Cost models* summary page, click image:more-options.png[] (*more options*), then *View details* or *Delete* the cost model. From the *View details* option, you can edit the cost model, including source assignments, markup, and other settings.
 
 * Review your tags and tagging strategy to ensure that costs are being distributed to the correct resources, cost centers, or teams. See https://access.redhat.com/documentation/en-us/openshift_container_platform/4.5/html-single/managing_cost_data_using_tagging/index[_Using tagging to manage cost data_] for more information.
 

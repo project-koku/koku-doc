@@ -25,7 +25,7 @@ To group your cost data by tag key, you must enable the tag keys in the cloud.re
 
 To enable OpenShift tag keys for grouping:
 
-. Click image::configuration-gear.png[] (*Settings*) to navigate to *Applications* > *Cost management*.
+. Click image:configuration-gear.png[] (*Settings*) to navigate to *Applications* > *Cost management*.
 . Click *OpenShift Tag Management*.
 . Select the keys you want to group by in the cost management application from the *Available Tag Keys* list, and use the arrows to move the tags to the *Enabled Tag Keys* list.
 . Click *Submit* to save your changes.
@@ -34,4 +34,4 @@ To enable OpenShift tag keys for grouping:
 
 The enabled tag keys will now be available to group costs by from the *OpenShift details* area of cost management, in the *Group cost by* list. For example:
 
-image::ocp-grouping-enabled.png[]
+image:ocp-grouping-enabled.png[]

@@ -39,7 +39,7 @@ This example shows how an educational course provider who is running a lab envir
 . To view more information about each resource, for example, how much course X has cost:
 * Click the arrow icon for each resource to see more information such as the cluster(s) the resource belongs to, and CPU and memory usage, limits, and requests.
 * Click *View Historical Data* to open the daily usage comparison view, which compares by month the usage, request, and limits per day for that resource.
-* Click image::more-options.png[](*more options*) to reveal more viewing options:
+* Click image:more-options.png[](*more options*) to reveal more viewing options:
 ** Click *View historical data* to open the daily usage comparison view, which compares usage, request, and limits by day between months for that resource.
 ** Click *Export data* to create a .csv file for for reporting. Specify a daily or monthly aggregate and click *Generate and download*.
 . Click *Clear all filters* to reset your OpenShift details view.
