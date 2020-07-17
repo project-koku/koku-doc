@@ -1,5 +1,5 @@
 = Getting started with cost management
-:imagesdir: images
+:imagesdir: ../images
 :toc: left
 :toclevels: 3
 :numbered!:

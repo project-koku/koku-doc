@@ -23,7 +23,7 @@ Create a new role to manage and limit the scope of information that users can se
 
 .Procedure
 
-. From cost management, click image:configuration-gear.png[] (*Settings*) to navigate to *User Access*.
+. From cost management, click image::configuration-gear.png[] (*Settings*) to navigate to *User Access*.
 . Click the *Roles* tab.
 . Click *Create Role* to open the *Add role* wizard.
 . In the *Name and Description* screen, enter a name for the new role, and optionally, a description. Click *Next*.

@@ -22,8 +22,8 @@ This example shows how to see how much each OpenShift project within a cluster i
 
 .Prerequisites
 
-* Your OpenShift cluster added as a cost management data source. See https://access.redhat.com/documentation/en-us/openshift_container_platform/4.4/html/getting_started_with_cost_management/assembly_adding_sources_cost#assembly_adding_ocp_sources[Adding an OpenShift Container Platform source to cost management] in _Getting started with cost management_ for instructions.
-* Your cloud infrastructure account added as a cost management data source. See https://access.redhat.com/documentation/en-us/openshift_container_platform/4.4/html/getting_started_with_cost_management/assembly_adding_sources_cost[Adding sources to cost management] in _Getting started with cost management_ for instructions for your cloud provider type.
+* Your OpenShift cluster added as a cost management data source. See https://access.redhat.com/documentation/en-us/openshift_container_platform/4.5/html/getting_started_with_cost_management/assembly_adding_sources_cost#assembly_adding_ocp_sources[Adding an OpenShift Container Platform source to cost management] in _Getting started with cost management_ for instructions.
+* Your cloud infrastructure account added as a cost management data source. See https://access.redhat.com/documentation/en-us/openshift_container_platform/4.5/html/getting_started_with_cost_management/assembly_adding_sources_cost[Adding sources to cost management] in _Getting started with cost management_ for instructions for your cloud provider type.
 * Configure tags on your sources. For tips and configuration instructions, see xref:assembly_configuring_tags_sources[].
 
 .Procedure
@@ -33,7 +33,7 @@ This example shows how to see how much each OpenShift project within a cluster i
 . In the *Choose value* dropdown list, select one or more values to filter by. For example, select _qe_ and _dev_ to show cost data for OpenShift projects with these tags.
 . To view more information about each project:
 * Click the arrow icon for each resource to see more information such as the cluster(s) the resource belongs to, and CPU and memory usage, limits, and requests.
-* Click image:more-options.png[](*more options*) to reveal more viewing options:
+* Click image::more-options.png[](*more options*) to reveal more viewing options:
 ** Click *View price lists* to see rates applied to the OpenShift metrics to calculate the costs.
 ** Click *View historical data* to open the daily usage comparison view, which compares usage, request, and limits by day between months for that resource.
 ** Click *View all projects* or *View all tags* to see related resources and metadata.
