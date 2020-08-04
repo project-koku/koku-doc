@@ -46,7 +46,7 @@ After adding your sources to cost management:
 
 [NOTE]
 ====
-See the https://access.redhat.com/documentation/en-us/openshift_container_platform/4.4/html-single/getting_started_with_cost_management/index[_Getting started with cost management_] guide for instructions on configuring sources.
+See the https://access.redhat.com/documentation/en-us/openshift_container_platform/4.5/html-single/getting_started_with_cost_management/index[_Getting started with cost management_] guide for instructions on configuring sources.
 ====
 
 include::../modules/con_how_cost_associates_tags.adoc[leveloffset=+1]
