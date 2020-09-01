@@ -33,6 +33,7 @@ Create a new role to manage and limit the scope of information that users can se
 .. For *Resource type*, specify the resource this permission will be used to access from the following list:
 +
 - _aws.account_
+- _aws.organizational_unit_
 - _azure.subscription_guid_
 - _openshift.cluster_
 - _openshift.node_
@@ -48,7 +49,7 @@ For example, to create a role with read-only permissions to AWS account data, se
 * *Operation*: _equal_
 ** Use _equal_ if you know the exact value, or _list_ to see a list of values that will work for this role.
 * *Value*: Your AWS account number or account alias.
-** This is specific to the resource defined in the *Key* field. Examples include the AWS account ID or alias, Azure subscription ID, OpenShift cluster ID, OpenShift node name, or OpenShift project name. 
+** This is specific to the resource defined in the *Key* field. Examples include the AWS account ID or alias, Azure subscription ID, OpenShift cluster ID, OpenShift node name, or OpenShift project name.
 +
 You can also enter *** in this field as a wildcard to create a role that matches everything of the resource type defined in *Key*.
 . Add more resource definitions if desired and click *Next* when finished.
@@ -59,5 +60,3 @@ Your new role will be listed in the *Roles* tab on the *User Access Management* 
 .Next steps
 
 * Add this role to a group to provide the role with access to resources.
-
-
