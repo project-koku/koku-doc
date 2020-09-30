@@ -1,10 +1,11 @@
 // Module included in the following assemblies:
 // assembly_adding_ocp_sources.adoc
+// 2020 09 30 updated for COST-536, ARO requires basic_auth_creds
 [id="configuring_cost_mgmt-operator"]
 [[configuring_cost_mgmt-operator]]
 == Configuring the Cost Management Operator
 
-The Cost Management Operator (`cost-mgmt-operator`) collects the metrics required for cost management.    
+The Cost Management Operator (`cost-mgmt-operator`) collects the metrics required for cost management.
 
 After installing the Cost Management Operator, configure authentication and the `operator-metering` namespace, then configure the Cost Management Operator.
 
@@ -16,11 +17,16 @@ After installing the Cost Management Operator, configure authentication and the 
 
 .Procedure
 
-. Configure authentication inside the `openshift-metering` project. This allows you to upload OpenShift data to cloud.redhat.com. 
+. Configure authentication inside the `openshift-metering` project. This allows you to upload OpenShift data to cloud.redhat.com.
 +
 [NOTE]
 ====
-You can use token authentication or basic authentication to upload the usage reports (metrics) to cost management. The default and recommended method is token authentication.
+For most installations you can use token authentication or basic authentication to upload the usage reports (metrics) to cost management. Except for Azure RedHat OpenShift installation, the default and recommended method is token authentication.
+====
++
+[NOTE]
+====
+If you are performing an Azure RedHat OpenShift installation managed by Azure, you must use basic authentication. Token authentication is not supported for Azure-managed installations.
 ====
 +
 .. Copy the following into a file called `auth_secret.yaml`:
@@ -101,13 +107,13 @@ spec:
 +
 .. Edit the following values in your `cost-mgmt-resource.yaml` file:
 +
-* The `clusterID` value to your cluster ID. Obtain your cluster ID by running: 
+* The `clusterID` value to your cluster ID. Obtain your cluster ID by running:
 +
 ----
 $ oc get clusterversion -o jsonpath='{.items[].spec.clusterID}{"\n"}'
 ----
 +
-* The `reporting_operator_token_name` to the `reporting-operator-token` secret name inside the `openshift-metering` namespace. Obtain this by running: 
+* The `reporting_operator_token_name` to the `reporting-operator-token` secret name inside the `openshift-metering` namespace. Obtain this by running:
 +
 ----
 $ oc get secret -n openshift-metering | grep reporting-operator-token
@@ -156,6 +162,3 @@ The cluster identifier can be found in *Help* > *About* in OpenShift.
 .Additional resources
 
 * See https://access.redhat.com/documentation/en-us/openshift_container_platform/4.5/html-single/operators/olm-understanding-operatorhub[Operators] in the OpenShift documentation for more information about Operators and OperatorHub
-
-
-
