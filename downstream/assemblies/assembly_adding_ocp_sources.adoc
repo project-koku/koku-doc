@@ -3,6 +3,11 @@
 
 To add an OpenShift Container Platform cluster as a source to cost management, you must first configure your cluster to provide usage data (metrics) using the Cost Management Operator.
 
+[NOTE]
+====
+You must have a Red Hat account user with Organization Administrator entitlements before you can add sources to cost management.
+====
+
 The Cost Management Operator (`cost-mgmt-operator`) collects the metrics required for cost management by:
 
 * Using Operator Metering to create usage reports specific to cost management.

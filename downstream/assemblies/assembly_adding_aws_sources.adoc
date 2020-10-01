@@ -4,7 +4,12 @@
 
 To add an AWS account to cost management, you must configure your AWS account to provide metrics, then add your AWS account as a source from the cost management user interface.
 
-This creates a read-only connection to AWS in order to collect cost information hourly in cost management, but does not make any changes to the AWS account.
+[NOTE]
+====
+You must have a Red Hat account user with Organization Administrator entitlements before you can add sources to cost management.
+====
+
+When you add your AWS account as a source, this creates a read-only connection to AWS in order to collect cost information hourly in cost management, but does not make any changes to the AWS account.
 
 [IMPORTANT]
 ====
