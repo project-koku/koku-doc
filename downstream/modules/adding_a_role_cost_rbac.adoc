@@ -39,17 +39,19 @@ Create a new role to manage and limit the scope of information that users can se
 - _openshift.node_
 - _openshift.project_
 +
+NOTE:: When you add an AWS organizational unit as a *Resource Type*, any user who has access to the parent node also has access to all children and sub-children of the parent node.
+
 .. For *Permission*, specify _read_ as all cost resource data is read-only.
 +
 For example, to create a role with read-only permissions to AWS account data, set _aws.account_ as the *Resource type* and _read_ as the *Permission*. In the next step, you can specify the AWS account to apply this role to.
 +
 . In the *Resource definitions* screen, you can provide more details about the resources the permission will be used for. For example, to grant this role access to a specific AWS account, enter the following and click *Add to definitions*:
 * *Key*: _aws.account_
-** Options for *Key* are: _aws.account_, _azure.subscription_guid_, _openshift.cluster_, _openshift.node_, _openshift.project_
+** Options for *Key* are: _aws.account_, _aws.organizational_unit_,  _azure.subscription_guid_, _openshift.cluster_, _openshift.node_, _openshift.project_
 * *Operation*: _equal_
 ** Use _equal_ if you know the exact value, or _list_ to see a list of values that will work for this role.
 * *Value*: Your AWS account number or account alias.
-** This is specific to the resource defined in the *Key* field. Examples include the AWS account ID or alias, Azure subscription ID, OpenShift cluster ID, OpenShift node name, or OpenShift project name.
+** This is specific to the resource defined in the *Key* field. Examples include the AWS account ID or alias, AWS organizational unit, Azure subscription ID, OpenShift cluster ID, OpenShift node name, or OpenShift project name.
 +
 You can also enter *** in this field as a wildcard to create a role that matches everything of the resource type defined in *Key*.
 . Add more resource definitions if desired and click *Next* when finished.
