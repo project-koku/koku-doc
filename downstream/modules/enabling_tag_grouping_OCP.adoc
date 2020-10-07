@@ -33,6 +33,6 @@ To enable OpenShift tag keys for grouping:
 
 .Verification steps
 
-The enabled tag keys will now be available to group costs by from the *OpenShift details* area of cost management, in the *Group cost by* list. For example:
+The enabled tag keys will now be available to group costs by from the *OpenShift details* area of cost management, in the *View by* list. For example, when you choose *View by: Tag*:
 
-image:ocp-grouping-enabled.png[]
+image:cost-tag-key.png[]

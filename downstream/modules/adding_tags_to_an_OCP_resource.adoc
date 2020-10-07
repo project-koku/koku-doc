@@ -10,13 +10,17 @@
 // The ID is used as an anchor for linking to the module. Avoid changing it after the module has been published to ensure existing links are not broken.
 [id="adding_labels_to_an_OCP_namespace"]
 // The `context` attribute enables module reuse. Every module's ID includes {context}, which ensures that the module has a unique ID even if it is reused multiple times in a guide.
-= Adding labels to an OpenShift namespace
+= Viewing labels in an OpenShift namespace
 // Start the title of a procedure module with a verb, such as Creating or Create. See also _Wording of headings_ in _The IBM Style Guide_.
 
 // This paragraph is the procedure module introduction: a short description of the procedure.
 
-The AWS or Azure tag equivalent in OpenShift is a label, which also consists of a key:value pair. Cost management collects OpenShift tag data from pods and persistent volumes (or persistent volume claims) using Prometheus metrics and Operator Metering.
+The AWS or Azure tag equivalent in OpenShift is a label, which also consists of a key:value pair. Cost management collects OpenShift tag data from nodes, pods, and persistent volumes (or persistent volume claims) using Prometheus metrics and Operator Metering.
 
+// COST-571, only the collected tags are available. User cannot add more tags/labels. We do not want users adding tags using the OCP templates, which is why we struck that information. For the future, we are planning on supporting the namespace labels (part being removed) once the operator rework is done. So come next January we will likely be adding this section back.
+//Module title changed to "Viewing" because users cannot add. Change back to "Adding" when that capability is restored.
+
+////
 One method of adding tags to OpenShift resources is to specify labels to add in a template. See https://access.redhat.com/documentation/en-us/openshift_container_platform/4.5/html/images/using-templates[Using templates] in the OpenShift Container Platform documentation.
 
 Or to add labels manually:
@@ -36,15 +40,16 @@ To add a label to a namespace in OpenShift:
 /path/to/ocp_usage.sh –collect
 ----
 
-Wait an hour for the data to refresh and be visible in cost management. 
+Wait an hour for the data to refresh and be visible in cost management.
 
+////
 
-.Verification steps
+//.Verification steps
 
-To view your tags, navigate to a resource in the OpenShift web console. Any assigned labels are listed under the *Labels* heading, for example: _openshift.io/cluster-monitoring=true_.
+To view the available tags, navigate to a resource in the OpenShift web console. Any assigned labels are listed under the *Labels* heading, for example: _openshift.io/cluster-monitoring=true_.
 
+////
 .Additional resources
 
 For more information about creating OpenShift labels, see https://access.redhat.com/documentation/en-us/openshift_container_platform/4.5/html-single/nodes/index#nodes-nodes-working-updating_nodes-nodes-working[Nodes] in the OpenShift Container Platform documentation.
-
-
+////
