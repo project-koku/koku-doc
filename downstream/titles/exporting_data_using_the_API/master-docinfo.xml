@@ -1,6 +1,6 @@
 <title>Exporting cost data using the API</title>
 <productname>OpenShift Container Platform</productname>
-<productnumber>4.5</productnumber>
+<productnumber>4.6</productnumber>
 <subtitle>Using the data export request API</subtitle>
 <abstract>
    <para>This guide provides instructions for using the data export API to obtain cost data for reporting.</para>

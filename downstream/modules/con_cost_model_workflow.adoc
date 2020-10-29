@@ -30,6 +30,6 @@ image:../images/costmodel-workflow.png[]
 
 [NOTE]
 ====
-For more information about configuring tagging for cost management, see https://access.redhat.com/documentation/en-us/openshift_container_platform/4.5/html-single/managing_cost_data_using_tagging/index[_Using tagging to manage cost data_]. 
+For more information about configuring tagging for cost management, see https://access.redhat.com/documentation/en-us/openshift_container_platform/4.6/html-single/managing_cost_data_using_tagging/index[_Using tagging to manage cost data_]. 
 ====
 

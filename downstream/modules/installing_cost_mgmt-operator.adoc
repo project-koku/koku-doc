@@ -10,7 +10,7 @@ Begin adding your OpenShift Container Platform cluster as a source to cost manag
 
 [NOTE]
 ====
-See https://access.redhat.com/documentation/en-us/openshift_container_platform/4.5/html-single/operators/olm-understanding-operatorhub[Operators] in the OpenShift documentation for more information about Operators and OperatorHub.
+See https://access.redhat.com/documentation/en-us/openshift_container_platform/4.6/html-single/operators/olm-understanding-operatorhub[Operators] in the OpenShift documentation for more information about Operators and OperatorHub.
 ====
 
 .Prerequisites
@@ -31,10 +31,10 @@ See https://access.redhat.com/documentation/en-us/openshift_container_platform/4
 You must install the Cost Management Operator in the `openshift-metering` namespace. Other namespaces are not supported for installation.
 ====
 +
-See https://access.redhat.com/documentation/en-us/openshift_container_platform/4.5/html/operators/olm-adding-operators-to-a-cluster[Adding operators to a cluster] in the OpenShift documentation for instructions for installing an Operator.
+See https://access.redhat.com/documentation/en-us/openshift_container_platform/4.6/html/operators/olm-adding-operators-to-a-cluster[Adding operators to a cluster] in the OpenShift documentation for instructions for installing an Operator.
 
 
 .Additional resources
 
-* See https://access.redhat.com/documentation/en-us/openshift_container_platform/4.5/html-single/metering/index[Metering] in the OpenShift documentation for more information about installing Metering.
+* See https://access.redhat.com/documentation/en-us/openshift_container_platform/4.6/html-single/metering/index[Metering] in the OpenShift documentation for more information about installing Metering.
 
