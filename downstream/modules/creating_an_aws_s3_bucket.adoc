@@ -13,7 +13,7 @@ Log into your AWS master account to begin configuring cost and usage reporting:
 +
 * Report name: _<any-name>_ (note this name as you will use it later)
 * Additional report details: Include resource IDs
-* S3 bucket: <the S3 bucket you configured previously>
+* S3 bucket: _<the S3 bucket you configured previously>_
 * Time granularity: Hourly
 * Enable report data integration for: Amazon Redshift, Amazon QuickSight (do not enable report data integration for Amazon Athena)
 * Compression type: GZIP
