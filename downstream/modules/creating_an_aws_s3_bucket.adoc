@@ -11,15 +11,13 @@ Log into your AWS master account to begin configuring cost and usage reporting:
 . In the AWS S3 console, create a new S3 bucket or use an existing bucket. If you are configuring a new S3 bucket, accept the default settings.
 . In the AWS Billing console, create a Cost and Usage Report that will be delivered to your S3 bucket. Specify the following values (and accept the defaults for any other values):
 +
-----
-Report name: _<any-name>_ (note this name as you will use it later)
-Additional report details: Include resource IDs
-S3 bucket: <the S3 bucket you configured previously>
-Time granularity: Hourly
-Enable report data integration for: Amazon Redshift, Amazon QuickSight (do not enable report data integration for Amazon Athena)
-Compression type: GZIP
-Report path prefix: (leave blank)
-----
+* Report name: _<any-name>_ (note this name as you will use it later)
+* Additional report details: Include resource IDs
+* S3 bucket: _<the S3 bucket you configured previously>_
+* Time granularity: Hourly
+* Enable report data integration for: Amazon Redshift, Amazon QuickSight (do not enable report data integration for Amazon Athena)
+* Compression type: GZIP
+* Report path prefix: cost
 +
 [NOTE]
 ====
