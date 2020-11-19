@@ -1,6 +1,6 @@
 <title>Using cost models</title>
-<productname>OpenShift Container Platform</productname>
-<productnumber>4.5</productnumber>
+<productname>Cost Management Service</productname>
+<productnumber>2020-10</productnumber>
 <subtitle>Configuring cost models to reflect your cloud costs</subtitle>
 <abstract>
     <para>This guide explains the cost model feature, configuration and related terminology.</para>
