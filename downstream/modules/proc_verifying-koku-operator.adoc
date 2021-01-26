@@ -1,0 +1,40 @@
+
+[id="proc_verifying-koku-operator"]
+= Verifying `koku-metrics-operator`
+
+View the Koku configuration YAML file to verify the cost management operator is functioning.
+
+.Prerequisites
+* You can access the OpenShift Container Platform web console.
+* You can locate and view the *Installed Operators* tab.
+
+.Procedure
+
+. Click on the *Installed Operators* tab.
+. In the list of installed operators, click on the *Koku Metrics Operator* entry.
+. When the metrics operator window opens, click on the *KokuMetricsConfig* tab to view the YAML file.
+. Visually check the following items.
+.. Prometheus configuration and connection are `true`.
++
+----
+  prometheus:
+    last_query_start_time: '2021-01-25T20:59:06Z'
+    last_query_success_time: '2021-01-25T20:59:06Z'
+    prometheus_configured: true
+    prometheus_connected: true
+    service_address: 'https://thanos-querier.openshift-monitoring.svc:9091'
+    skip_tls_verification: false
+----
+.. Upload information shows the ingress path, successful upload and time, and accepted status.
++
+----
+ upload:
+    ingress_path: /api/ingress/v1/upload
+    last_successful_upload_time: '2021-01-25T20:59:35Z'
+    last_upload_status: 202 Accepted
+    last_upload_time: '2021-01-25T20:59:35Z'
+    upload: true
+    upload_cycle: 360
+    upload_wait: 28
+    validate_cert: true
+----

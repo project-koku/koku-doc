@@ -1,0 +1,29 @@
+
+[id="proc_basic-authentication"]
+= Configuring basic authentication for cost operator
+
+You can configure the cost operator to use basic authentication. By default, the cost operator uses token authentication.
+
+.Prerequisites
+.Prerequisites
+* You are logged into the OCP web console with cluster administrator privileges.
+* The *Koku Metrics Operator* appears in the *Installed Operators* tab.
+
+.Procedure
+. . Under the *Name* heading in the list of installed operators, click the *KokuMetricsOperator* link. The *Installed Operators > Operator Details* window appears for *Koku Metrics Operator*.
+. Click the *YAML view* radio button to view and modify the contents of the YAML configuration file.
+. Locate the following lines in the YAML view.
++
+----
+  authentication:
+    type: token
+----
+. Change `type: token` to `type: basic` and insert a new line for the secret name.
++
+.Example
+----
+  authentication:
+    secret_name: cost_basic
+    type: basic
+----
+. [[CONFIRM STEPS WHEN SYSTEM IS BACK UP]]
