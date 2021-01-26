@@ -83,6 +83,7 @@ IMPORTANT: If you are upgrading to the *Koku Metrics Operator* from a previous c
 The `create_source: false` does not change because you are matching an existing source, not creating a new source.
 . Click the *Create* button. No further actions are needed to configure the operator instance.
 
+[id="removing-a-cost-operator"]
 = Removing a prior cost operator
 
 After upgrading to the *Koku Metrics Operator*, remove the prior `cost-mgt-operator` operator.
