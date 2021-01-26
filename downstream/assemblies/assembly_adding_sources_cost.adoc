@@ -10,7 +10,9 @@
 
 To use cost management to monitor your cloud costs, you must first connect a data source to the cost management application.
 
-Currently, cost management can track costs for Amazon Web Services (AWS), Microsoft Azure, and Red Hat OpenShift Container Platform sources.
+Currently, cost management can track costs for Red Hat OpenShift Container Platform, Amazon Web Services (AWS), and Microsoft Azure  sources.
+
+
 
 
 ////
@@ -24,11 +26,8 @@ Adding a source
 ////
 
 
+include::assembly_adding_ocp_sources.adoc[leveloffset=+1]
+
 include::assembly_adding_aws_sources.adoc[leveloffset=+1]
 
 include::assembly_adding_azure_sources.adoc[leveloffset=+1]
-
-include::assembly_adding_ocp_sources.adoc[leveloffset=+1]
-
-
-
