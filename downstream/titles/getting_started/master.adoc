@@ -18,7 +18,7 @@ include::assemblies/assembly_introduction_cost_management.adoc[leveloffset=+1]
 
 include::assemblies/assembly_limiting_access_cost_resources_rbac.adoc[leveloffset=+1]
 
-include::/assemblies/assembly_koku_cost_management_installing.adoc[leveloffset=+1]
+include::assemblies/assembly_koku_cost_management_installing.adoc[leveloffset=+1]
 
 include::assemblies/assembly_adding_sources_cost.adoc[leveloffset=+1]
 
