@@ -17,7 +17,7 @@ ifdef::context[:parent-context: {context}]
 // If the assembly is reused in other assemblies in a guide, include {context} in the ID: [id="a-collection-of-modules_{context}"].
 = Adding sources to cost management for OpenShift Container Platform 4.5
 //If the assembly covers a task, start the title with a verb in the gerund form, such as Creating or Configuring.
-To support cost management in Red{nbsp}Hat OpenShift Container Platform 4.5, a new community cost operator is introduced, `koku-metrics-operator`.
+To support cost management in Red{nbsp}Hat OpenShift Container Platform 4.5 and more recent versions, a new community operator is introduced, `koku-metrics-operator`.
 
 The community `cost-mgt-operator` supported in OCP 4.3 and OCP 4.4 is deprecated. Though this cost operator functions with cost management in OCP 4.5, it is no longer supported.
 
