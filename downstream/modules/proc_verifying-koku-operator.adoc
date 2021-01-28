@@ -12,8 +12,9 @@ View the Koku configuration YAML file to verify the cost management operator is 
 
 . Click on the *Installed Operators* tab.
 . In the list of installed operators, click on the *Koku Metrics Operator* entry.
-. When the metrics operator window opens, click on the *KokuMetricsConfig* tab to view the YAML file.
-. Visually check the following items.
+. When the metrics operator window opens, click on the *KokuMetricsConfig* tab to show a list of the configuration file names.
+. In the name list, click on the configuration file. In the default installation, the file name is `kokumetricscfg-sample`.
+. When the Details window opens, click on the *YAML* tab. and visually check the following items.
 .. Prometheus configuration and connection are `true`.
 +
 ----

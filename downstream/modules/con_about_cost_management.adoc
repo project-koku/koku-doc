@@ -13,15 +13,15 @@
 = About cost management
 //In the title of concept modules, include nouns or noun phrases that are used in the body text. This helps readers and search engines find the information quickly.
 //Do not start the title of concept modules with a verb. See also _Wording of headings_ in _The IBM Style Guide_.
-  
+
 Cost management is an OpenShift Container Platform service that enables you to better understand and track costs for clouds and containers. It is based on the upstream project Koku.
 
-You can access the cost management application from https://cloud.redhat.com/cost-management/. 
+You can access the cost management application from https://cloud.redhat.com/cost-management/.
 
 Cost management allows you to simplify management of resources and costs across various environments, including:
 
-* Public clouds such as Amazon Web Services (AWS) and Microsoft Azure
 * Container platforms such as OpenShift Container Platform
+* Public clouds such as Amazon Web Services (AWS) and Microsoft Azure
 
 
 The cost management application allows you to:
@@ -37,13 +37,10 @@ The cost management application allows you to:
 == Terminology
 
 Source::
-A cloud provider account that is connected to cost management to be monitored, for example, an AWS or Azure account, or an OpenShift Container Platform deployment.
+A cloud provider account that is connected to cost management to be monitored, for example, an OpenShift Container Platform deployment, or an AWS or Azure account.
 
-Organization Administrator:: 
+Organization Administrator::
 
 The highest permission level for Red Hat accounts, with full access to content and features. This is the only role that can manage users and control their access and permissions on an account. An account may have multiple Organization Administrators.
 
 See https://access.redhat.com/articles/1757953[Roles and Permissions for Red Hat Subscription Management] for more details.
-
-
-

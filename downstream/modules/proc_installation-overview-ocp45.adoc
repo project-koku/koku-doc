@@ -12,14 +12,14 @@
 // The `context` attribute enables module reuse. Every module's ID includes {context}, which ensures that the module has a unique ID even if it is reused multiple times in a guide.
 = Installation tasks summary
 
-Whether you are upgrading from a prior cost management operator to the Koku metrics operator or installing it for the first time, the basic tasks are the same.
+Whether you are replacing a prior cost management operator with the Koku metrics operator or installing it for the first time, the basic tasks are the same.
 
-Cost management installation, configuration, and source management can all be performed from the OCP web console.
+Operator installation, configuration, and source management can all be performed from the OCP web console.
 
-You will perform the following tasks to install the `koku-metrics-operator` cost management operator and begin using the cost management application in OCP 4.5 or later.
+You will perform the following tasks to install the `koku-metrics-operator` and begin using the cost management application in OCP 4.5 or later.
 
 
-NOTE: To install and configure cost management from the OCP web console, you must use an account with cluster administrator privileges.
+NOTE: To install and configure `koku-metrics-operator` from the OCP web console, you must use an account with cluster administrator privileges.
 
 .Prerequisites
 - The OCP 4.5 cluster is installed.
@@ -28,8 +28,7 @@ NOTE: To install and configure cost management from the OCP web console, you mus
 .Task summary
 * Install the Koku metrics operator (`koku-metrics-operator`) and use the default token authentication.
 * Create a KokuMetricsConfig YAML file that configures `koku-metrics-operator`.
-* Create a cost metrics source with a new installation, or confirm an existing source with an upgrade installation.
-* Deploy the new cost operator source, if needed.
-* After upgrading to the Koku metrics operator, delete the old cost operator. This task is not required in a new cost management installation.
+* Create a cost management OCP source with a new installation, or confirm an existing source with an replacement installation.
+* After installing the Koku metrics operator, delete the old cost operator. This task is required only when the `cost-mgt-operator` was previously installed.
 
 If you use Basic authentication, additional steps are required to configure the Secret that holds username and password credentials.
