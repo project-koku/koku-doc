@@ -19,7 +19,7 @@ Operator installation, configuration, and source management can all be performed
 You will perform the following tasks to install the `koku-metrics-operator` and begin using the cost management application in OCP 4.5 or later.
 
 
-NOTE: To install and configure `koku-metrics-operator` for cost management from the OCP web console, you must use an account with cluster administrator privileges.
+NOTE: To install and configure `koku-metrics-operator` from the OCP web console, you must use an account with cluster administrator privileges.
 
 .Prerequisites
 - The OCP 4.5 cluster is installed.
