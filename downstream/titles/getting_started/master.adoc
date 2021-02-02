@@ -18,9 +18,22 @@ include::assemblies/assembly_introduction_cost_management.adoc[leveloffset=+1]
 
 include::assemblies/assembly_limiting_access_cost_resources_rbac.adoc[leveloffset=+1]
 
-include::assemblies/assembly_koku_cost_management_installing.adoc[leveloffset=+1]
+include::assemblies/assembly-adding-openshift-container-platform-source.adoc[leveloffset=+1]
 
-include::assemblies/assembly_adding_sources_cost.adoc[leveloffset=+1]
+//include::assemblies/assembly-adding-cost-operator-on-restricted-network.adoc[leveloffset=+1]
+
+//This assembly is about the deprecated operator -now another title
+//include::assemblies/assembly_adding_ocp_sources.adoc[leveloffset=+1]
+
+include::assemblies/assembly_adding_aws_sources.adoc[leveloffset=+1]
+
+include::assemblies/assembly_adding_azure_sources.adoc[leveloffset=+1]
+
+//Old chapter assembly
+//include::assemblies/assembly_adding_sources_cost.adoc[leveloffset=+1]
+
+
+
 
 //new assembly for cost metric on a restricted network
 //include::assemblies/assembly-adding-cost-operator-on-restricted-network.adoc[leveloffset=+1]

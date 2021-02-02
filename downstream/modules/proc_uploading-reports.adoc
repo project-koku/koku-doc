@@ -2,3 +2,46 @@
 = Uploading reports to cloud.redhat.com
 
 Workstation with unrestricted network access
+=======
+// Module included in the following assemblies:
+//
+// <List assemblies here, each on a new line>
+
+
+
+[id="proc_uploading-reports_{context}"]
+= Uploading cost reports to cloud.redhat.com
+
+[role="_abstract"]
+Locally stored cost reports from a restricted network must be manually uploaded to cloud.redhat.com.
+
+[NOTE]
+====
+The default configuration saves one week of reports. Therefore, reports should be downloaded locally and upload to cloud.redhat.com weekly to prevent loss of metrics data.
+====
+
+.Prerequisites
+
+* `koku-metrics-operator` reports downloaded locally.
+* Source created on cloud.redhat.com, see section 3.8.
+* Red Hat account user with Organization Administrator entitlements.
+* Workstation with unrestricted network access
+
+.Procedure
+
+* Use this cURL command to upload your reports to link:https://cloud.redhat.com[cloud.redhat.com].
++
+[source,bash]
+----
+$ curl -vvvv -F "file=@FILE_NAME.tar.gz;type=application/vnd.redhat.hccm.tar+tgz"  https://cloud.redhat.com/api/ingress/v1/upload -u USERNAME:PASS
+----
+Where `USERNAME` and `PASS` are the username and password for link:https://cloud.redhat.com[cloud.redhat.com], and `FILE_NAME` is the name of the report to upload.
+
+
+.Verification steps
+
+. Go to link:https://cloud.redhat.com/cost-management/[cloud.redhat.com/cost-management].
+
+. Click on *OpenShift*.
+
+. Verify you have the correct cost reports for your cluster.

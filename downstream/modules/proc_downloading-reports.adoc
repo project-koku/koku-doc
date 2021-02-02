@@ -2,3 +2,80 @@
 = Downloading reports
 
 TBD
+=======
+// Module included in the following assemblies:
+//
+// <List assemblies here, each on a new line>
+
+[id="proc_downloading-reports_{context}"]
+= Downloading your reports
+
+
+[role="_abstract"]
+If the `koku-metrics-operator` is configured to run in a restricted network, the reports must be copied from the PVC where they are temporarily stored to a workstation with unrestricted network access for upload to cloud.redhat.com.
+
+[NOTE]
+====
+The default configuration saves one week of reports. Therefore, reports should be downloaded locally and uploaded to cloud.redhat.com weekly to prevent loss of metrics data.
+====
+
+.Prerequisites
+
+* Workstation with unrestricted network access.
+* `koku-metrics-operator` reports in your PVC.
+
+.Procedure
+
+. Create the following Pod.
++
+[source,bash]
+----
+kind: Pod
+apiVersion: v1
+metadata:
+  name: volume-shell
+  namespace: koku-metrics-operator
+spec:
+  volumes:
+  - name: koku-metrics-operator-reports
+    persistentVolumeClaim:
+      claimName: koku-metrics-operator-data
+  containers:
+  - name: volume-shell
+    image: busybox
+    command: ['sleep', '3600']
+    volumeMounts:
+    - name: koku-metrics-operator-reports
+      mountPath: /tmp/koku-metrics-operator-reports
+----
++
+Where `claimName` matches the PVC containing the report data
+
+. Use `rsync` to copy all of the files from the PVC to a local folder.
++
+[source,bash]
+----
+$ oc rsync volume-shell:/tmp/koku-metrics-operator-reports/upload local/path/to/save/folder
+----
+
+. Confirm that the files have been copied.
+
+. Connect to the pod via remote shell and delete the contents of the upload folder.
++
+[source,bash]
+----
+$ oc rsh volume-shell
+$ rm /tmp/koku-metrics-operator-reports/upload/*
+----
+
+. (Optional) Delete the pod that was used to connect to the PVC.
++
+[source,bash]
+----
+$ oc delete -f volume-shell.yaml
+----
+
+[role="_additional-resources"]
+.Additional resources
+
+* For more information on Persistent Volume Claims, see link:https://docs.openshift.com/container-platform/4.6/storage/understanding-persistent-storage.html[Understanding persistent storage].
