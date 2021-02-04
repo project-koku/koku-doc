@@ -1,0 +1,12 @@
+[id="proc_configuring-a-metrics-operator-on-a-restricted-network"]
+= Configuring a metrics operator on a restricted network
+
+(This is for koku-metrics-operator)
+	Prerequisites
+		Openshift 4.4+
+		Koku Cost operator installed
+
+////
+Authenticating token access or basic access
+Creating a configuration file
+////

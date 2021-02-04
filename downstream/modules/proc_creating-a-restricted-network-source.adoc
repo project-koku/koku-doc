@@ -1,0 +1,4 @@
+[id="proc_creating-a-restricted-network-source"]
+= Creating a restricted network source
+
+Is this different from the normal OpenShift Source Creation?

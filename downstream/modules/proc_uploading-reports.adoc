@@ -1,0 +1,4 @@
+[id="proc_uploading-reports"]
+= Uploading reports to cloud.redhat.com
+
+Workstation with unrestricted network access

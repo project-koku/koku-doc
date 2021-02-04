@@ -1,3 +1,12 @@
+////
+*not fully modular*
+This module includes 4 sections
+= Installing the Koku metrics operator
+= Configuring the operator instance for a new installation
+= Replacing the prior operator instance with the Koku metrics operator
+= Removing a prior cost operator
+The latter 3 sections should be in individual modules
+////
 
 [id="proc_installing_koku_operator"]
 = Installing the Koku metrics operator
@@ -17,7 +26,7 @@ Install the Koku operator `koku-metrics-operator` from the OpenShift Container P
 . Click on the *Install* button.
 . After a short wait, *Koku Metrics Operator* appears in the *Installed Operators* tab under *Project: all projects* or *Project: koku-metrics-operator*.
 
-
+[id="configuring-the-operator-instance-for-a-new-installation"]
 = Configuring the operator instance for a new installation
 
 Use the OpenShift Container Platform web console to configure the `koku-metrics-operator` instance after it is installed.
@@ -50,7 +59,8 @@ Use the OpenShift Container Platform web console to configure the `koku-metrics-
 ----
 . Click the *Create* button. These actions create a new source for cost management that will appear in the https://cloud.redhat.com[cloud.redhat.com] cost management application.
 
-= Replacing a prior the operator instance with the Koku metrics operator
+[id="replacing-prior-operator-instance-with-koku"]
+= Replacing the prior operator instance with the Koku metrics operator
 
 If you are replacing a prior cost management operator with the Koku metrics operator, make certain your existing cost management source is properly configured in the YAML configuration file.
 
