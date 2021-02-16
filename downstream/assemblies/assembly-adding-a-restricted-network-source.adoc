@@ -1,0 +1,46 @@
+// This assembly is included in the following assemblies:
+//
+// <List assemblies here, each on a new line>
+
+// Retains the context of the parent assembly if this assembly is nested within another assembly.
+// For more information about nesting assemblies, see: https://redhat-documentation.github.io/modular-docs/#nesting-assemblies
+// See also the complementary step on the last line of this file.
+ifdef::context[:parent-context: {context}]
+[id="assembly-adding-a-restricted-network-source"]
+// If the assembly is reused in other assemblies in a guide, include {context} in the ID: [id="a-collection-of-modules_{context}"].
+= Adding a restricted network source
+
+In OpenShift Container Platform, you can perform a restricted network installation that does not have access to the internet.
+
+When operating on a restricted network, the cost report CSV files are stored locally using a Persistent Volume Claim (PVC), and must be uploaded manually to link:https://cloud.redhat.com[cloud.redhat.com].
+
+////
+*Possible improvement*
+Add a variable to attributes file for cloud.redhat.com
+:CRC:  https://cloud.redhat.com[cloud.redhat.com]
+////
+This guide describes the process that is required to install and configure the Koku metrics operator on a restricted network.
+
+
+
+
+
+
+include::../modules/proc_installing-koku-metrics-operator-on-a-restricted-network.adoc[leveloffset=+1]
+
+include::../modules/proc_configuring-koku-metrics-operator-on-a-restricted-network.adoc[leveloffset=+1]
+
+include::../modules/proc_downloading-reports.adoc[leveloffset=+1]
+
+//include::../modules/proc_creating-an-openshift-container-platform-source.adoc[leveloffset=+1]
+
+include::../modules/proc_uploading-reports.adoc[leveloffset=+1]
+
+//Additional resources
+
+
+
+
+// Restore the context to what it was before this assembly.
+ifdef::parent-context[:context: {parent-context}]
+ifndef::parent-context[:!context:]

@@ -15,11 +15,11 @@ ifdef::context[:parent-context: {context}]
 // The ID is used as an anchor for linking to the module. Avoid changing it after the module has been published to ensure existing links are not broken.
 [id="assembly_koku_cost_management_installing"]
 // If the assembly is reused in other assemblies in a guide, include {context} in the ID: [id="a-collection-of-modules_{context}"].
-= Adding sources to cost management for OpenShift Container Platform 4.5
+= Adding an OpenShift Container Platform source to cost management
 //If the assembly covers a task, start the title with a verb in the gerund form, such as Creating or Configuring.
 To support cost management in Red{nbsp}Hat OpenShift Container Platform 4.5 and more recent versions, a new community operator is introduced, `koku-metrics-operator`.
 
-The community `cost-mgt-operator` supported in OCP 4.3 and OCP 4.4 is deprecated. Though this cost operator functions with cost management in OCP 4.5, it is no longer supported.
+The community `cost-mgt-operator` supported in OCP 4.3 and OCP 4.4 is deprecated. Though this cost operator functions with cost management in OCP 4.5, it is no longer supported. For installing this deprecated operator, see <LINK Installing 4.3 4.4 New Title>
 
 To avoid gaps in your cost management data, you can wait 24 to 48 hours before removing `cost-mgt-operator` while you verify that `koku-metrics-operator` provides cost management reports.
 
@@ -30,7 +30,11 @@ include::../modules/proc_installing_koku_operator.adoc[leveloffset=+1]
 include::../modules/proc_verifying-koku-operator.adoc[leveloffset=+1]
 
 include::../modules/proc_basic-authentication.adoc[leveloffset=+1]
+include::../modules/proc_creating-an-openshift-container-platform-source-manually.adoc[leveloffset=+1]
 
+
+
+include::assembly-adding-a-restricted-network-source.adoc[leveloffset=+1]
 /////
 // Restore the context to what it was before this assembly.
 ifdef::parent-context[:context: {parent-context}]

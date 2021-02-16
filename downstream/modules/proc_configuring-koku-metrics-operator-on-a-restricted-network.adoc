@@ -1,0 +1,110 @@
+// Module included in the following assemblies:
+//
+// <List assemblies here, each on a new line>
+
+[id="proc_configuring-koku-metrics-operator-on-a-restricted-network_{context}"]
+= Configuring Koku Metrics Operator on a restricted network
+
+
+[role="_abstract"]
+After the `koku-metrics-operator` is installed, you must configure it to run on a restricted network.
+
+.Prerequisites
+
+* `koku-metrics-operator` installed.
+* You are logged into the OCP web console with cluster administrator privileges.
+
+.Procedure
+
+. From the OCP web console, select *Operators > Installed Operators > koku-metrics-operator > KokuMetricsConfig > Create Instance*.
+
+. Specify the desired storage. If not specified, the operator will create a default Persistent Volume Claim called `koku-metrics-operator-data` with *10Gi* of storage.
++
+[NOTE]
+====
+To configure the koku-metrics-operator to use or create a different PVC, update the `volume_claim_template` configuration in *Yaml view*.
+====
+
+. Select *YAML view*.
+
+. Specify the max number of reports to store using `max_reports_to_store`, and time between report generation in minutes using `upload_cycle`.
++
+[source,yaml]
+----
+    packaging:
+      max_reports_to_store: 30
+      max_size_MB: 100
+----
++
+[source,yaml]
+----
+    upload:
+      upload_cycle: 360
+----
++
+[NOTE]
+====
+The `koku-metrics-operator` creates one report every *360 minutes* by default. Therefore, the default value of *30* reports and *360* minutes gives you *7.5 days* of reports.
+====
++
+[IMPORTANT]
+====
+Any report generated after the total number specified will replace the oldest report in storage. Make sure to download generated reports from your PVC before they are lost.
+====
+
+. Set `upload_toggle` to `false`.
++
+[source,yaml]
+----
+    upload:
+      upload_cycle: 360
+      upload_toggle: false
+----
+
+. Replace the configuration in the `source` section with empty brackets.
++
+[source,yaml]
+----
+    source: {}
+----
+
+. Replace the configuration in the `authentication` section with empty brackets.
++
+[source,yaml]
+----
+    authentication: {}
+----
+
+[NOTE]
+====
+The `source` and `authentication` configurations are not required when installed on a restricted network. Make sure to replace these sections with empty brackets `{}`.
+====
+
+
+. Click *Create*.
+
+.Verification steps
+
+. Select the `KokuMetricsConfig` you created.
+
+. Select *YAML view*.
+
+. Verify that a report has been created in the `packaging` section.
++
+[source,yaml]
+----
+    packaging:
+      last_successful_packaging_time: `current date and time`
+      max_reports_to_store: 30
+      max_size_MB: 100
+      number_of_reports_stored: 1
+      packaged_files:
+        - >-
+            /tmp/koku-metrics-operator-reports/upload/YYYYMMDDTHHMMSS-cost-mgmt.tar.gz
+
+----
++
+[NOTE]
+====
+`koku-metrics-operator` will generate an initial report after it is configured. Generated reports will be listed under `packaged_files`.
+====

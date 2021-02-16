@@ -1,0 +1,11 @@
+<title>Installing the cost management operator in OpenShift Container Platform 4.3 and 4.4</title>
+<productname>Cost Management Service</productname>
+<productnumber>2021</productnumber>
+<subtitle>Configuring cost models to reflect your cloud costs</subtitle>
+<abstract>
+    <para>This guide explains how to install the cost management operator in OpenShift Container Platform 4.3 and 4.4</para>
+</abstract>
+<authorgroup>
+    <orgname>Red Hat Customer Content Services </orgname>
+</authorgroup>
+<xi:include href="Common_Content/Legal_Notice.xml" xmlns:xi="http://www.w3.org/2001/XInclude" />
