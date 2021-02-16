@@ -1,14 +1,9 @@
-[id="proc_downloading-reports"]
-= Downloading reports
-
-TBD
-=======
 // Module included in the following assemblies:
 //
 // <List assemblies here, each on a new line>
 
 [id="proc_downloading-reports_{context}"]
-= Downloading your reports
+= Downloading cost reports
 
 
 [role="_abstract"]
