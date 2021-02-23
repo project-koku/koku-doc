@@ -30,9 +30,8 @@ include::../modules/proc_installing_koku_operator.adoc[leveloffset=+1]
 include::../modules/proc_verifying-koku-operator.adoc[leveloffset=+1]
 
 include::../modules/proc_basic-authentication.adoc[leveloffset=+1]
+
 include::../modules/proc_creating-an-openshift-container-platform-source-manually.adoc[leveloffset=+1]
-
-
 
 include::assembly-adding-a-restricted-network-source.adoc[leveloffset=+1]
 /////

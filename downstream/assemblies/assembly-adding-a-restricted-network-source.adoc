@@ -10,7 +10,7 @@ ifdef::context[:parent-context: {context}]
 // If the assembly is reused in other assemblies in a guide, include {context} in the ID: [id="a-collection-of-modules_{context}"].
 = Adding a restricted network source
 
-In OpenShift Container Platform, you  can install OpenShift Container Platform on a restricted network that does not have access to the internet.
+You can install OpenShift Container Platform on a restricted network that does not have access to the internet.
 
 When operating on a restricted network, the cost report CSV files are stored locally using a persistent volume claim (PVC), and must be uploaded manually to link:https://cloud.redhat.com[cloud.redhat.com].
 

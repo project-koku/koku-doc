@@ -20,21 +20,19 @@ The default configuration saves one week of reports. Therefore, download the rep
 * `koku-metrics-operator` reports downloaded locally.
 * Source created on cloud.redhat.com, see xref:proc_creating-an-openshift-container-platform-source-manually_{context}[].
 * Red Hat account user with Organization Administrator entitlements.
-* Workstation with unrestricted network access
+* Workstation with unrestricted network access.
 
 .Procedure
 
-* Upload your reports to link:https://cloud.redhat.com[cloud.redhat.com], replacing USERNAME and PASSWORD with your link:https://cloud.redhat.com[cloud.redhat.com] login credentials, and FILE_NAME for the report to upload:
+* Upload your reports to link:https://cloud.redhat.com[cloud.redhat.com], replacing USERNAME and PASSWORD with your link:https://cloud.redhat.com[cloud.redhat.com] login credentials, and FILE_NAME with the report to upload:
 +
 [source,bash]
 ----
 $ curl -vvvv -F "file=@FILE_NAME.tar.gz;type=application/vnd.redhat.hccm.tar+tgz"  https://cloud.redhat.com/api/ingress/v1/upload -u USERNAME:PASS
 ----
-Where `USERNAME` and `PASS` are the username and password for link:https://cloud.redhat.com[cloud.redhat.com], and `FILE_NAME` is the name of the report to upload.
-
 
 .Verification steps
 
-. From link:https://cloud.redhat.com/cost-management/[cloud.redhat.com/cost-management], Click *OpenShift*..
+. From link:https://cloud.redhat.com/cost-management/[cloud.redhat.com/cost-management], click *OpenShift*.
 
-. Verify you have the correct cost reports for your cluster.
+. Verify you have the correct cost reports for your cluster on the *OpenShift details* page.
