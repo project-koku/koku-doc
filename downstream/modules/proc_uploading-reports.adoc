@@ -35,4 +35,4 @@ $ curl -vvvv -F "file=@FILE_NAME.tar.gz;type=application/vnd.redhat.hccm.tar+tgz
 
 . From link:https://cloud.redhat.com/cost-management/[cloud.redhat.com/cost-management], click *OpenShift*.
 
-. Verify you have the correct cost reports for your cluster on the *OpenShift details* page.
+. Verify you have OpenShift usage data for your cluster on the *OpenShift details* page.
