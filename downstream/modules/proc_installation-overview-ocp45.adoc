@@ -14,21 +14,21 @@
 
 Whether you are replacing a prior cost management operator with the Koku metrics operator or installing it for the first time, the basic tasks are the same.
 
-Operator installation, configuration, and source management can all be performed from the OCP web console.
+Operator installation, configuration, and source management can all be performed from the OpenShift Container Platform web console.
 
-You will perform the following tasks to install the `koku-metrics-operator` and begin using the cost management application in OCP 4.5 or later.
+You will perform the following tasks to install the `koku-metrics-operator` and begin using the cost management application in OpenShift Container Platform 4.5 or later.
 
 
-NOTE: To install and configure `koku-metrics-operator` from the OCP web console, you must use an account with cluster administrator privileges.
+NOTE: To install and configure `koku-metrics-operator` from the OpenShift Container Platform web console, you must use an account with cluster administrator privileges.
 
 .Prerequisites
-- The OCP 4.5 cluster is installed.
+- The OpenShift Container Platform 4.5 cluster is installed.
 - You can access the OpenShift Container Platform web console using an account that has cluster administrator privileges.
 
 .Task summary
 * Install the Koku metrics operator (`koku-metrics-operator`) and use the default token authentication.
 * Create a KokuMetricsConfig YAML file that configures `koku-metrics-operator`.
-* Create a cost management OCP source with a new installation, or confirm an existing source with an replacement installation.
+* Create a cost management OpenShift Container Platform source with a new installation, or confirm an existing source with an replacement installation.
 * After installing the Koku metrics operator, delete the old cost operator. This task is required only when the `cost-mgt-operator` was previously installed.
 
 If you use Basic authentication, additional steps are required to configure the Secret that holds username and password credentials.

@@ -22,8 +22,7 @@ include::assemblies/assembly-adding-openshift-container-platform-source.adoc[lev
 
 //include::assemblies/assembly-adding-cost-operator-on-restricted-network.adoc[leveloffset=+1]
 
-//This assembly is about the deprecated operator -now another title
-//include::assemblies/assembly_adding_ocp_sources.adoc[leveloffset=+1]
+
 
 include::assemblies/assembly_adding_aws_sources.adoc[leveloffset=+1]
 
@@ -34,8 +33,10 @@ include::assemblies/assembly_adding_azure_sources.adoc[leveloffset=+1]
 
 
 
-
 //new assembly for cost metric on a restricted network
 //include::assemblies/assembly-adding-cost-operator-on-restricted-network.adoc[leveloffset=+1]
+
+//This assembly is about the deprecated operator -now another title
+include::assemblies/assembly_adding_ocp_sources.adoc[leveloffset=+1]
 
 include::assemblies/assembly_cost_management_next_steps.adoc[leveloffset=+1]
