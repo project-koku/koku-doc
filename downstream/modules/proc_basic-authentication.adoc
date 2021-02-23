@@ -14,15 +14,15 @@ There are two procedures required when you configure basic authentication.
 == Creating the secret key/value pair for basic authentication
 
 .Prerequisites
-* You are logged into the OCP web console with cluster administrator privileges.
+* You are logged into the OpenShift Container Platform web console with cluster administrator privileges.
 * The *Koku Metrics Operator* appears in the *Installed Operators* tab.
 * You have a username and password for your https://cloud.redhat.com[cloud.redhat.com] account.
 
 
 .Procedure
-This procedure describes setting up basic authentication using the OCP web console.
+This procedure describes setting up basic authentication using the OpenShift Container Platform web console.
 
-. In the OCP web console, click on the *Workloads > Secrets* tab.
+. In the OpenShift Container Platform web console, click on the *Workloads > Secrets* tab.
 . In the *Secrets* window, select *Project:koku-metrics-operator* from the dropdown.
 . Click the *Create > Key/Value Secret* selection.
 . In the *Create Key/Value Secret* window enter the following information to create a new secret that contains a username key and a password key and a value for each key.
@@ -70,7 +70,7 @@ Modify the Koku metrics operator API YAML file to use basic authentication with 
 
 
 .Prerequisites
-* You are logged into the OCP web console with cluster administrator privileges.
+* You are logged into the OpenShift Container Platform web console with cluster administrator privileges.
 * You created a secret name for the username and password key/value pair.
 * The Koku metrics operator is installed.
 

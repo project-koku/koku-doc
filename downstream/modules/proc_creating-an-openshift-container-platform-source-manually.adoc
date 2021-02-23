@@ -14,7 +14,7 @@ If you follow the previous steps, your OpenShift Container Platform source shoul
 
 * OpenShift Container Platform cluster installed.
 * Red Hat account user with Organization Administrator entitlements.
-* You are logged into the OCP web console.
+* You are logged into the OpenShift Container Platform web console.
 
 .Procedure
 
@@ -25,5 +25,5 @@ If you follow the previous steps, your OpenShift Container Platform source shoul
 . Enter a name for the source and click *Next*.
 . Select the *Red Hat OpenShift Container Platform* tile as the source type.
 . Select *Cost Management* as the application and click *Next*.
-. Copy your *Cluster Identifier* from the OCP web console *Home > Overview* tab and click *Next*.
+. Copy your *Cluster Identifier* from the OpenShift Container Platform web console *Home > Overview* tab and click *Next*.
 . Review the details and click *Add* to create the source.

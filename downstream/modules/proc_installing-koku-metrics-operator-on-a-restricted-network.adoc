@@ -14,25 +14,25 @@ For OpenShift Container Platform clusters that are installed on restricted netwo
 
 * OpenShift Container Platform cluster installed.
 * Workstation with unrestricted network access.
-* You are logged into the OCP web console with cluster administrator privileges.
+* You are logged into the OpenShift Container Platform web console with cluster administrator privileges.
 
 .Procedure
 
-. Follow *link:https://docs.openshift.com/container-platform/4.6/operators/admin/olm-restricted-networks.html[Using Operator Lifecycle Manager on restricted networks]* to install the `koku-metrics-operator` into OLM.
+. Complete the following OpenShift Container Platform procedure to create a local mirror of the `koku-metrics-operator`: *link:https://access.redhat.com/documentation/en-us/openshift_container_platform/4.6/html/operators/administrator-tasks#olm-restricted-networks[Using Operator Lifecycle Manager on restricted networks]*
 +
 [NOTE]
 ====
 The `koku-metrics-operator` is found in the `community-operators` Catalog in the `registry.redhat.io/redhat/community-operator-index:latest` Index.
 
-Red Hat recommends pruning unwanted objects from the index before pushing to the mirrored registry. Make sure you keep the the `koku-metrics-operator` package.
+Red Hat recommends pruning unwanted objects from the index before pushing to the mirrored registry. Make sure you keep the `koku-metrics-operator` package.
 ====
 
-. Login to the OCP web console and click on the *Operators > OperatorHub* tab.
+. Log in to the OpenShift Container Platform web console and click *Operators > OperatorHub*.
 . Search for and locate *Koku Metrics Operator*.
-. Click on the displayed *Koku Metrics Operator* tile.
+. Click the *Koku Metrics Operator* tile.
 . If an information panel appears with the *Community Operators* message, click *Continue*.
 . When the *Install Operator* window appears, you must select the `koku-metrics-operator` namespace for installation. If the namespace does not yet exist, it is created for you.
-. Click on the *Install* button.
+. Click *Install*.
 
 
 .Verification steps
@@ -42,4 +42,4 @@ Red Hat recommends pruning unwanted objects from the index before pushing to the
 [role="_additional-resources"]
 .Additional resources
 
-* For more details on the Operator Lifecycle Manager, see link:https://docs.openshift.com/container-platform/4.6/operators/understanding/olm/olm-understanding-olm.html#olm-overview_olm-understanding-olm[What is Operator Lifecycle Manager?]
+* For more details on the Operator Lifecycle Manager, see link:https://docs.openshift.com/container-platform/4.6/operators/understanding/olm/olm-understanding-olm.html[What is Operator Lifecycle Manager?]

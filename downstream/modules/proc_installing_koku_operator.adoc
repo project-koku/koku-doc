@@ -14,11 +14,11 @@ The latter 3 sections should be in individual modules
 Install the Koku operator `koku-metrics-operator` from the OpenShift Container Platform web console.
 
 .Prerequisites
-* You are logged into the OCP web console with cluster administrator privileges.
+* You are logged into the OpenShift Container Platform web console with cluster administrator privileges.
 
 .Procedure
 
-. Login to the OCP web console and click on the *Operators > OperatorHub* tab.
+. Login to the OpenShift Container Platform web console and click on the *Operators > OperatorHub* tab.
 . Search for and locate *Koku Metrics Operator*.
 . Click on the displayed *Koku Metrics Operator* tile.
 . If an information panel appears with the Community Operators message, click *Continue*.
@@ -32,7 +32,7 @@ Install the Koku operator `koku-metrics-operator` from the OpenShift Container P
 Use the OpenShift Container Platform web console to configure the `koku-metrics-operator` instance after it is installed.
 
 .Prerequisites
-* You are logged into the OCP web console with cluster administrator privileges.
+* You are logged into the OpenShift Container Platform web console with cluster administrator privileges.
 * The *Koku Metrics Operator* appears in the *Installed Operators* tab.
 
 .Procedure
@@ -69,7 +69,7 @@ IMPORTANT: When you are replacing a prior cost management operator with the *Kok
 
 .Prerequisites
 
-* You are logged into the OCP web console with cluster administrator privileges.
+* You are logged into the OpenShift Container Platform web console with cluster administrator privileges.
 * You can access https://cloud.redhat.com[cloud.redhat.com] and view existing cost management sources.
 
 
@@ -105,17 +105,17 @@ NOTE: If you mistakenly remove the *Koku Metrics Operator*, reinstall it.
 .Prerequisites
 * The `cost-mgmt-operator` is installed.
 +
-NOTE: The `cost-mgmt-operator` is deprecated in OCP 4.5. Beginning with OCP 4.5, you must install `koku-metrics-operator`.
+NOTE: The `cost-mgmt-operator` is deprecated in OpenShift Container Platform 4.5. Beginning with OpenShift Container Platform 4.5, you must install `koku-metrics-operator`.
 
 * You installed the *Koku Metrics Operator*.
-* You are logged into the OCP web console with cluster administrator privileges.
+* You are logged into the OpenShift Container Platform web console with cluster administrator privileges.
 * You can view the operators in the *Installed Operators* tab.
 
 .Procedure
 . In the Installed Operators list, select the operator you want to remove.
 . Click on the image:more-options.png[] (More options) icon in that row.
 . Click on the *Uninstall Operator* option. Confirm the action to remove the operator.
-. In the OCP web console, click the *Administration > Custom Resource Definitions* tab.
+. In the OpenShift Container Platform web console, click the *Administration > Custom Resource Definitions* tab.
 . In the window that displays the custom resource definitions (CRD), locate the *CostManagement* CRD and the *CostManagementData* CRD.
 . For each CRD, click on the image:more-options.png[] (More options) icon and click on *Delete Custom Resource Definition*. Confirm the delete action.
 . When these CRDs are deleted, the `cost-mgt-operator` is fully uninstalled.

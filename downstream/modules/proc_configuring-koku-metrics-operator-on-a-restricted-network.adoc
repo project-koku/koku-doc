@@ -12,22 +12,22 @@ After the `koku-metrics-operator` is installed, you must configure it to run on 
 .Prerequisites
 
 * `koku-metrics-operator` installed.
-* You are logged into the OCP web console with cluster administrator privileges.
+* You are logged into the OpenShift Container Platform web console with cluster administrator privileges.
 
 .Procedure
 
-. From the OCP web console, select *Operators > Installed Operators > koku-metrics-operator > KokuMetricsConfig > Create Instance*.
+. From the OpenShift Container Platform web console, select *Operators > Installed Operators > koku-metrics-operator > KokuMetricsConfig > Create Instance*.
 
-. Specify the desired storage. If not specified, the operator will create a default Persistent Volume Claim called `koku-metrics-operator-data` with *10Gi* of storage.
+. Specify the desired storage. If not specified, the operator will create a default persistent volume claim called `koku-metrics-operator-data` with *10Gi* of storage.
 +
 [NOTE]
 ====
-To configure the koku-metrics-operator to use or create a different PVC, update the `volume_claim_template` configuration in *Yaml view*.
+To configure the `koku-metrics-operator` to use or create a different PVC, update the `volume_claim_template` configuration in *YAML view*.
 ====
 
 . Select *YAML view*.
 
-. Specify the max number of reports to store using `max_reports_to_store`, and time between report generation in minutes using `upload_cycle`.
+. Specify the maximum number of reports to store using `max_reports_to_store`, and time between report generation in minutes using `upload_cycle`.
 +
 [source,yaml]
 ----
@@ -42,13 +42,10 @@ To configure the koku-metrics-operator to use or create a different PVC, update 
       upload_cycle: 360
 ----
 +
-[NOTE]
-====
-The `koku-metrics-operator` creates one report every *360 minutes* by default. Therefore, the default value of *30* reports and *360* minutes gives you *7.5 days* of reports.
-====
-+
 [IMPORTANT]
 ====
+The `koku-metrics-operator` creates one report every *360 minutes* by default. Therefore, the default value of *30* reports and *360* minutes gives you *7.5 days* of reports.
+
 Any report generated after the total number specified will replace the oldest report in storage. Make sure to download generated reports from your PVC before they are lost.
 ====
 
@@ -74,12 +71,6 @@ Any report generated after the total number specified will replace the oldest re
 ----
     authentication: {}
 ----
-
-[NOTE]
-====
-The `source` and `authentication` configurations are not required when installed on a restricted network. Make sure to replace these sections with empty brackets `{}`.
-====
-
 
 . Click *Create*.
 
