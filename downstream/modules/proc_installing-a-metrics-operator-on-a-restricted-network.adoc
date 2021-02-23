@@ -1,4 +1,0 @@
-[id="proc_installing-a-metrics-operator-on-a-restricted-network"]
-= Installing a metrics operator on a restricted network
-
-For OpenShift Container Platform clusters that are installed on restricted networks, Operator Lifecycle Manager (OLM) by default cannot access the koku-metrics-operator hosted remotely on Quay.io because those remote sources require full Internet connectivity. Therefore, OLM must be configured to install and run local sources.

@@ -11,7 +11,7 @@ If the `koku-metrics-operator` is configured to run in a restricted network, cop
 
 [NOTE]
 ====
-The default configuration saves one week of reports. Therefore, reports should be downloaded locally and uploaded to cloud.redhat.com weekly to prevent loss of metrics data.
+The default configuration saves one week of reports. Therefore, download the reports locally and upload them to cloud.redhat.com weekly to prevent loss of metrics data.
 ====
 
 .Prerequisites
@@ -21,7 +21,7 @@ The default configuration saves one week of reports. Therefore, reports should b
 
 .Procedure
 
-. Create the following pod with `claimName` matching the PVC containing the report data
+. Create the following pod with `claimName` matching the PVC containing the report data:
 +
 [source,bash]
 ----
