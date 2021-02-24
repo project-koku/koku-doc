@@ -4,7 +4,7 @@
 [[installing_cost_mgmt-operator]]
 == Installing the Cost Management Operator
 
-The Cost Management Operator collects the metrics required for cost management.    
+The Cost Management Operator collects the metrics required for cost management.
 
 Begin adding your OpenShift Container Platform cluster as a source to cost management, then install the Cost Management Operator from OperatorHub.
 
@@ -15,7 +15,7 @@ See https://access.redhat.com/documentation/en-us/openshift_container_platform/4
 
 .Prerequisites
 
-* OpenShift Container Platform 4.3 or newer
+* OpenShift Container Platform 4.3 or 4.4
 
 .Procedure
 
@@ -37,4 +37,3 @@ See https://access.redhat.com/documentation/en-us/openshift_container_platform/4
 .Additional resources
 
 * See https://access.redhat.com/documentation/en-us/openshift_container_platform/4.6/html/metering[Metering] in the OpenShift documentation for more information about installing Metering.
-

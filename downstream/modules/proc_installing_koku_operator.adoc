@@ -96,16 +96,16 @@ The `create_source: false` does not change because you are matching an existing 
 [id="removing-a-cost-operator"]
 = Removing a prior cost operator
 
-After installing the `koku-metrics-operator`, uninstall the prior `cost-mgt-operator` operator.
+After installing the `koku-metrics-operator`, uninstall the prior `cost-mgmt-operator` operator.
 
-To avoid gaps in your cost management data, you can wait 24 to 48 hours before removing `cost-mgt-operator` while you verify that `koku-metrics-operator` provides cost management reports.
+To avoid gaps in your cost management data, you can wait 24 to 48 hours before removing `cost-mgmt-operator` while you verify that `koku-metrics-operator` provides cost management reports.
 
 NOTE: If you mistakenly remove the *Koku Metrics Operator*, reinstall it.
 
 .Prerequisites
 * The `cost-mgmt-operator` is installed.
 +
-NOTE: The `cost-mgmt-operator` is deprecated in OpenShift Container Platform 4.5. Beginning with OpenShift Container Platform 4.5, you must install `koku-metrics-operator`.
+NOTE: The `cost-mgmt-operator` is deprecated in OpenShift Container Platform 4.5 and later. Beginning with OpenShift Container Platform 4.5 or later, you must install `koku-metrics-operator`.
 
 * You installed the *Koku Metrics Operator*.
 * You are logged into the OpenShift Container Platform web console with cluster administrator privileges.
@@ -118,6 +118,6 @@ NOTE: The `cost-mgmt-operator` is deprecated in OpenShift Container Platform 4.5
 . In the OpenShift Container Platform web console, click the *Administration > Custom Resource Definitions* tab.
 . In the window that displays the custom resource definitions (CRD), locate the *CostManagement* CRD and the *CostManagementData* CRD.
 . For each CRD, click on the image:more-options.png[] (More options) icon and click on *Delete Custom Resource Definition*. Confirm the delete action.
-. When these CRDs are deleted, the `cost-mgt-operator` is fully uninstalled.
+. When these CRDs are deleted, the `cost-mgmt-operator` is fully uninstalled.
 
 NOTE: When you install *Koku Metrics Operator*, a *KokuMetricsConfig* CRD appears in  *Administration > Custom Resource Definitions* list.
