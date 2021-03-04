@@ -18,7 +18,7 @@ For OpenShift Container Platform clusters that are installed on restricted netwo
 
 .Procedure
 
-. Complete the following OpenShift Container Platform procedure to create a local mirror of the `koku-metrics-operator`: *link:https://access.redhat.com/documentation/en-us/openshift_container_platform/4.6/html/operators/administrator-tasks#olm-restricted-networks[Using Operator Lifecycle Manager on restricted networks]*.
+. Complete the following OpenShift Container Platform procedure to create a local mirror of the `koku-metrics-operator`: *link:https://access.redhat.com/documentation/en-us/openshift_container_platform/4.7/html/operators/administrator-tasks#olm-restricted-networks[Using Operator Lifecycle Manager on restricted networks]*.
 +
 [NOTE]
 ====
@@ -42,4 +42,4 @@ Red Hat recommends pruning unwanted objects from the index before pushing to the
 [role="_additional-resources"]
 .Additional resources
 
-* For more details on the Operator Lifecycle Manager, see link:https://access.redhat.com/documentation/en-us/openshift_container_platform/4.6/html/operators/understanding-operators#operator-lifecycle-manager-olm[What is Operator Lifecycle Manager?]
+* For more details on the Operator Lifecycle Manager, see link:https://access.redhat.com/documentation/en-us/openshift_container_platform/4.7/html/operators/understanding-operators#operator-lifecycle-manager-olm[What is Operator Lifecycle Manager?]

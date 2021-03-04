@@ -24,11 +24,8 @@ Log into your AWS master account to begin configuring cost and usage reporting:
 See the AWS _Billing and Cost Management_ documentation for more details on configuration.
 ====
 +
-. In the cloud.redhat.com platform, open the *Sources* menu (https://cloud.redhat.com/settings/sources/) to begin adding an AWS source to cost management:
+. In the {platform} platform, open the *Sources* menu (https://cloud.redhat.com/settings/sources/) to begin adding an AWS source to cost management:
 .. Navigate to *Sources* and click *Add a source* to open the Sources wizard.
 .. Enter a name for your source and click *Next*.
 .. Select *Cost Management* as the application and *Amazon Web Services (AWS)* as the source type. Click *Next*.
 .. Paste the name of your S3 bucket and click *Next*.
-
-
-

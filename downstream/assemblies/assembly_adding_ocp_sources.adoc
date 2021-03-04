@@ -18,7 +18,7 @@ You must have a Red Hat account user with Organization Administrator entitlement
 The Cost Management Operator (`cost-mgmt-operator`) collects the metrics required for cost management by:
 
 * Using Operator Metering to create usage reports specific to cost management.
-* Collecting and packaging these reports to a tarball which is uploaded to cost management through cloud.redhat.com.
+* Collecting and packaging these reports to a tarball which is uploaded to cost management through {platform}.
 
 
 
@@ -28,7 +28,7 @@ To add your OpenShift Container Platform cluster as a cost management source:
 . Configure the Cost Management Operator to collect OpenShift usage data (metrics) using Operator Metering
 . Provide the cluster identifier to cost management
 
-As you will complete some of the following steps in OpenShift Container Platform, and some steps in the cloud.redhat.com platform (https://cloud.redhat.com/settings/sources/), have both applications open in a web browser, as well as a terminal to access the command line interface (CLI).
+As you will complete some of the following steps in OpenShift Container Platform, and some steps in the {platform} platform (https://cloud.redhat.com/settings/sources/), have both applications open in a web browser, as well as a terminal to access the command line interface (CLI).
 
 
 

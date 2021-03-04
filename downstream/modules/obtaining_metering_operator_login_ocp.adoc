@@ -28,9 +28,7 @@ During the installation process for the metering operator, the reporting-operato
 +
 [IMPORTANT]
 ====
-As the reporting-operator service account token does not expire, store the token file on a file system with limited access to maintain security. This token is used to obtain metering data on a scheduled basis using a cron job. 
+As the reporting-operator service account token does not expire, store the token file on a file system with limited access to maintain security. This token is used to obtain metering data on a scheduled basis using a cron job.
 ====
 +
-. In the cloud.redhat.com *Sources* wizard, click *Next* to move to the next screen.
-
-
+. In the {platform} *Sources* wizard, click *Next* to move to the next screen.

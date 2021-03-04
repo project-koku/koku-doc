@@ -15,11 +15,11 @@ Create a new storage account in Azure to contain the cost data and metrics that 
 You must have a Red Hat account user with Organization Administrator entitlements before you can add sources to cost management.
 ====
 
-. In the cloud.redhat.com platform, open the *Sources* menu (https://cloud.redhat.com/settings/sources/) to begin adding an Azure source to cost management:
+. In the {platform} platform, open the *Sources* menu (https://cloud.redhat.com/settings/sources/) to begin adding an Azure source to cost management:
 .. Navigate to *Sources* and click *Add a source* to open the Sources wizard.
 .. Enter a name for your source and click *Next*.
 .. Select *Cost Management* as the application and *Microsoft Azure* as the source type. Click *Next*.
-. Create a resource group and storage account in your Azure account using the instructions in the See https://docs.microsoft.com/en-us/azure/storage/common/storage-quickstart-create-account?tabs=azure-portal[Azure documentation] _Create a storage account_.
+. Create a resource group and storage account in your Azure account using the instructions in the See link:https://docs.microsoft.com/en-us/azure/storage/common/storage-quickstart-create-account?tabs=azure-portal[Azure documentation] _Create a storage account_.
 +
 //Still need this note?
 [IMPORTANT]
@@ -27,4 +27,4 @@ You must have a Red Hat account user with Organization Administrator entitlement
 Make a note of the resource group and storage account. They will be needed in subsequent steps.
 ====
 [start=3]
-. In the cloud.redhat.com *Sources* wizard, enter the *Resource group name* and *Storage account name* and click *Next*.
+. In the {platform} *Sources* wizard, enter the *Resource group name* and *Storage account name* and click *Next*.

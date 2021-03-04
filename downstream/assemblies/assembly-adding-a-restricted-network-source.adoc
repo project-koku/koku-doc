@@ -18,7 +18,7 @@ The procedure to add an OpenShift Container Platform cluster operating on a rest
 . The `koku-metrics-operator` is configured to store cost report CSV files locally using a persistent volume claim (PVC).
 . Cost reports stored in the PVC are downloaded to a workstation.
 . An OpenShift Container Platform source is created manually.
-. Cost reports are uploaded to link:https://cloud.redhat.com[cloud.redhat.com] from your workstation.
+. Cost reports are uploaded to {platform} from your workstation.
 
 
 

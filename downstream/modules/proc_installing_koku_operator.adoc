@@ -57,7 +57,7 @@ Use the OpenShift Container Platform web console to configure the `koku-metrics-
     create_source: true
     name: koku-cost-source
 ----
-. Click the *Create* button. These actions create a new source for cost management that will appear in the https://cloud.redhat.com[cloud.redhat.com] cost management application.
+. Click the *Create* button. These actions create a new source for cost management that will appear in the {platform} cost management application.
 
 [id="replacing-prior-operator-instance-with-koku"]
 = Replacing the prior operator instance with the Koku metrics operator
@@ -70,7 +70,7 @@ IMPORTANT: When you are replacing a prior cost management operator with the *Kok
 .Prerequisites
 
 * You are logged into the OpenShift Container Platform web console with cluster administrator privileges.
-* You can access https://cloud.redhat.com[cloud.redhat.com] and view existing cost management sources.
+* You can access {platform} and view existing cost management sources.
 
 
 .Procedure
@@ -79,7 +79,7 @@ IMPORTANT: When you are replacing a prior cost management operator with the *Kok
 . In the *Details* window, click *+{nbsp}Create Instance*.
 . A *Koku Metrics Operator > Create KokuMetricsConfig* window appears.
 . Click the *YAML view* radio button to view and modify the contents of the `KokuMetricsConfig.yaml` file.
-. Open https://cloud.redhat.com[cloud.redhat.com] and log in using your Organization Administrator account.
+. Open {platform} and log in using your Organization Administrator account.
 . Click on image:configuration-gear.png[] (Settings).
 . Click on the *Sources* tab to display existing sources.
 . Select an existing cost management source and copy its name.

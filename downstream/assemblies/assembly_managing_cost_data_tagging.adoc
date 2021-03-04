@@ -36,7 +36,7 @@ include::../modules/con_planning_tagging_strategy.adoc[leveloffset=+1]
 
 = Configuring tags and labels in cost management
 
-You must configure tags in each source before cost management can use the tags to automatically organize your cost data. 
+You must configure tags in each source before cost management can use the tags to automatically organize your cost data.
 
 After adding your sources to cost management:
 
@@ -46,7 +46,7 @@ After adding your sources to cost management:
 
 [NOTE]
 ====
-See the https://access.redhat.com/documentation/en-us/openshift_container_platform/4.6/html-single/getting_started_with_cost_management/index[_Getting started with cost management_] guide for instructions on configuring sources.
+See the link:https://access.redhat.com/documentation/en-us/cost_management_service/2021/html-single/getting_started_with_cost_management/index[_Getting started with cost management_] guide for instructions on configuring sources.
 ====
 
 include::../modules/con_how_cost_associates_tags.adoc[leveloffset=+1]
@@ -81,20 +81,20 @@ The following links provide further guidance on tagging for each source type.
 
 *AWS:*
 
-* https://aws.amazon.com/answers/account-management/aws-tagging-strategies/[AWS tagging strategies]
-* https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_examples_iam-add-tag-user-role.html[IAM: Add a specific tag with specific values]
+* link:https://aws.amazon.com/answers/account-management/aws-tagging-strategies/[AWS tagging strategies]
+* link:https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_examples_iam-add-tag-user-role.html[IAM: Add a specific tag with specific values]
 
 *OpenShift:*
 
-* https://kubernetes.io/docs/concepts/overview/working-with-objects/labels/#syntax-and-character-set[Kubernetes labels and selectors]
-* https://github.com/kubernetes/kubernetes/blob/release-1.0/docs/user-guide/labels.md[Kubernetes user guide: labels]
+* link:https://kubernetes.io/docs/concepts/overview/working-with-objects/labels/#syntax-and-character-set[Kubernetes labels and selectors]
+* link:https://github.com/kubernetes/kubernetes/blob/release-1.0/docs/user-guide/labels.md[Kubernetes user guide: labels]
 
 *Microsoft Azure:*
 
-* https://docs.microsoft.com/en-us/azure/architecture/cloud-adoption/decision-guides/resource-tagging/[Azure resource naming and tagging decision guide]
-* https://docs.microsoft.com/en-us/azure/architecture/best-practices/naming-conventions[Azure recommended naming and tagging conventions]
-* https://docs.microsoft.com/en-us/azure/azure-resource-manager/resource-group-using-tags[Use tags to organize your Azure resources and management hierarchy]
-* https://docs.microsoft.com/en-us/azure/governance/policy/samples/enforce-tag-on-resource-groups[Enforce tags in Azure resource groups]
+* link:https://docs.microsoft.com/en-us/azure/architecture/cloud-adoption/decision-guides/resource-tagging/[Azure resource naming and tagging decision guide]
+* link:https://docs.microsoft.com/en-us/azure/architecture/best-practices/naming-conventions[Azure recommended naming and tagging conventions]
+* link:https://docs.microsoft.com/en-us/azure/azure-resource-manager/resource-group-using-tags[Use tags to organize your Azure resources and management hierarchy]
+* link:https://docs.microsoft.com/en-us/azure/governance/policy/samples/enforce-tag-on-resource-groups[Enforce tags in Azure resource groups]
 
 
 
