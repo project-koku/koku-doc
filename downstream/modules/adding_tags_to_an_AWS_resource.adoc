@@ -1,4 +1,4 @@
-link:https://// Module included in the following assemblies:
+// Module included in the following assemblies:
 //
 // assembly_organizing_cost_data_using_tags.adoc
 
