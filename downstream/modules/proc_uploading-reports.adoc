@@ -8,23 +8,23 @@
 = Uploading cost reports to cloud.redhat.com
 
 [role="_abstract"]
-You must manually upload locally stored cost reports from a restricted network to link:https://cloud.redhat.com[cloud.redhat.com].
+You must manually upload locally stored cost reports from a restricted network to {platform}.
 
 [NOTE]
 ====
-The default configuration saves one week of reports. Therefore, download the reports locally and upload them to cloud.redhat.com weekly to prevent loss of metrics data.
+The default configuration saves one week of reports. Therefore, download the reports locally and upload them to {platform} weekly to prevent loss of metrics data.
 ====
 
 .Prerequisites
 
 * `koku-metrics-operator` reports downloaded locally.
-* Source created on cloud.redhat.com, see xref:proc_creating-an-openshift-container-platform-source-manually_{context}[].
+* Source created on {platform}, see xref:proc_creating-an-openshift-container-platform-source-manually_{context}[].
 * Red Hat account user with Organization Administrator entitlements.
 * Workstation with unrestricted network access.
 
 .Procedure
 
-* Upload your reports to link:https://cloud.redhat.com[cloud.redhat.com], replacing USERNAME and PASSWORD with your link:https://cloud.redhat.com[cloud.redhat.com] login credentials, and FILE_NAME with the report to upload:
+* Upload your reports to {platform}, replacing USERNAME and PASSWORD with your {platform} login credentials, and FILE_NAME with the report to upload:
 +
 [source,bash]
 ----

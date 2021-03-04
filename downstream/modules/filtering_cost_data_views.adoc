@@ -22,8 +22,8 @@ This example shows how to see how much each OpenShift project within a cluster i
 
 .Prerequisites
 
-* Your OpenShift cluster added as a cost management data source. See https://access.redhat.com/documentation/en-us/openshift_container_platform/4.6/html/getting_started_with_cost_management/assembly_adding_sources_cost#assembly_adding_ocp_sources[Adding an OpenShift Container Platform source to cost management] in _Getting started with cost management_ for instructions.
-* Your cloud infrastructure account added as a cost management data source. See https://access.redhat.com/documentation/en-us/openshift_container_platform/4.6/html/getting_started_with_cost_management/assembly_adding_sources_cost[Adding sources to cost management] in _Getting started with cost management_ for instructions for your cloud provider type.
+* Your OpenShift cluster added as a cost management data source. See link:https://access.redhat.com/documentation/en-us/cost_management_service/2021/html/getting_started_with_cost_management/assembly_koku_cost_management_installing[Adding an OpenShift Container Platform source to cost management] in _Getting started with cost management_ for instructions.
+* Your cloud infrastructure account added as a cost management data source. See link:https://access.redhat.com/documentation/en-us/cost_management_service/2021/html/getting_started_with_cost_management/index[Getting started with cost management] for instructions for your cloud provider type.
 * Configure tags on your sources. For tips and configuration instructions, see xref:assembly_configuring_tags_sources[].
 
 .Procedure
@@ -38,6 +38,3 @@ This example shows how to see how much each OpenShift project within a cluster i
 ** Click *View historical data* to open the daily usage comparison view, which compares usage, request, and limits by day between months for that resource.
 ** Click *View all projects* or *View all tags* to see related resources and metadata.
 . Click *Clear all filters* to reset your OpenShift details view.
-
-
-

@@ -7,11 +7,11 @@
 
 
 [role="_abstract"]
-If the `koku-metrics-operator` is configured to run in a restricted network, copy the reports from the PVC where they are temporarily stored to a workstation with unrestricted network access for upload to cloud.redhat.com.
+If the `koku-metrics-operator` is configured to run in a restricted network, copy the reports from the PVC where they are temporarily stored to a workstation with unrestricted network access for upload to {platform}.
 
 [NOTE]
 ====
-The default configuration saves one week of reports. Therefore, download the reports locally and upload them to cloud.redhat.com weekly to prevent loss of metrics data.
+The default configuration saves one week of reports. Therefore, download the reports locally and upload them to {platform} weekly to prevent loss of metrics data.
 ====
 
 .Prerequisites
@@ -71,4 +71,4 @@ $ oc delete -f volume-shell.yaml
 [role="_additional-resources"]
 .Additional resources
 
-* For more information on persistent volume claims, see link:https://access.redhat.com/documentation/en-us/openshift_container_platform/4.6/html/storage/understanding-persistent-storage[Understanding persistent storage].
+* For more information on persistent volume claims, see link:https://access.redhat.com/documentation/en-us/openshift_container_platform/4.7/html/storage/understanding-persistent-storage[Understanding persistent storage].

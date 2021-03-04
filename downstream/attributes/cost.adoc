@@ -1,2 +1,3 @@
 
 :product-title: cost management
+:platform: link:https://cloud.redhat.com[cloud.redhat.com]

@@ -17,11 +17,10 @@ To use tags to organize your AWS resources in the cost management application, a
 
 .Procedure
 
-. In the AWS Billing console: 
+. In the AWS Billing console:
 .. Open the _Cost Allocation Tags_ section.
 .. Select the tags you want to use in the cost management application, and click *Activate*.
-. In the cloud.redhat.com *Sources* wizard, click *Next* to move to the next screen.
+. In the {platform} *Sources* wizard, click *Next* to move to the next screen.
 
 //.Verification steps
 //(Optional) Provide the user with verification method(s) for the procedure, such as expected output or commands that can be used to check for success or failure.
-

@@ -15,9 +15,9 @@ Create a cron job to regularly upload data collected by the Usage Collector to c
 ====
 The cron user requires:
 
-* access to the file with metering-operator token 
+* access to the file with metering-operator token
 * sudo access to interact with the Red Hat Insights client.
-==== 
+====
 
 . To configure sudo access, add the following to the _/etc/sudoers_ file, substituting _ocpcollector_  with the cron user:
 +
@@ -37,7 +37,5 @@ ocpcollector    ALL=(ALL)    NOPASSWD: ALL
 */45 * * * * /path/to/ocp_usage.sh --collect --e OCP_CLUSTER_ID=<YOUR_OCP_IDENTIFIER>
 ----
 +
-. In the cloud.redhat.com *Sources* wizard, click *Next* to move to the confirmation screen.
-. In the cloud.redhat.com *Sources* wizard, review the details and click *Finish* to finish adding the OpenShift Container Platform cluster.
-
-
+. In the {platform} *Sources* wizard, click *Next* to move to the confirmation screen.
+. In the {platform} *Sources* wizard, review the details and click *Finish* to finish adding the OpenShift Container Platform cluster.

@@ -1,4 +1,4 @@
-// Module included in the following assemblies:
+openshift_container_platform/4.7// Module included in the following assemblies:
 // assembly_adding_ocp_sources.adoc
 // 2020 09 30 updated for COST-536, ARO requires basic_auth_creds
 [id="configuring_cost_mgmt-operator"]
@@ -17,7 +17,7 @@ After installing the Cost Management Operator, configure authentication and the 
 
 .Procedure
 
-. Configure authentication inside the `openshift-metering` project. This allows you to upload OpenShift data to cloud.redhat.com.
+. Configure authentication inside the `openshift-metering` project. This allows you to upload OpenShift data to {platform}.
 +
 [NOTE]
 ====
@@ -51,7 +51,7 @@ data:
 .. Choose a name for your authentication secret and replace the `metadata.name` value with it.
 .. To configure token authentication (the default method), obtain the correct _auth_ token and then edit the secret to replace the token value:
 +
-... Install the https://stedolan.github.io/jq/download/[`jq`] JSON processor.
+... Install the link:https://stedolan.github.io/jq/download/[`jq`] JSON processor.
 ... Change to the `openshift-config` namespace:
 +
 ----
@@ -66,7 +66,7 @@ $ oc get secret pull-secret -o "jsonpath={.data.\.dockerconfigjson}" | base64 --
 +
 [NOTE]
 ====
-To use basic authentication, edit the secret to replace the username and password values with your base64-encoded username and password for connecting to cloud.redhat.com.
+To use basic authentication, edit the secret to replace the username and password values with your base64-encoded username and password for connecting to {platform}.
 ====
 +
 .. Deploy the secret to your OpenShift cluster in the `openshift-metering` namespace:
@@ -79,7 +79,7 @@ For both methods of authentication, the name of the secret should match the _aut
 +
 . Configure the Metering Operator.
 +
-Cost management uses the Metering Operator to create, collect, package, and upload metrics to cost management. In order for metering to work properly, configure `operator-metering` using the https://access.redhat.com/documentation/en-us/openshift_container_platform/4.6/html-single/metering/index#configuring-metering[OpenShift documentation] to create a MeteringConfig resource.
+Cost management uses the Metering Operator to create, collect, package, and upload metrics to cost management. In order for metering to work properly, configure `operator-metering` using the link:https://access.redhat.com/documentation/en-us/openshift_container_platform/4.7/html-single/metering/index#configuring-metering[OpenShift documentation] to create a MeteringConfig resource.
 +
 . Configure the Cost Management Operator by creating the `CostManagement` and `CostManagementData` custom resources.
 +
@@ -149,16 +149,16 @@ $ oc create -f cost-mgmt-data-resource.yaml
 +
 The Cost Management Operator will now create, collect, package, and upload your OpenShift usage reports to cost management.
 +
-. When configuration is complete, enter the cluster identifier into the cloud.redhat.com *Sources* wizard, click *Next*.
+. When configuration is complete, enter the cluster identifier into the {platform} *Sources* wizard, click *Next*.
 +
 [NOTE]
 ====
 The cluster identifier can be found in *Help* > *About* in OpenShift.
 ====
 +
-. In the cloud.redhat.com *Sources* wizard, review the details and click *Finish* to add the OpenShift Container Platform cluster to cost management.
+. In the {platform} *Sources* wizard, review the details and click *Finish* to add the OpenShift Container Platform cluster to cost management.
 
 
 .Additional resources
 
-* See https://access.redhat.com/documentation/en-us/openshift_container_platform/4.6/html/operators[Operators] in the OpenShift documentation for more information about Operators and OperatorHub.
+* See link:https://access.redhat.com/documentation/en-us/openshift_container_platform/4.7/html/operators[Operators] in the OpenShift documentation for more information about Operators and OperatorHub.

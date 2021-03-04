@@ -27,8 +27,8 @@ This example shows how to design and apply a cost model to your OpenShift on-pre
 
 .Prerequisites
 
-* A user with Cost Administrator or Cost Price List Administrator permissions. See https://access.redhat.com/documentation/en-us/openshift_container_platform/4.6/html/getting_started_with_cost_management/assembly_limiting_access_cost_resources_rbac[Limiting access to cost management resources] in _Getting started with cost management_ for instructions on configuring user roles.
-* Your OpenShift cluster added as a cost management data source. See https://access.redhat.com/documentation/en-us/openshift_container_platform/4.6/html/getting_started_with_cost_management/assembly_adding_sources_cost#assembly_adding_ocp_sources[Adding an OpenShift Container Platform source to cost management] in _Getting started with cost management_ for instructions.
+* A user with Cost Administrator or Cost Price List Administrator permissions. See link:https://access.redhat.com/documentation/en-us/cost_management_service/2021/html/getting_started_with_cost_management/assembly_limiting_access_cost_resources_rbac[Limiting access to cost management resources] in _Getting started with cost management_ for instructions on configuring user roles.
+* Your OpenShift cluster added as a cost management data source. See link:https://access.redhat.com/documentation/en-us/cost_management_service/2021/html/getting_started_with_cost_management/assembly_koku_cost_management_installing[Adding an OpenShift Container Platform source to cost management] in _Getting started with cost management_ for instructions.
 
 .Procedure
 
@@ -40,7 +40,7 @@ This example shows how to design and apply a cost model to your OpenShift on-pre
 ... For *Metric*, select *Node*.
 ... For *Measurement*, select *Price (node-month)*.
 ... In the *Rate* field, enter _1000_ to assign a $1,000 per  price to each node in the sources you select (in a later step).
-... Cost management classifies node and cluster costs as _infrastructure costs_ by default. To change the cost type you are calculating, use the toggle under *Rate*. See xref:cost-layers[] to learn more. 
+... Cost management classifies node and cluster costs as _infrastructure costs_ by default. To change the cost type you are calculating, use the toggle under *Rate*. See xref:cost-layers[] to learn more.
 ... Click *Add rate* to save the node rate.
 .. To apply a rate to CPU requests:
 ... For *Metric*, select *CPU*.
@@ -53,26 +53,25 @@ This example shows how to design and apply a cost model to your OpenShift on-pre
 +
 [NOTE]
 ====
-* To apply a discount rather than a markup, enter a minus sign with the value (for example, _-15_). 
+* To apply a discount rather than a markup, enter a minus sign with the value (for example, _-15_).
 * If you do not want to apply a markup or discount, enter _0_.
-====  
+====
 +
 . Select one or multiple OpenShift sources to assign the cost model to and click *Next*. Selecting a source with a cost model already assigned will override its previous cost model. You can also assign sources to your cost model later.
 . Review the cost model details, and click *Create*.
 . Click *Close* to exit the cost model wizard.
 
-Your new cost model will appear in the list on the *Cost models* page. 
+Your new cost model will appear in the list on the *Cost models* page.
 
 .Next steps
 
 * From the *Cost models* summary page, you can review information about your cost models, including:
-** The source type the cost model was created for 
+** The source type the cost model was created for
 ** The number of sources assigned to the cost model
 ** The date the cost model was last modified
 +
-* To see more information or edit a cost model: 
+* To see more information or edit a cost model:
 +
 ** From the *Cost models* summary page, click image:more-options.png[] (*more options*), then *View details* or *Delete* the cost model. From the *View details* option, you can edit the cost model, including source assignments, markup, and other settings.
 
-* Review your tags and tagging strategy to ensure that costs are being distributed to the correct resources, cost centers, or teams. See https://access.redhat.com/documentation/en-us/openshift_container_platform/4.6/html-single/managing_cost_data_using_tagging/index[_Managing cost data using tagging_] for more information.
-
+* Review your tags and tagging strategy to ensure that costs are being distributed to the correct resources, cost centers, or teams. See link:https://access.redhat.com/documentation/en-us/cost_management_service/2021/html-single/managing_cost_data_using_tagging/index[_Managing cost data using tagging_] for more information.

@@ -9,7 +9,7 @@
 
 The Usage Collector connects to your OpenShift cluster and collects usage data required for cost management.
 
-The Usage Collector is an Ansible playbook wrapped in a minimal script that performs setup and collecting tasks. During the setup phase, configuration is stored for connectivity to the OpenShift cluster and usage report resources are created to enable the ongoing collection of usage data. 
+The Usage Collector is an Ansible playbook wrapped in a minimal script that performs setup and collecting tasks. During the setup phase, configuration is stored for connectivity to the OpenShift cluster and usage report resources are created to enable the ongoing collection of usage data.
 
 During the collection phase, usage data is retrieved from the Operator Metering endpoint and compressed into a package that is uploaded for processing by cost management via the Red Hat Insights Client.
 
@@ -47,9 +47,9 @@ To configure the Usage Collector, you need the following information:
 Use the following example, substituting values for your OpenShift API endpoint, Operator Metering namespace, metering-operator token file path, and Metering API endpoint:
 +
 ----
-# ./ocp_usage.sh --setup 
--e OCP_API="https://api.openshift-prod.mycompany.com"  
--e OCP_METERING_NAMESPACE="openshift-metering" 
+# ./ocp_usage.sh --setup
+-e OCP_API="https://api.openshift-prod.mycompany.com"
+-e OCP_METERING_NAMESPACE="openshift-metering"
 -e OCP_TOKEN_PATH="/path/to/ocp_usage_token"
 -e METERING_API="https://metering.metering.api.ocp.com”
 ----
@@ -69,7 +69,7 @@ ok: [localhost] => {
 ----
 ====
 +
-. Copy the cluster identifier to enter into the cloud.redhat.com *Sources* screen and click *Next*.
+. Copy the cluster identifier to enter into the {platform} *Sources* screen and click *Next*.
 +
 [NOTE]
 ====

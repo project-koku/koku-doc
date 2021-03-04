@@ -16,7 +16,7 @@ There are two procedures required when you configure basic authentication.
 .Prerequisites
 * You are logged into the OpenShift Container Platform web console with cluster administrator privileges.
 * The *Koku Metrics Operator* appears in the *Installed Operators* tab.
-* You have a username and password for your https://cloud.redhat.com[cloud.redhat.com] account.
+* You have a username and password for your {platform} account.
 
 
 .Procedure
@@ -38,7 +38,7 @@ basic-auth-secret
 ----
 username
 ----
-.. In the *Value* field for the username key, enter the actual username for your authorized https://cloud.redhat.com[cloud.redhat.com] user account.
+.. In the *Value* field for the username key, enter the actual username for your authorized {platform} user account.
 +
 .Key value example for username
 ----
@@ -51,7 +51,7 @@ RedHatUser
 ----
 password
 ----
-.. In the *Value* field for the password key, enter the actual password for your authorized https://cloud.redhat.com[cloud.redhat.com] user account.
+.. In the *Value* field for the password key, enter the actual password for your authorized {platform} user account.
 +
 .Key value example for password
 ----
