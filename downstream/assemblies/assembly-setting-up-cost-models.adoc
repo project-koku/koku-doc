@@ -1,0 +1,31 @@
+// This assembly is included in the following assemblies:
+//
+// using_cost_models/master.adoc
+
+
+//Retains the context of the parent assembly if this assembly is nested within another assembly.
+ifdef::context[:parent-context-of-assembly_setting-up-cost-models: {context}]
+
+
+ifndef::context[]
+[id="assembly_setting-up-cost-models"]
+endif::[]
+ifdef::context[]
+[id="assembly_setting-up-cost-models_{context}"]
+endif::[]
+= Setting up a cost model
+
+:context: setting-up-cost-models
+
+[role="_abstract"]
+This paragraph is the assembly introduction. It explains what the user will accomplish by working through the modules in the assembly and sets the context for the user story the assembly is based on. The text that immediately follows the `[role="_abstract"]` tag is used for search metadata.
+
+
+include::../modules/proc-creating-an-aws-azure-cost-model.adoc[leveloffset=+1]
+
+include::../modules/proc-creating-an-ocp-cost-model.adoc[leveloffset=+1]
+
+
+//Restore the context to what it was before this assembly.
+ifdef::parent-context-of-assembly_setting-up-cost-models[:context: {parent-context-of-assembly_setting-up-cost-models}]
+ifndef::parent-context-of-assembly_setting-up-cost-models[:!context:]

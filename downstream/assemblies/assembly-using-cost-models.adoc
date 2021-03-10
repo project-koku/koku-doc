@@ -1,0 +1,36 @@
+// This assembly is included in the following assemblies:
+//
+// using_cost_models/master.adoc
+
+ifdef::context[:parent-context-of-assembly_using_cost_models: {context}]
+
+ifndef::context[]
+[id="assembly_using-cost-models"]
+endif::[]
+ifdef::context[]
+[id="assembly_using-cost-models_{context}"]
+endif::[]
+
+= Using cost models
+:context: using-cost-models
+
+[role="_abstract"]
+You can use cost models in cost management to apply a price to usage in your hybrid cloud environment, then distribute the costs to resources.
+
+ifdef::cost[]
+
+include::../modules/note_bugzilla.adoc[leveloffset=+1]
+
+endif::cost[]
+
+
+include::../modules/con_what_is_a_cost_model.adoc[leveloffset=+1]
+
+include::../modules/ref_cost_model_terms.adoc[leveloffset=+1]
+
+include::../modules/con_cost_model_workflow.adoc[leveloffset=+1]
+
+
+// Restore the context to what it was before this assembly.
+ifdef::parent-context[:cost_models: {parent-context}]
+ifndef::parent-context[:!cost_models:]

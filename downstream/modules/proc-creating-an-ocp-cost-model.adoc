@@ -1,27 +1,24 @@
 // Module included in the following assemblies:
 //
-// assembly_using_cost_models.adoc
+// assembly-setting-up-cost-models.adoc
 
-// Base the file name and the ID on the module title.
-// * file name: creating_an_OCP_onprem_cost_model.adoc
-// * ID: [id="creating_an_OCP_onprem_cost_model"]
-// * Title: = Creating a cost model for an OpenShift Container Platform environment
 
-[id="creating_an_OCP_onprem_cost_model"]
+[id="proc-creating-an-ocp-cost-model_{context}"]
 = Creating a cost model for an OpenShift Container Platform cluster
 
 As metrics and inventory from OpenShift Container Platform sources do not have costs associated, you must create a cost model to associate a price to resources.
 
 This example shows an OpenShift cluster running on-premises, meaning that while your cluster is running on cloud infrastructure (for example, AWS or Azure), you are not managing the infrastructure yourself. The cloud infrastructure costs are seen in cost management as part of the cluster cost, so creating a cost model allows you to distribute the underlying infrastructure cost to OpenShift.
 
-Creating a cost model for an OpenShift source includes assigning prices for usage and requests, and applying a markup or discount to determine the total costs of your OpenShift infrastructure.
+Creating a cost model for an OpenShift source includes assigning prices for usage and requests, and applying a markup or discount to determine the total costs of your OpenShift infrastructure. You can also use tags to measure costs for specific parts of your infrastructure, such as various storage methods, giving you greater control over your individual requirements. See link:https://access.redhat.com/documentation/en-us/cost_management_service/2021/html-single/managing_cost_data_using_tagging/index[_Managing cost data using tagging_] for more information about tagging in cost management.
 
-You can assign your desired rates to *CPU*, *Memory*, *Node*, *Cluster*, or *Storage* metrics. You can set one rate per metric.
+You can assign your desired rates to *CPU*, *Memory*, *Node*, *Cluster*, *Storage*, or *Persistent volume claim* metrics. You can also set more than one rate per metric.
 
 This example shows how to design and apply a cost model to your OpenShift on-premises cluster to accurately reflect the costs of running the cluster, including:
 
 * How to account for monthly OpenShift cluster and node costs
 * How to assign rates to OpenShift metrics and usage
+* How to apply a tag-based rate
 * How to classify costs as _infrastructure_ or _supplementary_
 * How to apply a _markup_ against your _raw cost_ to get the _usage cost_
 
@@ -32,24 +29,34 @@ This example shows how to design and apply a cost model to your OpenShift on-pre
 
 .Procedure
 
-. From the *Cost models* menu, click *Create cost model* to open the cost model wizard.
-. Enter a name and description for the cost model, and select *OpenShift Container Platform* as the source type to apply the cost model to. Click *Next*.
+. From the *Cost Models* menu, click btn:[Create cost model] to open the cost model wizard.
+. Enter a name and description for the cost model, and select *OpenShift Container Platform* as the source type to apply the cost model to. Click btn:[Next].
+
 . Create a price list so you can assign rates to usage or requests. Cost management collects these metrics from OpenShift but there is no cost attached to them in cost management until you apply a cost model. You can also create your price list later.
 .. To apply a monthly node cost of $1,000:
-... Click *Add rate*.
+... Click btn:[Create rate].
 ... For *Metric*, select *Node*.
-... For *Measurement*, select *Price (node-month)*.
+... For *Measurement*, select *Count (node-month)*.
+... Cost management classifies node and cluster costs as _infrastructure costs_ by default. To change the cost type you are calculating, select it under *Calculation type*. See xref:cost-layers[] to learn more.
 ... In the *Rate* field, enter _1000_ to assign a $1,000 per  price to each node in the sources you select (in a later step).
-... Cost management classifies node and cluster costs as _infrastructure costs_ by default. To change the cost type you are calculating, use the toggle under *Rate*. See xref:cost-layers[] to learn more.
-... Click *Add rate* to save the node rate.
+... Click btn:[Create rate] to save the node rate.
 .. To apply a rate to CPU requests:
 ... For *Metric*, select *CPU*.
 ... For *Measurement*, select *Request (core-hours)*.
+... Cost management classifies metrics-based data such as CPU requests as _supplementary costs_ by default. To change the cost type you are calculating, select it under *Calculation type*. See xref:cost-layers[] to learn more.
 ... In the *Rate* field, enter _0.09_ to apply a $0.09 cost to each core-hour of CPU requests.
-... Cost management classifies metrics-based data such as CPU requests as _supplementary costs_ by default. To change the cost type you are calculating, use the toggle under *Rate*. See xref:cost-layers[] to learn more.
-... Click *Add rate* to save the CPU request rate.
-.. Add additional rates by repeating the previous steps, or click *Next* to finish configuring your price list.
-. If desired, set a markup or discount. To apply a 10% markup to the base costs of your resources, enter _10_ in the as the *Markup rate* and click *Next*.
+... Click btn:[Create rate] to save the CPU request rate.
+.. To apply tag-based rates to persistent volume claims:
+... Click btn:[Create rate].
+... For *Metric*, select *Persistent volume claims*.
+... For *Measurement*, select *Count (pvc-month)*.
+... Cost management classifies persistent volume claim costs as _infrastructure costs_ by default. To change the cost type you are calculating, select it under *Calculation type*. See xref:cost-layers[] to learn more.
+... Select *Enter rate by tag*.
+... Enter a tag key in *Filter by tag*.
+... Enter a *Tag value* and *Rate*. You can click btn:[Add more tags] to add as many tags as you require. You can also specify a default tag. 
+... Click btn:[Create rate] to save the persistent volume claim rates.
+.. Add additional rates by repeating the previous steps, or click btn:[Next] to finish configuring your price list.
+. If desired, set a markup or discount. To apply a 10% markup to the base costs of your resources, enter _10_ in the as the *Markup rate* and click btn:[Next].
 +
 [NOTE]
 ====
@@ -57,9 +64,9 @@ This example shows how to design and apply a cost model to your OpenShift on-pre
 * If you do not want to apply a markup or discount, enter _0_.
 ====
 +
-. Select one or multiple OpenShift sources to assign the cost model to and click *Next*. Selecting a source with a cost model already assigned will override its previous cost model. You can also assign sources to your cost model later.
-. Review the cost model details, and click *Create*.
-. Click *Close* to exit the cost model wizard.
+. Select one or multiple OpenShift sources to assign the cost model to and click btn:[Next]. Selecting a source with a cost model already assigned will override its previous cost model. You can also assign sources to your cost model later.
+. Review the cost model details, and click btn:[Create*].
+. Click btn:[Close] to exit the cost model wizard.
 
 Your new cost model will appear in the list on the *Cost models* page.
 
