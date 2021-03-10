@@ -13,4 +13,6 @@ include::attributes/cost.adoc[]
 
 :numbered:
 
-include::assemblies/assembly_using_cost_models.adoc[leveloffset=+1]
+include::assemblies/assembly-using-cost-models.adoc[leveloffset=+1]
+
+include::assemblies/assembly-setting-up-cost-models.adoc[leveloffset=+1]
