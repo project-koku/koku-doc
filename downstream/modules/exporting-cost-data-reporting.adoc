@@ -1,17 +1,13 @@
 // Module included in the following assemblies:
 //
-// assembly_managing_cost_data_tagging.adoc
+// assembly-viewing-and-exporting-your-cost-data.adoc
+:_module-type: PROCEDURE
+:experimental:
 
-// Base the file name and the ID on the module title. For example:
-// * file name: exporting_cost_data_reporting.adoc
-// * ID: [id="exporting_cost_data_reporting"]
-// * Title: = Exporting data by tag category
-
-// The ID is used as an anchor for linking to the module. Avoid changing it after the module has been published to ensure existing links are not broken.
-[id="exporting_cost_data_reporting_{context}"]
-// The `context` attribute enables module reuse. Every module's ID includes {context}, which ensures that the module has a unique ID even if it is reused multiple times in a guide.
+[id="exporting-cost-data-reporting_{context}"]
 = Exporting cost data to a reporting tool
 
+[role="_abstract"]
 Tags allow you to customize your view of cost data. This is useful when you want to investigate further why certain resources show an increase in cost, or data looks abnormal.
 
 This example shows how to view data for specific OpenShift resources, and export the data to your desired reporting tool.
@@ -20,7 +16,7 @@ This example shows how to view data for specific OpenShift resources, and export
 
 * Your OpenShift cluster added as a cost management data source. See link:https://access.redhat.com/documentation/en-us/cost_management_service/2021/html/getting_started_with_cost_management/assembly_koku_cost_management_installing[Adding an OpenShift Container Platform source to cost management] in _Getting started with cost management_ for instructions.
 * Your cloud infrastructure account added as a cost management data source. See link:https://access.redhat.com/documentation/en-us/cost_management_service/2021/html/getting_started_with_cost_management/index[Getting started with cost management] for instructions for your cloud provider type.
-* Configure tags on your sources. For tips and configuration instructions, see xref:assembly_configuring_tags_sources[].
+* Configure tags on your sources. For tips and configuration instructions, see xref:assembly-configuring-tags-sources_configuring-tags-and-labels[].
 
 .Procedure
 

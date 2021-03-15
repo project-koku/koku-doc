@@ -1,0 +1,14 @@
+// Module included in the following assemblies:
+//
+// assembly-configuring-tags-sources.adoc
+:_module-type: PROCEDURE
+:experimental:
+
+[id="adding-tags-to-an-Azure-resource_{context}"]
+= Adding tags to an Azure resource
+
+Adding an Azure source creates identifiers for virtual machine instances automatically, which cost management uses similarly to tags to associate Azure resources to related OpenShift resources.
+
+You can also add your own tags in Azure at the individual resource level.
+
+Create and apply Azure tags for cost management using the instructions in the Azure documentation: https://docs.microsoft.com/en-us/azure/azure-resource-manager/management/tag-resources[_Use tags to organize your Azure resources and management hierarchy_].

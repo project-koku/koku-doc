@@ -1,0 +1,21 @@
+// Module included in the following assemblies:
+//
+// assembly-using-cost-models.adoc
+:_module-type: CONCEPT
+:experimental:
+
+[id="what-is-a-cost-model_{context}"]
+
+= What is a cost model?
+
+[role="_abstract"]
+It can be difficult to find out the real cost of cloud-based IT systems. Different sources provide a variety of cost
+data and metrics, which can be complicated to calculate together and accurately distribute the costs.
+
+A cost model is a framework used to define the calculations for the costs stored in cost management. Using a cost model, you can associate a price to metrics provided by your
+sources to charge for utilization of resources.
+
+In some cases, those costs are related to the raw costs
+of the infrastructure, while others will be based on a price list that associates usage to costs. The
+data must be normalized before you can add a markup to it to cover your overhead,
+and then distribute the charges to your resources and/or end customers. It helps to align costs to utilization: those customers that use a resource more will be charged more.

@@ -10,7 +10,6 @@
 include::attributes/cost.adoc[]
 
 :cost:
-
 :numbered:
 
 
@@ -21,8 +20,6 @@ include::assemblies/assembly_limiting_access_cost_resources_rbac.adoc[leveloffse
 include::assemblies/assembly-adding-openshift-container-platform-source.adoc[leveloffset=+1]
 
 //include::assemblies/assembly-adding-cost-operator-on-restricted-network.adoc[leveloffset=+1]
-
-
 
 include::assemblies/assembly_adding_aws_sources.adoc[leveloffset=+1]
 

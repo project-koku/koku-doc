@@ -1,0 +1,28 @@
+// This assembly is included in the following assemblies:
+//
+// */master.adoc
+
+
+ifdef::context[:parent-context-of-assembly-viewing-and-exporting-your-cost-data: {context}]
+
+ifndef::context[]
+[id="assembly-viewing-and-exporting-your-cost-data"]
+endif::[]
+ifdef::context[]
+[id="assembly-viewing-and-exporting-your-cost-data_{context}"]
+endif::[]
+= Viewing and exporting your cost data
+:context: viewing-and-exporting-data
+
+
+include::../modules/filtering-cost-data-views.adoc[leveloffset=+1]
+
+include::../modules/grouping-cost-data-tag-category.adoc[leveloffset=+1]
+
+include::../modules/exporting-cost-data-reporting.adoc[leveloffset=+1]
+
+////
+Restore the context to what it was before this assembly.
+////
+ifdef::parent-context-of-assembly-viewing-and-exporting-your-cost-data[:context: {parent-context-of-assembly-viewing-and-exporting-your-cost-data}]
+ifndef::parent-context-of-assembly-viewing-and-exporting-your-cost-data[:!context:]

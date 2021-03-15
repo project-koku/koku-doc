@@ -1,7 +1,5 @@
 Getting started with cost management
 
-:context: getting_started
-
 [INTRO]
 C Introduction to cost management
 C About cost management
@@ -15,75 +13,102 @@ P Adding a role to a group
 
 [ADDING SOURCES]
 Adding sources
-A Adding an Amazon Web Services (AWS) source	
+A Adding an Amazon Web Services (AWS) source
 P -- Creating an S3 bucket for reporting
-P -- Activating tags for cost management 	
+P -- Activating tags for cost management
 P -- Enabling account access for cost and usage consumption
 
-A Adding a Microsoft Azure source	
-P -- Creating a storage account	
-P -- Creating a service principal	
-P -- Configuring a daily Azure data export schedule	
+A Adding a Microsoft Azure source
+P -- Creating a storage account
+P -- Creating a service principal
+P -- Configuring a daily Azure data export schedule
 
 A - Adding an OpenShift Container Platform source
 -- Prerequisites
-P -- Obtaining Metering Operator login credentials	
+P -- Obtaining Metering Operator login credentials
 P -- Downloading and configuring the Usage Collector
 P -- Uploading data with Usage Collector
 
-[CONFIGURING TAGGING]
-A Organizing cost data using tags
-C How cost management associates tags between sources
-C Adding a tag to an AWS resource	
-C Adding a tag to an Azure resource	
-C Adding a label to an OpenShift namespace	
+[Managing cost data using tagging]
+
+A - Managing cost data using tagging -
+*/assembly-managing-cost-data-tagging.adoc
+:context: tagging
+  C - Bugzilla link
+    - */note-bugzilla.adoc
+
+A - Planning your tagging strategy -
+*/assembly-planning-your-tagging-strategy.adoc
+:context: planning-your-tagging-strategy
+  C - Why use tags?
+    - */why-use-tags.adoc
+  C - Considerations for your tagging strategy
+    - */planning-tagging-strategy.adoc
+
+A - Configuring tags and labels in cost management -
+*/assembly-configuring-tags-and-labels-in-cost-management.adoc
+:context: configuring-tags-and-labels
+
+  C - How cost management associates tags
+    - */how-cost-associates-tags.adoc
+  A - Configuring tags on your sources -
+    - */assembly-configuring-tags-sources.adoc
+    :context: configuring-tags-sources
+      P - Adding tags to an AWS resource
+        - */adding-tags-to-an-AWS-resource.adoc
+      P - Adding tags to an Azure resource
+        - */adding-tags-to-an-Azure-resource.adoc
+      P - Viewing labels in an OpenShift namespace
+        - */adding_tags_to_an_OCP_resource.adoc
+      P - */enabling-tag-grouping-OCP.adoc
+
+A - Viewing and exporting your cost data -
+*/assembly-viewing-and-exporting-your-cost-data.adoc
+:context: viewing-and-exporting-data
+  P - Filtering your cost data view
+    - */filtering-cost-data-views.adoc
+  P - Grouping cost data by tag category
+    - */grouping-cost-data-tag-category.adoc
+  P - Exporting cost data to a reporting tool
+    - */exporting-cost-data-reporting.adoc
+
+A - Additional resources -
+*/assembly-additional-resources-tags.adoc
+:context: additional-resources-tags
+  R - Tag specifications by source type
+    - */tagging-specifications.adoc
+  R - Further reading
+    - */further-reading-tags.adoc
 
 
------
+[USING COST MODELS]
 
-Using cost models
+A - Using cost models -
+*/assembly-using-cost-models.adoc
+:context: using-cost-models
+  C - Bugzilla link
+    - */note-bugzilla.adoc
+  C - What is a cost model?
+    - */what-is-a-cost-model.adoc
+  R - Terminology
+    - */cost-model-terms.adoc
+  C - The cost model workflow
+    - */cost-model-workflow.adoc
 
-:context: cost_models
+A - Setting up a cost model -- */assembly-setting-up-cost-models.adoc
+:context: setting-up-cost-models
+  P - Creating an AWS cost model
+    - */creating-an-aws-azure-cost-model.adoc
+  P - Creating an OpenShift Container Platform cost model
+    - */creating-an-ocp-cost-model.adoc
 
-- Introduction
-A -- Document Scope       in assembly
 
-- How cost management uses cost models
-C - What is a cost model? 
-R -- Terminology 
-C - The cost model workflow 
-
-- Assigning a cost to metrics and usage using a cost model 
-P -- Creating an AWS cost model 
-P -- Creating an OpenShift Container Platform cost model 
-
------
-
-Exporting cost data using the API
-
+[Exporting cost data using the API]
 
 :context: exporting_api
 
 A - Introduction
-C - How the data export API works
-P - Exporting cost data to an AWS bucket
-P - Viewing previous data export requests
-R - Data export API parameters
-
-
-------
-
-Managing cost data using tagging
-
-:context: tagging
-
-MAP
-C  How cost management associates tags between sources
- --> Tag matching hierarchy
-C Designing your tagging strategy
-(P  Tagging in a multi-cluster environment)
-R Tag specifications by source type	
-Additional resources
-
-
-
+  C - How the data export API works
+  P - Exporting cost data to an AWS bucket
+  P - Viewing previous data export requests
+  R - Data export API parameters

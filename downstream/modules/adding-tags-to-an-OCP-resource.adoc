@@ -1,20 +1,13 @@
 // Module included in the following assemblies:
 //
-// assembly_organizing_cost_data_using_tags.adoc
+// assembly-configuring-tags-sources.adoc
+:_module-type: PROCEDURE
+:experimental:
 
-// Base the file name and the ID on the module title. For example:
-// * file name: adding_labels_to_an_OCP_namespace.adoc
-// * ID: [id="adding_labels_to_an_OCP_namespace"]
-// * Title: = Adding labels to an OpenShift namespace
-
-// The ID is used as an anchor for linking to the module. Avoid changing it after the module has been published to ensure existing links are not broken.
-[id="adding_labels_to_an_OCP_namespace"]
-// The `context` attribute enables module reuse. Every module's ID includes {context}, which ensures that the module has a unique ID even if it is reused multiple times in a guide.
+[id="adding-tags-to-an-OCP-resource_{context}"]
 = Viewing labels in an OpenShift namespace
-// Start the title of a procedure module with a verb, such as Creating or Create. See also _Wording of headings_ in _The IBM Style Guide_.
 
-// This paragraph is the procedure module introduction: a short description of the procedure.
-
+[role="_abstract"]
 The AWS or Azure tag equivalent in OpenShift is a label, which also consists of a key:value pair. Cost management collects OpenShift tag data from nodes, pods, and persistent volumes (or persistent volume claims) using Prometheus metrics and Operator Metering.
 
 // COST-571, only the collected tags are available. User cannot add more tags/labels. We do not want users adding tags using the OCP templates, which is why we struck that information. For the future, we are planning on supporting the namespace labels (part being removed) once the operator rework is done. So come next January we will likely be adding this section back.

@@ -1,0 +1,10 @@
+// Module included in the following assemblies:
+//
+// assembly-using-cost-models.adoc
+:_module-type: CONCEPT
+:experimental:
+
+[id="note-bugzilla_{context}"]
+
+[role="_abstract"]
+If you have a suggestion for improving this guide or have found an error, please submit a Bugzilla report at link:https://bugzilla.redhat.com/enter_bug.cgi?product=Cloud%20Software%20Services%20(cloud.redhat.com)&component=Cost%20Management[http://bugzilla.redhat.com] against _Cloud Software Services ({platform})_ for the *Cost Management* component.

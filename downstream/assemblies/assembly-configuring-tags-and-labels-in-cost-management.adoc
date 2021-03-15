@@ -1,0 +1,39 @@
+// This assembly is included in the following assemblies:
+//
+// */master.adoc
+
+ifdef::context[:parent-context-of-assembly-configuring-tags-and-labels-in-cost-management: {context}]
+
+ifndef::context[]
+[id="assembly-configuring-tags-and-labels-in-cost-management"]
+endif::[]
+ifdef::context[]
+[id="assembly-configuring-tags-and-labels-in-cost-management_{context}"]
+endif::[]
+
+= Configuring tags and labels in cost management
+:context: configuring-tags-and-labels
+
+[role="_abstract"]
+You must configure tags in each source before cost management can use the tags to automatically organize your cost data.
+
+After adding your sources to cost management:
+
+. Tag or label resources on each of your sources. See xref:assembly-configuring-tags-sources_configuring-tags-and-labels[].
+. (Optional) Enable OpenShift tag grouping to further organize your cost data views for each source. See xref:enabling-tag-grouping-OCP_configuring-tags-sources[].
+. Refine and add to your tags to optimize your view of cost data. See xref:planning-tagging-strategy_planning-your-tagging-strategy[].
+
+[NOTE]
+====
+See the link:https://access.redhat.com/documentation/en-us/cost_management_service/2021/html-single/getting_started_with_cost_management/index[_Getting started with cost management_] guide for instructions on configuring sources.
+====
+
+include::../modules/how-cost-associates-tags.adoc[leveloffset=+1]
+
+include::../assemblies/assembly-configuring-tags-sources.adoc[leveloffset=+1]
+
+////
+Restore the context to what it was before this assembly.
+////
+ifdef::parent-context-of-assembly-configuring-tags-and-labels-in-cost-management[:context: {parent-context-of-assembly-configuring-tags-and-labels-in-cost-management}]
+ifndef::parent-context-of-assembly-configuring-tags-and-labels-in-cost-management[:!context:]

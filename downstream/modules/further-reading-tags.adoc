@@ -1,0 +1,28 @@
+// Module included in the following assemblies:
+//
+// assembly-additional-resources-tags.adoc
+:_module-type: REFERENCE
+:experimental:
+
+[id="further-reading-tags_{context}"]
+= Further reading
+
+[role="_abstract"]
+The following links provide further guidance on tagging for each source type.
+
+*AWS:*
+
+* link:https://aws.amazon.com/answers/account-management/aws-tagging-strategies/[AWS tagging strategies]
+* link:https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_examples_iam-add-tag-user-role.html[IAM: Add a specific tag with specific values]
+
+*OpenShift:*
+
+* link:https://kubernetes.io/docs/concepts/overview/working-with-objects/labels/#syntax-and-character-set[Kubernetes labels and selectors]
+* link:https://github.com/kubernetes/kubernetes/blob/release-1.0/docs/user-guide/labels.md[Kubernetes user guide: labels]
+
+*Microsoft Azure:*
+
+* link:https://docs.microsoft.com/en-us/azure/architecture/cloud-adoption/decision-guides/resource-tagging/[Azure resource naming and tagging decision guide]
+* link:https://docs.microsoft.com/en-us/azure/architecture/best-practices/naming-conventions[Azure recommended naming and tagging conventions]
+* link:https://docs.microsoft.com/en-us/azure/azure-resource-manager/resource-group-using-tags[Use tags to organize your Azure resources and management hierarchy]
+* link:https://docs.microsoft.com/en-us/azure/governance/policy/samples/enforce-tag-on-resource-groups[Enforce tags in Azure resource groups]

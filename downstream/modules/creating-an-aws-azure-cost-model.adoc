@@ -1,11 +1,13 @@
 // Module included in the following assemblies:
 //
 // assembly-setting-up-cost-models.adoc
+:_module-type: PROCEDURE
+:experimental:
 
-[id="proc-creating-an-aws-azure-cost-model_{context}"]
-
+[id="creating-an-aws-azure-cost-model_{context}"]
 = Creating an Azure cost model
 
+[role="_abstract"]
 Since Microsoft Azure cost and usage data is collected into cost management with prices already assigned, you only need to assign a markup or discount (if desired) for your Azure sources.
 
 //.Prerequisites

@@ -1,0 +1,30 @@
+// This assembly is included in the following assemblies:
+//
+// */master.adoc
+
+ifdef::context[:parent-context-of-assembly-managing-cost-data-tagging: {context}]
+
+
+ifndef::context[]
+[id="assembly-managing-cost-data-tagging"]
+endif::[]
+ifdef::context[]
+[id="assembly-managing-cost-data-tagging_{context}"]
+endif::[]
+
+= Managing cost data using tagging
+:context: tagging
+
+[role="_abstract"]
+This guide explains in depth how tagging works in cost management, and how you can use tagging to best organize and view your resources to manage your costs.
+
+// For instructions on adding tags to AWS and OpenShift Container Platform resources, see [LINK TO GETTING STARTED GUIDE]
+
+ifdef::cost[]
+include::../modules/note-bugzilla.adoc[leveloffset=+1]
+endif::cost[]
+
+
+// Restore the context to what it was before this assembly.
+ifdef::parent-context-of-assembly-managing-cost-data-tagging[:context: {parent-context-of-assembly-managing-cost-data-tagging}]
+ifndef::parent-context-of-assembly-managing-cost-data-tagging[:!context:]
