@@ -2,13 +2,13 @@
 //
 // using_cost_models/master.adoc
 
-ifdef::context[:parent-context-of-assembly_using_cost_models: {context}]
+ifdef::context[:parent-context-of-assembly-using-cost-models: {context}]
 
 ifndef::context[]
-[id="assembly_using-cost-models"]
+[id="assembly-using-cost-models"]
 endif::[]
 ifdef::context[]
-[id="assembly_using-cost-models_{context}"]
+[id="assembly-using-cost-models_{context}"]
 endif::[]
 
 = Using cost models
@@ -19,18 +19,18 @@ You can use cost models in cost management to apply a price to usage in your hyb
 
 ifdef::cost[]
 
-include::../modules/note_bugzilla.adoc[leveloffset=+1]
+include::../modules/note-bugzilla.adoc[leveloffset=+1]
 
 endif::cost[]
 
 
-include::../modules/con_what_is_a_cost_model.adoc[leveloffset=+1]
+include::../modules/what-is-a-cost-model.adoc[leveloffset=+1]
 
-include::../modules/ref_cost_model_terms.adoc[leveloffset=+1]
+include::../modules/cost-model-terms.adoc[leveloffset=+1]
 
-include::../modules/con_cost_model_workflow.adoc[leveloffset=+1]
+include::../modules/cost-model-workflow.adoc[leveloffset=+1]
 
 
 // Restore the context to what it was before this assembly.
-ifdef::parent-context[:cost_models: {parent-context}]
-ifndef::parent-context[:!cost_models:]
+ifdef::parent-context-of-assembly-using-cost-models[:context: {parent-context-of-assembly-using-cost-models}]
+ifndef::parent-context-of-assembly-using-cost-models[:!context:]

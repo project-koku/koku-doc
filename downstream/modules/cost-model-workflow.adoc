@@ -1,17 +1,14 @@
 // Module included in the following assemblies:
 //
-// assembly_using_cost_models.adoc
+// assembly-using-cost-models.adoc
+:_module-type: CONCEPT
+:experimental:
 
-// Base the file name and the ID on the module title. For example:
-// * file name: con_cost_model_workflow.adoc
-// * ID: [id="con_cost_model_workflow"]
-// * Title: = The cost model workflow
+[id="cost-model-workflow_{context}"]
 
-// The ID is used as an anchor for linking to the module. Avoid changing it after the module has been published to ensure existing links are not broken.
-[id="con_cost_model_workflow"]
-// The `context` attribute enables module reuse. Every module's ID includes {context}, which ensures that the module has a unique ID even if it is reused multiple times in a guide.
 = The cost model workflow
 
+[role="_abstract"]
 The following diagram shows the cost model workflow that cost management uses to apply a price to metrics and inventory, normalize cost data from different sources, apply a markup (or discount), then distribute the costs across the relevant resources.
 
 The cost model also helps differentiate raw costs from the costs used in cost management.

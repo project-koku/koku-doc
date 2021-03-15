@@ -1,26 +1,26 @@
 // Module included in the following assemblies:
 //
 // assembly-setting-up-cost-models.adoc
+:_module-type: PROCEDURE
+:experimental:
 
-
-[id="proc-creating-an-ocp-cost-model_{context}"]
+[id="creating-an-ocp-cost-model_{context}"]
 = Creating a cost model for an OpenShift Container Platform cluster
 
+[role="_abstract"]
 As metrics and inventory from OpenShift Container Platform sources do not have costs associated, you must create a cost model to associate a price to resources.
 
-This example shows an OpenShift cluster running on-premises, meaning that while your cluster is running on cloud infrastructure (for example, AWS or Azure), you are not managing the infrastructure yourself. The cloud infrastructure costs are seen in cost management as part of the cluster cost, so creating a cost model allows you to distribute the underlying infrastructure cost to OpenShift.
+Creating a cost model for an OpenShift source includes assigning prices for usage and requests using *CPU*, *memory*, *node*, *cluster*, *storage*, or *persistent volume claim* metrics, and applying a markup or discount to determine the total costs of your OpenShift infrastructure. You can also use tags to measure costs for specific parts of your infrastructure, such as various storage methods, giving you greater control over your individual requirements. See link:https://access.redhat.com/documentation/en-us/cost_management_service/2021/html-single/managing_cost_data_using_tagging/index[_Managing cost data using tagging_] for more information about tagging in cost management.
 
-Creating a cost model for an OpenShift source includes assigning prices for usage and requests, and applying a markup or discount to determine the total costs of your OpenShift infrastructure. You can also use tags to measure costs for specific parts of your infrastructure, such as various storage methods, giving you greater control over your individual requirements. See link:https://access.redhat.com/documentation/en-us/cost_management_service/2021/html-single/managing_cost_data_using_tagging/index[_Managing cost data using tagging_] for more information about tagging in cost management.
+This example shows how to design and apply a cost model for an OpenShift Container Platform cluster running on-premises, meaning that while your cluster is running on cloud infrastructure (for example, AWS or Azure), you are not managing the infrastructure yourself. The cloud infrastructure costs are seen in cost management as part of the cluster cost, so creating a cost model allows you to distribute the underlying infrastructure cost to accurately reflect the costs of running the cluster.
 
-You can assign your desired rates to *CPU*, *Memory*, *Node*, *Cluster*, *Storage*, or *Persistent volume claim* metrics. You can also set more than one rate per metric.
-
-This example shows how to design and apply a cost model to your OpenShift on-premises cluster to accurately reflect the costs of running the cluster, including:
-
+////
 * How to account for monthly OpenShift cluster and node costs
 * How to assign rates to OpenShift metrics and usage
-* How to apply a tag-based rate
+* How to apply tag-based rates to persistent volume claims
 * How to classify costs as _infrastructure_ or _supplementary_
 * How to apply a _markup_ against your _raw cost_ to get the _usage cost_
+////
 
 .Prerequisites
 
@@ -50,10 +50,17 @@ This example shows how to design and apply a cost model to your OpenShift on-pre
 ... Click btn:[Create rate].
 ... For *Metric*, select *Persistent volume claims*.
 ... For *Measurement*, select *Count (pvc-month)*.
-... Cost management classifies persistent volume claim costs as _infrastructure costs_ by default. To change the cost type you are calculating, select it under *Calculation type*. See xref:cost-layers[] to learn more.
+... Cost management classifies persistent volume claim rates as _infrastructure costs_ by default. To change the cost type you are calculating, select it under *Calculation type*. See xref:cost-layers[] to learn more.
 ... Select *Enter rate by tag*.
 ... Enter a tag key in *Filter by tag*.
-... Enter a *Tag value* and *Rate*. You can click btn:[Add more tags] to add as many tags as you require. You can also specify a default tag. 
+... Enter a *Tag value* and *Rate*. You can select *Default* to specify a rate as default for that tag key.
++
+[NOTE]
+====
+* Specifying a default rate will apply that rate to all tag values for the corresponding tag key that are not defined. You can enter a rate of _0_ for any tag value that you do not want to have a rate applied to.
+====
++
+... Click btn:[Add more tags] to add as many tag values as you require.
 ... Click btn:[Create rate] to save the persistent volume claim rates.
 .. Add additional rates by repeating the previous steps, or click btn:[Next] to finish configuring your price list.
 . If desired, set a markup or discount. To apply a 10% markup to the base costs of your resources, enter _10_ in the as the *Markup rate* and click btn:[Next].
@@ -65,7 +72,7 @@ This example shows how to design and apply a cost model to your OpenShift on-pre
 ====
 +
 . Select one or multiple OpenShift sources to assign the cost model to and click btn:[Next]. Selecting a source with a cost model already assigned will override its previous cost model. You can also assign sources to your cost model later.
-. Review the cost model details, and click btn:[Create*].
+. Review the cost model details, and click btn:[Create].
 . Click btn:[Close] to exit the cost model wizard.
 
 Your new cost model will appear in the list on the *Cost models* page.
@@ -77,7 +84,7 @@ Your new cost model will appear in the list on the *Cost models* page.
 ** The number of sources assigned to the cost model
 ** The date the cost model was last modified
 +
-* To see more information or edit a cost model:
+* To see more information, assign, or edit a cost model:
 +
 ** From the *Cost models* summary page, click image:more-options.png[] (*more options*), then *View details* or *Delete* the cost model. From the *View details* option, you can edit the cost model, including source assignments, markup, and other settings.
 

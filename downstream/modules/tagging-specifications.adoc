@@ -1,21 +1,16 @@
 // Module included in the following assemblies:
 //
-// assembly_managing_cost_data_tagging.adoc
+// assembly-additional-resources-tags.adoc
+:_module-type: REFERENCE
+:experimental:
 
-// Base the file name and the ID on the module title. For example:
-// * file name: ref_tagging_specifications.adoc
-// * ID: [id="ref_tagging_specifications"]
-// * Title: = Tag specifications by source type
-
-// The ID is used as an anchor for linking to the module. Avoid changing it after the module has been published to ensure existing links are not broken.
-[id="ref_tagging_specifications"]
-// The `context` attribute enables module reuse. Every module's ID includes {context}, which ensures that the module has a unique ID even if it is reused multiple times in a guide.
-[[tag-specifications]]
+[id="tagging-specifications_{context}"]
 = Tag specifications by source type
 
+[role="_abstract"]
 Tagging standards differ between source types. To use the same tags/labels across sources, you must use the most common of all the restrictions across the different providers.
 
-The following table summarizes tagging and labelling criteria across AWS, Azure and OpenShift Container Platform 4: 
+The following table summarizes tagging and labelling criteria across AWS, Azure and OpenShift Container Platform 4:
 
 .Tagging specifications by source
 [options="header"]
@@ -51,6 +46,3 @@ Not all resource types support tags.
 |If the prefix is omitted, the label Key is presumed to be private to the user.
 
 |====
-
-
-

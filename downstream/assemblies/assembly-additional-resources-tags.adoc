@@ -1,0 +1,26 @@
+// This assembly is included in the following assemblies:
+//
+// */master.adoc
+
+ifdef::context[:parent-context-of-assembly-additional-resources-tags: {context}]
+
+ifndef::context[]
+[id="assembly-additional-resources-tags"]
+endif::[]
+ifdef::context[]
+[id="assembly-additional-resources-tags_{context}"]
+endif::[]
+
+= Additional resources
+:context: additional-resources-tags
+
+include::../modules/tagging-specifications.adoc[leveloffset=+1]
+
+include::../modules/further-reading-tags.adoc[leveloffset=+1]
+
+
+////
+Restore the context to what it was before this assembly.
+////
+ifdef::parent-context-of-assembly-additional-resources-tags[:context: {parent-context-of-assembly-additional-resources-tags}]
+ifndef::parent-context-of-assembly-additional-resources-tags[:!context:]

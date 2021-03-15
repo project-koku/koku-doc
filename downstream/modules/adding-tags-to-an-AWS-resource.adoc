@@ -1,17 +1,14 @@
 // Module included in the following assemblies:
 //
-// assembly_organizing_cost_data_using_tags.adoc
+// assembly-configuring-tags-sources.adoc
+:_module-type: PROCEDURE
+:experimental:
 
-// Base the file name and the ID on the module title. For example:
-// * file name: adding_tags_to_an_AWS_resource.adoc
-// * ID: [id="adding_tags_to_an_AWS_resource"]
-// * Title: = Adding tags to an AWS resource
 
-// The ID is used as an anchor for linking to the module. Avoid changing it after the module has been published to ensure existing links are not broken.
-[id="doing-one-procedure_{context}"]
-// The `context` attribute enables module reuse. Every module's ID includes {context}, which ensures that the module has a unique ID even if it is reused multiple times in a guide.
+[id="adding-tags-to-an-AWS-resource_{context}"]
 = Adding tags to an AWS resource
 
+[role="_abstract"]
 Amazon creates certain identifiers automatically, like the EC2 instance resource identifier (a number such as `i-123456789`), which cost management uses similarly to a tag.
 
 You can also add your own tags at the individual resource level. These tags must be activated for Cost and Usage Reporting to export them to the cost management application.

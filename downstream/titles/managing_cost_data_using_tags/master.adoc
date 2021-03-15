@@ -10,10 +10,16 @@
 include::attributes/cost.adoc[]
 
 :cost:
-
 :numbered:
 
-include::assemblies/assembly_managing_cost_data_tagging.adoc[leveloffset=+1]
+include::assemblies/assembly-managing-cost-data-tagging.adoc[leveloffset=+1]
+
+include::assemblies/assembly-planning-your-tagging-strategy.adoc[leveloffset=+1]
+
+include::assemblies/assembly-configuring-tags-and-labels-in-cost-management.adoc[leveloffset=+1]
+
+include::assemblies/assembly-viewing-and-exporting-your-cost-data.adoc[leveloffset=+1]
+
+include::assemblies/assembly-additional-resources-tags.adoc[leveloffset=+1]
 
 // Move from GSG? include::assemblies/assembly_organizing_cost_data_using_tags.adoc[leveloffset=+1]
-

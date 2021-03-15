@@ -1,17 +1,12 @@
 // Module included in the following assemblies:
 //
-// assembly_organizing_cost_data_using_tags.adoc
+// assembly-configuring-tags-sources.adoc
+:_module-type: PROCEDURE
+:experimental:
 
-// Base the file name and the ID on the module title. For example:
-// * file name: enabling_tag_grouping_OCP.adoc
-// * ID: [id="enabling_tag_grouping_OCP"]
-// * Title: = Enabling OpenShift tag grouping
 
-// The ID is used as an anchor for linking to the module. Avoid changing it after the module has been published to ensure existing links are not broken.
-[id="enabling_tag_grouping_OCP"]
-// The `context` attribute enables module reuse. Every module's ID includes {context}, which ensures that the module has a unique ID even if it is reused multiple times in a guide.
-[[enabling_tag_grouping_OCP]]
-= Enabling OpenShift tag grouping
+[id="enabling-tag-grouping-OCP_{context}"]
+== Enabling OpenShift tag grouping
 
 By default, cost management groups OpenShift cost data by cluster, node, and project on the *OpenShift details* page. Grouping data by tag key can be useful to further customize your view.
 

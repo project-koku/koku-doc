@@ -17,7 +17,7 @@ ifdef::context[:parent-context: {context}]
 // If the assembly is reused in other assemblies in a guide, include {context} in the ID: [id="a-collection-of-modules_{context}"].
 = Introduction to cost management
 //If the assembly covers a task, start the title with a verb in the gerund form, such as Creating or Configuring.
-:context: getting_started
+:context: getting-started
 // The `context` attribute enables module reuse. Every module's ID includes {context}, which ensures that the module has a unique ID even if it is reused multiple times in a guide.
 
 This document provides instructions to begin using cost management, including prerequisites and instructions for connecting your cloud environments, and configuring users and permissions.
@@ -26,7 +26,7 @@ After completing the setup described in this guide, you will be able to track co
 
 ifdef::cost[]
 
-include::../modules/note_bugzilla.adoc[leveloffset=+1]
+include::../modules/note-bugzilla.adoc[leveloffset=+1]
 
 endif::cost[]
 

@@ -1,17 +1,13 @@
 // Module included in the following assemblies:
 //
-// assembly_managing_cost_data_tagging.adoc
+// assembly-configuring-tags-and-labels-in-cost-management.adoc
+:_module-type: CONCEPT
+:experimental:
 
-// Base the file name and the ID on the module title. For example:
-// * file name: con_how_cost_associates_tags.adoc
-// * ID: [id="con_how_cost_associates_tags"]
-// * Title: = How cost management associates tags
-
-// The ID is used as an anchor for linking to the module. Avoid changing it after the module has been published to ensure existing links are not broken.
-[id="con_how_cost_associates_tags"]
-// The `context` attribute enables module reuse. Every module's ID includes {context}, which ensures that the module has a unique ID even if it is reused multiple times in a guide.
+[id="how-cost-associates-tags_{context}"]
 = How cost management associates tags
 
+[role="_abstract"]
 Tags in AWS and Azure and labels in OpenShift consist of key:value pairs. When the key:value pairs match, the AWS/Azure and OpenShift costs are automatically associated by cost management. Tag matching in cost management is not case sensitive: for example, an AWS resource tagged _APP_ and an OpenShift resource tagged _app_ are a match:
 
 
@@ -24,7 +20,7 @@ Tags in AWS and Azure and labels in OpenShift consist of key:value pairs. When t
 |====
 
 
-If an AWS resource tag matches with multiple OpenShift projects, the cost and usage of that resource are split evenly between the matched projects. 
+If an AWS resource tag matches with multiple OpenShift projects, the cost and usage of that resource are split evenly between the matched projects.
 
 Note that this is not the case with AWS compute resources that are matched via the instance ID-node relationship. In that case, cost and usage are broken down using information about a project’s resource consumption within the OpenShift cluster.
 
@@ -69,7 +65,7 @@ To use this tagging method to identify an OpenShift cluster, tag your AWS instan
 |OpenShift cluster|
 No tags needed. This will match if the name of the OpenShift source in cost management is  `dev-cluster`.
 
-|No tags needed. 
+|No tags needed.
 |====
 
 
@@ -88,5 +84,3 @@ You can use any key:value combination as tags, and cost management will associat
 
 
 //.Additional resources
-
-

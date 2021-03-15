@@ -1,18 +1,14 @@
 // Module included in the following assemblies:
 //
-// assembly_managing_cost_data_tagging.adoc
+// assembly-viewing-and-exporting-your-cost-data.adoc
+:_module-type: PROCEDURE
+:experimental:
 
-// Base the file name and the ID on the module title. For example:
-// * file name: grouping_cost_data_tag_category.adoc
-// * ID: [id="grouping_cost_data_tag_category"]
-// * Title: = Grouping cost data by tag category
-
-// The ID is used as an anchor for linking to the module. Avoid changing it after the module has been published to ensure existing links are not broken.
-[id="grouping_cost_data_tag_category{context}"]
-// The `context` attribute enables module reuse. Every module's ID includes {context}, which ensures that the module has a unique ID even if it is reused multiple times in a guide.
+[id="grouping-cost-data-tag-category_{context}"]
 = Grouping cost data by tag category
-// Start the title of a procedure module with a verb, such as Creating or Create. See also _Wording of headings_ in _The IBM Style Guide_.
 
+
+[role="_abstract"]
 You can group resources by tag category to further investigate your cost data.
 
 Grouping and filtering is useful for finding the root cause of a cost or problem, or investigating part of the environment that acts independently of the rest, such as a cost center or an specific environment.
@@ -25,8 +21,8 @@ This example shows how an educational course provider who is running a lab envir
 
 * Your OpenShift cluster added as a cost management data source. See link:https://access.redhat.com/documentation/en-us/cost_management_service/2021/html/getting_started_with_cost_management/assembly_koku_cost_management_installing[Adding an OpenShift Container Platform source to cost management] in _Getting started with cost management_ for instructions.
 * Your cloud infrastructure account added as a cost management data source. See link:https://access.redhat.com/documentation/en-us/cost_management_service/2021/html/getting_started_with_cost_management/index[Getting started with cost management] for instructions for your cloud provider type.
-* Configure tags on your sources. For tips and configuration instructions, see xref:assembly_configuring_tags_sources[].
-* OpenShift tag grouping enabled. See xref:enabling_tag_grouping_OCP[] for instructions.
+* Configure tags on your sources. For tips and configuration instructions, see xref:assembly-configuring-tags-sources_configuring-tags-and-labels[].
+* OpenShift tag grouping enabled. See xref:enabling-tag-grouping-OCP_configuring-tags-sources[] for instructions.
 
 .Procedure
 

@@ -1,0 +1,26 @@
+// This assembly is included in the following assemblies:
+//
+// */master.adoc
+
+ifdef::context[:parent-context-of-assembly-planning-your-tagging-strategy: {context}]
+
+ifndef::context[]
+[id="assembly-planning-your-tagging-strategy"]
+endif::[]
+ifdef::context[]
+[id="assembly-planning-your-tagging-strategy_{context}"]
+endif::[]
+
+
+= Planning your tagging strategy
+:context: planning-your-tagging-strategy
+
+include::../modules/why-use-tags.adoc[leveloffset=+1]
+
+include::../modules/planning-tagging-strategy.adoc[leveloffset=+1]
+
+////
+Restore the context to what it was before this assembly.
+////
+ifdef::parent-context-of-assembly-planning-your-tagging-strategy[:context: {parent-context-of-assembly-planning-your-tagging-strategy}]
+ifndef::parent-context-of-assembly-planning-your-tagging-strategy[:!context:]
