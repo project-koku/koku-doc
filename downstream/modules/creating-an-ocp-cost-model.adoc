@@ -12,7 +12,7 @@ As metrics and inventory from OpenShift Container Platform sources do not have c
 
 Creating a cost model for an OpenShift source includes assigning prices for usage and requests using *CPU*, *memory*, *node*, *cluster*, *storage*, or *persistent volume claim* metrics, and applying a markup or discount to determine the total costs of your OpenShift infrastructure. You can also use tags to measure costs for specific parts of your infrastructure, such as various storage methods, giving you greater control over your individual requirements. See link:https://access.redhat.com/documentation/en-us/cost_management_service/2021/html-single/managing_cost_data_using_tagging/index[_Managing cost data using tagging_] for more information about tagging in cost management.
 
-This example shows how to design and apply a cost model for an OpenShift Container Platform cluster running on-premises, meaning that while your cluster is running on cloud infrastructure (for example, AWS or Azure), you are not managing the infrastructure yourself. The cloud infrastructure costs are seen in cost management as part of the cluster cost, so creating a cost model allows you to distribute the underlying infrastructure cost to accurately reflect the costs of running the cluster.
+This example shows how to design and apply a cost model for an OpenShift Container Platform cluster on cloud infrastructure (for example, AWS or Azure). The cloud infrastructure costs are seen in cost management as part of the cluster cost, so creating a cost model allows you to distribute the underlying infrastructure cost to accurately reflect the costs of running the cluster.
 
 ////
 * How to account for monthly OpenShift cluster and node costs
@@ -25,7 +25,7 @@ This example shows how to design and apply a cost model for an OpenShift Contain
 .Prerequisites
 
 * A user with Cost Administrator or Cost Price List Administrator permissions. See link:https://access.redhat.com/documentation/en-us/cost_management_service/2021/html/getting_started_with_cost_management/assembly_limiting_access_cost_resources_rbac[Limiting access to cost management resources] in _Getting started with cost management_ for instructions on configuring user roles.
-* Your OpenShift cluster added as a cost management data source. See link:https://access.redhat.com/documentation/en-us/cost_management_service/2021/html/getting_started_with_cost_management/assembly_koku_cost_management_installing[Adding an OpenShift Container Platform source to cost management] in _Getting started with cost management_ for instructions.
+* Your OpenShift cluster added as a cost management data source. See link:https://access.redhat.com/documentation/en-us/cost_management_service/2021/html/getting_started_with_cost_management/assembly-adding-openshift-container-platform-source[Adding an OpenShift Container Platform source to cost management] in _Getting started with cost management_ for instructions.
 
 .Procedure
 
@@ -57,7 +57,7 @@ This example shows how to design and apply a cost model for an OpenShift Contain
 +
 [NOTE]
 ====
-* Specifying a default rate will apply that rate to all tag values for the corresponding tag key that are not defined. You can enter a rate of _0_ for any tag value that you do not want to have a rate applied to.
+* Specifying a default rate will apply that rate to all tag values for the corresponding tag key that are not defined. You can enter a rate of _0_ for any tag value that you do not want a rate applied to.
 ====
 +
 ... Click btn:[Add more tags] to add as many tag values as you require.
@@ -86,6 +86,10 @@ Your new cost model will appear in the list on the *Cost models* page.
 +
 * To see more information, assign, or edit a cost model:
 +
-** From the *Cost models* summary page, click image:more-options.png[] (*more options*), then *View details* or *Delete* the cost model. From the *View details* option, you can edit the cost model, including source assignments, markup, and other settings.
-
+** From the *Cost models* summary page, click a cost model name to bring up the details page where you can edit the cost model, including source assignments, price list, markup, and other Settings.
++
+* To delete a cost model:
++
+** From the *Cost models* summary page, click image:more-options.png[] (*more options*), then *Delete*.
+.
 * Review your tags and tagging strategy to ensure that costs are being distributed to the correct resources, cost centers, or teams. See link:https://access.redhat.com/documentation/en-us/cost_management_service/2021/html-single/managing_cost_data_using_tagging/index[_Managing cost data using tagging_] for more information.

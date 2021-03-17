@@ -1,0 +1,49 @@
+// This assembly is included in the following assemblies:
+//
+// */exporting_data_using_api/master.adoc
+
+ifdef::context[:parent-context-of-assembly-exporting-cost-data-api: {context}]
+
+ifndef::context[]
+[id="assembly-exporting-cost-data-api"]
+endif::[]
+ifdef::context[]
+[id="assembly-exporting-cost-data-api_{context}"]
+endif::[]
+
+= Exporting cost data using the API
+:context: export-using-api
+
+[role="_abstract"]
+You can use the cost management data export request API to obtain cost data for your sources, including information about usage, tags, cost model assignments, and more.
+
+You can then use the exported cost data with your external business integration tools to generate custom reports, and to view and compare your data in additional ways to those provided by the cost management application.
+
+The API also allows you to view historical cost data beyond what is available to view in the cost management user interface, back to the date a source was originally added to cost management. (Currently, the cost management user interface shows the previous 2-3 months of data).
+
+// Does this also allow the user to obtain historical cost data that is not shown in the Koku graphs?
+
+This guide provides instructions for using the API to export your cost data.
+
+ifdef::cost[]
+
+include::../modules/note_bugzilla.adoc[leveloffset=+1]
+
+endif::cost[]
+
+
+include::../modules/con_export_API_how_it_works.adoc[leveloffset=+1]
+
+//include::../modules/configuring_AWS_bucket_for_API.adoc[]
+
+include::../modules/exporting_cost_data_AWS_bucket.adoc[leveloffset=+1]
+
+include::../modules/viewing_data_export_requests.adoc[leveloffset=+1]
+
+
+include::../modules/ref_data_export_API_parameters.adoc[leveloffset=+1]
+
+
+// Restore the context to what it was before this assembly.
+ifdef::parent-context-of-assembly-exporting-cost-data-api[:context: {parent-context-of-assembly-exporting-cost-data-api}]
+ifndef::parent-context-of-assembly-exporting-cost-data-api[:!context:]

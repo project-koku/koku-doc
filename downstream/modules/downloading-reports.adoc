@@ -1,6 +1,8 @@
 // Module included in the following assemblies:
 //
-// <List assemblies here, each on a new line>
+// assembly-adding-a-restricted-network-source.adoc
+:_module-type: PROCEDURE
+:experimental:
 
 [id="proc_downloading-reports_{context}"]
 = Downloading cost reports

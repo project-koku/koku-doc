@@ -1,11 +1,12 @@
 // Module included in the following assemblies:
 // assembly_adding_azure_sources.adoc
-[id="creating_an_azure_storage_account"]
-[[creating_an_azure_storage_account]]
+:_module-type: PROCEDURE
+:experimental:
+
+[id="creating-an-azure-storage-account_{context}"]
 == Creating an Azure resource group and storage account
 
-// The URL for this procedure needs to go in the UI code in the Sources dialog.
-
+[role="_abstract"]
 Cost export data is written to a storage account, which exists within a resource group. The resource group must be accessible by cost management in order to read the Azure cost data.
 
 Create a new storage account in Azure to contain the cost data and metrics that cost management will collect. This requires a resource group; Red Hat recommends creating a dedicated resource group for this storage account.

@@ -1,7 +1,20 @@
-[id="adding_an_aws_source"]
+// This assembly is included in the following assemblies:
+//
+// */getting_started/master.adoc
+
+ifdef::context[:parent-context-of-assembly-adding-aws-sources: {context}]
+
+ifndef::context[]
+[id="assembly-adding-aws-sources"]
+endif::[]
+ifdef::context[]
+[id="assembly-adding-aws-sources_{context}"]
+endif::[]
+
 = Adding an Amazon Web Services (AWS) source to cost management
+:context: adding-aws-sources
 
-
+[role="_abstract"]
 To add an AWS account to cost management, you must configure your AWS account to provide metrics, then add your AWS account as a source from the cost management user interface.
 
 [NOTE]
@@ -30,11 +43,17 @@ https://cloud.redhat.com/settings/sources/.
 ====
 As non-Red Hat products and documentation can change without notice, instructions for configuring the third-party sources provided in this guide are general and correct at the time of publishing. See the link:https://docs.aws.amazon.com/[AWS documentation] for the most up-to-date and accurate information.
 ====
-include::../modules/creating_an_aws_s3_bucket.adoc[]
 
-include::../modules/activating_aws_tags.adoc[]
+include::../modules/creating-an-aws-s3-bucket.adoc[leveloffset=+1]
 
-include::../modules/enabling_aws_account_access.adoc[]
+include::../modules/activating-aws-tags.adoc[leveloffset=+1]
 
+include::../modules/enabling-aws-account-access.adoc[leveloffset=+1]
+
+include::../modules/enabling-additional-aws-account-access.adoc[leveloffset=+1]
 
 You have completed adding your AWS account as a source.
+
+// Restore the context to what it was before this assembly.
+ifdef::parent-context-of-assembly-adding-aws-sources[:context: {parent-context-of-assembly-adding-aws-sources}]
+ifndef::parent-context-of-assembly-adding-aws-sources[:!context:]

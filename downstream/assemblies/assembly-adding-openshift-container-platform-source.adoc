@@ -1,25 +1,23 @@
 // This assembly is included in the following assemblies:
 //
-// <List assemblies here, each on a new line>
+// */getting_started/master.adoc
 
-// Retains the context of the parent assembly if this assembly is nested within another assembly.
-// For more information about nesting assemblies, see: https://redhat-documentation.github.io/modular-docs/#nesting-assemblies
-// See also the complementary step on the last line of this file.
-ifdef::context[:parent-context: {context}]
+ifdef::context[:parent-context-of-assembly-adding-openshift-container-platform-source: {context}]
 
-// Base the file name and the ID on the module title. For example:
-// * file name: assembly_introduction_cost_management.adoc
-// * ID: [id="assembly_introduction_cost_management"]
-// * Title: = Introduction to cost management
+ifndef::context[]
+[id="assembly-adding-openshift-container-platform-source"]
+endif::[]
+ifdef::context[]
+[id="assembly-adding-openshift-container-platform-source_{context}"]
+endif::[]
 
-// The ID is used as an anchor for linking to the module. Avoid changing it after the module has been published to ensure existing links are not broken.
-[id="assembly_koku_cost_management_installing"]
-// If the assembly is reused in other assemblies in a guide, include {context} in the ID: [id="a-collection-of-modules_{context}"].
 = Adding an OpenShift Container Platform source to cost management
-//If the assembly covers a task, start the title with a verb in the gerund form, such as Creating or Configuring.
+:context: adding-an-ocp-source
+
+[role="_abstract"]
 To support cost management in Red{nbsp}Hat OpenShift Container Platform 4.5 and more recent versions, a new community operator is introduced, `koku-metrics-operator`.
 
-The community `cost-mgmt-operator` supported in OpenShift Container Platform 4.3 and 4.4 is deprecated. Though this cost operator functions with cost management in OpenShift Container Platform 4.5 or later, it is no longer supported. For installing this deprecated operator, see xref:assembly_adding_ocp_sources[].
+//The community `cost-mgmt-operator` supported in OpenShift Container Platform 4.3 and 4.4 is deprecated. Though this cost operator functions with cost management in OpenShift Container Platform 4.5 or later, it is no longer supported. For installing this deprecated operator, see xref:assembly-adding-ocp-sources[].
 
 To avoid gaps in your cost management data, you can wait 24 to 48 hours before removing `cost-mgmt-operator` while you verify that `koku-metrics-operator` provides cost management reports.
 
@@ -34,8 +32,7 @@ include::../modules/proc_basic-authentication.adoc[leveloffset=+1]
 include::../modules/proc_creating-an-openshift-container-platform-source-manually.adoc[leveloffset=+1]
 
 include::assembly-adding-a-restricted-network-source.adoc[leveloffset=+1]
-/////
+
 // Restore the context to what it was before this assembly.
-ifdef::parent-context[:context: {parent-context}]
-ifndef::parent-context[:!context:]
-/////
+ifdef::parent-context-of-assembly-adding-openshift-container-platform-source[:context: {parent-context-of-assembly-adding-openshift-container-platform-source}]
+ifndef::parent-context-of-assembly-adding-openshift-container-platform-source[:!context:]

@@ -1,0 +1,20 @@
+// Module included in the following assemblies:
+//
+// assembly-adding-aws-sources.adoc
+:_module-type: PROCEDURE
+:experimental:
+
+[id="activating-aws-tags_{context}"]
+= Activating AWS tags for cost management
+
+[role="_abstract"]
+To use tags to organize your AWS resources in the cost management application, activate your tags in AWS to allow them to be imported automatically.
+
+//.Prerequisites
+
+.Procedure
+
+. In the AWS Billing console:
+.. Open the _Cost Allocation Tags_ section.
+.. Select the tags you want to use in the cost management application, and click *Activate*.
+. In the {platform} *Sources* wizard, click *Next* to move to the next screen.

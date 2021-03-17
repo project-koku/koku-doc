@@ -1,0 +1,36 @@
+// This assembly is included in the following assemblies:
+//
+// */getting_started/master.adoc
+
+ifdef::context[:parent-context-of-assembly-introduction-cost-management: {context}]
+
+ifndef::context[]
+[id="assembly-introduction-cost-management"]
+endif::[]
+ifdef::context[]
+[id="assembly-introduction-cost-management_{context}"]
+endif::[]
+ifdef::context[:parent-context: {context}]
+
+= Introduction to cost management
+:context: getting-started
+
+[role="_abstract"]
+This document provides instructions to begin using cost management, including prerequisites and instructions for connecting your cloud environments, and configuring users and permissions.
+
+After completing the setup described in this guide, you will be able to track cost and usage data for your Amazon Web Services (AWS), Microsoft Azure, and OpenShift Container Platform environments.
+
+ifdef::cost[]
+
+include::../modules/note-bugzilla.adoc[leveloffset=+1]
+
+endif::cost[]
+
+include::../modules/con_about_cost_management.adoc[leveloffset=+1]
+
+include::../modules/con_planning_cost_management.adoc[leveloffset=+1]
+
+
+// Restore the context to what it was before this assembly.
+ifdef::parent-context-of-assembly-introduction-cost-management[:context: {parent-context-of-assembly-introduction-cost-management}]
+ifndef::parent-context-of-assembly-introduction-cost-management[:!context:]

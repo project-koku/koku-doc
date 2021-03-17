@@ -1,0 +1,44 @@
+// This assembly is included in the following assemblies:
+//
+// */getting_started/master.adoc
+
+ifdef::context[:parent-context-of-assembly-adding-azure-sources: {context}]
+
+ifndef::context[]
+[id="assembly-adding-azure-sources"]
+endif::[]
+ifdef::context[]
+[id="assembly-adding-azure-sources_{context}"]
+endif::[]
+
+= Adding a Microsoft Azure source to cost management
+:context: adding-an-azure-source
+
+[role="_abstract"]
+Configure your Microsoft Azure account to allow cost management access.
+
+Configuring your Azure account to be a cost management source requires:
+
+. Creating a storage account and resource group
+. Configuring a Storage Account Contributor and Reader roles for access
+. Scheduling daily cost exports
+
+[NOTE]
+====
+As non-Red Hat products and documentation can change without notice, instructions for configuring the third-party sources provided in this guide are general and correct at the time of publishing. See the https://docs.microsoft.com/en-us/azure/[Microsoft Azure documentation] for the most up-to-date and accurate information.
+====
+
+Add your Azure source to cost management from
+https://cloud.redhat.com/settings/sources/.
+
+
+include::../modules/creating-an-azure-storage-account.adoc[leveloffset=+1]
+
+include::../modules/configuring-azure-roles.adoc[leveloffset=+1]
+
+include::../modules/configuring-an-azure-daily-export-schedule.adoc[leveloffset=+1]
+
+
+// Restore the context to what it was before this assembly.
+ifdef::parent-context-of-assembly-adding-azure-sources[:context: {parent-context-of-assembly-adding-azure-sources}]
+ifndef::parent-context-of-assembly-adding-azure-sources[:!context:]

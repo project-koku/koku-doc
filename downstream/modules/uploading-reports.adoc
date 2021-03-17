@@ -1,7 +1,8 @@
 // Module included in the following assemblies:
 //
-// <List assemblies here, each on a new line>
-
+// assembly-adding-a-restricted-network-source.adoc
+:_module-type: PROCEDURE
+:experimental:
 
 
 [id="proc_uploading-reports_{context}"]
@@ -18,7 +19,7 @@ The default configuration saves one week of reports. Therefore, download the rep
 .Prerequisites
 
 * `koku-metrics-operator` reports downloaded locally.
-* Source created on {platform}, see xref:proc_creating-an-openshift-container-platform-source-manually_{context}[].
+* Source created on {platform}, see xref:proc_creating-an-openshift-container-platform-source-manually_adding-an-ocp-source[].
 * Red Hat account user with Organization Administrator entitlements.
 * Workstation with unrestricted network access.
 

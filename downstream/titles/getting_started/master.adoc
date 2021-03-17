@@ -13,27 +13,21 @@ include::attributes/cost.adoc[]
 :numbered:
 
 
-include::assemblies/assembly_introduction_cost_management.adoc[leveloffset=+1]
+include::assemblies/assembly-introduction-cost-management.adoc[leveloffset=+1]
 
-include::assemblies/assembly_limiting_access_cost_resources_rbac.adoc[leveloffset=+1]
+include::assemblies/assembly-limiting-access-cost-resources-rbac.adoc[leveloffset=+1]
 
 include::assemblies/assembly-adding-openshift-container-platform-source.adoc[leveloffset=+1]
 
 //include::assemblies/assembly-adding-cost-operator-on-restricted-network.adoc[leveloffset=+1]
 
-include::assemblies/assembly_adding_aws_sources.adoc[leveloffset=+1]
+include::assemblies/assembly-adding-aws-sources.adoc[leveloffset=+1]
 
-include::assemblies/assembly_adding_azure_sources.adoc[leveloffset=+1]
+include::assemblies/assembly-adding-azure-sources.adoc[leveloffset=+1]
 
-//Old chapter assembly
-//include::assemblies/assembly_adding_sources_cost.adoc[leveloffset=+1]
+include::assemblies/assembly-adding-gcp-sources.adoc[leveloffset=+1]
 
+//This assembly is about the deprecated operator
+include::assemblies/assembly-adding-ocp-sources.adoc[leveloffset=+1]
 
-
-//new assembly for cost metric on a restricted network
-//include::assemblies/assembly-adding-cost-operator-on-restricted-network.adoc[leveloffset=+1]
-
-//This assembly is about the deprecated operator -now another title
-include::assemblies/assembly_adding_ocp_sources.adoc[leveloffset=+1]
-
-include::assemblies/assembly_cost_management_next_steps.adoc[leveloffset=+1]
+include::assemblies/assembly-cost-management-next-steps.adoc[leveloffset=+1]

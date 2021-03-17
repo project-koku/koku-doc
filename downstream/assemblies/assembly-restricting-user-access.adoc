@@ -1,14 +1,20 @@
-[id="assembly_restricting_user_access"]
+// This assembly is included in the following assemblies:
+//
+// */getting_started/master.adoc
+
+ifdef::context[:parent-context-of-assembly-restricting-user-access: {context}]
+
+ifndef::context[]
+[id="assembly-restricting-user-access"]
+endif::[]
+ifdef::context[]
+[id="assembly-restricting-user-access_{context}"]
+endif::[]
+
 = Restricting User Access to Cost Data
+:context: restricting-access
 
-////
-WIP structure
-- intro
-- prerequisites (admin access, which users) (is prereqs a concept module?)
-- procedures - user, role, group, etc
-- ref - what the user roles mean
-////
-
+[role="_abstract"]
 In certain cases, you may not want users to have access to all cost data, but instead only data specific to their projects or organization. Using role-based access control, you can limit the visibility of resources involved in cost management reports.
 
 Role-based access control works by organizing users into groups, which can be associated with one or more policies. A policy associates a group with a set of roles. A role defines a permission and a set of resource definitions.
@@ -47,3 +53,6 @@ Reports involving OpenShift Container Platform running on Amazon Web Services re
 
 include::../modules/con_access_management.adoc[leveloffset=+1]
 
+// Restore the context to what it was before this assembly.
+ifdef::parent-context-of-assembly-restricting-user-access[:context: {parent-context-of-assembly-restricting-user-access}]
+ifndef::parent-context-of-assembly-restricting-user-access[:!context:]

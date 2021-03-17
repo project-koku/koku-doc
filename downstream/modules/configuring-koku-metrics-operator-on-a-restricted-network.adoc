@@ -1,6 +1,8 @@
 // Module included in the following assemblies:
 //
-// <List assemblies here, each on a new line>
+// assembly-adding-a-restricted-network-source.adoc
+:_module-type: PROCEDURE
+:experimental:
 
 [id="proc_configuring-koku-metrics-operator-on-a-restricted-network_{context}"]
 = Configuring Koku Metrics Operator on a restricted network

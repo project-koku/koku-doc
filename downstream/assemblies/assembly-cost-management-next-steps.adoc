@@ -1,15 +1,20 @@
 // This assembly is included in the following assemblies:
 //
-// master.adoc
+// */getting_started/master.adoc
 
-ifdef::context[:parent-context: {context}]
+ifdef::context[:parent-context-of-assembly-cost-management-next-steps: {context}]
 
-[id="assembly_cost_management_next_steps"]
-// If the assembly is reused in other assemblies in a guide, include {context} in the ID: [id="a-collection-of-modules_{context}"].
+ifndef::context[]
+[id="assembly-cost-management-next-steps"]
+endif::[]
+ifdef::context[]
+[id="assembly-cost-management-next-steps_{context}"]
+endif::[]
+
 = Next steps for managing your costs
-:context: assembly-keyword
-// The `context` attribute enables module reuse. Every module's ID includes {context}, which ensures that the module has a unique ID even if it is reused multiple times in a guide.
+:context: next-steps
 
+[role="_abstract"]
 After adding your infrastructure and cloud sources, in addition to showing cost data by source, cost management will automatically show AWS and Azure cost and usage related to running your OpenShift Container Platform clusters on AWS or Azure.
 
 On the cost management *Overview* page, use the *Perspective* options for different views of your cost data.
@@ -50,6 +55,5 @@ From the link:https://cloud.redhat.com/cost-management/cost-models[Cost models] 
 
 
 // Restore the context to what it was before this assembly.
-ifdef::parent-context[:context: {parent-context}]
-ifndef::parent-context[:!context:]
-//
+ifdef::parent-context-of-assembly-cost-management-next-steps[:context: {parent-context-of-assembly-cost-management-next-steps}]
+ifndef::parent-context-of-assembly-cost-management-next-steps[:!context:]
