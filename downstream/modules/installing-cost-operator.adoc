@@ -5,7 +5,7 @@
 :experimental:
 
 [id="installing-cost-operator_{context}"]
-= Installing the Koku metrics operator
+= Installing the cost operator
 
 [role="_abstract"]
 Install the Koku operator `koku-metrics-operator` from the OpenShift Container Platform web console.
