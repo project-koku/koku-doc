@@ -1,17 +1,13 @@
 // Module included in the following assemblies:
 //
-// assembly_using_cost_models.adoc
+// assembly-adding-openshift-container-platform-source.adoc
+:_module-type: CONCEPT
+:experimental:
 
-// Base the file name and the ID on the module title. For example:
-// * file name: con_cost_model_workflow.adoc
-// * ID: [id="con_cost_model_workflow"]
-// * Title: = The cost model workflow
-
-// The ID is used as an anchor for linking to the module. Avoid changing it after the module has been published to ensure existing links are not broken.
-[id="proc_installation-overview-ocp45"]
-// The `context` attribute enables module reuse. Every module's ID includes {context}, which ensures that the module has a unique ID even if it is reused multiple times in a guide.
+[id="installation-overview_{context}"]
 = Installation tasks summary
 
+[role="_abstract"]
 Whether you are replacing a prior cost management operator with the Koku metrics operator or installing it for the first time, the basic tasks are the same.
 
 Operator installation, configuration, and source management can all be performed from the OpenShift Container Platform web console.

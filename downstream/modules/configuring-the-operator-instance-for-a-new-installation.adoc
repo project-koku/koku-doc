@@ -1,0 +1,40 @@
+// Module included in the following assemblies:
+//
+// assembly-adding-openshift-container-platform-source.adoc
+:_module-type: PROCEDURE
+:experimental:
+
+
+[id="configuring-the-operator-instance-for-a-new-installation_{context}"]
+= Configuring the operator instance for a new installation
+
+[role="_abstract"]
+Use the OpenShift Container Platform web console to configure the `koku-metrics-operator` instance after it is installed.
+
+.Prerequisites
+* You are logged into the OpenShift Container Platform web console with cluster administrator privileges.
+* The *Koku Metrics Operator* appears in the *Installed Operators* tab.
+
+.Procedure
+
+. Under the *Name* heading in the list of installed operators, click the *KokuMetricsOperator* link. The *Installed Operators > Operator Details* window appears for *Koku Metrics Operator*.
+. In the *Details* window, click *+{nbsp}Create Instance*.
+. A *Koku Metrics Operator > Create KokuMetricsConfig* window appears.
+. Click the *YAML view* radio button to view and modify the contents of the YAML configuration file.
+. When you create a new cost management instance for the Koku metrics operator, make the following modifications in the YAML configuration file.
+. Locate the following two lines in the YAML file.
++
+----
+    create_source: false
+    name: INSERT-SOURCE-NAME
+----
++
+.. Change `false` to `true`.
+.. Change `INSERT-SOURCE-NAME` to the new name of your source.
++
+.Example
+----
+    create_source: true
+    name: koku-cost-source
+----
+. Click the *Create* button. These actions create a new source for cost management that will appear in the {platform} cost management application.

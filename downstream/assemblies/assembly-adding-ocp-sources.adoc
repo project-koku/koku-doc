@@ -46,10 +46,10 @@ As you will complete some of the following steps in OpenShift Container Platform
 
 
 
-include::../modules/installing_cost_mgmt-operator.adoc[]
+include::../modules/installing-cost-mgmt-operator.adoc[]
 
 
-include::../modules/configuring_cost_mgmt-operator.adoc[]
+include::../modules/configuring-cost-mgmt-operator.adoc[]
 
 
 

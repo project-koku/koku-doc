@@ -6,7 +6,7 @@
 
 
 [id="configuring-azure-roles_{context}"]
-== Configuring Azure roles
+= Configuring Azure roles
 
 [role="_abstract"]
 Red Hat recommends configuring dedicated credentials to grant cost management read-only access to Azure cost data.  Configure a Storage Account Contributor and Reader role in Azure to provide this access to cost management.

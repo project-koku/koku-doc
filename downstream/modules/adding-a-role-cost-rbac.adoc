@@ -1,17 +1,13 @@
 // Module included in the following assemblies:
 //
-// assembly_cost_limiting_access_rbac.adoc
+// assembly-cost-limiting-access-rbac.adoc
+:_module-type: PROCEDURE
+:experimental:
 
-// Base the file name and the ID on the module title. For example:
-// * file name: adding_a_role_cost_rbac.adoc
-// * ID: [id="adding_a_role_cost_rbac"]
-// * Title: = Adding a role
-
-// The ID is used as an anchor for linking to the module. Avoid changing it after the module has been published to ensure existing links are not broken.
-[id="adding_a_role_cost_rbac"]
-// The `context` attribute enables module reuse. Every module's ID includes {context}, which ensures that the module has a unique ID even if it is reused multiple times in a guide.
+[id="adding-a-role-cost-rbac_{context}"]
 = Adding a role
 
+[role="_abstract"]
 Create a new role to manage and limit the scope of information that users can see within cost management.
 
 .Prerequisites

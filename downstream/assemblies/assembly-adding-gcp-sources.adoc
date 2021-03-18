@@ -44,6 +44,16 @@ https://cloud.redhat.com/settings/sources/.
 As non-Red Hat products and documentation can change without notice, instructions for configuring the third-party sources provided in this guide are general and correct at the time of publishing. See the link:gcpdocumentation for the most up-to-date and accurate information.
 ====
 
+include::../modules/creating-a-project-gcp.adoc[leveloffset=+1]
+
+include::../modules/enabling-account-access-gcp.adoc[leveloffset=+1]
+
+include::../modules/creating-a-dataset-gcp.adoc[leveloffset=+1]
+
+include::../modules/exporting-billing-data-gcp.adoc[leveloffset=+1]
+
+
+
 ////
 Restore the context to what it was before this assembly.
 ////

@@ -1,7 +1,13 @@
+// Module included in the following assemblies:
+//
+// assembly-adding-openshift-container-platform-source.adoc
+:_module-type: PROCEDURE
+:experimental:
 
-[id="proc_basic-authentication"]
+[id="basic-authentication_{context}"]
 = Configuring basic authentication for cost operator
 
+[role="_abstract"]
 You can configure the cost operator to use basic authentication. By default, the cost operator uses token authentication.
 
 There are two procedures required when you configure basic authentication.

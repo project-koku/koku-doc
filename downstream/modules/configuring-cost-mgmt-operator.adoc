@@ -1,10 +1,13 @@
-openshift_container_platform/4.7// Module included in the following assemblies:
-// assembly_adding_ocp_sources.adoc
-// 2020 09 30 updated for COST-536, ARO requires basic_auth_creds
-[id="configuring_cost_mgmt-operator"]
-[[configuring_cost_mgmt-operator]]
+// Module included in the following assemblies:
+// assembly-adding-ocp-sources.adoc
+:_module-type: PROCEDURE
+:experimental:
+
+
+[id="configuring-cost-mgmt-operator_{context}"]
 == Configuring the Cost Management Operator
 
+[role="_abstract"]
 The Cost Management Operator (`cost-mgmt-operator`) collects the metrics required for cost management.
 
 After installing the Cost Management Operator, configure authentication and the `operator-metering` namespace, then configure the Cost Management Operator.

@@ -19,13 +19,14 @@ include::assemblies/assembly-limiting-access-cost-resources-rbac.adoc[leveloffse
 
 include::assemblies/assembly-adding-openshift-container-platform-source.adoc[leveloffset=+1]
 
-//include::assemblies/assembly-adding-cost-operator-on-restricted-network.adoc[leveloffset=+1]
-
 include::assemblies/assembly-adding-aws-sources.adoc[leveloffset=+1]
 
 include::assemblies/assembly-adding-azure-sources.adoc[leveloffset=+1]
 
-include::assemblies/assembly-adding-gcp-sources.adoc[leveloffset=+1]
+////
+this will be the new gcp section
+////
+//include::assemblies/assembly-adding-gcp-sources.adoc[leveloffset=+1]
 
 //This assembly is about the deprecated operator
 include::assemblies/assembly-adding-ocp-sources.adoc[leveloffset=+1]

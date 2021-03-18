@@ -5,7 +5,7 @@
 :experimental:
 
 [id="configuring-an-azure-daily-export-schedule_{context}"]
-== Configuring a daily Azure data export schedule
+= Configuring a daily Azure data export schedule
 
 [role="_abstract"]
 Create a recurring task to export your cost data on a daily basis automatically to your Azure storage account, where cost management will retrieve the data.

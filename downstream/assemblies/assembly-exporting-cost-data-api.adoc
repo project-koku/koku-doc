@@ -27,21 +27,21 @@ This guide provides instructions for using the API to export your cost data.
 
 ifdef::cost[]
 
-include::../modules/note_bugzilla.adoc[leveloffset=+1]
+include::../modules/note-bugzilla.adoc[leveloffset=+1]
 
 endif::cost[]
 
 
-include::../modules/con_export_API_how_it_works.adoc[leveloffset=+1]
+include::../modules/export-api-how-it-works.adoc[leveloffset=+1]
 
 //include::../modules/configuring_AWS_bucket_for_API.adoc[]
 
-include::../modules/exporting_cost_data_AWS_bucket.adoc[leveloffset=+1]
+include::../modules/exporting-cost-data-AWS-bucket.adoc[leveloffset=+1]
 
-include::../modules/viewing_data_export_requests.adoc[leveloffset=+1]
+include::../modules/viewing-data-export-requests.adoc[leveloffset=+1]
 
 
-include::../modules/ref_data_export_API_parameters.adoc[leveloffset=+1]
+include::../modules/data-export-API-parameters.adoc[leveloffset=+1]
 
 
 // Restore the context to what it was before this assembly.

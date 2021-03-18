@@ -26,9 +26,9 @@ include::../modules/note-bugzilla.adoc[leveloffset=+1]
 
 endif::cost[]
 
-include::../modules/con_about_cost_management.adoc[leveloffset=+1]
+include::../modules/about-cost-management.adoc[leveloffset=+1]
 
-include::../modules/con_planning_cost_management.adoc[leveloffset=+1]
+include::../modules/planning-cost-management.adoc[leveloffset=+1]
 
 
 // Restore the context to what it was before this assembly.

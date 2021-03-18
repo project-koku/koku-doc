@@ -1,7 +1,13 @@
+// Module included in the following assemblies:
+//
+// assembly-adding-openshift-container-platform-source.adoc
+:_module-type: PROCEDURE
+:experimental:
 
-[id="proc_verifying-koku-operator"]
+[id="verifying-cost-operator_{context}"]
 = Verifying `koku-metrics-operator`
 
+[role="_abstract"]
 View the Koku configuration YAML file to verify the cost management operator is functioning.
 
 .Prerequisites

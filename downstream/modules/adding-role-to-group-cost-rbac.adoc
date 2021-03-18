@@ -1,16 +1,14 @@
 // Module included in the following assemblies:
 //
-// assembly_cost_limiting_access_rbac.adoc
+// assembly-cost-limiting-access-rbac.adoc
+:_module-type: PROCEDURE
+:experimental:
 
-// Base the file name and the ID on the module title. For example:
-// * file name: adding_role_to_group_cost_rbac.adoc
-// * ID: [id="adding_role_to_group_cost_rbac"]
-// * Title: = Adding a role to a policy
 
-[id="adding_role_to_group_cost_rbac"]
-// The `context` attribute enables module reuse. Every module's ID includes {context}, which ensures that the module has a unique ID even if it is reused multiple times in a guide.
+[id="adding-role-to-group-cost-rbac_{context}"]
 = Adding a role to a group
 
+[role="_abstract"]
 Add your role to a group to manage and limit the scope of information that users in that group can see within cost management.
 
 .Prerequisites
@@ -39,4 +37,3 @@ Default roles available for cost management are:
 Your new group will be listed in the *Groups* list on the *User Access* screen.
 
 To verify your configuration, log out of the cost management application and log back in as a user added to the group.
-

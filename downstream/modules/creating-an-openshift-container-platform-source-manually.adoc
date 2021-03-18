@@ -1,6 +1,8 @@
 // Module included in the following assemblies:
 //
-// <List assemblies here, each on a new line>
+// assembly-adding-openshift-container-platform-source.adoc
+:_module-type: CONCEPT
+:experimental:
 
 
 

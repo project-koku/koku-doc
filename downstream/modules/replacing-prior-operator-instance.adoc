@@ -1,0 +1,40 @@
+// Module included in the following assemblies:
+//
+// assembly-adding-openshift-container-platform-source.adoc
+:_module-type: PROCEDURE
+:experimental:
+
+[id="replacing-prior-operator-instance_{context}"]
+= Replacing the prior operator instance with the Koku metrics operator
+
+[role="_abstract"]
+If you are replacing a prior cost management operator with the Koku metrics operator, make certain your existing cost management source is properly configured in the YAML configuration file.
+
+IMPORTANT: When you are replacing a prior cost management operator with the *Koku Metrics Operator* and you want to use an existing source, you must make certain that the `name: INSERT-SOURCE-NAME` in the YAML file matches your existing source.
+
+
+.Prerequisites
+
+* You are logged into the OpenShift Container Platform web console with cluster administrator privileges.
+* You can access {platform} and view existing cost management sources.
+
+
+.Procedure
+
+. Under the *Name* heading in the list of installed operators, click the *KokuMetricsOperator* link. The *Installed Operators > Operator Details* window appears for *Koku Metrics Operator*.
+. In the *Details* window, click *+{nbsp}Create Instance*.
+. A *Koku Metrics Operator > Create KokuMetricsConfig* window appears.
+. Click the *YAML view* radio button to view and modify the contents of the `KokuMetricsConfig.yaml` file.
+. Open {platform} and log in using your Organization Administrator account.
+. Click on image:configuration-gear.png[] (Settings).
+. Click on the *Sources* tab to display existing sources.
+. Select an existing cost management source and copy its name.
+. In the `KokuMetricsConfig.yaml` file, replace `INSERT-SOURCE-NAME` with the source name that you copied from the cost management source list for your organization.
++
+----
+    create_source: false
+    name: INSERT-SOURCE-NAME    <<<< replace this string
+----
++
+The `create_source: false` does not change because you are matching an existing source, not creating a new source.
+. Click the *Create* button. No further actions are needed to configure the operator instance.

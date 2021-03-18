@@ -1,17 +1,14 @@
 // Module included in the following assemblies:
 //
-// assembly_introduction_cost_management.adoc
+// assembly-introduction-cost-management.adoc
+:_module-type: CONCEPT
+:experimental:
 
-// Base the file name and the ID on the module title. For example:
-// * file name: con_planning_cost_management.adoc
-// * ID: [id="con_planning_cost_management"]
-// * Title: = Planning for cost management
 
-// The ID is used as an anchor for linking to the module. Avoid changing it after the module has been published to ensure existing links are not broken.
-[id="con_planning_cost_management"]
-// The `context` attribute enables module reuse. Every module's ID includes {context}, which ensures that the module has a unique ID even if it is reused multiple times in a guide.
+[id="planning-cost-management"]
 = Planning for cost management
 
+[role="_abstract"]
 When configuring cost management for your needs, consider the scope of your environments that you want to manage costs for, and the users who will have access to the data.
 
 Some considerations in creating a new Red Hat organization and users for different customer types include:
@@ -27,14 +24,9 @@ Some considerations in creating a new Red Hat organization and users for differe
 * How does your business need the data? Do you want information about projects, or users, for example?
 * Planning AWS tags to reflect previous use cases.
 * Enforcement: Is there any way for you to ensure that the proper tags and metadata are included in each item of the inventory?
-	
-	
+
+
 *User access:*
 
 * What level of access do you want your users to have?
 * Do you want some users to have access to all cost data, while other users can view only a portion of the environment or certain sources?
-
-
-
-
-

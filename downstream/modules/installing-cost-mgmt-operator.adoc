@@ -1,9 +1,12 @@
 // Module included in the following assemblies:
-// assembly_adding_ocp_sources.adoc
-[id="installing_cost_mgmt-operator"]
-[[installing_cost_mgmt-operator]]
+// assembly-adding-ocp-sources.adoc
+:_module-type: PROCEDURE
+:experimental:
+
+[id="installing-cost-mgmt-operator_{context}"]
 == Installing the Cost Management Operator
 
+[role="_abstract"]
 The Cost Management Operator collects the metrics required for cost management.
 
 Begin adding your OpenShift Container Platform cluster as a source to cost management, then install the Cost Management Operator from OperatorHub.

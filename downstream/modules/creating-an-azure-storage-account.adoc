@@ -4,7 +4,7 @@
 :experimental:
 
 [id="creating-an-azure-storage-account_{context}"]
-== Creating an Azure resource group and storage account
+= Creating an Azure resource group and storage account
 
 [role="_abstract"]
 Cost export data is written to a storage account, which exists within a resource group. The resource group must be accessible by cost management in order to read the Azure cost data.

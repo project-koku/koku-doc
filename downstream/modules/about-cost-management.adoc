@@ -1,19 +1,13 @@
 // Module included in the following assemblies:
 //
-// assembly_introduction_cost_management.adoc
+// assembly-introduction-cost-management.adoc
+:_module-type: CONCEPT
+:experimental:
 
-// Base the file name and the ID on the module title. For example:
-// * file name: con_about_cost_management.adoc
-// * ID: [id="con_about_cost_management"]
-// * Title: = About cost management
-
-// The ID is used as an anchor for linking to the module. Avoid changing it after the module has been published to ensure existing links are not broken.
-[id="con_about_cost_management"]
-// The `context` attribute enables module reuse. Every module's ID includes {context}, which ensures that the module has a unique ID even if it is reused multiple times in a guide.
+[id="about-cost-management_{context}"]
 = About cost management
-//In the title of concept modules, include nouns or noun phrases that are used in the body text. This helps readers and search engines find the information quickly.
-//Do not start the title of concept modules with a verb. See also _Wording of headings_ in _The IBM Style Guide_.
 
+[role="_abstract"]
 Cost management is an OpenShift Container Platform service that enables you to better understand and track costs for clouds and containers. It is based on the upstream project Koku.
 
 You can access the cost management application from https://cloud.redhat.com/cost-management/.

@@ -29,27 +29,11 @@ A Red Hat account user with Organization Administrator entitlements is required 
 For more information about Red Hat account roles, see https://access.redhat.com/articles/1757953[Roles and Permissions for Red Hat Subscription Management] and https://access.redhat.com/start/how-to-create-and-manage-users[How To Create and Manage Users].
 ====
 
-== Default user roles in cost management
+include::../modules/default-user-roles.adoc[leveloffset=+1]
 
-You can configure custom user access roles for cost management, or assign each user a predefined role.
+include::../modules/adding-a-role-cost-rbac.adoc[leveloffset=+1]
 
-To use a default role, determine the required level of access to permit your users based on the following predefined roles in cost management:
-
-.Administrator roles
-
-* Cost Administrator:  has read and write permissions to all resources in cost management
-* Cost Price List Administrator:  has read and write permissions on price list rates
-
-.Viewer roles
-
-* Cost Cloud Viewer:  has read permissions on cost reports related to cloud sources
-* Cost OpenShift Viewer:  has read permissions on cost reports related to OpenShift sources
-* Cost Price List Viewer:  has read permissions on price list rates
-
-
-include::../modules/adding_a_role_cost_rbac.adoc[leveloffset=+1]
-
-include::../modules/adding_role_to_group_cost_rbac.adoc[leveloffset=+1]
+include::../modules/adding-role-to-group-cost-rbac.adoc[leveloffset=+1]
 
 // Restore the context to what it was before this assembly.
 ifdef::parent-context-of-assembly-limiting-access-cost-resources-rbac[:context: {parent-context-of-assembly-limiting-access-cost-resources-rbac}]

@@ -17,19 +17,25 @@ endif::[]
 [role="_abstract"]
 To support cost management in Red{nbsp}Hat OpenShift Container Platform 4.5 and more recent versions, a new community operator is introduced, `koku-metrics-operator`.
 
-//The community `cost-mgmt-operator` supported in OpenShift Container Platform 4.3 and 4.4 is deprecated. Though this cost operator functions with cost management in OpenShift Container Platform 4.5 or later, it is no longer supported. For installing this deprecated operator, see xref:assembly-adding-ocp-sources[].
+The community `cost-mgmt-operator` supported in OpenShift Container Platform 4.3 and 4.4 is deprecated. Though this cost operator functions with cost management in OpenShift Container Platform 4.5 or later, it is no longer supported. For installing this deprecated operator, see xref:assembly-adding-ocp-sources[].
 
 To avoid gaps in your cost management data, you can wait 24 to 48 hours before removing `cost-mgmt-operator` while you verify that `koku-metrics-operator` provides cost management reports.
 
-include::../modules/proc_installation-overview-ocp45.adoc[leveloffset=+1]
+include::../modules/installation-overview.adoc[leveloffset=+1]
 
-include::../modules/proc_installing_koku_operator.adoc[leveloffset=+1]
+include::../modules/installing-cost-operator.adoc[leveloffset=+1]
 
-include::../modules/proc_verifying-koku-operator.adoc[leveloffset=+1]
+include::../modules/configuring-the-operator-instance-for-a-new-installation.adoc[leveloffset=+1]
 
-include::../modules/proc_basic-authentication.adoc[leveloffset=+1]
+include::../modules/replacing-prior-operator-instance.adoc[leveloffset=+1]
 
-include::../modules/proc_creating-an-openshift-container-platform-source-manually.adoc[leveloffset=+1]
+include::../modules/removing-a-cost-operator.adoc[leveloffset=+1]
+
+include::../modules/verifying-cost-operator.adoc[leveloffset=+1]
+
+include::../modules/basic-authentication.adoc[leveloffset=+1]
+
+include::../modules/creating-an-openshift-container-platform-source-manually.adoc[leveloffset=+1]
 
 include::assembly-adding-a-restricted-network-source.adoc[leveloffset=+1]
 
