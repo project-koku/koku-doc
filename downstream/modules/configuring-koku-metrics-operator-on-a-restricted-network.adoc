@@ -4,7 +4,7 @@
 :_module-type: PROCEDURE
 :experimental:
 
-[id="proc_configuring-koku-metrics-operator-on-a-restricted-network_{context}"]
+[id="configuring-koku-metrics-operator-on-a-restricted-network_{context}"]
 = Configuring Koku Metrics Operator on a restricted network
 
 
