@@ -1,0 +1,32 @@
+// Module included in the following assemblies:
+//
+// assembly-introduction-cost-management.adoc
+:_module-type: CONCEPT
+:experimental:
+
+
+[id="planning-cost-management"]
+= Planning for cost management
+
+[role="_abstract"]
+When configuring cost management for your needs, consider the scope of your environments that you want to manage costs for, and the users who will have access to the data.
+
+Some considerations in creating a new Red Hat organization and users for different customer types include:
+
+*Scope:*
+
+* Customer company wide
+* Customer division or organization wide
+* Partner company managing several tenants
+
+*Data:*
+
+* How does your business need the data? Do you want information about projects, or users, for example?
+* Planning AWS tags to reflect previous use cases.
+* Enforcement: Is there any way for you to ensure that the proper tags and metadata are included in each item of the inventory?
+
+
+*User access:*
+
+* What level of access do you want your users to have?
+* Do you want some users to have access to all cost data, while other users can view only a portion of the environment or certain sources?

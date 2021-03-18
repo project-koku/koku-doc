@@ -1,0 +1,40 @@
+// This assembly is included in the following assemblies:
+//
+// */getting_started/master.adoc
+
+ifdef::context[:parent-context-of-assembly-limiting-access-cost-resources-rbac: {context}]
+
+ifndef::context[]
+[id="assembly-limiting-access-cost-resources-rbac"]
+endif::[]
+ifdef::context[]
+[id="assembly-limiting-access-cost-resources-rbac_{context}"]
+endif::[]
+
+= Limiting access to cost management resources
+:context: limiting-access
+
+[role="_abstract"]
+You may not want users to have access to all cost data, but instead only data specific to their projects or organization. Using role-based access control, you can limit the visibility of resources involved in cost management reports. For example, you may want to restrict a user's view to only AWS sources, instead of the entire environment.
+
+Role-based access control works by organizing users into groups, which can be associated with one or more roles. A role defines a permission and a set of resource definitions.
+
+By default, a user who is not an account administrator will not have access to data, but instead must be granted access to resources. Account administrators can view all data without any further role-based access control configuration.
+
+
+[NOTE]
+====
+A Red Hat account user with Organization Administrator entitlements is required to configure Red Hat account users. This Red Hat login allows you to look up users, add them to groups, and to assign roles that control visibility to resources.
+
+For more information about Red Hat account roles, see https://access.redhat.com/articles/1757953[Roles and Permissions for Red Hat Subscription Management] and https://access.redhat.com/start/how-to-create-and-manage-users[How To Create and Manage Users].
+====
+
+include::../modules/default-user-roles.adoc[leveloffset=+1]
+
+include::../modules/adding-a-role-cost-rbac.adoc[leveloffset=+1]
+
+include::../modules/adding-role-to-group-cost-rbac.adoc[leveloffset=+1]
+
+// Restore the context to what it was before this assembly.
+ifdef::parent-context-of-assembly-limiting-access-cost-resources-rbac[:context: {parent-context-of-assembly-limiting-access-cost-resources-rbac}]
+ifndef::parent-context-of-assembly-limiting-access-cost-resources-rbac[:!context:]

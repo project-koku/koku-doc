@@ -13,7 +13,4 @@ include::attributes/cost.adoc[]
 
 :numbered:
 
-include::assemblies/assembly_exporting_cost_data_API.adoc[leveloffset=+1]
-
-
-//source: https://gist.github.com/infinitewarp/53ed7179ea330b61c1e41f7b78c34f61
+include::assemblies/assembly-exporting-cost-data-api.adoc[leveloffset=+1]

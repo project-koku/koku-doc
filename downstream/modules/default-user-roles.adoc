@@ -1,0 +1,25 @@
+// Module included in the following assemblies:
+//
+// assembly-cost-limiting-access-rbac.adoc
+:_module-type: CONCEPT
+:experimental:
+
+
+[id="default-user-roles_{context}"]
+= Default user roles in cost management
+
+[role="_abstract"]
+You can configure custom user access roles for cost management, or assign each user a predefined role.
+
+To use a default role, determine the required level of access to permit your users based on the following predefined roles in cost management:
+
+.Administrator roles
+
+* Cost Administrator:  has read and write permissions to all resources in cost management
+* Cost Price List Administrator:  has read and write permissions on price list rates
+
+.Viewer roles
+
+* Cost Cloud Viewer:  has read permissions on cost reports related to cloud sources
+* Cost OpenShift Viewer:  has read permissions on cost reports related to OpenShift sources
+* Cost Price List Viewer:  has read permissions on price list rates

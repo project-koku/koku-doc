@@ -5,7 +5,6 @@
 :experimental:
 
 [id="what-is-a-cost-model_{context}"]
-
 = What is a cost model?
 
 [role="_abstract"]

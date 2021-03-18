@@ -1,0 +1,24 @@
+// Module included in the following assemblies:
+//
+// assembly-adding-openshift-container-platform-source.adoc
+:_module-type: PROCEDURE
+:experimental:
+
+[id="installing-cost-operator_{context}"]
+= Installing the Koku metrics operator
+
+[role="_abstract"]
+Install the Koku operator `koku-metrics-operator` from the OpenShift Container Platform web console.
+
+.Prerequisites
+* You are logged into the OpenShift Container Platform web console with cluster administrator privileges.
+
+.Procedure
+
+. Login to the OpenShift Container Platform web console and click on the *Operators > OperatorHub* tab.
+. Search for and locate *Koku Metrics Operator*.
+. Click on the displayed *Koku Metrics Operator* tile.
+. If an information panel appears with the Community Operators message, click *Continue*.
+. When the *Install Operator* window appears, you must select the *`koku-metrics-operator`* namespace for installation. If the namespace does not yet exist, it is created for you.
+. Click on the *Install* button.
+. After a short wait, *Koku Metrics Operator* appears in the *Installed Operators* tab under *Project: all projects* or *Project: koku-metrics-operator*.

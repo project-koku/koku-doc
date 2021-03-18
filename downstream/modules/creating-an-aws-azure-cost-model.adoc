@@ -4,36 +4,53 @@
 :_module-type: PROCEDURE
 :experimental:
 
-[id="creating-an-aws-azure-cost-model_{context}"]
-= Creating an Azure cost model
+[id="creating-an-AWS-Azure-cost-model_{context}"]
+= Creating an AWS or Azure cost model with a markup
 
 [role="_abstract"]
-Since Microsoft Azure cost and usage data is collected into cost management with prices already assigned, you only need to assign a markup or discount (if desired) for your Azure sources.
+As cloud infrastructure sources collect cost and usage data into cost management with prices already assigned, you only need to assign a markup or discount (if desired) to accurately reflect your costs. These _raw costs_ are collected in cost management from AWS Cost and Usage Reports or Azure exports.
 
-//.Prerequisites
+Adding a markup to your _raw costs_ can allow you to account for your overhead costs, such as the cost of administering your AWS account, Azure subscription, or other support costs. A markup is an estimation to cover your costs not shown by metrics or usage.
+
+This example shows how to add a 10% markup to the information collected from the AWS Cost and Usage Reports. The same method can be used to apply a markup to your Azure costs.
+
+.Prerequisites
+
+* A user with Cost Administrator or Cost Price List Administrator permissions. See link:https://access.redhat.com/documentation/en-us/cost_management_service/2021/html/getting_started_with_cost_management/assembly_limiting_access_cost_resources_rbac[Limiting access to cost management resources] in _Getting started with cost management_ for instructions on configuring user roles.
+* Your AWS account added to cost management as a data source. See link:https://access.redhat.com/documentation/en-us/cost_management_service/2021/html/getting_started_with_cost_management/adding_an_aws_source[Adding an Amazon Web Services (AWS) source to cost management] in _Getting started with cost management_ for instructions.
 
 
 .Procedure
 
-. From the *Cost models* menu, click btn:[Create cost model] to open the cost model wizard.
-. Enter a name and description for the cost model, and select *Microsoft Azure* as the source type to apply the cost model to. Click btn:[Next].
-. To apply a markup to the base costs of your resources, enter a percentage value and click btn:[Next].
-* To apply a discount rather than a markup, enter a minus sign with the value (for example, _-15_).
-* If you do not want to apply a markup or discount, enter _0_.
+. From the *Cost models* menu, click *Create cost model* to open the cost model wizard.
+. Enter a name and description for the cost model, and select *Amazon Web Services (AWS)* as the source type to apply the cost model to. Click *Next*.
+. To apply a 10% markup to the base costs of your resources, enter _10_ in the as the *Markup rate* and click *Next*.
 +
 [NOTE]
 ====
-You can use a markup to account for your overhead costs, such as the cost of administering the cluster, or support costs, for example. A markup is an estimation to cover your costs not shown by metrics or usage.
+* To apply a discount rather than a markup, enter a minus sign with the value (for example, _-15_).
+* If you do not want to apply a markup or discount, enter _0_.
 ====
 +
-. Optionally, select one or multiple sources to assign the cost model to and click btn:[Next]. Selecting a source with a cost model already assigned will override its previous cost model. You can also assign sources to your cost model at a later time.
-. Review the cost model details, and click btn:[Create].
-. Click btn:[Close] to exit the cost model wizard.
+. Select one or multiple AWS sources to assign the cost model to and click *Next*. Selecting a source with a cost model already assigned will override its previous cost model. You can also assign sources to your cost model at a later time.
+. Review the cost model details, and click *Create*.
+. Click *Close* to exit the cost model wizard.
 
 Your new cost model will appear in the list on the *Cost models* page.
 
 .Next steps
 
-* From the *Cost models* page, click the more options button to *View details* or *Delete* the cost model. From the *View details* option, you can edit the cost model, including source assignments, markup, and more settings.
+* From the *Cost models* summary page, you can review information about your cost models, including:
+** The source type the cost model was created for
+** The number of sources assigned to the cost model
+** The date the cost model was last modified
++
+* To see more information, assign, or edit a cost model:
++
+** From the *Cost models* summary page, click a cost model name to bring up the details page where you can edit the cost model, including source assignments, markup, and other Settings.
++
+* To delete a cost model:
++
+** From the *Cost models* summary page, click image:more-options.png[] (*more options*), then *Delete*.
 
 * Review your tags and tagging strategy to ensure that costs are being distributed to the correct resources, cost centers, or teams. See link:https://access.redhat.com/documentation/en-us/cost_management_service/2021/html-single/managing_cost_data_using_tagging/index[_Managing cost data using tagging_] for more information.

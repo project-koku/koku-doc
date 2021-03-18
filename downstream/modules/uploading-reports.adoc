@@ -1,0 +1,39 @@
+// Module included in the following assemblies:
+//
+// assembly-adding-a-restricted-network-source.adoc
+:_module-type: PROCEDURE
+:experimental:
+
+
+[id="proc_uploading-reports_{context}"]
+= Uploading cost reports to cloud.redhat.com
+
+[role="_abstract"]
+You must manually upload locally stored cost reports from a restricted network to {platform}.
+
+[NOTE]
+====
+The default configuration saves one week of reports. Therefore, download the reports locally and upload them to {platform} weekly to prevent loss of metrics data.
+====
+
+.Prerequisites
+
+* `koku-metrics-operator` reports downloaded locally.
+* Source created on {platform}, see xref:proc_creating-an-openshift-container-platform-source-manually_adding-an-ocp-source[].
+* Red Hat account user with Organization Administrator entitlements.
+* Workstation with unrestricted network access.
+
+.Procedure
+
+* Upload your reports to {platform}, replacing USERNAME and PASSWORD with your {platform} login credentials, and FILE_NAME with the report to upload:
++
+[source,bash]
+----
+$ curl -vvvv -F "file=@FILE_NAME.tar.gz;type=application/vnd.redhat.hccm.tar+tgz"  https://cloud.redhat.com/api/ingress/v1/upload -u USERNAME:PASS
+----
+
+.Verification steps
+
+. From link:https://cloud.redhat.com/cost-management/[cloud.redhat.com/cost-management], click *OpenShift*.
+
+. Verify you have OpenShift usage data for your cluster on the *OpenShift details* page.

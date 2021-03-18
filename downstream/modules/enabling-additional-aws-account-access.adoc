@@ -1,0 +1,57 @@
+// Module included in the following assemblies:
+//
+// assembly-adding-aws-sources.adoc
+:_module-type: PROCEDURE
+:experimental:
+
+
+
+[id="enabling-additional-aws-account-access_{context}"]
+== Enabling additional account access for cost and usage consumption
+
+[role="_abstract"]
+Cost management can display additional data that might be useful. For example:
+
+* Include the Action _iam:ListAccountAliases_ to display an AWS account alias rather than an account number in cost management.
+* Include the Actions _organization:List*_ and _organizations:Describe*_
+to obtain the display names of AWS member accounts if you are using consolidated billing rather than the account ID.
+
+The following configuration provides access to additional stored information and nothing else.
+
+.Procedure
+. From the AWS Identity and Access Management (IAM) console, create a new IAM policy for the S3 bucket you configured previously.
+. Select the JSON tab and paste the following content in the JSON policy text box:
++
+----
+{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Sid": "VisualEditor0",
+      "Effect": "Allow",
+      "Action": [
+        "s3:Get*",
+        "s3:List*"
+      ],
+      "Resource": [
+        "arn:aws:s3:::bucket",
+        "arn:aws:s3:::bucket/*"
+      ]
+    },
+    {
+      "Sid": "VisualEditor1",
+      "Effect": "Allow",
+      "Action": [
+        "iam:ListAccountAliases",
+        "s3:HeadBucket",
+        "cur:DescribeReportDefinitions",
+        "organizations:List*",
+        "organizations:Describe*"
+      ],
+      "Resource": "*"
+    }
+  ]
+}
+----
++
+The remainder of the configuration steps are the same as in xref:enabling-aws-account-access_{context}[]

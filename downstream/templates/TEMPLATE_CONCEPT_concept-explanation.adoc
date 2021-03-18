@@ -1,7 +1,8 @@
 // Module included in the following assemblies:
 //
 // <List assemblies here, each on a new line>
-
+:_module-type: CONCEPT
+:experimental:
 // Base the file name and the ID on the module title. For example:
 // * file name: my-concept-module-a.adoc
 // * ID: [id="my-concept-module-a_{context}"]
