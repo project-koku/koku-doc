@@ -5,7 +5,7 @@
 :experimental:
 
 [id="configuring-koku-metrics-operator-on-a-restricted-network_{context}"]
-= Configuring Koku Metrics Operator on a restricted network
+= Configuring Cost Operator on a restricted network
 
 
 [role="_abstract"]
