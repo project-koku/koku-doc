@@ -1,0 +1,3046 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="generator" content="Asciidoctor 2.0.12">
+<title>Getting started with cost management</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,600italic%7CNoto+Serif:400,400italic,700,700italic%7CDroid+Sans+Mono:400,700">
+<style>
+/* Asciidoctor default stylesheet | MIT License | https://asciidoctor.org */
+/* Uncomment @import statement to use as custom stylesheet */
+/*@import "https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,600italic%7CNoto+Serif:400,400italic,700,700italic%7CDroid+Sans+Mono:400,700";*/
+article,aside,details,figcaption,figure,footer,header,hgroup,main,nav,section{display:block}
+audio,video{display:inline-block}
+audio:not([controls]){display:none;height:0}
+html{font-family:sans-serif;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}
+a{background:none}
+a:focus{outline:thin dotted}
+a:active,a:hover{outline:0}
+h1{font-size:2em;margin:.67em 0}
+abbr[title]{border-bottom:1px dotted}
+b,strong{font-weight:bold}
+dfn{font-style:italic}
+hr{-moz-box-sizing:content-box;box-sizing:content-box;height:0}
+mark{background:#ff0;color:#000}
+code,kbd,pre,samp{font-family:monospace;font-size:1em}
+pre{white-space:pre-wrap}
+q{quotes:"\201C" "\201D" "\2018" "\2019"}
+small{font-size:80%}
+sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}
+sup{top:-.5em}
+sub{bottom:-.25em}
+img{border:0}
+svg:not(:root){overflow:hidden}
+figure{margin:0}
+fieldset{border:1px solid silver;margin:0 2px;padding:.35em .625em .75em}
+legend{border:0;padding:0}
+button,input,select,textarea{font-family:inherit;font-size:100%;margin:0}
+button,input{line-height:normal}
+button,select{text-transform:none}
+button,html input[type="button"],input[type="reset"],input[type="submit"]{-webkit-appearance:button;cursor:pointer}
+button[disabled],html input[disabled]{cursor:default}
+input[type="checkbox"],input[type="radio"]{box-sizing:border-box;padding:0}
+button::-moz-focus-inner,input::-moz-focus-inner{border:0;padding:0}
+textarea{overflow:auto;vertical-align:top}
+table{border-collapse:collapse;border-spacing:0}
+*,*::before,*::after{-moz-box-sizing:border-box;-webkit-box-sizing:border-box;box-sizing:border-box}
+html,body{font-size:100%}
+body{background:#fff;color:rgba(0,0,0,.8);padding:0;margin:0;font-family:"Noto Serif","DejaVu Serif",serif;font-weight:400;font-style:normal;line-height:1;position:relative;cursor:auto;tab-size:4;word-wrap:anywhere;-moz-osx-font-smoothing:grayscale;-webkit-font-smoothing:antialiased}
+a:hover{cursor:pointer}
+img,object,embed{max-width:100%;height:auto}
+object,embed{height:100%}
+img{-ms-interpolation-mode:bicubic}
+.left{float:left!important}
+.right{float:right!important}
+.text-left{text-align:left!important}
+.text-right{text-align:right!important}
+.text-center{text-align:center!important}
+.text-justify{text-align:justify!important}
+.hide{display:none}
+img,object,svg{display:inline-block;vertical-align:middle}
+textarea{height:auto;min-height:50px}
+select{width:100%}
+.subheader,.admonitionblock td.content>.title,.audioblock>.title,.exampleblock>.title,.imageblock>.title,.listingblock>.title,.literalblock>.title,.stemblock>.title,.openblock>.title,.paragraph>.title,.quoteblock>.title,table.tableblock>.title,.verseblock>.title,.videoblock>.title,.dlist>.title,.olist>.title,.ulist>.title,.qlist>.title,.hdlist>.title{line-height:1.45;color:#7a2518;font-weight:400;margin-top:0;margin-bottom:.25em}
+div,dl,dt,dd,ul,ol,li,h1,h2,h3,#toctitle,.sidebarblock>.content>.title,h4,h5,h6,pre,form,p,blockquote,th,td{margin:0;padding:0}
+a{color:#2156a5;text-decoration:underline;line-height:inherit}
+a:hover,a:focus{color:#1d4b8f}
+a img{border:0}
+p{font-family:inherit;font-weight:400;font-size:1em;line-height:1.6;margin-bottom:1.25em;text-rendering:optimizeLegibility}
+p aside{font-size:.875em;line-height:1.35;font-style:italic}
+h1,h2,h3,#toctitle,.sidebarblock>.content>.title,h4,h5,h6{font-family:"Open Sans","DejaVu Sans",sans-serif;font-weight:300;font-style:normal;color:#ba3925;text-rendering:optimizeLegibility;margin-top:1em;margin-bottom:.5em;line-height:1.0125em}
+h1 small,h2 small,h3 small,#toctitle small,.sidebarblock>.content>.title small,h4 small,h5 small,h6 small{font-size:60%;color:#e99b8f;line-height:0}
+h1{font-size:2.125em}
+h2{font-size:1.6875em}
+h3,#toctitle,.sidebarblock>.content>.title{font-size:1.375em}
+h4,h5{font-size:1.125em}
+h6{font-size:1em}
+hr{border:solid #dddddf;border-width:1px 0 0;clear:both;margin:1.25em 0 1.1875em;height:0}
+em,i{font-style:italic;line-height:inherit}
+strong,b{font-weight:bold;line-height:inherit}
+small{font-size:60%;line-height:inherit}
+code{font-family:"Droid Sans Mono","DejaVu Sans Mono",monospace;font-weight:400;color:rgba(0,0,0,.9)}
+ul,ol,dl{font-size:1em;line-height:1.6;margin-bottom:1.25em;list-style-position:outside;font-family:inherit}
+ul,ol{margin-left:1.5em}
+ul li ul,ul li ol{margin-left:1.25em;margin-bottom:0;font-size:1em}
+ul.square li ul,ul.circle li ul,ul.disc li ul{list-style:inherit}
+ul.square{list-style-type:square}
+ul.circle{list-style-type:circle}
+ul.disc{list-style-type:disc}
+ol li ul,ol li ol{margin-left:1.25em;margin-bottom:0}
+dl dt{margin-bottom:.3125em;font-weight:bold}
+dl dd{margin-bottom:1.25em}
+abbr,acronym{text-transform:uppercase;font-size:90%;color:rgba(0,0,0,.8);border-bottom:1px dotted #ddd;cursor:help}
+abbr{text-transform:none}
+blockquote{margin:0 0 1.25em;padding:.5625em 1.25em 0 1.1875em;border-left:1px solid #ddd}
+blockquote cite{display:block;font-size:.9375em;color:rgba(0,0,0,.6)}
+blockquote cite::before{content:"\2014 \0020"}
+blockquote cite a,blockquote cite a:visited{color:rgba(0,0,0,.6)}
+blockquote,blockquote p{line-height:1.6;color:rgba(0,0,0,.85)}
+@media screen and (min-width:768px){h1,h2,h3,#toctitle,.sidebarblock>.content>.title,h4,h5,h6{line-height:1.2}
+h1{font-size:2.75em}
+h2{font-size:2.3125em}
+h3,#toctitle,.sidebarblock>.content>.title{font-size:1.6875em}
+h4{font-size:1.4375em}}
+table{background:#fff;margin-bottom:1.25em;border:solid 1px #dedede;word-wrap:normal}
+table thead,table tfoot{background:#f7f8f7}
+table thead tr th,table thead tr td,table tfoot tr th,table tfoot tr td{padding:.5em .625em .625em;font-size:inherit;color:rgba(0,0,0,.8);text-align:left}
+table tr th,table tr td{padding:.5625em .625em;font-size:inherit;color:rgba(0,0,0,.8)}
+table tr.even,table tr.alt{background:#f8f8f7}
+table thead tr th,table tfoot tr th,table tbody tr td,table tr td,table tfoot tr td{line-height:1.6}
+h1,h2,h3,#toctitle,.sidebarblock>.content>.title,h4,h5,h6{line-height:1.2;word-spacing:-.05em}
+h1 strong,h2 strong,h3 strong,#toctitle strong,.sidebarblock>.content>.title strong,h4 strong,h5 strong,h6 strong{font-weight:400}
+.center{margin-left:auto;margin-right:auto}
+.stretch{width:100%}
+.clearfix::before,.clearfix::after,.float-group::before,.float-group::after{content:" ";display:table}
+.clearfix::after,.float-group::after{clear:both}
+:not(pre).nobreak{word-wrap:normal}
+:not(pre).nowrap{white-space:nowrap}
+:not(pre).pre-wrap{white-space:pre-wrap}
+:not(pre):not([class^=L])>code{font-size:.9375em;font-style:normal!important;letter-spacing:0;padding:.1em .5ex;word-spacing:-.15em;background:#f7f7f8;-webkit-border-radius:4px;border-radius:4px;line-height:1.45;text-rendering:optimizeSpeed}
+pre{color:rgba(0,0,0,.9);font-family:"Droid Sans Mono","DejaVu Sans Mono",monospace;line-height:1.45;text-rendering:optimizeSpeed}
+pre code,pre pre{color:inherit;font-size:inherit;line-height:inherit}
+pre>code{display:block}
+pre.nowrap,pre.nowrap pre{white-space:pre;word-wrap:normal}
+em em{font-style:normal}
+strong strong{font-weight:400}
+.keyseq{color:rgba(51,51,51,.8)}
+kbd{font-family:"Droid Sans Mono","DejaVu Sans Mono",monospace;display:inline-block;color:rgba(0,0,0,.8);font-size:.65em;line-height:1.45;background:#f7f7f7;border:1px solid #ccc;-webkit-border-radius:3px;border-radius:3px;-webkit-box-shadow:0 1px 0 rgba(0,0,0,.2),0 0 0 .1em white inset;box-shadow:0 1px 0 rgba(0,0,0,.2),0 0 0 .1em #fff inset;margin:0 .15em;padding:.2em .5em;vertical-align:middle;position:relative;top:-.1em;white-space:nowrap}
+.keyseq kbd:first-child{margin-left:0}
+.keyseq kbd:last-child{margin-right:0}
+.menuseq,.menuref{color:#000}
+.menuseq b:not(.caret),.menuref{font-weight:inherit}
+.menuseq{word-spacing:-.02em}
+.menuseq b.caret{font-size:1.25em;line-height:.8}
+.menuseq i.caret{font-weight:bold;text-align:center;width:.45em}
+b.button::before,b.button::after{position:relative;top:-1px;font-weight:400}
+b.button::before{content:"[";padding:0 3px 0 2px}
+b.button::after{content:"]";padding:0 2px 0 3px}
+p a>code:hover{color:rgba(0,0,0,.9)}
+#header,#content,#footnotes,#footer{width:100%;margin-left:auto;margin-right:auto;margin-top:0;margin-bottom:0;max-width:62.5em;*zoom:1;position:relative;padding-left:.9375em;padding-right:.9375em}
+#header::before,#header::after,#content::before,#content::after,#footnotes::before,#footnotes::after,#footer::before,#footer::after{content:" ";display:table}
+#header::after,#content::after,#footnotes::after,#footer::after{clear:both}
+#content{margin-top:1.25em}
+#content::before{content:none}
+#header>h1:first-child{color:rgba(0,0,0,.85);margin-top:2.25rem;margin-bottom:0}
+#header>h1:first-child+#toc{margin-top:8px;border-top:1px solid #dddddf}
+#header>h1:only-child,body.toc2 #header>h1:nth-last-child(2){border-bottom:1px solid #dddddf;padding-bottom:8px}
+#header .details{border-bottom:1px solid #dddddf;line-height:1.45;padding-top:.25em;padding-bottom:.25em;padding-left:.25em;color:rgba(0,0,0,.6);display:-ms-flexbox;display:-webkit-flex;display:flex;-ms-flex-flow:row wrap;-webkit-flex-flow:row wrap;flex-flow:row wrap}
+#header .details span:first-child{margin-left:-.125em}
+#header .details span.email a{color:rgba(0,0,0,.85)}
+#header .details br{display:none}
+#header .details br+span::before{content:"\00a0\2013\00a0"}
+#header .details br+span.author::before{content:"\00a0\22c5\00a0";color:rgba(0,0,0,.85)}
+#header .details br+span#revremark::before{content:"\00a0|\00a0"}
+#header #revnumber{text-transform:capitalize}
+#header #revnumber::after{content:"\00a0"}
+#content>h1:first-child:not([class]){color:rgba(0,0,0,.85);border-bottom:1px solid #dddddf;padding-bottom:8px;margin-top:0;padding-top:1rem;margin-bottom:1.25rem}
+#toc{border-bottom:1px solid #e7e7e9;padding-bottom:.5em}
+#toc>ul{margin-left:.125em}
+#toc ul.sectlevel0>li>a{font-style:italic}
+#toc ul.sectlevel0 ul.sectlevel1{margin:.5em 0}
+#toc ul{font-family:"Open Sans","DejaVu Sans",sans-serif;list-style-type:none}
+#toc li{line-height:1.3334;margin-top:.3334em}
+#toc a{text-decoration:none}
+#toc a:active{text-decoration:underline}
+#toctitle{color:#7a2518;font-size:1.2em}
+@media screen and (min-width:768px){#toctitle{font-size:1.375em}
+body.toc2{padding-left:15em;padding-right:0}
+#toc.toc2{margin-top:0!important;background:#f8f8f7;position:fixed;width:15em;left:0;top:0;border-right:1px solid #e7e7e9;border-top-width:0!important;border-bottom-width:0!important;z-index:1000;padding:1.25em 1em;height:100%;overflow:auto}
+#toc.toc2 #toctitle{margin-top:0;margin-bottom:.8rem;font-size:1.2em}
+#toc.toc2>ul{font-size:.9em;margin-bottom:0}
+#toc.toc2 ul ul{margin-left:0;padding-left:1em}
+#toc.toc2 ul.sectlevel0 ul.sectlevel1{padding-left:0;margin-top:.5em;margin-bottom:.5em}
+body.toc2.toc-right{padding-left:0;padding-right:15em}
+body.toc2.toc-right #toc.toc2{border-right-width:0;border-left:1px solid #e7e7e9;left:auto;right:0}}
+@media screen and (min-width:1280px){body.toc2{padding-left:20em;padding-right:0}
+#toc.toc2{width:20em}
+#toc.toc2 #toctitle{font-size:1.375em}
+#toc.toc2>ul{font-size:.95em}
+#toc.toc2 ul ul{padding-left:1.25em}
+body.toc2.toc-right{padding-left:0;padding-right:20em}}
+#content #toc{border-style:solid;border-width:1px;border-color:#e0e0dc;margin-bottom:1.25em;padding:1.25em;background:#f8f8f7;-webkit-border-radius:4px;border-radius:4px}
+#content #toc>:first-child{margin-top:0}
+#content #toc>:last-child{margin-bottom:0}
+#footer{max-width:none;background:rgba(0,0,0,.8);padding:1.25em}
+#footer-text{color:rgba(255,255,255,.8);line-height:1.44}
+#content{margin-bottom:.625em}
+.sect1{padding-bottom:.625em}
+@media screen and (min-width:768px){#content{margin-bottom:1.25em}
+.sect1{padding-bottom:1.25em}}
+.sect1:last-child{padding-bottom:0}
+.sect1+.sect1{border-top:1px solid #e7e7e9}
+#content h1>a.anchor,h2>a.anchor,h3>a.anchor,#toctitle>a.anchor,.sidebarblock>.content>.title>a.anchor,h4>a.anchor,h5>a.anchor,h6>a.anchor{position:absolute;z-index:1001;width:1.5ex;margin-left:-1.5ex;display:block;text-decoration:none!important;visibility:hidden;text-align:center;font-weight:400}
+#content h1>a.anchor::before,h2>a.anchor::before,h3>a.anchor::before,#toctitle>a.anchor::before,.sidebarblock>.content>.title>a.anchor::before,h4>a.anchor::before,h5>a.anchor::before,h6>a.anchor::before{content:"\00A7";font-size:.85em;display:block;padding-top:.1em}
+#content h1:hover>a.anchor,#content h1>a.anchor:hover,h2:hover>a.anchor,h2>a.anchor:hover,h3:hover>a.anchor,#toctitle:hover>a.anchor,.sidebarblock>.content>.title:hover>a.anchor,h3>a.anchor:hover,#toctitle>a.anchor:hover,.sidebarblock>.content>.title>a.anchor:hover,h4:hover>a.anchor,h4>a.anchor:hover,h5:hover>a.anchor,h5>a.anchor:hover,h6:hover>a.anchor,h6>a.anchor:hover{visibility:visible}
+#content h1>a.link,h2>a.link,h3>a.link,#toctitle>a.link,.sidebarblock>.content>.title>a.link,h4>a.link,h5>a.link,h6>a.link{color:#ba3925;text-decoration:none}
+#content h1>a.link:hover,h2>a.link:hover,h3>a.link:hover,#toctitle>a.link:hover,.sidebarblock>.content>.title>a.link:hover,h4>a.link:hover,h5>a.link:hover,h6>a.link:hover{color:#a53221}
+details,.audioblock,.imageblock,.literalblock,.listingblock,.stemblock,.videoblock{margin-bottom:1.25em}
+details>summary:first-of-type{cursor:pointer;display:list-item;outline:none;margin-bottom:.75em}
+.admonitionblock td.content>.title,.audioblock>.title,.exampleblock>.title,.imageblock>.title,.listingblock>.title,.literalblock>.title,.stemblock>.title,.openblock>.title,.paragraph>.title,.quoteblock>.title,table.tableblock>.title,.verseblock>.title,.videoblock>.title,.dlist>.title,.olist>.title,.ulist>.title,.qlist>.title,.hdlist>.title{text-rendering:optimizeLegibility;text-align:left;font-family:"Noto Serif","DejaVu Serif",serif;font-size:1rem;font-style:italic}
+table.tableblock.fit-content>caption.title{white-space:nowrap;width:0}
+.paragraph.lead>p,#preamble>.sectionbody>[class="paragraph"]:first-of-type p{font-size:1.21875em;line-height:1.6;color:rgba(0,0,0,.85)}
+table.tableblock #preamble>.sectionbody>[class="paragraph"]:first-of-type p{font-size:inherit}
+.admonitionblock>table{border-collapse:separate;border:0;background:none;width:100%}
+.admonitionblock>table td.icon{text-align:center;width:80px}
+.admonitionblock>table td.icon img{max-width:none}
+.admonitionblock>table td.icon .title{font-weight:bold;font-family:"Open Sans","DejaVu Sans",sans-serif;text-transform:uppercase}
+.admonitionblock>table td.content{padding-left:1.125em;padding-right:1.25em;border-left:1px solid #dddddf;color:rgba(0,0,0,.6);word-wrap:anywhere}
+.admonitionblock>table td.content>:last-child>:last-child{margin-bottom:0}
+.exampleblock>.content{border-style:solid;border-width:1px;border-color:#e6e6e6;margin-bottom:1.25em;padding:1.25em;background:#fff;-webkit-border-radius:4px;border-radius:4px}
+.exampleblock>.content>:first-child{margin-top:0}
+.exampleblock>.content>:last-child{margin-bottom:0}
+.sidebarblock{border-style:solid;border-width:1px;border-color:#dbdbd6;margin-bottom:1.25em;padding:1.25em;background:#f3f3f2;-webkit-border-radius:4px;border-radius:4px}
+.sidebarblock>:first-child{margin-top:0}
+.sidebarblock>:last-child{margin-bottom:0}
+.sidebarblock>.content>.title{color:#7a2518;margin-top:0;text-align:center}
+.exampleblock>.content>:last-child>:last-child,.exampleblock>.content .olist>ol>li:last-child>:last-child,.exampleblock>.content .ulist>ul>li:last-child>:last-child,.exampleblock>.content .qlist>ol>li:last-child>:last-child,.sidebarblock>.content>:last-child>:last-child,.sidebarblock>.content .olist>ol>li:last-child>:last-child,.sidebarblock>.content .ulist>ul>li:last-child>:last-child,.sidebarblock>.content .qlist>ol>li:last-child>:last-child{margin-bottom:0}
+.literalblock pre,.listingblock>.content>pre{-webkit-border-radius:4px;border-radius:4px;overflow-x:auto;padding:1em;font-size:.8125em}
+@media screen and (min-width:768px){.literalblock pre,.listingblock>.content>pre{font-size:.90625em}}
+@media screen and (min-width:1280px){.literalblock pre,.listingblock>.content>pre{font-size:1em}}
+.literalblock pre,.listingblock>.content>pre:not(.highlight),.listingblock>.content>pre[class="highlight"],.listingblock>.content>pre[class^="highlight "]{background:#f7f7f8}
+.literalblock.output pre{color:#f7f7f8;background:rgba(0,0,0,.9)}
+.listingblock>.content{position:relative}
+.listingblock code[data-lang]::before{display:none;content:attr(data-lang);position:absolute;font-size:.75em;top:.425rem;right:.5rem;line-height:1;text-transform:uppercase;color:inherit;opacity:.5}
+.listingblock:hover code[data-lang]::before{display:block}
+.listingblock.terminal pre .command::before{content:attr(data-prompt);padding-right:.5em;color:inherit;opacity:.5}
+.listingblock.terminal pre .command:not([data-prompt])::before{content:"$"}
+.listingblock pre.highlightjs{padding:0}
+.listingblock pre.highlightjs>code{padding:1em;-webkit-border-radius:4px;border-radius:4px}
+.listingblock pre.prettyprint{border-width:0}
+.prettyprint{background:#f7f7f8}
+pre.prettyprint .linenums{line-height:1.45;margin-left:2em}
+pre.prettyprint li{background:none;list-style-type:inherit;padding-left:0}
+pre.prettyprint li code[data-lang]::before{opacity:1}
+pre.prettyprint li:not(:first-child) code[data-lang]::before{display:none}
+table.linenotable{border-collapse:separate;border:0;margin-bottom:0;background:none}
+table.linenotable td[class]{color:inherit;vertical-align:top;padding:0;line-height:inherit;white-space:normal}
+table.linenotable td.code{padding-left:.75em}
+table.linenotable td.linenos{border-right:1px solid currentColor;opacity:.35;padding-right:.5em}
+pre.pygments .lineno{border-right:1px solid currentColor;opacity:.35;display:inline-block;margin-right:.75em}
+pre.pygments .lineno::before{content:"";margin-right:-.125em}
+.quoteblock{margin:0 1em 1.25em 1.5em;display:table}
+.quoteblock:not(.excerpt)>.title{margin-left:-1.5em;margin-bottom:.75em}
+.quoteblock blockquote,.quoteblock p{color:rgba(0,0,0,.85);font-size:1.15rem;line-height:1.75;word-spacing:.1em;letter-spacing:0;font-style:italic;text-align:justify}
+.quoteblock blockquote{margin:0;padding:0;border:0}
+.quoteblock blockquote::before{content:"\201c";float:left;font-size:2.75em;font-weight:bold;line-height:.6em;margin-left:-.6em;color:#7a2518;text-shadow:0 1px 2px rgba(0,0,0,.1)}
+.quoteblock blockquote>.paragraph:last-child p{margin-bottom:0}
+.quoteblock .attribution{margin-top:.75em;margin-right:.5ex;text-align:right}
+.verseblock{margin:0 1em 1.25em}
+.verseblock pre{font-family:"Open Sans","DejaVu Sans",sans;font-size:1.15rem;color:rgba(0,0,0,.85);font-weight:300;text-rendering:optimizeLegibility}
+.verseblock pre strong{font-weight:400}
+.verseblock .attribution{margin-top:1.25rem;margin-left:.5ex}
+.quoteblock .attribution,.verseblock .attribution{font-size:.9375em;line-height:1.45;font-style:italic}
+.quoteblock .attribution br,.verseblock .attribution br{display:none}
+.quoteblock .attribution cite,.verseblock .attribution cite{display:block;letter-spacing:-.025em;color:rgba(0,0,0,.6)}
+.quoteblock.abstract blockquote::before,.quoteblock.excerpt blockquote::before,.quoteblock .quoteblock blockquote::before{display:none}
+.quoteblock.abstract blockquote,.quoteblock.abstract p,.quoteblock.excerpt blockquote,.quoteblock.excerpt p,.quoteblock .quoteblock blockquote,.quoteblock .quoteblock p{line-height:1.6;word-spacing:0}
+.quoteblock.abstract{margin:0 1em 1.25em;display:block}
+.quoteblock.abstract>.title{margin:0 0 .375em;font-size:1.15em;text-align:center}
+.quoteblock.excerpt>blockquote,.quoteblock .quoteblock{padding:0 0 .25em 1em;border-left:.25em solid #dddddf}
+.quoteblock.excerpt,.quoteblock .quoteblock{margin-left:0}
+.quoteblock.excerpt blockquote,.quoteblock.excerpt p,.quoteblock .quoteblock blockquote,.quoteblock .quoteblock p{color:inherit;font-size:1.0625rem}
+.quoteblock.excerpt .attribution,.quoteblock .quoteblock .attribution{color:inherit;text-align:left;margin-right:0}
+p.tableblock:last-child{margin-bottom:0}
+td.tableblock>.content{margin-bottom:1.25em;word-wrap:anywhere}
+td.tableblock>.content>:last-child{margin-bottom:-1.25em}
+table.tableblock,th.tableblock,td.tableblock{border:0 solid #dedede}
+table.grid-all>*>tr>*{border-width:1px}
+table.grid-cols>*>tr>*{border-width:0 1px}
+table.grid-rows>*>tr>*{border-width:1px 0}
+table.frame-all{border-width:1px}
+table.frame-ends{border-width:1px 0}
+table.frame-sides{border-width:0 1px}
+table.frame-none>colgroup+*>:first-child>*,table.frame-sides>colgroup+*>:first-child>*{border-top-width:0}
+table.frame-none>:last-child>:last-child>*,table.frame-sides>:last-child>:last-child>*{border-bottom-width:0}
+table.frame-none>*>tr>:first-child,table.frame-ends>*>tr>:first-child{border-left-width:0}
+table.frame-none>*>tr>:last-child,table.frame-ends>*>tr>:last-child{border-right-width:0}
+table.stripes-all tr,table.stripes-odd tr:nth-of-type(odd),table.stripes-even tr:nth-of-type(even),table.stripes-hover tr:hover{background:#f8f8f7}
+th.halign-left,td.halign-left{text-align:left}
+th.halign-right,td.halign-right{text-align:right}
+th.halign-center,td.halign-center{text-align:center}
+th.valign-top,td.valign-top{vertical-align:top}
+th.valign-bottom,td.valign-bottom{vertical-align:bottom}
+th.valign-middle,td.valign-middle{vertical-align:middle}
+table thead th,table tfoot th{font-weight:bold}
+tbody tr th{background:#f7f8f7}
+tbody tr th,tbody tr th p,tfoot tr th,tfoot tr th p{color:rgba(0,0,0,.8);font-weight:bold}
+p.tableblock>code:only-child{background:none;padding:0}
+p.tableblock{font-size:1em}
+ol{margin-left:1.75em}
+ul li ol{margin-left:1.5em}
+dl dd{margin-left:1.125em}
+dl dd:last-child,dl dd:last-child>:last-child{margin-bottom:0}
+ol>li p,ul>li p,ul dd,ol dd,.olist .olist,.ulist .ulist,.ulist .olist,.olist .ulist{margin-bottom:.625em}
+ul.checklist,ul.none,ol.none,ul.no-bullet,ol.no-bullet,ol.unnumbered,ul.unstyled,ol.unstyled{list-style-type:none}
+ul.no-bullet,ol.no-bullet,ol.unnumbered{margin-left:.625em}
+ul.unstyled,ol.unstyled{margin-left:0}
+ul.checklist{margin-left:.625em}
+ul.checklist li>p:first-child>.fa-square-o:first-child,ul.checklist li>p:first-child>.fa-check-square-o:first-child{width:1.25em;font-size:.8em;position:relative;bottom:.125em}
+ul.checklist li>p:first-child>input[type="checkbox"]:first-child{margin-right:.25em}
+ul.inline{display:-ms-flexbox;display:-webkit-box;display:flex;-ms-flex-flow:row wrap;-webkit-flex-flow:row wrap;flex-flow:row wrap;list-style:none;margin:0 0 .625em -1.25em}
+ul.inline>li{margin-left:1.25em}
+.unstyled dl dt{font-weight:400;font-style:normal}
+ol.arabic{list-style-type:decimal}
+ol.decimal{list-style-type:decimal-leading-zero}
+ol.loweralpha{list-style-type:lower-alpha}
+ol.upperalpha{list-style-type:upper-alpha}
+ol.lowerroman{list-style-type:lower-roman}
+ol.upperroman{list-style-type:upper-roman}
+ol.lowergreek{list-style-type:lower-greek}
+.hdlist>table,.colist>table{border:0;background:none}
+.hdlist>table>tbody>tr,.colist>table>tbody>tr{background:none}
+td.hdlist1,td.hdlist2{vertical-align:top;padding:0 .625em}
+td.hdlist1{font-weight:bold;padding-bottom:1.25em}
+td.hdlist2{word-wrap:anywhere}
+.literalblock+.colist,.listingblock+.colist{margin-top:-.5em}
+.colist td:not([class]):first-child{padding:.4em .75em 0;line-height:1;vertical-align:top}
+.colist td:not([class]):first-child img{max-width:none}
+.colist td:not([class]):last-child{padding:.25em 0}
+.thumb,.th{line-height:0;display:inline-block;border:solid 4px #fff;-webkit-box-shadow:0 0 0 1px #ddd;box-shadow:0 0 0 1px #ddd}
+.imageblock.left{margin:.25em .625em 1.25em 0}
+.imageblock.right{margin:.25em 0 1.25em .625em}
+.imageblock>.title{margin-bottom:0}
+.imageblock.thumb,.imageblock.th{border-width:6px}
+.imageblock.thumb>.title,.imageblock.th>.title{padding:0 .125em}
+.image.left,.image.right{margin-top:.25em;margin-bottom:.25em;display:inline-block;line-height:0}
+.image.left{margin-right:.625em}
+.image.right{margin-left:.625em}
+a.image{text-decoration:none;display:inline-block}
+a.image object{pointer-events:none}
+sup.footnote,sup.footnoteref{font-size:.875em;position:static;vertical-align:super}
+sup.footnote a,sup.footnoteref a{text-decoration:none}
+sup.footnote a:active,sup.footnoteref a:active{text-decoration:underline}
+#footnotes{padding-top:.75em;padding-bottom:.75em;margin-bottom:.625em}
+#footnotes hr{width:20%;min-width:6.25em;margin:-.25em 0 .75em;border-width:1px 0 0}
+#footnotes .footnote{padding:0 .375em 0 .225em;line-height:1.3334;font-size:.875em;margin-left:1.2em;margin-bottom:.2em}
+#footnotes .footnote a:first-of-type{font-weight:bold;text-decoration:none;margin-left:-1.05em}
+#footnotes .footnote:last-of-type{margin-bottom:0}
+#content #footnotes{margin-top:-.625em;margin-bottom:0;padding:.75em 0}
+.gist .file-data>table{border:0;background:#fff;width:100%;margin-bottom:0}
+.gist .file-data>table td.line-data{width:99%}
+div.unbreakable{page-break-inside:avoid}
+.big{font-size:larger}
+.small{font-size:smaller}
+.underline{text-decoration:underline}
+.overline{text-decoration:overline}
+.line-through{text-decoration:line-through}
+.aqua{color:#00bfbf}
+.aqua-background{background:#00fafa}
+.black{color:#000}
+.black-background{background:#000}
+.blue{color:#0000bf}
+.blue-background{background:#0000fa}
+.fuchsia{color:#bf00bf}
+.fuchsia-background{background:#fa00fa}
+.gray{color:#606060}
+.gray-background{background:#7d7d7d}
+.green{color:#006000}
+.green-background{background:#007d00}
+.lime{color:#00bf00}
+.lime-background{background:#00fa00}
+.maroon{color:#600000}
+.maroon-background{background:#7d0000}
+.navy{color:#000060}
+.navy-background{background:#00007d}
+.olive{color:#606000}
+.olive-background{background:#7d7d00}
+.purple{color:#600060}
+.purple-background{background:#7d007d}
+.red{color:#bf0000}
+.red-background{background:#fa0000}
+.silver{color:#909090}
+.silver-background{background:#bcbcbc}
+.teal{color:#006060}
+.teal-background{background:#007d7d}
+.white{color:#bfbfbf}
+.white-background{background:#fafafa}
+.yellow{color:#bfbf00}
+.yellow-background{background:#fafa00}
+span.icon>.fa{cursor:default}
+a span.icon>.fa{cursor:inherit}
+.admonitionblock td.icon [class^="fa icon-"]{font-size:2.5em;text-shadow:1px 1px 2px rgba(0,0,0,.5);cursor:default}
+.admonitionblock td.icon .icon-note::before{content:"\f05a";color:#19407c}
+.admonitionblock td.icon .icon-tip::before{content:"\f0eb";text-shadow:1px 1px 2px rgba(155,155,0,.8);color:#111}
+.admonitionblock td.icon .icon-warning::before{content:"\f071";color:#bf6900}
+.admonitionblock td.icon .icon-caution::before{content:"\f06d";color:#bf3400}
+.admonitionblock td.icon .icon-important::before{content:"\f06a";color:#bf0000}
+.conum[data-value]{display:inline-block;color:#fff!important;background:rgba(0,0,0,.8);-webkit-border-radius:50%;border-radius:50%;text-align:center;font-size:.75em;width:1.67em;height:1.67em;line-height:1.67em;font-family:"Open Sans","DejaVu Sans",sans-serif;font-style:normal;font-weight:bold}
+.conum[data-value] *{color:#fff!important}
+.conum[data-value]+b{display:none}
+.conum[data-value]::after{content:attr(data-value)}
+pre .conum[data-value]{position:relative;top:-.125em}
+b.conum *{color:inherit!important}
+.conum:not([data-value]):empty{display:none}
+dt,th.tableblock,td.content,div.footnote{text-rendering:optimizeLegibility}
+h1,h2,p,td.content,span.alt{letter-spacing:-.01em}
+p strong,td.content strong,div.footnote strong{letter-spacing:-.005em}
+p,blockquote,dt,td.content,span.alt{font-size:1.0625rem}
+p{margin-bottom:1.25rem}
+.sidebarblock p,.sidebarblock dt,.sidebarblock td.content,p.tableblock{font-size:1em}
+.exampleblock>.content{background:#fffef7;border-color:#e0e0dc;-webkit-box-shadow:0 1px 4px #e0e0dc;box-shadow:0 1px 4px #e0e0dc}
+.print-only{display:none!important}
+@page{margin:1.25cm .75cm}
+@media print{*{-webkit-box-shadow:none!important;box-shadow:none!important;text-shadow:none!important}
+html{font-size:80%}
+a{color:inherit!important;text-decoration:underline!important}
+a.bare,a[href^="#"],a[href^="mailto:"]{text-decoration:none!important}
+a[href^="http:"]:not(.bare)::after,a[href^="https:"]:not(.bare)::after{content:"(" attr(href) ")";display:inline-block;font-size:.875em;padding-left:.25em}
+abbr[title]::after{content:" (" attr(title) ")"}
+pre,blockquote,tr,img,object,svg{page-break-inside:avoid}
+thead{display:table-header-group}
+svg{max-width:100%}
+p,blockquote,dt,td.content{font-size:1em;orphans:3;widows:3}
+h2,h3,#toctitle,.sidebarblock>.content>.title{page-break-after:avoid}
+#header,#content,#footnotes,#footer{max-width:none}
+#toc,.sidebarblock,.exampleblock>.content{background:none!important}
+#toc{border-bottom:1px solid #dddddf!important;padding-bottom:0!important}
+body.book #header{text-align:center}
+body.book #header>h1:first-child{border:0!important;margin:2.5em 0 1em}
+body.book #header .details{border:0!important;display:block;padding:0!important}
+body.book #header .details span:first-child{margin-left:0!important}
+body.book #header .details br{display:block}
+body.book #header .details br+span::before{content:none!important}
+body.book #toc{border:0!important;text-align:left!important;padding:0!important;margin:0!important}
+body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-break-before:always}
+.listingblock code[data-lang]::before{display:block}
+#footer{padding:0 .9375em}
+.hide-on-print{display:none!important}
+.print-only{display:block!important}
+.hide-for-print{display:none!important}
+.show-for-print{display:inherit!important}}
+@media print,amzn-kf8{#header>h1:first-child{margin-top:1.25rem}
+.sect1{padding:0!important}
+.sect1+.sect1{border:0}
+#footer{background:none}
+#footer-text{color:rgba(0,0,0,.6);font-size:.9em}}
+@media amzn-kf8{#header,#content,#footnotes,#footer{padding:0}}
+</style>
+</head>
+<body class="article toc2 toc-left">
+<div id="header">
+<h1>Getting started with cost management</h1>
+<div id="toc" class="toc2">
+<div id="toctitle">Table of Contents</div>
+<ul class="sectlevel1">
+<li><a href="#assembly-introduction-cost-management">1. Introduction to cost management</a>
+<ul class="sectlevel2">
+<li><a href="#about-cost-management_getting-started">1.1. About cost management</a>
+<ul class="sectlevel3">
+<li><a href="#_terminology">1.1.1. Terminology</a></li>
+</ul>
+</li>
+<li><a href="#planning-cost-management">1.2. Planning for cost management</a></li>
+</ul>
+</li>
+<li><a href="#assembly-limiting-access-cost-resources-rbac">2. Limiting access to cost management resources</a>
+<ul class="sectlevel2">
+<li><a href="#default-user-roles_limiting-access">2.1. Default user roles in cost management</a></li>
+<li><a href="#adding-a-role-cost-rbac_limiting-access">2.2. Adding a role</a></li>
+<li><a href="#adding-role-to-group-cost-rbac_limiting-access">2.3. Adding a role to a group</a></li>
+</ul>
+</li>
+<li><a href="#assembly-adding-openshift-container-platform-source">3. Adding an OpenShift Container Platform source to cost management</a>
+<ul class="sectlevel2">
+<li><a href="#installation-overview_adding-an-ocp-source">3.1. Installation tasks summary</a></li>
+<li><a href="#installing-cost-operator_adding-an-ocp-source">3.2. Installing the cost operator</a></li>
+<li><a href="#configuring-the-operator-instance-for-a-new-installation_adding-an-ocp-source">3.3. Configuring the operator instance for a new installation</a></li>
+<li><a href="#replacing-prior-operator-instance_adding-an-ocp-source">3.4. Replacing the prior operator instance with the Koku metrics operator</a></li>
+<li><a href="#removing-a-cost-operator_adding-an-ocp-source">3.5. Removing a prior cost operator</a></li>
+<li><a href="#verifying-cost-operator_adding-an-ocp-source">3.6. Verifying <code>koku-metrics-operator</code></a></li>
+<li><a href="#basic-authentication_adding-an-ocp-source">3.7. Configuring basic authentication for cost operator</a>
+<ul class="sectlevel3">
+<li><a href="#creating-secret-pair">3.7.1. Creating the secret key/value pair for basic authentication</a></li>
+<li><a href="#modify-yaml-file">3.7.2. Modifying the YAML file</a></li>
+</ul>
+</li>
+<li><a href="#proc_creating-an-openshift-container-platform-source-manually_adding-an-ocp-source">3.8. Creating an Openshift Container Platform source manually</a></li>
+<li><a href="#assembly-adding-a-restricted-network-source_adding-an-ocp-source">3.9. Adding a restricted network source</a>
+<ul class="sectlevel3">
+<li><a href="#proc_installing-koku-metrics-operator-on-a-restricted-network_adding-restricted-network-source">3.9.1. Installing the Koku Metrics Operator on a restricted network</a></li>
+<li><a href="#configuring-koku-metrics-operator-on-a-restricted-network_adding-restricted-network-source">3.9.2. Configuring Koku Metrics Operator on a restricted network</a></li>
+<li><a href="#proc_downloading-reports_adding-restricted-network-source">3.9.3. Downloading cost reports</a></li>
+<li><a href="#proc_uploading-reports_adding-restricted-network-source">3.9.4. Uploading cost reports to cloud.redhat.com</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#assembly-adding-aws-sources">4. Adding an Amazon Web Services (AWS) source to cost management</a>
+<ul class="sectlevel2">
+<li><a href="#creating-an-aws-s3-bucket_adding-aws-sources">4.1. Creating an S3 bucket for reporting</a></li>
+<li><a href="#activating-aws-tags_adding-aws-sources">4.2. Activating AWS tags for cost management</a></li>
+<li><a href="#enabling-aws-account-access_adding-aws-sources">4.3. Enabling minimal account access for cost and usage consumption</a>
+<ul class="sectlevel3">
+<li><a href="#enabling-additional-aws-account-access_adding-aws-sources">4.3.1. Enabling additional account access for cost and usage consumption</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#assembly-adding-azure-sources">5. Adding a Microsoft Azure source to cost management</a>
+<ul class="sectlevel2">
+<li><a href="#creating-an-azure-storage-account_adding-an-azure-source">5.1. Creating an Azure resource group and storage account</a></li>
+<li><a href="#configuring-azure-roles_adding-an-azure-source">5.2. Configuring Azure roles</a></li>
+<li><a href="#configuring-an-azure-daily-export-schedule_adding-an-azure-source">5.3. Configuring a daily Azure data export schedule</a></li>
+</ul>
+</li>
+<li><a href="#assembly-adding-ocp-sources">6. Adding an OpenShift Container Platform 4.3 and 4.4 source to cost management</a>
+<ul class="sectlevel2">
+<li><a href="#installing-cost-mgmt-operator_adding-previous-source">6.1. Installing the Cost Management Operator</a></li>
+<li><a href="#configuring-cost-mgmt-operator_adding-previous-source">6.2. Configuring the Cost Management Operator</a></li>
+</ul>
+</li>
+<li><a href="#assembly-cost-management-next-steps">7. Next steps for managing your costs</a>
+<ul class="sectlevel2">
+<li><a href="#_configure_tagging_for_your_sources">7.1. Configure tagging for your sources</a></li>
+<li><a href="#_configure_cost_models_to_accurately_report_costs">7.2. Configure cost models to accurately report costs</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<div id="content">
+<div class="sect1">
+<h2 id="assembly-introduction-cost-management">1. Introduction to cost management</h2>
+<div class="sectionbody">
+<div class="paragraph _abstract">
+<p>This document provides instructions to begin using cost management, including prerequisites and instructions for connecting your cloud environments, and configuring users and permissions.</p>
+</div>
+<div class="paragraph">
+<p>After completing the setup described in this guide, you will be able to track cost and usage data for your Amazon Web Services (AWS), Microsoft Azure, and OpenShift Container Platform environments.</p>
+</div>
+<div id="note-bugzilla_getting-started" class="paragraph _abstract">
+<p>If you have a suggestion for improving this guide or have found an error, please submit a Bugzilla report at <a href="https://bugzilla.redhat.com/enter_bug.cgi?product=Cloud%20Software%20Services%20(cloud.redhat.com)&amp;component=Cost%20Management">http://bugzilla.redhat.com</a> against <em>Cloud Software Services (<a href="https://cloud.redhat.com">cloud.redhat.com</a>)</em> for the <strong>Cost Management</strong> component.</p>
+</div>
+<div class="sect2">
+<h3 id="about-cost-management_getting-started">1.1. About cost management</h3>
+<div class="paragraph _abstract">
+<p>Cost management is an OpenShift Container Platform service that enables you to better understand and track costs for clouds and containers. It is based on the upstream project Koku.</p>
+</div>
+<div class="paragraph">
+<p>You can access the cost management application from <a href="https://cloud.redhat.com/cost-management/" class="bare">https://cloud.redhat.com/cost-management/</a>.</p>
+</div>
+<div class="paragraph">
+<p>Cost management allows you to simplify management of resources and costs across various environments, including:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Container platforms such as OpenShift Container Platform</p>
+</li>
+<li>
+<p>Public clouds such as Amazon Web Services (AWS) and Microsoft Azure</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>The cost management application allows you to:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Visualize, understand and analyze the use of resources and costs</p>
+</li>
+<li>
+<p>Forecast your future consumption and compare them with budgets</p>
+</li>
+<li>
+<p>Optimize resources and consumption</p>
+</li>
+<li>
+<p>Identify patterns of usage that should be investigated</p>
+</li>
+<li>
+<p>Integrate with third party tools that can benefit from cost and resourcing data</p>
+</li>
+</ul>
+</div>
+<div class="sect3">
+<h4 id="_terminology">1.1.1. Terminology</h4>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">Source</dt>
+<dd>
+<p>A cloud provider account that is connected to cost management to be monitored, for example, an OpenShift Container Platform deployment, or an AWS or Azure account.</p>
+</dd>
+<dt class="hdlist1">Organization Administrator</dt>
+<dd>
+<p>The highest permission level for Red Hat accounts, with full access to content and features. This is the only role that can manage users and control their access and permissions on an account. An account may have multiple Organization Administrators.</p>
+</dd>
+</dl>
+</div>
+<div class="paragraph">
+<p>See <a href="https://access.redhat.com/articles/1757953">Roles and Permissions for Red Hat Subscription Management</a> for more details.</p>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="planning-cost-management">1.2. Planning for cost management</h3>
+<div class="paragraph _abstract">
+<p>When configuring cost management for your needs, consider the scope of your environments that you want to manage costs for, and the users who will have access to the data.</p>
+</div>
+<div class="paragraph">
+<p>Some considerations in creating a new Red Hat organization and users for different customer types include:</p>
+</div>
+<div class="paragraph">
+<p><strong>Scope:</strong></p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Customer company wide</p>
+</li>
+<li>
+<p>Customer division or organization wide</p>
+</li>
+<li>
+<p>Partner company managing several tenants</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p><strong>Data:</strong></p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>How does your business need the data? Do you want information about projects, or users, for example?</p>
+</li>
+<li>
+<p>Planning AWS tags to reflect previous use cases.</p>
+</li>
+<li>
+<p>Enforcement: Is there any way for you to ensure that the proper tags and metadata are included in each item of the inventory?</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p><strong>User access:</strong></p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>What level of access do you want your users to have?</p>
+</li>
+<li>
+<p>Do you want some users to have access to all cost data, while other users can view only a portion of the environment or certain sources?</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="assembly-limiting-access-cost-resources-rbac">2. Limiting access to cost management resources</h2>
+<div class="sectionbody">
+<div class="paragraph _abstract">
+<p>You may not want users to have access to all cost data, but instead only data specific to their projects or organization. Using role-based access control, you can limit the visibility of resources involved in cost management reports. For example, you may want to restrict a user&#8217;s view to only AWS sources, instead of the entire environment.</p>
+</div>
+<div class="paragraph">
+<p>Role-based access control works by organizing users into groups, which can be associated with one or more roles. A role defines a permission and a set of resource definitions.</p>
+</div>
+<div class="paragraph">
+<p>By default, a user who is not an account administrator will not have access to data, but instead must be granted access to resources. Account administrators can view all data without any further role-based access control configuration.</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<div class="title">Note</div>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>A Red Hat account user with Organization Administrator entitlements is required to configure Red Hat account users. This Red Hat login allows you to look up users, add them to groups, and to assign roles that control visibility to resources.</p>
+</div>
+<div class="paragraph">
+<p>For more information about Red Hat account roles, see <a href="https://access.redhat.com/articles/1757953">Roles and Permissions for Red Hat Subscription Management</a> and <a href="https://access.redhat.com/start/how-to-create-and-manage-users">How To Create and Manage Users</a>.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="sect2">
+<h3 id="default-user-roles_limiting-access">2.1. Default user roles in cost management</h3>
+<div class="paragraph _abstract">
+<p>You can configure custom user access roles for cost management, or assign each user a predefined role.</p>
+</div>
+<div class="paragraph">
+<p>To use a default role, determine the required level of access to permit your users based on the following predefined roles in cost management:</p>
+</div>
+<div class="ulist">
+<div class="title">Administrator roles</div>
+<ul>
+<li>
+<p>Cost Administrator:  has read and write permissions to all resources in cost management</p>
+</li>
+<li>
+<p>Cost Price List Administrator:  has read and write permissions on price list rates</p>
+</li>
+</ul>
+</div>
+<div class="ulist">
+<div class="title">Viewer roles</div>
+<ul>
+<li>
+<p>Cost Cloud Viewer:  has read permissions on cost reports related to cloud sources</p>
+</li>
+<li>
+<p>Cost OpenShift Viewer:  has read permissions on cost reports related to OpenShift sources</p>
+</li>
+<li>
+<p>Cost Price List Viewer:  has read permissions on price list rates</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="adding-a-role-cost-rbac_limiting-access">2.2. Adding a role</h3>
+<div class="paragraph _abstract">
+<p>Create a new role to manage and limit the scope of information that users can see within cost management.</p>
+</div>
+<div class="ulist">
+<div class="title">Prerequisites</div>
+<ul>
+<li>
+<p>You must be an Account Administrator or a member of a group with the <em>RBAC Administrator</em> role to create a role.</p>
+</li>
+</ul>
+</div>
+<div class="olist arabic">
+<div class="title">Procedure</div>
+<ol class="arabic">
+<li>
+<p>From cost management, click <span class="image"><img src="images/configuration-gear.png" alt="configuration gear"></span> (<strong>Settings</strong>) to navigate to <strong>User Access</strong>.</p>
+</li>
+<li>
+<p>Click the <strong>Roles</strong> tab.</p>
+</li>
+<li>
+<p>Click <strong>Create Role</strong> to open the <strong>Add role</strong> wizard.</p>
+</li>
+<li>
+<p>In the <strong>Name and Description</strong> screen, enter a name for the new role, and optionally, a description. Click <strong>Next</strong>.</p>
+</li>
+<li>
+<p>In the <strong>Permission</strong> screen, specify the Red Hat Cloud Services application you are creating the role for (in this case, cost management) as well as the resource and permission type:</p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>For <strong>Application</strong>, enter <em>cost-management</em>.</p>
+</li>
+<li>
+<p>For <strong>Resource type</strong>, specify the resource this permission will be used to access from the following list:</p>
+<div class="ulist">
+<ul>
+<li>
+<p><em>aws.account</em></p>
+</li>
+<li>
+<p><em>aws.organizational_unit</em></p>
+</li>
+<li>
+<p><em>azure.subscription_guid</em></p>
+</li>
+<li>
+<p><em>openshift.cluster</em></p>
+</li>
+<li>
+<p><em>openshift.node</em></p>
+</li>
+<li>
+<p><em>openshift.project</em></p>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">NOTE</dt>
+<dd>
+<p>When you add an AWS organizational unit as a <strong>Resource Type</strong>, any user who has access to the parent node also has access to all children and sub-children of the parent node.</p>
+</dd>
+</dl>
+</div>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>For <strong>Permission</strong>, specify <em>read</em> as all cost resource data is read-only.</p>
+<div class="paragraph">
+<p>For example, to create a role with read-only permissions to AWS account data, set <em>aws.account</em> as the <strong>Resource type</strong> and <em>read</em> as the <strong>Permission</strong>. In the next step, you can specify the AWS account to apply this role to.</p>
+</div>
+</li>
+</ol>
+</div>
+</li>
+<li>
+<p>In the <strong>Resource definitions</strong> screen, you can provide more details about the resources the permission will be used for. For example, to grant this role access to a specific AWS account, enter the following and click <strong>Add to definitions</strong>:</p>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Key</strong>: <em>aws.account</em></p>
+<div class="ulist">
+<ul>
+<li>
+<p>Options for <strong>Key</strong> are: <em>aws.account</em>, <em>aws.organizational_unit</em>,  <em>azure.subscription_guid</em>, <em>openshift.cluster</em>, <em>openshift.node</em>, <em>openshift.project</em></p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p><strong>Operation</strong>: <em>equal</em></p>
+<div class="ulist">
+<ul>
+<li>
+<p>Use <em>equal</em> if you know the exact value, or <em>list</em> to see a list of values that will work for this role.</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p><strong>Value</strong>: Your AWS account number or account alias.</p>
+<div class="ulist">
+<ul>
+<li>
+<p>This is specific to the resource defined in the <strong>Key</strong> field. Examples include the AWS account ID or alias, AWS organizational unit, Azure subscription ID, OpenShift cluster ID, OpenShift node name, or OpenShift project name.</p>
+<div class="paragraph">
+<p>You can also enter <strong>*</strong> in this field as a wildcard to create a role that matches everything of the resource type defined in <strong>Key</strong>.</p>
+</div>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Add more resource definitions if desired and click <strong>Next</strong> when finished.</p>
+</li>
+<li>
+<p>Review the details for this role and click <strong>Confirm</strong> to create the role.</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>Your new role will be listed in the <strong>Roles</strong> tab on the <strong>User Access Management</strong> screen.</p>
+</div>
+<div class="ulist">
+<div class="title">Next steps</div>
+<ul>
+<li>
+<p>Add this role to a group to provide the role with access to resources.</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="adding-role-to-group-cost-rbac_limiting-access">2.3. Adding a role to a group</h3>
+<div class="paragraph _abstract">
+<p>Add your role to a group to manage and limit the scope of information that users in that group can see within cost management.</p>
+</div>
+<div class="ulist">
+<div class="title">Prerequisites</div>
+<ul>
+<li>
+<p>You must be an Account Administrator or a member of a group with the <em>RBAC Administrator</em> role to create a role.</p>
+</li>
+</ul>
+</div>
+<div class="olist arabic">
+<div class="title">Procedure</div>
+<ol class="arabic">
+<li>
+<p>From cost management, click <span class="image"><img src="images/configuration-gear.png" alt="configuration gear"></span> (<strong>Settings</strong>) to navigate to <strong>User Access</strong>.</p>
+</li>
+<li>
+<p>Click the <strong>Groups</strong> tab.</p>
+</li>
+<li>
+<p>Click <strong>Create group</strong>.</p>
+</li>
+<li>
+<p>In the <strong>General information</strong> screen, enter a name for the new group, and optionally, a description. Click <strong>Next</strong>.</p>
+</li>
+<li>
+<p>In the <strong>Add members</strong> screen, select the user(s) in your organization to add to the new group. Click <strong>Next</strong>.</p>
+</li>
+<li>
+<p>(Optional) In the <strong>Select roles</strong> screen, select one or more role(s) to add to the group.</p>
+<div class="paragraph">
+<p>Default roles available for cost management are:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><em>Cost Administrator</em> : grants read and write permissions</p>
+</li>
+<li>
+<p><em>Cost Cloud Viewer</em> : grants read permissions on cost reports related to cloud sources</p>
+</li>
+<li>
+<p><em>Cost OpenShift Viewer</em> : grants read permissions on cost reports related to OpenShift sources</p>
+</li>
+<li>
+<p><em>Cost Price List Administrator</em> : grants read and write permissions on price list rates</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Review the details for this group and click <strong>Confirm</strong> to create the group.</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>Your new group will be listed in the <strong>Groups</strong> list on the <strong>User Access</strong> screen.</p>
+</div>
+<div class="paragraph">
+<p>To verify your configuration, log out of the cost management application and log back in as a user added to the group.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="assembly-adding-openshift-container-platform-source">3. Adding an OpenShift Container Platform source to cost management</h2>
+<div class="sectionbody">
+<div class="paragraph _abstract">
+<p>To support cost management in Red&#160;Hat OpenShift Container Platform 4.5 and more recent versions, a new community operator is introduced, <code>koku-metrics-operator</code>.</p>
+</div>
+<div class="paragraph">
+<p>The community <code>cost-mgmt-operator</code> supported in OpenShift Container Platform 4.3 and 4.4 is deprecated. Though this cost operator functions with cost management in OpenShift Container Platform 4.5 or later, it is no longer supported. For installing this deprecated operator, see <a href="#assembly-adding-ocp-sources">Adding an OpenShift Container Platform 4.3 and 4.4 source to cost management</a>.</p>
+</div>
+<div class="paragraph">
+<p>To avoid gaps in your cost management data, you can wait 24 to 48 hours before removing <code>cost-mgmt-operator</code> while you verify that <code>koku-metrics-operator</code> provides cost management reports.</p>
+</div>
+<div class="sect2">
+<h3 id="installation-overview_adding-an-ocp-source">3.1. Installation tasks summary</h3>
+<div class="paragraph _abstract">
+<p>Whether you are replacing a prior cost management operator with the Koku metrics operator or installing it for the first time, the basic tasks are the same.</p>
+</div>
+<div class="paragraph">
+<p>Operator installation, configuration, and source management can all be performed from the OpenShift Container Platform web console.</p>
+</div>
+<div class="paragraph">
+<p>You will perform the following tasks to install the <code>koku-metrics-operator</code> and begin using the cost management application in OpenShift Container Platform 4.5 or later.</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<div class="title">Note</div>
+</td>
+<td class="content">
+To install and configure <code>koku-metrics-operator</code> from the OpenShift Container Platform web console, you must use an account with cluster administrator privileges.
+</td>
+</tr>
+</table>
+</div>
+<div class="ulist">
+<div class="title">Prerequisites</div>
+<ul>
+<li>
+<p>The OpenShift Container Platform cluster is installed.</p>
+</li>
+<li>
+<p>You can access the OpenShift Container Platform web console using an account that has cluster administrator privileges.</p>
+</li>
+</ul>
+</div>
+<div class="ulist">
+<div class="title">Task summary</div>
+<ul>
+<li>
+<p>Install the Koku metrics operator (<code>koku-metrics-operator</code>) and use the default token authentication.</p>
+</li>
+<li>
+<p>Create a KokuMetricsConfig YAML file that configures <code>koku-metrics-operator</code>.</p>
+</li>
+<li>
+<p>Create a cost management OpenShift Container Platform source with a new installation, or confirm an existing source with an replacement installation.</p>
+</li>
+<li>
+<p>After installing the Koku metrics operator, delete the old cost operator. This task is required only when the <code>cost-mgmt-operator</code> was previously installed.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>If you use Basic authentication, additional steps are required to configure the Secret that holds username and password credentials.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="installing-cost-operator_adding-an-ocp-source">3.2. Installing the cost operator</h3>
+<div class="paragraph _abstract">
+<p>Install the Koku operator <code>koku-metrics-operator</code> from the OpenShift Container Platform web console.</p>
+</div>
+<div class="ulist">
+<div class="title">Prerequisites</div>
+<ul>
+<li>
+<p>You are logged into the OpenShift Container Platform web console with cluster administrator privileges.</p>
+</li>
+</ul>
+</div>
+<div class="olist arabic">
+<div class="title">Procedure</div>
+<ol class="arabic">
+<li>
+<p>Login to the OpenShift Container Platform web console and click on the <strong>Operators &gt; OperatorHub</strong> tab.</p>
+</li>
+<li>
+<p>Search for and locate <strong>Koku Metrics Operator</strong>.</p>
+</li>
+<li>
+<p>Click on the displayed <strong>Koku Metrics Operator</strong> tile.</p>
+</li>
+<li>
+<p>If an information panel appears with the Community Operators message, click <strong>Continue</strong>.</p>
+</li>
+<li>
+<p>When the <strong>Install Operator</strong> window appears, you must select the <strong><code>koku-metrics-operator</code></strong> namespace for installation. If the namespace does not yet exist, it is created for you.</p>
+</li>
+<li>
+<p>Click on the <strong>Install</strong> button.</p>
+</li>
+<li>
+<p>After a short wait, <strong>Koku Metrics Operator</strong> appears in the <strong>Installed Operators</strong> tab under <strong>Project: all projects</strong> or <strong>Project: koku-metrics-operator</strong>.</p>
+</li>
+</ol>
+</div>
+</div>
+<div class="sect2">
+<h3 id="configuring-the-operator-instance-for-a-new-installation_adding-an-ocp-source">3.3. Configuring the operator instance for a new installation</h3>
+<div class="paragraph _abstract">
+<p>Use the OpenShift Container Platform web console to configure the <code>koku-metrics-operator</code> instance after it is installed.</p>
+</div>
+<div class="ulist">
+<div class="title">Prerequisites</div>
+<ul>
+<li>
+<p>You are logged into the OpenShift Container Platform web console with cluster administrator privileges.</p>
+</li>
+<li>
+<p>The <strong>Koku Metrics Operator</strong> appears in the <strong>Installed Operators</strong> tab.</p>
+</li>
+</ul>
+</div>
+<div class="olist arabic">
+<div class="title">Procedure</div>
+<ol class="arabic">
+<li>
+<p>Under the <strong>Name</strong> heading in the list of installed operators, click the <strong>KokuMetricsOperator</strong> link. The <strong>Installed Operators &gt; Operator Details</strong> window appears for <strong>Koku Metrics Operator</strong>.</p>
+</li>
+<li>
+<p>In the <strong>Details</strong> window, click <strong>+&#160;Create Instance</strong>.</p>
+</li>
+<li>
+<p>A <strong>Koku Metrics Operator &gt; Create KokuMetricsConfig</strong> window appears.</p>
+</li>
+<li>
+<p>Click the <strong>YAML view</strong> radio button to view and modify the contents of the YAML configuration file.</p>
+</li>
+<li>
+<p>When you create a new cost management instance for the Koku metrics operator, make the following modifications in the YAML configuration file.</p>
+</li>
+<li>
+<p>Locate the following two lines in the YAML file.</p>
+<div class="listingblock">
+<div class="content">
+<pre>    create_source: false
+    name: INSERT-SOURCE-NAME</pre>
+</div>
+</div>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>Change <code>false</code> to <code>true</code>.</p>
+</li>
+<li>
+<p>Change <code>INSERT-SOURCE-NAME</code> to the new name of your source.</p>
+<div class="listingblock">
+<div class="title">Example</div>
+<div class="content">
+<pre>    create_source: true
+    name: koku-cost-source</pre>
+</div>
+</div>
+</li>
+</ol>
+</div>
+</li>
+<li>
+<p>Click the <strong>Create</strong> button. These actions create a new source for cost management that will appear in the <a href="https://cloud.redhat.com">cloud.redhat.com</a> cost management application.</p>
+</li>
+</ol>
+</div>
+</div>
+<div class="sect2">
+<h3 id="replacing-prior-operator-instance_adding-an-ocp-source">3.4. Replacing the prior operator instance with the Koku metrics operator</h3>
+<div class="paragraph _abstract">
+<p>If you are replacing a prior cost management operator with the Koku metrics operator, make certain your existing cost management source is properly configured in the YAML configuration file.</p>
+</div>
+<div class="admonitionblock important">
+<table>
+<tr>
+<td class="icon">
+<div class="title">Important</div>
+</td>
+<td class="content">
+When you are replacing a prior cost management operator with the <strong>Koku Metrics Operator</strong> and you want to use an existing source, you must make certain that the <code>name: INSERT-SOURCE-NAME</code> in the YAML file matches your existing source.
+</td>
+</tr>
+</table>
+</div>
+<div class="ulist">
+<div class="title">Prerequisites</div>
+<ul>
+<li>
+<p>You are logged into the OpenShift Container Platform web console with cluster administrator privileges.</p>
+</li>
+<li>
+<p>You can access <a href="https://cloud.redhat.com">cloud.redhat.com</a> and view existing cost management sources.</p>
+</li>
+</ul>
+</div>
+<div class="olist arabic">
+<div class="title">Procedure</div>
+<ol class="arabic">
+<li>
+<p>Under the <strong>Name</strong> heading in the list of installed operators, click the <strong>KokuMetricsOperator</strong> link. The <strong>Installed Operators &gt; Operator Details</strong> window appears for <strong>Koku Metrics Operator</strong>.</p>
+</li>
+<li>
+<p>In the <strong>Details</strong> window, click <strong>+&#160;Create Instance</strong>.</p>
+</li>
+<li>
+<p>A <strong>Koku Metrics Operator &gt; Create KokuMetricsConfig</strong> window appears.</p>
+</li>
+<li>
+<p>Click the <strong>YAML view</strong> radio button to view and modify the contents of the <code>KokuMetricsConfig.yaml</code> file.</p>
+</li>
+<li>
+<p>Open <a href="https://cloud.redhat.com">cloud.redhat.com</a> and log in using your Organization Administrator account.</p>
+</li>
+<li>
+<p>Click on <span class="image"><img src="images/configuration-gear.png" alt="configuration gear"></span> (Settings).</p>
+</li>
+<li>
+<p>Click on the <strong>Sources</strong> tab to display existing sources.</p>
+</li>
+<li>
+<p>Select an existing cost management source and copy its name.</p>
+</li>
+<li>
+<p>In the <code>KokuMetricsConfig.yaml</code> file, replace <code>INSERT-SOURCE-NAME</code> with the source name that you copied from the cost management source list for your organization.</p>
+<div class="listingblock">
+<div class="content">
+<pre>    create_source: false
+    name: INSERT-SOURCE-NAME    &lt;&lt;&lt;&lt; replace this string</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>The <code>create_source: false</code> does not change because you are matching an existing source, not creating a new source.</p>
+</div>
+</li>
+<li>
+<p>Click the <strong>Create</strong> button. No further actions are needed to configure the operator instance.</p>
+</li>
+</ol>
+</div>
+</div>
+<div class="sect2">
+<h3 id="removing-a-cost-operator_adding-an-ocp-source">3.5. Removing a prior cost operator</h3>
+<div class="paragraph _abstract">
+<p>After installing the <code>koku-metrics-operator</code>, uninstall the prior <code>cost-mgmt-operator</code> operator.</p>
+</div>
+<div class="paragraph">
+<p>To avoid gaps in your cost management data, you can wait 24 to 48 hours before removing <code>cost-mgmt-operator</code> while you verify that <code>koku-metrics-operator</code> provides cost management reports.</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<div class="title">Note</div>
+</td>
+<td class="content">
+If you mistakenly remove the <strong>Koku Metrics Operator</strong>, reinstall it.
+</td>
+</tr>
+</table>
+</div>
+<div class="ulist">
+<div class="title">Prerequisites</div>
+<ul>
+<li>
+<p>The <code>cost-mgmt-operator</code> is installed.</p>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<div class="title">Note</div>
+</td>
+<td class="content">
+The <code>cost-mgmt-operator</code> is deprecated in OpenShift Container Platform 4.5 and later. Beginning with OpenShift Container Platform 4.5 or later, you must install <code>koku-metrics-operator</code>.
+</td>
+</tr>
+</table>
+</div>
+</li>
+<li>
+<p>You installed the <strong>Koku Metrics Operator</strong>.</p>
+</li>
+<li>
+<p>You are logged into the OpenShift Container Platform web console with cluster administrator privileges.</p>
+</li>
+<li>
+<p>You can view the operators in the <strong>Installed Operators</strong> tab.</p>
+</li>
+</ul>
+</div>
+<div class="olist arabic">
+<div class="title">Procedure</div>
+<ol class="arabic">
+<li>
+<p>In the Installed Operators list, select the operator you want to remove.</p>
+</li>
+<li>
+<p>Click on the <span class="image"><img src="images/more-options.png" alt="more options"></span> (More options) icon in that row.</p>
+</li>
+<li>
+<p>Click on the <strong>Uninstall Operator</strong> option. Confirm the action to remove the operator.</p>
+</li>
+<li>
+<p>In the OpenShift Container Platform web console, click the <strong>Administration &gt; Custom Resource Definitions</strong> tab.</p>
+</li>
+<li>
+<p>In the window that displays the custom resource definitions (CRD), locate the <strong>CostManagement</strong> CRD and the <strong>CostManagementData</strong> CRD.</p>
+</li>
+<li>
+<p>For each CRD, click on the <span class="image"><img src="images/more-options.png" alt="more options"></span> (More options) icon and click on <strong>Delete Custom Resource Definition</strong>. Confirm the delete action.</p>
+</li>
+<li>
+<p>When these CRDs are deleted, the <code>cost-mgmt-operator</code> is fully uninstalled.</p>
+</li>
+</ol>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<div class="title">Note</div>
+</td>
+<td class="content">
+When you install <strong>Koku Metrics Operator</strong>, a <strong>KokuMetricsConfig</strong> CRD appears in  <strong>Administration &gt; Custom Resource Definitions</strong> list.
+</td>
+</tr>
+</table>
+</div>
+</div>
+<div class="sect2">
+<h3 id="verifying-cost-operator_adding-an-ocp-source">3.6. Verifying <code>koku-metrics-operator</code></h3>
+<div class="paragraph _abstract">
+<p>View the Koku configuration YAML file to verify the cost management operator is functioning.</p>
+</div>
+<div class="ulist">
+<div class="title">Prerequisites</div>
+<ul>
+<li>
+<p>You can access the OpenShift Container Platform web console.</p>
+</li>
+<li>
+<p>You can locate and view the <strong>Installed Operators</strong> tab.</p>
+</li>
+</ul>
+</div>
+<div class="olist arabic">
+<div class="title">Procedure</div>
+<ol class="arabic">
+<li>
+<p>Click on the <strong>Installed Operators</strong> tab.</p>
+</li>
+<li>
+<p>In the list of installed operators, click on the <strong>Koku Metrics Operator</strong> entry.</p>
+</li>
+<li>
+<p>When the metrics operator window opens, click on the <strong>KokuMetricsConfig</strong> tab to show a list of the configuration file names.</p>
+</li>
+<li>
+<p>In the name list, click on the configuration file. In the default installation, the file name is <code>kokumetricscfg-sample</code>.</p>
+</li>
+<li>
+<p>When the Details window opens, click on the <strong>YAML</strong> tab. and visually check the following items.</p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>Prometheus configuration and connection are <code>true</code>.</p>
+<div class="listingblock">
+<div class="content">
+<pre>  prometheus:
+    last_query_start_time: '2021-01-25T20:59:06Z'
+    last_query_success_time: '2021-01-25T20:59:06Z'
+    prometheus_configured: true
+    prometheus_connected: true
+    service_address: 'https://thanos-querier.openshift-monitoring.svc:9091'
+    skip_tls_verification: false</pre>
+</div>
+</div>
+</li>
+<li>
+<p>Upload information shows the ingress path, successful upload and time, and accepted status.</p>
+<div class="listingblock">
+<div class="content">
+<pre> upload:
+    ingress_path: /api/ingress/v1/upload
+    last_successful_upload_time: '2021-01-25T20:59:35Z'
+    last_upload_status: 202 Accepted
+    last_upload_time: '2021-01-25T20:59:35Z'
+    upload: true
+    upload_cycle: 360
+    upload_wait: 28
+    validate_cert: true</pre>
+</div>
+</div>
+</li>
+</ol>
+</div>
+</li>
+</ol>
+</div>
+</div>
+<div class="sect2">
+<h3 id="basic-authentication_adding-an-ocp-source">3.7. Configuring basic authentication for cost operator</h3>
+<div class="paragraph _abstract">
+<p>You can configure the cost operator to use basic authentication. By default, the cost operator uses token authentication.</p>
+</div>
+<div class="paragraph">
+<p>There are two procedures required when you configure basic authentication.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="#creating-secret-pair">Creating the secret key/value pair for basic authentication</a></p>
+</li>
+<li>
+<p><a href="#modify-yaml-file">Modifying the YAML file</a></p>
+</li>
+</ul>
+</div>
+<div class="sect3">
+<h4 id="creating-secret-pair">3.7.1. Creating the secret key/value pair for basic authentication</h4>
+<div class="ulist">
+<div class="title">Prerequisites</div>
+<ul>
+<li>
+<p>You are logged into the OpenShift Container Platform web console with cluster administrator privileges.</p>
+</li>
+<li>
+<p>The <strong>Koku Metrics Operator</strong> appears in the <strong>Installed Operators</strong> tab.</p>
+</li>
+<li>
+<p>You have a username and password for your <a href="https://cloud.redhat.com">cloud.redhat.com</a> account.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<div class="title">Procedure</div>
+<p>This procedure describes setting up basic authentication using the OpenShift Container Platform web console.</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>In the OpenShift Container Platform web console, click on the <strong>Workloads &gt; Secrets</strong> tab.</p>
+</li>
+<li>
+<p>In the <strong>Secrets</strong> window, select <strong>Project:koku-metrics-operator</strong> from the dropdown.</p>
+</li>
+<li>
+<p>Click the <strong>Create &gt; Key/Value Secret</strong> selection.</p>
+</li>
+<li>
+<p>In the <strong>Create Key/Value Secret</strong> window enter the following information to create a new secret that contains a username key and a password key and a value for each key.</p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>Enter a name for your secret in the <strong>Secret Name</strong> field.</p>
+<div class="listingblock">
+<div class="title">Secret name example</div>
+<div class="content">
+<pre>basic-auth-secret</pre>
+</div>
+</div>
+</li>
+<li>
+<p>In the <strong>Key</strong> field, enter <code>username</code>. This is your first key of the key pair.</p>
+<div class="listingblock">
+<div class="title">Key name example for username</div>
+<div class="content">
+<pre>username</pre>
+</div>
+</div>
+</li>
+<li>
+<p>In the <strong>Value</strong> field for the username key, enter the actual username for your authorized <a href="https://cloud.redhat.com">cloud.redhat.com</a> user account.</p>
+<div class="listingblock">
+<div class="title">Key value example for username</div>
+<div class="content">
+<pre>RedHatUser</pre>
+</div>
+</div>
+</li>
+<li>
+<p>Click the <code>Add Key/Value</code> link to add the required password key name and value.</p>
+</li>
+<li>
+<p>In the <strong>Key</strong> field, enter <code>password</code>. This is your second key of the key pair.</p>
+<div class="listingblock">
+<div class="title">Key name example for password</div>
+<div class="content">
+<pre>password</pre>
+</div>
+</div>
+</li>
+<li>
+<p>In the <strong>Value</strong> field for the password key, enter the actual password for your authorized <a href="https://cloud.redhat.com">cloud.redhat.com</a> user account.</p>
+<div class="listingblock">
+<div class="title">Key value example for password</div>
+<div class="content">
+<pre>my.User!password</pre>
+</div>
+</div>
+</li>
+<li>
+<p>Click the <strong>Create</strong> button to complete the creation of your basic authorization secret.</p>
+</li>
+<li>
+<p>After you click the <strong>Create</strong> button, you can verify the key information details for the secret.</p>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<div class="title">Note</div>
+</td>
+<td class="content">
+Do <em>not</em> add the secret to the workload.
+</td>
+</tr>
+</table>
+</div>
+</li>
+</ol>
+</div>
+</li>
+</ol>
+</div>
+</div>
+<div class="sect3">
+<h4 id="modify-yaml-file">3.7.2. Modifying the YAML file</h4>
+<div class="paragraph">
+<p>Modify the Koku metrics operator API YAML file to use basic authentication with a secret username and password key/value pair.</p>
+</div>
+<div class="ulist">
+<div class="title">Prerequisites</div>
+<ul>
+<li>
+<p>You are logged into the OpenShift Container Platform web console with cluster administrator privileges.</p>
+</li>
+<li>
+<p>You created a secret name for the username and password key/value pair.</p>
+</li>
+<li>
+<p>The Koku metrics operator is installed.</p>
+</li>
+</ul>
+</div>
+<div class="olist arabic">
+<div class="title">Procedure</div>
+<ol class="arabic">
+<li>
+<p>Click on the <strong>Operators &gt; Installed Operators</strong> tab.</p>
+</li>
+<li>
+<p>Locate the row that contains <strong>KokuMetricsOperator</strong> and click on the <strong>KokuMetricsConfig</strong> link that is under the <strong>Provided APIs</strong> heading.</p>
+</li>
+<li>
+<p>When the <strong>KokuMetricsConfigs</strong> window appears, click on Koku configuration file listed in the <strong>Name</strong> column.</p>
+<div class="paragraph">
+<p>The default name is <strong>kokumetricscfg-sample</strong>.</p>
+</div>
+</li>
+<li>
+<p>When the <strong>kokumetricscfg-sample</strong> window appears, click in the <strong>YAML</strong> tab to open an edit and view window.</p>
+</li>
+<li>
+<p>Locate the following lines in the YAML view.</p>
+<div class="listingblock">
+<div class="content">
+<pre>  authentication:
+    type: token</pre>
+</div>
+</div>
+</li>
+<li>
+<p>Change <code>type: token</code> to <code>type: basic</code>.</p>
+</li>
+<li>
+<p>Insert a new line for <code>secret_name</code>. Enter the value for  <code>secret_name</code>, which is the name you previously created.</p>
+<div class="listingblock">
+<div class="title">Example</div>
+<div class="content">
+<pre>  authentication:
+    secret_name: basic-auth-secret
+    type: basic</pre>
+</div>
+</div>
+</li>
+<li>
+<p>Click the <strong>Save</strong> button. A confirmation message appears.</p>
+</li>
+</ol>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="proc_creating-an-openshift-container-platform-source-manually_adding-an-ocp-source">3.8. Creating an Openshift Container Platform source manually</h3>
+<div class="paragraph _abstract">
+<p>If you follow the previous steps, your OpenShift Container Platform source should be created automatically. However, there are situations, such as restricted network installations, when an OpenShift Container Platform source must be created manually on <a href="https://cloud.redhat.com">cloud.redhat.com</a>.</p>
+</div>
+<div class="ulist">
+<div class="title">Prerequisites</div>
+<ul>
+<li>
+<p>OpenShift Container Platform cluster installed.</p>
+</li>
+<li>
+<p>Red Hat account user with Organization Administrator entitlements.</p>
+</li>
+<li>
+<p>You are logged into the OpenShift Container Platform web console.</p>
+</li>
+</ul>
+</div>
+<div class="olist arabic">
+<div class="title">Procedure</div>
+<ol class="arabic">
+<li>
+<p>From cost management, click <span class="image"><img src="images/configuration-gear.png" alt="configuration gear"></span> (<strong>Settings</strong>).</p>
+</li>
+<li>
+<p>Click <strong>Sources</strong>.</p>
+</li>
+<li>
+<p>Click <strong>Red Hat Sources</strong>.</p>
+</li>
+<li>
+<p>Click <strong>Add source</strong> to open the dialog.</p>
+</li>
+<li>
+<p>Enter a name for the source and click <strong>Next</strong>.</p>
+</li>
+<li>
+<p>Select the <strong>Red Hat OpenShift Container Platform</strong> tile as the source type.</p>
+</li>
+<li>
+<p>Select <strong>Cost Management</strong> as the application and click <strong>Next</strong>.</p>
+</li>
+<li>
+<p>Copy your <strong>Cluster Identifier</strong> from the OpenShift Container Platform web console <strong>Home &gt; Overview</strong> tab and click <strong>Next</strong>.</p>
+</li>
+<li>
+<p>Review the details and click <strong>Add</strong> to create the source.</p>
+</li>
+</ol>
+</div>
+</div>
+<div class="sect2">
+<h3 id="assembly-adding-a-restricted-network-source_adding-an-ocp-source">3.9. Adding a restricted network source</h3>
+<div class="paragraph _abstract">
+<p>You can install OpenShift Container Platform on a restricted network that does not have access to the internet.</p>
+</div>
+<div class="paragraph">
+<p>The procedure to add an OpenShift Container Platform cluster operating on a restricted network as a cost management source is different in the following ways:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Operator Lifecycle Manager is configured to install and run local sources.</p>
+</li>
+<li>
+<p>The <code>koku-metrics-operator</code> is configured to store cost report CSV files locally using a persistent volume claim (PVC).</p>
+</li>
+<li>
+<p>Cost reports stored in the PVC are downloaded to a workstation.</p>
+</li>
+<li>
+<p>An OpenShift Container Platform source is created manually.</p>
+</li>
+<li>
+<p>Cost reports are uploaded to <a href="https://cloud.redhat.com">cloud.redhat.com</a> from your workstation.</p>
+</li>
+</ol>
+</div>
+<div class="sect3">
+<h4 id="proc_installing-koku-metrics-operator-on-a-restricted-network_adding-restricted-network-source">3.9.1. Installing the Koku Metrics Operator on a restricted network</h4>
+<div class="paragraph _abstract">
+<p>For OpenShift Container Platform clusters that are installed on restricted networks, Operator Lifecycle Manager (OLM) by default cannot access the koku-metrics-operator hosted remotely because those remote sources require full Internet connectivity. Therefore, OLM must be configured to install and run local sources.</p>
+</div>
+<div class="ulist">
+<div class="title">Prerequisites</div>
+<ul>
+<li>
+<p>OpenShift Container Platform cluster installed.</p>
+</li>
+<li>
+<p>Workstation with unrestricted network access.</p>
+</li>
+<li>
+<p>You are logged into the OpenShift Container Platform web console with cluster administrator privileges.</p>
+</li>
+</ul>
+</div>
+<div class="olist arabic">
+<div class="title">Procedure</div>
+<ol class="arabic">
+<li>
+<p>Complete the following OpenShift Container Platform procedure to create a local mirror of the <code>koku-metrics-operator</code>: <strong><a href="https://access.redhat.com/documentation/en-us/openshift_container_platform/4.7/html/operators/administrator-tasks#olm-restricted-networks"><em>Using Operator Lifecycle Manager on restricted networks</em></a></strong>.</p>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<div class="title">Note</div>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>The <code>koku-metrics-operator</code> is found in the <code>community-operators</code> Catalog in the <code>registry.redhat.io/redhat/community-operator-index:latest</code> index.</p>
+</div>
+<div class="paragraph">
+<p>Red Hat recommends pruning unwanted objects from the index before pushing to the mirrored registry. Make sure you keep the <code>koku-metrics-operator</code> package.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</li>
+<li>
+<p>Log in to the OpenShift Container Platform web console and click <strong>Operators &gt; OperatorHub</strong>.</p>
+</li>
+<li>
+<p>Search for and locate <strong>Koku Metrics Operator</strong>.</p>
+</li>
+<li>
+<p>Click the <strong>Koku Metrics Operator</strong> tile.</p>
+</li>
+<li>
+<p>If an information panel appears with the <strong>Community Operators</strong> message, click <strong>Continue</strong>.</p>
+</li>
+<li>
+<p>When the <strong>Install Operator</strong> window appears, you must select the <code>koku-metrics-operator</code> namespace for installation. If the namespace does not yet exist, it is created for you.</p>
+</li>
+<li>
+<p>Click <b class="button">Install</b>.</p>
+</li>
+</ol>
+</div>
+<div class="ulist">
+<div class="title">Verification steps</div>
+<ul>
+<li>
+<p>After a short wait, <strong>Koku Metrics Operator</strong> appears in the <strong>Installed Operators</strong> tab under <strong>Project: all projects</strong> or <strong>Project: koku-metrics-operator</strong>.</p>
+</li>
+</ul>
+</div>
+<div class="ulist _additional-resources">
+<div class="title">Additional resources</div>
+<ul>
+<li>
+<p>For more details on the Operator Lifecycle Manager, see <a href="https://access.redhat.com/documentation/en-us/openshift_container_platform/4.7/html/operators/understanding-operators#operator-lifecycle-manager-olm"><em>.What is Operator Lifecycle Manager?</em></a></p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect3">
+<h4 id="configuring-koku-metrics-operator-on-a-restricted-network_adding-restricted-network-source">3.9.2. Configuring Koku Metrics Operator on a restricted network</h4>
+<div class="paragraph _abstract">
+<p>After the <code>koku-metrics-operator</code> is installed, you must configure it to run on a restricted network.</p>
+</div>
+<div class="ulist">
+<div class="title">Prerequisites</div>
+<ul>
+<li>
+<p><code>koku-metrics-operator</code> installed.</p>
+</li>
+<li>
+<p>You are logged into the OpenShift Container Platform web console with cluster administrator privileges.</p>
+</li>
+</ul>
+</div>
+<div class="olist arabic">
+<div class="title">Procedure</div>
+<ol class="arabic">
+<li>
+<p>From the OpenShift Container Platform web console, select <strong>Operators &gt; Installed Operators &gt; koku-metrics-operator &gt; KokuMetricsConfig &gt; Create Instance</strong>.</p>
+</li>
+<li>
+<p>Specify the desired storage. If not specified, the operator will create a default persistent volume claim called <code>koku-metrics-operator-data</code> with <strong>10Gi</strong> of storage.</p>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<div class="title">Note</div>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>To configure the <code>koku-metrics-operator</code> to use or create a different PVC, update the <code>volume_claim_template</code> configuration in <strong>YAML view</strong>.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</li>
+<li>
+<p>Select <strong>YAML view</strong>.</p>
+</li>
+<li>
+<p>Specify the maximum number of reports to store using <code>max_reports_to_store</code>, and time between report generation in minutes using <code>upload_cycle</code>.</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-yaml" data-lang="yaml">    packaging:
+      max_reports_to_store: 30
+      max_size_MB: 100</code></pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-yaml" data-lang="yaml">    upload:
+      upload_cycle: 360</code></pre>
+</div>
+</div>
+<div class="admonitionblock important">
+<table>
+<tr>
+<td class="icon">
+<div class="title">Important</div>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>The <code>koku-metrics-operator</code> creates one report every <strong>360 minutes</strong> by default. Therefore, the default value of <strong>30</strong> reports and <strong>360</strong> minutes gives you <strong>7.5 days</strong> of reports.</p>
+</div>
+<div class="paragraph">
+<p>Any report generated after the total number specified will replace the oldest report in storage. Make sure to download generated reports from your PVC before they are lost.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</li>
+<li>
+<p>Set <code>upload_toggle</code> to <code>false</code>.</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-yaml" data-lang="yaml">    upload:
+      upload_cycle: 360
+      upload_toggle: false</code></pre>
+</div>
+</div>
+</li>
+<li>
+<p>Replace the configuration in the <code>source</code> section with empty brackets.</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-yaml" data-lang="yaml">    source: {}</code></pre>
+</div>
+</div>
+</li>
+<li>
+<p>Replace the configuration in the <code>authentication</code> section with empty brackets.</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-yaml" data-lang="yaml">    authentication: {}</code></pre>
+</div>
+</div>
+</li>
+<li>
+<p>Click <strong>Create</strong>.</p>
+</li>
+</ol>
+</div>
+<div class="olist arabic">
+<div class="title">Verification steps</div>
+<ol class="arabic">
+<li>
+<p>Select the <code>KokuMetricsConfig</code> you created.</p>
+</li>
+<li>
+<p>Select <strong>YAML view</strong>.</p>
+</li>
+<li>
+<p>Verify that a report has been created in the <code>packaging</code> section.</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-yaml" data-lang="yaml">    packaging:
+      last_successful_packaging_time: `current date and time`
+      max_reports_to_store: 30
+      max_size_MB: 100
+      number_of_reports_stored: 1
+      packaged_files:
+        - &gt;-
+            /tmp/koku-metrics-operator-reports/upload/YYYYMMDDTHHMMSS-cost-mgmt.tar.gz</code></pre>
+</div>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<div class="title">Note</div>
+</td>
+<td class="content">
+<div class="paragraph">
+<p><code>koku-metrics-operator</code> will generate an initial report after it is configured. Generated reports will be listed under <code>packaged_files</code>.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</li>
+</ol>
+</div>
+</div>
+<div class="sect3">
+<h4 id="proc_downloading-reports_adding-restricted-network-source">3.9.3. Downloading cost reports</h4>
+<div class="paragraph _abstract">
+<p>If the <code>koku-metrics-operator</code> is configured to run in a restricted network, copy the reports from the PVC where they are temporarily stored to a workstation with unrestricted network access for upload to <a href="https://cloud.redhat.com">cloud.redhat.com</a>.</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<div class="title">Note</div>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>The default configuration saves one week of reports. Therefore, download the reports locally and upload them to <a href="https://cloud.redhat.com">cloud.redhat.com</a> weekly to prevent loss of metrics data.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="ulist">
+<div class="title">Prerequisites</div>
+<ul>
+<li>
+<p>Workstation with unrestricted network access.</p>
+</li>
+<li>
+<p><code>koku-metrics-operator</code> reports in your PVC.</p>
+</li>
+</ul>
+</div>
+<div class="olist arabic">
+<div class="title">Procedure</div>
+<ol class="arabic">
+<li>
+<p>Create the following pod with <code>claimName</code> matching the PVC containing the report data:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-bash" data-lang="bash">kind: Pod
+apiVersion: v1
+metadata:
+  name: volume-shell
+  namespace: koku-metrics-operator
+spec:
+  volumes:
+  - name: koku-metrics-operator-reports
+    persistentVolumeClaim:
+      claimName: koku-metrics-operator-data
+  containers:
+  - name: volume-shell
+    image: busybox
+    command: ['sleep', '3600']
+    volumeMounts:
+    - name: koku-metrics-operator-reports
+      mountPath: /tmp/koku-metrics-operator-reports</code></pre>
+</div>
+</div>
+</li>
+<li>
+<p>Use <code>rsync</code> to copy all of the files from the PVC to a local folder.</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-bash" data-lang="bash">$ oc rsync volume-shell:/tmp/koku-metrics-operator-reports/upload local/path/to/save/folder</code></pre>
+</div>
+</div>
+</li>
+<li>
+<p>Confirm that the files have been copied.</p>
+</li>
+<li>
+<p>Connect to the pod and delete the contents of the upload folder.</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-bash" data-lang="bash">$ oc rsh volume-shell
+$ rm /tmp/koku-metrics-operator-reports/upload/*</code></pre>
+</div>
+</div>
+</li>
+<li>
+<p>(Optional) Delete the pod that was used to connect to the PVC.</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-bash" data-lang="bash">$ oc delete -f volume-shell.yaml</code></pre>
+</div>
+</div>
+</li>
+</ol>
+</div>
+<div class="ulist _additional-resources">
+<div class="title">Additional resources</div>
+<ul>
+<li>
+<p>For more information on persistent volume claims, see <a href="https://access.redhat.com/documentation/en-us/openshift_container_platform/4.7/html/storage/understanding-persistent-storage">Understanding persistent storage</a>.</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect3">
+<h4 id="proc_uploading-reports_adding-restricted-network-source">3.9.4. Uploading cost reports to cloud.redhat.com</h4>
+<div class="paragraph _abstract">
+<p>You must manually upload locally stored cost reports from a restricted network to <a href="https://cloud.redhat.com">cloud.redhat.com</a>.</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<div class="title">Note</div>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>The default configuration saves one week of reports. Therefore, download the reports locally and upload them to <a href="https://cloud.redhat.com">cloud.redhat.com</a> weekly to prevent loss of metrics data.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="ulist">
+<div class="title">Prerequisites</div>
+<ul>
+<li>
+<p><code>koku-metrics-operator</code> reports downloaded locally.</p>
+</li>
+<li>
+<p>Source created on <a href="https://cloud.redhat.com">cloud.redhat.com</a>, see <a href="#proc_creating-an-openshift-container-platform-source-manually_adding-an-ocp-source">Creating an Openshift Container Platform source manually</a>.</p>
+</li>
+<li>
+<p>Red Hat account user with Organization Administrator entitlements.</p>
+</li>
+<li>
+<p>Workstation with unrestricted network access.</p>
+</li>
+</ul>
+</div>
+<div class="ulist">
+<div class="title">Procedure</div>
+<ul>
+<li>
+<p>Upload your reports to <a href="https://cloud.redhat.com">cloud.redhat.com</a>, replacing USERNAME and PASSWORD with your <a href="https://cloud.redhat.com">cloud.redhat.com</a> login credentials, and FILE_NAME with the report to upload:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-bash" data-lang="bash">$ curl -vvvv -F "file=@FILE_NAME.tar.gz;type=application/vnd.redhat.hccm.tar+tgz"  https://cloud.redhat.com/api/ingress/v1/upload -u USERNAME:PASS</code></pre>
+</div>
+</div>
+</li>
+</ul>
+</div>
+<div class="olist arabic">
+<div class="title">Verification steps</div>
+<ol class="arabic">
+<li>
+<p>From <a href="https://cloud.redhat.com/cost-management/">cloud.redhat.com/cost-management</a>, click <strong>OpenShift</strong>.</p>
+</li>
+<li>
+<p>Verify you have OpenShift usage data for your cluster on the <strong>OpenShift details</strong> page.</p>
+</li>
+</ol>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="assembly-adding-aws-sources">4. Adding an Amazon Web Services (AWS) source to cost management</h2>
+<div class="sectionbody">
+<div class="paragraph _abstract">
+<p>To add an AWS account to cost management, you must configure your AWS account to provide metrics, then add your AWS account as a source from the cost management user interface.</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<div class="title">Note</div>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>You must have a Red Hat account user with Organization Administrator entitlements before you can add sources to cost management.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>When you add your AWS account as a source, this creates a read-only connection to AWS in order to collect cost information hourly in cost management, but does not make any changes to the AWS account.</p>
+</div>
+<div class="admonitionblock important">
+<table>
+<tr>
+<td class="icon">
+<div class="title">Important</div>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>You must use an AWS master account for this procedure, as a linked AWS account does not have sufficient access to create billing accounts. After you add the master account as a source, cost management will collect data from any linked accounts as well.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>Before you can add your AWS account to cost management as a data source, you must configure the following services on your AWS account to allow cost management access to metrics:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>An S3 bucket to store cost and usage data reporting for cost management</p>
+</li>
+<li>
+<p>An Identity Access Management (IAM) policy and role for cost management to process the cost and usage data</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>As you will complete some of the following steps in the AWS console, and some steps in the cost management user interface, keep both applications open in a web browser.</p>
+</div>
+<div class="paragraph">
+<p>Add your AWS source to cost management from the settings area at
+<a href="https://cloud.redhat.com/settings/sources/" class="bare">https://cloud.redhat.com/settings/sources/</a>.</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<div class="title">Note</div>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>As non-Red Hat products and documentation can change without notice, instructions for configuring the third-party sources provided in this guide are general and correct at the time of publishing. See the <a href="https://docs.aws.amazon.com/">AWS documentation</a> for the most up-to-date and accurate information.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="sect2">
+<h3 id="creating-an-aws-s3-bucket_adding-aws-sources">4.1. Creating an S3 bucket for reporting</h3>
+<div class="paragraph _abstract">
+<p>Cost management requires an Amazon S3 bucket with permissions configured to store billing reports.</p>
+</div>
+<div class="paragraph">
+<p>Log into your AWS master account to begin configuring cost and usage reporting:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>In the AWS S3 console, create a new S3 bucket or use an existing bucket. If you are configuring a new S3 bucket, accept the default settings.</p>
+</li>
+<li>
+<p>In the AWS Billing console, create a Cost and Usage Report that will be delivered to your S3 bucket. Specify the following values (and accept the defaults for any other values):</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Report name: <em>&lt;any-name&gt;</em> (note this name as you will use it later)</p>
+</li>
+<li>
+<p>Additional report details: Include resource IDs</p>
+</li>
+<li>
+<p>S3 bucket: <em>&lt;the S3 bucket you configured previously&gt;</em></p>
+</li>
+<li>
+<p>Time granularity: Hourly</p>
+</li>
+<li>
+<p>Enable report data integration for: Amazon Redshift, Amazon QuickSight (do not enable report data integration for Amazon Athena)</p>
+</li>
+<li>
+<p>Compression type: GZIP</p>
+</li>
+<li>
+<p>Report path prefix: cost</p>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<div class="title">Note</div>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>See the AWS <em>Billing and Cost Management</em> documentation for more details on configuration.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>In the <a href="https://cloud.redhat.com">cloud.redhat.com</a> platform, open the <strong>Sources</strong> menu (<a href="https://cloud.redhat.com/settings/sources/" class="bare">https://cloud.redhat.com/settings/sources/</a>) to begin adding an AWS source to cost management:</p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>Navigate to <strong>Sources</strong> and click <strong>Add a source</strong> to open the Sources wizard.</p>
+</li>
+<li>
+<p>Enter a name for your source and click <strong>Next</strong>.</p>
+</li>
+<li>
+<p>Select <strong>Cost Management</strong> as the application and <strong>Amazon Web Services (AWS)</strong> as the source type. Click <strong>Next</strong>.</p>
+</li>
+<li>
+<p>Paste the name of your S3 bucket and click <strong>Next</strong>.</p>
+</li>
+</ol>
+</div>
+</li>
+</ol>
+</div>
+</div>
+<div class="sect2">
+<h3 id="activating-aws-tags_adding-aws-sources">4.2. Activating AWS tags for cost management</h3>
+<div class="paragraph _abstract">
+<p>To use tags to organize your AWS resources in the cost management application, activate your tags in AWS to allow them to be imported automatically.</p>
+</div>
+<div class="olist arabic">
+<div class="title">Procedure</div>
+<ol class="arabic">
+<li>
+<p>In the AWS Billing console:</p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>Open the <em>Cost Allocation Tags</em> section.</p>
+</li>
+<li>
+<p>Select the tags you want to use in the cost management application, and click <strong>Activate</strong>.</p>
+</li>
+</ol>
+</div>
+</li>
+<li>
+<p>In the <a href="https://cloud.redhat.com">cloud.redhat.com</a> <strong>Sources</strong> wizard, click <strong>Next</strong> to move to the next screen.</p>
+</li>
+</ol>
+</div>
+</div>
+<div class="sect2">
+<h3 id="enabling-aws-account-access_adding-aws-sources">4.3. Enabling minimal account access for cost and usage consumption</h3>
+<div class="paragraph _abstract">
+<p>To provide data within the web interface and API, cost management needs to consume the Cost and Usage Reports produced by AWS. For cost management to obtain this data with a minimal amount of access, create an IAM policy and role for cost management to use. This configuration  provides access to the stored information and nothing else.</p>
+</div>
+<div class="olist arabic">
+<div class="title">Procedure</div>
+<ol class="arabic">
+<li>
+<p>From the AWS Identity and Access Management (IAM) console, create a new IAM policy for the S3 bucket you configured previously.</p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>Select the JSON tab and paste the following content in the JSON policy text box:</p>
+<div class="listingblock">
+<div class="content">
+<pre>{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Sid": "VisualEditor0",
+      "Effect": "Allow",
+      "Action": [
+        "s3:Get*",
+        "s3:List*"
+      ],
+        "Resource": [
+        "arn:aws:s3:::bucket_name",
+        "arn:aws:s3:::bucket_name/*"
+      ]
+    },
+
+    {
+      "Sid": "VisualEditor1",
+      "Effect": "Allow",
+      "Action": [
+        "s3:HeadBucket",
+        "cur:DescribeReportDefinitions"
+      ],
+      "Resource": "*"
+    }
+  ]
+}</pre>
+</div>
+</div>
+</li>
+</ol>
+</div>
+</li>
+</ol>
+</div>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>Provide a name for the policy and complete the creation of the policy. Keep the AWS IAM console open as you will need it for the next step.</p>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>In the <a href="https://cloud.redhat.com">cloud.redhat.com</a> <strong>Sources</strong> wizard, click <strong>Next</strong> to move to the next screen.</p>
+</li>
+<li>
+<p>In the AWS IAM console, create a new IAM role:</p>
+</li>
+</ol>
+</div>
+</li>
+<li>
+<p>For the type of trusted entity, select <strong>Another AWS account</strong>.</p>
+</li>
+<li>
+<p>Enter <em>589173575009</em> as the Account ID to provide the cost management application with read access to the AWS account cost data.</p>
+</li>
+<li>
+<p>Attach the IAM policy you just configured.</p>
+</li>
+<li>
+<p>Enter a role name (and description if desired) and finish creating the policy.</p>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>In the <a href="https://cloud.redhat.com">cloud.redhat.com</a> <strong>Sources</strong> wizard, click <strong>Next</strong> to move to the next screen.</p>
+</li>
+<li>
+<p>In the AWS IAM console under Roles, open the summary screen for the role you just created and copy the Role ARN (a string beginning with <em>arn:aws:</em>).</p>
+</li>
+<li>
+<p>In the <a href="https://cloud.redhat.com">cloud.redhat.com</a> <strong>Sources</strong> wizard, paste your Role ARN and click <strong>Next</strong>.</p>
+</li>
+<li>
+<p>Review the details and click <strong>Finish</strong> to add the AWS account to cost management.</p>
+</li>
+</ol>
+</div>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>Cost management will begin collecting cost and usage data from your master AWS account and any linked AWS accounts.</p>
+</div>
+<div class="paragraph">
+<p>The data can take a few days to populate before it shows on the cost management dashboard (<a href="https://cloud.redhat.com/cost-management/" class="bare">https://cloud.redhat.com/cost-management/</a>).</p>
+</div>
+<div class="sect3">
+<h4 id="enabling-additional-aws-account-access_adding-aws-sources">4.3.1. Enabling additional account access for cost and usage consumption</h4>
+<div class="paragraph _abstract">
+<p>Cost management can display additional data that might be useful. For example:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Include the Action <em>iam:ListAccountAliases</em> to display an AWS account alias rather than an account number in cost management.</p>
+</li>
+<li>
+<p>Include the Actions <em>organization:List*</em> and <em>organizations:Describe*</em>
+to obtain the display names of AWS member accounts if you are using consolidated billing rather than the account ID.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>The following configuration provides access to additional stored information and nothing else.</p>
+</div>
+<div class="olist arabic">
+<div class="title">Procedure</div>
+<ol class="arabic">
+<li>
+<p>From the AWS Identity and Access Management (IAM) console, create a new IAM policy for the S3 bucket you configured previously.</p>
+</li>
+<li>
+<p>Select the JSON tab and paste the following content in the JSON policy text box:</p>
+<div class="listingblock">
+<div class="content">
+<pre>{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Sid": "VisualEditor0",
+      "Effect": "Allow",
+      "Action": [
+        "s3:Get*",
+        "s3:List*"
+      ],
+      "Resource": [
+        "arn:aws:s3:::bucket",
+        "arn:aws:s3:::bucket/*"
+      ]
+    },
+    {
+      "Sid": "VisualEditor1",
+      "Effect": "Allow",
+      "Action": [
+        "iam:ListAccountAliases",
+        "s3:HeadBucket",
+        "cur:DescribeReportDefinitions",
+        "organizations:List*",
+        "organizations:Describe*"
+      ],
+      "Resource": "*"
+    }
+  ]
+}</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>The remainder of the configuration steps are the same as in <a href="#enabling-aws-account-access_adding-aws-sources">Enabling minimal account access for cost and usage consumption</a></p>
+</div>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>You have completed adding your AWS account as a source.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="assembly-adding-azure-sources">5. Adding a Microsoft Azure source to cost management</h2>
+<div class="sectionbody">
+<div class="paragraph _abstract">
+<p>Configure your Microsoft Azure account to allow cost management access.</p>
+</div>
+<div class="paragraph">
+<p>Configuring your Azure account to be a cost management source requires:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Creating a storage account and resource group</p>
+</li>
+<li>
+<p>Configuring a Storage Account Contributor and Reader roles for access</p>
+</li>
+<li>
+<p>Scheduling daily cost exports</p>
+</li>
+</ol>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<div class="title">Note</div>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>As non-Red Hat products and documentation can change without notice, instructions for configuring the third-party sources provided in this guide are general and correct at the time of publishing. See the <a href="https://docs.microsoft.com/en-us/azure/">Microsoft Azure documentation</a> for the most up-to-date and accurate information.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>Add your Azure source to cost management from
+<a href="https://cloud.redhat.com/settings/sources/" class="bare">https://cloud.redhat.com/settings/sources/</a>.</p>
+</div>
+<div class="sect2">
+<h3 id="creating-an-azure-storage-account_adding-an-azure-source">5.1. Creating an Azure resource group and storage account</h3>
+<div class="paragraph _abstract">
+<p>Cost export data is written to a storage account, which exists within a resource group. The resource group must be accessible by cost management in order to read the Azure cost data.</p>
+</div>
+<div class="paragraph">
+<p>Create a new storage account in Azure to contain the cost data and metrics that cost management will collect. This requires a resource group; Red Hat recommends creating a dedicated resource group for this storage account.</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<div class="title">Note</div>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>You must have a Red Hat account user with Organization Administrator entitlements before you can add sources to cost management.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>In the <a href="https://cloud.redhat.com">cloud.redhat.com</a> platform, open the <strong>Sources</strong> menu (<a href="https://cloud.redhat.com/settings/sources/" class="bare">https://cloud.redhat.com/settings/sources/</a>) to begin adding an Azure source to cost management:</p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>Navigate to <strong>Sources</strong> and click <strong>Add a source</strong> to open the Sources wizard.</p>
+</li>
+<li>
+<p>Enter a name for your source and click <strong>Next</strong>.</p>
+</li>
+<li>
+<p>Select <strong>Cost Management</strong> as the application and <strong>Microsoft Azure</strong> as the source type. Click <strong>Next</strong>.</p>
+</li>
+</ol>
+</div>
+</li>
+<li>
+<p>Create a resource group and storage account in your Azure account using the instructions in the See <a href="https://docs.microsoft.com/en-us/azure/storage/common/storage-quickstart-create-account?tabs=azure-portal">Azure documentation</a> <em>Create a storage account</em>.</p>
+</li>
+</ol>
+</div>
+<div class="exampleblock">
+<div class="content">
+<div class="paragraph">
+<p>Make a note of the resource group and storage account. They will be needed in subsequent steps.</p>
+</div>
+</div>
+</div>
+<div class="olist arabic">
+<ol class="arabic" start="3">
+<li>
+<p>In the <a href="https://cloud.redhat.com">cloud.redhat.com</a> <strong>Sources</strong> wizard, enter the <strong>Resource group name</strong> and <strong>Storage account name</strong> and click <strong>Next</strong>.</p>
+</li>
+</ol>
+</div>
+</div>
+<div class="sect2">
+<h3 id="configuring-azure-roles_adding-an-azure-source">5.2. Configuring Azure roles</h3>
+<div class="paragraph _abstract">
+<p>Red Hat recommends configuring dedicated credentials to grant cost management read-only access to Azure cost data.  Configure a Storage Account Contributor and Reader role in Azure to provide this access to cost management.</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>In Azure Cloud Shell, run the following command to obtain your Subscription ID:</p>
+<div class="listingblock">
+<div class="content">
+<pre>$ az account show --query "{subscription_id: id }"</pre>
+</div>
+</div>
+</li>
+<li>
+<p>In the <a href="https://cloud.redhat.com">cloud.redhat.com</a> <strong>Sources</strong> wizard, enter your <strong>Subscription ID</strong>. Click <strong>Next</strong> to move to the next screen.</p>
+</li>
+<li>
+<p>In Azure Cloud Shell, run the following command to create a Cost Management Storage Account Contributor role, and obtain your tenant ID, client (application) ID, and client secret:</p>
+<div class="listingblock">
+<div class="content">
+<pre>$ az ad sp create-for-rbac -n "CostManagement" --role "Storage Account Contributor" --query '{"tenant": tenant, "client_id": appId, "secret": password}'</pre>
+</div>
+</div>
+</li>
+<li>
+<p>In the <a href="https://cloud.redhat.com">cloud.redhat.com</a> <strong>Sources</strong> wizard, enter your Azure <strong>Tenant ID</strong>, <strong>Client ID</strong>, and <strong>Client Secret</strong>.</p>
+</li>
+<li>
+<p>In Azure Cloud Shell, run the following command to create a Cost Management Reader role with your subscription ID. Copy the full command from the <a href="https://cloud.redhat.com">cloud.redhat.com</a> <strong>Sources</strong> wizard, which will automatically substitute your Azure subscription ID obtained earlier for <em>&lt;SubscriptionID&gt;</em>:</p>
+<div class="listingblock">
+<div class="content">
+<pre>$ az role assignment create --role "Cost Management Reader" --assignee http://CostManagement --subscription &lt;SubscriptionID&gt;</pre>
+</div>
+</div>
+</li>
+<li>
+<p>Click <strong>Next</strong>.</p>
+</li>
+</ol>
+</div>
+</div>
+<div class="sect2">
+<h3 id="configuring-an-azure-daily-export-schedule_adding-an-azure-source">5.3. Configuring a daily Azure data export schedule</h3>
+<div class="paragraph _abstract">
+<p>Create a recurring task to export your cost data on a daily basis automatically to your Azure storage account, where cost management will retrieve the data.</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>In Azure, add a new export as described in the instructions in the <a href="https://docs.microsoft.com/en-us/azure/cost-management/tutorial-export-acm-data">Azure article</a> <em>Create and manage exported data</em>.</p>
+<div class="ulist">
+<ul>
+<li>
+<p>For <strong>Export type</strong>, select <strong>Daily export of billing-period-to-date costs</strong>.</p>
+</li>
+<li>
+<p>For <strong>Storage account</strong>, select the account you created earlier.</p>
+</li>
+<li>
+<p>Enter any value for the container name and directory path for the export. These values provide the tree structure in the storage account where report files are stored.</p>
+</li>
+<li>
+<p>Click <strong>Run now</strong> to start exporting data to the Azure storage container.</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>In the <a href="https://cloud.redhat.com">cloud.redhat.com</a> <strong>Sources</strong> wizard, click <strong>Next</strong> when you have created the export schedule and review the source details.</p>
+</li>
+<li>
+<p>Click <strong>Finish</strong> to complete adding the Azure source to cost management.</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>After the schedule is created, cost management will begin polling Azure for cost data, which will appear on the cost management dashboard (<a href="https://cloud.redhat.com/cost-management/" class="bare">https://cloud.redhat.com/cost-management/</a>).</p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="assembly-adding-ocp-sources">6. Adding an OpenShift Container Platform 4.3 and 4.4 source to cost management</h2>
+<div class="sectionbody">
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<div class="title">Note</div>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>Use these instructions with OpenShift Container Platform 4.3 or 4.4 for use with the <code>cost-mgmt-operator</code> operator. This operator is deprecated for OpenShift Container Platform 4.5 and later.</p>
+</div>
+<div class="paragraph">
+<p>For OCP 4.5 and later, see <a href="#assembly-adding-openshift-container-platform-source">Adding an OpenShift Container Platform source to cost management</a>.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph _abstract">
+<p>To add an OpenShift Container Platform cluster as a source to cost management, you must first configure your cluster to provide usage data (metrics) using the Cost Management Operator.</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<div class="title">Note</div>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>You must have a Red Hat account user with Organization Administrator entitlements before you can add sources to cost management.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>The Cost Management Operator (<code>cost-mgmt-operator</code>) collects the metrics required for cost management by:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Using Operator Metering to create usage reports specific to cost management.</p>
+</li>
+<li>
+<p>Collecting and packaging these reports to a tarball which is uploaded to cost management through <a href="https://cloud.redhat.com">cloud.redhat.com</a>.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>To add your OpenShift Container Platform cluster as a cost management source:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Install the Cost Management Operator in OpenShift from OperatorHub</p>
+</li>
+<li>
+<p>Configure the Cost Management Operator to collect OpenShift usage data (metrics) using Operator Metering</p>
+</li>
+<li>
+<p>Provide the cluster identifier to cost management</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>As you will complete some of the following steps in OpenShift Container Platform, and some steps in the <a href="https://cloud.redhat.com">cloud.redhat.com</a> platform (<a href="https://cloud.redhat.com/settings/sources/" class="bare">https://cloud.redhat.com/settings/sources/</a>), have both applications open in a web browser, as well as a terminal to access the command line interface (CLI).</p>
+</div>
+<div class="sect2">
+<h3 id="installing-cost-mgmt-operator_adding-previous-source">6.1. Installing the Cost Management Operator</h3>
+<div class="paragraph _abstract">
+<p>The Cost Management Operator collects the metrics required for cost management.</p>
+</div>
+<div class="paragraph">
+<p>Begin adding your OpenShift Container Platform cluster as a source to cost management, then install the Cost Management Operator from OperatorHub.</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<div class="title">Note</div>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>See <a href="https://access.redhat.com/documentation/en-us/openshift_container_platform/4.7/html/operators">Operators</a> in the OpenShift documentation for more information about Operators and OperatorHub.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="ulist">
+<div class="title">Prerequisites</div>
+<ul>
+<li>
+<p>OpenShift Container Platform 4.3 or 4.4</p>
+</li>
+</ul>
+</div>
+<div class="olist arabic">
+<div class="title">Procedure</div>
+<ol class="arabic">
+<li>
+<p>In the <a href="https://cloud.redhat.com">cloud.redhat.com</a> platform, open the <strong>Sources</strong> menu (<a href="https://cloud.redhat.com/settings/sources/" class="bare">https://cloud.redhat.com/settings/sources/</a>) to begin adding an OpenShift source to cost management:</p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>Navigate to <strong>Sources</strong> and click <strong>Add source</strong> to open the Sources wizard.</p>
+</li>
+<li>
+<p>Enter a name for your source and click <strong>Next</strong>.</p>
+</li>
+<li>
+<p>Select <strong>Cost Management</strong> as the application and <strong>OpenShift Container Platform</strong> as the source type. Click <strong>Next</strong>.</p>
+</li>
+</ol>
+</div>
+</li>
+<li>
+<p>In OpenShift, create a namespace called <code>openshift-metering</code> if one does not exist, and label the namespace with <code>openshift.io/cluster-monitoring=true</code>.</p>
+</li>
+<li>
+<p>In OpenShift, install the Cost Management Operator in the <code>openshift-metering</code> namespace, using either the OpenShift web console (search for <em>cost management</em> in OperatorHub) or the CLI.</p>
+<div class="admonitionblock important">
+<table>
+<tr>
+<td class="icon">
+<div class="title">Important</div>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>You must install the Cost Management Operator in the <code>openshift-metering</code> namespace. Other namespaces are not supported for installation.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>See <a href="https://access.redhat.com/documentation/en-us/openshift_container_platform/4.7/html/operators/administrator-tasks#olm-adding-operators-to-a-cluster">Adding Operators to a cluster</a> in the OpenShift documentation for instructions for installing an Operator.</p>
+</div>
+</li>
+</ol>
+</div>
+<div class="ulist">
+<div class="title">Additional resources</div>
+<ul>
+<li>
+<p>See <a href="https://access.redhat.com/documentation/en-us/openshift_container_platform/4.7/html/metering">Metering</a> in the OpenShift documentation for more information about installing Metering.</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="configuring-cost-mgmt-operator_adding-previous-source">6.2. Configuring the Cost Management Operator</h3>
+<div class="paragraph _abstract">
+<p>The Cost Management Operator (<code>cost-mgmt-operator</code>) collects the metrics required for cost management.</p>
+</div>
+<div class="paragraph">
+<p>After installing the Cost Management Operator, configure authentication and the <code>operator-metering</code> namespace, then configure the Cost Management Operator.</p>
+</div>
+<div class="ulist">
+<div class="title">Prerequisites</div>
+<ul>
+<li>
+<p>OpenShift Container Platform 4.3 or 4.4</p>
+</li>
+<li>
+<p>The Cost Management Operator installed in the <code>openshift-metering</code> namespace</p>
+</li>
+<li>
+<p>A user with access to the <code>openshift-config</code> namespace</p>
+</li>
+</ul>
+</div>
+<div class="olist arabic">
+<div class="title">Procedure</div>
+<ol class="arabic">
+<li>
+<p>Configure authentication inside the <code>openshift-metering</code> project. This allows you to upload OpenShift data to <a href="https://cloud.redhat.com">cloud.redhat.com</a>.</p>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<div class="title">Note</div>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>For most installations you can use token authentication or basic authentication to upload the usage reports (metrics) to cost management. Except for Azure RedHat OpenShift installation, the default and recommended method is token authentication.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<div class="title">Note</div>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>If you are performing an Azure RedHat OpenShift installation managed by Azure, you must use basic authentication. Token authentication is not supported for Azure-managed installations.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>Copy the following into a file called <code>auth_secret.yaml</code>:</p>
+<div class="listingblock">
+<div class="content">
+<pre>kind: Secret
+apiVersion: v1
+metadata:
+  name: auth-secret-name
+  namespace: openshift-metering
+  annotations:
+    kubernetes.io/service-account.name: cost-mgmt-operator
+data:
+  username: &gt;-
+    Y2xvdWQucmVkaGF0LmNvbSB1c2VybmFtZQ==
+  password: &gt;-
+    Y2xvdWQucmVkaGF0LmNvbSBwYXNzd29yZA==
+  token: &gt;-
+    Y2xvdWQucmVkaGF0LmNvbSB0b2tlbg==</pre>
+</div>
+</div>
+</li>
+<li>
+<p>Choose a name for your authentication secret and replace the <code>metadata.name</code> value with it.</p>
+</li>
+<li>
+<p>To configure token authentication (the default method), obtain the correct <em>auth</em> token and then edit the secret to replace the token value:</p>
+<div class="olist lowerroman">
+<ol class="lowerroman" type="i">
+<li>
+<p>Install the <a href="https://stedolan.github.io/jq/download/"><code>jq</code></a> JSON processor.</p>
+</li>
+<li>
+<p>Change to the <code>openshift-config</code> namespace:</p>
+<div class="listingblock">
+<div class="content">
+<pre>$ oc project openshift-config</pre>
+</div>
+</div>
+</li>
+<li>
+<p>Replace the token value in <code>auth_secret.yaml</code> with the authentication token for <em>cloud.openshift.com</em>. Obtain the token by running the following command, and copy only the "<em>tokenvalue</em>" to <code>auth_secret.yaml</code> (excluding the quotation marks):</p>
+<div class="listingblock">
+<div class="content">
+<pre>$ oc get secret pull-secret -o "jsonpath={.data.\.dockerconfigjson}" | base64 --decode | jq '.auths."cloud.openshift.com".auth'</pre>
+</div>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<div class="title">Note</div>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>To use basic authentication, edit the secret to replace the username and password values with your base64-encoded username and password for connecting to <a href="https://cloud.redhat.com">cloud.redhat.com</a>.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</li>
+</ol>
+</div>
+</li>
+<li>
+<p>Deploy the secret to your OpenShift cluster in the <code>openshift-metering</code> namespace:</p>
+<div class="listingblock">
+<div class="content">
+<pre>$ oc create -f auth-secret.yaml</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>For both methods of authentication, the name of the secret should match the <em>authentication_secret_name</em> set in the <code>CostManagement</code> custom resource configured in the next steps.</p>
+</div>
+</li>
+</ol>
+</div>
+</li>
+<li>
+<p>Configure the Metering Operator.</p>
+<div class="paragraph">
+<p>Cost management uses the Metering Operator to create, collect, package, and upload metrics to cost management. In order for metering to work properly, configure <code>operator-metering</code> using the <a href="https://access.redhat.com/documentation/en-us/openshift_container_platform/4.7/html-single/metering/index#configuring-metering">OpenShift documentation</a> to create a MeteringConfig resource.</p>
+</div>
+</li>
+<li>
+<p>Configure the Cost Management Operator by creating the <code>CostManagement</code> and <code>CostManagementData</code> custom resources.</p>
+<div class="paragraph">
+<p>Creating these resources also starts the roles that create the resources to obtain the usage reports (metrics). This takes about an hour to run and the reports are collected, packaged, and uploaded every six hours.</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<div class="title">Note</div>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>The Cost Management Operator requires the <code>clusterID</code>, <code>reporting_operator_token_name</code>, and <code>authentication_secret_name</code> to be specified in a <code>CostManagement</code> custom resource.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>Copy the following <code>CostManagement</code> resource template and save it to a file called <code>cost-mgmt-resource.yaml</code>:</p>
+<div class="listingblock">
+<div class="content">
+<pre>apiVersion: cost-mgmt.openshift.io/v1alpha1
+kind: CostManagement
+metadata:
+  name: cost-mgmt-setup
+spec:
+  clusterID: '123a45b6-cd8e-9101-112f-g131415hi1jk'
+  reporting_operator_token_name: 'reporting-operator-token-123ab'
+  validate_cert: 'false'
+  authentication: 'basic'
+  authentication_secret_name: 'basic_auth_creds-123ab'</pre>
+</div>
+</div>
+</li>
+<li>
+<p>Edit the following values in your <code>cost-mgmt-resource.yaml</code> file:</p>
+<div class="ulist">
+<ul>
+<li>
+<p>The <code>clusterID</code> value to your cluster ID. Obtain your cluster ID by running:</p>
+<div class="listingblock">
+<div class="content">
+<pre>$ oc get clusterversion -o jsonpath='{.items[].spec.clusterID}{"\n"}'</pre>
+</div>
+</div>
+</li>
+<li>
+<p>The <code>reporting_operator_token_name</code> to the <code>reporting-operator-token</code> secret name inside the <code>openshift-metering</code> namespace. Obtain this by running:</p>
+<div class="listingblock">
+<div class="content">
+<pre>$ oc get secret -n openshift-metering | grep reporting-operator-token</pre>
+</div>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<div class="title">Note</div>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>Depending on your configuration, this command can return two token names. You can use either to configure the Cost Management Operator.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</li>
+<li>
+<p>Specify the authentication type you are using (<code>token</code> or <code>basic</code>). If you are using <code>token</code> authentication, you can remove the authentication field as token authentication is the default.</p>
+</li>
+<li>
+<p>Change the <code>authentication_secret_name</code> to the name of your authentication secret you created earlier.</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Deploy the <code>CostManagement</code> resource:</p>
+<div class="listingblock">
+<div class="content">
+<pre>$ oc create -f cost-mgmt-resource.yaml</pre>
+</div>
+</div>
+</li>
+<li>
+<p>Create a <code>CostManagementData</code> resource to start the collection. Copy the following template and save it as <code>cost-mgmt-data-resource.yaml</code>:</p>
+<div class="listingblock">
+<div class="content">
+<pre>apiVersion: cost-mgmt-data.openshift.io/v1alpha1
+kind: CostManagementData
+metadata:
+  name: cost-mgmt-data-example</pre>
+</div>
+</div>
+</li>
+<li>
+<p>Deploy the <code>CostManagementData</code> resource:</p>
+<div class="listingblock">
+<div class="content">
+<pre>$ oc create -f cost-mgmt-data-resource.yaml</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>The Cost Management Operator will now create, collect, package, and upload your OpenShift usage reports to cost management.</p>
+</div>
+</li>
+</ol>
+</div>
+</li>
+<li>
+<p>When configuration is complete, enter the cluster identifier into the <a href="https://cloud.redhat.com">cloud.redhat.com</a> <strong>Sources</strong> wizard, click <strong>Next</strong>.</p>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<div class="title">Note</div>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>The cluster identifier can be found in <strong>Help</strong> &gt; <strong>About</strong> in OpenShift.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</li>
+<li>
+<p>In the <a href="https://cloud.redhat.com">cloud.redhat.com</a> <strong>Sources</strong> wizard, review the details and click <strong>Finish</strong> to add the OpenShift Container Platform cluster to cost management.</p>
+</li>
+</ol>
+</div>
+<div class="ulist">
+<div class="title">Additional resources</div>
+<ul>
+<li>
+<p>See <a href="https://access.redhat.com/documentation/en-us/openshift_container_platform/4.7/html/operators">Operators</a> in the OpenShift documentation for more information about Operators and OperatorHub.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Cost management will begin collecting usage data (metrics) from your OpenShift Container Platform cluster. The data can take a few days to populate before it shows on the cost management dashboard.</p>
+</div>
+<div class="paragraph">
+<p>You have completed adding your OpenShift Container Platform cluster as a source.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="assembly-cost-management-next-steps">7. Next steps for managing your costs</h2>
+<div class="sectionbody">
+<div class="paragraph _abstract">
+<p>After adding your infrastructure and cloud sources, in addition to showing cost data by source, cost management will automatically show AWS and Azure cost and usage related to running your OpenShift Container Platform clusters on AWS or Azure.</p>
+</div>
+<div class="paragraph">
+<p>On the cost management <strong>Overview</strong> page, use the <strong>Perspective</strong> options for different views of your cost data.</p>
+</div>
+<div class="paragraph">
+<p>Use the <strong>Details</strong> menu to look more closely at your costs.</p>
+</div>
+<div class="sect2">
+<h3 id="_configure_tagging_for_your_sources">7.1. Configure tagging for your sources</h3>
+<div class="paragraph">
+<p>The cost management application tracks cloud and infrastructure costs using tags (called labels in OpenShift), which you can refine to filter and attribute to resources. Tags in cost management allow you to organize your resources by cost and to allocate the costs to different parts of your cloud infrastructure.</p>
+</div>
+<div class="admonitionblock important">
+<table>
+<tr>
+<td class="icon">
+<div class="title">Important</div>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>Tags and labels can only be configured directly on a source. You cannot edit tags and labels in the cost management application.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>See <a href="https://access.redhat.com/documentation/en-us/cost_management_service/2021/html-single/managing_cost_data_using_tagging/index"><em>Managing cost data using tagging</em></a> to learn more about:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Planning your tagging strategy to organize your view of cost data</p>
+</li>
+<li>
+<p>Understanding how cost management associates tags</p>
+</li>
+<li>
+<p>Configuring tags and labels on your sources</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_configure_cost_models_to_accurately_report_costs">7.2. Configure cost models to accurately report costs</h3>
+<div class="paragraph">
+<p>Now that you have configured your sources to collect cost and usage data into cost management, you can configure cost models to associate prices to metrics and usage, and fine-tune the costs of running your cloud.</p>
+</div>
+<div class="paragraph">
+<p>A cost model is a framework used to define the calculations for the costs stored in cost management, using raw costs and metrics. Costs generated by a cost model can be recorded, categorized and distributed to specific customers, business units or projects.</p>
+</div>
+<div class="paragraph">
+<p>From the <a href="https://cloud.redhat.com/cost-management/cost-models">Cost models</a> area of cost management, you can:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Classify your costs as infrastructure or supplementary costs</p>
+</li>
+<li>
+<p>Capture monthly costs for OpenShift nodes and clusters</p>
+</li>
+<li>
+<p>Apply a markup to account for additional support costs</p>
+</li>
+<li>
+<p>Learn how to configure a cost model in <a href="https://access.redhat.com/documentation/en-us/cost_management_service/2021/html-single/using_cost_models/index"><em>Using cost models</em></a>.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="footer">
+<div id="footer-text">
+Last updated 2021-03-19 07:44:48 UTC
+</div>
+</div>
+</body>
+</html>
