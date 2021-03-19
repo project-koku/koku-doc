@@ -4,7 +4,7 @@ services:
   - docker
 
 before_install:
-  - echo 2994f2c9-3523-4968-a7d4-ad08aa3a4821 | docker login -u junixon --password-stdin
+  - echo ${DKR_TKN} | docker login -u ${DKR_USR} --password-stdin
   - docker pull asciidoctor/docker-asciidoctor
 
 script:
@@ -29,4 +29,4 @@ after_success:
   - sudo git config user.email "{GH_USER_EMAIL}"
   - sudo git add .
   - sudo git commit -m "Deploy ${TRAVIS_COMMIT_RANGE} to github pages"
-  - sudo git push --force --quiet "https://${GH_TOKEN}@github.com/project-koku/koku-doc.git" gh-pages
+  - sudo git push --force --quiet "https://${GH_TOKEN}@${GH_REF}" gh-pages > /dev/null 2>&1
