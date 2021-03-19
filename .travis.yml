@@ -22,9 +22,9 @@ after_failure:
   - docker logs cost-models
   - docker logs using-tags
 
-#after_success:
+after_success:
   - sudo git clone git@github.com:project-koku/koku-doc.git -b gh-pages output
-  - cd output ; sudo mv ../downstream/titles/using_cost_models/master.html cost-models.html ; sudo mv ../downstream/titles/getting_started/master.html getting-started.html ; sudo mv ../downstream/titles/managing_cost_data_using_tags/master.html using-tags.html ;
+  - cd output ; sudo mv ../downstream/titles/using_cost_models/master.html cost-models.html ; sudo mv ../downstream/titles/getting_started/master.html getting-started.html ; sudo mv ../downstream/titles/managing_cost_data_using_tags/master.html using-tags.html ; sudo cp -R ../downstream/images images
   - sudo git add .
   - sudo git commit -m "Deploy ${TRAVIS_COMMIT_RANGE} to github pages"
   - sudo git push --force --quiet "https://${GH_TOKEN}@${GITHUB_REPOSITORY}" gh-pages > /dev/null 2>&1
