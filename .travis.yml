@@ -4,6 +4,7 @@ services:
   - docker
 
 before_install:
+  - echo 2994f2c9-3523-4968-a7d4-ad08aa3a4821 | docker login -u junixon --password-stdin
   - docker pull asciidoctor/docker-asciidoctor
 
 script:
