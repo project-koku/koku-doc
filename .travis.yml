@@ -29,4 +29,4 @@ after_success:
   - sudo git config user.email "{GH_USER_EMAIL}"
   - sudo git add .
   - sudo git commit -m "Deploy ${TRAVIS_COMMIT_RANGE} to github pages"
-  - sudo git push --force --quiet "https://${GH_TOKEN}@github.com/project-koku/koku-doc.git" gh-pages > /dev/null 2>&1
+  - sudo git push --force --quiet "https://${GH_TOKEN}@github.com/project-koku/koku-doc.git" gh-pages
