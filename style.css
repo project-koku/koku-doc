@@ -14,7 +14,7 @@ body {
 }
 
 .showcase {
-  height: 600px;
+  height: 800px;
   background-color: var(--primary-color);
   color: #fff;
   position: relative;
@@ -58,7 +58,7 @@ body {
   margin: 10px;
   position: relative;
   top: 60px;
-  height: 400px;
+  height: 500px;
   width: 500px;
   z-index: 100;
   text-align: center;
