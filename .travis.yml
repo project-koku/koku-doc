@@ -24,7 +24,7 @@ after_failure:
 
 after_success:
   - sudo git clone https://github.com/project-koku/koku-doc.git -b gh-pages output
-  - cd output ; sudo mv ../downstream/titles/using_cost_models/master.html cost-models.html ; sudo mv ../downstream/titles/getting_started/master.html getting-started.html ; sudo mv ../downstream/titles/managing_cost_data_using_tags/master.html using-tags.html ; sudo cp -R ../downstream/images images
+  - cd output ; sudo mv ../downstream/titles/using_cost_models/master.html cost-models.html ; sudo mv ../downstream/titles/getting_started/master.html getting-started.html ; sudo mv ../downstream/titles/managing_cost_data_using_tags/master.html using-tags.html ; sudo cp -a ../downstream/images/. images
   - sudo git config user.name "${GH_USER_NAME}"
   - sudo git config user.email "{GH_USER_EMAIL}"
   - sudo git add .
