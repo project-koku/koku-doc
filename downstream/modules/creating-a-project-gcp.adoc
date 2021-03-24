@@ -5,48 +5,29 @@
 :experimental:
 
 [id="creating-a-project-gcp_{context}"]
-= Creating a cost management project
-////
-Start the title of a procedure module with a verb, such as Creating or Create. See also _Wording of headings_ in _The IBM Style Guide_.
-////
+= Creating a Google Cloud project
 
 [role="_abstract"]
-Write a short introductory paragraph that provides an overview of the module. Procedure modules should include  the steps that users perform and address user motivation.The text that immediately follows the `[role="_abstract"]` tag is used for search metadata.
+It is strongly recommended that you create a new Google Cloud project to gather and send your cost reports to {platform}. This procedure outlines the steps required to create and name a new project from the Google Cloud Console.
 
 .Prerequisites
 
-* A bulleted list of conditions that must be satisfied before the user starts following this module.
-* You can also link to other modules or assemblies the user must follow before starting this module.
-* Delete the section title and bullets if the module has no prerequisites.
+* Access to Google Cloud Console with `resourcemanager.projects.create` permission
 
 .Procedure
+. Navigate to link:https://console.cloud.google.com/[Google Cloud Console].
+. Click btn:[Select a project] in the top menu bar.
+. Click btn:[NEW PROJECT] in the top right of the window that appears.
+. Enter a *Project name* in the new page that appears and select your billing account.
+. Select the *Organization*.
+. Enter the parent organization in the *Location* box.
+. Click btn:[Create]
 
-. Start each step with an active verb.
-
-. Include one command or action for each step with the exception of simple follow-step, for example:
-.. Do this thing and then select *Next*.
-.. Do this other thing and then select *Next*.
-
-. Use an unnumbered bullet (*) if the procedure includes only one step.
 
 .Verification steps
-////
-Delete this section if it does not apply to your module. Provide the user with verification methods for the procedure, such as expected output or commands that confirm success or failure.
-////
-
-. Start each step with an active verb.
-
-. Include one command or action per step.
-
-. Use an unnumbered bullet (*) if the procedure includes only one step.
-
+. Navigate to the Google Cloud Console Dashboard
+. Verify the project is in the top menu bar.
 
 [role="_additional-resources"]
 .Additional resources
-////
-Optional. Delete if not used.
-////
-* A bulleted list of links to other material closely related to the contents of the procedure module.
-* Currently, modules cannot include xrefs, so you cannot include links to other content in your collection. If you need to link to another assembly, add the xref to the assembly that includes this module.
-* For more details on writing procedure modules, see the link:https://github.com/redhat-documentation/modular-docs#modular-documentation-reference-guide[Modular Documentation Reference Guide].
-* Use a consistent system for file names, IDs, and titles. For tips, see _Anchor Names and File Names_ in link:https://github.com/redhat-documentation/modular-docs#modular-documentation-reference-guide[Modular Documentation Reference Guide].
+* For additional information on creating projects, see the Google Cloud documentation link:https://cloud.google.com/resource-manager/docs/creating-managing-projects[_Creating and managing projects_].

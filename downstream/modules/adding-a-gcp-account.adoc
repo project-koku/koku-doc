@@ -1,0 +1,38 @@
+// Module included in the following assemblies:
+//
+// assembly-adding-gcp-sources.adoc
+:_module-type: PROCEDURE
+:experimental:
+
+[id="proc_adding-a-gcp-account_{context}"]
+= Adding your Google Cloud account as a source
+
+[role="_abstract"]
+Using the information from the previous steps, you can now add your Google Cloud account as a source. After adding a Google Cloud source, the cost management application processes the cost and usage data from your Google Cloud account and makes it viewable.
+
+.Prerequisites
+
+* Red Hat account user with Organization Administrator entitlements
+* Google Cloud xref:creating-a-project-gcp_{context}[project]
+* xref:adding-new-member-with-cost-role-gcp_{context}[Billing service member] with the cost management Identity and Access Management (IAM) xref:creating-iam-role-gcp_{context}[role]
+* xref:exporting-billing-data-gcp_{context}[Billing export] to xref:creating-a-dataset-gcp_{context}[BigQuery dataset]
+
+.Procedure
+
+. From cost management, click image:configuration-gear.png[] (*Settings*).
+. Click btn:[Sources].
+. Click btn:[Add source] in the *Cloud sources* tab.
+. Enter a name for the source and click btn:[Next].
+. In the dialog, select *Google Cloud* as the source type and *Cost Management* as the application.
+. Click *Next*.
+. Copy your *Project ID* and click *Next*.
+. Click btn:[Next] to verify you have created an *Identity and Access Management (IAM) role*.
+. Click btn:[Next] to verify you have created a new *billing service account user* and assigned the correct role.
+. Copy your *BigQuery Dataset ID* and click btn:[Next].
+. Click btn:[Next] to verify you have enabled your *BigQuery billing export*.
+. Review the details and click *Add*.
+
+
+.Verification steps
+
+Cost management will begin collecting cost and usage data from your Google Cloud account. The data can take a few days to populate before it shows on the cost management dashboard.
