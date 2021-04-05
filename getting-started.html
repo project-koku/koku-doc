@@ -504,16 +504,30 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="#configuring-an-azure-daily-export-schedule_adding-an-azure-source">5.3. Configuring a daily Azure data export schedule</a></li>
 </ul>
 </li>
-<li><a href="#assembly-adding-ocp-sources">6. Adding an OpenShift Container Platform 4.3 and 4.4 source to cost management</a>
+<li><a href="#assembly-adding-gcp-sources">6. Adding a Google Cloud source to cost management</a>
 <ul class="sectlevel2">
-<li><a href="#installing-cost-mgmt-operator_adding-previous-source">6.1. Installing the Cost Management Operator</a></li>
-<li><a href="#configuring-cost-mgmt-operator_adding-previous-source">6.2. Configuring the Cost Management Operator</a></li>
+<li><a href="#creating-a-project-gcp_adding-gcp-sources">6.1. Creating a Google Cloud project</a></li>
+<li><a href="#creating-iam-role-gcp_adding-gcp-sources">6.2. Creating a Google Cloud Identity and Access Management role</a></li>
+<li><a href="#adding-new-member-with-cost-role-gcp_adding-gcp-sources">6.3. Adding a billing service account member to your Google Cloud project</a></li>
+<li><a href="#creating-a-dataset-gcp_adding-gcp-sources">6.4. Creating a Google Cloud BigQuery dataset</a></li>
+<li><a href="#exporting-billing-data-gcp_adding-gcp-sources">6.5. Exporting Google Cloud billing data to BigQuery</a>
+<ul class="sectlevel3">
+<li><a href="#viewing-data-collected-gcp_adding-gcp-sources">6.5.1. Viewing billing tables in BigQuery</a></li>
 </ul>
 </li>
-<li><a href="#assembly-cost-management-next-steps">7. Next steps for managing your costs</a>
+<li><a href="#proc_adding-a-gcp-account_adding-gcp-sources">6.6. Adding your Google Cloud account as a source</a></li>
+</ul>
+</li>
+<li><a href="#assembly-adding-ocp-sources">7. Adding an OpenShift Container Platform 4.3 and 4.4 source to cost management</a>
 <ul class="sectlevel2">
-<li><a href="#_configure_tagging_for_your_sources">7.1. Configure tagging for your sources</a></li>
-<li><a href="#_configure_cost_models_to_accurately_report_costs">7.2. Configure cost models to accurately report costs</a></li>
+<li><a href="#installing-cost-mgmt-operator_adding-previous-source">7.1. Installing the Cost Management Operator</a></li>
+<li><a href="#configuring-cost-mgmt-operator_adding-previous-source">7.2. Configuring the Cost Management Operator</a></li>
+</ul>
+</li>
+<li><a href="#assembly-cost-management-next-steps">8. Next steps for managing your costs</a>
+<ul class="sectlevel2">
+<li><a href="#_configure_tagging_for_your_sources">8.1. Configure tagging for your sources</a></li>
+<li><a href="#_configure_cost_models_to_accurately_report_costs">8.2. Configure cost models to accurately report costs</a></li>
 </ul>
 </li>
 </ul>
@@ -2513,7 +2527,575 @@ to obtain the display names of AWS member accounts if you are using consolidated
 </div>
 </div>
 <div class="sect1">
-<h2 id="assembly-adding-ocp-sources">6. Adding an OpenShift Container Platform 4.3 and 4.4 source to cost management</h2>
+<h2 id="assembly-adding-gcp-sources">6. Adding a Google Cloud source to cost management</h2>
+<div class="sectionbody">
+<div class="paragraph _abstract">
+<p>To add a Google Cloud account to cost management, you must configure your Google Cloud to provide metrics, then add your Google Cloud account as a source from the <a href="https://cloud.redhat.com">cloud.redhat.com</a> user interface.</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<div class="title">Note</div>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>You must have a Red Hat account user with Organization Administrator or Sources Administrator entitlements before you can add sources to cost management.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>Before you can add your Google Cloud account to cost management as a data source, you must configure the following services on your Google Cloud account to allow cost management access to metrics:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Cost management Google Cloud project.</p>
+</li>
+<li>
+<p>Billing service account member with the correct role to export your data to <a href="https://cloud.redhat.com">cloud.redhat.com</a>.</p>
+</li>
+<li>
+<p>BigQuery dataset to contain the cost data.</p>
+</li>
+<li>
+<p>Billing export that sends the cost data to your BigQuery dataset.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>As you will complete some of the following steps in the Google Cloud console, and some steps in the cost management user interface, keep both applications open in a web browser.</p>
+</div>
+<div class="paragraph">
+<p>Add your Google Cloud source to cost management from the settings area at
+<a href="https://cloud.redhat.com/settings/sources/" class="bare">https://cloud.redhat.com/settings/sources/</a>.</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<div class="title">Note</div>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>As non-Red Hat products and documentation can change without notice, instructions for configuring the third-party sources provided in this guide are general and correct at the time of publishing. See the <a href="https://cloud.google.com/docs">Google Cloud Platform documentation</a> for the most up-to-date and accurate information.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="sect2">
+<h3 id="creating-a-project-gcp_adding-gcp-sources">6.1. Creating a Google Cloud project</h3>
+<div class="paragraph _abstract">
+<p>It is strongly recommended that you create a new Google Cloud project to gather and send your cost reports to <a href="https://cloud.redhat.com">cloud.redhat.com</a>. This procedure outlines the steps required to create and name a new project from the Google Cloud Console.</p>
+</div>
+<div class="ulist">
+<div class="title">Prerequisites</div>
+<ul>
+<li>
+<p>Access to Google Cloud Console with <code>resourcemanager.projects.create</code> permission</p>
+</li>
+</ul>
+</div>
+<div class="olist arabic">
+<div class="title">Procedure</div>
+<ol class="arabic">
+<li>
+<p>Navigate to <span class="menuseq"><b class="menu">IAM &amp; Admin</b>&#160;<b class="caret">&#8250;</b> <b class="menuitem">Create a Project</b></span> in <a href="https://console.cloud.google.com/">Google Cloud Console</a>.</p>
+</li>
+<li>
+<p>Enter a <strong>Project name</strong> in the new page that appears and select your billing account.</p>
+</li>
+<li>
+<p>Select the <strong>Organization</strong>.</p>
+</li>
+<li>
+<p>Enter the parent organization in the <strong>Location</strong> box.</p>
+</li>
+<li>
+<p>Click <b class="button">Create</b></p>
+</li>
+</ol>
+</div>
+<div class="olist arabic">
+<div class="title">Verification steps</div>
+<ol class="arabic">
+<li>
+<p>Navigate to the Google Cloud Console Dashboard</p>
+</li>
+<li>
+<p>Verify the project is in the top menu bar.</p>
+</li>
+</ol>
+</div>
+<div class="ulist _additional-resources">
+<div class="title">Additional resources</div>
+<ul>
+<li>
+<p>For additional information on creating projects, see the Google Cloud documentation <a href="https://cloud.google.com/resource-manager/docs/creating-managing-projects"><em>Creating and managing projects</em></a>.</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="creating-iam-role-gcp_adding-gcp-sources">6.2. Creating a Google Cloud Identity and Access Management role</h3>
+<div class="paragraph _abstract">
+<p>A custom Identity and Access Management (IAM) role for cost management gives access to specific cost related resources required to enable a Google Cloud Platform source and prohibits access to other resources.</p>
+</div>
+<div class="ulist">
+<div class="title">Prerequisites</div>
+<ul>
+<li>
+<p>Access to Google Cloud Console with these permissions:</p>
+<div class="ulist">
+<ul>
+<li>
+<p><code>resourcemanager.projects.get</code></p>
+</li>
+<li>
+<p><code>resourcemanager.projects.getIamPolicy</code></p>
+</li>
+<li>
+<p><code>resourcemanager.projects.setIamPolicy</code></p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Google Cloud <a href="#creating-a-project-gcp_adding-gcp-sources">project</a></p>
+</li>
+</ul>
+</div>
+<div class="olist arabic">
+<div class="title">Procedure</div>
+<ol class="arabic">
+<li>
+<p>Navigate to <span class="menuseq"><b class="menu">IAM &amp; Admin</b>&#160;<b class="caret">&#8250;</b> <b class="menuitem">Roles</b></span> in <a href="https://console.cloud.google.com/">Google Cloud Console</a>.</p>
+</li>
+<li>
+<p>Select the cost management project from the dropdown in the top menu bar.</p>
+</li>
+<li>
+<p>Click <b class="button">+ Create role</b>.</p>
+</li>
+<li>
+<p>Enter a <strong>Title</strong>, <strong>Description</strong> and <strong>ID</strong> for the role.</p>
+</li>
+<li>
+<p>Click <b class="button">+ ADD PERMISSIONS</b></p>
+</li>
+<li>
+<p>Use the <strong>Enter property name or value</strong> field to search and select these four permissions for your custom role:</p>
+<div class="ulist">
+<ul>
+<li>
+<p><code>bigquery.jobs.create</code></p>
+</li>
+<li>
+<p><code>bigquery.tables.getData</code></p>
+</li>
+<li>
+<p><code>bigquery.tables.get</code></p>
+</li>
+<li>
+<p><code>bigquery.tables.list</code></p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Click <b class="button">ADD</b></p>
+</li>
+<li>
+<p>Click <b class="button">CREATE</b>.</p>
+</li>
+</ol>
+</div>
+<div class="olist arabic">
+<div class="title">Verification steps</div>
+<ol class="arabic">
+<li>
+<p>Navigate to <span class="menuseq"><b class="menu">IAM &amp; Admin</b>&#160;<b class="caret">&#8250;</b> <b class="menuitem">Roles</b></span>.</p>
+</li>
+<li>
+<p>Click the title of the custom role you created.</p>
+</li>
+<li>
+<p>Verify the role has these four assigned permissions:</p>
+<div class="ulist">
+<ul>
+<li>
+<p><code>bigquery.jobs.create</code></p>
+</li>
+<li>
+<p><code>bigquery.tables.getData</code></p>
+</li>
+<li>
+<p><code>bigquery.tables.get</code></p>
+</li>
+<li>
+<p><code>bigquery.tables.list</code></p>
+</li>
+</ul>
+</div>
+</li>
+</ol>
+</div>
+<div class="ulist _additional-resources">
+<div class="title">Additional resources</div>
+<ul>
+<li>
+<p>For additional information on roles and their usage, see the Google Cloud documentation <a href="https://cloud.google.com/iam/docs/understanding-roles"><em>Understanding roles</em></a> and <a href="https://cloud.google.com/iam/docs/creating-custom-roles"><em>Creating and managing custom roles</em></a>.</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="adding-new-member-with-cost-role-gcp_adding-gcp-sources">6.3. Adding a billing service account member to your Google Cloud project</h3>
+<div class="paragraph _abstract">
+<p>A new billing service account member must be created in your project that can export cost reports to <a href="https://cloud.redhat.com">cloud.redhat.com</a>.</p>
+</div>
+<div class="ulist">
+<div class="title">Prerequisites</div>
+<ul>
+<li>
+<p>Access to Google Cloud Console with these permissions:</p>
+<div class="ulist">
+<ul>
+<li>
+<p><code>resourcemanager.projects.get</code></p>
+</li>
+<li>
+<p><code>resourcemanager.projects.getIamPolicy</code></p>
+</li>
+<li>
+<p><code>resourcemanager.projects.setIamPolicy</code></p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Google Cloud <a href="#creating-a-project-gcp_adding-gcp-sources">project</a></p>
+</li>
+<li>
+<p>Cost management Identity and Access Management (IAM) <a href="#creating-iam-role-gcp_adding-gcp-sources">role</a></p>
+</li>
+</ul>
+</div>
+<div class="olist arabic">
+<div class="title">Procedure</div>
+<ol class="arabic">
+<li>
+<p>Navigate to <span class="menuseq"><b class="menu">IAM &amp; Admin</b>&#160;<b class="caret">&#8250;</b> <b class="menuitem">IAM</b></span> in <a href="https://console.cloud.google.com/">Google Cloud Console</a>.</p>
+</li>
+<li>
+<p>Select the cost management project from the dropdown in the top menu bar.</p>
+</li>
+<li>
+<p>Click <b class="button">ADD</b> at the top of the page.</p>
+</li>
+<li>
+<p>Paste this into the <strong>New members</strong> field:</p>
+<div class="paragraph">
+<p><code>billing-export@red-hat-cost-management.iam.gserviceaccount.com</code></p>
+</div>
+</li>
+<li>
+<p>Select the cost management IAM role.</p>
+</li>
+<li>
+<p>Click <b class="button">SAVE</b></p>
+</li>
+</ol>
+</div>
+<div class="olist arabic">
+<div class="title">Verification steps</div>
+<ol class="arabic">
+<li>
+<p>Navigate to <span class="menuseq"><b class="menu">IAM &amp; Admin</b>&#160;<b class="caret">&#8250;</b> <b class="menuitem">IAM</b></span>.</p>
+</li>
+<li>
+<p>Verify the new member is present with the correct role.</p>
+</li>
+</ol>
+</div>
+<div class="ulist _additional-resources">
+<div class="title">Additional resources</div>
+<ul>
+<li>
+<p>For additional information on roles and their usage, see the Google Cloud documentation <a href="https://cloud.google.com/iam/docs/understanding-roles"><em>Understanding roles</em></a> and <a href="https://cloud.google.com/iam/docs/creating-custom-roles"><em>Creating and managing custom roles</em></a>.</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="creating-a-dataset-gcp_adding-gcp-sources">6.4. Creating a Google Cloud BigQuery dataset</h3>
+<div class="paragraph _abstract">
+<p>Create a BigQuery dataset to collect and store the billing data for cost management.</p>
+</div>
+<div class="ulist">
+<div class="title">Prerequisites</div>
+<ul>
+<li>
+<p>Access to Google Cloud Console with <code>bigquery.datasets.create</code> permission</p>
+</li>
+<li>
+<p>Google Cloud <a href="#creating-a-project-gcp_adding-gcp-sources">project</a></p>
+</li>
+</ul>
+</div>
+<div class="olist arabic">
+<div class="title">Procedure</div>
+<ol class="arabic">
+<li>
+<p>Navigate to <span class="menuseq"><b class="menu">Big Data</b>&#160;<b class="caret">&#8250;</b> <b class="menuitem">BigQuery</b></span> in <a href="https://console.cloud.google.com/">Google Cloud Console</a>.</p>
+</li>
+<li>
+<p>Select the cost management project in the <strong>Explorer</strong> panel.</p>
+</li>
+<li>
+<p>Click <b class="button">CREATE DATASET</b></p>
+</li>
+<li>
+<p>Enter a name for your dataset in the <strong>Dataset ID</strong> field.</p>
+</li>
+<li>
+<p>Click <b class="button">CREATE DATASET</b></p>
+</li>
+</ol>
+</div>
+<div class="olist arabic">
+<div class="title">Verification steps</div>
+<ol class="arabic">
+<li>
+<p>Select the cost management project you created in the <strong>Explorer</strong> panel.</p>
+</li>
+<li>
+<p>Verify the dataset you created is nested under the cost management project.</p>
+</li>
+</ol>
+</div>
+</div>
+<div class="sect2">
+<h3 id="exporting-billing-data-gcp_adding-gcp-sources">6.5. Exporting Google Cloud billing data to BigQuery</h3>
+<div class="paragraph _abstract">
+<p>Enabling a billing export to BigQuery sends your Google Cloud billing data (such as usage, cost estimates, and pricing data) automatically to the cost management BigQuery dataset.</p>
+</div>
+<div class="ulist">
+<div class="title">Prerequisites</div>
+<ul>
+<li>
+<p>Access to Google Cloud Console with the <strong>Billing Account Administrator</strong> role</p>
+</li>
+<li>
+<p>Google Cloud <a href="#creating-a-project-gcp_adding-gcp-sources">project</a></p>
+</li>
+<li>
+<p><a href="#adding-new-member-with-cost-role-gcp_adding-gcp-sources">Billing service member</a> with the cost management Identity and Access Management (IAM) <a href="#creating-iam-role-gcp_adding-gcp-sources">role</a></p>
+</li>
+<li>
+<p><a href="#creating-a-dataset-gcp_adding-gcp-sources">BigQuery dataset</a></p>
+</li>
+</ul>
+</div>
+<div class="olist arabic">
+<div class="title">Procedure</div>
+<ol class="arabic">
+<li>
+<p>Navigate to <span class="menuseq"><b class="menu">Billing</b>&#160;<b class="caret">&#8250;</b> <b class="menuitem">Billing export</b></span> in <a href="https://console.cloud.google.com/">Google Cloud Console</a>.</p>
+</li>
+<li>
+<p>Click the <strong>BIGQUERY EXPORT</strong> tab.</p>
+</li>
+<li>
+<p>Click <b class="button">EDIT SETTINGS</b>, in the <strong>Daily cost detail</strong> section.</p>
+</li>
+<li>
+<p>Select the cost management <strong>Project</strong> and <strong>Billing export dataset</strong> you created in the dropdown menus.</p>
+</li>
+<li>
+<p>Click <b class="button">SAVE</b>.</p>
+</li>
+</ol>
+</div>
+<div class="olist arabic">
+<div class="title">Verification steps</div>
+<ol class="arabic">
+<li>
+<p>Verify a green checkmark with <strong>Enabled</strong> in the <strong>Daily cost detail</strong> section, with correct <strong>Project name</strong> and <strong>Dataset name</strong>.</p>
+</li>
+</ol>
+</div>
+<div class="sect3">
+<h4 id="viewing-data-collected-gcp_adding-gcp-sources">6.5.1. Viewing billing tables in BigQuery</h4>
+<div class="paragraph _abstract">
+<p>You may want to review the metrics collected and sent to cost management. This can also assist with troubleshooting incorrect or missing data in cost management.</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<div class="title">Note</div>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>Google may take several hours to export billing data to your BigQuery dataset.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="ulist">
+<div class="title">Prerequisites</div>
+<ul>
+<li>
+<p>Access to Google Cloud console with <code>bigquery.dataViewer</code> role</p>
+</li>
+</ul>
+</div>
+<div class="olist arabic">
+<div class="title">Procedure</div>
+<ol class="arabic">
+<li>
+<p>Navigate to <span class="menuseq"><b class="menu">Big Data</b>&#160;<b class="caret">&#8250;</b> <b class="menuitem">BigQuery</b></span> in <a href="https://console.cloud.google.com/">Google Cloud Console</a>.</p>
+</li>
+<li>
+<p>Select the cost management project in the <strong>Explorer</strong> panel.</p>
+</li>
+<li>
+<p>Click <code>gcp_billing_export_v1_xxxxxx_xxxxxx_xxxxxx</code> table under the cost management dataset.</p>
+</li>
+<li>
+<p>Click the <strong>Preview</strong> tab to view the metrics.</p>
+</li>
+</ol>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="proc_adding-a-gcp-account_adding-gcp-sources">6.6. Adding your Google Cloud account as a source</h3>
+<div class="paragraph _abstract">
+<p>Using the information from the previous steps, you can now add your Google Cloud account as a source. After adding a Google Cloud source, the cost management application processes the cost and usage data from your Google Cloud account and makes it viewable.</p>
+</div>
+<div class="ulist">
+<div class="title">Prerequisites</div>
+<ul>
+<li>
+<p>Red Hat account user with Organization Administrator or Sources Administratorentitlements</p>
+</li>
+<li>
+<p>Google Cloud <a href="#creating-a-project-gcp_adding-gcp-sources">project</a></p>
+</li>
+<li>
+<p><a href="#adding-new-member-with-cost-role-gcp_adding-gcp-sources">Billing service member</a> with the cost management Identity and Access Management (IAM) <a href="#creating-iam-role-gcp_adding-gcp-sources">role</a></p>
+</li>
+<li>
+<p><a href="#exporting-billing-data-gcp_adding-gcp-sources">Billing export</a> to <a href="#creating-a-dataset-gcp_adding-gcp-sources">BigQuery dataset</a></p>
+</li>
+</ul>
+</div>
+<div class="olist arabic">
+<div class="title">Procedure</div>
+<ol class="arabic">
+<li>
+<p>From <a href="https://cloud.redhat.com">cloud.redhat.com</a>, click <span class="image"><img src="images/configuration-gear.png" alt="configuration gear"></span> (<strong>Settings</strong>).</p>
+</li>
+<li>
+<p>Click <b class="button">Sources</b>.</p>
+</li>
+<li>
+<p>Click <b class="button">Add source</b> in the <strong>Cloud sources</strong> tab.</p>
+</li>
+<li>
+<p>Enter a name for the source and click <b class="button">Next</b>.</p>
+</li>
+<li>
+<p>In the dialog, select <strong>Google Cloud</strong> as the source type and <strong>Cost Management</strong> as the application.</p>
+</li>
+<li>
+<p>Click <strong>Next</strong>.</p>
+</li>
+<li>
+<p>Enter your <strong>Project ID</strong> and click <strong>Next</strong>.</p>
+</li>
+<li>
+<p>Click <b class="button">Next</b> to verify you have created an <strong>Identity and Access Management (IAM) role</strong>.</p>
+</li>
+<li>
+<p>Click <b class="button">Next</b> to verify you have created a new <strong>billing service account user</strong> and assigned the correct role.</p>
+</li>
+<li>
+<p>Enter your <strong>BigQuery Dataset ID</strong> and click <b class="button">Next</b>.</p>
+</li>
+<li>
+<p>Click <b class="button">Next</b> to verify you have enabled your <strong>BigQuery billing export</strong>.</p>
+</li>
+<li>
+<p>Review the details and click <strong>Add</strong>.</p>
+</li>
+</ol>
+</div>
+<div class="ulist">
+<div class="title">Verification steps</div>
+<ul>
+<li>
+<p>Verify your source is listed with <strong><em>Available</em></strong> status in the <strong>Sources</strong> page.</p>
+<div class="admonitionblock important">
+<table>
+<tr>
+<td class="icon">
+<div class="title">Important</div>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>Google may take several hours to gather and export billing data to cost management. In the meantime, you will receive a <strong><em>configuration in progress</em></strong> message, and your source status will display as <strong><em>Unknown</em></strong> in the <strong>Sources</strong> page.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</li>
+</ul>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<caption class="title">Table 1. Troubleshooting</caption>
+<colgroup>
+<col style="width: 33.3333%;">
+<col style="width: 33.3333%;">
+<col style="width: 33.3334%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Issue</th>
+<th class="tableblock halign-left valign-top">Cause</th>
+<th class="tableblock halign-left valign-top">Remediation steps</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Incorrect IAM permissions for project <em>yourprojectID</em></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The billing service account member does not have the correct role or permissions for cost management.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Make sure the billing service account has the <a href="#creating-iam-role-gcp_adding-gcp-sources">cost management role</a> with the correct permissions.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Unable to find dataset: <em>yourdatasetID</em> in project: <em>yourprojectID</em></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The BigQuery dataset ID was entered incorrectly or does not exist.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Make sure the <a href="#creating-a-dataset-gcp_adding-gcp-sources">BigQuery dataset ID</a> matches the one created for cost management.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Source status <em>"Unknown"</em> longer than 24 hours</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Cost management cannot find cost data in the BigQuery dataset provided.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Make sure your <a href="#exporting-billing-data-gcp_adding-gcp-sources">billing export</a> is configured and <a href="#viewing-data-collected-gcp_adding-gcp-sources">billing tables</a> exist in your BigQuery dataset.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="assembly-adding-ocp-sources">7. Adding an OpenShift Container Platform 4.3 and 4.4 source to cost management</h2>
 <div class="sectionbody">
 <div class="admonitionblock note">
 <table>
@@ -2582,7 +3164,7 @@ to obtain the display names of AWS member accounts if you are using consolidated
 <p>As you will complete some of the following steps in OpenShift Container Platform, and some steps in the <a href="https://cloud.redhat.com">cloud.redhat.com</a> platform (<a href="https://cloud.redhat.com/settings/sources/" class="bare">https://cloud.redhat.com/settings/sources/</a>), have both applications open in a web browser, as well as a terminal to access the command line interface (CLI).</p>
 </div>
 <div class="sect2">
-<h3 id="installing-cost-mgmt-operator_adding-previous-source">6.1. Installing the Cost Management Operator</h3>
+<h3 id="installing-cost-mgmt-operator_adding-previous-source">7.1. Installing the Cost Management Operator</h3>
 <div class="paragraph _abstract">
 <p>The Cost Management Operator collects the metrics required for cost management.</p>
 </div>
@@ -2665,7 +3247,7 @@ to obtain the display names of AWS member accounts if you are using consolidated
 </div>
 </div>
 <div class="sect2">
-<h3 id="configuring-cost-mgmt-operator_adding-previous-source">6.2. Configuring the Cost Management Operator</h3>
+<h3 id="configuring-cost-mgmt-operator_adding-previous-source">7.2. Configuring the Cost Management Operator</h3>
 <div class="paragraph _abstract">
 <p>The Cost Management Operator (<code>cost-mgmt-operator</code>) collects the metrics required for cost management.</p>
 </div>
@@ -2959,7 +3541,7 @@ metadata:
 </div>
 </div>
 <div class="sect1">
-<h2 id="assembly-cost-management-next-steps">7. Next steps for managing your costs</h2>
+<h2 id="assembly-cost-management-next-steps">8. Next steps for managing your costs</h2>
 <div class="sectionbody">
 <div class="paragraph _abstract">
 <p>After adding your infrastructure and cloud sources, in addition to showing cost data by source, cost management will automatically show AWS and Azure cost and usage related to running your OpenShift Container Platform clusters on AWS or Azure.</p>
@@ -2971,7 +3553,7 @@ metadata:
 <p>Use the <strong>Details</strong> menu to look more closely at your costs.</p>
 </div>
 <div class="sect2">
-<h3 id="_configure_tagging_for_your_sources">7.1. Configure tagging for your sources</h3>
+<h3 id="_configure_tagging_for_your_sources">8.1. Configure tagging for your sources</h3>
 <div class="paragraph">
 <p>The cost management application tracks cloud and infrastructure costs using tags (called labels in OpenShift), which you can refine to filter and attribute to resources. Tags in cost management allow you to organize your resources by cost and to allocate the costs to different parts of your cloud infrastructure.</p>
 </div>
@@ -3007,7 +3589,7 @@ metadata:
 </div>
 </div>
 <div class="sect2">
-<h3 id="_configure_cost_models_to_accurately_report_costs">7.2. Configure cost models to accurately report costs</h3>
+<h3 id="_configure_cost_models_to_accurately_report_costs">8.2. Configure cost models to accurately report costs</h3>
 <div class="paragraph">
 <p>Now that you have configured your sources to collect cost and usage data into cost management, you can configure cost models to associate prices to metrics and usage, and fine-tune the costs of running your cloud.</p>
 </div>
@@ -3039,7 +3621,7 @@ metadata:
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2021-03-22 12:22:07 UTC
+Last updated 2021-04-05 10:45:32 UTC
 </div>
 </div>
 </body>
