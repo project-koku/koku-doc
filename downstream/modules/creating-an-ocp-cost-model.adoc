@@ -52,15 +52,15 @@ This example shows how to design and apply a cost model for an OpenShift Contain
 ... For *Measurement*, select *Count (pvc-month)*.
 ... Cost management classifies persistent volume claim rates as _infrastructure costs_ by default. To change the cost type you are calculating, select it under *Calculation type*. See xref:cost-layers[] to learn more.
 ... Select *Enter rate by tag*.
-... Enter a tag key in *Filter by tag*.
+... Enter a tag key in the *Filter by tag key* field.
 ... Enter a *Tag value* and *Rate*. You can select *Default* to specify a rate as default for that tag key.
 +
 [NOTE]
 ====
-* Specifying a default rate will apply that rate to all tag values for the corresponding tag key that are not defined. You can enter a rate of _0_ for any tag value that you do not want a rate applied to.
+* Specifying a default rate will apply that rate to all tag values for the corresponding tag key that are not defined. You can enter a rate of _0_ for any tag value that you do not want the default rate applied to.
 ====
 +
-... Click btn:[Add more tags] to add as many tag values as you require.
+... Click btn:[Add more tag values] to add as many tag values as you require.
 ... Click btn:[Create rate] to save the persistent volume claim rates.
 .. Add additional rates by repeating the previous steps, or click btn:[Next] to finish configuring your price list.
 . If desired, set a markup or discount. To apply a 10% markup to the base costs of your resources, enter _10_ in the as the *Markup rate* and click btn:[Next].

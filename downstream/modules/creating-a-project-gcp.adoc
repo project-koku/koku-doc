@@ -15,9 +15,7 @@ It is strongly recommended that you create a new Google Cloud project to gather 
 * Access to Google Cloud Console with `resourcemanager.projects.create` permission
 
 .Procedure
-. Navigate to link:https://console.cloud.google.com/[Google Cloud Console].
-. Click btn:[Select a project] in the top menu bar.
-. Click btn:[NEW PROJECT] in the top right of the window that appears.
+. Navigate to menu:IAM & Admin[Create a Project] in link:https://console.cloud.google.com/[Google Cloud Console].
 . Enter a *Project name* in the new page that appears and select your billing account.
 . Select the *Organization*.
 . Enter the parent organization in the *Location* box.

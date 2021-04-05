@@ -22,8 +22,8 @@ A new billing service account member must be created in your project that can ex
 
 .Procedure
 
-. Navigate to menu:IAM & Admin[Roles] in link:https://console.cloud.google.com/[Google Cloud Console].
-. Click btn:[Select a project] in the top menu bar and select the cost management project.
+. Navigate to menu:IAM & Admin[IAM] in link:https://console.cloud.google.com/[Google Cloud Console].
+. Select the cost management project from the dropdown in the top menu bar.
 . Click btn:[ADD] at the top of the page.
 . Paste this into the *New members* field:
 +
@@ -34,7 +34,7 @@ A new billing service account member must be created in your project that can ex
 
 .Verification steps
 
-. Navigate to menu:IAM & Admin[Roles].
+. Navigate to menu:IAM & Admin[IAM].
 . Verify the new member is present with the correct role.
 
 

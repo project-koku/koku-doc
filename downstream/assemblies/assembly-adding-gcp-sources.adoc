@@ -15,11 +15,11 @@ endif::[]
 :context: adding-gcp-sources
 
 [role="_abstract"]
-To add a Google Cloud account to cost management, you must configure your Google Cloud to provide metrics, then add your Google Cloud account as a source from the cost management user interface.
+To add a Google Cloud account to cost management, you must configure your Google Cloud to provide metrics, then add your Google Cloud account as a source from the {platform} user interface.
 
 [NOTE]
 ====
-You must have a Red Hat account user with Organization Administrator entitlements before you can add sources to cost management.
+You must have a Red Hat account user with Organization Administrator or Sources Administrator entitlements before you can add sources to cost management.
 ====
 
 Before you can add your Google Cloud account to cost management as a data source, you must configure the following services on your Google Cloud account to allow cost management access to metrics:
@@ -48,6 +48,8 @@ include::../modules/adding-new-member-with-cost-role-gcp.adoc[leveloffset=+1]
 include::../modules/creating-a-dataset-gcp.adoc[leveloffset=+1]
 
 include::../modules/exporting-billing-data-gcp.adoc[leveloffset=+1]
+
+include::../modules/viewing-data-collected-gcp.adoc[leveloffset=+2]
 
 include::../modules/adding-a-gcp-account.adoc[leveloffset=+1]
 

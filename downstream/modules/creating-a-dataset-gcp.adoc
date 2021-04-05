@@ -18,7 +18,7 @@ Create a BigQuery dataset to collect and store the billing data for cost managem
 
 .Procedure
 
-. Navigate to menu:Bigdata[BigQuery] in link:https://console.cloud.google.com/[Google Cloud Console].
+. Navigate to menu:Big Data[BigQuery] in link:https://console.cloud.google.com/[Google Cloud Console].
 . Select the cost management project in the *Explorer* panel.
 . Click btn:[CREATE DATASET]
 . Enter a name for your dataset in the *Dataset ID* field.
