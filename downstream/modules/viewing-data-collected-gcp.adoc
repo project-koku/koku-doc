@@ -1,0 +1,28 @@
+// Module included in the following assemblies:
+//
+// assembly-adding-gcp-sources.adoc
+:_module-type: PROCEDURE
+:experimental:
+
+[id="viewing-data-collected-gcp_{context}"]
+= Viewing billing tables in BigQuery
+
+
+[role="_abstract"]
+You may want to review the metrics collected and sent to cost management. This can also assist with troubleshooting incorrect or missing data in cost management.
+
+[NOTE]
+====
+Google may take several hours to export billing data to your BigQuery dataset.
+====
+
+.Prerequisites
+
+* Access to Google Cloud console with `bigquery.dataViewer` role
+
+.Procedure
+
+. Navigate to menu:Big Data[BigQuery] in link:https://console.cloud.google.com/[Google Cloud Console].
+. Select the cost management project in the *Explorer* panel.
+. Click `gcp_billing_export_v1_xxxxxx_xxxxxx_xxxxxx` table under the cost management dataset.
+. Click the *Preview* tab to view the metrics.

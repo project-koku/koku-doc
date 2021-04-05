@@ -1,0 +1,48 @@
+// Module included in the following assemblies:
+//
+// assembly-adding-gcp-sources.adoc
+:_module-type: PROCEDURE
+:experimental:
+
+[id="creating-iam-role-gcp_{context}"]
+= Creating a Google Cloud Identity and Access Management role
+
+
+[role="_abstract"]
+A custom Identity and Access Management (IAM) role for cost management gives access to specific cost related resources required to enable a Google Cloud Platform source and prohibits access to other resources.
+
+.Prerequisites
+* Access to Google Cloud Console with these permissions:
+  ** `resourcemanager.projects.get`
+  ** `resourcemanager.projects.getIamPolicy`
+  ** `resourcemanager.projects.setIamPolicy`
++
+* Google Cloud xref:creating-a-project-gcp_{context}[project]
+
+.Procedure
+. Navigate to menu:IAM & Admin[Roles] in link:https://console.cloud.google.com/[Google Cloud Console].
+. Select the cost management project from the dropdown in the top menu bar.
+. Click btn:[+ Create role].
+. Enter a *Title*, *Description* and *ID* for the role.
+. Click btn:[+ ADD PERMISSIONS]
+. Use the *Enter property name or value* field to search and select these four permissions for your custom role:
+  ** `bigquery.jobs.create`
+  ** `bigquery.tables.getData`
+  ** `bigquery.tables.get`
+  ** `bigquery.tables.list`
+. Click btn:[ADD]
+. Click btn:[CREATE].
+
+
+.Verification steps
+. Navigate to menu:IAM & Admin[Roles].
+. Click the title of the custom role you created.
+. Verify the role has these four assigned permissions:
+** `bigquery.jobs.create`
+** `bigquery.tables.getData`
+** `bigquery.tables.get`
+** `bigquery.tables.list`
+
+[role="_additional-resources"]
+.Additional resources
+* For additional information on roles and their usage, see the Google Cloud documentation link:https://cloud.google.com/iam/docs/understanding-roles[_Understanding roles_] and link:https://cloud.google.com/iam/docs/creating-custom-roles[_Creating and managing custom roles_].
