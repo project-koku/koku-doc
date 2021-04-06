@@ -675,7 +675,7 @@ and then distribute the charges to your resources and/or end customers. It helps
 </td>
 <td class="content">
 <div class="paragraph">
-<p>For more information about configuring tagging for cost management, see <a href="https://access.redhat.com/documentation/en-us/cost_management_service/2021/html-single/managing_cost_data_using_tagging/index"><em>Managing cost data using tagging</em></a>.</p>
+<p>For more information about configuring tagging for cost management, see <em><a href="https://access.redhat.com/documentation/en-us/cost_management_service/2021/html-single/managing_cost_data_using_tagging/index">Managing cost data using tagging</a></em>.</p>
 </div>
 </td>
 </tr>
@@ -705,10 +705,10 @@ and then distribute the charges to your resources and/or end customers. It helps
 <div class="title">Prerequisites</div>
 <ul>
 <li>
-<p>A user with Cost Administrator or Cost Price List Administrator permissions. See <a href="https://access.redhat.com/documentation/en-us/cost_management_service/2021/html/getting_started_with_cost_management/assembly_limiting_access_cost_resources_rbac">Limiting access to cost management resources</a> in <em>Getting started with cost management</em> for instructions on configuring user roles.</p>
+<p>A user with Cost Administrator or Cost Price List Administrator permissions. See <em><a href="https://access.redhat.com/documentation/en-us/cost_management_service/2021/html-single/getting_started_with_cost_management/index#assembly-limiting-access-cost-resources-rbac">Limiting access to cost management resources</a></em> in <em>Getting started with cost management</em> for instructions on configuring user roles.</p>
 </li>
 <li>
-<p>Your AWS account added to cost management as a data source. See <a href="https://access.redhat.com/documentation/en-us/cost_management_service/2021/html/getting_started_with_cost_management/adding_an_aws_source">Adding an Amazon Web Services (AWS) source to cost management</a> in <em>Getting started with cost management</em> for instructions.</p>
+<p>Your AWS account added to cost management as a data source. See <em><a href="https://access.redhat.com/documentation/en-us/cost_management_service/2021/html-single/getting_started_with_cost_management/index#assembly-adding-aws-sources">Adding an Amazon Web Services (AWS) source to cost management</a></em> in <em>Getting started with cost management</em> for instructions.</p>
 </li>
 </ul>
 </div>
@@ -716,13 +716,13 @@ and then distribute the charges to your resources and/or end customers. It helps
 <div class="title">Procedure</div>
 <ol class="arabic">
 <li>
-<p>From the <strong>Cost models</strong> menu, click <strong>Create cost model</strong> to open the cost model wizard.</p>
+<p>From the <strong>Cost models</strong> menu, click <b class="button">Create cost model</b> to open the cost model wizard.</p>
 </li>
 <li>
-<p>Enter a name and description for the cost model, and select <strong>Amazon Web Services (AWS)</strong> as the source type to apply the cost model to. Click <strong>Next</strong>.</p>
+<p>Enter a name and description for the cost model, and select <strong>Amazon Web Services (AWS)</strong> as the source type to apply the cost model to. Click <b class="button">Next</b>.</p>
 </li>
 <li>
-<p>To apply a 10% markup to the base costs of your resources, enter <em>10</em> in the as the <strong>Markup rate</strong> and click <strong>Next</strong>.</p>
+<p>To apply a 10% markup to the base costs of your resources, enter <em>10</em> in the as the <strong>Markup rate</strong> and click <b class="button">Next</b>.</p>
 <div class="admonitionblock note">
 <table>
 <tr>
@@ -746,13 +746,13 @@ and then distribute the charges to your resources and/or end customers. It helps
 </div>
 </li>
 <li>
-<p>Select one or multiple AWS sources to assign the cost model to and click <strong>Next</strong>. Selecting a source with a cost model already assigned will override its previous cost model. You can also assign sources to your cost model at a later time.</p>
+<p>Select one or multiple AWS sources to assign the cost model to and click <b class="button">Next</b>. Selecting a source with a cost model already assigned will override its previous cost model. You can also assign sources to your cost model at a later time.</p>
 </li>
 <li>
-<p>Review the cost model details, and click <strong>Create</strong>.</p>
+<p>Review the cost model details, and click <b class="button">Create</b>.</p>
 </li>
 <li>
-<p>Click <strong>Close</strong> to exit the cost model wizard.</p>
+<p>Click <b class="button">Close</b> to exit the cost model wizard.</p>
 </li>
 </ol>
 </div>
@@ -799,7 +799,7 @@ and then distribute the charges to your resources and/or end customers. It helps
 </div>
 </li>
 <li>
-<p>Review your tags and tagging strategy to ensure that costs are being distributed to the correct resources, cost centers, or teams. See <a href="https://access.redhat.com/documentation/en-us/cost_management_service/2021/html-single/managing_cost_data_using_tagging/index"><em>Managing cost data using tagging</em></a> for more information.</p>
+<p>Review your tags and tagging strategy to ensure that costs are being distributed to the correct resources, cost centers, or teams. See <em><a href="https://access.redhat.com/documentation/en-us/cost_management_service/2021/html-single/managing_cost_data_using_tagging/index">Managing cost data using tagging</a></em> for more information.</p>
 </li>
 </ul>
 </div>
@@ -810,7 +810,7 @@ and then distribute the charges to your resources and/or end customers. It helps
 <p>As metrics and inventory from OpenShift Container Platform sources do not have costs associated, you must create a cost model to associate a price to resources.</p>
 </div>
 <div class="paragraph">
-<p>Creating a cost model for an OpenShift source includes assigning prices for usage and requests using <strong>CPU</strong>, <strong>memory</strong>, <strong>node</strong>, <strong>cluster</strong>, <strong>storage</strong>, or <strong>persistent volume claim</strong> metrics, and applying a markup or discount to determine the total costs of your OpenShift infrastructure. You can also use tags to measure costs for specific parts of your infrastructure, such as various storage methods, giving you greater control over your individual requirements. See <a href="https://access.redhat.com/documentation/en-us/cost_management_service/2021/html-single/managing_cost_data_using_tagging/index"><em>Managing cost data using tagging</em></a> for more information about tagging in cost management.</p>
+<p>Creating a cost model for an OpenShift source includes assigning prices for usage and requests using <strong>CPU</strong>, <strong>memory</strong>, <strong>node</strong>, <strong>cluster</strong>, <strong>storage</strong>, or <strong>persistent volume claim</strong> metrics, and applying a markup or discount to determine the total costs of your OpenShift infrastructure. You can also use tags to measure costs for specific parts of your infrastructure, such as various storage methods, giving you greater control over your individual requirements. See <em><a href="https://access.redhat.com/documentation/en-us/cost_management_service/2021/html-single/managing_cost_data_using_tagging/index">Managing cost data using tagging</a></em> for more information about tagging in cost management.</p>
 </div>
 <div class="paragraph">
 <p>This example shows how to design and apply a cost model for an OpenShift Container Platform cluster on cloud infrastructure (for example, AWS or Azure). The cloud infrastructure costs are seen in cost management as part of the cluster cost, so creating a cost model allows you to distribute the underlying infrastructure cost to accurately reflect the costs of running the cluster.</p>
@@ -819,10 +819,10 @@ and then distribute the charges to your resources and/or end customers. It helps
 <div class="title">Prerequisites</div>
 <ul>
 <li>
-<p>A user with Cost Administrator or Cost Price List Administrator permissions. See <a href="https://access.redhat.com/documentation/en-us/cost_management_service/2021/html/getting_started_with_cost_management/assembly_limiting_access_cost_resources_rbac">Limiting access to cost management resources</a> in <em>Getting started with cost management</em> for instructions on configuring user roles.</p>
+<p>A user with Cost Administrator or Cost Price List Administrator permissions. See <em><a href="https://access.redhat.com/documentation/en-us/cost_management_service/2021/html-single/getting_started_with_cost_management/index#assembly-limiting-access-cost-resources-rbac">Limiting access to cost management resources</a></em> in <em>Getting started with cost management</em> for instructions on configuring user roles.</p>
 </li>
 <li>
-<p>Your OpenShift cluster added as a cost management data source. See <a href="https://access.redhat.com/documentation/en-us/cost_management_service/2021/html/getting_started_with_cost_management/assembly-adding-openshift-container-platform-source">Adding an OpenShift Container Platform source to cost management</a> in <em>Getting started with cost management</em> for instructions.</p>
+<p>Your OpenShift cluster added as a cost management data source. See <em><a href="https://access.redhat.com/documentation/en-us/cost_management_service/2021/html-single/getting_started_with_cost_management/index#assembly-adding-openshift-container-platform-source">Adding an OpenShift Container Platform source to cost management</a></em> in <em>Getting started with cost management</em> for instructions.</p>
 </li>
 </ul>
 </div>
@@ -1023,7 +1023,7 @@ and then distribute the charges to your resources and/or end customers. It helps
 </div>
 </li>
 <li>
-<p>Review your tags and tagging strategy to ensure that costs are being distributed to the correct resources, cost centers, or teams. See <a href="https://access.redhat.com/documentation/en-us/cost_management_service/2021/html-single/managing_cost_data_using_tagging/index"><em>Managing cost data using tagging</em></a> for more information.</p>
+<p>Review your tags and tagging strategy to ensure that costs are being distributed to the correct resources, cost centers, or teams. See <em><a href="https://access.redhat.com/documentation/en-us/cost_management_service/2021/html-single/managing_cost_data_using_tagging/index">Managing cost data using tagging</a></em> for more information.</p>
 </li>
 </ul>
 </div>
@@ -1033,7 +1033,7 @@ and then distribute the charges to your resources and/or end customers. It helps
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2021-04-05 10:45:32 UTC
+Last updated 2021-04-06 07:57:53 UTC
 </div>
 </div>
 </body>
