@@ -21,7 +21,7 @@ Enabling a billing export to BigQuery sends your Google Cloud billing data (such
 
 . Navigate to menu:Billing[Billing export] in link:https://console.cloud.google.com/[Google Cloud Console].
 . Click the *BIGQUERY EXPORT* tab.
-. Click btn:[EDIT SETTINGS], in the *Daily cost detail* section.
+. Click btn:[EDIT SETTINGS] in the *Daily cost detail* section.
 . Select the cost management *Project* and *Billing export dataset* you created in the dropdown menus.
 . Click btn:[SAVE].
 

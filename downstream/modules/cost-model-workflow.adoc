@@ -27,5 +27,5 @@ image:../images/costmodel-workflow.png[]
 
 [NOTE]
 ====
-For more information about configuring tagging for cost management, see link:https://access.redhat.com/documentation/en-us/cost_management_service/2021/html-single/managing_cost_data_using_tagging/index[_Managing cost data using tagging_].
+For more information about configuring tagging for cost management, see _{link-tagging}_.
 ====

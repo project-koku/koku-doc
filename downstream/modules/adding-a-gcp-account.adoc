@@ -20,17 +20,17 @@ Using the information from the previous steps, you can now add your Google Cloud
 .Procedure
 
 . From {platform}, click image:configuration-gear.png[] (*Settings*).
-. Click btn:[Sources].
+. Click btn:[Sources]
 . Click btn:[Add source] in the *Cloud sources* tab.
-. Enter a name for the source and click btn:[Next].
+. Enter a name for the source and click btn:[Next]
 . In the dialog, select *Google Cloud* as the source type and *Cost Management* as the application.
 . Click *Next*.
 . Enter your *Project ID* and click *Next*.
 . Click btn:[Next] to verify you have created an *Identity and Access Management (IAM) role*.
 . Click btn:[Next] to verify you have created a new *billing service account user* and assigned the correct role.
-. Enter your *BigQuery Dataset ID* and click btn:[Next].
+. Enter your *BigQuery Dataset ID* and click btn:[Next]
 . Click btn:[Next] to verify you have enabled your *BigQuery billing export*.
-. Review the details and click *Add*.
+. Review the details and click btn:[Add]
 
 
 

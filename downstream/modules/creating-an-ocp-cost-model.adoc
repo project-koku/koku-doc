@@ -10,7 +10,7 @@
 [role="_abstract"]
 As metrics and inventory from OpenShift Container Platform sources do not have costs associated, you must create a cost model to associate a price to resources.
 
-Creating a cost model for an OpenShift source includes assigning prices for usage and requests using *CPU*, *memory*, *node*, *cluster*, *storage*, or *persistent volume claim* metrics, and applying a markup or discount to determine the total costs of your OpenShift infrastructure. You can also use tags to measure costs for specific parts of your infrastructure, such as various storage methods, giving you greater control over your individual requirements. See link:https://access.redhat.com/documentation/en-us/cost_management_service/2021/html-single/managing_cost_data_using_tagging/index[_Managing cost data using tagging_] for more information about tagging in cost management.
+Creating a cost model for an OpenShift source includes assigning prices for usage and requests using *CPU*, *memory*, *node*, *cluster*, *storage*, or *persistent volume claim* metrics, and applying a markup or discount to determine the total costs of your OpenShift infrastructure. You can also use tags to measure costs for specific parts of your infrastructure, such as various storage methods, giving you greater control over your individual requirements. See _{link-tagging}_ for more information about tagging in cost management.
 
 This example shows how to design and apply a cost model for an OpenShift Container Platform cluster on cloud infrastructure (for example, AWS or Azure). The cloud infrastructure costs are seen in cost management as part of the cluster cost, so creating a cost model allows you to distribute the underlying infrastructure cost to accurately reflect the costs of running the cluster.
 
@@ -24,8 +24,8 @@ This example shows how to design and apply a cost model for an OpenShift Contain
 
 .Prerequisites
 
-* A user with Cost Administrator or Cost Price List Administrator permissions. See link:https://access.redhat.com/documentation/en-us/cost_management_service/2021/html/getting_started_with_cost_management/assembly_limiting_access_cost_resources_rbac[Limiting access to cost management resources] in _Getting started with cost management_ for instructions on configuring user roles.
-* Your OpenShift cluster added as a cost management data source. See link:https://access.redhat.com/documentation/en-us/cost_management_service/2021/html/getting_started_with_cost_management/assembly-adding-openshift-container-platform-source[Adding an OpenShift Container Platform source to cost management] in _Getting started with cost management_ for instructions.
+* A user with Cost Administrator or Cost Price List Administrator permissions. See _{link-limiting-access}_ in _Getting started with cost management_ for instructions on configuring user roles.
+* Your OpenShift cluster added as a cost management data source. See _{link-adding-ocp}_ in _Getting started with cost management_ for instructions.
 
 .Procedure
 
@@ -92,4 +92,4 @@ Your new cost model will appear in the list on the *Cost models* page.
 +
 ** From the *Cost models* summary page, click image:more-options.png[] (*more options*), then *Delete*.
 .
-* Review your tags and tagging strategy to ensure that costs are being distributed to the correct resources, cost centers, or teams. See link:https://access.redhat.com/documentation/en-us/cost_management_service/2021/html-single/managing_cost_data_using_tagging/index[_Managing cost data using tagging_] for more information.
+* Review your tags and tagging strategy to ensure that costs are being distributed to the correct resources, cost centers, or teams. See _{link-tagging}_ for more information.
