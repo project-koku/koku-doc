@@ -22,7 +22,7 @@ A custom Identity and Access Management (IAM) role for cost management gives acc
 .Procedure
 . Navigate to menu:IAM & Admin[Roles] in link:https://console.cloud.google.com/[Google Cloud Console].
 . Select the cost management project from the dropdown in the top menu bar.
-. Click btn:[+ Create role].
+. Click btn:[+ Create role]
 . Enter a *Title*, *Description* and *ID* for the role.
 . Click btn:[+ ADD PERMISSIONS]
 . Use the *Enter property name or value* field to search and select these four permissions for your custom role:
@@ -31,7 +31,7 @@ A custom Identity and Access Management (IAM) role for cost management gives acc
   ** `bigquery.tables.get`
   ** `bigquery.tables.list`
 . Click btn:[ADD]
-. Click btn:[CREATE].
+. Click btn:[CREATE]
 
 
 .Verification steps

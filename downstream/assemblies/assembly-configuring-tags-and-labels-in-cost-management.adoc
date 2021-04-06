@@ -25,7 +25,7 @@ After adding your sources to cost management:
 
 [NOTE]
 ====
-See the link:https://access.redhat.com/documentation/en-us/cost_management_service/2021/html-single/getting_started_with_cost_management/index[_Getting started with cost management_] guide for instructions on configuring sources.
+See the _{link-getting-started}_ guide for instructions on configuring sources.
 ====
 
 include::../modules/how-cost-associates-tags.adoc[leveloffset=+1]

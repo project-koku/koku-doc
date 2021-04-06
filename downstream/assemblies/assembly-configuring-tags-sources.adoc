@@ -17,8 +17,8 @@ endif::[]
 [role="_abstract"]
 In order to control which tags cost management imports, activate or enable the tags you want to view by source:
 
-* AWS tags must be activated, and are then selected and exported to cost management in the Cost and Usage report. See link:https://access.redhat.com/documentation/en-us/cost_management_service/2021/html-single/getting_started_with_cost_management/index#activating_aws_tags[Activating AWS tags for cost management] in the _Getting started with cost management_ guide for instructions.
-* Azure tags are exported to cost management in the cost export report configured in https://access.redhat.com/documentation/en-us/cost_management_service/2021/html-single/getting_started_with_cost_management/index#configuring_an_azure_daily_export_schedule[Configuring a daily Azure data export schedule] in _Getting started with cost management_.
+* AWS tags must be activated, and are then selected and exported to cost management in the Cost and Usage report. See _{link-activating-aws-tags}_ in the _Getting started with cost management_ guide for instructions.
+* Azure tags are exported to cost management in the cost export report configured in _{link-azure-export-schedule}_ in _Getting started with cost management_.
 * OpenShift Container Platform labels are exported by Metering and included in the metrics reports that cost management uses as input. Enable tag key grouping in the _{platform}_ application settings to specify which tags to group your cost data by. See xref:enabling-tag-grouping-OCP_{context}[] for instructions.
 
 

@@ -14,8 +14,8 @@ This example shows how to view data for specific OpenShift resources, and export
 
 .Prerequisites
 
-* Your OpenShift cluster added as a cost management data source. See link:https://access.redhat.com/documentation/en-us/cost_management_service/2021/html/getting_started_with_cost_management/assembly_koku_cost_management_installing[Adding an OpenShift Container Platform source to cost management] in _Getting started with cost management_ for instructions.
-* Your cloud infrastructure account added as a cost management data source. See link:https://access.redhat.com/documentation/en-us/cost_management_service/2021/html/getting_started_with_cost_management/index[Getting started with cost management] for instructions for your cloud provider type.
+* Your OpenShift cluster added as a cost management data source. See _{link-adding-ocp}_ in _Getting started with cost management_ for instructions.
+* Your cloud infrastructure account added as a cost management data source. See _{link-getting-started}_ for instructions for your cloud provider type.
 * Configure tags on your sources. For tips and configuration instructions, see xref:assembly-configuring-tags-sources_configuring-tags-and-labels[].
 
 .Procedure
