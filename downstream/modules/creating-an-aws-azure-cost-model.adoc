@@ -5,14 +5,16 @@
 :experimental:
 
 [id="creating-an-AWS-Azure-cost-model_{context}"]
-= Creating an AWS or Azure cost model with a markup
+= Applying a markup or discount to cloud sources
 
 [role="_abstract"]
-As cloud infrastructure sources collect cost and usage data into cost management with prices already assigned, you only need to assign a markup or discount (if desired) to accurately reflect your costs. These _raw costs_ are collected in cost management from AWS Cost and Usage Reports or Azure exports.
+Create a AWS, Azure, or Google Cloud cost model to apply a markup or discount to your cloud infrastructure costs.
+
+As cloud infrastructure sources (AWS, Azure, or Google Cloud) collect cost and usage data into cost management with prices already assigned, you only need to assign a markup or discount (if desired) to accurately reflect your costs.
 
 Adding a markup to your _raw costs_ can allow you to account for your overhead costs, such as the cost of administering your AWS account, Azure subscription, or other support costs. A markup is an estimation to cover your costs not shown by metrics or usage.
 
-This example shows how to add a 10% markup to the information collected from the AWS Cost and Usage Reports. The same method can be used to apply a markup to your Azure costs.
+This example shows how to add a 10% markup to the information collected from the AWS Cost and Usage Reports. The same method can be used to apply a markup or discount to your Azure or Google Cloud costs.
 
 .Prerequisites
 
