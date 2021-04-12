@@ -5,20 +5,20 @@
 :experimental:
 
 [id="about-cost-management_{context}"]
-= About cost management
+= About {product-title}
 
 [role="_abstract"]
-Cost management is an OpenShift Container Platform service that enables you to better understand and track costs for clouds and containers. It is based on the upstream project Koku.
+{product-title} is an OpenShift Container Platform service that enables you to better understand and track costs for clouds and containers. It is based on the upstream project Koku.
 
-You can access the cost management application from https://cloud.redhat.com/cost-management/.
+You can access the {product-title} application from https://cloud.redhat.com/cost-management/.
 
-Cost management allows you to simplify management of resources and costs across various environments, including:
+{product-title} allows you to simplify management of resources and costs across various environments, including:
 
 * Container platforms such as OpenShift Container Platform
 * Public clouds such as Amazon Web Services (AWS) and Microsoft Azure
 
 
-The cost management application allows you to:
+The {product-title} application allows you to:
 
 * Visualize, understand and analyze the use of resources and costs
 * Forecast your future consumption and compare them with budgets
@@ -31,7 +31,7 @@ The cost management application allows you to:
 == Terminology
 
 Source::
-A cloud provider account that is connected to cost management to be monitored, for example, an OpenShift Container Platform deployment, or an AWS or Azure account.
+A cloud provider account that is connected to {product-title} to be monitored, for example, an OpenShift Container Platform deployment, or an AWS or Azure account.
 
 Organization Administrator::
 

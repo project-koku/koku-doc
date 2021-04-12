@@ -5,13 +5,12 @@
 :numbered!:
 :compat-mode:
 :experimental:
-
-// Custom attributes
-include::attributes/cost.adoc[]
-
-:cost:
 :numbered:
+// Custom attributes
+:koku:
+include::attributes/sharedattributes.adoc[]
 
+//include files
 
 include::assemblies/assembly-introduction-cost-management.adoc[leveloffset=+1]
 

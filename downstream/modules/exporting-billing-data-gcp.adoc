@@ -8,13 +8,13 @@
 = Exporting Google Cloud billing data to BigQuery
 
 [role="_abstract"]
-Enabling a billing export to BigQuery sends your Google Cloud billing data (such as usage, cost estimates, and pricing data) automatically to the cost management BigQuery dataset.
+Enabling a billing export to BigQuery sends your Google Cloud billing data (such as usage, cost estimates, and pricing data) automatically to the {product-title} BigQuery dataset.
 
 .Prerequisites
 
 * Access to Google Cloud Console with the *Billing Account Administrator* role
 * Google Cloud xref:creating-a-project-gcp_{context}[project]
-* xref:adding-new-member-with-cost-role-gcp_{context}[Billing service member] with the cost management Identity and Access Management (IAM) xref:creating-iam-role-gcp_{context}[role]
+* xref:adding-new-member-with-cost-role-gcp_{context}[Billing service member] with the {product-title} Identity and Access Management (IAM) xref:creating-iam-role-gcp_{context}[role]
 * xref:creating-a-dataset-gcp_{context}[BigQuery dataset]
 
 .Procedure
@@ -22,7 +22,7 @@ Enabling a billing export to BigQuery sends your Google Cloud billing data (such
 . Navigate to menu:Billing[Billing export] in link:https://console.cloud.google.com/[Google Cloud Console].
 . Click the *BIGQUERY EXPORT* tab.
 . Click btn:[EDIT SETTINGS] in the *Daily cost detail* section.
-. Select the cost management *Project* and *Billing export dataset* you created in the dropdown menus.
+. Select the {product-title} *Project* and *Billing export dataset* you created in the dropdown menus.
 . Click btn:[SAVE].
 
 .Verification steps

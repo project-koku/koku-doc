@@ -5,10 +5,10 @@
 :experimental:
 
 [id="activating-aws-tags_{context}"]
-= Activating AWS tags for cost management
+= Activating AWS tags for {product-title}
 
 [role="_abstract"]
-To use tags to organize your AWS resources in the cost management application, activate your tags in AWS to allow them to be imported automatically.
+To use tags to organize your AWS resources in the {product-title} application, activate your tags in AWS to allow them to be imported automatically.
 
 //.Prerequisites
 
@@ -16,5 +16,5 @@ To use tags to organize your AWS resources in the cost management application, a
 
 . In the AWS Billing console:
 .. Open the _Cost Allocation Tags_ section.
-.. Select the tags you want to use in the cost management application, and click *Activate*.
+.. Select the tags you want to use in the {product-title} application, and click *Activate*.
 . In the {platform} *Sources* wizard, click *Next* to move to the next screen.

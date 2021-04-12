@@ -18,7 +18,7 @@ endif::[]
 :context: setting-up-cost-models
 
 [role="_abstract"]
-Configure cost models in cost management based on your requirements.
+Configure cost models in {product-title} based on your requirements.
 
 include::../modules/creating-an-aws-azure-cost-model.adoc[leveloffset=+1]
 

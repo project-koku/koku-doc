@@ -10,9 +10,9 @@
 // The ID is used as an anchor for linking to the module. Avoid changing it after the module has been published to ensure existing links are not broken.
 [id="concept-explanation_{context}"]
 // The `context` attribute enables module reuse. Every module's ID includes {context}, which ensures that the module has a unique ID even if it is reused multiple times in a guide.
-= Adding sources to cost management
+= Adding sources to {product-title}
 
-To use cost management to monitor your cloud costs, you must first connect a data source to the cost management application.
+To use {product-title} to monitor your cloud costs, you must first connect a data source to the {product-title} application.
 
-Currently, cost management can track costs for Amazon Web Services (AWS), Microsoft Azure, and Red Hat OpenShift Container Platform sources.
+Currently, {product-title} can track costs for Amazon Web Services (AWS), Microsoft Azure, and Red Hat OpenShift Container Platform sources.
 

@@ -8,26 +8,26 @@
 [id="enabling-tag-grouping-OCP_{context}"]
 == Enabling OpenShift tag grouping
 
-By default, cost management groups OpenShift cost data by cluster, node, and project on the *OpenShift details* page. Grouping data by tag key can be useful to further customize your view.
+By default, {product-title} groups OpenShift cost data by cluster, node, and project on the *OpenShift details* page. Grouping data by tag key can be useful to further customize your view.
 
 To group your cost data by tag key, you must enable the tag keys in the {platform} application settings.
 
 .Prerequisites
 
-* You must have Organization Administrator privileges to change these settings in cost management. See _{link-limiting-access}_ in _Getting started with cost management_ for more information about user roles and access.
+* You must have Organization Administrator privileges to change these settings in {product-title}. See _{link-limiting-access}_ in _Getting started with cost management_ for more information about user roles and access.
 
 .Procedure
 //Updated July 20, 2020 to match current Applications tab in Settings
 
 To enable OpenShift tag keys for grouping:
 
-. Click image:configuration-gear.png[] (*Settings*) to navigate to *Applications* > *Cost management*.
+. Click image:configuration-gear.png[] (*Settings*) to navigate to *Applications* > *{product-title}*.
 . Click *Enable OpenShift labels*.
-. Select the keys you want to group by in the cost management application from the *Available Tags* list, and use the arrows to move the tags to the *Enabled Tags* list.
+. Select the keys you want to group by in the {product-title} application from the *Available Tags* list, and use the arrows to move the tags to the *Enabled Tags* list.
 . Click *Submit* to save your changes.
 
 .Verification steps
 
-The enabled tag keys will now be available to group costs by from the *OpenShift details* area of cost management, in the *View by* list. For example, when you choose *View by: Tag*:
+The enabled tag keys will now be available to group costs by from the *OpenShift details* area of {product-title}, in the *View by* list. For example, when you choose *View by: Tag*:
 
 image:cost-tag-key.png[]

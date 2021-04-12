@@ -6,16 +6,16 @@
 
 
 [id="default-user-roles_{context}"]
-= Default user roles in cost management
+= Default user roles in {product-title}
 
 [role="_abstract"]
-You can configure custom user access roles for cost management, or assign each user a predefined role.
+You can configure custom user access roles for {product-title}, or assign each user a predefined role.
 
-To use a default role, determine the required level of access to permit your users based on the following predefined roles in cost management:
+To use a default role, determine the required level of access to permit your users based on the following predefined roles in {product-title}:
 
 .Administrator roles
 
-* Cost Administrator:  has read and write permissions to all resources in cost management
+* Cost Administrator:  has read and write permissions to all resources in {product-title}
 * Cost Price List Administrator:  has read and write permissions on price list rates
 
 .Viewer roles

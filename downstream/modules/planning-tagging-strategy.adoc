@@ -12,7 +12,7 @@ When planning your tagging strategy, these considerations can help you decide ho
 
 Map business to reporting::
 
-Define the business perspectives you want to report on. For example, your taxonomy for cost management could consider these different perspectives:
+Define the business perspectives you want to report on. For example, your taxonomy for {product-title} could consider these different perspectives:
 +
 .Ownership and usage:
 Defining the owner and the user of the resource: for example, the unique identifier of the user who requested the resource, and the one that is actually consuming the resource.
@@ -49,7 +49,7 @@ Since untagged resources cannot be reported, tag as many elements as possible, i
 
 Review your tags often and refine as needed::
 
-Define your tags and use them as early as possible with cost management, even if you need to adjust your tagging scheme afterwards.
+Define your tags and use them as early as possible with {product-title}, even if you need to adjust your tagging scheme afterwards.
 +
 Review the resulting reports with your business owner and stakeholders early on to ensure your tags are helping you to generate the desired reports, and review your tagging strategy every few weeks to optimize it.
 

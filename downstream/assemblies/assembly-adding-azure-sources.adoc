@@ -11,13 +11,13 @@ ifdef::context[]
 [id="assembly-adding-azure-sources_{context}"]
 endif::[]
 
-= Adding a Microsoft Azure source to cost management
+= Adding a Microsoft Azure source to {product-title}
 :context: adding-an-azure-source
 
 [role="_abstract"]
-Configure your Microsoft Azure account to allow cost management access.
+Configure your Microsoft Azure account to allow {product-title} access.
 
-Configuring your Azure account to be a cost management source requires:
+Configuring your Azure account to be a {product-title} source requires:
 
 . Creating a storage account and resource group
 . Configuring a Storage Account Contributor and Reader roles for access
@@ -28,7 +28,7 @@ Configuring your Azure account to be a cost management source requires:
 As non-Red Hat products and documentation can change without notice, instructions for configuring the third-party sources provided in this guide are general and correct at the time of publishing. See the https://docs.microsoft.com/en-us/azure/[Microsoft Azure documentation] for the most up-to-date and accurate information.
 ====
 
-Add your Azure source to cost management from
+Add your Azure source to {product-title} from
 https://cloud.redhat.com/settings/sources/.
 
 

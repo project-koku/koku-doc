@@ -9,19 +9,19 @@
 = Configuring the operator instance for a new installation
 
 [role="_abstract"]
-Use the OpenShift Container Platform web console to configure the `koku-metrics-operator` instance after it is installed.
+Use the {openshift} web console to configure the +{operator}+ instance after it is installed.
 
 .Prerequisites
-* You are logged into the OpenShift Container Platform web console with cluster administrator privileges.
-* The *Koku Metrics Operator* appears in the *Installed Operators* tab.
+* You are logged into the {openshift} web console with cluster administrator privileges.
+* The *{operator-formal}* appears in the *Installed Operators* tab.
 
 .Procedure
 
-. Under the *Name* heading in the list of installed operators, click the *KokuMetricsOperator* link. The *Installed Operators > Operator Details* window appears for *Koku Metrics Operator*.
+. Under the *Name* heading in the list of installed operators, click the *{operator-formal}* link. The *Installed Operators > Operator Details* window appears for *{operator-formal}*.
 . In the *Details* window, click *+{nbsp}Create Instance*.
-. A *Koku Metrics Operator > Create KokuMetricsConfig* window appears.
+. A *{operator-formal} > Create {operator-config}* window appears.
 . Click the *YAML view* radio button to view and modify the contents of the YAML configuration file.
-. When you create a new cost management instance for the Koku metrics operator, make the following modifications in the YAML configuration file.
+. When you create a new {product-title} instance for the {operator-formal}, make the following modifications in the YAML configuration file.
 . Locate the following two lines in the YAML file.
 +
 ----
@@ -35,6 +35,6 @@ Use the OpenShift Container Platform web console to configure the `koku-metrics-
 .Example
 ----
     create_source: true
-    name: koku-cost-source
+    name: my-cost-source
 ----
-. Click the *Create* button. These actions create a new source for cost management that will appear in the {platform} cost management application.
+. Click the *Create* button. These actions create a new source for {product-title} that will appear in the {platform} {product-title} application.

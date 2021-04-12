@@ -9,7 +9,7 @@
 = Creating a Google Cloud BigQuery dataset
 
 [role="_abstract"]
-Create a BigQuery dataset to collect and store the billing data for cost management.
+Create a BigQuery dataset to collect and store the billing data for {product-title}.
 
 .Prerequisites
 
@@ -19,12 +19,12 @@ Create a BigQuery dataset to collect and store the billing data for cost managem
 .Procedure
 
 . Navigate to menu:Big Data[BigQuery] in link:https://console.cloud.google.com/[Google Cloud Console].
-. Select the cost management project in the *Explorer* panel.
+. Select the {product-title} project in the *Explorer* panel.
 . Click btn:[CREATE DATASET]
 . Enter a name for your dataset in the *Dataset ID* field.
 . Click btn:[CREATE DATASET]
 
 .Verification steps
 
-. Select the cost management project you created in the *Explorer* panel.
-. Verify the dataset you created is nested under the cost management project.
+. Select the {product-title} project you created in the *Explorer* panel.
+. Verify the dataset you created is nested under the {product-title} project.

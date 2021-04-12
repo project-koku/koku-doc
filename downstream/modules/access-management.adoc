@@ -17,7 +17,7 @@ A group consists of multiple users identified by Red Hat account login.
 
 Role::
 // Enter definition: A role is...
-Currently, all roles are defined in cost management and cannot be created. For a description of each role, click menu:Access Management[Roles].
+Currently, all roles are defined in {product-title} and cannot be created. For a description of each role, click menu:Access Management[Roles].
 
 Policy::
 A policy controls permissions for all users in a group.

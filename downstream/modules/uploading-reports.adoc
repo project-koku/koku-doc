@@ -18,7 +18,7 @@ The default configuration saves one week of reports. Therefore, download the rep
 
 .Prerequisites
 
-* `koku-metrics-operator` reports downloaded locally.
+* +{operator}+ reports downloaded locally.
 * Source created on {platform}, see xref:proc_creating-an-openshift-container-platform-source-manually_adding-an-ocp-source[].
 * Red Hat account user with Organization Administrator entitlements.
 * Workstation with unrestricted network access.

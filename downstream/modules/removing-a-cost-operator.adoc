@@ -8,28 +8,25 @@
 = Removing a prior cost operator
 
 [role="_abstract"]
-After installing the `koku-metrics-operator`, uninstall the prior `cost-mgmt-operator` operator.
+After installing the +{operator}+, uninstall the prior {product-title} operator.
 
-To avoid gaps in your cost management data, you can wait 24 to 48 hours before removing `cost-mgmt-operator` while you verify that `koku-metrics-operator` provides cost management reports.
+To avoid gaps in your {product-title} data, you can wait 24 to 48 hours before removing the prior operator while you verify that +{operator}+ provides {product-title} reports.
 
-NOTE: If you mistakenly remove the *Koku Metrics Operator*, reinstall it.
+NOTE: If you mistakenly remove the *{operator-formal}*, reinstall it.
 
 .Prerequisites
-* The `cost-mgmt-operator` is installed.
-+
-NOTE: The `cost-mgmt-operator` is deprecated in OpenShift Container Platform 4.5 and later. Beginning with OpenShift Container Platform 4.5 or later, you must install `koku-metrics-operator`.
-
-* You installed the *Koku Metrics Operator*.
-* You are logged into the OpenShift Container Platform web console with cluster administrator privileges.
+* A prior {product-title} operator is installed.
+* You installed the *{operator-formal}*.
+* You are logged into the {openshift} web console with cluster administrator privileges.
 * You can view the operators in the *Installed Operators* tab.
 
 .Procedure
 . In the Installed Operators list, select the operator you want to remove.
-. Click on the image:more-options.png[] (More options) icon in that row.
+. Click the *Options* menu {kebab} in that row.
 . Click on the *Uninstall Operator* option. Confirm the action to remove the operator.
-. In the OpenShift Container Platform web console, click the *Administration > Custom Resource Definitions* tab.
-. In the window that displays the custom resource definitions (CRD), locate the *CostManagement* CRD and the *CostManagementData* CRD.
-. For each CRD, click on the image:more-options.png[] (More options) icon and click on *Delete Custom Resource Definition*. Confirm the delete action.
-. When these CRDs are deleted, the `cost-mgmt-operator` is fully uninstalled.
+. In the {openshift} web console, click the *Administration > Custom Resource Definitions* tab.
+. In the window that displays the custom resource definitions (CRD), locate the *CostManagement* CRD and the *CostManagementData* CRD for `cost-mgmt-operator` or the *KokuMetricsConfig* CRD for `koku-metrics-operator`.
+. For each CRD, click the *Options* menu {kebab} -> *Delete Custom Resource Definition*. Confirm the delete action.
+. When these CRDs are deleted, the prior operator is fully uninstalled.
 
-NOTE: When you install *Koku Metrics Operator*, a *KokuMetricsConfig* CRD appears in  *Administration > Custom Resource Definitions* list.
+NOTE: When you install *{operator-formal}*, a *{operator-config}* CRD appears in  *Administration > Custom Resource Definitions* list.

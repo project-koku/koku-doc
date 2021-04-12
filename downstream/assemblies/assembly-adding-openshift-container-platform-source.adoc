@@ -11,15 +11,21 @@ ifdef::context[]
 [id="assembly-adding-openshift-container-platform-source_{context}"]
 endif::[]
 
-= Adding an OpenShift Container Platform source to cost management
+= Adding an {openshift} source to cost management
 :context: adding-an-ocp-source
 
 [role="_abstract"]
-To support cost management in Red{nbsp}Hat OpenShift Container Platform 4.5 and more recent versions, a new community operator is introduced, `koku-metrics-operator`.
+ifdef::koku[]
+To support {product-title} in Red{nbsp}Hat {openshift} 4.5 and more recent versions, a new community operator is introduced, +{operator}+.
+endif::koku[]
+ifdef::cost[]
+To support {product-title} in Red{nbsp}Hat {openshift} 4.6 and more recent versions, a new certified operator is introduced, *{operator-formal}*.
 
-The community `cost-mgmt-operator` supported in OpenShift Container Platform 4.3 and 4.4 is deprecated. Though this cost operator functions with cost management in OpenShift Container Platform 4.5 or later, it is no longer supported. For installing this deprecated operator, see xref:assembly-adding-ocp-sources[].
+Users on Red{nbsp}Hat {openshift} 4.5 who want to use {product-title} can install the community operator `koku-metrics-operator`. See the {link-adding-koku} for installation and configuration instructions.
+endif::cost[]
 
-To avoid gaps in your cost management data, you can wait 24 to 48 hours before removing `cost-mgmt-operator` while you verify that `koku-metrics-operator` provides cost management reports.
+The community `cost-mgmt-operator` supported in {openshift} 4.3 and 4.4 is deprecated. Though this cost operator functions with {product-title} in {openshift} 4.5 or later, it is no longer supported. For installing this deprecated operator, see xref:assembly-adding-ocp-sources[].
+
 
 include::../modules/installation-overview.adoc[leveloffset=+1]
 

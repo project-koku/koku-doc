@@ -10,9 +10,9 @@
 == Enabling additional account access for cost and usage consumption
 
 [role="_abstract"]
-Cost management can display additional data that might be useful. For example:
+{product-title} can display additional data that might be useful. For example:
 
-* Include the Action _iam:ListAccountAliases_ to display an AWS account alias rather than an account number in cost management.
+* Include the Action _iam:ListAccountAliases_ to display an AWS account alias rather than an account number in {product-title}.
 * Include the Actions _organization:List*_ and _organizations:Describe*_
 to obtain the display names of AWS member accounts if you are using consolidated billing rather than the account ID.
 

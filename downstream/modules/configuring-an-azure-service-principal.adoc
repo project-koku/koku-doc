@@ -6,7 +6,7 @@
 
 // The URL for this procedure needs to go in the UI code in the Sources dialog.
 
-Configuring an Azure Active Directory application and service principal provides cost management with the necessary (read-only) access to obtain cost data for Azure resources.
+Configuring an Azure Active Directory application and service principal provides {product-title} with the necessary (read-only) access to obtain cost data for Azure resources.
 
 To configure this access, see the Azure guide link:https://docs.microsoft.com/en-us/azure/active-directory/develop/howto-create-service-principal-portal[_How to: Use the portal to create an Azure AD application and service principal that can access resources_] , and complete the steps in these sections:
 
@@ -14,7 +14,7 @@ To configure this access, see the Azure guide link:https://docs.microsoft.com/en
 . _Assign the application to a role_
 . _Certificates and secrets_
 
-Any additional details or customization for cost management is described below.
+Any additional details or customization for {product-title} is described below.
 
 
 . In Azure, create a new Azure Active Directory application.

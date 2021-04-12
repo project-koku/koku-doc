@@ -11,27 +11,27 @@ ifdef::context[]
 [id="assembly-adding-gcp-sources_{context}"]
 endif::[]
 
-= Adding a Google Cloud source to cost management
+= Adding a Google Cloud source to {product-title}
 :context: adding-gcp-sources
 
 [role="_abstract"]
-To add a Google Cloud account to cost management, you must configure your Google Cloud to provide metrics, then add your Google Cloud account as a source from the {platform} user interface.
+To add a Google Cloud account to {product-title}, you must configure your Google Cloud to provide metrics, then add your Google Cloud account as a source from the {platform} user interface.
 
 [NOTE]
 ====
-You must have a Red Hat account user with Organization Administrator or Sources Administrator entitlements before you can add sources to cost management.
+You must have a Red Hat account user with Organization Administrator or Sources Administrator entitlements before you can add sources to {product-title}.
 ====
 
-Before you can add your Google Cloud account to cost management as a data source, you must configure the following services on your Google Cloud account to allow cost management access to metrics:
+Before you can add your Google Cloud account to {product-title} as a data source, you must configure the following services on your Google Cloud account to allow {product-title} access to metrics:
 
-* Cost management Google Cloud project.
+* {product-title} Google Cloud project.
 * Billing service account member with the correct role to export your data to {platform}.
 * BigQuery dataset to contain the cost data.
 * Billing export that sends the cost data to your BigQuery dataset.
 
-As you will complete some of the following steps in the Google Cloud console, and some steps in the cost management user interface, keep both applications open in a web browser.
+As you will complete some of the following steps in the Google Cloud console, and some steps in the {product-title} user interface, keep both applications open in a web browser.
 
-Add your Google Cloud source to cost management from the settings area at
+Add your Google Cloud source to {product-title} from the settings area at
 https://cloud.redhat.com/settings/sources/.
 
 [NOTE]

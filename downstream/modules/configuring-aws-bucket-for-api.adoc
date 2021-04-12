@@ -20,12 +20,12 @@ An AWS S3 bucket is required to export cost data to.
 
 .Procedure
 
-. Create an AWS S3 bucket or choose one you wish to use for receiving data exports from Koku.
+. Create an AWS S3 bucket or choose one you wish to use for receiving data exports from {product-title}.
 . Edit this bucket's Permissions/Access Control List.
-. Add "Access for other AWS accounts" to allow Koku's canonical ID for "list objects" and "write objects"
+. Add "Access for other AWS accounts" to allow {product-title}'s canonical ID for "list objects" and "write objects"
 
 
-Koku's AWS account canonical ID is 0674b6ccec2e5d6212b35910e6c5fac24e94cee66371847b46c981edfa3df63c.
+{product-title}'s AWS account canonical ID is 0674b6ccec2e5d6212b35910e6c5fac24e94cee66371847b46c981edfa3df63c.
 
 //.Verification steps
 //how to verify?
@@ -35,4 +35,3 @@ Koku's AWS account canonical ID is 0674b6ccec2e5d6212b35910e6c5fac24e94cee663718
 
 
 // Add AWS link to instructions * For more details on writing procedure modules, see the link:https://github.com/redhat-documentation/modular-docs#modular-documentation-reference-guide[Modular Documentation Reference Guide].
-

@@ -12,12 +12,12 @@
 // The `context` attribute enables module reuse. Every module's ID includes {context}, which ensures that the module has a unique ID even if it is reused multiple times in a guide.
 = How the data export request API works
 
-The API allows you to export cost data for your sources from cost management's database. 
+The API allows you to export cost data for your sources from {product-title}'s database. 
 
-The cost management application runs a process every 24 hours to collect cost data from each AWS source, using AWS Cost and Usage Reports. Cost management stores these files in an AWS S3 bucket which only the application can access.
+The {product-title} application runs a process every 24 hours to collect cost data from each AWS source, using AWS Cost and Usage Reports. {product-title} stores these files in an AWS S3 bucket which only the application can access.
 
-The data export request API retrieves this data using an API request. The data export includes results from cost management's _daily_ and _daily summary_ database tables and are bound by specific requested dates. Data in the exported files is separated by cost management account, source, date, and table name. 
+The data export request API retrieves this data using an API request. The data export includes results from {product-title}'s _daily_ and _daily summary_ database tables and are bound by specific requested dates. Data in the exported files is separated by {product-title} account, source, date, and table name. 
 
-Each individual exported file contains the data for one specific cost management account on one specific date from one database query.
+Each individual exported file contains the data for one specific {product-title} account on one specific date from one database query.
 
 The API writes these files in CSV format to the AWS S3 bucket specified in the request.

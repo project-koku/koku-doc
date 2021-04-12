@@ -9,7 +9,7 @@
 = Adding a role to a group
 
 [role="_abstract"]
-Add your role to a group to manage and limit the scope of information that users in that group can see within cost management.
+Add your role to a group to manage and limit the scope of information that users in that group can see within {product-title}.
 
 .Prerequisites
 
@@ -17,7 +17,7 @@ Add your role to a group to manage and limit the scope of information that users
 
 .Procedure
 
-. From cost management, click image:configuration-gear.png[] (*Settings*) to navigate to *User Access*.
+. From {product-title}, click image:configuration-gear.png[] (*Settings*) to navigate to *User Access*.
 . Click the *Groups* tab.
 . Click *Create group*.
 . In the *General information* screen, enter a name for the new group, and optionally, a description. Click *Next*.
@@ -25,7 +25,7 @@ Add your role to a group to manage and limit the scope of information that users
 . (Optional) In the *Select roles* screen, select one or more role(s) to add to the group.
 //Should you always also add the role you just created? Why?
 +
-Default roles available for cost management are:
+Default roles available for {product-title} are:
 +
 * _Cost Administrator_ : grants read and write permissions
 * _Cost Cloud Viewer_ : grants read permissions on cost reports related to cloud sources
@@ -36,4 +36,4 @@ Default roles available for cost management are:
 
 Your new group will be listed in the *Groups* list on the *User Access* screen.
 
-To verify your configuration, log out of the cost management application and log back in as a user added to the group.
+To verify your configuration, log out of the {product-title} application and log back in as a user added to the group.

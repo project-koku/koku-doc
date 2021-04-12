@@ -15,22 +15,22 @@ endif::[]
 :context: adding-restricted-network-source
 
 [role="_abstract"]
-You can install OpenShift Container Platform on a restricted network that does not have access to the internet.
+You can install {openshift} on a restricted network that does not have access to the internet.
 
-The procedure to add an OpenShift Container Platform cluster operating on a restricted network as a cost management source is different in the following ways:
+The procedure to add an {openshift} cluster operating on a restricted network as a {product-title} source is different in the following ways:
 
 . Operator Lifecycle Manager is configured to install and run local sources.
-. The `koku-metrics-operator` is configured to store cost report CSV files locally using a persistent volume claim (PVC).
+. The +{operator}+ is configured to store cost report CSV files locally using a persistent volume claim (PVC).
 . Cost reports stored in the PVC are downloaded to a workstation.
-. An OpenShift Container Platform source is created manually.
+. An {openshift} source is created manually.
 . Cost reports are uploaded to {platform} from your workstation.
 
 
 
 
-include::../modules/installing-koku-metrics-operator-on-a-restricted-network.adoc[leveloffset=+1]
+include::../modules/installing-cost-operator-on-a-restricted-network.adoc[leveloffset=+1]
 
-include::../modules/configuring-koku-metrics-operator-on-a-restricted-network.adoc[leveloffset=+1]
+include::../modules/configuring-cost-operator-on-a-restricted-network.adoc[leveloffset=+1]
 
 include::../modules/downloading-reports.adoc[leveloffset=+1]
 

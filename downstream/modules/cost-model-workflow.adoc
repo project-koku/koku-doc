@@ -9,9 +9,9 @@
 = The cost model workflow
 
 [role="_abstract"]
-The following diagram shows the cost model workflow that cost management uses to apply a price to metrics and inventory, normalize cost data from different sources, apply a markup (or discount), then distribute the costs across the relevant resources.
+The following diagram shows the cost model workflow that {product-title} uses to apply a price to metrics and inventory, normalize cost data from different sources, apply a markup (or discount), then distribute the costs across the relevant resources.
 
-The cost model also helps differentiate raw costs from the costs used in cost management.
+The cost model also helps differentiate raw costs from the costs used in {product-title}.
 
 image:../images/costmodel-workflow.png[]
 
@@ -27,5 +27,5 @@ image:../images/costmodel-workflow.png[]
 
 [NOTE]
 ====
-For more information about configuring tagging for cost management, see _{link-tagging}_.
+For more information about configuring tagging for {product-title}, see _{link-tagging}_.
 ====

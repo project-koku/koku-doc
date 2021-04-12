@@ -5,16 +5,16 @@
 
 // The URL for this procedure needs to go in the UI code in the Sources dialog - need to give to Dan & Boaz.
 
-Using the information from the previous steps, you can now add your AWS account as a source. After adding an AWS source, the cost management application processes the cost and usage data from your AWS account and makes it viewable.
+Using the information from the previous steps, you can now add your AWS account as a source. After adding an AWS source, the {product-title} application processes the cost and usage data from your AWS account and makes it viewable.
 
 To add your AWS account as a source:
 
-. In cost management, click *Add source* to open the dialog.
+. In {product-title}, click *Add source* to open the dialog.
 . In the dialog, select *Amazon Web Services (AWS)* as the source type.
 . Enter a name for the source and click *Next*.
 . Paste your S3 bucket name and click *Next*.
 . Paste the role ARN and click *Add source*.
 
-Cost management will begin collecting cost and usage data from your AWS account. The data can take a few days to populate before it shows on the cost management dashboard.
+{product-title} will begin collecting cost and usage data from your AWS account. The data can take a few days to populate before it shows on the {product-title} dashboard.
 
 
