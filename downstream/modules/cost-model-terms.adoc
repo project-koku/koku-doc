@@ -19,7 +19,7 @@ Cost model:: A cost model is a framework used to define the calculations for the
 Costs can be created at different layers of the environment. In cost management, all costs can be classified as either infrastructure or supplementary costs (including your costs that are not identified as infrastructure). In your cost model, you can choose to allocate and present your costs as any of those cost layers. As a result, you can customize what cost management shows on each details page.
 
 Infrastructure cost:: This cost can come from two different sources:
-* Costs directly reported by a cloud provider, via an Amazon (AWS) Cost and Usage Report or Microsoft Azure export. In the current version of cost management, all cloud costs are considered infrastructure costs.
+* Costs directly reported by a cloud provider, via an Amazon (AWS) Cost and Usage Report, Microsoft Azure or Google Cloud export. In the current version of cost management, all cloud costs are considered infrastructure costs.
 * Costs calculated from a price list for rates specifically marked as infrastructure.
 +
 [NOTE]
