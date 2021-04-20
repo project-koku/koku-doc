@@ -466,9 +466,9 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="#installation-overview_adding-an-ocp-source">3.1. Installation tasks summary</a></li>
 <li><a href="#installing-cost-operator_adding-an-ocp-source">3.2. Installing the cost operator</a></li>
 <li><a href="#configuring-the-operator-instance-for-a-new-installation_adding-an-ocp-source">3.3. Configuring the operator instance for a new installation</a></li>
-<li><a href="#replacing-prior-operator-instance_adding-an-ocp-source">3.4. Replacing the prior operator instance with the Koku metrics operator</a></li>
+<li><a href="#replacing-prior-operator-instance_adding-an-ocp-source">3.4. Replacing a prior operator instance</a></li>
 <li><a href="#removing-a-cost-operator_adding-an-ocp-source">3.5. Removing a prior cost operator</a></li>
-<li><a href="#verifying-cost-operator_adding-an-ocp-source">3.6. Verifying <code>koku-metrics-operator</code></a></li>
+<li><a href="#verifying-cost-operator_adding-an-ocp-source">3.6. Verifying the cost operator</a></li>
 <li><a href="#basic-authentication_adding-an-ocp-source">3.7. Configuring basic authentication for cost operator</a>
 <ul class="sectlevel3">
 <li><a href="#creating-secret-pair">3.7.1. Creating the secret key/value pair for basic authentication</a></li>
@@ -478,8 +478,8 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="#proc_creating-an-openshift-container-platform-source-manually_adding-an-ocp-source">3.8. Creating an Openshift Container Platform source manually</a></li>
 <li><a href="#assembly-adding-a-restricted-network-source_adding-an-ocp-source">3.9. Adding a restricted network source</a>
 <ul class="sectlevel3">
-<li><a href="#proc_installing-koku-metrics-operator-on-a-restricted-network_adding-restricted-network-source">3.9.1. Installing the Koku Metrics Operator on a restricted network</a></li>
-<li><a href="#configuring-koku-metrics-operator-on-a-restricted-network_adding-restricted-network-source">3.9.2. Configuring Cost Operator on a restricted network</a></li>
+<li><a href="#proc_installing-cost-operator-on-a-restricted-network_adding-restricted-network-source">3.9.1. Installing the cost management operator on a restricted network</a></li>
+<li><a href="#configuring-cost-operator-on-a-restricted-network_adding-restricted-network-source">3.9.2. Configuring Cost Operator on a restricted network</a></li>
 <li><a href="#proc_downloading-reports_adding-restricted-network-source">3.9.3. Downloading cost reports</a></li>
 <li><a href="#proc_uploading-reports_adding-restricted-network-source">3.9.4. Uploading cost reports to cloud.redhat.com</a></li>
 </ul>
@@ -520,8 +520,8 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="#assembly-adding-ocp-sources">7. Adding an OpenShift Container Platform 4.3 and 4.4 source to cost management</a>
 <ul class="sectlevel2">
-<li><a href="#installing-cost-mgmt-operator_adding-previous-source">7.1. Installing the Cost Management Operator</a></li>
-<li><a href="#configuring-cost-mgmt-operator_adding-previous-source">7.2. Configuring the Cost Management Operator</a></li>
+<li><a href="#installing-cost-mgmt-operator_adding-previous-source">7.1. Installing the cost management Operator</a></li>
+<li><a href="#configuring-cost-mgmt-operator_adding-previous-source">7.2. Configuring the cost management Operator</a></li>
 </ul>
 </li>
 <li><a href="#assembly-cost-management-next-steps">8. Next steps for managing your costs</a>
@@ -543,19 +543,16 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <div class="paragraph">
 <p>After completing the setup described in this guide, you will be able to track cost and usage data for your Amazon Web Services (AWS), Microsoft Azure, and OpenShift Container Platform environments.</p>
 </div>
-<div id="note-bugzilla_getting-started" class="paragraph _abstract">
-<p>If you have a suggestion for improving this guide or have found an error, please submit a Bugzilla report at <a href="https://bugzilla.redhat.com/enter_bug.cgi?product=Cloud%20Software%20Services%20(cloud.redhat.com)&amp;component=Cost%20Management">http://bugzilla.redhat.com</a> against <em>Cloud Software Services (<a href="https://cloud.redhat.com">cloud.redhat.com</a>)</em> for the <strong>Cost Management</strong> component.</p>
-</div>
 <div class="sect2">
 <h3 id="about-cost-management_getting-started">1.1. About cost management</h3>
 <div class="paragraph _abstract">
-<p>Cost management is an OpenShift Container Platform service that enables you to better understand and track costs for clouds and containers. It is based on the upstream project Koku.</p>
+<p>cost management is an OpenShift Container Platform service that enables you to better understand and track costs for clouds and containers. It is based on the upstream project Koku.</p>
 </div>
 <div class="paragraph">
 <p>You can access the cost management application from <a href="https://cloud.redhat.com/cost-management/" class="bare">https://cloud.redhat.com/cost-management/</a>.</p>
 </div>
 <div class="paragraph">
-<p>Cost management allows you to simplify management of resources and costs across various environments, including:</p>
+<p>cost management allows you to simplify management of resources and costs across various environments, including:</p>
 </div>
 <div class="ulist">
 <ul>
@@ -940,19 +937,16 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <div class="paragraph">
 <p>The community <code>cost-mgmt-operator</code> supported in OpenShift Container Platform 4.3 and 4.4 is deprecated. Though this cost operator functions with cost management in OpenShift Container Platform 4.5 or later, it is no longer supported. For installing this deprecated operator, see <a href="#assembly-adding-ocp-sources">Adding an OpenShift Container Platform 4.3 and 4.4 source to cost management</a>.</p>
 </div>
-<div class="paragraph">
-<p>To avoid gaps in your cost management data, you can wait 24 to 48 hours before removing <code>cost-mgmt-operator</code> while you verify that <code>koku-metrics-operator</code> provides cost management reports.</p>
-</div>
 <div class="sect2">
 <h3 id="installation-overview_adding-an-ocp-source">3.1. Installation tasks summary</h3>
 <div class="paragraph _abstract">
-<p>Whether you are replacing a prior cost management operator with the Koku metrics operator or installing it for the first time, the basic tasks are the same.</p>
+<p>Whether you are replacing a prior cost management operator with the <strong>Koku Metrics Operator</strong> or installing it for the first time, the basic tasks are the same.</p>
 </div>
 <div class="paragraph">
 <p>Operator installation, configuration, and source management can all be performed from the OpenShift Container Platform web console.</p>
 </div>
 <div class="paragraph">
-<p>You will perform the following tasks to install the <code>koku-metrics-operator</code> and begin using the cost management application in OpenShift Container Platform 4.5 or later.</p>
+<p>You will perform the following tasks to install the <strong>Koku Metrics Operator</strong> and begin using the cost management application in OpenShift Container Platform.</p>
 </div>
 <div class="admonitionblock note">
 <table>
@@ -961,7 +955,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <div class="title">Note</div>
 </td>
 <td class="content">
-To install and configure <code>koku-metrics-operator</code> from the OpenShift Container Platform web console, you must use an account with cluster administrator privileges.
+To install and configure Koku Metrics Operator from the OpenShift Container Platform web console, you must use an account with cluster administrator privileges.
 </td>
 </tr>
 </table>
@@ -981,16 +975,16 @@ To install and configure <code>koku-metrics-operator</code> from the OpenShift C
 <div class="title">Task summary</div>
 <ul>
 <li>
-<p>Install the Koku metrics operator (<code>koku-metrics-operator</code>) and use the default token authentication.</p>
+<p>Install the Koku Metrics Operator (<code>koku-metrics-operator</code>) and use the default token authentication.</p>
 </li>
 <li>
-<p>Create a KokuMetricsConfig YAML file that configures <code>koku-metrics-operator</code>.</p>
+<p>Create a KokuMetricsConfig YAML file that configures <code>koku-metrics-operator</code></p>
 </li>
 <li>
 <p>Create a cost management OpenShift Container Platform source with a new installation, or confirm an existing source with an replacement installation.</p>
 </li>
 <li>
-<p>After installing the Koku metrics operator, delete the old cost operator. This task is required only when the <code>cost-mgmt-operator</code> was previously installed.</p>
+<p>After installing the Koku Metrics Operator, delete the old cost operator. This task is required only when a previous cost management operator is installed.</p>
 </li>
 </ul>
 </div>
@@ -1001,7 +995,7 @@ To install and configure <code>koku-metrics-operator</code> from the OpenShift C
 <div class="sect2">
 <h3 id="installing-cost-operator_adding-an-ocp-source">3.2. Installing the cost operator</h3>
 <div class="paragraph _abstract">
-<p>Install the Koku operator <code>koku-metrics-operator</code> from the OpenShift Container Platform web console.</p>
+<p>Install the <strong>Koku Metrics Operator</strong> from the OpenShift Container Platform web console.</p>
 </div>
 <div class="ulist">
 <div class="title">Prerequisites</div>
@@ -1027,7 +1021,7 @@ To install and configure <code>koku-metrics-operator</code> from the OpenShift C
 <p>If an information panel appears with the Community Operators message, click <strong>Continue</strong>.</p>
 </li>
 <li>
-<p>When the <strong>Install Operator</strong> window appears, you must select the <strong><code>koku-metrics-operator</code></strong> namespace for installation. If the namespace does not yet exist, it is created for you.</p>
+<p>When the <strong>Install Operator</strong> window appears, you must select the <code>koku-metrics-operator</code> namespace for installation. If the namespace does not yet exist, it is created for you.</p>
 </li>
 <li>
 <p>Click on the <strong>Install</strong> button.</p>
@@ -1058,7 +1052,7 @@ To install and configure <code>koku-metrics-operator</code> from the OpenShift C
 <div class="title">Procedure</div>
 <ol class="arabic">
 <li>
-<p>Under the <strong>Name</strong> heading in the list of installed operators, click the <strong>KokuMetricsOperator</strong> link. The <strong>Installed Operators &gt; Operator Details</strong> window appears for <strong>Koku Metrics Operator</strong>.</p>
+<p>Under the <strong>Name</strong> heading in the list of installed operators, click the <strong>Koku Metrics Operator</strong> link. The <strong>Installed Operators &gt; Operator Details</strong> window appears for <strong>Koku Metrics Operator</strong>.</p>
 </li>
 <li>
 <p>In the <strong>Details</strong> window, click <strong>+&#160;Create Instance</strong>.</p>
@@ -1070,7 +1064,7 @@ To install and configure <code>koku-metrics-operator</code> from the OpenShift C
 <p>Click the <strong>YAML view</strong> radio button to view and modify the contents of the YAML configuration file.</p>
 </li>
 <li>
-<p>When you create a new cost management instance for the Koku metrics operator, make the following modifications in the YAML configuration file.</p>
+<p>When you create a new cost management instance for the Koku Metrics Operator, make the following modifications in the YAML configuration file.</p>
 </li>
 <li>
 <p>Locate the following two lines in the YAML file.</p>
@@ -1091,7 +1085,7 @@ To install and configure <code>koku-metrics-operator</code> from the OpenShift C
 <div class="title">Example</div>
 <div class="content">
 <pre>    create_source: true
-    name: koku-cost-source</pre>
+    name: my-cost-source</pre>
 </div>
 </div>
 </li>
@@ -1105,9 +1099,9 @@ To install and configure <code>koku-metrics-operator</code> from the OpenShift C
 </div>
 </div>
 <div class="sect2">
-<h3 id="replacing-prior-operator-instance_adding-an-ocp-source">3.4. Replacing the prior operator instance with the Koku metrics operator</h3>
+<h3 id="replacing-prior-operator-instance_adding-an-ocp-source">3.4. Replacing a prior operator instance</h3>
 <div class="paragraph _abstract">
-<p>If you are replacing a prior cost management operator with the Koku metrics operator, make certain your existing cost management source is properly configured in the YAML configuration file.</p>
+<p>If you are replacing a prior cost management operator with the Koku Metrics Operator, make certain your existing cost management source is properly configured in the YAML configuration file.</p>
 </div>
 <div class="admonitionblock important">
 <table>
@@ -1136,7 +1130,7 @@ When you are replacing a prior cost management operator with the <strong>Koku Me
 <div class="title">Procedure</div>
 <ol class="arabic">
 <li>
-<p>Under the <strong>Name</strong> heading in the list of installed operators, click the <strong>KokuMetricsOperator</strong> link. The <strong>Installed Operators &gt; Operator Details</strong> window appears for <strong>Koku Metrics Operator</strong>.</p>
+<p>Under the <strong>Name</strong> heading in the list of installed operators, click the <strong>Koku Metrics Operator</strong> link. The <strong>Installed Operators &gt; Operator Details</strong> window appears for <strong>Koku Metrics Operator</strong>.</p>
 </li>
 <li>
 <p>In the <strong>Details</strong> window, click <strong>+&#160;Create Instance</strong>.</p>
@@ -1145,7 +1139,7 @@ When you are replacing a prior cost management operator with the <strong>Koku Me
 <p>A <strong>Koku Metrics Operator &gt; Create KokuMetricsConfig</strong> window appears.</p>
 </li>
 <li>
-<p>Click the <strong>YAML view</strong> radio button to view and modify the contents of the <code>KokuMetricsConfig.yaml</code> file.</p>
+<p>Click the <strong>YAML view</strong> radio button to view and modify the contents of the <strong>KokuMetricsConfig</strong> YAML file.</p>
 </li>
 <li>
 <p>Open <a href="https://cloud.redhat.com">cloud.redhat.com</a> and log in using your Organization Administrator account.</p>
@@ -1160,7 +1154,7 @@ When you are replacing a prior cost management operator with the <strong>Koku Me
 <p>Select an existing cost management source and copy its name.</p>
 </li>
 <li>
-<p>In the <code>KokuMetricsConfig.yaml</code> file, replace <code>INSERT-SOURCE-NAME</code> with the source name that you copied from the cost management source list for your organization.</p>
+<p>In the KokuMetricsConfig YAML file, replace <code>INSERT-SOURCE-NAME</code> with the source name that you copied from the cost management source list for your organization.</p>
 <div class="listingblock">
 <div class="content">
 <pre>    create_source: false
@@ -1180,10 +1174,10 @@ When you are replacing a prior cost management operator with the <strong>Koku Me
 <div class="sect2">
 <h3 id="removing-a-cost-operator_adding-an-ocp-source">3.5. Removing a prior cost operator</h3>
 <div class="paragraph _abstract">
-<p>After installing the <code>koku-metrics-operator</code>, uninstall the prior <code>cost-mgmt-operator</code> operator.</p>
+<p>After installing the <code>koku-metrics-operator</code>, uninstall the prior cost management operator.</p>
 </div>
 <div class="paragraph">
-<p>To avoid gaps in your cost management data, you can wait 24 to 48 hours before removing <code>cost-mgmt-operator</code> while you verify that <code>koku-metrics-operator</code> provides cost management reports.</p>
+<p>To avoid gaps in your cost management data, you can wait 24 to 48 hours before removing the prior operator while you verify that <code>koku-metrics-operator</code> provides cost management reports.</p>
 </div>
 <div class="admonitionblock note">
 <table>
@@ -1201,19 +1195,7 @@ If you mistakenly remove the <strong>Koku Metrics Operator</strong>, reinstall i
 <div class="title">Prerequisites</div>
 <ul>
 <li>
-<p>The <code>cost-mgmt-operator</code> is installed.</p>
-<div class="admonitionblock note">
-<table>
-<tr>
-<td class="icon">
-<div class="title">Note</div>
-</td>
-<td class="content">
-The <code>cost-mgmt-operator</code> is deprecated in OpenShift Container Platform 4.5 and later. Beginning with OpenShift Container Platform 4.5 or later, you must install <code>koku-metrics-operator</code>.
-</td>
-</tr>
-</table>
-</div>
+<p>A prior cost management operator is installed.</p>
 </li>
 <li>
 <p>You installed the <strong>Koku Metrics Operator</strong>.</p>
@@ -1233,7 +1215,7 @@ The <code>cost-mgmt-operator</code> is deprecated in OpenShift Container Platfor
 <p>In the Installed Operators list, select the operator you want to remove.</p>
 </li>
 <li>
-<p>Click on the <span class="image"><img src="images/more-options.png" alt="more options"></span> (More options) icon in that row.</p>
+<p>Click the <strong>Options</strong> menu <span class="image"><img src="images/more-options.png" alt="more options"></span> in that row.</p>
 </li>
 <li>
 <p>Click on the <strong>Uninstall Operator</strong> option. Confirm the action to remove the operator.</p>
@@ -1242,13 +1224,13 @@ The <code>cost-mgmt-operator</code> is deprecated in OpenShift Container Platfor
 <p>In the OpenShift Container Platform web console, click the <strong>Administration &gt; Custom Resource Definitions</strong> tab.</p>
 </li>
 <li>
-<p>In the window that displays the custom resource definitions (CRD), locate the <strong>CostManagement</strong> CRD and the <strong>CostManagementData</strong> CRD.</p>
+<p>In the window that displays the custom resource definitions (CRD), locate the <strong>CostManagement</strong> CRD and the <strong>CostManagementData</strong> CRD for <code>cost-mgmt-operator</code> or the <strong>KokuMetricsConfig</strong> CRD for <code>koku-metrics-operator</code>.</p>
 </li>
 <li>
-<p>For each CRD, click on the <span class="image"><img src="images/more-options.png" alt="more options"></span> (More options) icon and click on <strong>Delete Custom Resource Definition</strong>. Confirm the delete action.</p>
+<p>For each CRD, click the <strong>Options</strong> menu <span class="image"><img src="images/more-options.png" alt="more options"></span> &#8594; <strong>Delete Custom Resource Definition</strong>. Confirm the delete action.</p>
 </li>
 <li>
-<p>When these CRDs are deleted, the <code>cost-mgmt-operator</code> is fully uninstalled.</p>
+<p>When these CRDs are deleted, the prior operator is fully uninstalled.</p>
 </li>
 </ol>
 </div>
@@ -1266,9 +1248,9 @@ When you install <strong>Koku Metrics Operator</strong>, a <strong>KokuMetricsCo
 </div>
 </div>
 <div class="sect2">
-<h3 id="verifying-cost-operator_adding-an-ocp-source">3.6. Verifying <code>koku-metrics-operator</code></h3>
+<h3 id="verifying-cost-operator_adding-an-ocp-source">3.6. Verifying the cost operator</h3>
 <div class="paragraph _abstract">
-<p>View the Koku configuration YAML file to verify the cost management operator is functioning.</p>
+<p>View the configuration YAML file to verify the cost management operator is functioning.</p>
 </div>
 <div class="ulist">
 <div class="title">Prerequisites</div>
@@ -1464,7 +1446,7 @@ Do <em>not</em> add the secret to the workload.
 <div class="sect3">
 <h4 id="modify-yaml-file">3.7.2. Modifying the YAML file</h4>
 <div class="paragraph">
-<p>Modify the Koku metrics operator API YAML file to use basic authentication with a secret username and password key/value pair.</p>
+<p>Modify the Koku Metrics Operator API YAML file to use basic authentication with a secret username and password key/value pair.</p>
 </div>
 <div class="ulist">
 <div class="title">Prerequisites</div>
@@ -1476,7 +1458,7 @@ Do <em>not</em> add the secret to the workload.
 <p>You created a secret name for the username and password key/value pair.</p>
 </li>
 <li>
-<p>The Koku metrics operator is installed.</p>
+<p>The Koku Metrics Operator is installed.</p>
 </li>
 </ul>
 </div>
@@ -1487,16 +1469,16 @@ Do <em>not</em> add the secret to the workload.
 <p>Click on the <strong>Operators &gt; Installed Operators</strong> tab.</p>
 </li>
 <li>
-<p>Locate the row that contains <strong>KokuMetricsOperator</strong> and click on the <strong>KokuMetricsConfig</strong> link that is under the <strong>Provided APIs</strong> heading.</p>
+<p>Locate the row that contains <strong>Koku Metrics Operator</strong> and click on the <strong>Koku Metrics Operator</strong> link that is under the <strong>Provided APIs</strong> heading.</p>
 </li>
 <li>
-<p>When the <strong>KokuMetricsConfigs</strong> window appears, click on Koku configuration file listed in the <strong>Name</strong> column.</p>
+<p>When the <strong>KokuMetricsConfig</strong> window appears, click on the configuration file listed in the <strong>Name</strong> column.</p>
 <div class="paragraph">
-<p>The default name is <strong>kokumetricscfg-sample</strong>.</p>
+<p>The default name is <code>kokumetricscfg-sample</code>.</p>
 </div>
 </li>
 <li>
-<p>When the <strong>kokumetricscfg-sample</strong> window appears, click in the <strong>YAML</strong> tab to open an edit and view window.</p>
+<p>When the <code>kokumetricscfg-sample</code> window appears, click in the <strong>YAML</strong> tab to open an edit and view window.</p>
 </li>
 <li>
 <p>Locate the following lines in the YAML view.</p>
@@ -1569,7 +1551,7 @@ Do <em>not</em> add the secret to the workload.
 <p>Select the <strong>Red Hat OpenShift Container Platform</strong> tile as the source type.</p>
 </li>
 <li>
-<p>Select <strong>Cost Management</strong> as the application and click <strong>Next</strong>.</p>
+<p>Select <strong>cost management</strong> as the application and click <strong>Next</strong>.</p>
 </li>
 <li>
 <p>Copy your <strong>Cluster Identifier</strong> from the OpenShift Container Platform web console <strong>Home &gt; Overview</strong> tab and click <strong>Next</strong>.</p>
@@ -1608,9 +1590,9 @@ Do <em>not</em> add the secret to the workload.
 </ol>
 </div>
 <div class="sect3">
-<h4 id="proc_installing-koku-metrics-operator-on-a-restricted-network_adding-restricted-network-source">3.9.1. Installing the Koku Metrics Operator on a restricted network</h4>
+<h4 id="proc_installing-cost-operator-on-a-restricted-network_adding-restricted-network-source">3.9.1. Installing the cost management operator on a restricted network</h4>
 <div class="paragraph _abstract">
-<p>For OpenShift Container Platform clusters that are installed on restricted networks, Operator Lifecycle Manager (OLM) by default cannot access the koku-metrics-operator hosted remotely because those remote sources require full Internet connectivity. Therefore, OLM must be configured to install and run local sources.</p>
+<p>For OpenShift Container Platform clusters that are installed on restricted networks, Operator Lifecycle Manager (OLM) by default cannot access the <code>koku-metrics-operator</code> hosted remotely because those remote sources require full Internet connectivity. Therefore, OLM must be configured to install and run local sources.</p>
 </div>
 <div class="ulist">
 <div class="title">Prerequisites</div>
@@ -1681,13 +1663,13 @@ Do <em>not</em> add the secret to the workload.
 <div class="title">Additional resources</div>
 <ul>
 <li>
-<p>For more details on the Operator Lifecycle Manager, see <a href="https://access.redhat.com/documentation/en-us/openshift_container_platform/4.7/html/operators/understanding-operators#operator-lifecycle-manager-olm"><em>.What is Operator Lifecycle Manager?</em></a></p>
+<p>For more details on the Operator Lifecycle Manager, see <a href="https://access.redhat.com/documentation/en-us/openshift_container_platform/4.7/html/operators/understanding-operators#operator-lifecycle-manager-olm"><em>What is Operator Lifecycle Manager?</em></a></p>
 </li>
 </ul>
 </div>
 </div>
 <div class="sect3">
-<h4 id="configuring-koku-metrics-operator-on-a-restricted-network_adding-restricted-network-source">3.9.2. Configuring Cost Operator on a restricted network</h4>
+<h4 id="configuring-cost-operator-on-a-restricted-network_adding-restricted-network-source">3.9.2. Configuring Cost Operator on a restricted network</h4>
 <div class="paragraph _abstract">
 <p>After the <code>koku-metrics-operator</code> is installed, you must configure it to run on a restricted network.</p>
 </div>
@@ -1706,10 +1688,10 @@ Do <em>not</em> add the secret to the workload.
 <div class="title">Procedure</div>
 <ol class="arabic">
 <li>
-<p>From the OpenShift Container Platform web console, select <strong>Operators &gt; Installed Operators &gt; koku-metrics-operator &gt; KokuMetricsConfig &gt; Create Instance</strong>.</p>
+<p>From the OpenShift Container Platform web console, select <strong>Operators &gt; Installed Operators &gt; <code>koku-metrics-operator</code> &gt; KokuMetricsConfig &gt; Create Instance</strong>.</p>
 </li>
 <li>
-<p>Specify the desired storage. If not specified, the operator will create a default persistent volume claim called <code>koku-metrics-operator-data</code> with <strong>10Gi</strong> of storage.</p>
+<p>Specify the desired storage. If not specified, the operator will create a default persistent volume claim called <code>+{operator}+-data</code> with <strong>10Gi</strong> of storage.</p>
 <div class="admonitionblock note">
 <table>
 <tr>
@@ -1796,7 +1778,7 @@ Do <em>not</em> add the secret to the workload.
 <div class="title">Verification steps</div>
 <ol class="arabic">
 <li>
-<p>Select the <code>KokuMetricsConfig</code> you created.</p>
+<p>Select the <strong>KokuMetricsConfig</strong> you created.</p>
 </li>
 <li>
 <p>Select <strong>YAML view</strong>.</p>
@@ -1812,7 +1794,7 @@ Do <em>not</em> add the secret to the workload.
       number_of_reports_stored: 1
       packaged_files:
         - &gt;-
-            /tmp/koku-metrics-operator-reports/upload/YYYYMMDDTHHMMSS-cost-mgmt.tar.gz</code></pre>
+            /tmp/+{operator}+-reports/upload/YYYYMMDDTHHMMSS-cost-mgmt.tar.gz</code></pre>
 </div>
 </div>
 <div class="admonitionblock note">
@@ -1894,7 +1876,7 @@ spec:
 <p>Use <code>rsync</code> to copy all of the files from the PVC to a local folder.</p>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-bash" data-lang="bash">$ oc rsync volume-shell:/tmp/koku-metrics-operator-reports/upload local/path/to/save/folder</code></pre>
+<pre class="highlight"><code class="language-bash" data-lang="bash">$ oc rsync volume-shell:/tmp/{operator}-reports/upload local/path/to/save/folder</code></pre>
 </div>
 </div>
 </li>
@@ -1906,7 +1888,7 @@ spec:
 <div class="listingblock">
 <div class="content">
 <pre class="highlight"><code class="language-bash" data-lang="bash">$ oc rsh volume-shell
-$ rm /tmp/koku-metrics-operator-reports/upload/*</code></pre>
+$ rm /tmp/{operator}-reports/upload/*</code></pre>
 </div>
 </div>
 </li>
@@ -2067,7 +2049,7 @@ $ rm /tmp/koku-metrics-operator-reports/upload/*</code></pre>
 <div class="sect2">
 <h3 id="creating-an-aws-s3-bucket_adding-aws-sources">4.1. Creating an S3 bucket for reporting</h3>
 <div class="paragraph _abstract">
-<p>Cost management requires an Amazon S3 bucket with permissions configured to store billing reports.</p>
+<p>cost management requires an Amazon S3 bucket with permissions configured to store billing reports.</p>
 </div>
 <div class="paragraph">
 <p>Log into your AWS master account to begin configuring cost and usage reporting:</p>
@@ -2130,7 +2112,7 @@ $ rm /tmp/koku-metrics-operator-reports/upload/*</code></pre>
 <p>Enter a name for your source and click <strong>Next</strong>.</p>
 </li>
 <li>
-<p>Select <strong>Cost Management</strong> as the application and <strong>Amazon Web Services (AWS)</strong> as the source type. Click <strong>Next</strong>.</p>
+<p>Select <strong>cost management</strong> as the application and <strong>Amazon Web Services (AWS)</strong> as the source type. Click <strong>Next</strong>.</p>
 </li>
 <li>
 <p>Paste the name of your S3 bucket and click <strong>Next</strong>.</p>
@@ -2265,7 +2247,7 @@ $ rm /tmp/koku-metrics-operator-reports/upload/*</code></pre>
 </ol>
 </div>
 <div class="paragraph">
-<p>Cost management will begin collecting cost and usage data from your master AWS account and any linked AWS accounts.</p>
+<p>cost management will begin collecting cost and usage data from your master AWS account and any linked AWS accounts.</p>
 </div>
 <div class="paragraph">
 <p>The data can take a few days to populate before it shows on the cost management dashboard (<a href="https://cloud.redhat.com/cost-management/" class="bare">https://cloud.redhat.com/cost-management/</a>).</p>
@@ -2273,7 +2255,7 @@ $ rm /tmp/koku-metrics-operator-reports/upload/*</code></pre>
 <div class="sect3">
 <h4 id="enabling-additional-aws-account-access_adding-aws-sources">4.3.1. Enabling additional account access for cost and usage consumption</h4>
 <div class="paragraph _abstract">
-<p>Cost management can display additional data that might be useful. For example:</p>
+<p>cost management can display additional data that might be useful. For example:</p>
 </div>
 <div class="ulist">
 <ul>
@@ -2418,7 +2400,7 @@ to obtain the display names of AWS member accounts if you are using consolidated
 <p>Enter a name for your source and click <strong>Next</strong>.</p>
 </li>
 <li>
-<p>Select <strong>Cost Management</strong> as the application and <strong>Microsoft Azure</strong> as the source type. Click <strong>Next</strong>.</p>
+<p>Select <strong>cost management</strong> as the application and <strong>Microsoft Azure</strong> as the source type. Click <strong>Next</strong>.</p>
 </li>
 </ol>
 </div>
@@ -2462,7 +2444,7 @@ to obtain the display names of AWS member accounts if you are using consolidated
 <p>In the <a href="https://cloud.redhat.com">cloud.redhat.com</a> <strong>Sources</strong> wizard, enter your <strong>Subscription ID</strong>. Click <strong>Next</strong> to move to the next screen.</p>
 </li>
 <li>
-<p>In Azure Cloud Shell, run the following command to create a Cost Management Storage Account Contributor role, and obtain your tenant ID, client (application) ID, and client secret:</p>
+<p>In Azure Cloud Shell, run the following command to create a cost management Storage Account Contributor role, and obtain your tenant ID, client (application) ID, and client secret:</p>
 <div class="listingblock">
 <div class="content">
 <pre>$ az ad sp create-for-rbac -n "CostManagement" --role "Storage Account Contributor" --query '{"tenant": tenant, "client_id": appId, "secret": password}'</pre>
@@ -2473,10 +2455,10 @@ to obtain the display names of AWS member accounts if you are using consolidated
 <p>In the <a href="https://cloud.redhat.com">cloud.redhat.com</a> <strong>Sources</strong> wizard, enter your Azure <strong>Tenant ID</strong>, <strong>Client ID</strong>, and <strong>Client Secret</strong>.</p>
 </li>
 <li>
-<p>In Azure Cloud Shell, run the following command to create a Cost Management Reader role with your subscription ID. Copy the full command from the <a href="https://cloud.redhat.com">cloud.redhat.com</a> <strong>Sources</strong> wizard, which will automatically substitute your Azure subscription ID obtained earlier for <em>&lt;SubscriptionID&gt;</em>:</p>
+<p>In Azure Cloud Shell, run the following command to create a cost management Reader role with your subscription ID. Copy the full command from the <a href="https://cloud.redhat.com">cloud.redhat.com</a> <strong>Sources</strong> wizard, which will automatically substitute your Azure subscription ID obtained earlier for <em>&lt;SubscriptionID&gt;</em>:</p>
 <div class="listingblock">
 <div class="content">
-<pre>$ az role assignment create --role "Cost Management Reader" --assignee http://CostManagement --subscription &lt;SubscriptionID&gt;</pre>
+<pre>$ az role assignment create --role "{product-title} Reader" --assignee http://CostManagement --subscription &lt;SubscriptionID&gt;</pre>
 </div>
 </div>
 </li>
@@ -2552,7 +2534,7 @@ to obtain the display names of AWS member accounts if you are using consolidated
 <div class="ulist">
 <ul>
 <li>
-<p>Cost management Google Cloud project.</p>
+<p>cost management Google Cloud project.</p>
 </li>
 <li>
 <p>Billing service account member with the correct role to export your data to <a href="https://cloud.redhat.com">cloud.redhat.com</a>.</p>
@@ -2780,7 +2762,7 @@ to obtain the display names of AWS member accounts if you are using consolidated
 <p>Google Cloud <a href="#creating-a-project-gcp_adding-gcp-sources">project</a></p>
 </li>
 <li>
-<p>Cost management Identity and Access Management (IAM) <a href="#creating-iam-role-gcp_adding-gcp-sources">role</a></p>
+<p>cost management Identity and Access Management (IAM) <a href="#creating-iam-role-gcp_adding-gcp-sources">role</a></p>
 </li>
 </ul>
 </div>
@@ -3012,7 +2994,7 @@ to obtain the display names of AWS member accounts if you are using consolidated
 <p>Enter a name for the source and click <b class="button">Next</b></p>
 </li>
 <li>
-<p>In the dialog, select <strong>Google Cloud</strong> as the source type and <strong>Cost Management</strong> as the application.</p>
+<p>In the dialog, select <strong>Google Cloud</strong> as the source type and <strong>cost management</strong> as the application.</p>
 </li>
 <li>
 <p>Click <strong>Next</strong>.</p>
@@ -3086,7 +3068,7 @@ to obtain the display names of AWS member accounts if you are using consolidated
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Source status <em>"Unknown"</em> longer than 24 hours</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Cost management cannot find cost data in the BigQuery dataset provided.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">cost management cannot find cost data in the BigQuery dataset provided.</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Make sure your <a href="#exporting-billing-data-gcp_adding-gcp-sources">billing export</a> is configured and <a href="#viewing-data-collected-gcp_adding-gcp-sources">billing tables</a> exist in your BigQuery dataset.</p></td>
 </tr>
 </tbody>
@@ -3115,7 +3097,7 @@ to obtain the display names of AWS member accounts if you are using consolidated
 </table>
 </div>
 <div class="paragraph _abstract">
-<p>To add an OpenShift Container Platform cluster as a source to cost management, you must first configure your cluster to provide usage data (metrics) using the Cost Management Operator.</p>
+<p>To add an OpenShift Container Platform cluster as a source to cost management, you must first configure your cluster to provide usage data (metrics) using the cost management Operator.</p>
 </div>
 <div class="admonitionblock note">
 <table>
@@ -3132,7 +3114,7 @@ to obtain the display names of AWS member accounts if you are using consolidated
 </table>
 </div>
 <div class="paragraph">
-<p>The Cost Management Operator (<code>cost-mgmt-operator</code>) collects the metrics required for cost management by:</p>
+<p>The cost management Operator (<code>cost-mgmt-operator</code>) collects the metrics required for cost management by:</p>
 </div>
 <div class="ulist">
 <ul>
@@ -3150,10 +3132,10 @@ to obtain the display names of AWS member accounts if you are using consolidated
 <div class="olist arabic">
 <ol class="arabic">
 <li>
-<p>Install the Cost Management Operator in OpenShift from OperatorHub</p>
+<p>Install the cost management Operator in OpenShift from OperatorHub</p>
 </li>
 <li>
-<p>Configure the Cost Management Operator to collect OpenShift usage data (metrics) using Operator Metering</p>
+<p>Configure the cost management Operator to collect OpenShift usage data (metrics) using Operator Metering</p>
 </li>
 <li>
 <p>Provide the cluster identifier to cost management</p>
@@ -3164,12 +3146,12 @@ to obtain the display names of AWS member accounts if you are using consolidated
 <p>As you will complete some of the following steps in OpenShift Container Platform, and some steps in the <a href="https://cloud.redhat.com">cloud.redhat.com</a> platform (<a href="https://cloud.redhat.com/settings/sources/" class="bare">https://cloud.redhat.com/settings/sources/</a>), have both applications open in a web browser, as well as a terminal to access the command line interface (CLI).</p>
 </div>
 <div class="sect2">
-<h3 id="installing-cost-mgmt-operator_adding-previous-source">7.1. Installing the Cost Management Operator</h3>
+<h3 id="installing-cost-mgmt-operator_adding-previous-source">7.1. Installing the cost management Operator</h3>
 <div class="paragraph _abstract">
-<p>The Cost Management Operator collects the metrics required for cost management.</p>
+<p>The cost management Operator collects the metrics required for cost management.</p>
 </div>
 <div class="paragraph">
-<p>Begin adding your OpenShift Container Platform cluster as a source to cost management, then install the Cost Management Operator from OperatorHub.</p>
+<p>Begin adding your OpenShift Container Platform cluster as a source to cost management, then install the cost management Operator from OperatorHub.</p>
 </div>
 <div class="admonitionblock note">
 <table>
@@ -3207,7 +3189,7 @@ to obtain the display names of AWS member accounts if you are using consolidated
 <p>Enter a name for your source and click <strong>Next</strong>.</p>
 </li>
 <li>
-<p>Select <strong>Cost Management</strong> as the application and <strong>OpenShift Container Platform</strong> as the source type. Click <strong>Next</strong>.</p>
+<p>Select <strong>cost management</strong> as the application and <strong>OpenShift Container Platform</strong> as the source type. Click <strong>Next</strong>.</p>
 </li>
 </ol>
 </div>
@@ -3216,7 +3198,7 @@ to obtain the display names of AWS member accounts if you are using consolidated
 <p>In OpenShift, create a namespace called <code>openshift-metering</code> if one does not exist, and label the namespace with <code>openshift.io/cluster-monitoring=true</code>.</p>
 </li>
 <li>
-<p>In OpenShift, install the Cost Management Operator in the <code>openshift-metering</code> namespace, using either the OpenShift web console (search for <em>cost management</em> in OperatorHub) or the CLI.</p>
+<p>In OpenShift, install the cost management Operator in the <code>openshift-metering</code> namespace, using either the OpenShift web console (search for <em>cost management</em> in OperatorHub) or the CLI.</p>
 <div class="admonitionblock important">
 <table>
 <tr>
@@ -3225,7 +3207,7 @@ to obtain the display names of AWS member accounts if you are using consolidated
 </td>
 <td class="content">
 <div class="paragraph">
-<p>You must install the Cost Management Operator in the <code>openshift-metering</code> namespace. Other namespaces are not supported for installation.</p>
+<p>You must install the cost management Operator in the <code>openshift-metering</code> namespace. Other namespaces are not supported for installation.</p>
 </div>
 </td>
 </tr>
@@ -3247,12 +3229,12 @@ to obtain the display names of AWS member accounts if you are using consolidated
 </div>
 </div>
 <div class="sect2">
-<h3 id="configuring-cost-mgmt-operator_adding-previous-source">7.2. Configuring the Cost Management Operator</h3>
+<h3 id="configuring-cost-mgmt-operator_adding-previous-source">7.2. Configuring the cost management Operator</h3>
 <div class="paragraph _abstract">
-<p>The Cost Management Operator (<code>cost-mgmt-operator</code>) collects the metrics required for cost management.</p>
+<p>The cost management Operator (<code>cost-mgmt-operator</code>) collects the metrics required for cost management.</p>
 </div>
 <div class="paragraph">
-<p>After installing the Cost Management Operator, configure authentication and the <code>operator-metering</code> namespace, then configure the Cost Management Operator.</p>
+<p>After installing the cost management Operator, configure authentication and the <code>operator-metering</code> namespace, then configure the cost management Operator.</p>
 </div>
 <div class="ulist">
 <div class="title">Prerequisites</div>
@@ -3261,7 +3243,7 @@ to obtain the display names of AWS member accounts if you are using consolidated
 <p>OpenShift Container Platform 4.3 or 4.4</p>
 </li>
 <li>
-<p>The Cost Management Operator installed in the <code>openshift-metering</code> namespace</p>
+<p>The cost management Operator installed in the <code>openshift-metering</code> namespace</p>
 </li>
 <li>
 <p>A user with access to the <code>openshift-config</code> namespace</p>
@@ -3384,11 +3366,11 @@ data:
 <li>
 <p>Configure the Metering Operator.</p>
 <div class="paragraph">
-<p>Cost management uses the Metering Operator to create, collect, package, and upload metrics to cost management. In order for metering to work properly, configure <code>operator-metering</code> using the <a href="https://access.redhat.com/documentation/en-us/openshift_container_platform/4.7/html-single/metering/index#configuring-metering">OpenShift documentation</a> to create a MeteringConfig resource.</p>
+<p>cost management uses the Metering Operator to create, collect, package, and upload metrics to cost management. In order for metering to work properly, configure <code>operator-metering</code> using the <a href="https://access.redhat.com/documentation/en-us/openshift_container_platform/4.7/html-single/metering/index#configuring-metering">OpenShift documentation</a> to create a MeteringConfig resource.</p>
 </div>
 </li>
 <li>
-<p>Configure the Cost Management Operator by creating the <code>CostManagement</code> and <code>CostManagementData</code> custom resources.</p>
+<p>Configure the cost management Operator by creating the <code>CostManagement</code> and <code>CostManagementData</code> custom resources.</p>
 <div class="paragraph">
 <p>Creating these resources also starts the roles that create the resources to obtain the usage reports (metrics). This takes about an hour to run and the reports are collected, packaged, and uploaded every six hours.</p>
 </div>
@@ -3400,7 +3382,7 @@ data:
 </td>
 <td class="content">
 <div class="paragraph">
-<p>The Cost Management Operator requires the <code>clusterID</code>, <code>reporting_operator_token_name</code>, and <code>authentication_secret_name</code> to be specified in a <code>CostManagement</code> custom resource.</p>
+<p>The cost management Operator requires the <code>clusterID</code>, <code>reporting_operator_token_name</code>, and <code>authentication_secret_name</code> to be specified in a <code>CostManagement</code> custom resource.</p>
 </div>
 </td>
 </tr>
@@ -3452,7 +3434,7 @@ spec:
 </td>
 <td class="content">
 <div class="paragraph">
-<p>Depending on your configuration, this command can return two token names. You can use either to configure the Cost Management Operator.</p>
+<p>Depending on your configuration, this command can return two token names. You can use either to configure the cost management Operator.</p>
 </div>
 </td>
 </tr>
@@ -3495,7 +3477,7 @@ metadata:
 </div>
 </div>
 <div class="paragraph">
-<p>The Cost Management Operator will now create, collect, package, and upload your OpenShift usage reports to cost management.</p>
+<p>The cost management Operator will now create, collect, package, and upload your OpenShift usage reports to cost management.</p>
 </div>
 </li>
 </ol>
@@ -3532,7 +3514,7 @@ metadata:
 </ul>
 </div>
 <div class="paragraph">
-<p>Cost management will begin collecting usage data (metrics) from your OpenShift Container Platform cluster. The data can take a few days to populate before it shows on the cost management dashboard.</p>
+<p>cost management will begin collecting usage data (metrics) from your OpenShift Container Platform cluster. The data can take a few days to populate before it shows on the cost management dashboard.</p>
 </div>
 <div class="paragraph">
 <p>You have completed adding your OpenShift Container Platform cluster as a source.</p>
@@ -3572,7 +3554,7 @@ metadata:
 </table>
 </div>
 <div class="paragraph">
-<p>See <a href="https://access.redhat.com/documentation/en-us/cost_management_service/2021/html-single/managing_cost_data_using_tagging/index"><em>Managing cost data using tagging</em></a> to learn more about:</p>
+<p>See <em><a href="https://project-koku.github.io/koku-doc/using-tags.html">Managing cost data using tagging</a></em> to learn more about:</p>
 </div>
 <div class="ulist">
 <ul>
@@ -3597,7 +3579,7 @@ metadata:
 <p>A cost model is a framework used to define the calculations for the costs stored in cost management, using raw costs and metrics. Costs generated by a cost model can be recorded, categorized and distributed to specific customers, business units or projects.</p>
 </div>
 <div class="paragraph">
-<p>From the <a href="https://cloud.redhat.com/cost-management/cost-models">Cost models</a> area of cost management, you can:</p>
+<p>From the <a href="https://cloud.redhat.com/cost-management/cost-models/cost-models">Cost Models</a> area of cost management, you can:</p>
 </div>
 <div class="ulist">
 <ul>
@@ -3611,7 +3593,7 @@ metadata:
 <p>Apply a markup to account for additional support costs</p>
 </li>
 <li>
-<p>Learn how to configure a cost model in <a href="https://access.redhat.com/documentation/en-us/cost_management_service/2021/html-single/using_cost_models/index"><em>Using cost models</em></a>.</p>
+<p>Learn how to configure a cost model in <em><a href="https://project-koku.github.io/koku-doc/cost-models.html">Using cost models</a></em>.</p>
 </li>
 </ul>
 </div>
@@ -3621,7 +3603,7 @@ metadata:
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2021-04-12 08:20:19 UTC
+Last updated 2021-04-20 11:53:44 UTC
 </div>
 </div>
 </body>
