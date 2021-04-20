@@ -6,10 +6,10 @@
 
 
 [id="planning-cost-management"]
-= Planning for cost management
+= Planning for {product-title}
 
 [role="_abstract"]
-When configuring cost management for your needs, consider the scope of your environments that you want to manage costs for, and the users who will have access to the data.
+When configuring {product-title} for your needs, consider the scope of your environments that you want to manage costs for, and the users who will have access to the data.
 
 Some considerations in creating a new Red Hat organization and users for different customer types include:
 

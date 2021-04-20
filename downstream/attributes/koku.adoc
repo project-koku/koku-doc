@@ -1,2 +1,34 @@
 
-:product-title: Koku
+
+
+
+// Titles
+
+:product-title: cost management
+:platform: link:https://cloud.redhat.com[cloud.redhat.com]
+:openshift: OpenShift Container Platform
+:operator: koku-metrics-operator
+:operator-formal: Koku Metrics Operator
+:operator-config: KokuMetricsConfig
+:sample-file: kokumetricscfg-sample
+
+
+
+// Doc Links main
+:link-getting-started: link:https://project-koku.github.io/koku-doc/getting-started.html[Getting started with {product-title}]
+:link-tagging: link:https://project-koku.github.io/koku-doc/using-tags.html[Managing cost data using tagging]
+:link-cost-models: link:https://project-koku.github.io/koku-doc/cost-models.html[Using cost models]
+
+// Doc Links sub
+:link-adding-ocp: link:https://project-koku.github.io/koku-doc/getting-started.html#assembly-adding-openshift-container-platform-source[Adding an OpenShift Container Platform source to {product-title}]
+:link-adding-aws: link:https://project-koku.github.io/koku-doc/getting-started.html#assembly-adding-aws-sources[Adding an Amazon Web Services (AWS) source to {product-title}]
+:link-limiting-access: link:https://access.redhat.com/documentation/en-us/cost_management_service/2021/html-single/getting_started_with_cost_management/index#assembly-limiting-access-cost-resources-rbac[Limiting access to {product-title} resources]
+:link-activating-aws-tags: link:https://project-koku.github.io/koku-doc/getting-started.html#activating-aws-tags_adding-aws-sources[Activating AWS tags for {product-title}]
+:link-azure-export-schedule: link:https://project-koku.github.io/koku-doc/getting-started.html#configuring-an-azure-daily-export-schedule_adding-an-azure-source[Configuring a daily Azure data export schedule]
+
+
+// Application Linjs
+
+:link-cost-management: link:https://cloud.redhat.com/cost-management/[cloud.redhat.com/cost-management/]
+:link-cost-models-app: link:https://cloud.redhat.com/cost-management/cost-models/cost-models[Cost Models]
+:link-sources: link:https://cloud.redhat.com/settings/sources[https://cloud.redhat.com/settings/sources]

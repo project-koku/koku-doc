@@ -23,17 +23,17 @@ This table provides details on the parameters available to use for data export r
 |Parameter|Format|Example|Details
 |start_date|ISO-8601 formatted start date (inclusive)|'2019-09-01'|The first day in a date range you want to view cost data for.
 |end_date|ISO-8601 formatted end date (exclusive)|'2019-10-01'|The end date is outside the desired date range for the request.
-|bucket_name|Destination Amazon S3 bucket name|'koku-customer-sample-bucket'|The bucket must be configured to allow cost management to write files to it.
+|bucket_name|Destination Amazon S3 bucket name|'cost-customer-sample-bucket'|The bucket must be configured to allow {product-title} to write files to it.
 |====
 
 .Example request
 
-The following example requests data for the entire month of September 2019, to be written to the _koku-customer-sample-bucket_ AWS S3 bucket:
+The following example requests data for the entire month of September 2019, to be written to the _cost-customer-sample-bucket_ AWS S3 bucket:
 
 ----
 http localhost:8000/api/cost-management/v1/dataexportrequests/ \
     HTTP_X_RH_IDENTITY:"${IDENTITY}" \
     start_date='2019-09-01' \
     end_date='2019-10-01' \
-    bucket_name='koku-customer-sample-bucket'
+    bucket_name='cost-customer-sample-bucket'
 ----

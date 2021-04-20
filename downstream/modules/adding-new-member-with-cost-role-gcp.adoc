@@ -18,18 +18,18 @@ A new billing service account member must be created in your project that can ex
   ** `resourcemanager.projects.setIamPolicy`
 +
 * Google Cloud xref:creating-a-project-gcp_{context}[project]
-* Cost management Identity and Access Management (IAM) xref:creating-iam-role-gcp_{context}[role]
+* {product-title} Identity and Access Management (IAM) xref:creating-iam-role-gcp_{context}[role]
 
 .Procedure
 
 . Navigate to menu:IAM & Admin[IAM] in link:https://console.cloud.google.com/[Google Cloud Console].
-. Select the cost management project from the dropdown in the top menu bar.
+. Select the {product-title} project from the dropdown in the top menu bar.
 . Click btn:[ADD] at the top of the page.
 . Paste this into the *New members* field:
 +
 `billing-export@red-hat-cost-management.iam.gserviceaccount.com`
 +
-. Select the cost management IAM role.
+. Select the {product-title} IAM role.
 . Click btn:[SAVE]
 
 .Verification steps

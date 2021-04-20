@@ -7,11 +7,11 @@
 
 // The URL for this procedure needs to go in the UI code in the Sources dialog.
 
-The Usage Collector connects to your OpenShift cluster and collects usage data required for cost management.
+The Usage Collector connects to your OpenShift cluster and collects usage data required for {product-title}.
 
 The Usage Collector is an Ansible playbook wrapped in a minimal script that performs setup and collecting tasks. During the setup phase, configuration is stored for connectivity to the OpenShift cluster and usage report resources are created to enable the ongoing collection of usage data.
 
-During the collection phase, usage data is retrieved from the Operator Metering endpoint and compressed into a package that is uploaded for processing by cost management via the Red Hat Insights Client.
+During the collection phase, usage data is retrieved from the Operator Metering endpoint and compressed into a package that is uploaded for processing by {product-title} via the Red Hat Insights Client.
 
 . Download the Usage Collector from _https://github.com/project-koku/korekuta/archive/master.zip_ on the same system where the Red Hat Insights Client was installed, using your browser or with the following command:
 +
@@ -64,7 +64,7 @@ You will be prompted for your sudo password and the Ansible playbook will execut
 ----
 TASK [setup : Display New Cluster Identifier] **********************************
 ok: [localhost] => {
-    "msg": "Use the following value, <YOUR_OCP_IDENTIFIER>, for the cluster identifier when configuring an OCP provider in cost management."
+    "msg": "Use the following value, <YOUR_OCP_IDENTIFIER>, for the cluster identifier when configuring an OCP provider in {product-title}."
 }
 ----
 ====

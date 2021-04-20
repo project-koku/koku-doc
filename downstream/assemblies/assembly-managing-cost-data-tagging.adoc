@@ -16,7 +16,7 @@ endif::[]
 :context: tagging
 
 [role="_abstract"]
-This guide explains in depth how tagging works in cost management, and how you can use tagging to best organize and view your resources to manage your costs.
+This guide explains in depth how tagging works in {product-title}, and how you can use tagging to best organize and view your resources to manage your costs.
 
 // For instructions on adding tags to AWS and OpenShift Container Platform resources, see [LINK TO GETTING STARTED GUIDE]
 

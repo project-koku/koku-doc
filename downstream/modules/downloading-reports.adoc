@@ -9,7 +9,7 @@
 
 
 [role="_abstract"]
-If the `koku-metrics-operator` is configured to run in a restricted network, copy the reports from the PVC where they are temporarily stored to a workstation with unrestricted network access for upload to {platform}.
+If the +{operator}+ is configured to run in a restricted network, copy the reports from the PVC where they are temporarily stored to a workstation with unrestricted network access for upload to {platform}.
 
 [NOTE]
 ====
@@ -19,38 +19,38 @@ The default configuration saves one week of reports. Therefore, download the rep
 .Prerequisites
 
 * Workstation with unrestricted network access.
-* `koku-metrics-operator` reports in your PVC.
+* +{operator}+ reports in your PVC.
 
 .Procedure
 
 . Create the following pod with `claimName` matching the PVC containing the report data:
 +
-[source,bash]
+[source,bash, subs="attributes"]
 ----
 kind: Pod
 apiVersion: v1
 metadata:
   name: volume-shell
-  namespace: koku-metrics-operator
+  namespace: {operator}
 spec:
   volumes:
-  - name: koku-metrics-operator-reports
+  - name: {operator}-reports
     persistentVolumeClaim:
-      claimName: koku-metrics-operator-data
+      claimName: {operator}-data
   containers:
   - name: volume-shell
     image: busybox
     command: ['sleep', '3600']
     volumeMounts:
-    - name: koku-metrics-operator-reports
-      mountPath: /tmp/koku-metrics-operator-reports
+    - name: {operator}-reports
+      mountPath: /tmp/{operator}-reports
 ----
 
 . Use `rsync` to copy all of the files from the PVC to a local folder.
 +
 [source,bash]
 ----
-$ oc rsync volume-shell:/tmp/koku-metrics-operator-reports/upload local/path/to/save/folder
+$ oc rsync volume-shell:/tmp/{operator}-reports/upload local/path/to/save/folder
 ----
 
 . Confirm that the files have been copied.
@@ -60,7 +60,7 @@ $ oc rsync volume-shell:/tmp/koku-metrics-operator-reports/upload local/path/to/
 [source,bash]
 ----
 $ oc rsh volume-shell
-$ rm /tmp/koku-metrics-operator-reports/upload/*
+$ rm /tmp/{operator}-reports/upload/*
 ----
 
 . (Optional) Delete the pod that was used to connect to the PVC.

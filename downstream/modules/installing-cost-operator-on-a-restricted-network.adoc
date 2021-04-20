@@ -1,0 +1,59 @@
+// Module included in the following assemblies:
+//
+// assembly-adding-a-restricted-network-source.adoc
+:_module-type: PROCEDURE
+:experimental:
+
+
+[id="proc_installing-cost-operator-on-a-restricted-network_{context}"]
+= Installing the cost management operator on a restricted network
+
+
+[role="_abstract"]
+For {openshift} clusters that are installed on restricted networks, Operator Lifecycle Manager (OLM) by default cannot access the +{operator}+ hosted remotely because those remote sources require full Internet connectivity. Therefore, OLM must be configured to install and run local sources.
+
+.Prerequisites
+
+* {openshift} cluster installed.
+* Workstation with unrestricted network access.
+* You are logged into the {openshift} web console with cluster administrator privileges.
+
+.Procedure
+
+. Complete the following {openshift} procedure to create a local mirror of the +{operator}+: *link:https://access.redhat.com/documentation/en-us/openshift_container_platform/4.7/html/operators/administrator-tasks#olm-restricted-networks[_Using Operator Lifecycle Manager on restricted networks_]*.
++
+ifdef::koku[]
+[NOTE]
+====
+The +{operator}+ is found in the `community-operators` Catalog in the `registry.redhat.io/redhat/community-operator-index:latest` index.
+
+Red Hat recommends pruning unwanted objects from the index before pushing to the mirrored registry. Make sure you keep the +{operator}+ package.
+====
+endif::koku[]
+ifdef::cost[]
+[NOTE]
+====
+The +{operator}+ is found in the `redhat-operators` catalog in the `registry.redhat.io/redhat/redhat-operator-index:v4.7` index.
+
+Red Hat recommends pruning unwanted objects from the index before pushing to the mirrored registry. Make sure you keep the +{operator}+ package.
+====
+endif::cost[]
+
+. Log in to the {openshift} web console and click *Operators > OperatorHub*.
+. Search for and locate *{operator-formal}*.
+. Click the *{operator-formal}* tile.
+ifdef::koku[]
+. If an information panel appears with the *Community Operators* message, click *Continue*.
+endif::koku[]
+. When the *Install Operator* window appears, you must select the +{operator}+ namespace for installation. If the namespace does not yet exist, it is created for you.
+. Click btn:[Install].
+
+
+.Verification steps
+
+* After a short wait, *{operator-formal}* appears in the *Installed Operators* tab under *Project: all projects* or *Project: {operator}*.
+
+[role="_additional-resources"]
+.Additional resources
+
+* For more details on the Operator Lifecycle Manager, see link:https://access.redhat.com/documentation/en-us/openshift_container_platform/4.7/html/operators/understanding-operators#operator-lifecycle-manager-olm[_What is Operator Lifecycle Manager?_]

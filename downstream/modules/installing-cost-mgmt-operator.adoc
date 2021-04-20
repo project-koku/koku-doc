@@ -4,12 +4,12 @@
 :experimental:
 
 [id="installing-cost-mgmt-operator_{context}"]
-== Installing the Cost Management Operator
+== Installing the {product-title} Operator
 
 [role="_abstract"]
-The Cost Management Operator collects the metrics required for cost management.
+The {product-title} Operator collects the metrics required for {product-title}.
 
-Begin adding your OpenShift Container Platform cluster as a source to cost management, then install the Cost Management Operator from OperatorHub.
+Begin adding your OpenShift Container Platform cluster as a source to {product-title}, then install the {product-title} Operator from OperatorHub.
 
 [NOTE]
 ====
@@ -22,16 +22,16 @@ See link:https://access.redhat.com/documentation/en-us/openshift_container_platf
 
 .Procedure
 
-. In the {platform} platform, open the *Sources* menu (https://cloud.redhat.com/settings/sources/) to begin adding an OpenShift source to cost management:
+. In the {platform} platform, open the *Sources* menu (https://cloud.redhat.com/settings/sources/) to begin adding an OpenShift source to {product-title}:
 .. Navigate to *Sources* and click *Add source* to open the Sources wizard.
 .. Enter a name for your source and click *Next*.
-.. Select *Cost Management* as the application and *OpenShift Container Platform* as the source type. Click *Next*.
+.. Select *{product-title}* as the application and *OpenShift Container Platform* as the source type. Click *Next*.
 . In OpenShift, create a namespace called `openshift-metering` if one does not exist, and label the namespace with `openshift.io/cluster-monitoring=true`.
-. In OpenShift, install the Cost Management Operator in the `openshift-metering` namespace, using either the OpenShift web console (search for _cost management_ in OperatorHub) or the CLI.
+. In OpenShift, install the {product-title} Operator in the `openshift-metering` namespace, using either the OpenShift web console (search for _cost management_ in OperatorHub) or the CLI.
 +
 [IMPORTANT]
 ====
-You must install the Cost Management Operator in the `openshift-metering` namespace. Other namespaces are not supported for installation.
+You must install the {product-title} Operator in the `openshift-metering` namespace. Other namespaces are not supported for installation.
 ====
 +
 See link:https://access.redhat.com/documentation/en-us/openshift_container_platform/4.7/html/operators/administrator-tasks#olm-adding-operators-to-a-cluster[Adding Operators to a cluster] in the OpenShift documentation for instructions for installing an Operator.

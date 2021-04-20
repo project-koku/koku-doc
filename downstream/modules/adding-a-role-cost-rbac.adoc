@@ -8,7 +8,7 @@
 = Adding a role
 
 [role="_abstract"]
-Create a new role to manage and limit the scope of information that users can see within cost management.
+Create a new role to manage and limit the scope of information that users can see within {product-title}.
 
 .Prerequisites
 
@@ -19,11 +19,11 @@ Create a new role to manage and limit the scope of information that users can se
 
 .Procedure
 
-. From cost management, click image:configuration-gear.png[] (*Settings*) to navigate to *User Access*.
+. From {product-title}, click image:configuration-gear.png[] (*Settings*) to navigate to *User Access*.
 . Click the *Roles* tab.
 . Click *Create Role* to open the *Add role* wizard.
 . In the *Name and Description* screen, enter a name for the new role, and optionally, a description. Click *Next*.
-. In the *Permission* screen, specify the Red Hat Cloud Services application you are creating the role for (in this case, cost management) as well as the resource and permission type:
+. In the *Permission* screen, specify the Red Hat Cloud Services application you are creating the role for (in this case, {product-title}) as well as the resource and permission type:
 .. For *Application*, enter _cost-management_.
 //UI note -- this should be a drop-down for ease of use.
 .. For *Resource type*, specify the resource this permission will be used to access from the following list:

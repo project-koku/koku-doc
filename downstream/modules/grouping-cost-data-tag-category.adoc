@@ -19,8 +19,8 @@ This example shows how an educational course provider who is running a lab envir
 
 .Prerequisites
 
-* Your OpenShift cluster added as a cost management data source. See _{link-adding-ocp}_ in _Getting started with cost management_ for instructions.
-* Your cloud infrastructure account added as a cost management data source. See _{link-getting-started}_ for instructions for your cloud provider type.
+* Your OpenShift cluster added as a {product-title} data source. See _{link-adding-ocp}_ in _Getting started with cost management_ for instructions.
+* Your cloud infrastructure account added as a {product-title} data source. See _{link-getting-started}_ for instructions for your cloud provider type.
 * Configure tags on your sources. For tips and configuration instructions, see xref:assembly-configuring-tags-sources_configuring-tags-and-labels[].
 * OpenShift tag grouping enabled. See xref:enabling-tag-grouping-OCP_configuring-tags-sources[] for instructions.
 

@@ -11,13 +11,13 @@ ifdef::context[]
 [id="assembly-configuring-tags-and-labels-in-cost-management_{context}"]
 endif::[]
 
-= Configuring tags and labels in cost management
+= Configuring tags and labels in {product-title}
 :context: configuring-tags-and-labels
 
 [role="_abstract"]
-You must configure tags in each source before cost management can use the tags to automatically organize your cost data.
+You must configure tags in each source before {product-title} can use the tags to automatically organize your cost data.
 
-After adding your sources to cost management:
+After adding your sources to {product-title}:
 
 . Tag or label resources on each of your sources. See xref:assembly-configuring-tags-sources_configuring-tags-and-labels[].
 . (Optional) Enable OpenShift tag grouping to further organize your cost data views for each source. See xref:enabling-tag-grouping-OCP_configuring-tags-sources[].

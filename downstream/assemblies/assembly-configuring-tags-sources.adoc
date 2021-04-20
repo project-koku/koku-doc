@@ -15,11 +15,11 @@ endif::[]
 :context: configuring-tags-sources
 
 [role="_abstract"]
-In order to control which tags cost management imports, activate or enable the tags you want to view by source:
+In order to control which tags {product-title} imports, activate or enable the tags you want to view by source:
 
-* AWS tags must be activated, and are then selected and exported to cost management in the Cost and Usage report. See _{link-activating-aws-tags}_ in the _Getting started with cost management_ guide for instructions.
-* Azure tags are exported to cost management in the cost export report configured in _{link-azure-export-schedule}_ in _Getting started with cost management_.
-* OpenShift Container Platform labels are exported by Metering and included in the metrics reports that cost management uses as input. Enable tag key grouping in the _{platform}_ application settings to specify which tags to group your cost data by. See xref:enabling-tag-grouping-OCP_{context}[] for instructions.
+* AWS tags must be activated, and are then selected and exported to {product-title} in the Cost and Usage report. See _{link-activating-aws-tags}_ in the _Getting started with cost management_ guide for instructions.
+* Azure tags are exported to {product-title} in the cost export report configured in _{link-azure-export-schedule}_ in _Getting started with cost management_.
+* OpenShift Container Platform labels are exported by Metering and included in the metrics reports that {product-title} uses as input. Enable tag key grouping in the _{platform}_ application settings to specify which tags to group your cost data by. See xref:enabling-tag-grouping-OCP_{context}[] for instructions.
 
 
 include::../modules/adding-tags-to-an-AWS-resource.adoc[leveloffset=+1]

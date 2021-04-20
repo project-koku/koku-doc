@@ -15,7 +15,7 @@ endif::[]
 :context: restricting-access
 
 [role="_abstract"]
-In certain cases, you may not want users to have access to all cost data, but instead only data specific to their projects or organization. Using role-based access control, you can limit the visibility of resources involved in cost management reports.
+In certain cases, you may not want users to have access to all cost data, but instead only data specific to their projects or organization. Using role-based access control, you can limit the visibility of resources involved in {product-title} reports.
 
 Role-based access control works by organizing users into groups, which can be associated with one or more policies. A policy associates a group with a set of roles. A role defines a permission and a set of resource definitions.
 

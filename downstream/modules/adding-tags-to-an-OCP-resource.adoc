@@ -8,7 +8,7 @@
 = Viewing labels in an OpenShift namespace
 
 [role="_abstract"]
-The AWS or Azure tag equivalent in OpenShift is a label, which also consists of a key:value pair. Cost management collects OpenShift tag data from nodes, pods, and persistent volumes (or persistent volume claims) using Prometheus metrics and Operator Metering.
+The AWS or Azure tag equivalent in OpenShift is a label, which also consists of a key:value pair. {product-title} collects OpenShift tag data from nodes, pods, and persistent volumes (or persistent volume claims) using Prometheus metrics and Operator Metering.
 
 // COST-571, only the collected tags are available. User cannot add more tags/labels. We do not want users adding tags using the OCP templates, which is why we struck that information. For the future, we are planning on supporting the namespace labels (part being removed) once the operator rework is done. So come next January we will likely be adding this section back.
 //Module title changed to "Viewing" because users cannot add. Change back to "Adding" when that capability is restored.
@@ -33,7 +33,7 @@ To add a label to a namespace in OpenShift:
 /path/to/ocp_usage.sh –collect
 ----
 
-Wait an hour for the data to refresh and be visible in cost management.
+Wait an hour for the data to refresh and be visible in {product-title}.
 
 ////
 

@@ -15,18 +15,18 @@
 
 To export cost data to your AWS bucket as a CSV file, provide a POST request with your desired start date, end date, and AWS bucket.
 
-You can request data as far back as the date you added the source to cost management.
+You can request data as far back as the date you added the source to {product-title}.
 
 .Prerequisites
 
-Using the cost management data export request API requires:
+Using the {product-title} data export request API requires:
 
-* An AWS bucket configured to receive (list and write) files from cost management. As administrator for your AWS account:
+* An AWS bucket configured to receive (list and write) files from {product-title}. As administrator for your AWS account:
 
-. Create a new AWS S3 bucket or choose an existing one to use for receiving data exports from cost management.
+. Create a new AWS S3 bucket or choose an existing one to use for receiving data exports from {product-title}.
 . Edit this bucket's *Access Control List*.
-. Add *Access for other AWS accounts* to allow cost management to list and write files with the following settings:
-** Canonical ID (for cost management): _0674b6ccec2e5d6212b35910e6c5fac24e94cee66371847b46c981edfa3df63c_
+. Add *Access for other AWS accounts* to allow {product-title} to list and write files with the following settings:
+** Canonical ID (for {product-title}): _0674b6ccec2e5d6212b35910e6c5fac24e94cee66371847b46c981edfa3df63c_
 ** List objects: Yes
 ** Write objects: Yes
 +
@@ -49,19 +49,19 @@ http localhost:8000/api/cost-management/v1/dataexportrequests/ \
     HTTP_X_RH_IDENTITY:"${IDENTITY}" \
     start_date='2019-09-01' \
     end_date='2019-10-01' \
-    bucket_name='cost management-customer-sample-bucket'  
+    bucket_name='{product-title}-customer-sample-bucket'  
 ----
 
-After running the request, cost management will return a response to confirm it has started the request process, but the remainder of the operations are asynchronous. To see the current state of your data export request, you must check back at the API.
+After running the request, {product-title} will return a response to confirm it has started the request process, but the remainder of the operations are asynchronous. To see the current state of your data export request, you must check back at the API.
 
 //HOW? What command to run?
 
 [NOTE]
 ====
-Cost management also checks for any in-progress requests with the same date parameters as that request. If cost management is already working on an export with the same dates, the new request is rejected with a 400 error and the message _"A pending or processing data export already exists with the given "start_date" and "end_date"."_ 
+{product-title} also checks for any in-progress requests with the same date parameters as that request. If {product-title} is already working on an export with the same dates, the new request is rejected with a 400 error and the message _"A pending or processing data export already exists with the given "start_date" and "end_date"."_ 
 ====
 
-When complete, the exported files are written with hierarchical paths that include the cost management account ID, source/provider UUID, and date. An example file path looks like:
+When complete, the exported files are written with hierarchical paths that include the {product-title} account ID, source/provider UUID, and date. An example file path looks like:
 
 `/data_archive/acct1460290/aws/4cef9a22-4302-4776-a4b7-fac050da23a0/2019/11/24/reporting_awscostentrylineitem_daily_summary.csv.gz`
 

@@ -5,21 +5,21 @@
 :experimental:
 
 [id="verifying-cost-operator_{context}"]
-= Verifying `koku-metrics-operator`
+= Verifying the cost operator
 
 [role="_abstract"]
-View the Koku configuration YAML file to verify the cost management operator is functioning.
+View the configuration YAML file to verify the {product-title} operator is functioning.
 
 .Prerequisites
-* You can access the OpenShift Container Platform web console.
+* You can access the {openshift} web console.
 * You can locate and view the *Installed Operators* tab.
 
 .Procedure
 
 . Click on the *Installed Operators* tab.
-. In the list of installed operators, click on the *Koku Metrics Operator* entry.
-. When the metrics operator window opens, click on the *KokuMetricsConfig* tab to show a list of the configuration file names.
-. In the name list, click on the configuration file. In the default installation, the file name is `kokumetricscfg-sample`.
+. In the list of installed operators, click on the *{operator-formal}* entry.
+. When the metrics operator window opens, click on the *{operator-config}* tab to show a list of the configuration file names.
+. In the name list, click on the configuration file. In the default installation, the file name is +{sample-file}+.
 . When the Details window opens, click on the *YAML* tab. and visually check the following items.
 .. Prometheus configuration and connection are `true`.
 +

@@ -7,9 +7,9 @@
 
 // The URL for this procedure needs to go in the UI code in the Sources dialog.
 
-The Usage Collector retrieves usage data from the Operator Metering endpoint and compresses it into a package (an OpenShift Container Platform metrics report) that is uploaded for processing by cost management via the Red Hat Insights Client. Data collection is performed via the _ocp_usage.sh_ script.
+The Usage Collector retrieves usage data from the Operator Metering endpoint and compresses it into a package (an OpenShift Container Platform metrics report) that is uploaded for processing by {product-title} via the Red Hat Insights Client. Data collection is performed via the _ocp_usage.sh_ script.
 
-Create a cron job to regularly upload data collected by the Usage Collector to cost management.
+Create a cron job to regularly upload data collected by the Usage Collector to {product-title}.
 
 [IMPORTANT]
 ====

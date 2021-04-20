@@ -8,17 +8,19 @@
 = Installing the cost operator
 
 [role="_abstract"]
-Install the Koku operator `koku-metrics-operator` from the OpenShift Container Platform web console.
+Install the *{operator-formal}* from the {openshift} web console.
 
 .Prerequisites
-* You are logged into the OpenShift Container Platform web console with cluster administrator privileges.
+* You are logged into the {openshift} web console with cluster administrator privileges.
 
 .Procedure
 
-. Login to the OpenShift Container Platform web console and click on the *Operators > OperatorHub* tab.
-. Search for and locate *Koku Metrics Operator*.
-. Click on the displayed *Koku Metrics Operator* tile.
+. Login to the {openshift} web console and click on the *Operators > OperatorHub* tab.
+. Search for and locate *{operator-formal}*.
+. Click on the displayed *{operator-formal}* tile.
+ifdef::koku[]
 . If an information panel appears with the Community Operators message, click *Continue*.
-. When the *Install Operator* window appears, you must select the *`koku-metrics-operator`* namespace for installation. If the namespace does not yet exist, it is created for you.
+endif::koku[]
+. When the *Install Operator* window appears, you must select the +{operator}+ namespace for installation. If the namespace does not yet exist, it is created for you.
 . Click on the *Install* button.
-. After a short wait, *Koku Metrics Operator* appears in the *Installed Operators* tab under *Project: all projects* or *Project: koku-metrics-operator*.
+. After a short wait, *{operator-formal}* appears in the *Installed Operators* tab under *Project: all projects* or *Project: {operator}*.

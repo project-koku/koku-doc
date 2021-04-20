@@ -9,7 +9,7 @@
 
 
 [role="_abstract"]
-You may want to review the metrics collected and sent to cost management. This can also assist with troubleshooting incorrect or missing data in cost management.
+You may want to review the metrics collected and sent to {product-title}. This can also assist with troubleshooting incorrect or missing data in {product-title}.
 
 [NOTE]
 ====
@@ -23,6 +23,6 @@ Google may take several hours to export billing data to your BigQuery dataset.
 .Procedure
 
 . Navigate to menu:Big Data[BigQuery] in link:https://console.cloud.google.com/[Google Cloud Console].
-. Select the cost management project in the *Explorer* panel.
-. Click `gcp_billing_export_v1_xxxxxx_xxxxxx_xxxxxx` table under the cost management dataset.
+. Select the {product-title} project in the *Explorer* panel.
+. Click `gcp_billing_export_v1_xxxxxx_xxxxxx_xxxxxx` table under the {product-title} dataset.
 . Click the *Preview* tab to view the metrics.

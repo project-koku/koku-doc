@@ -19,7 +19,7 @@ This example shows how to add a 10% markup to the information collected from the
 .Prerequisites
 
 * A user with Cost Administrator or Cost Price List Administrator permissions. See _{link-limiting-access}_ in _Getting started with cost management_ for instructions on configuring user roles.
-* Your AWS account added to cost management as a data source. See _{link-adding-aws}_ in _Getting started with cost management_ for instructions.
+* Your AWS account added to {product-title} as a data source. See _{link-adding-aws}_ in _Getting started with cost management_ for instructions.
 
 
 .Procedure

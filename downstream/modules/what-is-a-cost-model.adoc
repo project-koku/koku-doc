@@ -11,7 +11,7 @@
 It can be difficult to find out the real cost of cloud-based IT systems. Different sources provide a variety of cost
 data and metrics, which can be complicated to calculate together and accurately distribute the costs.
 
-A cost model is a framework used to define the calculations for the costs stored in cost management. Using a cost model, you can associate a price to metrics provided by your
+A cost model is a framework used to define the calculations for the costs stored in {product-title}. Using a cost model, you can associate a price to metrics provided by your
 sources to charge for utilization of resources.
 
 In some cases, those costs are related to the raw costs

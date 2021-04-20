@@ -7,19 +7,19 @@
 = Creating an Azure resource group and storage account
 
 [role="_abstract"]
-Cost export data is written to a storage account, which exists within a resource group. The resource group must be accessible by cost management in order to read the Azure cost data.
+Cost export data is written to a storage account, which exists within a resource group. The resource group must be accessible by {product-title} in order to read the Azure cost data.
 
-Create a new storage account in Azure to contain the cost data and metrics that cost management will collect. This requires a resource group; Red Hat recommends creating a dedicated resource group for this storage account.
+Create a new storage account in Azure to contain the cost data and metrics that {product-title} will collect. This requires a resource group; Red Hat recommends creating a dedicated resource group for this storage account.
 
 [NOTE]
 ====
-You must have a Red Hat account user with Organization Administrator entitlements before you can add sources to cost management.
+You must have a Red Hat account user with Organization Administrator entitlements before you can add sources to {product-title}.
 ====
 
-. In the {platform} platform, open the *Sources* menu (https://cloud.redhat.com/settings/sources/) to begin adding an Azure source to cost management:
+. In the {platform} platform, open the *Sources* menu (https://cloud.redhat.com/settings/sources/) to begin adding an Azure source to {product-title}:
 .. Navigate to *Sources* and click *Add a source* to open the Sources wizard.
 .. Enter a name for your source and click *Next*.
-.. Select *Cost Management* as the application and *Microsoft Azure* as the source type. Click *Next*.
+.. Select *{product-title}* as the application and *Microsoft Azure* as the source type. Click *Next*.
 . Create a resource group and storage account in your Azure account using the instructions in the See link:https://docs.microsoft.com/en-us/azure/storage/common/storage-quickstart-create-account?tabs=azure-portal[Azure documentation] _Create a storage account_.
 +
 //Still need this note?

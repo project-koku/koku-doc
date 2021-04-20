@@ -20,16 +20,16 @@ There are two procedures required when you configure basic authentication.
 == Creating the secret key/value pair for basic authentication
 
 .Prerequisites
-* You are logged into the OpenShift Container Platform web console with cluster administrator privileges.
-* The *Koku Metrics Operator* appears in the *Installed Operators* tab.
+* You are logged into the {openshift} web console with cluster administrator privileges.
+* The *{operator-formal}* appears in the *Installed Operators* tab.
 * You have a username and password for your {platform} account.
 
 
 .Procedure
-This procedure describes setting up basic authentication using the OpenShift Container Platform web console.
+This procedure describes setting up basic authentication using the {openshift} web console.
 
-. In the OpenShift Container Platform web console, click on the *Workloads > Secrets* tab.
-. In the *Secrets* window, select *Project:koku-metrics-operator* from the dropdown.
+. In the {openshift} web console, click on the *Workloads > Secrets* tab.
+. In the *Secrets* window, select *Project:{operator}* from the dropdown.
 . Click the *Create > Key/Value Secret* selection.
 . In the *Create Key/Value Secret* window enter the following information to create a new secret that contains a username key and a password key and a value for each key.
 .. Enter a name for your secret in the *Secret Name* field.
@@ -72,22 +72,22 @@ NOTE: Do _not_ add the secret to the workload.
 [[modify-yaml-file]]
 == Modifying the YAML file
 
-Modify the Koku metrics operator API YAML file to use basic authentication with a secret username and password key/value pair.
+Modify the {operator-formal} API YAML file to use basic authentication with a secret username and password key/value pair.
 
 
 .Prerequisites
-* You are logged into the OpenShift Container Platform web console with cluster administrator privileges.
+* You are logged into the {openshift} web console with cluster administrator privileges.
 * You created a secret name for the username and password key/value pair.
-* The Koku metrics operator is installed.
+* The {operator-formal} is installed.
 
 .Procedure
 
 . Click on the *Operators > Installed Operators* tab.
-. Locate the row that contains *KokuMetricsOperator* and click on the *KokuMetricsConfig* link that is under the *Provided APIs* heading.
-. When the *KokuMetricsConfigs* window appears, click on Koku configuration file listed in the *Name* column.
+. Locate the row that contains *{operator-formal}* and click on the *{operator-formal}* link that is under the *Provided APIs* heading.
+. When the *{operator-config}* window appears, click on the configuration file listed in the *Name* column.
 +
-The default name is *kokumetricscfg-sample*.
-. When the *kokumetricscfg-sample* window appears, click in the *YAML* tab to open an edit and view window.
+The default name is +{sample-file}+.
+. When the +{sample-file}+ window appears, click in the *YAML* tab to open an edit and view window.
 . Locate the following lines in the YAML view.
 +
 ----

@@ -15,7 +15,7 @@ endif::[]
 :context: using-cost-models
 
 [role="_abstract"]
-You can use cost models in cost management to apply a price to usage in your hybrid cloud environment, then distribute the costs to resources.
+You can use cost models in {product-title} to apply a price to usage in your hybrid cloud environment, then distribute the costs to resources.
 
 ifdef::cost[]
 
