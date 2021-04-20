@@ -48,7 +48,7 @@ spec:
 
 . Use `rsync` to copy all of the files from the PVC to a local folder.
 +
-[source,bash]
+[source,bash, subs="attributes"]
 ----
 $ oc rsync volume-shell:/tmp/{operator}-reports/upload local/path/to/save/folder
 ----
@@ -57,7 +57,7 @@ $ oc rsync volume-shell:/tmp/{operator}-reports/upload local/path/to/save/folder
 
 . Connect to the pod and delete the contents of the upload folder.
 +
-[source,bash]
+[source,bash, subs="attributes"]
 ----
 $ oc rsh volume-shell
 $ rm /tmp/{operator}-reports/upload/*

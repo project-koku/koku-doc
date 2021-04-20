@@ -20,7 +20,7 @@ After the +{operator}+ is installed, you must configure it to run on a restricte
 
 . From the {openshift} web console, select *Operators > Installed Operators > +{operator}+ > {operator-config} > Create Instance*.
 
-. Specify the desired storage. If not specified, the operator will create a default persistent volume claim called `+{operator}+-data` with *10Gi* of storage.
+. Specify the desired storage. If not specified, the operator will create a default persistent volume claim called +{operator}-data+ with *10Gi* of storage.
 +
 [NOTE]
 ====
@@ -84,7 +84,7 @@ Any report generated after the total number specified will replace the oldest re
 
 . Verify that a report has been created in the `packaging` section.
 +
-[source,yaml]
+[source,yaml, subs="attributes"]
 ----
     packaging:
       last_successful_packaging_time: `current date and time`
@@ -93,7 +93,7 @@ Any report generated after the total number specified will replace the oldest re
       number_of_reports_stored: 1
       packaged_files:
         - >-
-            /tmp/+{operator}+-reports/upload/YYYYMMDDTHHMMSS-cost-mgmt.tar.gz
+            /tmp/{operator}-reports/upload/YYYYMMDDTHHMMSS-cost-mgmt.tar.gz
 
 ----
 +
