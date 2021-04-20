@@ -1691,7 +1691,7 @@ Do <em>not</em> add the secret to the workload.
 <p>From the OpenShift Container Platform web console, select <strong>Operators &gt; Installed Operators &gt; <code>koku-metrics-operator</code> &gt; KokuMetricsConfig &gt; Create Instance</strong>.</p>
 </li>
 <li>
-<p>Specify the desired storage. If not specified, the operator will create a default persistent volume claim called <code>+{operator}+-data</code> with <strong>10Gi</strong> of storage.</p>
+<p>Specify the desired storage. If not specified, the operator will create a default persistent volume claim called <code>koku-metrics-operator-data</code> with <strong>10Gi</strong> of storage.</p>
 <div class="admonitionblock note">
 <table>
 <tr>
@@ -1793,8 +1793,8 @@ Do <em>not</em> add the secret to the workload.
       max_size_MB: 100
       number_of_reports_stored: 1
       packaged_files:
-        - &gt;-
-            /tmp/+{operator}+-reports/upload/YYYYMMDDTHHMMSS-cost-mgmt.tar.gz</code></pre>
+        - >-
+            /tmp/koku-metrics-operator-reports/upload/YYYYMMDDTHHMMSS-cost-mgmt.tar.gz</code></pre>
 </div>
 </div>
 <div class="admonitionblock note">
@@ -1876,7 +1876,7 @@ spec:
 <p>Use <code>rsync</code> to copy all of the files from the PVC to a local folder.</p>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-bash" data-lang="bash">$ oc rsync volume-shell:/tmp/{operator}-reports/upload local/path/to/save/folder</code></pre>
+<pre class="highlight"><code class="language-bash" data-lang="bash">$ oc rsync volume-shell:/tmp/koku-metrics-operator-reports/upload local/path/to/save/folder</code></pre>
 </div>
 </div>
 </li>
@@ -1888,7 +1888,7 @@ spec:
 <div class="listingblock">
 <div class="content">
 <pre class="highlight"><code class="language-bash" data-lang="bash">$ oc rsh volume-shell
-$ rm /tmp/{operator}-reports/upload/*</code></pre>
+$ rm /tmp/koku-metrics-operator-reports/upload/*</code></pre>
 </div>
 </div>
 </li>
@@ -3603,7 +3603,7 @@ metadata:
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2021-04-20 11:53:44 UTC
+Last updated 2021-04-20 12:14:12 UTC
 </div>
 </div>
 </body>
