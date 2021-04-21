@@ -5,7 +5,8 @@
 :numbered!:
 :compat-mode:
 :experimental:
-:numbered:
+:stylesheet: ../../stylesheets/panda.css
+
 // Custom attributes
 :koku:
 include::attributes/sharedattributes.adoc[]

@@ -5,13 +5,13 @@
 :numbered!:
 :compat-mode:
 :experimental:
+:stylesheet: ../../stylesheets/panda.css
 
 // Custom attributes
-include::attributes/cost.adoc[]
+:koku:
+include::attributes/sharedattributes.adoc[]
 
-:cost:
 
-:numbered:
 
 include::assemblies/assembly-using-cost-models.adoc[leveloffset=+1]
 
