@@ -25,7 +25,7 @@ NOTE: To install and configure {operator-formal} from the {openshift} web consol
 .Task summary
 * Install the {operator-formal} (+{operator}+) and use the default token authentication.
 * Create a {operator-config} YAML file that configures +{operator}+
-* Create a {product-title} {openshift} source with a new installation, or confirm an existing source with an replacement installation.
+* Create a {product-title} {openshift} source with a new installation, or confirm an existing source with a replacement installation.
 * After installing the {operator-formal}, delete the old cost operator. This task is required only when a previous {product-title} operator is installed.
 
 
