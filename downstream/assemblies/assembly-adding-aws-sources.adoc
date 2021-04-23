@@ -24,11 +24,10 @@ You must have a Red Hat account user with Organization Administrator entitlement
 
 When you add your AWS account as a source, this creates a read-only connection to AWS in order to collect cost information hourly in {product-title}, but does not make any changes to the AWS account.
 
-[IMPORTANT]
-====
-You must use an AWS master account for this procedure, as a linked AWS account does not have sufficient access to create billing accounts. After you add the master account as a source, {product-title} will collect data from any linked accounts as well.
-====
-
+// [IMPORTANT]
+// ====
+// You must use an AWS master account for this procedure, as a linked AWS account does not have sufficient access to create billing // accounts. After you add the master account as a source, {product-title} will collect data from any linked accounts as well.
+// ====
 Before you can add your AWS account to {product-title} as a data source, you must configure the following services on your AWS account to allow {product-title} access to metrics:
 
 . An S3 bucket to store cost and usage data reporting for {product-title}

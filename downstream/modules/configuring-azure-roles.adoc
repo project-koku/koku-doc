@@ -27,8 +27,8 @@ $ az ad sp create-for-rbac -n "CostManagement" --role "Storage Account Contribut
 . In the {platform} *Sources* wizard, enter your Azure *Tenant ID*, *Client ID*, and *Client Secret*.
 . In Azure Cloud Shell, run the following command to create a {product-title} Reader role with your subscription ID. Copy the full command from the {platform} *Sources* wizard, which will automatically substitute your Azure subscription ID obtained earlier for _<SubscriptionID>_:
 +
-----
-$ az role assignment create --role "{product-title} Reader" --assignee http://CostManagement --subscription <SubscriptionID>
+---- 
+$ az role assignment create --role "Cost Management Reader" --assignee http://CostManagement --subscription <SubscriptionID>
 ----
 +
 . Click *Next*.
