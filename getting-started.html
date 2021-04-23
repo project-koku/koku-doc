@@ -2147,20 +2147,6 @@ $ rm /tmp/koku-metrics-operator-reports/upload/*</code></pre>
 <div class="paragraph">
 <p>When you add your AWS account as a source, this creates a read-only connection to AWS in order to collect cost information hourly in cost management, but does not make any changes to the AWS account.</p>
 </div>
-<div class="admonitionblock important">
-<table>
-<tr>
-<td class="icon">
-<div class="title">Important</div>
-</td>
-<td class="content">
-<div class="paragraph">
-<p>You must use an AWS master account for this procedure, as a linked AWS account does not have sufficient access to create billing accounts. After you add the master account as a source, cost management will collect data from any linked accounts as well.</p>
-</div>
-</td>
-</tr>
-</table>
-</div>
 <div class="paragraph">
 <p>Before you can add your AWS account to cost management as a data source, you must configure the following services on your AWS account to allow cost management access to metrics:</p>
 </div>
@@ -2607,7 +2593,7 @@ to obtain the display names of AWS member accounts if you are using consolidated
 <p>In Azure Cloud Shell, run the following command to create a cost management Reader role with your subscription ID. Copy the full command from the <a href="https://cloud.redhat.com">cloud.redhat.com</a> <strong>Sources</strong> wizard, which will automatically substitute your Azure subscription ID obtained earlier for <em>&lt;SubscriptionID&gt;</em>:</p>
 <div class="listingblock">
 <div class="content">
-<pre>$ az role assignment create --role "{product-title} Reader" --assignee http://CostManagement --subscription &lt;SubscriptionID&gt;</pre>
+<pre>$ az role assignment create --role "Cost Management Reader" --assignee http://CostManagement --subscription &lt;SubscriptionID&gt;</pre>
 </div>
 </div>
 </li>
@@ -3752,7 +3738,7 @@ metadata:
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2021-04-22 07:40:11 UTC
+Last updated 2021-04-23 08:47:55 UTC
 </div>
 </div>
 </body>
