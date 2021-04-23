@@ -29,5 +29,5 @@
 // Application Linjs
 
 :link-cost-management: link:https://cloud.redhat.com/cost-management/[cloud.redhat.com/cost-management/]
-:link-cost-models: link:https://cloud.redhat.com/cost-management/cost-models/cost-models[Cost Models]
+:link-cost-models-app: link:https://cloud.redhat.com/cost-management/cost-models/cost-models[Cost Models]
 :link-sources: link:https://cloud.redhat.com/settings/sources[https://cloud.redhat.com/settings/sources]
