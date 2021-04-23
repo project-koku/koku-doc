@@ -70,6 +70,6 @@ REMOVED FOR COST-148 / COST-161
 . In the {platform} *Sources* wizard, paste your Role ARN and click *Next*.
 . Review the details and click *Finish* to add the AWS account to {product-title}.
 
-{product-title} will begin collecting cost and usage data from your master AWS account and any linked AWS accounts.
+Cost management will begin collecting cost and usage data from your AWS account and any linked AWS accounts.
 
 The data can take a few days to populate before it shows on the {product-title} dashboard (https://cloud.redhat.com/cost-management/).
