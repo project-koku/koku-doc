@@ -15,7 +15,7 @@ You can access the {product-title} application from https://cloud.redhat.com/cos
 {product-title} allows you to simplify management of resources and costs across various environments, including:
 
 * Container platforms such as OpenShift Container Platform
-* Public clouds such as Amazon Web Services (AWS) and Microsoft Azure
+* Public clouds such as Amazon Web Services (AWS), Google Cloud, and Microsoft Azure
 
 
 The {product-title} application allows you to:
