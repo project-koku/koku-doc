@@ -667,12 +667,6 @@ div.unbreakable { page-break-inside: avoid; }
 <li><a href="#proc_adding-a-gcp-account_adding-gcp-sources">Adding your Google Cloud account as a source</a></li>
 </ul>
 </li>
-<li><a href="#assembly-adding-ocp-sources">Adding an OpenShift Container Platform 4.3 and 4.4 source to cost management</a>
-<ul class="sectlevel2">
-<li><a href="#installing-cost-mgmt-operator_adding-previous-source">Installing the cost management Operator</a></li>
-<li><a href="#configuring-cost-mgmt-operator_adding-previous-source">Configuring the cost management Operator</a></li>
-</ul>
-</li>
 <li><a href="#assembly-cost-management-next-steps">Next steps for managing your costs</a>
 <ul class="sectlevel2">
 <li><a href="#_configure_tagging_for_your_sources">Configure tagging for your sources</a></li>
@@ -690,7 +684,7 @@ div.unbreakable { page-break-inside: avoid; }
 <p>This document provides instructions to begin using cost management, including prerequisites and instructions for connecting your cloud environments, and configuring users and permissions.</p>
 </div>
 <div class="paragraph">
-<p>After completing the setup described in this guide, you will be able to track cost and usage data for your Amazon Web Services (AWS), Microsoft Azure, and OpenShift Container Platform environments.</p>
+<p>After completing the setup described in this guide, you will be able to track cost and usage data for your Amazon Web Services (AWS), Microsoft Azure, Google Cloud, and OpenShift Container Platform environments.</p>
 </div>
 <div class="sect2">
 <h3 id="about-cost-management_getting-started">About cost management</h3>
@@ -709,7 +703,7 @@ div.unbreakable { page-break-inside: avoid; }
 <p>Container platforms such as OpenShift Container Platform</p>
 </li>
 <li>
-<p>Public clouds such as Amazon Web Services (AWS) and Microsoft Azure</p>
+<p>Public clouds such as Amazon Web Services (AWS), Google Cloud, and Microsoft Azure</p>
 </li>
 </ul>
 </div>
@@ -1082,9 +1076,6 @@ div.unbreakable { page-break-inside: avoid; }
 <div class="sectionbody">
 <div class="paragraph _abstract">
 <p>To support cost management in Red&#160;Hat OpenShift Container Platform 4.5 and more recent versions, a new community operator is introduced, <code>koku-metrics-operator</code>.</p>
-</div>
-<div class="paragraph">
-<p>The community <code>cost-mgmt-operator</code> supported in OpenShift Container Platform 4.3 and 4.4 is deprecated. For installing this deprecated operator, see <a href="#assembly-adding-ocp-sources">Adding an OpenShift Container Platform 4.3 and 4.4 source to cost management</a>.</p>
 </div>
 <div class="sect2">
 <h3 id="installation-overview_adding-an-ocp-source">Installation tasks summary</h3>
@@ -2390,7 +2381,7 @@ $ rm /tmp/koku-metrics-operator-reports/upload/*</code></pre>
 <div class="sect3">
 <h4 id="enabling-additional-aws-account-access_adding-aws-sources">Enabling additional account access for cost and usage consumption</h4>
 <div class="paragraph _abstract">
-<p>cost management can display additional data that might be useful. For example:</p>
+<p>Cost management can display additional data that might be useful. For example:</p>
 </div>
 <div class="ulist">
 <ul>
@@ -3212,452 +3203,6 @@ to obtain the display names of AWS member accounts if you are using consolidated
 </div>
 </div>
 <div class="sect1">
-<h2 id="assembly-adding-ocp-sources">Adding an OpenShift Container Platform 4.3 and 4.4 source to cost management</h2>
-<div class="sectionbody">
-<div class="admonitionblock note">
-<table>
-<tr>
-<td class="icon">
-<div class="title">Note</div>
-</td>
-<td class="content">
-<div class="paragraph">
-<p>Use these instructions with OpenShift Container Platform 4.3 or 4.4 for use with the <code>cost-mgmt-operator</code> operator. This operator is deprecated for OpenShift Container Platform 4.5 and later.</p>
-</div>
-<div class="paragraph">
-<p>For OCP 4.5 and later, see <a href="#assembly-adding-openshift-container-platform-source">Adding an OpenShift Container Platform source to cost management</a>.</p>
-</div>
-</td>
-</tr>
-</table>
-</div>
-<div class="paragraph _abstract">
-<p>To add an OpenShift Container Platform cluster as a source to cost management, you must first configure your cluster to provide usage data (metrics) using the cost management Operator.</p>
-</div>
-<div class="admonitionblock note">
-<table>
-<tr>
-<td class="icon">
-<div class="title">Note</div>
-</td>
-<td class="content">
-<div class="paragraph">
-<p>You must have a Red Hat account user with Organization Administrator entitlements before you can add sources to cost management.</p>
-</div>
-</td>
-</tr>
-</table>
-</div>
-<div class="paragraph">
-<p>The cost management Operator (<code>cost-mgmt-operator</code>) collects the metrics required for cost management by:</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>Using Operator Metering to create usage reports specific to cost management.</p>
-</li>
-<li>
-<p>Collecting and packaging these reports to a tarball which is uploaded to cost management through <a href="https://cloud.redhat.com">cloud.redhat.com</a>.</p>
-</li>
-</ul>
-</div>
-<div class="paragraph">
-<p>To add your OpenShift Container Platform cluster as a cost management source:</p>
-</div>
-<div class="olist arabic">
-<ol class="arabic">
-<li>
-<p>Install the cost management Operator in OpenShift from OperatorHub</p>
-</li>
-<li>
-<p>Configure the cost management Operator to collect OpenShift usage data (metrics) using Operator Metering</p>
-</li>
-<li>
-<p>Provide the cluster identifier to cost management</p>
-</li>
-</ol>
-</div>
-<div class="paragraph">
-<p>As you will complete some of the following steps in OpenShift Container Platform, and some steps in the <a href="https://cloud.redhat.com">cloud.redhat.com</a> platform (<a href="https://cloud.redhat.com/settings/sources/" class="bare">https://cloud.redhat.com/settings/sources/</a>), have both applications open in a web browser, as well as a terminal to access the command line interface (CLI).</p>
-</div>
-<div class="sect2">
-<h3 id="installing-cost-mgmt-operator_adding-previous-source">Installing the cost management Operator</h3>
-<div class="paragraph _abstract">
-<p>The cost management Operator collects the metrics required for cost management.</p>
-</div>
-<div class="paragraph">
-<p>Begin adding your OpenShift Container Platform cluster as a source to cost management, then install the cost management Operator from OperatorHub.</p>
-</div>
-<div class="admonitionblock note">
-<table>
-<tr>
-<td class="icon">
-<div class="title">Note</div>
-</td>
-<td class="content">
-<div class="paragraph">
-<p>See <a href="https://access.redhat.com/documentation/en-us/openshift_container_platform/4.7/html/operators">Operators</a> in the OpenShift documentation for more information about Operators and OperatorHub.</p>
-</div>
-</td>
-</tr>
-</table>
-</div>
-<div class="ulist">
-<div class="title">Prerequisites</div>
-<ul>
-<li>
-<p>OpenShift Container Platform 4.3 or 4.4</p>
-</li>
-</ul>
-</div>
-<div class="olist arabic">
-<div class="title">Procedure</div>
-<ol class="arabic">
-<li>
-<p>In the <a href="https://cloud.redhat.com">cloud.redhat.com</a> platform, open the <strong>Sources</strong> menu (<a href="https://cloud.redhat.com/settings/sources/" class="bare">https://cloud.redhat.com/settings/sources/</a>) to begin adding an OpenShift source to cost management:</p>
-<div class="olist loweralpha">
-<ol class="loweralpha" type="a">
-<li>
-<p>Navigate to <strong>Sources</strong> and click <strong>Add source</strong> to open the Sources wizard.</p>
-</li>
-<li>
-<p>Enter a name for your source and click <strong>Next</strong>.</p>
-</li>
-<li>
-<p>Select <strong>cost management</strong> as the application and <strong>OpenShift Container Platform</strong> as the source type. Click <strong>Next</strong>.</p>
-</li>
-</ol>
-</div>
-</li>
-<li>
-<p>In OpenShift, create a namespace called <code>openshift-metering</code> if one does not exist, and label the namespace with <code>openshift.io/cluster-monitoring=true</code>.</p>
-</li>
-<li>
-<p>In OpenShift, install the cost management Operator in the <code>openshift-metering</code> namespace, using either the OpenShift web console (search for <em>cost management</em> in OperatorHub) or the CLI.</p>
-<div class="admonitionblock important">
-<table>
-<tr>
-<td class="icon">
-<div class="title">Important</div>
-</td>
-<td class="content">
-<div class="paragraph">
-<p>You must install the cost management Operator in the <code>openshift-metering</code> namespace. Other namespaces are not supported for installation.</p>
-</div>
-</td>
-</tr>
-</table>
-</div>
-<div class="paragraph">
-<p>See <a href="https://access.redhat.com/documentation/en-us/openshift_container_platform/4.7/html/operators/administrator-tasks#olm-adding-operators-to-a-cluster">Adding Operators to a cluster</a> in the OpenShift documentation for instructions for installing an Operator.</p>
-</div>
-</li>
-</ol>
-</div>
-<div class="ulist">
-<div class="title">Additional resources</div>
-<ul>
-<li>
-<p>See <a href="https://access.redhat.com/documentation/en-us/openshift_container_platform/4.7/html/metering">Metering</a> in the OpenShift documentation for more information about installing Metering.</p>
-</li>
-</ul>
-</div>
-</div>
-<div class="sect2">
-<h3 id="configuring-cost-mgmt-operator_adding-previous-source">Configuring the cost management Operator</h3>
-<div class="paragraph _abstract">
-<p>The cost management Operator (<code>cost-mgmt-operator</code>) collects the metrics required for cost management.</p>
-</div>
-<div class="paragraph">
-<p>After installing the cost management Operator, configure authentication and the <code>operator-metering</code> namespace, then configure the cost management Operator.</p>
-</div>
-<div class="ulist">
-<div class="title">Prerequisites</div>
-<ul>
-<li>
-<p>OpenShift Container Platform 4.3 or 4.4</p>
-</li>
-<li>
-<p>The cost management Operator installed in the <code>openshift-metering</code> namespace</p>
-</li>
-<li>
-<p>A user with access to the <code>openshift-config</code> namespace</p>
-</li>
-</ul>
-</div>
-<div class="olist arabic">
-<div class="title">Procedure</div>
-<ol class="arabic">
-<li>
-<p>Configure authentication inside the <code>openshift-metering</code> project. This allows you to upload OpenShift data to <a href="https://cloud.redhat.com">cloud.redhat.com</a>.</p>
-<div class="admonitionblock note">
-<table>
-<tr>
-<td class="icon">
-<div class="title">Note</div>
-</td>
-<td class="content">
-<div class="paragraph">
-<p>For most installations you can use token authentication or basic authentication to upload the usage reports (metrics) to cost management. Except for Azure RedHat OpenShift installation, the default and recommended method is token authentication.</p>
-</div>
-</td>
-</tr>
-</table>
-</div>
-<div class="admonitionblock note">
-<table>
-<tr>
-<td class="icon">
-<div class="title">Note</div>
-</td>
-<td class="content">
-<div class="paragraph">
-<p>If you are performing an Azure RedHat OpenShift installation managed by Azure, you must use basic authentication. Token authentication is not supported for Azure-managed installations.</p>
-</div>
-</td>
-</tr>
-</table>
-</div>
-<div class="olist loweralpha">
-<ol class="loweralpha" type="a">
-<li>
-<p>Copy the following into a file called <code>auth_secret.yaml</code>:</p>
-<div class="listingblock">
-<div class="content">
-<pre>kind: Secret
-apiVersion: v1
-metadata:
-  name: auth-secret-name
-  namespace: openshift-metering
-  annotations:
-    kubernetes.io/service-account.name: cost-mgmt-operator
-data:
-  username: &gt;-
-    Y2xvdWQucmVkaGF0LmNvbSB1c2VybmFtZQ==
-  password: &gt;-
-    Y2xvdWQucmVkaGF0LmNvbSBwYXNzd29yZA==
-  token: &gt;-
-    Y2xvdWQucmVkaGF0LmNvbSB0b2tlbg==</pre>
-</div>
-</div>
-</li>
-<li>
-<p>Choose a name for your authentication secret and replace the <code>metadata.name</code> value with it.</p>
-</li>
-<li>
-<p>To configure token authentication (the default method), obtain the correct <em>auth</em> token and then edit the secret to replace the token value:</p>
-<div class="olist lowerroman">
-<ol class="lowerroman" type="i">
-<li>
-<p>Install the <a href="https://stedolan.github.io/jq/download/"><code>jq</code></a> JSON processor.</p>
-</li>
-<li>
-<p>Change to the <code>openshift-config</code> namespace:</p>
-<div class="listingblock">
-<div class="content">
-<pre>$ oc project openshift-config</pre>
-</div>
-</div>
-</li>
-<li>
-<p>Replace the token value in <code>auth_secret.yaml</code> with the authentication token for <em>cloud.openshift.com</em>. Obtain the token by running the following command, and copy only the "<em>tokenvalue</em>" to <code>auth_secret.yaml</code> (excluding the quotation marks):</p>
-<div class="listingblock">
-<div class="content">
-<pre>$ oc get secret pull-secret -o "jsonpath={.data.\.dockerconfigjson}" | base64 --decode | jq '.auths."cloud.openshift.com".auth'</pre>
-</div>
-</div>
-<div class="admonitionblock note">
-<table>
-<tr>
-<td class="icon">
-<div class="title">Note</div>
-</td>
-<td class="content">
-<div class="paragraph">
-<p>To use basic authentication, edit the secret to replace the username and password values with your base64-encoded username and password for connecting to <a href="https://cloud.redhat.com">cloud.redhat.com</a>.</p>
-</div>
-</td>
-</tr>
-</table>
-</div>
-</li>
-</ol>
-</div>
-</li>
-<li>
-<p>Deploy the secret to your OpenShift cluster in the <code>openshift-metering</code> namespace:</p>
-<div class="listingblock">
-<div class="content">
-<pre>$ oc create -f auth-secret.yaml</pre>
-</div>
-</div>
-<div class="paragraph">
-<p>For both methods of authentication, the name of the secret should match the <em>authentication_secret_name</em> set in the <code>CostManagement</code> custom resource configured in the next steps.</p>
-</div>
-</li>
-</ol>
-</div>
-</li>
-<li>
-<p>Configure the Metering Operator.</p>
-<div class="paragraph">
-<p>cost management uses the Metering Operator to create, collect, package, and upload metrics to cost management. In order for metering to work properly, configure <code>operator-metering</code> using the <a href="https://access.redhat.com/documentation/en-us/openshift_container_platform/4.7/html-single/metering/index#configuring-metering">OpenShift documentation</a> to create a MeteringConfig resource.</p>
-</div>
-</li>
-<li>
-<p>Configure the cost management Operator by creating the <code>CostManagement</code> and <code>CostManagementData</code> custom resources.</p>
-<div class="paragraph">
-<p>Creating these resources also starts the roles that create the resources to obtain the usage reports (metrics). This takes about an hour to run and the reports are collected, packaged, and uploaded every six hours.</p>
-</div>
-<div class="admonitionblock note">
-<table>
-<tr>
-<td class="icon">
-<div class="title">Note</div>
-</td>
-<td class="content">
-<div class="paragraph">
-<p>The cost management Operator requires the <code>clusterID</code>, <code>reporting_operator_token_name</code>, and <code>authentication_secret_name</code> to be specified in a <code>CostManagement</code> custom resource.</p>
-</div>
-</td>
-</tr>
-</table>
-</div>
-<div class="olist loweralpha">
-<ol class="loweralpha" type="a">
-<li>
-<p>Copy the following <code>CostManagement</code> resource template and save it to a file called <code>cost-mgmt-resource.yaml</code>:</p>
-<div class="listingblock">
-<div class="content">
-<pre>apiVersion: cost-mgmt.openshift.io/v1alpha1
-kind: CostManagement
-metadata:
-  name: cost-mgmt-setup
-spec:
-  clusterID: '123a45b6-cd8e-9101-112f-g131415hi1jk'
-  reporting_operator_token_name: 'reporting-operator-token-123ab'
-  validate_cert: 'false'
-  authentication: 'basic'
-  authentication_secret_name: 'basic_auth_creds-123ab'</pre>
-</div>
-</div>
-</li>
-<li>
-<p>Edit the following values in your <code>cost-mgmt-resource.yaml</code> file:</p>
-<div class="ulist">
-<ul>
-<li>
-<p>The <code>clusterID</code> value to your cluster ID. Obtain your cluster ID by running:</p>
-<div class="listingblock">
-<div class="content">
-<pre>$ oc get clusterversion -o jsonpath='{.items[].spec.clusterID}{"\n"}'</pre>
-</div>
-</div>
-</li>
-<li>
-<p>The <code>reporting_operator_token_name</code> to the <code>reporting-operator-token</code> secret name inside the <code>openshift-metering</code> namespace. Obtain this by running:</p>
-<div class="listingblock">
-<div class="content">
-<pre>$ oc get secret -n openshift-metering | grep reporting-operator-token</pre>
-</div>
-</div>
-<div class="admonitionblock note">
-<table>
-<tr>
-<td class="icon">
-<div class="title">Note</div>
-</td>
-<td class="content">
-<div class="paragraph">
-<p>Depending on your configuration, this command can return two token names. You can use either to configure the cost management Operator.</p>
-</div>
-</td>
-</tr>
-</table>
-</div>
-</li>
-<li>
-<p>Specify the authentication type you are using (<code>token</code> or <code>basic</code>). If you are using <code>token</code> authentication, you can remove the authentication field as token authentication is the default.</p>
-</li>
-<li>
-<p>Change the <code>authentication_secret_name</code> to the name of your authentication secret you created earlier.</p>
-</li>
-</ul>
-</div>
-</li>
-<li>
-<p>Deploy the <code>CostManagement</code> resource:</p>
-<div class="listingblock">
-<div class="content">
-<pre>$ oc create -f cost-mgmt-resource.yaml</pre>
-</div>
-</div>
-</li>
-<li>
-<p>Create a <code>CostManagementData</code> resource to start the collection. Copy the following template and save it as <code>cost-mgmt-data-resource.yaml</code>:</p>
-<div class="listingblock">
-<div class="content">
-<pre>apiVersion: cost-mgmt-data.openshift.io/v1alpha1
-kind: CostManagementData
-metadata:
-  name: cost-mgmt-data-example</pre>
-</div>
-</div>
-</li>
-<li>
-<p>Deploy the <code>CostManagementData</code> resource:</p>
-<div class="listingblock">
-<div class="content">
-<pre>$ oc create -f cost-mgmt-data-resource.yaml</pre>
-</div>
-</div>
-<div class="paragraph">
-<p>The cost management Operator will now create, collect, package, and upload your OpenShift usage reports to cost management.</p>
-</div>
-</li>
-</ol>
-</div>
-</li>
-<li>
-<p>When configuration is complete, enter the cluster identifier into the <a href="https://cloud.redhat.com">cloud.redhat.com</a> <strong>Sources</strong> wizard, click <strong>Next</strong>.</p>
-<div class="admonitionblock note">
-<table>
-<tr>
-<td class="icon">
-<div class="title">Note</div>
-</td>
-<td class="content">
-<div class="paragraph">
-<p>The cluster identifier can be found in <strong>Help</strong> &gt; <strong>About</strong> in OpenShift.</p>
-</div>
-</td>
-</tr>
-</table>
-</div>
-</li>
-<li>
-<p>In the <a href="https://cloud.redhat.com">cloud.redhat.com</a> <strong>Sources</strong> wizard, review the details and click <strong>Finish</strong> to add the OpenShift Container Platform cluster to cost management.</p>
-</li>
-</ol>
-</div>
-<div class="ulist">
-<div class="title">Additional resources</div>
-<ul>
-<li>
-<p>See <a href="https://access.redhat.com/documentation/en-us/openshift_container_platform/4.7/html/operators">Operators</a> in the OpenShift documentation for more information about Operators and OperatorHub.</p>
-</li>
-</ul>
-</div>
-<div class="paragraph">
-<p>cost management will begin collecting usage data (metrics) from your OpenShift Container Platform cluster. The data can take a few days to populate before it shows on the cost management dashboard.</p>
-</div>
-<div class="paragraph">
-<p>You have completed adding your OpenShift Container Platform cluster as a source.</p>
-</div>
-</div>
-</div>
-</div>
-<div class="sect1">
 <h2 id="assembly-cost-management-next-steps">Next steps for managing your costs</h2>
 <div class="sectionbody">
 <div class="paragraph _abstract">
@@ -3738,7 +3283,7 @@ metadata:
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2021-04-23 14:12:57 UTC
+Last updated 2021-04-27 06:48:46 UTC
 </div>
 </div>
 </body>
