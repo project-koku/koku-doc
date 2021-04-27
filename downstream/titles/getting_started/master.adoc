@@ -26,6 +26,6 @@ include::assemblies/assembly-adding-azure-sources.adoc[leveloffset=+1]
 include::assemblies/assembly-adding-gcp-sources.adoc[leveloffset=+1]
 
 //This assembly is about the deprecated operator
-include::assemblies/assembly-adding-ocp-sources.adoc[leveloffset=+1]
+// include::assemblies/assembly-adding-ocp-sources.adoc[leveloffset=+1]
 
 include::assemblies/assembly-cost-management-next-steps.adoc[leveloffset=+1]

@@ -10,7 +10,7 @@
 == Enabling additional account access for cost and usage consumption
 
 [role="_abstract"]
-{product-title} can display additional data that might be useful. For example:
+Cost management can display additional data that might be useful. For example:
 
 * Include the Action _iam:ListAccountAliases_ to display an AWS account alias rather than an account number in {product-title}.
 * Include the Actions _organization:List*_ and _organizations:Describe*_

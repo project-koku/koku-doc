@@ -24,7 +24,6 @@ To support {product-title} in Red{nbsp}Hat {openshift} 4.6 and more recent versi
 Users on Red{nbsp}Hat {openshift} 4.5 who want to use {product-title} can install the community operator `koku-metrics-operator`. See the {link-adding-koku} for installation and configuration instructions.
 endif::cost[]
 
-The community `cost-mgmt-operator` supported in {openshift} 4.3 and 4.4 is deprecated. For installing this deprecated operator, see xref:assembly-adding-ocp-sources[].
 
 
 include::../modules/installation-overview.adoc[leveloffset=+1]
