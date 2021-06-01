@@ -15,7 +15,7 @@ To test build the documentation, use Asciidoctor. For more information on instal
 
 == Modular documentation structure
 
-The following is a map of this repository:
+This is a map:
 
 ....
 .
