@@ -24,7 +24,7 @@ You must have a Red Hat account user with Organization Administrator or Sources 
 
 Before you can add your Google Cloud account to {product-title} as a data source, you must configure the following services on your Google Cloud account to allow {product-title} access to metrics:
 
-* {product-title} Google Cloud project.
+* Cost management Google Cloud project.
 * Billing service account member with the correct role to export your data to {platform}.
 * BigQuery dataset to contain the cost data.
 * Billing export that sends the cost data to your BigQuery dataset.

@@ -8,11 +8,11 @@
 = About {product-title}
 
 [role="_abstract"]
-{product-title} is an OpenShift Container Platform service that enables you to better understand and track costs for clouds and containers. It is based on the upstream project Koku.
+Cost management is an OpenShift Container Platform service that enables you to better understand and track costs for clouds and containers. It is based on the upstream project Koku.
 
 You can access the {product-title} application from https://cloud.redhat.com/cost-management/.
 
-{product-title} allows you to simplify management of resources and costs across various environments, including:
+Cost management allows you to simplify management of resources and costs across various environments, including:
 
 * Container platforms such as OpenShift Container Platform
 * Public clouds such as Amazon Web Services (AWS), Google Cloud, and Microsoft Azure
