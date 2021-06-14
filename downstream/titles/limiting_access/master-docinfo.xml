@@ -1,9 +1,9 @@
-<title>Getting started with cost management</title>
+<title>Limiting access to cost management resources</title>
 <productname>Cost Management Service</productname>
 <productnumber>2021</productnumber>
-<subtitle>Learn about and configure cost management</subtitle>
+<subtitle>Learn how to secure your cost information</subtitle>
 <abstract>
-    <para>This guide describes the initial steps to begin using cost management.</para>
+    <para>You may not want users to have access to all cost data, but instead only data specific to their projects or organization.</para>
 </abstract>
 <authorgroup>
     <orgname>Red Hat Customer Content Services</orgname>
