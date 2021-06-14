@@ -1,0 +1,16 @@
+= Adding an Amazon Web Services (AWS) source to cost management
+:imagesdir: images
+:toc: left
+:toclevels: 3
+:numbered!:
+:compat-mode:
+:experimental:
+:stylesheet: ../../stylesheets/panda.css
+
+// Custom attributes
+:koku:
+include::attributes/sharedattributes.adoc[]
+
+//include files
+
+

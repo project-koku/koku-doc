@@ -1,0 +1,16 @@
+= Managing your costs using Cost Explorer
+:imagesdir: images
+:toc: left
+:toclevels: 3
+:numbered!:
+:compat-mode:
+:experimental:
+:stylesheet: ../../stylesheets/panda.css
+
+// Custom attributes
+:koku:
+include::attributes/sharedattributes.adoc[]
+
+//include files
+
+

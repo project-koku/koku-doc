@@ -1,9 +1,9 @@
-<title>Getting started with cost management</title>
+<title>Adding an Amazon Web Services (AWS) source to cost management</title>
 <productname>Cost Management Service</productname>
 <productnumber>2021</productnumber>
-<subtitle>Learn about and configure cost management</subtitle>
+<subtitle>Learn how to add and configure your AWS sources</subtitle>
 <abstract>
-    <para>This guide describes the initial steps to begin using cost management.</para>
+    <para>This guide describes how to add an Amazon Web Services (AWS) source to cost management.</para>
 </abstract>
 <authorgroup>
     <orgname>Red Hat Customer Content Services</orgname>

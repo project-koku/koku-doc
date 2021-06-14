@@ -1,9 +1,9 @@
-<title>Getting started with cost management</title>
+<title>Managing your costs using Cost Explorer</title>
 <productname>Cost Management Service</productname>
 <productnumber>2021</productnumber>
-<subtitle>Learn about and configure cost management</subtitle>
+<subtitle>Use Cost Explorer to visualize and understand your costs</subtitle>
 <abstract>
-    <para>This guide describes the initial steps to begin using cost management.</para>
+    <para>This guide describes how to manage your costs using the interactive Cost Explorer.</para>
 </abstract>
 <authorgroup>
     <orgname>Red Hat Customer Content Services</orgname>
