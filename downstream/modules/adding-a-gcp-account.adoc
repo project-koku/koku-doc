@@ -12,7 +12,7 @@ Using the information from the previous steps, you can now add your Google Cloud
 
 .Prerequisites
 
-* Red Hat account user with Organization Administrator or Sources Administratorentitlements
+* Red Hat account user with Organization Administrator or Sources Administrator entitlements
 * Google Cloud xref:creating-a-project-gcp_{context}[project]
 * xref:adding-new-member-with-cost-role-gcp_{context}[Billing service member] with the {product-title} Identity and Access Management (IAM) xref:creating-iam-role-gcp_{context}[role]
 * xref:exporting-billing-data-gcp_{context}[Billing export] to xref:creating-a-dataset-gcp_{context}[BigQuery dataset]
@@ -46,15 +46,15 @@ Google may take several hours to gather and export billing data to {product-titl
 |===
 |Issue | Cause | Remediation steps
 
-| Incorrect IAM permissions for project _yourprojectID_
+| Incorrect IAM permissions for project _yourprojectID_.
 | The billing service account member does not have the correct role or permissions for {product-title}.
 | Make sure the billing service account has the xref:creating-iam-role-gcp_{context}[{product-title} role] with the correct permissions.
 
-| Unable to find dataset: _yourdatasetID_ in project: _yourprojectID_
+| Unable to find dataset: _yourdatasetID_ in project: _yourprojectID_.
 | The BigQuery dataset ID was entered incorrectly or does not exist.
 | Make sure the xref:creating-a-dataset-gcp_{context}[BigQuery dataset ID] matches the one created for {product-title}.
 
-| Source status _"Unknown"_ longer than 24 hours
-| {product-title} cannot find cost data in the BigQuery dataset provided.
+| Source status _"Unknown"_ longer than 24 hours.
+| Cost management cannot find cost data in the BigQuery dataset provided.
 | Make sure your xref:exporting-billing-data-gcp_{context}[billing export] is configured and xref:viewing-data-collected-gcp_{context}[billing tables] exist in your BigQuery dataset.
 |===
