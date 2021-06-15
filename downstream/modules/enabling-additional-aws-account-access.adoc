@@ -43,7 +43,7 @@ The following configuration provides access to additional stored information and
       "Effect": "Allow",
       "Action": [
         "iam:ListAccountAliases",
-        "s3:HeadBucket",
+        "s3:ListBucket",
         "cur:DescribeReportDefinitions",
         "organizations:List*",
         "organizations:Describe*"

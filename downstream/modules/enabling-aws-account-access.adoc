@@ -36,7 +36,7 @@ To provide data within the web interface and API, {product-title} needs to consu
       "Sid": "VisualEditor1",
       "Effect": "Allow",
       "Action": [
-        "s3:HeadBucket",
+        "s3:ListBucket",
         "cur:DescribeReportDefinitions"
       ],
       "Resource": "*"
