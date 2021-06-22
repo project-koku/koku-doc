@@ -27,8 +27,13 @@
 :link-azure-export-schedule: link:https://project-koku.github.io/koku-doc/getting-started.html#configuring-an-azure-daily-export-schedule_adding-an-azure-source[Configuring a daily Azure data export schedule]
 
 
-// Application Linjs
+// Application Links
 
-:link-cost-management: link:https://cloud.redhat.com/cost-management/[cloud.redhat.com/cost-management/]
-:link-cost-models-app: link:https://cloud.redhat.com/cost-management/cost-models/cost-models[Cost Models]
+:link-cost-management: link:https://cloud.redhat.com/openshift/cost-management/[cloud.redhat.com/cost-management/]
+:link-cost-models-app: link:https://cloud.redhat.com/openshift/cost-management/cost-models[Cost Models]
+:link-cost-explorer: link:https://cloud.redhat.com/openshift/cost-management/explorer[Cost Explorer]
 :link-sources: link:https://cloud.redhat.com/settings/sources[https://cloud.redhat.com/settings/sources]
+:link-ocp: link:https://cloud.redhat.com/openshift/cost-management/ocp[OpenShift]
+:link-aws: link:https://cloud.redhat.com/openshift/cost-management/aws[Amazon Web Services]  
+:link-azure: link:https://cloud.redhat.com/openshift/cost-management/azure[Microsoft Azure]
+:link-gcp: link:https://cloud.redhat.com/openshift/cost-management/gcp[Google Cloud Platform]

@@ -26,8 +26,13 @@
 :link-activating-aws-tags: link:https://access.redhat.com/documentation/en-us/cost_management_service/2021/html-single/getting_started_with_cost_management/index#activating-aws-tags_adding-aws-sources[Activating AWS tags for {product-title}]
 :link-azure-export-schedule: link:https://access.redhat.com/documentation/en-us/cost_management_service/2021/html-single/getting_started_with_cost_management/index#configuring-an-azure-daily-export-schedule_adding-an-azure-source[Configuring a daily Azure data export schedule]
 
-// Application Linjs
+// Application Links
 
-:link-cost-management: link:https://cloud.redhat.com/cost-management/[cloud.redhat.com/cost-management/]
-:link-cost-models-app: link:https://cloud.redhat.com/cost-management/cost-models/cost-models[Cost Models]
+:link-cost-management: link:https://cloud.redhat.com/openshift/cost-management/[cloud.redhat.com/cost-management/]
+:link-cost-models-app: link:https://cloud.redhat.com/openshift/cost-management/cost-models[Cost Models]
+:link-cost-explorer: link:https://cloud.redhat.com/openshift/cost-management/explorer[Cost Explorer]
 :link-sources: link:https://cloud.redhat.com/settings/sources[https://cloud.redhat.com/settings/sources]
+:link-ocp: link:https://cloud.redhat.com/openshift/cost-management/ocp[OpenShift]
+:link-aws: link:https://cloud.redhat.com/openshift/cost-management/aws[Amazon Web Services]  
+:link-azure: link:https://cloud.redhat.com/openshift/cost-management/azure[Microsoft Azure]
+:link-gcp: link:https://cloud.redhat.com/openshift/cost-management/gcp[Google Cloud Platform]
