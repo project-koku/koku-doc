@@ -13,4 +13,6 @@ include::attributes/sharedattributes.adoc[]
 
 //include files
 
+include::assemblies/assembly-adding-aws-sources.adoc[leveloffset=+1]
 
+include::assemblies/assembly-cost-management-next-steps.adoc[leveloffset=+1]
