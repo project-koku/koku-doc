@@ -1,0 +1,24 @@
+// Module included in the following assemblies:
+//
+// assembly-cost-management-next-steps.adoc
+:_module-type: CONCEPT
+:experimental:
+
+[id="configure-tagging-next-step_{context}"]
+= Configure tagging for your sources
+
+
+[role="_abstract"]
+The {product-title} application tracks cloud and infrastructure costs using tags (called labels in OpenShift), which you can refine to filter and attribute to resources. Tags in {product-title} allow you to organize your resources by cost and to allocate the costs to different parts of your cloud infrastructure.
+
+[IMPORTANT]
+====
+Tags and labels can only be configured directly on a source. You cannot edit tags and labels in the {product-title} application.
+====
+
+See _{link-tagging}_ to learn more about:
+
+* Planning your tagging strategy to organize your view of cost data
+* Understanding how {product-title} associates tags
+* Configuring tags and labels on your sources
+

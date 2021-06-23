@@ -1,4 +1,4 @@
-= Adding a Google Cloud Platform source to cost management
+= Adding a Google Cloud source to cost management
 :imagesdir: images
 :toc: left
 :toclevels: 3

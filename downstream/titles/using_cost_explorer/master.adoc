@@ -1,4 +1,4 @@
-= Managing your costs using Cost Explorer
+= Visualizing your costs using cost explorer
 :imagesdir: images
 :toc: left
 :toclevels: 3

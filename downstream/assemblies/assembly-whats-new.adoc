@@ -1,0 +1,29 @@
+// This assembly is included in the following assemblies:
+//
+// */whats_new/master.adoc
+
+ifdef::context[:parent-context-of-assembly-whats-new: {context}]
+
+
+ifndef::context[]
+[id="assembly-whats-new"]
+endif::[]
+ifdef::context[]
+[id="assembly-whats-new_{context}"]
+endif::[]
+= What's new in {product-title}
+
+:context: whats-new
+
+[role="_abstract"]
+Cost management is continuously evolving to bring you the best service possible. This page is updated regularly with the latest feature updates, enhancements, and news in the world of {product-title}. 
+
+
+//Include modules
+
+////
+Restore the context to what it was before this assembly.
+////
+ifdef::parent-context-of-assembly_assembly-whats-new[:context: {parent-context-of-assembly_assembly-whats-new}]
+ifndef::parent-context-of-assembly_assembly-whats-new[:!context:]
+

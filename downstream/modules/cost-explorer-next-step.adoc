@@ -1,0 +1,17 @@
+// Module included in the following assemblies:
+//
+// assembly-cost-management-next-steps.adoc
+:_module-type: CONCEPT
+:experimental:
+
+[id="con_cost-explorer-next-step_{context}"]
+= Use the Cost Explorer to visualize your costs
+
+[role="_abstract"]
+The {product-title} {link-cost-explorer-app} allows you to create custom graphs of time-scaled cost and usage information to better visualize and interpret your costs. 
+
+See _{link-cost-explorer}_ to learn more about:
+
+* Using Cost Explorer to identify abnormal events
+* Understanding how you cost data changes over time
+* Creating custom graphs for your cost and usage data

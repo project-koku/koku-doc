@@ -26,15 +26,3 @@ The {product-title} application allows you to:
 * Identify patterns of usage that should be investigated
 * Integrate with third party tools that can benefit from cost and resourcing data
 
-
-
-== Terminology
-
-Source::
-A cloud provider account that is connected to {product-title} to be monitored, for example, an OpenShift Container Platform deployment, or an AWS or Azure account.
-
-Organization Administrator::
-
-The highest permission level for Red Hat accounts, with full access to content and features. This is the only role that can manage users and control their access and permissions on an account. An account may have multiple Organization Administrators.
-
-See https://access.redhat.com/articles/1757953[Roles and Permissions for Red Hat Subscription Management] for more details.
