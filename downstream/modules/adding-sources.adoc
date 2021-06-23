@@ -1,18 +1,22 @@
 // Module included in the following assemblies:
 //
-// <List assemblies here, each on a new line>
+// assembly-introduction-cost-management.adoc
+:_module-type: CONCEPT
+:experimental:
 
-// Base the file name and the ID on the module title. For example:
-// * file name: my-concept-module-a.adoc
-// * ID: [id="my-concept-module-a_{context}"]
-// * Title: = My concept module A
+[id="adding-sources_{context}"]
+= Add sources to {product-title}
 
-// The ID is used as an anchor for linking to the module. Avoid changing it after the module has been published to ensure existing links are not broken.
-[id="concept-explanation_{context}"]
-// The `context` attribute enables module reuse. Every module's ID includes {context}, which ensures that the module has a unique ID even if it is reused multiple times in a guide.
-= Adding sources to {product-title}
+[role="_abstract"]
+A source is a cloud provider account that is connected to {product-title} to be monitored, for example, an OpenShift Container Platform deployment, or an AWS or Azure account. To use {product-title} to monitor your cloud costs, you must first connect a data source to the {product-title} application.
 
-To use {product-title} to monitor your cloud costs, you must first connect a data source to the {product-title} application.
+Currently, {product-title} can track costs for Amazon Web Services (AWS), Microsoft Azure, Google Cloud, and Red Hat OpenShift Container Platform sources.
 
-Currently, {product-title} can track costs for Amazon Web Services (AWS), Microsoft Azure, and Red Hat OpenShift Container Platform sources.
+From {link-sources}, you can view, edit, and delete sources connected to {product-title}.
 
+For more information on how to add sources to {product-title}, follow these guides:
+
+* _{link-adding-ocp}_
+* _{link-adding-aws}_
+* _{link-adding-gcp}_
+* _{link-adding-azure}_
