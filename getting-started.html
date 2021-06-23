@@ -597,6 +597,11 @@ div.unbreakable { page-break-inside: avoid; }
 <ul class="sectlevel2">
 <li><a href="#about-cost-management_getting-started">About cost management</a></li>
 <li><a href="#planning-cost-management">Planning for cost management</a></li>
+<li><a href="#con_limiting-access_getting-started">Limit access to cost management</a></li>
+<li><a href="#adding-sources_getting-started">Add sources to cost management</a></li>
+<li><a href="#configure-tagging-next-step_getting-started">Configure tagging for your sources</a></li>
+<li><a href="#con_configure-cost-models-next-step_getting-started">Configure cost models to accurately report costs</a></li>
+<li><a href="#con_cost-explorer-next-step_getting-started">Use the Cost Explorer to visualize your costs</a></li>
 </ul>
 </li>
 <li><a href="#assembly-terminology">Cost management terminology</a></li>
@@ -619,7 +624,7 @@ div.unbreakable { page-break-inside: avoid; }
 <p>Cost management is an OpenShift Container Platform service that enables you to better understand and track costs for clouds and containers. It is based on the upstream project Koku.</p>
 </div>
 <div class="paragraph">
-<p>You can access the cost management application from <a href="https://cloud.redhat.com/cost-management/" class="bare">https://cloud.redhat.com/cost-management/</a>.</p>
+<p>You can access the cost management application from <a href="https://cloud.redhat.com/openshift/cost-management/">https://cloud.redhat.com/openshift/cost-management/</a>.</p>
 </div>
 <div class="paragraph">
 <p>Cost management allows you to simplify management of resources and costs across various environments, including:</p>
@@ -711,6 +716,132 @@ div.unbreakable { page-break-inside: avoid; }
 </ul>
 </div>
 </div>
+<div class="sect2">
+<h3 id="con_limiting-access_getting-started">Limit access to cost management</h3>
+<div class="paragraph _abstract">
+<p>Before adding and configuring sources in cost management, it is a good idea to limit access to cost data and resources. For example, you may not want users to have access to all cost data, but instead only data specific to their projects or organization. Using role-based access control, you can limit the visibility of resources involved in cost management reports. For example, you may want to restrict a user&#8217;s view to only AWS sources, instead of the entire environment.</p>
+</div>
+<div class="paragraph">
+<p>For more information about limiting access see, <em><a href="https://access.redhat.com/documentation/en-us/cost_management_service/2021/html-single/getting_started_with_cost_management/index#assembly-limiting-access-cost-resources-rbac">Limiting access to cost management resources</a></em>.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="adding-sources_getting-started">Add sources to cost management</h3>
+<div class="paragraph _abstract">
+<p>A source is a cloud provider account that is connected to cost management to be monitored, for example, an OpenShift Container Platform deployment, or an AWS or Azure account. To use cost management to monitor your cloud costs, you must first connect a data source to the cost management application.</p>
+</div>
+<div class="paragraph">
+<p>Currently, cost management can track costs for Amazon Web Services (AWS), Microsoft Azure, Google Cloud, and Red Hat OpenShift Container Platform sources.</p>
+</div>
+<div class="paragraph">
+<p>From <a href="https://cloud.redhat.com/settings/sources">https://cloud.redhat.com/settings/sources</a>, you can view, edit, and delete sources connected to cost management.</p>
+</div>
+<div class="paragraph">
+<p>For more information on how to add sources to cost management, follow these guides:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><em><a href="https://project-koku.github.io/koku-doc/getting-started.html#assembly-adding-openshift-container-platform-source">Adding an OpenShift Container Platform source to cost management</a></em></p>
+</li>
+<li>
+<p><em><a href="https://project-koku.github.io/koku-doc/getting-started.html#assembly-adding-aws-sources">Adding an Amazon Web Services (AWS) source to cost management</a></em></p>
+</li>
+<li>
+<p><em><a href="https://project-koku.github.io/koku-doc/getting-started.html">Adding a Google Cloud source to cost management</a></em></p>
+</li>
+<li>
+<p><em><a href="https://project-koku.github.io/koku-doc/getting-started.html">Adding a Microsoft Azure source to cost management</a></em></p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="configure-tagging-next-step_getting-started">Configure tagging for your sources</h3>
+<div class="paragraph _abstract">
+<p>The cost management application tracks cloud and infrastructure costs using tags (called labels in OpenShift), which you can refine to filter and attribute to resources. Tags in cost management allow you to organize your resources by cost and to allocate the costs to different parts of your cloud infrastructure.</p>
+</div>
+<div class="admonitionblock important">
+<table>
+<tr>
+<td class="icon">
+<div class="title">Important</div>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>Tags and labels can only be configured directly on a source. You cannot edit tags and labels in the cost management application.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>See <em><a href="https://project-koku.github.io/koku-doc/using-tags.html">Managing cost data using tagging</a></em> to learn more about:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Planning your tagging strategy to organize your view of cost data</p>
+</li>
+<li>
+<p>Understanding how cost management associates tags</p>
+</li>
+<li>
+<p>Configuring tags and labels on your sources</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="con_configure-cost-models-next-step_getting-started">Configure cost models to accurately report costs</h3>
+<div class="paragraph _abstract">
+<p>Now that you have configured your sources to collect cost and usage data into cost management, you can configure cost models to associate prices to metrics and usage, and fine-tune the costs of running your cloud.</p>
+</div>
+<div class="paragraph">
+<p>A cost model is a framework used to define the calculations for the costs stored in cost management, using raw costs and metrics. Costs generated by a cost model can be recorded, categorized and distributed to specific customers, business units or projects.</p>
+</div>
+<div class="paragraph">
+<p>From the <a href="https://cloud.redhat.com/openshift/cost-management/cost-models">Cost Models</a> area of cost management, you can:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Classify your costs as infrastructure or supplementary costs</p>
+</li>
+<li>
+<p>Capture monthly costs for OpenShift nodes and clusters</p>
+</li>
+<li>
+<p>Apply a markup to account for additional support costs</p>
+</li>
+<li>
+<p>Learn how to configure a cost model in <em><a href="https://project-koku.github.io/koku-doc/cost-models.html">Using cost models</a></em>.</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="con_cost-explorer-next-step_getting-started">Use the Cost Explorer to visualize your costs</h3>
+<div class="paragraph _abstract">
+<p>The cost management <a href="https://cloud.redhat.com/openshift/cost-management/explorer">Cost Explorer</a> allows you to create custom graphs of time-scaled cost and usage information to better visualize and interpret your costs.</p>
+</div>
+<div class="paragraph">
+<p>See <em><a href="https://project-koku.github.io/koku-doc/getting-started.html">Visualizing your costs using Cost Explorer</a></em> to learn more about:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Using Cost Explorer to identify abnormal events</p>
+</li>
+<li>
+<p>Understanding how you cost data changes over time</p>
+</li>
+<li>
+<p>Creating custom graphs for your cost and usage data</p>
+</li>
+</ul>
+</div>
+</div>
 </div>
 </div>
 <div class="sect1">
@@ -736,7 +867,7 @@ div.unbreakable { page-break-inside: avoid; }
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2021-06-23 08:50:06 UTC
+Last updated 2021-06-23 16:23:48 UTC
 </div>
 </div>
 </body>
