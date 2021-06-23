@@ -15,6 +15,8 @@ include::attributes/sharedattributes.adoc[]
 
 include::assemblies/assembly-introduction-cost-management.adoc[leveloffset=+1]
 
+include::assemblies/assembly-terminology.adoc[leveloffset=+1]
+
 // Moved Assemblies
 
 // include::assemblies/assembly-limiting-access-cost-resources-rbac.adoc[leveloffset=+1]

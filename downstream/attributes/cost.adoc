@@ -1,5 +1,4 @@
 
-
 // Titles
 
 :product-title: cost management
@@ -17,6 +16,11 @@
 :link-getting-started: link:https://access.redhat.com/documentation/en-us/cost_management_service/2021/html-single/getting_started_with_cost_management/index[Getting started with {product-title}]
 :link-tagging: link:https://access.redhat.com/documentation/en-us/cost_management_service/2021/html-single/managing_cost_data_using_tagging/index[Managing cost data using tagging]
 :link-cost-models: link:https://access.redhat.com/documentation/en-us/cost_management_service/2021/html-single/using_cost_models/index[Using cost models]
+//new title links placeholder
+:link-cost-explorer: link:https://access.redhat.com/documentation/en-us/cost_management_service/2021/html-single/getting_started_with_cost_management/index[Visualizing your costs using Cost Explorer]
+:link-adding-azure: 
+:link-adding-gcp:
+:link-whats-new:
 
 // Doc Links sub
 :link-adding-ocp: link:https://access.redhat.com/documentation/en-us/cost_management_service/2021/html-single/getting_started_with_cost_management/index#assembly-adding-openshift-container-platform-source[Adding an OpenShift Container Platform source to cost management]
@@ -30,7 +34,7 @@
 
 :link-cost-management: link:https://cloud.redhat.com/openshift/cost-management/[cloud.redhat.com/cost-management/]
 :link-cost-models-app: link:https://cloud.redhat.com/openshift/cost-management/cost-models[Cost Models]
-:link-cost-explorer: link:https://cloud.redhat.com/openshift/cost-management/explorer[Cost Explorer]
+:link-cost-explorer-app: link:https://cloud.redhat.com/openshift/cost-management/explorer[Cost Explorer]
 :link-sources: link:https://cloud.redhat.com/settings/sources[https://cloud.redhat.com/settings/sources]
 :link-ocp: link:https://cloud.redhat.com/openshift/cost-management/ocp[OpenShift]
 :link-aws: link:https://cloud.redhat.com/openshift/cost-management/aws[Amazon Web Services]  

@@ -1,0 +1,43 @@
+// This assembly is included in the following assemblies:
+//
+// */getting_started/master.adoc
+
+ifdef::context[:parent-context-of-assembly-terminology: {context}]
+
+
+
+ifndef::context[]
+[id="assembly-terminology"]
+endif::[]
+ifdef::context[]
+[id="assembly-terminology_{context}"]
+endif::[]
+
+= Cost management terminology
+
+:context: terminology
+
+
+
+[role="_abstract"]
+
+
+
+Source::
+A cloud provider account that is connected to {product-title} to be monitored, for example, an OpenShift Container Platform deployment, or an AWS or Azure account.
+
+Organization Administrator::
+
+The highest permission level for Red Hat accounts, with full access to content and features. This is the only role that can manage users and control their access and permissions on an account. An account may have multiple Organization Administrators.
+
+See https://access.redhat.com/articles/1757953[Roles and Permissions for Red Hat Subscription Management] for more details.
+
+
+//include files
+
+////
+Restore the context to what it was before this assembly.
+////
+ifdef::parent-context-of-assembly_terminology[:context: {parent-context-of-assembly_terminology}]
+ifndef::parent-context-of-assembly_terminology[:!context:]
+

@@ -1,7 +1,3 @@
-
-
-
-
 // Titles
 
 :product-title: cost management
@@ -18,6 +14,11 @@
 :link-getting-started: link:https://project-koku.github.io/koku-doc/getting-started.html[Getting started with {product-title}]
 :link-tagging: link:https://project-koku.github.io/koku-doc/using-tags.html[Managing cost data using tagging]
 :link-cost-models: link:https://project-koku.github.io/koku-doc/cost-models.html[Using cost models]
+//new title links
+:link-cost-explorer: link:https://project-koku.github.io/koku-doc/getting-started.html[Visualizing your costs using Cost Explorer]
+:link-adding-azure: 
+:link-adding-gcp:
+:link-whats-new:
 
 // Doc Links sub
 :link-adding-ocp: link:https://project-koku.github.io/koku-doc/getting-started.html#assembly-adding-openshift-container-platform-source[Adding an OpenShift Container Platform source to {product-title}]
@@ -31,9 +32,9 @@
 
 :link-cost-management: link:https://cloud.redhat.com/openshift/cost-management/[cloud.redhat.com/cost-management/]
 :link-cost-models-app: link:https://cloud.redhat.com/openshift/cost-management/cost-models[Cost Models]
-:link-cost-explorer: link:https://cloud.redhat.com/openshift/cost-management/explorer[Cost Explorer]
+:link-cost-explorer-app: link:https://cloud.redhat.com/openshift/cost-management/explorer[Cost Explorer]
 :link-sources: link:https://cloud.redhat.com/settings/sources[https://cloud.redhat.com/settings/sources]
-:link-ocp: link:https://cloud.redhat.com/openshift/cost-management/ocp[OpenShift]
-:link-aws: link:https://cloud.redhat.com/openshift/cost-management/aws[Amazon Web Services]  
-:link-azure: link:https://cloud.redhat.com/openshift/cost-management/azure[Microsoft Azure]
-:link-gcp: link:https://cloud.redhat.com/openshift/cost-management/gcp[Google Cloud Platform]
+:link-ocp-app: link:https://cloud.redhat.com/openshift/cost-management/ocp[OpenShift]
+:link-aws-app: link:https://cloud.redhat.com/openshift/cost-management/aws[Amazon Web Services]  
+:link-azure-app: link:https://cloud.redhat.com/openshift/cost-management/azure[Microsoft Azure]
+:link-gcp-app: link:https://cloud.redhat.com/openshift/cost-management/gcp[Google Cloud Platform]
