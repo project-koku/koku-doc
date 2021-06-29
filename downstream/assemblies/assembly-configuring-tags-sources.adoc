@@ -26,9 +26,13 @@ include::../modules/adding-tags-to-an-AWS-resource.adoc[leveloffset=+1]
 
 include::../modules/adding-tags-to-an-Azure-resource.adoc[leveloffset=+1]
 
+include::../modules/adding-tags-to-a-gcp-resource.adoc[leveloffset=+1]
+
 include::../modules/adding-tags-to-an-OCP-resource.adoc[leveloffset=+1]
 
 include::../modules/enabling-tag-grouping-OCP.adoc[leveloffset=+1]
+
+include::../modules/disabling-tags.adoc[leveloffset=+1]
 
 
 // Restore the context to what it was before this assembly.

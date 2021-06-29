@@ -15,7 +15,12 @@ endif::[]
 :context: next-steps
 
 [role="_abstract"]
-After adding your infrastructure and cloud sources, in addition to showing cost data by source, {product-title} will automatically show AWS, Google Cloud, and Azure cost and usage related to running your OpenShift Container Platform clusters on their platforms.
+After adding your infrastructure and cloud sources, in addition to showing cost data by source, {product-title} will automatically show AWS and Azure cost and usage related to running your OpenShift Container Platform clusters on their platforms.
+
+[NOTE]
+====
+At this time, {openshift} resources running on Google Cloud Platform are not automatically associated in {product-title}. This feature will be available soon. 
+====
 
 On the {product-title} *Overview* page ({link-cost-management}), your cost data will be sorted into *OpenShift* and *Infrastructure* tabs. From here, you can use *Perspective* to select different views of your cost data.
 

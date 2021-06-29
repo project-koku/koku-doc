@@ -26,6 +26,10 @@ Note that this is not the case with AWS compute resources that are matched via t
 
 By default, {product-title} tracks AWS compute usage and costs by associating the Amazon EC2 instance ID or Azure virtual machine instance ID with the OpenShift Container Platform node running on that instance.
 
+[NOTE]
+====
+At this time, {openshift} resources running on Google Cloud Platform are not automatically associated in {product-title}. This feature will be available soon. 
+====
 
 == Tag matching hierarchy in {product-title}
 

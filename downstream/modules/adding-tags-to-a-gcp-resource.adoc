@@ -1,0 +1,20 @@
+// Module included in the following assemblies:
+//
+// assembly-configuring-tags-sources.adoc
+:_module-type: PROCEDURE
+:experimental:
+
+
+[id="adding-tags-to-a-gcp-resource_{context}"]
+= Adding tags to a Google Cloud resource
+
+[role="_abstract"]
+You can apply custom labels to Google cloud resources, such as Virtual machine instances, Images, and Persistent disks. These labels are automatically added to your BigQuery export and sent to {product-title}. 
+
+.Procedure
+
+* Create and apply labels to your Google Cloud resources.
++
+See link:https://cloud.google.com/compute/docs/labeling-resources[_User-Defined Cost Allocation Tags_] in the Google Cloud documentation for instructions.
+
+
