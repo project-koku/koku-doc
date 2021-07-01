@@ -611,7 +611,9 @@ div.unbreakable { page-break-inside: avoid; }
 <ul class="sectlevel3">
 <li><a href="#adding-tags-to-an-AWS-resource_configuring-tags-sources">Adding tags to an AWS resource</a></li>
 <li><a href="#adding-tags-to-an-Azure-resource_configuring-tags-sources">Adding tags to an Azure resource</a></li>
+<li><a href="#adding-tags-to-a-gcp-resource_configuring-tags-sources">Adding tags to a Google Cloud resource</a></li>
 <li><a href="#adding-tags-to-an-OCP-resource_configuring-tags-sources">Viewing labels in an OpenShift namespace</a></li>
+<li><a href="#disabling-tags_configuring-tags-sources">Disabling tags in cost management</a></li>
 </ul>
 </li>
 </ul>
@@ -647,17 +649,22 @@ div.unbreakable { page-break-inside: avoid; }
 <div class="sect2">
 <h3 id="why-use-tags_planning-your-tagging-strategy">Why use tags?</h3>
 <div class="paragraph _abstract">
-<p>Tags allow you to differentiate and allocate costs between various parts of your environment for a more accurate view of your cost data.</p>
+<p>Tags (also sometimes called labels) are a string of custom metadata assigned to resources that your organization can utilize in multiple ways.</p>
 </div>
 <div class="paragraph">
-<p>As a business service can be supported by many projects and technical services
-(for example, environment, region, cost center), tags provide clarity by mapping business concepts to reports.</p>
+<p>In the context of cost management, tags help you to differentiate and allocate costs between various parts of your environment for a more accurate view of your cost data, filling the gap between business logic and the resource. This allows you to assign organizational-specific details to help digest information later.</p>
 </div>
 <div class="paragraph">
-<p>Tagging can be used to split resources, such as a shared cluster that will be used by many services to provide different business capabilities. For example, an AWS account can run different services for different projects.</p>
+<p>As many projects and technical services (for example, environment, region, cost center) support a business service, tags can map business concepts to reports providing clarity. In that way, a properly allocated tag can help you to show costs grouped by those business concepts. Tags should be used to complement hierarchies in clouds, or specific hierarchies already present in your clusters (like projects).</p>
 </div>
 <div class="paragraph">
-<p>Tags also help you identify relationships between sources, allowing you to group applications across multiple clusters that are tagged with the same environment, cost center or team. Tagging also helps identify dependencies, such as the link between an RDS database and the OpenShift project using it.</p>
+<p>Tags are sometimes utilized in more applications than cost management. For example, it is possible and recommended to use them to define certain operations, like business automation, operational profiles, or access and security controls. You can then apply policies based on those tags. However, this document does not consider those use cases.  Cloud providers place limits on the number of tags or labels associated with resources, so you should consider all of those uses before defining your tagging strategy for cost management.</p>
+</div>
+<div class="paragraph">
+<p>Additionally, tags are sometimes used to split resources into smaller units when it is not possible to directly organize resources into projects or subprojects. For example, a shared cluster running many services to provide different business capabilities can use tags to differentiate applications instead of splitting them into projects. Additionally, an AWS account can run multiple different services for projects, and sometimes those services are shared between several applications (like the load balancer or any other shared resource).</p>
+</div>
+<div class="paragraph">
+<p>Furthermore, tags also help you identify relationships between sources, allowing you to group applications across multiple clusters tagged with the same environment, cost center, or team. Thus, making it possible to identify the costs of an application when running on the development, quality, or production clusters. Tags can also help to identify dependencies when there is not a direct link between a resource, such as the link between an RDS database and the OpenShift project using it.</p>
 </div>
 </div>
 <div class="sect2">
@@ -667,6 +674,10 @@ div.unbreakable { page-break-inside: avoid; }
 </div>
 <div class="dlist">
 <dl>
+<dt class="hdlist1">Methodology</dt>
+<dd>
+<p>It is best practice to implement a Crawl, Walk, Run strategy when initially assigning tags for your resources. Start with the minimum number of tags you feel are required to accomplish your organizational objectives. Then slowly build on that foundation over time. As your understanding of how your organization leverages cost management grows, so will your skill in implementing a tagging strategy.</p>
+</dd>
 <dt class="hdlist1">Map business to reporting</dt>
 <dd>
 <p>Define the business perspectives you want to report on. For example, your taxonomy for cost management could consider these different perspectives:</p>
@@ -676,7 +687,7 @@ div.unbreakable { page-break-inside: avoid; }
 </div>
 <div class="paragraph">
 <div class="title">Tenancy:</div>
-<p>If your environment is shared, it can be beneficial to understand which group or business unit has requested the resource. When the user is part of different groups, one group needs to be selected. For cost reporting, you can achieve this in many cases using cost center; but department, project, partner are also good candidates.</p>
+<p>If your environment is shared, it can be beneficial to understand which group or business unit has requested the resource. When the user is part of different groups, one group needs to be selected. For cost reporting, you can achieve this in many cases using cost center; but department, project, or partner are also good candidates.</p>
 </div>
 <div class="paragraph">
 <div class="title">Location:</div>
@@ -833,6 +844,20 @@ div.unbreakable { page-break-inside: avoid; }
 </div>
 <div class="paragraph">
 <p>By default, cost management tracks AWS compute usage and costs by associating the Amazon EC2 instance ID or Azure virtual machine instance ID with the OpenShift Container Platform node running on that instance.</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<div class="title">Note</div>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>At this time, OpenShift Container Platform resources running on Google Cloud Platform are not automatically associated in cost management. This feature will be available soon.</p>
+</div>
+</td>
+</tr>
+</table>
 </div>
 <div class="sect3">
 <h4 id="_tag_matching_hierarchy_in_cost_management">Tag matching hierarchy in cost management</h4>
@@ -1008,9 +1033,26 @@ div.unbreakable { page-break-inside: avoid; }
 </div>
 </div>
 <div class="sect3">
+<h4 id="adding-tags-to-a-gcp-resource_configuring-tags-sources">Adding tags to a Google Cloud resource</h4>
+<div class="paragraph _abstract">
+<p>You can apply custom labels to Google cloud resources, such as virtual machine instances, images, and persistent disks. These labels are automatically added to your BigQuery export and sent to cost management.</p>
+</div>
+<div class="ulist">
+<div class="title">Procedure</div>
+<ul>
+<li>
+<p>Create and apply labels to your Google Cloud resources.</p>
+<div class="paragraph">
+<p>See <a href="https://cloud.google.com/compute/docs/labeling-resources"><em>User-Defined Cost Allocation Tags</em></a> in the Google Cloud documentation for instructions.</p>
+</div>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect3">
 <h4 id="adding-tags-to-an-OCP-resource_configuring-tags-sources">Viewing labels in an OpenShift namespace</h4>
 <div class="paragraph _abstract">
-<p>The AWS or Azure tag equivalent in OpenShift is a label, which also consists of a key:value pair. cost management collects OpenShift tag data from nodes, pods, and persistent volumes (or persistent volume claims) using Prometheus metrics and Operator Metering.</p>
+<p>The AWS or Azure tag equivalent in OpenShift is a label, which also consists of a key:value pair. cost management collects OpenShift tag data from nodes, pods, and persistent volumes (or persistent volume claims) using Prometheus metrics and Koku Metrics Operator.</p>
 </div>
 <div class="paragraph">
 <p>To view the available tags, navigate to a resource in the OpenShift web console. Any assigned labels are listed under the <strong>Labels</strong> heading, for example: <em>openshift.io/cluster-monitoring=true</em>.</p>
@@ -1053,11 +1095,49 @@ div.unbreakable { page-break-inside: avoid; }
 </div>
 <div class="paragraph">
 <div class="title">Verification steps</div>
-<p>The enabled tag keys will now be available to group costs by from the <strong>OpenShift details</strong> area of cost management, in the <strong>View by</strong> list. For example, when you choose <strong>View by: Tag</strong>:</p>
+<p>The enabled tag keys will now be available to group costs from the <strong>OpenShift details</strong> area of cost management, in the <strong>View by</strong> list. For example, when you choose <strong>View by: Tag</strong>:</p>
 </div>
 <div class="paragraph">
 <p><span class="image"><img src="images/cost-tag-key.png" alt="cost tag key"></span></p>
 </div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="disabling-tags_configuring-tags-sources">Disabling tags in cost management</h4>
+<div class="paragraph _abstract">
+<p>All cloud provider tags are activated in cost management by default. Sometimes having too many resource tags can affect cost management performance. Unnecessary tags can also make managing your costs more complicated when grouping tags and matching key:value pairs. Therefore, Red Hat recommends that you disable tags you are not actively using to reduce these potential issues.</p>
+</div>
+<div class="paragraph">
+<p>Follow this procedure to disable tags and enhance performance:</p>
+</div>
+<div class="olist arabic">
+<div class="title">Procedure</div>
+<ol class="arabic">
+<li>
+<p>Navigate to {link-settings}.</p>
+<div class="paragraph">
+<p>From this page, your cloud provider tags are sorted into two boxes: <strong>Available tags</strong> and <strong>Tags for Reporting</strong> (<strong>Available labels</strong> and <strong>Labels for Reporting</strong> for OpenShift Container Platform).</p>
+</div>
+<div class="paragraph">
+<p>The <strong>Tags for Reporting</strong> box contains the currently active tags.</p>
+</div>
+</li>
+<li>
+<p>Click the name of the tag you want to disable in the <strong>Tags for Reporting</strong> box.</p>
+</li>
+<li>
+<p>Click the <strong>&lt;</strong> arrow to move the tag into the <strong>Available tags</strong> box.</p>
+</li>
+<li>
+<p>Click <strong>Save</strong>.</p>
+<div class="paragraph">
+<p>This tag is now deactivated for the cost management application.</p>
+</div>
+</li>
+<li>
+<p>Repeat these steps for any additional tags. Alternatively, you can move all of your tags using the <strong>&lt;&lt;</strong> double arrow, or move tags back to the <strong>Tags for Reporting</strong> box enable them again.</p>
+</li>
+</ol>
 </div>
 </div>
 </div>
@@ -1433,7 +1513,7 @@ Not all resource types support tags.</p></td>
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2021-06-23 16:25:48 UTC
+Last updated 2021-07-01 10:25:41 UTC
 </div>
 </div>
 </body>
