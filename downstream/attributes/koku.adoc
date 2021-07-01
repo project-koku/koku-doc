@@ -34,6 +34,7 @@
 :link-cost-models-app: link:https://cloud.redhat.com/openshift/cost-management/cost-models[Cost Models]
 :link-cost-explorer-app: link:https://cloud.redhat.com/openshift/cost-management/explorer[Cost Explorer]
 :link-sources: link:https://cloud.redhat.com/settings/sources[https://cloud.redhat.com/settings/sources]
+:link-settings: link:https://cloud.redhat.com/settings/applications/cost-management[]
 :link-ocp-app: link:https://cloud.redhat.com/openshift/cost-management/ocp[OpenShift]
 :link-aws-app: link:https://cloud.redhat.com/openshift/cost-management/aws[Amazon Web Services]  
 :link-azure-app: link:https://cloud.redhat.com/openshift/cost-management/azure[Microsoft Azure]
