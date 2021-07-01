@@ -9,7 +9,7 @@
 = Adding tags to a Google Cloud resource
 
 [role="_abstract"]
-You can apply custom labels to Google cloud resources, such as Virtual machine instances, Images, and Persistent disks. These labels are automatically added to your BigQuery export and sent to {product-title}. 
+You can apply custom labels to Google cloud resources, such as virtual machine instances, images, and persistent disks. These labels are automatically added to your BigQuery export and sent to {product-title}. 
 
 .Procedure
 

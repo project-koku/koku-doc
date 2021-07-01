@@ -13,7 +13,7 @@ The {product-title} application tracks cloud and infrastructure costs using tags
 
 [IMPORTANT]
 ====
-Tags and labels can only be configured directly on a source. You cannot edit tags and labels in the {product-title} application.
+Tags and labels can only be configured directly on a source. While you can choose what tags are activated in {product-title}, you cannot edit tags and labels in the {product-title} application.
 ====
 
 See _{link-tagging}_ to learn more about:

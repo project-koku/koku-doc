@@ -1,0 +1,16 @@
+// Module included in the following assemblies:
+// assembly-using-cost-explorer.adoc
+:_module-type: CONCEPT
+:experimental:
+
+[id="understanding-cost-explorer_{context}"]
+= Understanding Cost Explorer
+
+
+[role="_abstract"]
+
+
+image::../images/cost-explorer.png[]
+
+
+
