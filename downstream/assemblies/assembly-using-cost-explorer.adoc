@@ -1,0 +1,47 @@
+////
+Retains the context of the parent assembly if this assembly is nested within another assembly.
+For more information about nesting assemblies, see: https://redhat-documentation.github.io/modular-docs/#nesting-assemblies
+See also the complementary step on the last line of this file.
+////
+
+ifdef::context[:parent-context-of-assembly-using-cost-explorer: {context}]
+
+////
+Base the file name and the ID on the assembly title. For example:
+* file name: assembly-my-user-story.adoc
+* ID: [id="assembly-my-user-story_{context}"]
+* Title: = My user story
+
+The ID is an anchor that links to the module. Avoid changing it after the module has been published to ensure existing links are not broken. Include {context} in the ID so the assembly can be reused.
+////
+
+ifndef::context[]
+[id="assembly-using-cost-explorer"]
+endif::[]
+ifdef::context[]
+[id="assembly-using-cost-explorer_{context}"]
+endif::[]
+= Using Cost Explorer
+
+
+:context: cost-explorer
+
+[role="_abstract"]
+This paragraph is the assembly introduction. It explains what the user will accomplish by working through the modules in the assembly and sets the context for the user story the assembly is based on. The text that immediately follows the `[role="_abstract"]` tag is used for search metadata.
+
+
+
+This paragraph is the assembly introduction. It explains what the user will accomplish by working through the modules in the assembly and sets the context for the user story the assembly is based on. The text that immediately follows the `[role="_abstract"]` tag is used for search metadata.
+
+
+include::../modules/understanding-cost-explorer.adoc[leveloffset=+1]
+
+include::../modules/exporting-cost-data.adoc[leveloffset=+1]
+
+
+////
+Restore the context to what it was before this assembly.
+////
+ifdef::parent-context-of-assembly-using-cost-explorer[:context: {parent-context-of-assembly-using-cost-explorer}]
+ifndef::parent-context-of-assembly-using-cost-explorer[:!context:]
+

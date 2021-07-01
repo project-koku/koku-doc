@@ -14,3 +14,5 @@ include::attributes/sharedattributes.adoc[]
 //include files
 
 
+include::assemblies/assembly-using-cost-explorer.adoc[leveloffset=+1]
+
