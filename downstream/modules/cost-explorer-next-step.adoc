@@ -15,3 +15,4 @@ See _{link-cost-explorer}_ to learn more about:
 * Using Cost Explorer to identify abnormal events
 * Understanding how you cost data changes over time
 * Creating custom graphs for your cost and usage data
+* Exporting custom cost data tables

@@ -10,6 +10,10 @@
 [role="_abstract"]
 When planning your tagging strategy, these considerations can help you decide how to organize and report costs for your sources.
 
+Methodology::
+
+It is best practice to implement a Crawl, Walk, Run strategy when initially assigning tags for your resources. Start with the minimum number of tags you feel are required to accomplish your organizational objectives. Then slowly build on that foundation over time. As your understanding of how your organization leverages cost management grows, so will your skill in implementing a tagging strategy.
+
 Map business to reporting::
 
 Define the business perspectives you want to report on. For example, your taxonomy for {product-title} could consider these different perspectives:
@@ -18,7 +22,7 @@ Define the business perspectives you want to report on. For example, your taxono
 Defining the owner and the user of the resource: for example, the unique identifier of the user who requested the resource, and the one that is actually consuming the resource.
 +
 .Tenancy:
-If your environment is shared, it can be beneficial to understand which group or business unit has requested the resource. When the user is part of different groups, one group needs to be selected. For cost reporting, you can achieve this in many cases using cost center; but department, project, partner are also good candidates.
+If your environment is shared, it can be beneficial to understand which group or business unit has requested the resource. When the user is part of different groups, one group needs to be selected. For cost reporting, you can achieve this in many cases using cost center; but department, project, or partner are also good candidates.
 +
 .Location:
 For organizations with software deployed globally, cloud providers already identify the region where your resources are running, but your private cloud may be different.

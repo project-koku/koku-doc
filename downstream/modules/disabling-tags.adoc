@@ -1,0 +1,32 @@
+// Module included in the following assemblies:
+//
+// assembly-configuring-tags-sources.adoc
+:_module-type: PROCEDURE
+:experimental:
+
+
+[id="disabling-tags_{context}"]
+= Disabling tags in {product-title}
+
+[role="_abstract"]
+All cloud provider tags are activated in {product-title} by default. Sometimes having too many resource tags can affect {product-title} performance. Unnecessary tags can also make managing your costs more complicated when grouping tags and matching key:value pairs. Therefore, Red Hat recommends that you disable tags you are not actively using to reduce these potential issues.
+
+Follow this procedure to disable tags and enhance performance: 
+
+.Procedure
+
+. Navigate to {link-settings}.
++
+From this page, your cloud provider tags are sorted into two boxes: *Available tags* and *Tags for Reporting* (*Available labels* and *Labels for Reporting* for {openshift}). 
++
+The *Tags for Reporting* box contains the currently active tags. 
++
+. Click the name of the tag you want to disable in the *Tags for Reporting* box.
+. Click the *<* arrow to move the tag into the *Available tags* box. 
+. Click *Save*. 
++
+This tag is now deactivated for the {product-title} application.
++
+. Repeat these steps for any additional tags. Alternatively, you can move all of your tags using the *<<* double arrow, or move tags back to the *Tags for Reporting* box enable them again. 
+
+

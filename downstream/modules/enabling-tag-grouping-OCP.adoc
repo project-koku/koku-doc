@@ -28,6 +28,6 @@ To enable OpenShift tag keys for grouping:
 
 .Verification steps
 
-The enabled tag keys will now be available to group costs by from the *OpenShift details* area of {product-title}, in the *View by* list. For example, when you choose *View by: Tag*:
+The enabled tag keys will now be available to group costs from the *OpenShift details* area of {product-title}, in the *View by* list. For example, when you choose *View by: Tag*:
 
 image:cost-tag-key.png[]

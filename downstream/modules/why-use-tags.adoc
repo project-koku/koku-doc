@@ -8,11 +8,14 @@
 = Why use tags?
 
 [role="_abstract"]
-Tags allow you to differentiate and allocate costs between various parts of your environment for a more accurate view of your cost data.
+Tags (also sometimes called labels) are a string of custom metadata assigned to resources that your organization can utilize in multiple ways. 
 
-As a business service can be supported by many projects and technical services
-(for example, environment, region, cost center), tags provide clarity by mapping business concepts to reports.
-
-Tagging can be used to split resources, such as a shared cluster that will be used by many services to provide different business capabilities. For example, an AWS account can run different services for different projects.
-
-Tags also help you identify relationships between sources, allowing you to group applications across multiple clusters that are tagged with the same environment, cost center or team. Tagging also helps identify dependencies, such as the link between an RDS database and the OpenShift project using it.
+In the context of cost management, tags help you to differentiate and allocate costs between various parts of your environment for a more accurate view of your cost data, filling the gap between business logic and the resource. This allows you to assign organizational-specific details to help digest information later.
+ 
+As many projects and technical services (for example, environment, region, cost center) support a business service, tags can map business concepts to reports providing clarity. In that way, a properly allocated tag can help you to show costs grouped by those business concepts. Tags should be used to complement hierarchies in clouds, or specific hierarchies already present in your clusters (like projects).
+ 
+Tags are sometimes utilized in more applications than cost management. For example, it is possible and recommended to use them to define certain operations, like business automation, operational profiles, or access and security controls. You can then apply policies based on those tags. However, this document does not consider those use cases.  Cloud providers place limits on the number of tags or labels associated with resources, so you should consider all of those uses before defining your tagging strategy for cost management.
+ 
+Additionally, tags are sometimes used to split resources into smaller units when it is not possible to directly organize resources into projects or subprojects. For example, a shared cluster running many services to provide different business capabilities can use tags to differentiate applications instead of splitting them into projects. Additionally, an AWS account can run multiple different services for projects, and sometimes those services are shared between several applications (like the load balancer or any other shared resource).
+ 
+Furthermore, tags also help you identify relationships between sources, allowing you to group applications across multiple clusters tagged with the same environment, cost center, or team. Thus, making it possible to identify the costs of an application when running on the development, quality, or production clusters. Tags can also help to identify dependencies when there is not a direct link between a resource, such as the link between an RDS database and the OpenShift project using it.
