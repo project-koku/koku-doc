@@ -24,3 +24,9 @@ endif::koku[]
 . When the *Install Operator* window appears, you must select the +{operator}+ namespace for installation. If the namespace does not yet exist, it is created for you.
 . Click on the *Install* button.
 . After a short wait, *{operator-formal}* appears in the *Installed Operators* tab under *Project: all projects* or *Project: {operator}*.
+
+[IMPORTANT]
+====
+If a proxy with a custom CA certificate is configured, additional configuration  is required to inject this certificate into {operator-formal}. 
+See, link:https://access.redhat.com/documentation/en-us/openshift_container_platform/4.7/html/operators/administrator-tasks#olm-inject-custom-ca_olm-configuring-proxy-support[_Injecting a custom CA certificate_] in the {openshift} documentation for details. 
+====
