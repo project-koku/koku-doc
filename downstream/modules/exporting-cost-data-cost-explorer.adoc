@@ -1,0 +1,26 @@
+// Module included in the following assemblies:
+// assembly-using-cost-explorer.adoc
+:_module-type: Procedure
+:experimental:
+
+
+[id="exporting-cost-data-cost-explorer_{context}"]
+= Exporting cost data
+
+[role="_abstract"]
+Use the {link-cost-explorer-app} to export customized CSV files of cost data to your local workstation. These files contain more details about your cost data that you can apply in your desired reporting tool. 
+
+.Prerequisites
+
+* Your OpenShift cluster added as a {product-title} data source. See _{link-adding-ocp}_ for instructions.
+* Your cloud infrastructure account added as a {product-title} data source. See _{link-adding-sources}_ for instructions for your cloud provider type.
+
+.Procedure
+
+. Navigate to the {link-cost-explorer-app} application. 
+. Use the Cost Explorer filter options to create the desired information. 
+. Select items to be exported in the list populated below the Cost Explorer graph. 
+. Click the {icon-export} *Export* button. 
+. Click *Generate and Download*.
++
+The CSV file will download to your local system.

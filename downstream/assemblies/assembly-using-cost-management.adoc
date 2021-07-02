@@ -1,0 +1,33 @@
+// This assembly is included in the following assemblies:
+//
+// */getting_started/master.adoc
+
+ifdef::context[:parent-context-of-assembly-using-cost-management: {context}]
+
+
+
+ifndef::context[]
+[id="assembly-using-cost-management"]
+endif::[]
+ifdef::context[]
+[id="assembly-using-cost-management_{context}"]
+endif::[]
+= Using Cost Management
+
+:context: using-cost-management
+
+
+
+[role="_abstract"]
+
+
+
+include::../modules/cost-explorer-next-step.adoc[leveloffset=+1]
+
+
+////
+Restore the context to what it was before this assembly.
+////
+ifdef::parent-context-of-assembly-using-cost-management[:context: {parent-context-of-assembly-using-cost-management}]
+ifndef::parent-context-of-assembly-using-cost-management[:!context:]
+

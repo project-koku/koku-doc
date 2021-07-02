@@ -4,7 +4,7 @@
 :_module-type: CONCEPT
 :experimental:
 
-[id="con_cost-explorer-next-step_{context}"]
+[id="cost-explorer-next-step_{context}"]
 = Use the Cost Explorer to visualize your costs
 
 [role="_abstract"]
@@ -12,7 +12,7 @@ The {product-title} {link-cost-explorer-app} allows you to create custom graphs 
 
 See _{link-cost-explorer}_ to learn more about:
 
-* Using Cost Explorer to identify abnormal events
-* Understanding how you cost data changes over time
-* Creating custom graphs for your cost and usage data
-* Exporting custom cost data tables
+* Using Cost Explorer to identify abnormal events.
+* Understanding how your cost data changes over time.
+* Creating custom bar charts of your cost and usage data.
+* Exporting custom cost data tables.

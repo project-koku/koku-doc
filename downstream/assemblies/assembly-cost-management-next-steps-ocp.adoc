@@ -2,20 +2,20 @@
 //
 // */getting_started/master.adoc
 
-ifdef::context[:parent-context-of-assembly-cost-management-next-steps: {context}]
+ifdef::context[:parent-context-of-assembly-cost-management-next-steps-ocp: {context}]
 
 ifndef::context[]
-[id="assembly-cost-management-next-steps"]
+[id="assembly-cost-management-next-steps-ocp"]
 endif::[]
 ifdef::context[]
-[id="assembly-cost-management-next-steps_{context}"]
+[id="assembly-cost-management-next-steps-ocp_{context}"]
 endif::[]
 
 = Next steps for managing your costs
-:context: next-steps
+:context: next-steps-ocp
 
 [role="_abstract"]
-After adding your infrastructure and cloud sources, in addition to showing cost data by source, {product-title} will automatically show AWS and Azure cost and usage related to running your OpenShift Container Platform clusters on their platforms.
+After adding your {openshift} and cloud infrastructure sources, in addition to showing cost data by source, {product-title} will automatically show AWS and Azure cost and usage related to running your OpenShift Container Platform clusters on their platforms.
 
 [NOTE]
 ====
@@ -26,6 +26,15 @@ On the {product-title} *Overview* page ({link-cost-management}), your cost data 
 
 You can also use the left navigation menu to view the additional details of your costs by service.
 
+.Additional resources
+
+* _{link-adding-aws}_
+* _{link-adding-gcp}_
+* _{link-adding-azure}_
+
+
+include::../modules/limiting-access.adoc[leveloffset=+1]
+
 include::../modules/configure-tagging-next-step.adoc[leveloffset=+1]
 
 include::../modules/configure-cost-models-next-step.adoc[leveloffset=+1]
@@ -33,5 +42,5 @@ include::../modules/configure-cost-models-next-step.adoc[leveloffset=+1]
 include::../modules/cost-explorer-next-step.adoc[leveloffset=+1]
 
 // Restore the context to what it was before this assembly.
-ifdef::parent-context-of-assembly-cost-management-next-steps[:context: {parent-context-of-assembly-cost-management-next-steps}]
-ifndef::parent-context-of-assembly-cost-management-next-steps[:!context:]
+ifdef::parent-context-of-assembly-cost-management-next-steps-ocp[:context: {parent-context-of-assembly-cost-management-next-steps-ocp}]
+ifndef::parent-context-of-assembly-cost-management-next-steps-ocp[:!context:]

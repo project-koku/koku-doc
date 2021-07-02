@@ -15,4 +15,4 @@ include::attributes/sharedattributes.adoc[]
 
 include::assemblies/assembly-adding-gcp-sources.adoc[leveloffset=+1]
 
-include::assemblies/assembly-cost-management-next-steps.adoc[leveloffset=+1]
+include::assemblies/assembly-cost-management-next-steps-gcp.adoc[leveloffset=+1]

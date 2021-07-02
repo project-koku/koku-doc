@@ -30,15 +30,7 @@ include::../modules/about-cost-management.adoc[leveloffset=+1]
 
 include::../modules/planning-cost-management.adoc[leveloffset=+1]
 
-include::../modules/limiting-access.adoc[leveloffset=+1]
 
-include::../modules/adding-sources.adoc[leveloffset=+1]
-
-include::../modules/configure-tagging-next-step.adoc[leveloffset=+1]
-
-include::../modules/configure-cost-models-next-step.adoc[leveloffset=+1]
-
-include::../modules/cost-explorer-next-step.adoc[leveloffset=+1]
 
 // Restore the context to what it was before this assembly.
 ifdef::parent-context-of-assembly-introduction-cost-management[:context: {parent-context-of-assembly-introduction-cost-management}]

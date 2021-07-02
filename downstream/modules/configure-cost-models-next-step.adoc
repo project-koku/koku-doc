@@ -4,7 +4,7 @@
 :_module-type: CONCEPT
 :experimental:
 
-[id="con_configure-cost-models-next-step_{context}"]
+[id="configure-cost-models-next-step_{context}"]
 = Configure cost models to accurately report costs
 
 [role="_abstract"]
@@ -14,7 +14,7 @@ A cost model is a framework used to define the calculations for the costs stored
 
 From the {link-cost-models-app} area of {product-title}, you can:
 
-* Classify your costs as infrastructure or supplementary costs
-* Capture monthly costs for OpenShift nodes and clusters
-* Apply a markup to account for additional support costs
+* Classify your costs as infrastructure or supplementary costs.
+* Capture monthly costs for OpenShift nodes and clusters.
+* Apply a markup to account for additional support costs.
 * Learn how to configure a cost model in _{link-cost-models}_.
