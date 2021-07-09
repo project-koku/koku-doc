@@ -597,21 +597,14 @@ div.unbreakable { page-break-inside: avoid; }
 <ul class="sectlevel2">
 <li><a href="#about-cost-management_getting-started">About cost management</a></li>
 <li><a href="#planning-cost-management">Planning for cost management</a></li>
+<li><a href="#con_limiting-access_getting-started">Limit access to cost management</a></li>
+<li><a href="#adding-sources_getting-started">Add sources to cost management</a></li>
+<li><a href="#configure-tagging-next-step_getting-started">Configure tagging for your sources</a></li>
+<li><a href="#con_configure-cost-models-next-step_getting-started">Configure cost models to accurately report costs</a></li>
+<li><a href="#con_cost-explorer-next-step_getting-started">Use the Cost Explorer to visualize your costs</a></li>
 </ul>
 </li>
-<li><a href="#assembly-installing-cost-management">Configuring cost management</a>
-<ul class="sectlevel2">
-<li><a href="#limiting-access_configuring">Limit access to cost management resources</a></li>
-<li><a href="#adding-sources_configuring">Add sources to cost management</a></li>
-<li><a href="#configure-tagging-next-step_configuring">Configure tagging for your sources</a></li>
-<li><a href="#configure-cost-models-next-step_configuring">Configure cost models to accurately report costs</a></li>
-</ul>
-</li>
-<li><a href="#assembly-using-cost-management">Using Cost Management</a>
-<ul class="sectlevel2">
-<li><a href="#cost-explorer-next-step_using-cost-management">Use the Cost Explorer to visualize your costs</a></li>
-</ul>
-</li>
+<li><a href="#assembly-terminology">Cost management terminology</a></li>
 </ul>
 </div>
 </div>
@@ -723,33 +716,8 @@ div.unbreakable { page-break-inside: avoid; }
 </ul>
 </div>
 </div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="assembly-installing-cost-management">Configuring cost management</h2>
-<div class="sectionbody">
-<div class="paragraph _abstract">
-<p>Before you begin to use cost management, you must complete these tasks to properly configure the cost management application:</p>
-</div>
-<div class="ulist">
-<div class="title">Task summary</div>
-<ul>
-<li>
-<p><a href="#limiting-access_configuring">Limit access to cost management resources</a></p>
-</li>
-<li>
-<p><a href="#adding-sources_configuring">Add sources to cost management</a></p>
-</li>
-<li>
-<p><a href="#configure-tagging-next-step_configuring">Configure tagging for your sources</a></p>
-</li>
-<li>
-<p><a href="#configure-cost-models-next-step_configuring">Configure cost models to accurately report costs</a></p>
-</li>
-</ul>
-</div>
 <div class="sect2">
-<h3 id="limiting-access_configuring">Limit access to cost management resources</h3>
+<h3 id="con_limiting-access_getting-started">Limit access to cost management</h3>
 <div class="paragraph _abstract">
 <p>Before adding and configuring sources in cost management, it is a good idea to limit access to cost data and resources. For example, you may not want users to have access to all cost data, but instead only data specific to their projects or organization. Using role-based access control, you can limit the visibility of resources involved in cost management reports. For example, you may want to restrict a user&#8217;s view to only AWS sources, instead of the entire environment.</p>
 </div>
@@ -758,7 +726,7 @@ div.unbreakable { page-break-inside: avoid; }
 </div>
 </div>
 <div class="sect2">
-<h3 id="adding-sources_configuring">Add sources to cost management</h3>
+<h3 id="adding-sources_getting-started">Add sources to cost management</h3>
 <div class="paragraph _abstract">
 <p>A source is a cloud provider account that is connected to cost management to be monitored, for example, an OpenShift Container Platform deployment, or an AWS or Azure account. To use cost management to monitor your cloud costs, you must first connect a data source to the cost management application.</p>
 </div>
@@ -789,7 +757,7 @@ div.unbreakable { page-break-inside: avoid; }
 </div>
 </div>
 <div class="sect2">
-<h3 id="configure-tagging-next-step_configuring">Configure tagging for your sources</h3>
+<h3 id="configure-tagging-next-step_getting-started">Configure tagging for your sources</h3>
 <div class="paragraph _abstract">
 <p>The cost management application tracks cloud and infrastructure costs using tags (called labels in OpenShift), which you can refine to filter and attribute to resources. Tags in cost management allow you to organize your resources by cost and to allocate the costs to different parts of your cloud infrastructure.</p>
 </div>
@@ -813,19 +781,19 @@ div.unbreakable { page-break-inside: avoid; }
 <div class="ulist">
 <ul>
 <li>
-<p>Planning your tagging strategy to organize your view of cost data.</p>
+<p>Planning your tagging strategy to organize your view of cost data</p>
 </li>
 <li>
-<p>Understanding how cost management associates tags.</p>
+<p>Understanding how cost management associates tags</p>
 </li>
 <li>
-<p>Configuring tags and labels on your sources.</p>
+<p>Configuring tags and labels on your sources</p>
 </li>
 </ul>
 </div>
 </div>
 <div class="sect2">
-<h3 id="configure-cost-models-next-step_configuring">Configure cost models to accurately report costs</h3>
+<h3 id="con_configure-cost-models-next-step_getting-started">Configure cost models to accurately report costs</h3>
 <div class="paragraph _abstract">
 <p>Now that you have configured your sources to collect cost and usage data into cost management, you can configure cost models to associate prices to metrics and usage, and fine-tune the costs of running your cloud.</p>
 </div>
@@ -838,13 +806,13 @@ div.unbreakable { page-break-inside: avoid; }
 <div class="ulist">
 <ul>
 <li>
-<p>Classify your costs as infrastructure or supplementary costs.</p>
+<p>Classify your costs as infrastructure or supplementary costs</p>
 </li>
 <li>
-<p>Capture monthly costs for OpenShift nodes and clusters.</p>
+<p>Capture monthly costs for OpenShift nodes and clusters</p>
 </li>
 <li>
-<p>Apply a markup to account for additional support costs.</p>
+<p>Apply a markup to account for additional support costs</p>
 </li>
 <li>
 <p>Learn how to configure a cost model in <em><a href="https://project-koku.github.io/koku-doc/cost-models.html">Using cost models</a></em>.</p>
@@ -852,13 +820,8 @@ div.unbreakable { page-break-inside: avoid; }
 </ul>
 </div>
 </div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="assembly-using-cost-management">Using Cost Management</h2>
-<div class="sectionbody">
-<div class="sect2 _abstract">
-<h3 id="cost-explorer-next-step_using-cost-management">Use the Cost Explorer to visualize your costs</h3>
+<div class="sect2">
+<h3 id="con_cost-explorer-next-step_getting-started">Use the Cost Explorer to visualize your costs</h3>
 <div class="paragraph _abstract">
 <p>The cost management <a href="https://cloud.redhat.com/openshift/cost-management/explorer">Cost Explorer</a> allows you to create custom graphs of time-scaled cost and usage information to better visualize and interpret your costs.</p>
 </div>
@@ -868,26 +831,46 @@ div.unbreakable { page-break-inside: avoid; }
 <div class="ulist">
 <ul>
 <li>
-<p>Using Cost Explorer to identify abnormal events.</p>
+<p>Using Cost Explorer to identify abnormal events</p>
 </li>
 <li>
-<p>Understanding how you cost data changes over time.</p>
+<p>Understanding how you cost data changes over time</p>
 </li>
 <li>
-<p>Creating custom graphs for your cost and usage data.</p>
+<p>Creating custom graphs for your cost and usage data</p>
 </li>
 <li>
-<p>Exporting custom cost data tables.</p>
+<p>Exporting custom cost data tables</p>
 </li>
 </ul>
 </div>
 </div>
 </div>
 </div>
+<div class="sect1">
+<h2 id="assembly-terminology">Cost management terminology</h2>
+<div class="sectionbody">
+<div class="dlist _abstract">
+<dl>
+<dt class="hdlist1">Source</dt>
+<dd>
+<p>A cloud provider account that is connected to cost management to be monitored, for example, an OpenShift Container Platform deployment, or an AWS or Azure account.</p>
+</dd>
+<dt class="hdlist1">Organization Administrator</dt>
+<dd>
+<p>The highest permission level for Red Hat accounts, with full access to content and features. This is the only role that can manage users and control their access and permissions on an account. An account may have multiple Organization Administrators.</p>
+</dd>
+</dl>
+</div>
+<div class="paragraph">
+<p>See <a href="https://access.redhat.com/articles/1757953">Roles and Permissions for Red Hat Subscription Management</a> for more details.</p>
+</div>
+</div>
+</div>
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2021-07-09 11:30:22 UTC
+Last updated 2021-07-09 15:13:04 UTC
 </div>
 </div>
 </body>
