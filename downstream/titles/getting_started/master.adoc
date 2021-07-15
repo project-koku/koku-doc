@@ -15,7 +15,11 @@ include::attributes/sharedattributes.adoc[]
 
 include::assemblies/assembly-introduction-cost-management.adoc[leveloffset=+1]
 
-include::assemblies/assembly-terminology.adoc[leveloffset=+1]
+include::assemblies/assembly-installing-cost-management.adoc[leveloffset=+1]
+
+include::assemblies/assembly-using-cost-management.adoc[leveloffset=+1]
+
+// include::assemblies/assembly-terminology.adoc[leveloffset=+1]
 
 // Moved Assemblies
 

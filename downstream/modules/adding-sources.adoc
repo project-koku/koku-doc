@@ -8,7 +8,7 @@
 = Add sources to {product-title}
 
 [role="_abstract"]
-A source is a cloud provider account that is connected to {product-title} to be monitored, for example, an OpenShift Container Platform deployment, or an AWS or Azure account. To use {product-title} to monitor your cloud costs, you must first connect a data source to the {product-title} application.
+A source is a provider account that is connected to {product-title} to be monitored, for example, an OpenShift Container Platform deployment, or a cloud infrastructure provider. To use {product-title} to monitor your cloud costs, you must first connect a data source to the {product-title} application.
 
 Currently, {product-title} can track costs for Amazon Web Services (AWS), Microsoft Azure, Google Cloud, and Red Hat OpenShift Container Platform sources.
 

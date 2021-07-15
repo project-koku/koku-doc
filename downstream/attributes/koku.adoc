@@ -26,11 +26,12 @@
 // Doc Links sub
 :link-activating-aws-tags: link:https://project-koku.github.io/koku-doc/getting-started.html#activating-aws-tags_adding-aws-sources[Activating AWS tags for {product-title}]
 :link-azure-export-schedule: link:https://project-koku.github.io/koku-doc/getting-started.html#configuring-an-azure-daily-export-schedule_adding-an-azure-source[Configuring a daily Azure data export schedule]
-
+:link-adding-sources: link:https://project-koku.github.io/koku-doc/getting-started.html[Adding sources to cost management]
 
 // Application Links
 
 :link-cost-management: link:https://cloud.redhat.com/openshift/cost-management/[https://cloud.redhat.com/openshift/cost-management/]
+:link-cost-management-t: link:https://cloud.redhat.com/openshift/cost-management/[cost management]
 :link-cost-models-app: link:https://cloud.redhat.com/openshift/cost-management/cost-models[Cost Models]
 :link-cost-explorer-app: link:https://cloud.redhat.com/openshift/cost-management/explorer[Cost Explorer]
 :link-sources: link:https://cloud.redhat.com/settings/sources[https://cloud.redhat.com/settings/sources]
@@ -39,3 +40,8 @@
 :link-aws-app: link:https://cloud.redhat.com/openshift/cost-management/aws[Amazon Web Services]  
 :link-azure-app: link:https://cloud.redhat.com/openshift/cost-management/azure[Microsoft Azure]
 :link-gcp-app: link:https://cloud.redhat.com/openshift/cost-management/gcp[Google Cloud Platform]
+
+// images 
+
+:icon-export: image:export-icon.png[] 
+:icon-options: image:more-options.png[]

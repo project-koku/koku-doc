@@ -15,4 +15,4 @@ include::attributes/sharedattributes.adoc[]
 
 include::assemblies/assembly-adding-azure-sources.adoc[leveloffset=+1]
 
-include::assemblies/assembly-cost-management-next-steps.adoc[leveloffset=+1]
+include::assemblies/assembly-cost-management-next-steps-azure.adoc[leveloffset=+1]

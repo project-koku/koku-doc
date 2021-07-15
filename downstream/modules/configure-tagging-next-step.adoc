@@ -18,7 +18,7 @@ Tags and labels can only be configured directly on a source. While you can choos
 
 See _{link-tagging}_ to learn more about:
 
-* Planning your tagging strategy to organize your view of cost data
-* Understanding how {product-title} associates tags
-* Configuring tags and labels on your sources
+* Planning your tagging strategy to organize your view of cost data.
+* Understanding how {product-title} associates tags.
+* Configuring tags and labels on your sources.
 
