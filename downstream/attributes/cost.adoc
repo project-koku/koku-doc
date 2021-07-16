@@ -18,23 +18,24 @@
 :link-cost-models: link:https://access.redhat.com/documentation/en-us/cost_management_service/2021/html-single/using_cost_models/index[Using cost models]
 
 //new title links placeholders
-:link-cost-explorer: link:https://access.redhat.com/documentation/en-us/cost_management_service/2021/html-single/getting_started_with_cost_management/index[Visualizing your costs using Cost Explorer]
-:link-adding-azure: link:https://access.redhat.com/documentation/en-us/cost_management_service/2021/html-single/getting_started_with_cost_management/index[Adding a Microsoft Azure source to {product-title}]
-:link-adding-gcp: link:https://access.redhat.com/documentation/en-us/cost_management_service/2021/html-single/getting_started_with_cost_management/index[Adding a Google Cloud source to {product-title}]
+:link-cost-explorer: link:https://access.redhat.com/documentation/en-us/cost_management_service/2021/html-single/visualizing_your_costs_using_cost_explorer/index[Visualizing your costs using Cost Explorer]
+:link-adding-azure: link:https://access.redhat.com/documentation/en-us/cost_management_service/2021/html-single/adding_a_microsoft_azure_source_to_cost_management/index[Adding a Microsoft Azure source to {product-title}]
+:link-adding-gcp: link:https://access.redhat.com/documentation/en-us/cost_management_service/2021/html-single/adding_a_google_cloud_source_to_cost_management/index[Adding a Google Cloud source to {product-title}]
 :link-whats-new: link:https://access.redhat.com/documentation/en-us/cost_management_service/2021/html-single/getting_started_with_cost_management/index[What's new in {product-title}]
-:link-adding-aws: link:https://access.redhat.com/documentation/en-us/cost_management_service/2021/html-single/getting_started_with_cost_management/index#assembly-adding-aws-sources[Adding an Amazon Web Services (AWS) source to {product-title}]
-:link-adding-ocp: link:https://access.redhat.com/documentation/en-us/cost_management_service/2021/html-single/getting_started_with_cost_management/index#assembly-adding-openshift-container-platform-source[Adding an OpenShift Container Platform source to cost management]
-:link-limiting-access: link:https://access.redhat.com/documentation/en-us/cost_management_service/2021/html-single/getting_started_with_cost_management/index#assembly-limiting-access-cost-resources-rbac[Limiting access to {product-title} resources]
+:link-adding-aws: link:https://access.redhat.com/documentation/en-us/cost_management_service/2021/html-single/adding_an_amazon_web_services_aws_source_to_cost_management/index[Adding an Amazon Web Services (AWS) source to {product-title}]
+:link-adding-ocp: link:https://access.redhat.com/documentation/en-us/cost_management_service/2021/html-single/adding_an_openshift_container_platform_source_to_cost_management/index[Adding an OpenShift Container Platform source to cost management]
+:link-limiting-access: link:https://access.redhat.com/documentation/en-us/cost_management_service/2021/html-single/limiting_access_to_cost_management_resources/index[Limiting access to {product-title} resources]
 
 // Doc Links sub
-:link-adding-koku: link:https://project-koku.github.io/koku-doc/getting-started.html#assembly-adding-openshift-container-platform-source[Koku community documentation]
-:link-activating-aws-tags: link:https://access.redhat.com/documentation/en-us/cost_management_service/2021/html-single/getting_started_with_cost_management/index#activating-aws-tags_adding-aws-sources[Activating AWS tags for {product-title}]
-:link-azure-export-schedule: link:https://access.redhat.com/documentation/en-us/cost_management_service/2021/html-single/getting_started_with_cost_management/index#configuring-an-azure-daily-export-schedule_adding-an-azure-source[Configuring a daily Azure data export schedule]
-:link-adding-sources: link:https://project-koku.github.io/koku-doc/getting-started.html[Adding sources to cost management]
+:link-adding-koku: link:https://project-koku.github.io/koku-doc/getting-started.html[Koku community documentation]
+:link-activating-aws-tags: link:https://access.redhat.com/documentation/en-us/cost_management_service/2021/html-single/adding_an_amazon_web_services_aws_source_to_cost_management/index[Activating AWS tags for {product-title}]
+:link-azure-export-schedule: link:https://access.redhat.com/documentation/en-us/cost_management_service/2021/html-single/adding_a_microsoft_azure_source_to_cost_management/index?lb_target=production#configuring-an-azure-daily-export-schedule_adding-an-azure-source[Configuring a daily Azure data export schedule]
+:link-adding-sources: link:https://access.redhat.com/documentation/en-us/cost_management_service/2021/html-single/getting_started_with_cost_management/index?lb_target=stage#adding-sources_configuring[Adding sources to cost management]
 
 // Application Links
 
-:link-cost-management: link:https://cloud.redhat.com/openshift/cost-management/[cloud.redhat.com/cost-management/]
+:link-cost-management: link:https://cloud.redhat.com/openshift/cost-management/[cloud.redhat.com/openshift/cost-management/]
+:link-cost-management-t: link:https://cloud.redhat.com/openshift/cost-management/[cost management]
 :link-cost-models-app: link:https://cloud.redhat.com/openshift/cost-management/cost-models[Cost Models]
 :link-cost-explorer-app: link:https://cloud.redhat.com/openshift/cost-management/explorer[Cost Explorer]
 :link-sources: link:https://cloud.redhat.com/settings/sources[https://cloud.redhat.com/settings/sources]
