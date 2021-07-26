@@ -26,7 +26,7 @@ To add an OpenShift Container Platform cluster as a source to {product-title}, y
 
 [NOTE]
 ====
-You must have a Red Hat account user with Organization Administrator entitlements before you can add sources to {product-title}.
+You must have a Red Hat account user with Sources Administrator entitlements before you can add sources to {product-title}.
 ====
 
 The {product-title} Operator (`cost-mgmt-operator`) collects the metrics required for {product-title} by:

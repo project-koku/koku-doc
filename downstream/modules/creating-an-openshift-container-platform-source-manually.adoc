@@ -15,7 +15,7 @@ If you follow the previous steps, your OpenShift Container Platform source shoul
 .Prerequisites
 
 * OpenShift Container Platform cluster installed.
-* Red Hat account user with Organization Administrator entitlements.
+* Red Hat account user with Sources Administrator entitlements.
 * You are logged into the OpenShift Container Platform web console.
 
 .Procedure

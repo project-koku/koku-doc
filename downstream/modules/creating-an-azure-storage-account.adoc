@@ -13,7 +13,7 @@ Create a new storage account in Azure to contain the cost data and metrics that 
 
 [NOTE]
 ====
-You must have a Red Hat account user with Organization Administrator entitlements before you can add sources to {product-title}.
+You must have a Red Hat account user with Sources Administrator entitlements before you can add sources to {product-title}.
 ====
 
 . In the {platform} platform, open the *Sources* menu (https://cloud.redhat.com/settings/sources/) to begin adding an Azure source to {product-title}:

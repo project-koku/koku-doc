@@ -19,7 +19,7 @@ To add a Google Cloud account to {product-title}, you must configure your Google
 
 [NOTE]
 ====
-You must have a Red Hat account user with Organization Administrator or Sources Administrator entitlements before you can add sources to {product-title}.
+You must have a Red Hat account user with Sources Administrator entitlements before you can add sources to {product-title}.
 ====
 
 [NOTE]

@@ -14,7 +14,7 @@ The AWS or Azure tag equivalent in OpenShift is a label, which also consists of 
 //Module title changed to "Viewing" because users cannot add. Change back to "Adding" when that capability is restored.
 
 ////
-One method of adding tags to OpenShift resources is to specify labels to add in a template. See https://access.redhat.com/documentation/en-us/openshift_container_platform/4.7/html/images/using-templates[Using templates] in the OpenShift Container Platform documentation.
+One method of adding tags to OpenShift resources is to specify labels to add in a template. See https://access.redhat.com/documentation/en-us/openshift_container_platform/4.8/html/images/using-templates[Using templates] in the OpenShift Container Platform documentation.
 
 Or to add labels manually:
 
@@ -44,5 +44,5 @@ To view the available tags, navigate to a resource in the OpenShift web console.
 ////
 .Additional resources
 
-For more information about creating OpenShift labels, see https://access.redhat.com/documentation/en-us/openshift_container_platform/4.7/html-single/nodes/index#nodes-nodes-working-updating_nodes-nodes-working[Nodes] in the OpenShift Container Platform documentation.
+For more information about creating OpenShift labels, see https://access.redhat.com/documentation/en-us/openshift_container_platform/4.8/html-single/nodes/index#nodes-nodes-working-updating_nodes-nodes-working[Nodes] in the OpenShift Container Platform documentation.
 ////

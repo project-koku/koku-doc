@@ -19,7 +19,7 @@ To add an AWS account to {product-title}, you must configure your AWS account to
 
 [NOTE]
 ====
-You must have a Red Hat account user with Organization Administrator entitlements before you can add sources to {product-title}.
+You must have a Red Hat account user with Sources Administrator entitlements before you can add sources to {product-title}.
 ====
 
 When you add your AWS account as a source, this creates a read-only connection to AWS in order to collect cost information hourly in {product-title}, but does not make any changes to the AWS account.
