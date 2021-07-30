@@ -34,16 +34,16 @@
 
 // Application Links
 
-:link-cost-management: link:https://cloud.redhat.com/openshift/cost-management/[cloud.redhat.com/openshift/cost-management/]
-:link-cost-management-t: link:https://cloud.redhat.com/openshift/cost-management/[cost management]
-:link-cost-models-app: link:https://cloud.redhat.com/openshift/cost-management/cost-models[Cost Models]
-:link-cost-explorer-app: link:https://cloud.redhat.com/openshift/cost-management/explorer[Cost Explorer]
-:link-sources: link:https://cloud.redhat.com/settings/sources[https://cloud.redhat.com/settings/sources]
-:link-settings: link:https://cloud.redhat.com/settings/applications/cost-management[]
-:link-ocp: link:https://cloud.redhat.com/openshift/cost-management/ocp[OpenShift]
-:link-aws: link:https://cloud.redhat.com/openshift/cost-management/aws[Amazon Web Services]  
-:link-azure: link:https://cloud.redhat.com/openshift/cost-management/azure[Microsoft Azure]
-:link-gcp: link:https://cloud.redhat.com/openshift/cost-management/gcp[Google Cloud Platform]
+:link-cost-management: link:https://console.redhat.com/openshift/cost-management/[console.redhat.com/openshift/cost-management/]
+:link-cost-management-t: link:https://console.redhat.com/openshift/cost-management/[cost management]
+:link-cost-models-app: link:https://console.redhat.com/openshift/cost-management/cost-models[Cost Models]
+:link-cost-explorer-app: link:https://console.redhat.com/openshift/cost-management/explorer[Cost Explorer]
+:link-sources: link:https://console.redhat.com/settings/sources[https://console.redhat.com/settings/sources]
+:link-settings: link:https://console.redhat.com/settings/applications/cost-management[]
+:link-ocp: link:https://console.redhat.com/openshift/cost-management/ocp[OpenShift]
+:link-aws: link:https://console.redhat.com/openshift/cost-management/aws[Amazon Web Services]  
+:link-azure: link:https://console.redhat.com/openshift/cost-management/azure[Microsoft Azure]
+:link-gcp: link:https://console.redhat.com/openshift/cost-management/gcp[Google Cloud Platform]
 
 // images
 
