@@ -12,7 +12,7 @@ Using the information from the previous steps, you can now add your Google Cloud
 
 .Prerequisites
 
-* Red Hat account user with Organization Administrator or Sources Administrator entitlements
+* Red Hat account user with Sources Administrator entitlements
 * Google Cloud xref:creating-a-project-gcp_{context}[project]
 * xref:adding-new-member-with-cost-role-gcp_{context}[Billing service member] with the {product-title} Identity and Access Management (IAM) xref:creating-iam-role-gcp_{context}[role]
 * xref:exporting-billing-data-gcp_{context}[Billing export] to xref:creating-a-dataset-gcp_{context}[BigQuery dataset]
