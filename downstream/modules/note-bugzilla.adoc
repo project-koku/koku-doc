@@ -7,4 +7,4 @@
 [id="note-bugzilla_{context}"]
 
 [role="_abstract"]
-If you have a suggestion for improving this guide or have found an error, please submit a Bugzilla report at link:https://bugzilla.redhat.com/enter_bug.cgi?product=Cloud%20Software%20Services%20(cloud.redhat.com)&component=Cost%20Management[http://bugzilla.redhat.com] against _Cloud Software Services ({platform})_ for the *{product-title}* component.
+If you have a suggestion for improving this guide or have found an error, please submit a Bugzilla report at link:https://bugzilla.redhat.com/enter_bug.cgi?product=Red%20Hat%20Hybrid%20Cloud%20Console%20%28console.redhat.com%29[http://bugzilla.redhat.com] against _{platform-title} ({platform})_ for the *{product-title}* component. Alternatively, you can open an issue in the {link-jira} with the *Documentation* label.
