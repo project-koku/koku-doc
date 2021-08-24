@@ -34,7 +34,6 @@ after_failure:
   - docker logs gcp-source
   - docker logs ocp-source
 
-if: branch = main
 after_success:
  - sudo git clone https://github.com/project-koku/koku-doc.git -b gh-pages output
  - cd output ; sudo mv ../downstream/titles/using_cost_models/master.html cost-models.html ; sudo mv ../downstream/titles/getting_started/master.html getting-started.html ; sudo mv ../downstream/titles/managing_cost_data_using_tags/master.html using-tags.html ; sudo mv ../downstream/titles/adding_aws_source/master.html aws-source.html ; sudo mv ../downstream/titles/adding_azure_source/master.html azure-source.html ; sudo mv ../downstream/titles/adding_gcp_source/master.html gcp-source.html ; sudo mv ../downstream/titles/adding_ocp_source/master.html ocp-source.html ; sudo cp -a ../downstream/images/. images
