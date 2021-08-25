@@ -37,8 +37,8 @@ after_failure:
 after_success:
  - sudo git clone https://github.com/project-koku/koku-doc.git -b gh-pages output
  - cd output ; sudo mv ../downstream/titles/using_cost_models/master.html cost-models.html ; sudo mv ../downstream/titles/getting_started/master.html getting-started.html ; sudo mv ../downstream/titles/managing_cost_data_using_tags/master.html using-tags.html ; sudo mv ../downstream/titles/adding_aws_source/master.html aws-source.html ; sudo mv ../downstream/titles/adding_azure_source/master.html azure-source.html ; sudo mv ../downstream/titles/adding_gcp_source/master.html gcp-source.html ; sudo mv ../downstream/titles/adding_ocp_source/master.html ocp-source.html ; sudo cp -a ../downstream/images/. images
-  - sudo git config user.name "${GH_USER_NAME}"
-  - sudo git config user.email "{GH_USER_EMAIL}"
-  - sudo git add .
-  - sudo git commit -m "Deploy ${TRAVIS_COMMIT_RANGE} to github pages"
-  - sudo git push --force --quiet "https://${GH_TOKEN}@${GH_REF}" gh-pages > /dev/null 2>&1
+ - sudo git config user.name "${GH_USER_NAME}"
+ - sudo git config user.email "{GH_USER_EMAIL}"
+ - sudo git add .
+ - sudo git commit -m "Deploy ${TRAVIS_COMMIT_RANGE} to github pages"
+ - sudo git push --force --quiet "https://${GH_TOKEN}@${GH_REF}" gh-pages > /dev/null 2>&1
