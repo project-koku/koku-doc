@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="generator" content="Asciidoctor 2.0.16">
-<title>Getting started with cost management</title>
+<title>Adding an Amazon Web Services (AWS) source to cost management</title>
 <style>
 @import url(//openshift.redhat.com/app/assets-20130701203230/overpass.css);
 @import url(//cdnjs.cloudflare.com/ajax/libs/font-awesome/3.2.0/css/font-awesome.css);
@@ -589,27 +589,27 @@ div.unbreakable { page-break-inside: avoid; }
 </head>
 <body class="article toc2 toc-left">
 <div id="header">
-<h1>Getting started with cost management</h1>
+<h1>Adding an Amazon Web Services (AWS) source to cost management</h1>
 <div id="toc" class="toc2">
 <div id="toctitle">Table of Contents</div>
 <ul class="sectlevel1">
-<li><a href="#assembly-introduction-cost-management">Introduction to cost management</a>
+<li><a href="#assembly-adding-aws-sources">Adding an Amazon Web Services (AWS) source to cost management</a>
 <ul class="sectlevel2">
-<li><a href="#about-cost-management_getting-started">About cost management</a></li>
-<li><a href="#planning-cost-management">Planning for cost management</a></li>
+<li><a href="#creating-an-aws-s3-bucket_adding-aws-sources">Creating an S3 bucket for reporting</a></li>
+<li><a href="#activating-aws-tags_adding-aws-sources">Activating AWS tags for cost management</a></li>
+<li><a href="#enabling-aws-account-access_adding-aws-sources">Enabling minimal account access for cost and usage consumption</a>
+<ul class="sectlevel3">
+<li><a href="#enabling-additional-aws-account-access_adding-aws-sources">Enabling additional account access for cost and usage consumption</a></li>
 </ul>
 </li>
-<li><a href="#assembly-installing-cost-management">Configuring cost management</a>
-<ul class="sectlevel2">
-<li><a href="#adding-sources_configuring">Add sources to cost management</a></li>
-<li><a href="#limiting-access_configuring">Limit access to cost management resources</a></li>
-<li><a href="#configure-tagging-next-step_configuring">Configure tagging for your sources</a></li>
-<li><a href="#configure-cost-models-next-step_configuring">Configure cost models to accurately report costs</a></li>
 </ul>
 </li>
-<li><a href="#assembly-using-cost-management">Using Cost Management</a>
+<li><a href="#assembly-cost-management-next-steps-aws">Next steps for managing your costs</a>
 <ul class="sectlevel2">
-<li><a href="#cost-explorer-next-step_using-cost-management">Use the Cost Explorer to visualize your costs</a></li>
+<li><a href="#limiting-access_next-steps-aws">Limit access to cost management resources</a></li>
+<li><a href="#configure-tagging-next-step_next-steps-aws">Configure tagging for your sources</a></li>
+<li><a href="#configure-cost-models-next-step_next-steps-aws">Configure cost models to accurately report costs</a></li>
+<li><a href="#cost-explorer-next-step_next-steps-aws">Use the Cost Explorer to visualize your costs</a></li>
 </ul>
 </li>
 </ul>
@@ -617,158 +617,358 @@ div.unbreakable { page-break-inside: avoid; }
 </div>
 <div id="content">
 <div class="sect1">
-<h2 id="assembly-introduction-cost-management">Introduction to cost management</h2>
+<h2 id="assembly-adding-aws-sources">Adding an Amazon Web Services (AWS) source to cost management</h2>
 <div class="sectionbody">
 <div class="paragraph _abstract">
-<p>This document provides instructions to begin using cost management, including prerequisites and instructions for connecting your cloud environments, and configuring users and permissions.</p>
+<p>To add an AWS account to cost management, you must configure your AWS account to provide metrics, then add your AWS account as a source from the cost management user interface.</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<div class="title">Note</div>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>You must have a Red Hat account user with Sources Administrator entitlements before you can add sources to cost management.</p>
+</div>
+</td>
+</tr>
+</table>
 </div>
 <div class="paragraph">
-<p>After completing the setup described in this guide, you will be able to track cost and usage data for your Amazon Web Services (AWS), Microsoft Azure, Google Cloud, and OpenShift Container Platform environments.</p>
+<p>When you add your AWS account as a source, this creates a read-only connection to AWS in order to collect cost information hourly in cost management, but does not make any changes to the AWS account.</p>
+</div>
+<div class="paragraph">
+<p>Before you can add your AWS account to cost management as a data source, you must configure the following services on your AWS account to allow cost management access to metrics:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>An S3 bucket to store cost and usage data reporting for cost management</p>
+</li>
+<li>
+<p>An Identity Access Management (IAM) policy and role for cost management to process the cost and usage data</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>As you will complete some of the following steps in the AWS console, and some steps in the cost management user interface, keep both applications open in a web browser.</p>
+</div>
+<div class="paragraph">
+<p>Add your AWS source to cost management from the settings area at
+<a href="https://cloud.redhat.com/settings/sources/" class="bare">https://cloud.redhat.com/settings/sources/</a>.</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<div class="title">Note</div>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>As non-Red Hat products and documentation can change without notice, instructions for configuring the third-party sources provided in this guide are general and correct at the time of publishing. See the <a href="https://docs.aws.amazon.com/">AWS documentation</a> for the most up-to-date and accurate information.</p>
+</div>
+</td>
+</tr>
+</table>
 </div>
 <div class="sect2">
-<h3 id="about-cost-management_getting-started">About cost management</h3>
+<h3 id="creating-an-aws-s3-bucket_adding-aws-sources">Creating an S3 bucket for reporting</h3>
 <div class="paragraph _abstract">
-<p>Cost management is an OpenShift Container Platform service that enables you to better understand and track costs for clouds and containers. It is based on the upstream project Koku.</p>
+<p>Cost management requires an Amazon S3 bucket with permissions configured to store billing reports.</p>
 </div>
 <div class="paragraph">
-<p>You can access the cost management application from <a href="https://console.redhat.com/openshift/cost-management/">console.redhat.com/openshift/cost-management/</a>.</p>
+<p>Log into your AWS account to begin configuring cost and usage reporting:</p>
 </div>
-<div class="paragraph">
-<p>Cost management allows you to simplify management of resources and costs across various environments, including:</p>
-</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>In the AWS S3 console, create a new S3 bucket or use an existing bucket. If you are configuring a new S3 bucket, accept the default settings.</p>
+</li>
+<li>
+<p>In the AWS Billing console, create a Cost and Usage Report that will be delivered to your S3 bucket. Specify the following values (and accept the defaults for any other values):</p>
 <div class="ulist">
 <ul>
 <li>
-<p>Container platforms such as OpenShift Container Platform</p>
+<p>Report name: <em>&lt;any-name&gt;</em> (note this name as you will use it later)</p>
 </li>
 <li>
-<p>Public clouds such as Amazon Web Services (AWS), Google Cloud, and Microsoft Azure</p>
+<p>Additional report details: Include resource IDs</p>
 </li>
-</ul>
-</div>
+<li>
+<p>S3 bucket: <em>&lt;the S3 bucket you configured previously&gt;</em></p>
+</li>
+<li>
+<p>Time granularity: Hourly</p>
+</li>
+<li>
+<p>Enable report data integration for: Amazon Redshift, Amazon QuickSight (do not enable report data integration for Amazon Athena)</p>
+</li>
+<li>
+<p>Compression type: GZIP</p>
+</li>
+<li>
+<p>Report path prefix: cost</p>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<div class="title">Note</div>
+</td>
+<td class="content">
 <div class="paragraph">
-<p>The cost management application allows you to:</p>
+<p>See the AWS <em>Billing and Cost Management</em> documentation for more details on configuration.</p>
 </div>
-<div class="ulist">
-<ul>
-<li>
-<p>Visualize, understand and analyze the use of resources and costs</p>
-</li>
-<li>
-<p>Forecast your future consumption and compare them with budgets</p>
-</li>
-<li>
-<p>Optimize resources and consumption</p>
-</li>
-<li>
-<p>Identify patterns of usage that should be investigated</p>
-</li>
-<li>
-<p>Integrate with third party tools that can benefit from cost and resourcing data</p>
+</td>
+</tr>
+</table>
+</div>
 </li>
 </ul>
+</div>
+</li>
+<li>
+<p>In the <a href="https://cloud.redhat.com">cloud.redhat.com</a> platform, open the <strong>Sources</strong> menu (<a href="https://cloud.redhat.com/settings/sources/" class="bare">https://cloud.redhat.com/settings/sources/</a>) to begin adding an AWS source to cost management:</p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>Navigate to <strong>Sources</strong> and click <strong>Add a source</strong> to open the Sources wizard.</p>
+</li>
+<li>
+<p>Enter a name for your source and click <strong>Next</strong>.</p>
+</li>
+<li>
+<p>Select <strong>cost management</strong> as the application and <strong>Amazon Web Services (AWS)</strong> as the source type. Click <strong>Next</strong>.</p>
+</li>
+<li>
+<p>Paste the name of your S3 bucket and click <strong>Next</strong>.</p>
+</li>
+</ol>
+</div>
+</li>
+</ol>
 </div>
 </div>
 <div class="sect2">
-<h3 id="planning-cost-management">Planning for cost management</h3>
+<h3 id="activating-aws-tags_adding-aws-sources">Activating AWS tags for cost management</h3>
 <div class="paragraph _abstract">
-<p>When configuring cost management for your needs, consider the scope of your environments that you want to manage costs for, and the users who will have access to the data.</p>
+<p>To use tags to organize your AWS resources in the cost management application, activate your tags in AWS to allow them to be imported automatically.</p>
+</div>
+<div class="olist arabic">
+<div class="title">Procedure</div>
+<ol class="arabic">
+<li>
+<p>In the AWS Billing console:</p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>Open the <em>Cost Allocation Tags</em> section.</p>
+</li>
+<li>
+<p>Select the tags you want to use in the cost management application, and click <strong>Activate</strong>.</p>
+</li>
+</ol>
+</div>
+</li>
+<li>
+<p>In the <a href="https://cloud.redhat.com">cloud.redhat.com</a> <strong>Sources</strong> wizard, click <strong>Next</strong> to move to the next screen.</p>
+</li>
+</ol>
+</div>
+</div>
+<div class="sect2">
+<h3 id="enabling-aws-account-access_adding-aws-sources">Enabling minimal account access for cost and usage consumption</h3>
+<div class="paragraph _abstract">
+<p>To provide data within the web interface and API, cost management needs to consume the Cost and Usage Reports produced by AWS. For cost management to obtain this data with a minimal amount of access, create an IAM policy and role for cost management to use. This configuration  provides access to the stored information and nothing else.</p>
+</div>
+<div class="olist arabic">
+<div class="title">Procedure</div>
+<ol class="arabic">
+<li>
+<p>From the AWS Identity and Access Management (IAM) console, create a new IAM policy for the S3 bucket you configured previously.</p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>Select the JSON tab and paste the following content in the JSON policy text box:</p>
+<div class="listingblock">
+<div class="content">
+<pre>{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Sid": "VisualEditor0",
+      "Effect": "Allow",
+      "Action": [
+        "s3:Get*",
+        "s3:List*"
+      ],
+        "Resource": [
+        "arn:aws:s3:::bucket_name",
+        "arn:aws:s3:::bucket_name/*"
+      ]
+    },
+
+    {
+      "Sid": "VisualEditor1",
+      "Effect": "Allow",
+      "Action": [
+        "s3:ListBucket",
+        "cur:DescribeReportDefinitions"
+      ],
+      "Resource": "*"
+    }
+  ]
+}</pre>
+</div>
+</div>
+</li>
+</ol>
+</div>
+</li>
+</ol>
+</div>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>Provide a name for the policy and complete the creation of the policy. Keep the AWS IAM console open as you will need it for the next step.</p>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>In the <a href="https://cloud.redhat.com">cloud.redhat.com</a> <strong>Sources</strong> wizard, click <strong>Next</strong> to move to the next screen.</p>
+</li>
+<li>
+<p>In the AWS IAM console, create a new IAM role:</p>
+</li>
+</ol>
+</div>
+</li>
+<li>
+<p>For the type of trusted entity, select <strong>Another AWS account</strong>.</p>
+</li>
+<li>
+<p>Enter <em>589173575009</em> as the Account ID to provide the cost management application with read access to the AWS account cost data.</p>
+</li>
+<li>
+<p>Attach the IAM policy you just configured.</p>
+</li>
+<li>
+<p>Enter a role name (and description if desired) and finish creating the policy.</p>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>In the <a href="https://cloud.redhat.com">cloud.redhat.com</a> <strong>Sources</strong> wizard, click <strong>Next</strong> to move to the next screen.</p>
+</li>
+<li>
+<p>In the AWS IAM console under Roles, open the summary screen for the role you just created and copy the Role ARN (a string beginning with <em>arn:aws:</em>).</p>
+</li>
+<li>
+<p>In the <a href="https://cloud.redhat.com">cloud.redhat.com</a> <strong>Sources</strong> wizard, paste your Role ARN and click <strong>Next</strong>.</p>
+</li>
+<li>
+<p>Review the details and click <strong>Finish</strong> to add the AWS account to cost management.</p>
+</li>
+</ol>
+</div>
+</li>
+</ol>
 </div>
 <div class="paragraph">
-<p>Some considerations in creating a new Red Hat organization and users for different customer types include:</p>
+<p>Cost management will begin collecting cost and usage data from your AWS account and any linked AWS accounts.</p>
 </div>
 <div class="paragraph">
-<p><strong>Scope:</strong></p>
+<p>The data can take a few days to populate before it shows on the cost management dashboard (<a href="https://cloud.redhat.com/cost-management/" class="bare">https://cloud.redhat.com/cost-management/</a>).</p>
+</div>
+<div class="sect3">
+<h4 id="enabling-additional-aws-account-access_adding-aws-sources">Enabling additional account access for cost and usage consumption</h4>
+<div class="paragraph _abstract">
+<p>Cost management can display additional data that might be useful. For example:</p>
 </div>
 <div class="ulist">
 <ul>
 <li>
-<p>Customer company wide</p>
+<p>Include the Action <em>iam:ListAccountAliases</em> to display an AWS account alias rather than an account number in cost management.</p>
 </li>
 <li>
-<p>Customer division or organization wide</p>
-</li>
-<li>
-<p>Partner company managing several tenants</p>
+<p>Include the Actions <em>organization:List*</em> and <em>organizations:Describe*</em>
+to obtain the display names of AWS member accounts if you are using consolidated billing rather than the account ID.</p>
 </li>
 </ul>
 </div>
 <div class="paragraph">
-<p><strong>Data:</strong></p>
+<p>The following configuration provides access to additional stored information and nothing else.</p>
 </div>
-<div class="ulist">
-<ul>
+<div class="olist arabic">
+<div class="title">Procedure</div>
+<ol class="arabic">
 <li>
-<p>How does your business need the data? Do you want information about projects, or users, for example?</p>
+<p>From the AWS Identity and Access Management (IAM) console, create a new IAM policy for the S3 bucket you configured previously.</p>
 </li>
 <li>
-<p>Planning AWS tags to reflect previous use cases.</p>
-</li>
-<li>
-<p>Enforcement: Is there any way for you to ensure that the proper tags and metadata are included in each item of the inventory?</p>
-</li>
-</ul>
+<p>Select the JSON tab and paste the following content in the JSON policy text box:</p>
+<div class="listingblock">
+<div class="content">
+<pre>{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Sid": "VisualEditor0",
+      "Effect": "Allow",
+      "Action": [
+        "s3:Get*",
+        "s3:List*"
+      ],
+      "Resource": [
+        "arn:aws:s3:::bucket",
+        "arn:aws:s3:::bucket/*"
+      ]
+    },
+    {
+      "Sid": "VisualEditor1",
+      "Effect": "Allow",
+      "Action": [
+        "iam:ListAccountAliases",
+        "s3:ListBucket",
+        "cur:DescribeReportDefinitions",
+        "organizations:List*",
+        "organizations:Describe*"
+      ],
+      "Resource": "*"
+    }
+  ]
+}</pre>
+</div>
 </div>
 <div class="paragraph">
-<p><strong>User access:</strong></p>
+<p>The remainder of the configuration steps are the same as in <a href="#enabling-aws-account-access_adding-aws-sources">Enabling minimal account access for cost and usage consumption</a></p>
 </div>
-<div class="ulist">
-<ul>
-<li>
-<p>What level of access do you want your users to have?</p>
 </li>
-<li>
-<p>Do you want some users to have access to all cost data, while other users can view only a portion of the environment or certain sources?</p>
-</li>
-</ul>
+</ol>
+</div>
+<div class="paragraph">
+<p>You have completed adding your AWS account as a source.</p>
+</div>
 </div>
 </div>
 </div>
 </div>
 <div class="sect1">
-<h2 id="assembly-installing-cost-management">Configuring cost management</h2>
+<h2 id="assembly-cost-management-next-steps-aws">Next steps for managing your costs</h2>
 <div class="sectionbody">
 <div class="paragraph _abstract">
-<p>Before you begin to use cost management, you must complete these tasks to properly configure the cost management application:</p>
+<p>After adding your OpenShift Container Platform and Amazon Web Services sources, in addition to showing cost data by source, cost management will automatically show AWS cost and usage related to running your OpenShift Container Platform clusters on their platform.</p>
+</div>
+<div class="paragraph">
+<p>On the cost management <strong>Overview</strong> page (<a href="https://console.redhat.com/openshift/cost-management/">console.redhat.com/openshift/cost-management/</a>), your cost data will be sorted into <strong>OpenShift</strong> and <strong>Infrastructure</strong> tabs. From here, you can use <strong>Perspective</strong> to select different views of your cost data.</p>
+</div>
+<div class="paragraph">
+<p>You can also use the left navigation menu to view the additional details of your costs by service.</p>
 </div>
 <div class="ulist">
-<div class="title">Task summary</div>
-<ul>
-<li>
-<p><a href="#adding-sources_configuring">Add sources to cost management</a></p>
-</li>
-<li>
-<p><a href="#limiting-access_configuring">Limit access to cost management resources</a></p>
-</li>
-<li>
-<p><a href="#configure-tagging-next-step_configuring">Configure tagging for your sources</a></p>
-</li>
-<li>
-<p><a href="#configure-cost-models-next-step_configuring">Configure cost models to accurately report costs</a></p>
-</li>
-</ul>
-</div>
-<div class="sect2">
-<h3 id="adding-sources_configuring">Add sources to cost management</h3>
-<div class="paragraph _abstract">
-<p>A source is a provider account that is connected to cost management to be monitored, for example, an OpenShift Container Platform deployment, or a cloud infrastructure provider. To use cost management to monitor your cloud costs, you must first connect a data source to the cost management application.</p>
-</div>
-<div class="paragraph">
-<p>Currently, cost management can track costs for Amazon Web Services (AWS), Microsoft Azure, Google Cloud, and Red Hat OpenShift Container Platform sources.</p>
-</div>
-<div class="paragraph">
-<p>From <a href="https://console.redhat.com/settings/sources">https://console.redhat.com/settings/sources</a>, you can view, edit, and delete sources connected to cost management.</p>
-</div>
-<div class="paragraph">
-<p>For more information on how to add sources to cost management, follow these guides:</p>
-</div>
-<div class="ulist">
+<div class="title">Additional resources</div>
 <ul>
 <li>
 <p><em><a href="https://project-koku.github.io/koku-doc/ocp-source.html">Adding an OpenShift Container Platform source to cost management</a></em></p>
-</li>
-<li>
-<p><em><a href="https://project-koku.github.io/koku-doc/aws-source.html">Adding an Amazon Web Services (AWS) source to cost management</a></em></p>
 </li>
 <li>
 <p><em><a href="https://project-koku.github.io/koku-doc/gcp-source.html">Adding a Google Cloud source to cost management</a></em></p>
@@ -778,9 +978,8 @@ div.unbreakable { page-break-inside: avoid; }
 </li>
 </ul>
 </div>
-</div>
 <div class="sect2">
-<h3 id="limiting-access_configuring">Limit access to cost management resources</h3>
+<h3 id="limiting-access_next-steps-aws">Limit access to cost management resources</h3>
 <div class="paragraph _abstract">
 <p>After adding and configuring sources in cost management, it is a good idea to limit access to cost data and resources. For example, you may not want users to have access to all cost data, but instead only data specific to their projects or organization. Using role-based access control, you can limit the visibility of resources involved in cost management reports. For example, you may want to restrict a user&#8217;s view to only AWS sources, instead of the entire environment.</p>
 </div>
@@ -789,7 +988,7 @@ div.unbreakable { page-break-inside: avoid; }
 </div>
 </div>
 <div class="sect2">
-<h3 id="configure-tagging-next-step_configuring">Configure tagging for your sources</h3>
+<h3 id="configure-tagging-next-step_next-steps-aws">Configure tagging for your sources</h3>
 <div class="paragraph _abstract">
 <p>The cost management application tracks cloud and infrastructure costs using tags (called labels in OpenShift), which you can refine to filter and attribute to resources. Tags in cost management allow you to organize your resources by cost and to allocate the costs to different parts of your cloud infrastructure.</p>
 </div>
@@ -825,7 +1024,7 @@ div.unbreakable { page-break-inside: avoid; }
 </div>
 </div>
 <div class="sect2">
-<h3 id="configure-cost-models-next-step_configuring">Configure cost models to accurately report costs</h3>
+<h3 id="configure-cost-models-next-step_next-steps-aws">Configure cost models to accurately report costs</h3>
 <div class="paragraph _abstract">
 <p>Now that you have configured your sources to collect cost and usage data into cost management, you can configure cost models to associate prices to metrics and usage, and fine-tune the costs of running your cloud.</p>
 </div>
@@ -852,13 +1051,8 @@ div.unbreakable { page-break-inside: avoid; }
 </ul>
 </div>
 </div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="assembly-using-cost-management">Using Cost Management</h2>
-<div class="sectionbody">
-<div class="sect2 _abstract">
-<h3 id="cost-explorer-next-step_using-cost-management">Use the Cost Explorer to visualize your costs</h3>
+<div class="sect2">
+<h3 id="cost-explorer-next-step_next-steps-aws">Use the Cost Explorer to visualize your costs</h3>
 <div class="paragraph _abstract">
 <p>The cost management <a href="https://console.redhat.com/openshift/cost-management/explorer">Cost Explorer</a> allows you to create custom graphs of time-scaled cost and usage information to better visualize and interpret your costs.</p>
 </div>

@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="generator" content="Asciidoctor 2.0.16">
-<title>Getting started with cost management</title>
+<title>Adding a Microsoft Azure source to cost management</title>
 <style>
 @import url(//openshift.redhat.com/app/assets-20130701203230/overpass.css);
 @import url(//cdnjs.cloudflare.com/ajax/libs/font-awesome/3.2.0/css/font-awesome.css);
@@ -589,27 +589,23 @@ div.unbreakable { page-break-inside: avoid; }
 </head>
 <body class="article toc2 toc-left">
 <div id="header">
-<h1>Getting started with cost management</h1>
+<h1>Adding a Microsoft Azure source to cost management</h1>
 <div id="toc" class="toc2">
 <div id="toctitle">Table of Contents</div>
 <ul class="sectlevel1">
-<li><a href="#assembly-introduction-cost-management">Introduction to cost management</a>
+<li><a href="#assembly-adding-azure-sources">Adding a Microsoft Azure source to cost management</a>
 <ul class="sectlevel2">
-<li><a href="#about-cost-management_getting-started">About cost management</a></li>
-<li><a href="#planning-cost-management">Planning for cost management</a></li>
+<li><a href="#creating-an-azure-storage-account_adding-an-azure-source">Creating an Azure resource group and storage account</a></li>
+<li><a href="#configuring-azure-roles_adding-an-azure-source">Configuring Azure roles</a></li>
+<li><a href="#configuring-an-azure-daily-export-schedule_adding-an-azure-source">Configuring a daily Azure data export schedule</a></li>
 </ul>
 </li>
-<li><a href="#assembly-installing-cost-management">Configuring cost management</a>
+<li><a href="#assembly-cost-management-next-steps-azure">Next steps for managing your costs</a>
 <ul class="sectlevel2">
-<li><a href="#adding-sources_configuring">Add sources to cost management</a></li>
-<li><a href="#limiting-access_configuring">Limit access to cost management resources</a></li>
-<li><a href="#configure-tagging-next-step_configuring">Configure tagging for your sources</a></li>
-<li><a href="#configure-cost-models-next-step_configuring">Configure cost models to accurately report costs</a></li>
-</ul>
-</li>
-<li><a href="#assembly-using-cost-management">Using Cost Management</a>
-<ul class="sectlevel2">
-<li><a href="#cost-explorer-next-step_using-cost-management">Use the Cost Explorer to visualize your costs</a></li>
+<li><a href="#limiting-access_next-steps-azure">Limit access to cost management resources</a></li>
+<li><a href="#configure-tagging-next-step_next-steps-azure">Configure tagging for your sources</a></li>
+<li><a href="#configure-cost-models-next-step_next-steps-azure">Configure cost models to accurately report costs</a></li>
+<li><a href="#cost-explorer-next-step_next-steps-azure">Use the Cost Explorer to visualize your costs</a></li>
 </ul>
 </li>
 </ul>
@@ -617,170 +613,230 @@ div.unbreakable { page-break-inside: avoid; }
 </div>
 <div id="content">
 <div class="sect1">
-<h2 id="assembly-introduction-cost-management">Introduction to cost management</h2>
+<h2 id="assembly-adding-azure-sources">Adding a Microsoft Azure source to cost management</h2>
 <div class="sectionbody">
 <div class="paragraph _abstract">
-<p>This document provides instructions to begin using cost management, including prerequisites and instructions for connecting your cloud environments, and configuring users and permissions.</p>
+<p>Configure your Microsoft Azure account to allow cost management access.</p>
 </div>
 <div class="paragraph">
-<p>After completing the setup described in this guide, you will be able to track cost and usage data for your Amazon Web Services (AWS), Microsoft Azure, Google Cloud, and OpenShift Container Platform environments.</p>
+<p>Configuring your Azure account to be a cost management source requires:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Creating a storage account and resource group</p>
+</li>
+<li>
+<p>Configuring a Storage Account Contributor and Reader roles for access</p>
+</li>
+<li>
+<p>Scheduling daily cost exports</p>
+</li>
+</ol>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<div class="title">Note</div>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>As non-Red Hat products and documentation can change without notice, instructions for configuring the third-party sources provided in this guide are general and correct at the time of publishing. See the <a href="https://docs.microsoft.com/en-us/azure/">Microsoft Azure documentation</a> for the most up-to-date and accurate information.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>Add your Azure source to cost management from
+<a href="https://cloud.redhat.com/settings/sources/" class="bare">https://cloud.redhat.com/settings/sources/</a>.</p>
 </div>
 <div class="sect2">
-<h3 id="about-cost-management_getting-started">About cost management</h3>
+<h3 id="creating-an-azure-storage-account_adding-an-azure-source">Creating an Azure resource group and storage account</h3>
 <div class="paragraph _abstract">
-<p>Cost management is an OpenShift Container Platform service that enables you to better understand and track costs for clouds and containers. It is based on the upstream project Koku.</p>
+<p>Cost export data is written to a storage account, which exists within a resource group. The resource group must be accessible by cost management in order to read the Azure cost data.</p>
 </div>
 <div class="paragraph">
-<p>You can access the cost management application from <a href="https://console.redhat.com/openshift/cost-management/">console.redhat.com/openshift/cost-management/</a>.</p>
+<p>Create a new storage account in Azure to contain the cost data and metrics that cost management will collect. This requires a resource group; Red Hat recommends creating a dedicated resource group for this storage account.</p>
 </div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<div class="title">Note</div>
+</td>
+<td class="content">
 <div class="paragraph">
-<p>Cost management allows you to simplify management of resources and costs across various environments, including:</p>
+<p>You must have a Red Hat account user with Sources Administrator entitlements before you can add sources to cost management.</p>
 </div>
-<div class="ulist">
-<ul>
+</td>
+</tr>
+</table>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
 <li>
-<p>Container platforms such as OpenShift Container Platform</p>
+<p>In the <a href="https://cloud.redhat.com">cloud.redhat.com</a> platform, open the <strong>Sources</strong> menu (<a href="https://cloud.redhat.com/settings/sources/" class="bare">https://cloud.redhat.com/settings/sources/</a>) to begin adding an Azure source to cost management:</p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>Navigate to <strong>Sources</strong> and click <strong>Add a source</strong> to open the Sources wizard.</p>
 </li>
 <li>
-<p>Public clouds such as Amazon Web Services (AWS), Google Cloud, and Microsoft Azure</p>
+<p>Enter a name for your source and click <strong>Next</strong>.</p>
 </li>
-</ul>
+<li>
+<p>Select <strong>cost management</strong> as the application and <strong>Microsoft Azure</strong> as the source type. Click <strong>Next</strong>.</p>
+</li>
+</ol>
 </div>
+</li>
+<li>
+<p>Create a resource group and storage account in your Azure account using the instructions in the See <a href="https://docs.microsoft.com/en-us/azure/storage/common/storage-quickstart-create-account?tabs=azure-portal">Azure documentation</a> <em>Create a storage account</em>.</p>
+</li>
+</ol>
+</div>
+<div class="exampleblock">
+<div class="content">
 <div class="paragraph">
-<p>The cost management application allows you to:</p>
+<p>Make a note of the resource group and storage account. They will be needed in subsequent steps.</p>
 </div>
-<div class="ulist">
-<ul>
+</div>
+</div>
+<div class="olist arabic">
+<ol class="arabic" start="3">
 <li>
-<p>Visualize, understand and analyze the use of resources and costs</p>
+<p>In the <a href="https://cloud.redhat.com">cloud.redhat.com</a> <strong>Sources</strong> wizard, enter the <strong>Resource group name</strong> and <strong>Storage account name</strong> and click <strong>Next</strong>.</p>
 </li>
-<li>
-<p>Forecast your future consumption and compare them with budgets</p>
-</li>
-<li>
-<p>Optimize resources and consumption</p>
-</li>
-<li>
-<p>Identify patterns of usage that should be investigated</p>
-</li>
-<li>
-<p>Integrate with third party tools that can benefit from cost and resourcing data</p>
-</li>
-</ul>
+</ol>
 </div>
 </div>
 <div class="sect2">
-<h3 id="planning-cost-management">Planning for cost management</h3>
+<h3 id="configuring-azure-roles_adding-an-azure-source">Configuring Azure roles</h3>
 <div class="paragraph _abstract">
-<p>When configuring cost management for your needs, consider the scope of your environments that you want to manage costs for, and the users who will have access to the data.</p>
+<p>Red Hat recommends configuring dedicated credentials to grant cost management read-only access to Azure cost data.  Configure a Storage Account Contributor and Reader role in Azure to provide this access to cost management.</p>
 </div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>In Azure Cloud Shell, run the following command to obtain your Subscription ID:</p>
+<div class="listingblock">
+<div class="content">
+<pre>$ az account show --query "{subscription_id: id }"</pre>
+</div>
+</div>
+</li>
+<li>
+<p>In the <a href="https://cloud.redhat.com">cloud.redhat.com</a> <strong>Sources</strong> wizard, enter your <strong>Subscription ID</strong>. Click <strong>Next</strong> to move to the next screen.</p>
+</li>
+<li>
+<p>In Azure Cloud Shell, run the following command to create a cost management Storage Account Contributor role, and obtain your tenant ID, client (application) ID, and client secret:</p>
+<div class="listingblock">
+<div class="content">
+<pre>$ az ad sp create-for-rbac -n "CostManagement" --role "Storage Account Contributor" --query '{"tenant": tenant, "client_id": appId, "secret": password}'</pre>
+</div>
+</div>
+</li>
+<li>
+<p>In the <a href="https://cloud.redhat.com">cloud.redhat.com</a> <strong>Sources</strong> wizard, enter your Azure <strong>Tenant ID</strong>, <strong>Client ID</strong>, and <strong>Client Secret</strong>.</p>
+</li>
+<li>
+<p>In Azure Cloud Shell, run the following command to create a cost management Reader role with your subscription ID. Copy the full command from the <a href="https://cloud.redhat.com">cloud.redhat.com</a> <strong>Sources</strong> wizard, which will automatically substitute your Azure subscription ID obtained earlier for <em>&lt;SubscriptionID&gt;</em>:</p>
+<div class="listingblock">
+<div class="content">
+<pre>$ az role assignment create --role "Cost Management Reader" --assignee http://CostManagement --subscription &lt;SubscriptionID&gt;</pre>
+</div>
+</div>
+</li>
+<li>
+<p>Click <strong>Next</strong>.</p>
+</li>
+</ol>
+</div>
+</div>
+<div class="sect2">
+<h3 id="configuring-an-azure-daily-export-schedule_adding-an-azure-source">Configuring a daily Azure data export schedule</h3>
+<div class="paragraph _abstract">
+<p>Create a recurring task to export your cost data on a daily basis automatically to your Azure storage account, where cost management will retrieve the data.</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<div class="title">Note</div>
+</td>
+<td class="content">
 <div class="paragraph">
-<p>Some considerations in creating a new Red Hat organization and users for different customer types include:</p>
+<p>Cost management requires a data export from a <strong>Subscription</strong> level scope. You must create the cost data export from <strong>Subscriptions</strong>. For more information about how scopes work in Azure, see <a href="https://docs.microsoft.com/en-us/azure/cost-management-billing/costs/understand-work-scopes"><em>Understand and work with scopes</em></a> in the Azure documentation.</p>
 </div>
-<div class="paragraph">
-<p><strong>Scope:</strong></p>
+</td>
+</tr>
+</table>
 </div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>In Azure, add a new export as described in the instructions in the <a href="https://docs.microsoft.com/en-us/azure/cost-management/tutorial-export-acm-data">Azure article</a> <em>Create and manage exported data</em>.</p>
 <div class="ulist">
 <ul>
 <li>
-<p>Customer company wide</p>
+<p>For <strong>Export type</strong>, select <strong>Daily export of billing-period-to-date costs</strong>.</p>
 </li>
 <li>
-<p>Customer division or organization wide</p>
+<p>For <strong>Storage account</strong>, select the account you created earlier.</p>
 </li>
 <li>
-<p>Partner company managing several tenants</p>
+<p>Enter any value for the container name and directory path for the export. These values provide the tree structure in the storage account where report files are stored.</p>
+</li>
+<li>
+<p>Click <strong>Run now</strong> to start exporting data to the Azure storage container.</p>
 </li>
 </ul>
+</div>
+</li>
+<li>
+<p>In the <a href="https://cloud.redhat.com">cloud.redhat.com</a> <strong>Sources</strong> wizard, click <strong>Next</strong> when you have created the export schedule and review the source details.</p>
+</li>
+<li>
+<p>Click <strong>Finish</strong> to complete adding the Azure source to cost management.</p>
+</li>
+</ol>
 </div>
 <div class="paragraph">
-<p><strong>Data:</strong></p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>How does your business need the data? Do you want information about projects, or users, for example?</p>
-</li>
-<li>
-<p>Planning AWS tags to reflect previous use cases.</p>
-</li>
-<li>
-<p>Enforcement: Is there any way for you to ensure that the proper tags and metadata are included in each item of the inventory?</p>
-</li>
-</ul>
-</div>
-<div class="paragraph">
-<p><strong>User access:</strong></p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>What level of access do you want your users to have?</p>
-</li>
-<li>
-<p>Do you want some users to have access to all cost data, while other users can view only a portion of the environment or certain sources?</p>
-</li>
-</ul>
+<p>After the schedule is created, cost management will begin polling Azure for cost data, which will appear on the cost management dashboard (<a href="https://console.redhat.com/openshift/cost-management/">console.redhat.com/openshift/cost-management/</a>).</p>
 </div>
 </div>
 </div>
 </div>
 <div class="sect1">
-<h2 id="assembly-installing-cost-management">Configuring cost management</h2>
+<h2 id="assembly-cost-management-next-steps-azure">Next steps for managing your costs</h2>
 <div class="sectionbody">
 <div class="paragraph _abstract">
-<p>Before you begin to use cost management, you must complete these tasks to properly configure the cost management application:</p>
+<p>After adding your OpenShift Container Platform and Microsoft Azure sources, in addition to showing cost data by source, cost management will automatically show Azure cost and usage related to running your OpenShift Container Platform clusters on their platform.</p>
+</div>
+<div class="paragraph">
+<p>On the cost management <strong>Overview</strong> page (<a href="https://console.redhat.com/openshift/cost-management/">console.redhat.com/openshift/cost-management/</a>), your cost data will be sorted into <strong>OpenShift</strong> and <strong>Infrastructure</strong> tabs. From here, you can use <strong>Perspective</strong> to select different views of your cost data.</p>
+</div>
+<div class="paragraph">
+<p>You can also use the left navigation menu to view the additional details of your costs by service.</p>
 </div>
 <div class="ulist">
-<div class="title">Task summary</div>
-<ul>
-<li>
-<p><a href="#adding-sources_configuring">Add sources to cost management</a></p>
-</li>
-<li>
-<p><a href="#limiting-access_configuring">Limit access to cost management resources</a></p>
-</li>
-<li>
-<p><a href="#configure-tagging-next-step_configuring">Configure tagging for your sources</a></p>
-</li>
-<li>
-<p><a href="#configure-cost-models-next-step_configuring">Configure cost models to accurately report costs</a></p>
-</li>
-</ul>
-</div>
-<div class="sect2">
-<h3 id="adding-sources_configuring">Add sources to cost management</h3>
-<div class="paragraph _abstract">
-<p>A source is a provider account that is connected to cost management to be monitored, for example, an OpenShift Container Platform deployment, or a cloud infrastructure provider. To use cost management to monitor your cloud costs, you must first connect a data source to the cost management application.</p>
-</div>
-<div class="paragraph">
-<p>Currently, cost management can track costs for Amazon Web Services (AWS), Microsoft Azure, Google Cloud, and Red Hat OpenShift Container Platform sources.</p>
-</div>
-<div class="paragraph">
-<p>From <a href="https://console.redhat.com/settings/sources">https://console.redhat.com/settings/sources</a>, you can view, edit, and delete sources connected to cost management.</p>
-</div>
-<div class="paragraph">
-<p>For more information on how to add sources to cost management, follow these guides:</p>
-</div>
-<div class="ulist">
+<div class="title">Additional resources</div>
 <ul>
 <li>
 <p><em><a href="https://project-koku.github.io/koku-doc/ocp-source.html">Adding an OpenShift Container Platform source to cost management</a></em></p>
 </li>
 <li>
-<p><em><a href="https://project-koku.github.io/koku-doc/aws-source.html">Adding an Amazon Web Services (AWS) source to cost management</a></em></p>
-</li>
-<li>
 <p><em><a href="https://project-koku.github.io/koku-doc/gcp-source.html">Adding a Google Cloud source to cost management</a></em></p>
 </li>
 <li>
-<p><em><a href="https://project-koku.github.io/koku-doc/azure-source.html">Adding a Microsoft Azure source to cost management</a></em></p>
+<p><em><a href="https://project-koku.github.io/koku-doc/aws-source.html">Adding an Amazon Web Services (AWS) source to cost management</a></em></p>
 </li>
 </ul>
 </div>
-</div>
 <div class="sect2">
-<h3 id="limiting-access_configuring">Limit access to cost management resources</h3>
+<h3 id="limiting-access_next-steps-azure">Limit access to cost management resources</h3>
 <div class="paragraph _abstract">
 <p>After adding and configuring sources in cost management, it is a good idea to limit access to cost data and resources. For example, you may not want users to have access to all cost data, but instead only data specific to their projects or organization. Using role-based access control, you can limit the visibility of resources involved in cost management reports. For example, you may want to restrict a user&#8217;s view to only AWS sources, instead of the entire environment.</p>
 </div>
@@ -789,7 +845,7 @@ div.unbreakable { page-break-inside: avoid; }
 </div>
 </div>
 <div class="sect2">
-<h3 id="configure-tagging-next-step_configuring">Configure tagging for your sources</h3>
+<h3 id="configure-tagging-next-step_next-steps-azure">Configure tagging for your sources</h3>
 <div class="paragraph _abstract">
 <p>The cost management application tracks cloud and infrastructure costs using tags (called labels in OpenShift), which you can refine to filter and attribute to resources. Tags in cost management allow you to organize your resources by cost and to allocate the costs to different parts of your cloud infrastructure.</p>
 </div>
@@ -825,7 +881,7 @@ div.unbreakable { page-break-inside: avoid; }
 </div>
 </div>
 <div class="sect2">
-<h3 id="configure-cost-models-next-step_configuring">Configure cost models to accurately report costs</h3>
+<h3 id="configure-cost-models-next-step_next-steps-azure">Configure cost models to accurately report costs</h3>
 <div class="paragraph _abstract">
 <p>Now that you have configured your sources to collect cost and usage data into cost management, you can configure cost models to associate prices to metrics and usage, and fine-tune the costs of running your cloud.</p>
 </div>
@@ -852,13 +908,8 @@ div.unbreakable { page-break-inside: avoid; }
 </ul>
 </div>
 </div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="assembly-using-cost-management">Using Cost Management</h2>
-<div class="sectionbody">
-<div class="sect2 _abstract">
-<h3 id="cost-explorer-next-step_using-cost-management">Use the Cost Explorer to visualize your costs</h3>
+<div class="sect2">
+<h3 id="cost-explorer-next-step_next-steps-azure">Use the Cost Explorer to visualize your costs</h3>
 <div class="paragraph _abstract">
 <p>The cost management <a href="https://console.redhat.com/openshift/cost-management/explorer">Cost Explorer</a> allows you to create custom graphs of time-scaled cost and usage information to better visualize and interpret your costs.</p>
 </div>
