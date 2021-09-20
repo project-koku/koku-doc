@@ -17,6 +17,7 @@ To use a default role, determine the required level of access to permit your use
 
 * Cost Administrator:  has read and write permissions to all resources in {product-title}
 * Cost Price List Administrator:  has read and write permissions on price list rates
+* Sources Administrator: has create and edit permissions for managing sources 
 
 .Viewer roles
 

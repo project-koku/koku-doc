@@ -14,6 +14,10 @@ Creating a cost model for an OpenShift source includes assigning prices for usag
 
 This example shows how to design and apply a cost model for an OpenShift Container Platform cluster on cloud infrastructure (for example, AWS or Azure). The cloud infrastructure costs are seen in {product-title} as part of the cluster cost, so creating a cost model allows you to distribute the underlying infrastructure cost to accurately reflect the costs of running the cluster.
 
+[NOTE]
+====
+Creating, editing, or deleting a cost model only updates calculations starting from the first day of the current month.  
+====
 ////
 * How to account for monthly OpenShift cluster and node costs
 * How to assign rates to OpenShift metrics and usage
