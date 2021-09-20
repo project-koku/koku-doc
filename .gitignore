@@ -112,7 +112,7 @@ _preview/
 
 #ignores output from ./scripts/buildGuides.sh
 
-#manually ignoring build dirs, 
+#manually ignoring build dirs,
 #feel free to make this better with a regex
 
 *~
