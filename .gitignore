@@ -123,8 +123,3 @@ html/
 */.DS_Store
 *.zip
 emender/results/*
-
-# ignore the community dir except for the index and style
-community/
-!community/index.html
-!community/style.css
