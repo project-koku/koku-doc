@@ -112,7 +112,7 @@ _preview/
 
 #ignores output from ./scripts/buildGuides.sh
 
-#manually ignoring build dirs, 
+#manually ignoring build dirs,
 #feel free to make this better with a regex
 
 *~
@@ -123,3 +123,8 @@ html/
 */.DS_Store
 *.zip
 emender/results/*
+
+# ignore the community dir except for the index and style
+community/
+!community/index.html
+!community/style.css
