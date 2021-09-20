@@ -821,7 +821,7 @@ See, <a href="https://access.redhat.com/documentation/en-us/openshift_container_
 </div>
 </li>
 <li>
-<p>Click the <strong>Create</strong> button. These actions create a new source for cost management that will appear in the <a href="https://cloud.redhat.com">cloud.redhat.com</a> cost management application.</p>
+<p>Click the <strong>Create</strong> button. These actions create a new source for cost management that will appear in the <a href="https://console.redhat.com">console.redhat.com</a> cost management application.</p>
 </li>
 </ol>
 </div>
@@ -850,7 +850,7 @@ When you are replacing a prior cost management operator with the <strong>Koku Me
 <p>You are logged into the OpenShift Container Platform web console with cluster administrator privileges.</p>
 </li>
 <li>
-<p>You can access <a href="https://cloud.redhat.com">cloud.redhat.com</a> and view existing cost management sources.</p>
+<p>You can access <a href="https://console.redhat.com">console.redhat.com</a> and view existing cost management sources.</p>
 </li>
 </ul>
 </div>
@@ -870,7 +870,7 @@ When you are replacing a prior cost management operator with the <strong>Koku Me
 <p>Click the <strong>YAML view</strong> radio button to view and modify the contents of the <strong>KokuMetricsConfig</strong> YAML file.</p>
 </li>
 <li>
-<p>Open <a href="https://cloud.redhat.com">cloud.redhat.com</a> and log in using your Organization Administrator account.</p>
+<p>Open <a href="https://console.redhat.com">console.redhat.com</a> and log in using your Organization Administrator account.</p>
 </li>
 <li>
 <p>Click on <span class="image"><img src="images/configuration-gear.png" alt="configuration gear"></span> (Settings).</p>
@@ -1076,7 +1076,7 @@ When you install <strong>Koku Metrics Operator</strong>, a <strong>KokuMetricsCo
 <p>The <strong>Koku Metrics Operator</strong> appears in the <strong>Installed Operators</strong> tab.</p>
 </li>
 <li>
-<p>You have a username and password for your <a href="https://cloud.redhat.com">cloud.redhat.com</a> account.</p>
+<p>You have a username and password for your <a href="https://console.redhat.com">console.redhat.com</a> account.</p>
 </li>
 </ul>
 </div>
@@ -1118,7 +1118,7 @@ When you install <strong>Koku Metrics Operator</strong>, a <strong>KokuMetricsCo
 </div>
 </li>
 <li>
-<p>In the <strong>Value</strong> field for the username key, enter the actual username for your authorized <a href="https://cloud.redhat.com">cloud.redhat.com</a> user account.</p>
+<p>In the <strong>Value</strong> field for the username key, enter the actual username for your authorized <a href="https://console.redhat.com">console.redhat.com</a> user account.</p>
 <div class="listingblock">
 <div class="title">Key value example for username</div>
 <div class="content">
@@ -1139,7 +1139,7 @@ When you install <strong>Koku Metrics Operator</strong>, a <strong>KokuMetricsCo
 </div>
 </li>
 <li>
-<p>In the <strong>Value</strong> field for the password key, enter the actual password for your authorized <a href="https://cloud.redhat.com">cloud.redhat.com</a> user account.</p>
+<p>In the <strong>Value</strong> field for the password key, enter the actual password for your authorized <a href="https://console.redhat.com">console.redhat.com</a> user account.</p>
 <div class="listingblock">
 <div class="title">Key value example for password</div>
 <div class="content">
@@ -1241,7 +1241,7 @@ Do <em>not</em> add the secret to the workload.
 <div class="sect2">
 <h3 id="proc_creating-an-openshift-container-platform-source-manually_adding-an-ocp-source">Creating an Openshift Container Platform source manually</h3>
 <div class="paragraph _abstract">
-<p>If you follow the previous steps, your OpenShift Container Platform source should be created automatically. However, there are situations, such as restricted network installations, when an OpenShift Container Platform source must be created manually on <a href="https://cloud.redhat.com">cloud.redhat.com</a>.</p>
+<p>If you follow the previous steps, your OpenShift Container Platform source should be created automatically. However, there are situations, such as restricted network installations, when an OpenShift Container Platform source must be created manually on <a href="https://console.redhat.com">console.redhat.com</a>.</p>
 </div>
 <div class="ulist">
 <div class="title">Prerequisites</div>
@@ -1313,7 +1313,7 @@ Do <em>not</em> add the secret to the workload.
 <p>An OpenShift Container Platform source is created manually.</p>
 </li>
 <li>
-<p>Cost reports are uploaded to <a href="https://cloud.redhat.com">cloud.redhat.com</a> from your workstation.</p>
+<p>Cost reports are uploaded to <a href="https://console.redhat.com">console.redhat.com</a> from your workstation.</p>
 </li>
 </ol>
 </div>
@@ -1546,7 +1546,7 @@ Do <em>not</em> add the secret to the workload.
 <div class="sect3">
 <h4 id="proc_downloading-reports_adding-restricted-network-source">Downloading cost reports</h4>
 <div class="paragraph _abstract">
-<p>If the <code>koku-metrics-operator</code> is configured to run in a restricted network, copy the reports from the PVC where they are temporarily stored to a workstation with unrestricted network access for upload to <a href="https://cloud.redhat.com">cloud.redhat.com</a>.</p>
+<p>If the <code>koku-metrics-operator</code> is configured to run in a restricted network, copy the reports from the PVC where they are temporarily stored to a workstation with unrestricted network access for upload to <a href="https://console.redhat.com">console.redhat.com</a>.</p>
 </div>
 <div class="admonitionblock note">
 <table>
@@ -1556,7 +1556,7 @@ Do <em>not</em> add the secret to the workload.
 </td>
 <td class="content">
 <div class="paragraph">
-<p>The default configuration saves one week of reports. Therefore, download the reports locally and upload them to <a href="https://cloud.redhat.com">cloud.redhat.com</a> weekly to prevent loss of metrics data.</p>
+<p>The default configuration saves one week of reports. Therefore, download the reports locally and upload them to <a href="https://console.redhat.com">console.redhat.com</a> weekly to prevent loss of metrics data.</p>
 </div>
 </td>
 </tr>
@@ -1642,7 +1642,7 @@ $ rm /tmp/koku-metrics-operator-reports/upload/*</code></pre>
 <div class="sect3">
 <h4 id="proc_uploading-reports_adding-restricted-network-source">Uploading cost reports to cloud.redhat.com</h4>
 <div class="paragraph _abstract">
-<p>You must manually upload locally stored cost reports from a restricted network to <a href="https://cloud.redhat.com">cloud.redhat.com</a>.</p>
+<p>You must manually upload locally stored cost reports from a restricted network to <a href="https://console.redhat.com">console.redhat.com</a>.</p>
 </div>
 <div class="admonitionblock note">
 <table>
@@ -1652,7 +1652,7 @@ $ rm /tmp/koku-metrics-operator-reports/upload/*</code></pre>
 </td>
 <td class="content">
 <div class="paragraph">
-<p>The default configuration saves one week of reports. Therefore, download the reports locally and upload them to <a href="https://cloud.redhat.com">cloud.redhat.com</a> weekly to prevent loss of metrics data.</p>
+<p>The default configuration saves one week of reports. Therefore, download the reports locally and upload them to <a href="https://console.redhat.com">console.redhat.com</a> weekly to prevent loss of metrics data.</p>
 </div>
 </td>
 </tr>
@@ -1665,7 +1665,7 @@ $ rm /tmp/koku-metrics-operator-reports/upload/*</code></pre>
 <p><code>koku-metrics-operator</code> reports downloaded locally.</p>
 </li>
 <li>
-<p>Source created on <a href="https://cloud.redhat.com">cloud.redhat.com</a>, see <a href="#proc_creating-an-openshift-container-platform-source-manually_adding-an-ocp-source">Creating an Openshift Container Platform source manually</a>.</p>
+<p>Source created on <a href="https://console.redhat.com">console.redhat.com</a>, see <a href="#proc_creating-an-openshift-container-platform-source-manually_adding-an-ocp-source">Creating an Openshift Container Platform source manually</a>.</p>
 </li>
 <li>
 <p>Red Hat account user with Organization Administrator entitlements.</p>
@@ -1679,7 +1679,7 @@ $ rm /tmp/koku-metrics-operator-reports/upload/*</code></pre>
 <div class="title">Procedure</div>
 <ul>
 <li>
-<p>Upload your reports to <a href="https://cloud.redhat.com">cloud.redhat.com</a>, replacing USERNAME and PASSWORD with your <a href="https://cloud.redhat.com">cloud.redhat.com</a> login credentials, and FILE_NAME with the report to upload:</p>
+<p>Upload your reports to <a href="https://console.redhat.com">console.redhat.com</a>, replacing USERNAME and PASSWORD with your <a href="https://console.redhat.com">console.redhat.com</a> login credentials, and FILE_NAME with the report to upload:</p>
 <div class="listingblock">
 <div class="content">
 <pre class="highlight"><code class="language-bash" data-lang="bash">$ curl -vvvv -F "file=@FILE_NAME.tar.gz;type=application/vnd.redhat.hccm.tar+tgz"  https://cloud.redhat.com/api/ingress/v1/upload -u USERNAME:PASS</code></pre>
@@ -1846,7 +1846,7 @@ $ rm /tmp/koku-metrics-operator-reports/upload/*</code></pre>
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2021-08-25 18:25:11 UTC
+Last updated 2021-09-20 10:52:16 UTC
 </div>
 </div>
 </body>
