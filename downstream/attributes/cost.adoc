@@ -2,7 +2,8 @@
 // Titles
 
 :product-title: cost management
-:platform: link:https://cloud.redhat.com[cloud.redhat.com]
+:platform-title: Red Hat Hybrid Cloud Console
+:platform: link:https://console.redhat.com[console.redhat.com]
 :openshift: OpenShift Container Platform
 :operator: costmanagement-metrics-operator
 :operator-formal: Cost Management Metrics Operator
@@ -44,6 +45,7 @@
 :link-aws: link:https://console.redhat.com/openshift/cost-management/aws[Amazon Web Services]  
 :link-azure: link:https://console.redhat.com/openshift/cost-management/azure[Microsoft Azure]
 :link-gcp: link:https://console.redhat.com/openshift/cost-management/gcp[Google Cloud Platform]
+:link-jira: link:https://issues.redhat.com/projects/COST/[{product-title} Jira board]
 
 // images
 

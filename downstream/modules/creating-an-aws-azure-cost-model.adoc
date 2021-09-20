@@ -16,6 +16,11 @@ Adding a markup to your _raw costs_ can allow you to account for your overhead c
 
 This example shows how to add a 10% markup to the information collected from the AWS Cost and Usage Reports. The same method can be used to apply a markup or discount to your Azure or Google Cloud costs.
 
+[NOTE]
+====
+Creating, editing, or deleting a cost model only updates calculations starting from the first day of the current month.  
+====
+
 .Prerequisites
 
 * A user with Cost Administrator or Cost Price List Administrator permissions. See _{link-limiting-access}_ in _Getting started with cost management_ for instructions on configuring user roles.
