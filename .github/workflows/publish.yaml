@@ -1,0 +1,39 @@
+name: Publish Docs
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - main
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    name: Asciidoctoring the docs to pretty HTML!
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v2
+
+    - name: Get build container
+      id: adocbuild
+      uses: avattathil/asciidoctor-action@master
+      with:
+          program: "
+            asciidoctor -D public/ -o getting-started.html downstream/titles/getting_started/master.adoc
+            && asciidoctor -D public/ -o cost-models.html downstream/titles/using_cost_models/master.adoc
+            && asciidoctor -D public/ -o using-tags.html downstream/titles/managing_cost_data_using_tags/master.adoc
+            && asciidoctor -D public/ -o aws-source.html downstream/titles/adding_aws_source/master.adoc
+            && asciidoctor -D public/ -o azure-source.html downstream/titles/adding_azure_source/master.adoc
+            && asciidoctor -D public/ -o gcp-source.html downstream/titles/adding_gcp_source/master.adoc
+            && asciidoctor -D public/ -o ocp-source.html downstream/titles/adding_ocp_source/master.adoc
+          "
+
+    - name: Copy Image folder to public/ dir
+      run: sudo cp -a downstream/images/. public/images
+
+    - name: Deploy docs to ghpages
+      uses: peaceiris/actions-gh-pages@v3
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        publish_branch: gh-pages
+        publish_dir: ./public/
