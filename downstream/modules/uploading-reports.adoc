@@ -6,7 +6,7 @@
 
 
 [id="proc_uploading-reports_{context}"]
-= Uploading cost reports to cloud.redhat.com
+= Uploading cost reports to {platform}
 
 [role="_abstract"]
 You must manually upload locally stored cost reports from a restricted network to {platform}.
@@ -34,6 +34,6 @@ $ curl -vvvv -F "file=@FILE_NAME.tar.gz;type=application/vnd.redhat.hccm.tar+tgz
 
 .Verification steps
 
-. From link:https://cloud.redhat.com/cost-management/[cloud.redhat.com/cost-management], click *OpenShift*.
+. From {link-cost-management}, click *OpenShift*.
 
 . Verify you have OpenShift usage data for your cluster on the *OpenShift details* page.

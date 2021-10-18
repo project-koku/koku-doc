@@ -37,7 +37,7 @@ Before you can add your Google Cloud account to {product-title} as a data source
 As you will complete some of the following steps in the Google Cloud console, and some steps in the {product-title} user interface, keep both applications open in a web browser.
 
 Add your Google Cloud source to {product-title} from the settings area at
-https://cloud.redhat.com/settings/sources/.
+{link-sources}.
 
 [NOTE]
 ====

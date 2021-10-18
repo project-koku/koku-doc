@@ -29,7 +29,7 @@ Log into your AWS account to begin configuring cost and usage reporting:
 See the AWS _Billing and Cost Management_ documentation for more details on configuration.
 ====
 +
-. In the {platform} platform, open the *Sources* menu (https://cloud.redhat.com/settings/sources/) to begin adding an AWS source to {product-title}:
+. In the {platform} platform, open the *Sources* menu ({link-sources}) to begin adding an AWS source to {product-title}:
 .. Navigate to *Sources* and click *Add a source* to open the Sources wizard.
 .. Enter a name for your source and click *Next*.
 .. Select *{product-title}* as the application and *Amazon Web Services (AWS)* as the source type. Click *Next*.

@@ -36,7 +36,7 @@ Before you can add your AWS account to {product-title} as a data source, you mus
 As you will complete some of the following steps in the AWS console, and some steps in the {product-title} user interface, keep both applications open in a web browser.
 
 Add your AWS source to {product-title} from the settings area at
-https://cloud.redhat.com/settings/sources/.
+{link-sources}.
 
 [NOTE]
 ====

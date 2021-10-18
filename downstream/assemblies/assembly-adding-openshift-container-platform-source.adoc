@@ -15,14 +15,7 @@ endif::[]
 :context: adding-an-ocp-source
 
 [role="_abstract"]
-ifdef::koku[]
-To support {product-title} in Red{nbsp}Hat {openshift} 4.5 and more recent versions, a new community operator is introduced, +{operator}+.
-endif::koku[]
-ifdef::cost[]
-To support {product-title} in Red{nbsp}Hat {openshift} 4.6 and more recent versions, a new certified operator is introduced, *{operator-formal}*.
 
-Users on Red{nbsp}Hat {openshift} 4.5 who want to use {product-title} can install the community operator `koku-metrics-operator`. See the {link-adding-koku} for installation and configuration instructions.
-endif::cost[]
 
 
 

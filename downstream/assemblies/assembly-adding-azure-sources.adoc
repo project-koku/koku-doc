@@ -29,7 +29,7 @@ As non-Red Hat products and documentation can change without notice, instruction
 ====
 
 Add your Azure source to {product-title} from
-https://cloud.redhat.com/settings/sources/.
+{link-sources}.
 
 
 include::../modules/creating-an-azure-storage-account.adoc[leveloffset=+1]
