@@ -2,7 +2,7 @@
 
 == About this project
 
-Koku is the upstream project for Red Hat OpenShift Container Platform cost management, available  at https://cloud.redhat.com/cost-management/.
+Koku is the upstream project for Red Hat OpenShift Container Platform cost management, available  at https://console.redhat.com/openshift/costmanagement.
 
 We welcome all contributors! See the Developer Certificate of Origin (DCO) for guidelines for contributors.
 

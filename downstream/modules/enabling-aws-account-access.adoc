@@ -72,4 +72,4 @@ REMOVED FOR COST-148 / COST-161
 
 Cost management will begin collecting cost and usage data from your AWS account and any linked AWS accounts.
 
-The data can take a few days to populate before it shows on the {product-title} dashboard (https://cloud.redhat.com/cost-management/).
+The data can take a few days to populate before it shows on the {product-title} dashboard ({link-cost-management}).
