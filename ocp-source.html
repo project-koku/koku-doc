@@ -613,7 +613,7 @@ div.unbreakable { page-break-inside: avoid; }
 <li><a href="#proc_installing-cost-operator-on-a-restricted-network_adding-restricted-network-source">Installing the cost management operator on a restricted network</a></li>
 <li><a href="#configuring-cost-operator-on-a-restricted-network_adding-restricted-network-source">Configuring Cost Operator on a restricted network</a></li>
 <li><a href="#proc_downloading-reports_adding-restricted-network-source">Downloading cost reports</a></li>
-<li><a href="#proc_uploading-reports_adding-restricted-network-source">Uploading cost reports to cloud.redhat.com</a></li>
+<li><a href="#proc_uploading-reports_adding-restricted-network-source">Uploading cost reports to console.redhat.com</a></li>
 </ul>
 </li>
 </ul>
@@ -633,10 +633,7 @@ div.unbreakable { page-break-inside: avoid; }
 <div class="sect1">
 <h2 id="assembly-adding-openshift-container-platform-source">Adding an OpenShift Container Platform source to cost management</h2>
 <div class="sectionbody">
-<div class="paragraph _abstract">
-<p>To support cost management in Red&#160;Hat OpenShift Container Platform 4.5 and more recent versions, a new community operator is introduced, <code>koku-metrics-operator</code>.</p>
-</div>
-<div class="sect2">
+<div class="sect2 _abstract">
 <h3 id="installation-overview_adding-an-ocp-source">Installation tasks summary</h3>
 <div class="paragraph _abstract">
 <p>Whether you are replacing a prior cost management operator with the <strong>Koku Metrics Operator</strong> or installing it for the first time, the basic tasks are the same.</p>
@@ -739,7 +736,7 @@ To install and configure Koku Metrics Operator from the OpenShift Container Plat
 <td class="content">
 <div class="paragraph">
 <p>If a proxy with a custom CA certificate is configured, additional configuration  is required to inject this certificate into Koku Metrics Operator.
-See, <a href="https://access.redhat.com/documentation/en-us/openshift_container_platform/4.8/html/operators/administrator-tasks#olm-inject-custom-ca_olm-configuring-proxy-support"><em>Injecting a custom CA certificate</em></a> in the OpenShift Container Platform documentation for details.</p>
+See, <a href="https://access.redhat.com/documentation/en-us/openshift_container_platform/4.9/html/operators/administrator-tasks#olm-inject-custom-ca_olm-configuring-proxy-support"><em>Injecting a custom CA certificate</em></a> in the OpenShift Container Platform documentation for details.</p>
 </div>
 </td>
 </tr>
@@ -1340,7 +1337,7 @@ Do <em>not</em> add the secret to the workload.
 <div class="title">Procedure</div>
 <ol class="arabic">
 <li>
-<p>Complete the following OpenShift Container Platform procedure to create a local mirror of the <code>koku-metrics-operator</code>: <strong><a href="https://access.redhat.com/documentation/en-us/openshift_container_platform/4.8/html/operators/administrator-tasks#olm-restricted-networks"><em>Using Operator Lifecycle Manager on restricted networks</em></a></strong>.</p>
+<p>Complete the following OpenShift Container Platform procedure to create a local mirror of the <code>koku-metrics-operator</code>: <strong><a href="https://access.redhat.com/documentation/en-us/openshift_container_platform/4.9/html/operators/administrator-tasks#olm-restricted-networks"><em>Using Operator Lifecycle Manager on restricted networks</em></a></strong>.</p>
 <div class="admonitionblock note">
 <table>
 <tr>
@@ -1391,7 +1388,7 @@ Do <em>not</em> add the secret to the workload.
 <div class="title">Additional resources</div>
 <ul>
 <li>
-<p>For more details on the Operator Lifecycle Manager, see <a href="https://access.redhat.com/documentation/en-us/openshift_container_platform/4.8/html/operators/understanding-operators#operator-lifecycle-manager-olm"><em>What is Operator Lifecycle Manager?</em></a></p>
+<p>For more details on the Operator Lifecycle Manager, see <a href="https://access.redhat.com/documentation/en-us/openshift_container_platform/4.9/html/operators/understanding-operators#operator-lifecycle-manager-olm"><em>What is Operator Lifecycle Manager?</em></a></p>
 </li>
 </ul>
 </div>
@@ -1634,13 +1631,13 @@ $ rm /tmp/koku-metrics-operator-reports/upload/*</code></pre>
 <div class="title">Additional resources</div>
 <ul>
 <li>
-<p>For more information on persistent volume claims, see <a href="https://access.redhat.com/documentation/en-us/openshift_container_platform/4.8/html/storage/understanding-persistent-storage">Understanding persistent storage</a>.</p>
+<p>For more information on persistent volume claims, see <a href="https://access.redhat.com/documentation/en-us/openshift_container_platform/4.9/html/storage/understanding-persistent-storage">Understanding persistent storage</a>.</p>
 </li>
 </ul>
 </div>
 </div>
 <div class="sect3">
-<h4 id="proc_uploading-reports_adding-restricted-network-source">Uploading cost reports to cloud.redhat.com</h4>
+<h4 id="proc_uploading-reports_adding-restricted-network-source">Uploading cost reports to <a href="https://console.redhat.com">console.redhat.com</a></h4>
 <div class="paragraph _abstract">
 <p>You must manually upload locally stored cost reports from a restricted network to <a href="https://console.redhat.com">console.redhat.com</a>.</p>
 </div>
@@ -1692,7 +1689,7 @@ $ rm /tmp/koku-metrics-operator-reports/upload/*</code></pre>
 <div class="title">Verification steps</div>
 <ol class="arabic">
 <li>
-<p>From <a href="https://cloud.redhat.com/cost-management/">cloud.redhat.com/cost-management</a>, click <strong>OpenShift</strong>.</p>
+<p>From <a href="https://console.redhat.com/openshift/cost-management/">console.redhat.com/openshift/cost-management/</a>, click <strong>OpenShift</strong>.</p>
 </li>
 <li>
 <p>Verify you have OpenShift usage data for your cluster on the <strong>OpenShift details</strong> page.</p>
@@ -1846,7 +1843,7 @@ $ rm /tmp/koku-metrics-operator-reports/upload/*</code></pre>
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2021-09-20 14:37:14 UTC
+Last updated 2021-10-18 12:28:47 UTC
 </div>
 </div>
 </body>
