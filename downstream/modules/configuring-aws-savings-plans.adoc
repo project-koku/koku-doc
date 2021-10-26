@@ -1,0 +1,34 @@
+////
+
+////
+:_module-type: PROCEDURE
+
+[id="configuring-aws-savings-plans_{context}"]
+= Configuring AWS savings plans
+
+[role="_abstract"]
+Aws savings plans are... 
+cost management can... 
+
+Terminology: 
+
+Unblended cost (Default): 
+Blended cost: 
+Amortized cost: 
+
+.Prerequisites
+
+* AWS source added to {product-title}
+* AWS savings plan enabled
+
+.Procedure
+
+. Start each step with an active verb.
+
+. Include one command or action for each step with the exception of simple follow-step, for example:
+.. Do this thing and then select *Next*.
+.. Do this other thing and then select *Next*.
+
+. Use an unnumbered bullet (*) if the procedure includes only one step.
+
+.Verification
