@@ -26,3 +26,7 @@ The following links provide further guidance on tagging for each source type.
 * link:https://docs.microsoft.com/en-us/azure/architecture/best-practices/naming-conventions[Azure recommended naming and tagging conventions]
 * link:https://docs.microsoft.com/en-us/azure/azure-resource-manager/resource-group-using-tags[Use tags to organize your Azure resources and management hierarchy]
 * link:https://docs.microsoft.com/en-us/azure/governance/policy/samples/enforce-tag-on-resource-groups[Enforce tags in Azure resource groups]
+
+*Google Cloud:*
+
+* link:https://cloud.google.com/compute/docs/labeling-resources[Creating and managing labels]

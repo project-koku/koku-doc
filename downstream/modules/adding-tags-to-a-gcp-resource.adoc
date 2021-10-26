@@ -15,6 +15,6 @@ You can apply custom labels to Google cloud resources, such as virtual machine i
 
 * Create and apply labels to your Google Cloud resources.
 +
-See link:https://cloud.google.com/compute/docs/labeling-resources[_User-Defined Cost Allocation Tags_] in the Google Cloud documentation for instructions.
+See link:https://cloud.google.com/compute/docs/labeling-resources[_Creating and managing labels_] in the Google Cloud documentation for instructions.
 
 

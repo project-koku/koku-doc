@@ -22,11 +22,6 @@ To add a Google Cloud account to {product-title}, you must configure your Google
 You must have a Red Hat account user with Sources Administrator entitlements before you can add sources to {product-title}.
 ====
 
-[NOTE]
-====
-At this time, {openshift} resources running on Google Cloud Platform are not automatically associated in {product-title}. This feature will be available soon. 
-====
-
 Before you can add your Google Cloud account to {product-title} as a data source, you must configure the following services on your Google Cloud account to allow {product-title} access to metrics:
 
 * Cost management Google Cloud project.
