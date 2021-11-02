@@ -2,7 +2,7 @@
 // Titles
 
 :product-title: cost management
-:platform-title: Red Hat Hybrid Cloud Console
+:platform-title: link:https://console.redhat.com[Red Hat Hybrid Cloud Console]
 :platform: link:https://console.redhat.com[console.redhat.com]
 :openshift: OpenShift Container Platform
 :operator: costmanagement-metrics-operator
@@ -32,11 +32,13 @@
 :link-activating-aws-tags: link:https://access.redhat.com/documentation/en-us/cost_management_service/2021/html-single/adding_an_amazon_web_services_aws_source_to_cost_management/index#activating-aws-tags_adding-aws-sources[Activating AWS tags for {product-title}]
 :link-azure-export-schedule: link:https://access.redhat.com/documentation/en-us/cost_management_service/2021/html-single/adding_a_microsoft_azure_source_to_cost_management/index#configuring-an-azure-daily-export-schedule_adding-an-azure-source[Configuring a daily Azure data export schedule]
 :link-adding-sources: link:https://access.redhat.com/documentation/en-us/cost_management_service/2021/html-single/getting_started_with_cost_management/index#adding-sources_configuring[Adding sources to cost management]
+:link-console-rbac: link:https://access.redhat.com/documentation/en-us/red_hat_hybrid_cloud_console/2021/html-single/user_access_configuration_guide_for_role-based_access_control_rbac/index[User Access Configuration Guide For Role-Based Access Control (RBAC)]
 
 // Application Links
 
 :link-cost-management: link:https://console.redhat.com/openshift/cost-management/[console.redhat.com/openshift/cost-management/]
 :link-cost-management-t: link:https://console.redhat.com/openshift/cost-management/[cost management]
+:link-cost-settings: link:https://console.redhat.com/settings/applications/cost-management[cost management settings]
 :link-cost-models-app: link:https://console.redhat.com/openshift/cost-management/cost-models[Cost Models]
 :link-cost-explorer-app: link:https://console.redhat.com/openshift/cost-management/explorer[Cost Explorer]
 :link-sources: link:https://console.redhat.com/settings/sources[https://console.redhat.com/settings/sources]

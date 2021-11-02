@@ -9,31 +9,33 @@
 = Adding a role to a group
 
 [role="_abstract"]
-Add your role to a group to manage and limit the scope of information that users in that group can see within {product-title}.
+Once you have decided the correct roles for your organization, you must add your role to a group to manage and limit the scope of information that members in that group can see within {product-title}.
+
+The Member tab shows all users that you can add to the group. When you add users to a group, they become members of that group. A group member inherits the roles of all other groups they belong to.
 
 .Prerequisites
 
-* You must be an Account Administrator or a member of a group with the _RBAC Administrator_ role to create a role.
+* You must be an Organization Administrator (org admin).
+* If you are not an org admin, you must be a member of a group that has the User Access Administrator role assigned to it.
+
+[NOTE]
+====
+Only the org admin can assign the User Access Administrator role to a group.
+====
 
 .Procedure
 
-. From {product-title}, click image:configuration-gear.png[] (*Settings*) to navigate to *User Access*.
+. Log in to your Red Hat organization account at {platform-title}.
+. Click image:configuration-gear.png[] (*Settings*) to open the Settings page.
 . Click the *Groups* tab.
 . Click *Create group*.
-. In the *General information* screen, enter a name for the new group, and optionally, a description. Click *Next*.
-. In the *Add members* screen, select the user(s) in your organization to add to the new group. Click *Next*.
-. (Optional) In the *Select roles* screen, select one or more role(s) to add to the group.
-//Should you always also add the role you just created? Why?
-+
-Default roles available for {product-title} are:
-+
-* _Cost Administrator_ : grants read and write permissions
-* _Cost Cloud Viewer_ : grants read permissions on cost reports related to cloud sources
-* _Cost OpenShift Viewer_ : grants read permissions on cost reports related to OpenShift sources
-* _Cost Price List Administrator_ : grants read and write permissions on price list rates
-+
-. Review the details for this group and click *Confirm* to create the group.
+. Follow the guided actions provided by the wizard to add users and roles.
+. To grant additional group access, edit the group and add additional roles.
 
 Your new group will be listed in the *Groups* list on the *User Access* screen.
 
-To verify your configuration, log out of the {product-title} application and log back in as a user added to the group.
+.Verification 
+
+* To verify your configuration, log out of the {product-title} application and log back in as a user added to the group.
+
+For more information about configuring Red Hat account roles and groups, see _{link-console-rbac}_ in the {platform-title} documentation.

@@ -4,23 +4,27 @@
 :_module-type: CONCEPT
 :experimental:
 
-
+ 
 [id="default-user-roles_{context}"]
 = Default user roles in {product-title}
 
 [role="_abstract"]
-You can configure custom user access roles for {product-title}, or assign each user a predefined role.
+You can configure custom user access roles for {product-title}, or assign each user a predefined role within the {platform-title}.
 
-To use a default role, determine the required level of access to permit your users based on the following predefined roles in {product-title}:
+To use a default role, determine the required level of access to permit your users based on the following predefined {product-title} related roles:
 
 .Administrator roles
 
-* Cost Administrator:  has read and write permissions to all resources in {product-title}
-* Cost Price List Administrator:  has read and write permissions on price list rates
-* Sources Administrator: has create and edit permissions for managing sources 
+* *Organization Administrator*: Can configure and manage user access and is the only user with access to {link-cost-settings}.
+* *User Access Administrator*: Can configure and manage user access to services hosted on {platform-title}.
+* *Sources Administrator*: Perform any available operation against any Source.
+* *Cost Administrator*:  Has read and write permissions to all resources in {product-title}.
+* *Cost Price List Administrator*:  Has read and write permissions on cost models.
 
 .Viewer roles
 
-* Cost Cloud Viewer:  has read permissions on cost reports related to cloud sources
-* Cost OpenShift Viewer:  has read permissions on cost reports related to OpenShift sources
-* Cost Price List Viewer:  has read permissions on price list rates
+* *Cost Cloud Viewer*:  Has read permissions on cost reports related to cloud sources.
+* *Cost OpenShift Viewer*:  Has read permissions on cost reports related to OpenShift sources.
+* *Cost Price List Viewer*:  Has read permissions on price list rates.
+
+In addition to using these predefined roles, you can create and manage custom User Access roles with granular permissions for one or more applications in {platform-title}. See, link:https://access.redhat.com/documentation/en-us/red_hat_hybrid_cloud_console/2021/html/user_access_configuration_guide_for_role-based_access_control_rbac/assembly-rbac-procedures#proc-insights-rbac-adding-and-modifying-roles_rbac-intro[_Adding custom User Access roles_] in the {platform-title} documentation for more details. 

@@ -1,7 +1,7 @@
 // Module included in the following assemblies:
 //
 // assembly-cost-limiting-access-rbac.adoc
-:_module-type: PROCEDURE
+:_module-type: PROCEDURE 
 :experimental:
 
 [id="adding-a-role-cost-rbac_{context}"]
@@ -11,9 +11,6 @@
 Create a new role to manage and limit the scope of information that users can see within {product-title}.
 
 .Prerequisites
-
-
-
 
 * You must be an Account Administrator or a member of a group with the _RBAC Administrator_ role to create a role.
 
