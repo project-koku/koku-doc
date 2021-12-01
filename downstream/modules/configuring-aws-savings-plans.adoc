@@ -4,26 +4,28 @@
 :_module-type: PROCEDURE
 
 [id="configuring-aws-savings-plans_{context}"]
-= Configuring AWS savings plans
+= Configuring AWS billing
 
 [role="_abstract"]
-Aws savings plans are... 
-cost management can... 
+If you have a consolidated billing arrangement with AWS such as Savings Plans and Blended rates and costs, 
+
+
 
 Terminology: 
 
-Unblended cost (Default): 
+Unblended cost (Default): Costs will display according to your billing charge date. 
+Amortized cost: Recurring and upfront costs will be distributed evenly throughout the billing period. 
 Blended cost: 
-Amortized cost: 
+
 
 .Prerequisites
 
 * AWS source added to {product-title}
-* AWS savings plan enabled
+* Access to console.redhat.com as an Organization Administrator
 
 .Procedure
 
-. Start each step with an active verb.
+. Navigate to the {}
 
 . Include one command or action for each step with the exception of simple follow-step, for example:
 .. Do this thing and then select *Next*.
