@@ -4,33 +4,29 @@
 :_module-type: PROCEDURE
 
 [id="configuring-aws-savings-plans_{context}"]
-= Configuring AWS billing
+= Configuring AWS billing plans
 
 [role="_abstract"]
-If you have a consolidated billing arrangement with AWS such as Savings Plans and Blended rates and costs, 
+By default, {product-title} calculates AWS cost according to your usage cost for that date. If you have a special billing arrangement with AWS such as amortized billing or blended rates, you can configure these calculations from the {link-cost-settings} page. Doing so, will allow your costs to more accurately reflect the billing from AWS.
+
+For more information on AWS billing, see link:https://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/con-bill-blended-rates.html#Blended_CB[_Understanding Consolidated Bills_] in the AWS documentation. 
 
 
+Cost management supports three cost calculation options to accommodate AWS billing plans: 
 
-Terminology: 
+Unblended (Default):: Your costs are calculated according to your usage cost for that date. 
+Amortized:: Your recurring and upfront costs will be distributed evenly throughout the billing period. 
+Blended:: Your costs are calculated according to AWS blended rates.
 
-Unblended cost (Default): Costs will display according to your billing charge date. 
-Amortized cost: Recurring and upfront costs will be distributed evenly throughout the billing period. 
-Blended cost: 
-
+This procedure describes how to set your cost calculation to *Amortized* or *Blended* from the default *Unblended*. 
 
 .Prerequisites
 
 * AWS source added to {product-title}
-* Access to console.redhat.com as an Organization Administrator
+* Access to {platform} as an Organization Administrator
 
 .Procedure
 
-. Navigate to the {}
-
-. Include one command or action for each step with the exception of simple follow-step, for example:
-.. Do this thing and then select *Next*.
-.. Do this other thing and then select *Next*.
-
-. Use an unnumbered bullet (*) if the procedure includes only one step.
-
-.Verification
+. From {platform}, navigate to the {link-cost-settings} page.
+. Under *Show cost as* select *Amortized* or *Blended*.
+. Click *Save*.

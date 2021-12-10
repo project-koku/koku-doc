@@ -53,7 +53,6 @@ include::../modules/enabling-additional-aws-account-access.adoc[leveloffset=+1]
 
 include::../modules/configuring-aws-savings-plans.adoc[leveloffset=+1]
 
-You have completed adding your AWS account as a source.
 
 // Restore the context to what it was before this assembly.
 ifdef::parent-context-of-assembly-adding-aws-sources[:context: {parent-context-of-assembly-adding-aws-sources}]
