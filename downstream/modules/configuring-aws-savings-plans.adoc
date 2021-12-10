@@ -7,9 +7,9 @@
 = Configuring AWS billing plans
 
 [role="_abstract"]
-By default, {product-title} calculates AWS cost according to your usage cost for that date. If you have a special billing arrangement with AWS such as amortized billing or blended rates, you can configure these calculations from the {link-cost-settings} page. Doing so, will allow your costs to more accurately reflect the billing from AWS.
+By default, {product-title} calculates AWS cost according to your usage cost for that date. If you have a special billing arrangement with AWS such as amortized billing or blended rates, you can configure these calculations from the {link-cost-settings} page. This allows your cost reports to more accurately reflect your AWS billing.
 
-For more information on AWS billing, see link:https://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/con-bill-blended-rates.html#Blended_CB[_Understanding Consolidated Bills_] in the AWS documentation. 
+For more information on AWS billing, see link:https://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/con-bill-blended-rates.html[_Understanding Consolidated Bills_] in the AWS documentation. 
 
 
 Cost management supports three cost calculation options to accommodate AWS billing plans: 
@@ -22,8 +22,8 @@ This procedure describes how to set your cost calculation to *Amortized* or *Ble
 
 .Prerequisites
 
-* AWS source added to {product-title}
-* Access to {platform} as an Organization Administrator
+* AWS source added to {product-title}.
+* Access to {platform} as an Organization Administrator.
 
 .Procedure
 
