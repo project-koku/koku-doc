@@ -20,6 +20,8 @@ Cost management is continuously evolving to bring you the best service possible.
 
 
 //Include modules
+include::../modules/whats-new-december-2021.adoc[leveloffset=+1]
+
 
 ////
 Restore the context to what it was before this assembly.
