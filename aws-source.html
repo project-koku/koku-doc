@@ -602,6 +602,7 @@ div.unbreakable { page-break-inside: avoid; }
 <li><a href="#enabling-additional-aws-account-access_adding-aws-sources">Enabling additional account access for cost and usage consumption</a></li>
 </ul>
 </li>
+<li><a href="#configuring-aws-savings-plans_adding-aws-sources">Configuring AWS billing plans</a></li>
 </ul>
 </li>
 <li><a href="#assembly-cost-management-next-steps-aws">Next steps for managing your costs</a>
@@ -945,9 +946,62 @@ to obtain the display names of AWS member accounts if you are using consolidated
 </li>
 </ol>
 </div>
-<div class="paragraph">
-<p>You have completed adding your AWS account as a source.</p>
 </div>
+</div>
+<div class="sect2">
+<h3 id="configuring-aws-savings-plans_adding-aws-sources">Configuring AWS billing plans</h3>
+<div class="paragraph _abstract">
+<p>By default, cost management calculates AWS cost according to your usage cost for that date. If you have a special billing arrangement with AWS such as amortized billing or blended rates, you can configure these calculations from the <a href="https://console.redhat.com/settings/applications/cost-management">cost management settings</a> page. Doing so, will allow your costs to more accurately reflect the billing from AWS.</p>
+</div>
+<div class="paragraph">
+<p>For more information on AWS billing, see <a href="https://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/con-bill-blended-rates.html#Blended_CB"><em>Understanding Consolidated Bills</em></a> in the AWS documentation.</p>
+</div>
+<div class="paragraph">
+<p>Cost management supports three cost calculation options to accommodate AWS billing plans:</p>
+</div>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">Unblended (Default)</dt>
+<dd>
+<p>Your costs are calculated according to your usage cost for that date.</p>
+</dd>
+<dt class="hdlist1">Amortized</dt>
+<dd>
+<p>Your recurring and upfront costs will be distributed evenly throughout the billing period.</p>
+</dd>
+<dt class="hdlist1">Blended</dt>
+<dd>
+<p>Your costs are calculated according to AWS blended rates.</p>
+</dd>
+</dl>
+</div>
+<div class="paragraph">
+<p>This procedure describes how to set your cost calculation to <strong>Amortized</strong> or <strong>Blended</strong> from the default <strong>Unblended</strong>.</p>
+</div>
+<div class="ulist">
+<div class="title">Prerequisites</div>
+<ul>
+<li>
+<p>AWS source added to cost management</p>
+</li>
+<li>
+<p>Access to <a href="https://console.redhat.com">console.redhat.com</a> as an Organization Administrator</p>
+</li>
+</ul>
+</div>
+<div class="olist arabic">
+<div class="title">Procedure</div>
+<ol class="arabic">
+<li>
+<p>From <a href="https://console.redhat.com">console.redhat.com</a>, navigate to the <a href="https://console.redhat.com/settings/applications/cost-management">cost management settings</a> page.</p>
+</li>
+<li>
+<p>Under <strong>Show cost as</strong> select <strong>Amortized</strong> or <strong>Blended</strong>.</p>
+</li>
+<li>
+<p>Click <strong>Save</strong>.</p>
+</li>
+</ol>
 </div>
 </div>
 </div>
@@ -1081,7 +1135,7 @@ to obtain the display names of AWS member accounts if you are using consolidated
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2021-11-05 08:36:30 UTC
+Last updated 2021-12-10 10:17:52 UTC
 </div>
 </div>
 </body>
