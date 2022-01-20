@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="generator" content="Asciidoctor 2.0.16">
+<meta name="generator" content="Asciidoctor 2.0.17">
 <title>Adding an OpenShift Container Platform source to cost management</title>
 <style>
 @import url(//openshift.redhat.com/app/assets-20130701203230/overpass.css);
@@ -1099,27 +1099,25 @@ When you install <strong>Koku Metrics Operator</strong>, a <strong>KokuMetricsCo
 <li>
 <p>Enter a name for your secret in the <strong>Secret Name</strong> field.</p>
 <div class="listingblock">
-<div class="title">Secret name example</div>
 <div class="content">
-<pre>basic-auth-secret</pre>
+<pre class="highlight"><code class="language-yaml" data-lang="yaml">basic-auth-secret</code></pre>
 </div>
 </div>
 </li>
 <li>
-<p>In the <strong>Key</strong> field, enter <code>username</code>. This is your first key of the key pair.</p>
+<p>In the <strong>Key</strong> field, enter <code>username</code>.</p>
 <div class="listingblock">
-<div class="title">Key name example for username</div>
 <div class="content">
-<pre>username</pre>
+<pre class="highlight"><code class="language-yaml" data-lang="yaml">username</code></pre>
 </div>
 </div>
 </li>
 <li>
-<p>In the <strong>Value</strong> field for the username key, enter the actual username for your authorized <a href="https://console.redhat.com">console.redhat.com</a> user account.</p>
+<p>In the <strong>Value</strong> field for the key <code>username</code>, enter the actual username for your authorized <a href="https://console.redhat.com">console.redhat.com</a> user account.</p>
 <div class="listingblock">
-<div class="title">Key value example for username</div>
+<div class="title">Value for username key</div>
 <div class="content">
-<pre>RedHatUser</pre>
+<pre class="highlight"><code class="language-yaml" data-lang="yaml"><em>your_red_hat_username</em></code></pre>
 </div>
 </div>
 </li>
@@ -1127,20 +1125,19 @@ When you install <strong>Koku Metrics Operator</strong>, a <strong>KokuMetricsCo
 <p>Click the <code>Add Key/Value</code> link to add the required password key name and value.</p>
 </li>
 <li>
-<p>In the <strong>Key</strong> field, enter <code>password</code>. This is your second key of the key pair.</p>
+<p>In the <strong>Key</strong> field, enter <code>password</code>.</p>
 <div class="listingblock">
-<div class="title">Key name example for password</div>
 <div class="content">
-<pre>password</pre>
+<pre class="highlight"><code class="language-yaml" data-lang="yaml">password</code></pre>
 </div>
 </div>
 </li>
 <li>
-<p>In the <strong>Value</strong> field for the password key, enter the actual password for your authorized <a href="https://console.redhat.com">console.redhat.com</a> user account.</p>
+<p>In the <strong>Value</strong> field for the key <code>password</code>, enter the actual password for your authorized <a href="https://console.redhat.com">console.redhat.com</a> user account.</p>
 <div class="listingblock">
-<div class="title">Key value example for password</div>
+<div class="title">Value for password key</div>
 <div class="content">
-<pre>my.User!password</pre>
+<pre class="highlight"><code class="language-yaml" data-lang="yaml"><em>your_red_hat_password</em></code></pre>
 </div>
 </div>
 </li>
@@ -1148,7 +1145,7 @@ When you install <strong>Koku Metrics Operator</strong>, a <strong>KokuMetricsCo
 <p>Click the <strong>Create</strong> button to complete the creation of your basic authorization secret.</p>
 </li>
 <li>
-<p>After you click the <strong>Create</strong> button, you can verify the key information details for the secret.</p>
+<p>After you click the <strong>Create</strong> button, you can verify the key/value details for the secret.</p>
 <div class="admonitionblock note">
 <table>
 <tr>
@@ -1209,8 +1206,8 @@ Do <em>not</em> add the secret to the workload.
 <p>Locate the following lines in the YAML view.</p>
 <div class="listingblock">
 <div class="content">
-<pre>  authentication:
-    type: token</pre>
+<pre class="highlight"><code class="language-yaml" data-lang="yaml">  authentication:
+    type: token</code></pre>
 </div>
 </div>
 </li>
@@ -1222,9 +1219,9 @@ Do <em>not</em> add the secret to the workload.
 <div class="listingblock">
 <div class="title">Example</div>
 <div class="content">
-<pre>  authentication:
+<pre class="highlight"><code class="language-yaml" data-lang="yaml">  authentication:
     secret_name: basic-auth-secret
-    type: basic</pre>
+    type: basic</code></pre>
 </div>
 </div>
 </li>
@@ -1637,7 +1634,7 @@ $ rm /tmp/koku-metrics-operator-reports/upload/*</code></pre>
 </div>
 </div>
 <div class="sect3">
-<h4 id="proc_uploading-reports_adding-restricted-network-source">Uploading cost reports to <a href="https://console.redhat.com">console.redhat.com</a></h4>
+<h4 id="proc_uploading-reports_adding-restricted-network-source">Uploading cost reports to console.redhat.com</h4>
 <div class="paragraph _abstract">
 <p>You must manually upload locally stored cost reports from a restricted network to <a href="https://console.redhat.com">console.redhat.com</a>.</p>
 </div>
@@ -1843,7 +1840,7 @@ $ rm /tmp/koku-metrics-operator-reports/upload/*</code></pre>
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2021-12-10 12:22:14 UTC
+Last updated 2022-01-20 13:53:30 UTC
 </div>
 </div>
 </body>
