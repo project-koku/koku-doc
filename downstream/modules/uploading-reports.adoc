@@ -6,7 +6,7 @@
 
 
 [id="proc_uploading-reports_{context}"]
-= Uploading cost reports to {platform}
+= Uploading cost reports to console.redhat.com
 
 [role="_abstract"]
 You must manually upload locally stored cost reports from a restricted network to {platform}.

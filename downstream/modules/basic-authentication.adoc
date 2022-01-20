@@ -34,37 +34,39 @@ This procedure describes setting up basic authentication using the {openshift} w
 . In the *Create Key/Value Secret* window enter the following information to create a new secret that contains a username key and a password key and a value for each key.
 .. Enter a name for your secret in the *Secret Name* field.
 +
-.Secret name example
+[source,yaml]
 ----
 basic-auth-secret
 ----
-.. In the *Key* field, enter `username`. This is your first key of the key pair.
+.. In the *Key* field, enter `username`.
 +
-.Key name example for username
+[source,yaml]
 ----
 username
 ----
-.. In the *Value* field for the username key, enter the actual username for your authorized {platform} user account.
+.. In the *Value* field for the key `username`, enter the actual username for your authorized {platform} user account.
 +
-.Key value example for username
+.Value for username key
+[source,yaml,subs="+quotes"]
 ----
-RedHatUser
+_your_red_hat_username_
 ----
 .. Click the `Add Key/Value` link to add the required password key name and value.
-.. In the *Key* field, enter `password`. This is your second key of the key pair.
+.. In the *Key* field, enter `password`. 
 +
-.Key name example for password
+[source,yaml]
 ----
 password
 ----
-.. In the *Value* field for the password key, enter the actual password for your authorized {platform} user account.
+.. In the *Value* field for the key `password`, enter the actual password for your authorized {platform} user account.
 +
-.Key value example for password
+.Value for password key
+[source,yaml,subs="+quotes"]
 ----
-my.User!password
+_your_red_hat_password_
 ----
 .. Click the *Create* button to complete the creation of your basic authorization secret.
-.. After you click the *Create* button, you can verify the key information details for the secret.
+.. After you click the *Create* button, you can verify the key/value details for the secret.
 +
 NOTE: Do _not_ add the secret to the workload.
 
@@ -90,6 +92,7 @@ The default name is +{sample-file}+.
 . When the +{sample-file}+ window appears, click in the *YAML* tab to open an edit and view window.
 . Locate the following lines in the YAML view.
 +
+[source,yaml]
 ----
   authentication:
     type: token
@@ -98,6 +101,7 @@ The default name is +{sample-file}+.
 . Insert a new line for `secret_name`. Enter the value for  `secret_name`, which is the name you previously created.
 +
 .Example
+[source,yaml]
 ----
   authentication:
     secret_name: basic-auth-secret
