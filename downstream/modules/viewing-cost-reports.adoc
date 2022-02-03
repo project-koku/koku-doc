@@ -1,0 +1,24 @@
+// Module included in the following assemblies:
+// assembly-adding-ocp-sources.adoc
+:_content-type: PROCEDURE
+
+[id="viewing-cost-reports_{context}"]
+= Viewing your {product-title} reports
+
+[role="_abstract"]
+The +{operator}+ deletes your {product-title} reports upon successful upload to {platform}. These reports are then processed and deleted from the Red Hat servers. Therefore, {product-title} reports cannot be viewed when operating normally. However, you can install a duplicate instance of +{operator}+ in a restricted network configuration to view your reports. Alternatively, you can install the restricted network configuration to review normal report content before installing in a normal configuration. 
+
+.Prerequisites
+
+* OpenShift Container Platform 
+
+.Procedure
+
+* To install +{operator}+ in a restricted network configuration, follow the steps in {link-restricted}. 
++
+[WARNING]
+====
+If you are installing a duplicate version of the operator, do not install both operators in the same namespace. This will cause unexpected errors. You can create a custom namespace for the duplicate installation and update the +{operator-config}+ accordingly.
+====
+
+After you have installed +{operator}+ in a restricted network configuration, you can now {link-download} and review your {product-title} reports.

@@ -30,3 +30,5 @@
 :link-azure-export-schedule: link:https://project-koku.github.io/koku-doc/azure-source.html#configuring-an-azure-daily-export-schedule_adding-an-azure-source[Configuring a daily Azure data export schedule]
 :link-adding-sources: link:https://project-koku.github.io/koku-doc/getting-started.html[Adding sources to cost management]
 :link-console-rbac: link:https://access.redhat.com/documentation/en-us/red_hat_hybrid_cloud_console/2021/html-single/user_access_configuration_guide_for_role-based_access_control_rbac/index[User Access Configuration Guide For Role-Based Access Control (RBAC)]
+:link-restricted: link:https://project-koku.github.io/koku-doc/getting-started.html#assembly-adding-a-restricted-network-source_adding-an-ocp-source[Adding a restricted network source]
+:link-download: link:https://project-koku.github.io/koku-doc/getting-started.html#proc_downloading-reports_adding-restricted-network-source[download]

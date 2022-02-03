@@ -35,6 +35,8 @@ include::../modules/basic-authentication.adoc[leveloffset=+1]
 
 include::../modules/creating-an-openshift-container-platform-source-manually.adoc[leveloffset=+1]
 
+include::../modules/viewing-cost-reports.adoc[leveloffset=+1]
+
 include::assembly-adding-a-restricted-network-source.adoc[leveloffset=+1]
 
 // Restore the context to what it was before this assembly.
