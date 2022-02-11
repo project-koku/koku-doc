@@ -6,7 +6,7 @@
 
 [id="exporting-cost-data-cost-explorer_{context}"]
 = Exporting cost data
-
+ 
 [role="_abstract"]
 Use the {link-cost-explorer-app} to export customized CSV files of cost data to your local workstation. These files contain more details about your cost data that you can apply in your desired reporting tool. 
 

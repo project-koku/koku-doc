@@ -7,9 +7,9 @@
 = Understanding Cost Explorer
 
 
-[role="_abstract"]
+[role="_abstract"] 
 
-The cost management {link-cost-explorer-app} allows you to create custom graphs of time-scaled cost and usage information to better visualize and interpret your costs.
+The cost management {link-cost-explorer-app} allows you to create custom graphs containing up to 90 days of cost and usage information to better visualize and interpret your costs.
 
 With Cost Explorer you can:
 
