@@ -9,7 +9,7 @@
 [role="_abstract"]
 Using the filter options in {link-cost-explorer-app} you can customize what data to view. 
 
-This example shows how to see the costs related to an {openshift} project from the previous 30 days.
+This example shows how to see the costs related to an {openshift} project from the previous 90 days.
 
 .Prerequisites
 
@@ -22,24 +22,10 @@ This example shows how to see the costs related to an {openshift} project from t
 . From the *{link-cost-explorer-app}*, select a *Perspective*. For example, select _All OpenShift Cost_  to view your cumulative openshift costs. 
 . Select a grouping. For example, with {openshift} you can group by _Project_, _Node_, _Cluster_, or _Tag_. With other perspective views, the *Group by* options will change accordingly. 
 . If desired, specify one or more _Projects_, _Nodes_, _Clusters_, or _Tags_ by name.  
-. Select _Last 30 days_ to view the cost data from the previous 30 days. 
+. Select _Last 90 days_ to view the cost data from the previous 90 days. 
 . Repeat these steps for different perspectives and groupings to better understand your costs. 
 
 .Next Steps
 
 After filtering your data, you can export it into a CSV file. See xref:exporting-cost-data-cost-explorer_cost-explorer[] for more information. 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
