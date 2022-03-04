@@ -845,20 +845,6 @@ div.unbreakable { page-break-inside: avoid; }
 <div class="paragraph">
 <p>By default, cost management tracks AWS compute usage and costs by associating the Amazon EC2 instance ID or Azure virtual machine instance ID with the OpenShift Container Platform node running on that instance.</p>
 </div>
-<div class="admonitionblock note">
-<table>
-<tr>
-<td class="icon">
-<div class="title">Note</div>
-</td>
-<td class="content">
-<div class="paragraph">
-<p>At this time, OpenShift Container Platform resources running on Google Cloud Platform are not automatically associated in cost management. This feature will be available soon.</p>
-</div>
-</td>
-</tr>
-</table>
-</div>
 <div class="sect3">
 <h4 id="_tag_matching_hierarchy_in_cost_management">Tag matching hierarchy in cost management</h4>
 <div class="paragraph">
@@ -1043,7 +1029,7 @@ div.unbreakable { page-break-inside: avoid; }
 <li>
 <p>Create and apply labels to your Google Cloud resources.</p>
 <div class="paragraph">
-<p>See <a href="https://cloud.google.com/compute/docs/labeling-resources"><em>User-Defined Cost Allocation Tags</em></a> in the Google Cloud documentation for instructions.</p>
+<p>See <a href="https://cloud.google.com/compute/docs/labeling-resources"><em>Creating and managing labels</em></a> in the Google Cloud documentation for instructions.</p>
 </div>
 </li>
 </ul>
@@ -1369,16 +1355,18 @@ div.unbreakable { page-break-inside: avoid; }
 <table class="tableblock frame-all grid-all stretch">
 <caption class="title">Table 4. Tagging specifications by source</caption>
 <colgroup>
-<col style="width: 25%;">
-<col style="width: 25%;">
-<col style="width: 25%;">
-<col style="width: 25%;">
+<col style="width: 20%;">
+<col style="width: 20%;">
+<col style="width: 20%;">
+<col style="width: 20%;">
+<col style="width: 20%;">
 </colgroup>
 <thead>
 <tr>
 <th class="tableblock halign-left valign-top">Criteria</th>
 <th class="tableblock halign-left valign-top">AWS</th>
 <th class="tableblock halign-left valign-top">Azure</th>
+<th class="tableblock halign-left valign-top">Google Cloud</th>
 <th class="tableblock halign-left valign-top">Red Hat OpenShift</th>
 </tr>
 </thead>
@@ -1388,11 +1376,13 @@ div.unbreakable { page-break-inside: avoid; }
 <td class="tableblock halign-left valign-top"><p class="tableblock">Tags</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Tags</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Labels</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Labels</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Format</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Key &amp; value</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Name &amp; value</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Key &amp; value</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Key &amp; value
 Keys: [prefix/]name
 Prefix: must be a DNS subdomain</p></td>
@@ -1402,9 +1392,11 @@ Prefix: must be a DNS subdomain</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Yes</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Yes</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Yes</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Yes</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Unique label per key</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Yes</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Yes</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Yes</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Yes</p></td>
@@ -1413,18 +1405,21 @@ Prefix: must be a DNS subdomain</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Case sensitive</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Yes</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">No</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Only lowercase letters</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Yes</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Limit per resource</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">50</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">50 (15 for storage)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">64</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">N/A</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Length of key</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">128</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">512 (128 for storage)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">63</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">253(prefix) / 63(name)</p></td>
 </tr>
 <tr>
@@ -1432,11 +1427,13 @@ Prefix: must be a DNS subdomain</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">256</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">256</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">63</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">63</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Allowed characters</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Letters, numbers, and spaces representable in UTF-8, and the following characters: + - = . _ : / @</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Tag names cannot contain these characters: &lt;, &gt;, %, &amp;, \, ?, /</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Only lowercase letters, numeric characters, underscores, and dashes.</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">The name segment is required and must be 63 characters or less, beginning and ending with an alphanumeric character ([a-z0-9A-Z]) with dashes (-), underscores (_), dots (.), and alphanumerics between</p></td>
 </tr>
 <tr>
@@ -1445,6 +1442,7 @@ Prefix: must be a DNS subdomain</p></td>
 Tags applied to EC2 can use any character.
 Not all resource types support tags.</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Not all resource types support tags. Generalized VMs do not support tags. Tags applied to the resource group are not inherited by the resources.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Keys must start with a lowercase letter or international character.</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Prefixes kubernetes.io/ and k8s.io/ are reserved.
 Not all resource types support tags.</p></td>
 </tr>
@@ -1452,6 +1450,7 @@ Not all resource types support tags.</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Notes</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">You need to select the tag keys that will be included in cost and usage files and billing reports.</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">You can use a JSON string to go over the limit of keys.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">There is no limit on how many labels you can apply across all resources within a project.</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">If the prefix is omitted, the label Key is presumed to be private to the user.</p></td>
 </tr>
 </tbody>
@@ -1507,13 +1506,23 @@ Not all resource types support tags.</p></td>
 </li>
 </ul>
 </div>
+<div class="paragraph">
+<p><strong>Google Cloud:</strong></p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://cloud.google.com/compute/docs/labeling-resources">Creating and managing labels</a></p>
+</li>
+</ul>
+</div>
 </div>
 </div>
 </div>
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2022-02-11 14:28:03 UTC
+Last updated 2022-03-04 08:05:29 UTC
 </div>
 </div>
 </body>
