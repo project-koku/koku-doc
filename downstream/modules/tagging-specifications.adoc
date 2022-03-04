@@ -15,21 +15,21 @@ The following table summarizes tagging and labelling criteria across AWS, Azure 
 .Tagging specifications by source
 [options="header"]
 |====
-|Criteria|AWS|Azure|Red Hat OpenShift
-|Name|Tags|Tags|Labels
-|Format|Key & value|Name & value|Key & value
+|Criteria|AWS|Azure|Google Cloud|Red Hat OpenShift
+|Name|Tags|Tags|Labels|Labels
+|Format|Key & value|Name & value|Key & value|Key & value
 Keys: [prefix/]name
 Prefix: must be a DNS subdomain
-|Allows empty value|Yes|Yes|Yes
-|Unique label per key|Yes|Yes|Yes
-|Case sensitive|Yes|No|Yes
-|Limit per resource|50|50 (15 for storage)|N/A
-|Length of key|128|512 (128 for storage)|253(prefix) / 63(name)
-
-|Length of value|256|256|63
+|Allows empty value|Yes|Yes|Yes|Yes
+|Unique label per key|Yes|Yes|Yes|Yes
+|Case sensitive|Yes|No|Only lowercase letters|Yes
+|Limit per resource|50|50 (15 for storage)|64|N/A
+|Length of key|128|512 (128 for storage)|63|253(prefix) / 63(name)
+|Length of value|256|256|63|63
 |Allowed characters
 |Letters, numbers, and spaces representable in UTF-8, and the following characters: + - = . _ : / @
 |Tag names cannot contain these characters: <, >, %, &, \, ?, /
+|Only lowercase letters, numeric characters, underscores, and dashes. 
 |The name segment is required and must be 63 characters or less, beginning and ending with an alphanumeric character ([a-z0-9A-Z]) with dashes (-), underscores (_), dots (.), and alphanumerics between
 
 |Restrictions
@@ -37,12 +37,14 @@ Prefix: must be a DNS subdomain
 Tags applied to EC2 can use any character.
 Not all resource types support tags.
 |Not all resource types support tags. Generalized VMs do not support tags. Tags applied to the resource group are not inherited by the resources.
+|Keys must start with a lowercase letter or international character.
 |Prefixes kubernetes.io/ and k8s.io/ are reserved.
 Not all resource types support tags.
 
 |Notes
 |You need to select the tag keys that will be included in cost and usage files and billing reports.
 |You can use a JSON string to go over the limit of keys.
+|There is no limit on how many labels you can apply across all resources within a project.
 |If the prefix is omitted, the label Key is presumed to be private to the user.
 
 |====

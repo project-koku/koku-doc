@@ -19,11 +19,6 @@ After adding your {openshift} and Google Cloud sources, on the {product-title} *
 
 You can also use the left navigation menu to view the additional details of your costs by service.
 
-[NOTE]
-====
-At this time, {openshift} resources running on Google Cloud Platform are not automatically associated in {product-title}. This feature will be available soon. 
-====
-
 .Additional Resources
 
 * _{link-adding-ocp}_
