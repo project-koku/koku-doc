@@ -20,7 +20,7 @@ For {openshift} clusters that are installed on restricted networks, Operator Lif
 
 .Procedure
 
-. Complete the following {openshift} procedure to create a local mirror of the +{operator}+: *link:https://access.redhat.com/documentation/en-us/openshift_container_platform/4.9/html/operators/administrator-tasks#olm-restricted-networks[_Using Operator Lifecycle Manager on restricted networks_]*.
+. Complete the following {openshift} procedure to create a local mirror of the +{operator}+: *link:https://access.redhat.com/documentation/en-us/openshift_container_platform/4.10/html/operators/administrator-tasks#olm-restricted-networks[_Using Operator Lifecycle Manager on restricted networks_]*.
 +
 ifdef::koku[]
 [NOTE]
@@ -33,7 +33,7 @@ endif::koku[]
 ifdef::cost[]
 [NOTE]
 ====
-The +{operator}+ is found in the `redhat-operators` catalog in the `registry.redhat.io/redhat/redhat-operator-index:v4.9` index.
+The +{operator}+ is found in the `redhat-operators` catalog in the `registry.redhat.io/redhat/redhat-operator-index:v4.10` index.
 
 Red Hat recommends pruning unwanted objects from the index before pushing to the mirrored registry. Make sure you keep the +{operator}+ package.
 ====
@@ -56,4 +56,4 @@ endif::koku[]
 [role="_additional-resources"]
 .Additional resources
 
-* For more details on the Operator Lifecycle Manager, see link:https://access.redhat.com/documentation/en-us/openshift_container_platform/4.9/html/operators/understanding-operators#operator-lifecycle-manager-olm[_What is Operator Lifecycle Manager?_]
+* For more details on the Operator Lifecycle Manager, see link:https://access.redhat.com/documentation/en-us/openshift_container_platform/4.10/html/operators/understanding-operators#operator-lifecycle-manager-olm[_What is Operator Lifecycle Manager?_]
