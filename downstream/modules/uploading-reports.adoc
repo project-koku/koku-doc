@@ -9,23 +9,23 @@
 = Uploading cost reports to console.redhat.com
 
 [role="_abstract"]
-You must manually upload locally stored cost reports from a restricted network to {platform}.
+You must manually upload locally stored cost reports from a restricted network to {platform-title}.
 
 [NOTE]
 ====
-The default configuration saves one week of reports. Therefore, download the reports locally and upload them to {platform} weekly to prevent loss of metrics data.
+The default configuration saves one week of reports. Therefore, download the reports locally and upload them to {platform-title} weekly to prevent loss of metrics data.
 ====
 
 .Prerequisites
 
 * +{operator}+ reports downloaded locally.
-* Source created on {platform}, see xref:proc_creating-an-openshift-container-platform-source-manually_adding-an-ocp-source[].
+* Source created on {platform-title}, see xref:proc_creating-an-openshift-container-platform-source-manually_adding-an-ocp-source[].
 * Red Hat account user with Organization Administrator entitlements.
 * Workstation with unrestricted network access.
 
 .Procedure
 
-* Upload your reports to {platform}, replacing USERNAME and PASSWORD with your {platform} login credentials, and FILE_NAME with the report to upload:
+* Upload your reports to {platform-title}, replacing USERNAME and PASSWORD with your {platform-title} login credentials, and FILE_NAME with the report to upload:
 +
 [source,bash]
 ----

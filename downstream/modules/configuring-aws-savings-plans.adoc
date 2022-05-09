@@ -23,10 +23,10 @@ This procedure describes how to set your cost calculation to *Amortized* or *Ble
 .Prerequisites
 
 * AWS source added to {product-title}.
-* Access to {platform} as an Organization Administrator.
+* Access to {platform-title} as an Organization Administrator.
 
 .Procedure
 
-. From {platform}, navigate to the {link-cost-settings} page.
+. From {platform-title}, navigate to the {link-cost-settings} page.
 . Under *Show cost as* select *Amortized* or *Blended*.
 . Click *Save*.

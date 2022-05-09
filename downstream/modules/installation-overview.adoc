@@ -20,6 +20,7 @@ NOTE: To install and configure {operator-formal} from the {openshift} web consol
 .Prerequisites
 - The {openshift} cluster is installed.
 - You can access the {openshift} web console using an account that has cluster administrator privileges.
+- You can access {platform-title} with the correct privileges for the cost management service. See, {link-limiting-access} for more information. 
 
 
 .Task summary

@@ -9,11 +9,11 @@
 
 
 [role="_abstract"]
-If the +{operator}+ is configured to run in a restricted network, copy the reports from the PVC where they are temporarily stored to a workstation with unrestricted network access for upload to {platform}.
+If the +{operator}+ is configured to run in a restricted network, copy the reports from the PVC where they are temporarily stored to a workstation with unrestricted network access for upload to {platform-title}.
 
 [NOTE]
 ====
-The default configuration saves one week of reports. Therefore, download the reports locally and upload them to {platform} weekly to prevent loss of metrics data.
+The default configuration saves one week of reports. Therefore, download the reports locally and upload them to {platform-title} weekly to prevent loss of metrics data.
 ====
 
 .Prerequisites

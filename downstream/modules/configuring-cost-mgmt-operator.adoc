@@ -20,7 +20,7 @@ After installing the {product-title} Operator, configure authentication and the 
 
 .Procedure
 
-. Configure authentication inside the `openshift-metering` project. This allows you to upload OpenShift data to {platform}.
+. Configure authentication inside the `openshift-metering` project. This allows you to upload OpenShift data to {platform-title}.
 +
 [NOTE]
 ====
@@ -69,7 +69,7 @@ $ oc get secret pull-secret -o "jsonpath={.data.\.dockerconfigjson}" | base64 --
 +
 [NOTE]
 ====
-To use basic authentication, edit the secret to replace the username and password values with your base64-encoded username and password for connecting to {platform}.
+To use basic authentication, edit the secret to replace the username and password values with your base64-encoded username and password for connecting to {platform-title}.
 ====
 +
 .. Deploy the secret to your OpenShift cluster in the `openshift-metering` namespace:
@@ -152,14 +152,14 @@ $ oc create -f cost-mgmt-data-resource.yaml
 +
 The {product-title} Operator will now create, collect, package, and upload your OpenShift usage reports to {product-title}.
 +
-. When configuration is complete, enter the cluster identifier into the {platform} *Sources* wizard, click *Next*.
+. When configuration is complete, enter the cluster identifier into the {platform-title} *Sources* wizard, click *Next*.
 +
 [NOTE]
 ====
 The cluster identifier can be found in *Help* > *About* in OpenShift.
 ====
 +
-. In the {platform} *Sources* wizard, review the details and click *Finish* to add the OpenShift Container Platform cluster to {product-title}.
+. In the {platform-title} *Sources* wizard, review the details and click *Finish* to add the OpenShift Container Platform cluster to {product-title}.
 
 
 .Additional resources

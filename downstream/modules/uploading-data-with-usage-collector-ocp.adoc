@@ -37,5 +37,5 @@ ocpcollector    ALL=(ALL)    NOPASSWD: ALL
 */45 * * * * /path/to/ocp_usage.sh --collect --e OCP_CLUSTER_ID=<YOUR_OCP_IDENTIFIER>
 ----
 +
-. In the {platform} *Sources* wizard, click *Next* to move to the confirmation screen.
-. In the {platform} *Sources* wizard, review the details and click *Finish* to finish adding the OpenShift Container Platform cluster.
+. In the {platform-title} *Sources* wizard, click *Next* to move to the confirmation screen.
+. In the {platform-title} *Sources* wizard, review the details and click *Finish* to finish adding the OpenShift Container Platform cluster.

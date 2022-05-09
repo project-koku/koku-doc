@@ -8,7 +8,7 @@
 = Creating a Google Cloud project
 
 [role="_abstract"]
-It is strongly recommended that you create a new Google Cloud project to gather and send your cost reports to {platform}. This procedure outlines the steps required to create and name a new project from the Google Cloud Console.
+It is strongly recommended that you create a new Google Cloud project to gather and send your cost reports to {platform-title}. This procedure outlines the steps required to create and name a new project from the Google Cloud Console.
 
 .Prerequisites
 

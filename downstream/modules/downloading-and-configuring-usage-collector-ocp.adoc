@@ -69,7 +69,7 @@ ok: [localhost] => {
 ----
 ====
 +
-. Copy the cluster identifier to enter into the {platform} *Sources* screen and click *Next*.
+. Copy the cluster identifier to enter into the {platform-title} *Sources* screen and click *Next*.
 +
 [NOTE]
 ====

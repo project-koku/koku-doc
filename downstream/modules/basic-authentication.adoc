@@ -22,7 +22,7 @@ There are two procedures required when you configure basic authentication.
 .Prerequisites
 * You are logged into the {openshift} web console with cluster administrator privileges.
 * The *{operator-formal}* appears in the *Installed Operators* tab.
-* You have a username and password for your {platform} account.
+* You have a username and password for your {platform-title} account.
 
 
 .Procedure
@@ -44,7 +44,7 @@ basic-auth-secret
 ----
 username
 ----
-.. In the *Value* field for the key `username`, enter the actual username for your authorized {platform} user account.
+.. In the *Value* field for the key `username`, enter the actual username for your authorized {platform-title} user account.
 +
 .Value for username key
 [source,yaml,subs="+quotes"]
@@ -58,7 +58,7 @@ _your_red_hat_username_
 ----
 password
 ----
-.. In the *Value* field for the key `password`, enter the actual password for your authorized {platform} user account.
+.. In the *Value* field for the key `password`, enter the actual password for your authorized {platform-title} user account.
 +
 .Value for password key
 [source,yaml,subs="+quotes"]
