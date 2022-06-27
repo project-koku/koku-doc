@@ -10,7 +10,7 @@
 
 By default, {product-title} groups OpenShift cost data by cluster, node, and project on the *OpenShift details* page. Grouping data by tag key can be useful to further customize your view.
 
-To group your cost data by tag key, you must enable the tag keys in the {platform} application settings.
+To group your cost data by tag key, you must enable the tag keys in the {platform-title} application settings.
 
 .Prerequisites
 

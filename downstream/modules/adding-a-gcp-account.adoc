@@ -19,7 +19,7 @@ Using the information from the previous steps, you can now add your Google Cloud
 
 .Procedure
 
-. From {platform}, click image:configuration-gear.png[] (*Settings*).
+. From {platform-title}, click image:configuration-gear.png[] (*Settings*).
 . Click btn:[Sources]
 . Click btn:[Add source] in the *Cloud sources* tab.
 . Enter a name for the source and click btn:[Next]

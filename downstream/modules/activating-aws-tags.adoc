@@ -17,4 +17,4 @@ To use tags to organize your AWS resources in the {product-title} application, a
 . In the AWS Billing console:
 .. Open the _Cost Allocation Tags_ section.
 .. Select the tags you want to use in the {product-title} application, and click *Activate*.
-. In the {platform} *Sources* wizard, click *Next* to move to the next screen.
+. In the {platform-title} *Sources* wizard, click *Next* to move to the next screen.

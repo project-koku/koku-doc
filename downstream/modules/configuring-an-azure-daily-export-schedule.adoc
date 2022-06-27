@@ -20,7 +20,7 @@ Cost management requires a data export from a *Subscription* level scope. You mu
 * For *Storage account*, select the account you created earlier.
 * Enter any value for the container name and directory path for the export. These values provide the tree structure in the storage account where report files are stored.
 * Click *Run now* to start exporting data to the Azure storage container.
-. In the {platform} *Sources* wizard, click *Next* when you have created the export schedule and review the source details.
+. In the {platform-title} *Sources* wizard, click *Next* when you have created the export schedule and review the source details.
 . Click *Finish* to complete adding the Azure source to {product-title}.
 
 After the schedule is created, {product-title} will begin polling Azure for cost data, which will appear on the {product-title} dashboard ({link-cost-management}).

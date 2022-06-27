@@ -32,7 +32,7 @@ You must have a Red Hat account user with Sources Administrator entitlements bef
 The {product-title} Operator (`cost-mgmt-operator`) collects the metrics required for {product-title} by:
 
 * Using Operator Metering to create usage reports specific to {product-title}.
-* Collecting and packaging these reports to a tarball which is uploaded to {product-title} through {platform}.
+* Collecting and packaging these reports to a tarball which is uploaded to {product-title} through {platform-title}.
 
 
 
@@ -42,7 +42,7 @@ To add your OpenShift Container Platform cluster as a {product-title} source:
 . Configure the {product-title} Operator to collect OpenShift usage data (metrics) using Operator Metering
 . Provide the cluster identifier to {product-title}
 
-As you will complete some of the following steps in OpenShift Container Platform, and some steps in the {platform} platform ({link-sources}), have both applications open in a web browser, as well as a terminal to access the command line interface (CLI).
+As you will complete some of the following steps in OpenShift Container Platform, and some steps in the {platform-title} ({link-sources}), have both applications open in a web browser, as well as a terminal to access the command line interface (CLI).
 
 
 

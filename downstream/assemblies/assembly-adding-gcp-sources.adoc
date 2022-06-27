@@ -15,7 +15,7 @@ endif::[]
 :context: adding-gcp-sources
 
 [role="_abstract"]
-To add a Google Cloud account to {product-title}, you must configure your Google Cloud to provide metrics, then add your Google Cloud account as a source from the {platform} user interface.
+To add a Google Cloud account to {product-title}, you must configure your Google Cloud to provide metrics, then add your Google Cloud account as a source from the {platform-title} user interface.
 
 [NOTE]
 ====
@@ -25,7 +25,7 @@ You must have a Red Hat account user with Sources Administrator entitlements bef
 Before you can add your Google Cloud account to {product-title} as a data source, you must configure the following services on your Google Cloud account to allow {product-title} access to metrics:
 
 * Cost management Google Cloud project.
-* Billing service account member with the correct role to export your data to {platform}.
+* Billing service account member with the correct role to export your data to {platform-title}.
 * BigQuery dataset to contain the cost data.
 * Billing export that sends the cost data to your BigQuery dataset.
 

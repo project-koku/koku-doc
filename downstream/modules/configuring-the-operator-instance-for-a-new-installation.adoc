@@ -42,4 +42,4 @@ Use the {openshift} web console to configure the +{operator}+ instance after it 
 ====
 The value entered for `INSERT-SOURCE-NAME` will be the name of the source in {product-title}. Leaving this value as `INSERT-SOURCE-NAME` is acceptable, but it is recommended to change it to something more identifiable, especially when installing the operator in multiple clusters.
 ====
-. Click the *Create* button. These actions create a new source for {product-title} that will appear in the {platform} {product-title} application.
+. Click the *Create* button. These actions create a new source for {product-title} that will appear in the {platform-title} {product-title} application.

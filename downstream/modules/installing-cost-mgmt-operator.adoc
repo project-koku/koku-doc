@@ -22,7 +22,7 @@ See link:https://access.redhat.com/documentation/en-us/openshift_container_platf
 
 .Procedure
 
-. In the {platform} platform, open the *Sources* menu ({link-sources}) to begin adding an OpenShift source to {product-title}:
+. From {platform-title}, open the *Sources* menu ({link-sources}) to begin adding an OpenShift source to {product-title}:
 .. Navigate to *Sources* and click *Add source* to open the Sources wizard.
 .. Enter a name for your source and click *Next*.
 .. Select *{product-title}* as the application and *OpenShift Container Platform* as the source type. Click *Next*.

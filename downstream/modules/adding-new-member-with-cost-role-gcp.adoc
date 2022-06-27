@@ -8,7 +8,7 @@
 = Adding a billing service account member to your Google Cloud project
 
 [role="_abstract"]
-A new billing service account member must be created in your project that can export cost reports to {platform}.
+A new billing service account member must be created in your project that can export cost reports to {platform-title}.
 
 .Prerequisites
 

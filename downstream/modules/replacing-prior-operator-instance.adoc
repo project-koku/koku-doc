@@ -16,7 +16,7 @@ IMPORTANT: When you are replacing a prior {product-title} operator with the *{op
 .Prerequisites
 
 * You are logged into the {openshift} web console with cluster administrator privileges.
-* You can access {platform} and view existing {product-title} sources.
+* You can access {platform-title} and view existing {product-title} sources.
 
 
 .Procedure
@@ -25,7 +25,7 @@ IMPORTANT: When you are replacing a prior {product-title} operator with the *{op
 . In the *Details* window, click *+{nbsp}Create Instance*.
 . A *{operator-formal} > Create {operator-config}* window appears.
 . Click the *YAML view* radio button to view and modify the contents of the *{operator-config}* YAML file.
-. Open {platform} and log in using your Organization Administrator account.
+. Open {platform-title} and log in using your Organization Administrator account.
 . Click on image:configuration-gear.png[] (Settings).
 . Click on the *Sources* tab to display existing sources.
 . Select an existing {product-title} source and copy its name.

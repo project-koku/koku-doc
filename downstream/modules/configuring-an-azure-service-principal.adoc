@@ -41,11 +41,11 @@ Save your secret to a secure location, as you will need the secret value and app
 $ az account show --query "{subscription_id: id }"
 ----
 +
-. In the {platform} *Sources* wizard, enter your *Subscription ID*.
+. In the {platform-title} *Sources* wizard, enter your *Subscription ID*.
 . In Azure Cloud Shell, run the following command to obtain your tenant ID, client (application) ID, and client secret:
 +
 ----
 $ az ad sp create-for-rbac --query '{"tenant": tenant, "client_id": appId, "secret": password}'
 ----
 +
-. In the {platform} *Sources* wizard, enter your Azure Active Directory *Tenant ID*, *Client ID*, and *Client Secret*, and click *Next*.
+. In the {platform-title} *Sources* wizard, enter your Azure Active Directory *Tenant ID*, *Client ID*, and *Client Secret*, and click *Next*.

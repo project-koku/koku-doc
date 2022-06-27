@@ -59,15 +59,15 @@ REMOVED FOR COST-148 / COST-161
 ////
 
 .. Provide a name for the policy and complete the creation of the policy. Keep the AWS IAM console open as you will need it for the next step.
-. In the {platform} *Sources* wizard, click *Next* to move to the next screen.
+. In the {platform-title} *Sources* wizard, click *Next* to move to the next screen.
 . In the AWS IAM console, create a new IAM role:
 .. For the type of trusted entity, select *Another AWS account*.
 .. Enter _589173575009_ as the Account ID to provide the {product-title} application with read access to the AWS account cost data.
 .. Attach the IAM policy you just configured.
 .. Enter a role name (and description if desired) and finish creating the policy.
-. In the {platform} *Sources* wizard, click *Next* to move to the next screen.
+. In the {platform-title} *Sources* wizard, click *Next* to move to the next screen.
 . In the AWS IAM console under Roles, open the summary screen for the role you just created and copy the Role ARN (a string beginning with _arn:aws:_).
-. In the {platform} *Sources* wizard, paste your Role ARN and click *Next*.
+. In the {platform-title} *Sources* wizard, paste your Role ARN and click *Next*.
 . Review the details and click *Finish* to add the AWS account to {product-title}.
 
 Cost management will begin collecting cost and usage data from your AWS account and any linked AWS accounts.

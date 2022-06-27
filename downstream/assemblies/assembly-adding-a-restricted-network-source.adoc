@@ -23,7 +23,7 @@ The procedure to add an {openshift} cluster operating on a restricted network as
 . The +{operator}+ is configured to store cost report CSV files locally using a persistent volume claim (PVC).
 . Cost reports stored in the PVC are downloaded to a workstation.
 . An {openshift} source is created manually.
-. Cost reports are uploaded to {platform} from your workstation.
+. Cost reports are uploaded to {platform-title} from your workstation.
 
 
 

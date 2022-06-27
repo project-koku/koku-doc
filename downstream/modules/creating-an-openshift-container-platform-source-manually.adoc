@@ -10,7 +10,7 @@
 = Creating an Openshift Container Platform source manually
 
 [role="_abstract"]
-If you follow the previous steps, your OpenShift Container Platform source should be created automatically. However, there are situations, such as restricted network installations, when an OpenShift Container Platform source must be created manually on {platform}.
+If you follow the previous steps, your OpenShift Container Platform source should be created automatically. However, there are situations, such as restricted network installations, when an OpenShift Container Platform source must be created manually on {platform-title}.
 
 .Prerequisites
 
