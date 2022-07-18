@@ -734,7 +734,7 @@ div.unbreakable { page-break-inside: avoid; }
 <p>In Azure Cloud Shell, run the following command to create a cost management Storage Account Contributor role, and obtain your tenant ID, client (application) ID, and client secret:</p>
 <div class="listingblock">
 <div class="content">
-<pre>$ az ad sp create-for-rbac -n "CostManagement" --role "Storage Account Contributor" --query '{"tenant": tenant, "client_id": appId, "secret": password}'</pre>
+<pre>$ az ad sp create-for-rbac -n "CostManagement" --role "Storage Account Contributor"  --scope /subscriptions/{subscriptionId}/resourceGroups/{resourceGroup1} --query '{"tenant": tenant, "client_id": appId, "secret": password}'</pre>
 </div>
 </div>
 </li>
@@ -742,10 +742,10 @@ div.unbreakable { page-break-inside: avoid; }
 <p>In the <a href="https://console.redhat.com">Red Hat Hybrid Cloud Console</a> <strong>Sources</strong> wizard, enter your Azure <strong>Tenant ID</strong>, <strong>Client ID</strong>, and <strong>Client Secret</strong>.</p>
 </li>
 <li>
-<p>In Azure Cloud Shell, run the following command to create a cost management Reader role with your subscription ID. Copy the full command from the <a href="https://console.redhat.com">Red Hat Hybrid Cloud Console</a> <strong>Sources</strong> wizard, which will automatically substitute your Azure subscription ID obtained earlier for <em>&lt;SubscriptionID&gt;</em>:</p>
+<p>In Azure Cloud Shell, run the following command to create a cost management Reader role:</p>
 <div class="listingblock">
 <div class="content">
-<pre>$ az role assignment create --role "Cost Management Reader" --assignee http://CostManagement --subscription &lt;SubscriptionID&gt;</pre>
+<pre>$ az role assignment create --assignee "&lt;your_Client_ID&gt;" --role "Cost Management Reader"</pre>
 </div>
 </div>
 </li>
@@ -938,7 +938,7 @@ div.unbreakable { page-break-inside: avoid; }
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2022-06-27 12:23:25 UTC
+Last updated 2022-07-18 12:20:23 UTC
 </div>
 </div>
 </body>
