@@ -21,14 +21,14 @@ $ az account show --query "{subscription_id: id }"
 . In Azure Cloud Shell, run the following command to create a {product-title} Storage Account Contributor role, and obtain your tenant ID, client (application) ID, and client secret:
 +
 ----
-$ az ad sp create-for-rbac -n "CostManagement" --role "Storage Account Contributor" --query '{"tenant": tenant, "client_id": appId, "secret": password}'
+$ az ad sp create-for-rbac -n "CostManagement" --role "Storage Account Contributor"  --scope /subscriptions/{subscriptionId}/resourceGroups/{resourceGroup1} --query '{"tenant": tenant, "client_id": appId, "secret": password}'
 ----
 +
 . In the {platform-title} *Sources* wizard, enter your Azure *Tenant ID*, *Client ID*, and *Client Secret*.
-. In Azure Cloud Shell, run the following command to create a {product-title} Reader role with your subscription ID. Copy the full command from the {platform-title} *Sources* wizard, which will automatically substitute your Azure subscription ID obtained earlier for _<SubscriptionID>_:
+. In Azure Cloud Shell, run the following command to create a {product-title} Reader role:
 +
 ---- 
-$ az role assignment create --role "Cost Management Reader" --assignee http://CostManagement --subscription <SubscriptionID>
+$ az role assignment create --assignee "<your_Client_ID>" --role "Cost Management Reader"
 ----
 +
 . Click *Next*.
