@@ -1,10 +1,8 @@
 // This assembly is included in the following assemblies:
 //
 // */getting_started/master.adoc
-
+:_content-type: ASSEMBLY
 ifdef::context[:parent-context-of-assembly-using-cost-management: {context}]
-
-
 
 ifndef::context[]
 [id="assembly-using-cost-management"]

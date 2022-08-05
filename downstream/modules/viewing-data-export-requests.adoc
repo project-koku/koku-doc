@@ -1,7 +1,7 @@
 // Module included in the following assemblies:
 //
 // <List assemblies here, each on a new line>
-:_module-type: PROCEDURE
+:_content-type: PROCEDURE
 :experimental:
 
 [id="viewing-data-export-requests_{context}"]

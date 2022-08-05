@@ -1,7 +1,7 @@
 // Module included in the following assemblies:
 //
 // assembly-configuring-tags-and-labels-in-cost-management.adoc
-:_module-type: CONCEPT
+:_content-type: CONCEPT
 :experimental:
 
 [id="how-cost-associates-tags_{context}"]

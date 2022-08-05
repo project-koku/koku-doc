@@ -1,7 +1,7 @@
 // This assembly is included in the following assemblies:
 //
 // using_cost_models/master.adoc
-
+:_content-type: ASSEMBLY
 ifdef::context[:parent-context-of-assembly-using-cost-models: {context}]
 
 ifndef::context[]

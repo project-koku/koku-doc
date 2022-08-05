@@ -1,7 +1,7 @@
 // Module included in the following assemblies:
 //
 // assembly-adding-openshift-container-platform-source.adoc
-:_module-type: PROCEDURE
+:_content-type: PROCEDURE
 :experimental:
 
 [id="basic-authentication_{context}"]

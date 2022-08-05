@@ -1,7 +1,7 @@
 // This assembly is included in the following assemblies:
 //
 // assembly-configuring-tags-and-labels-in-cost-management.adoc
-
+:_content-type: ASSEMBLY
 ifdef::context[:parent-context-of-assembly-configuring-tags-sources: {context}]
 
 ifndef::context[]

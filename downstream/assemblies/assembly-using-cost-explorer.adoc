@@ -1,7 +1,7 @@
 // This assembly is included in the following assemblies:
 //
 // */using_cost_explorer/master.adoc
-
+:_content-type: ASSEMBLY
 ifdef::context[:parent-context-of-assembly-using-cost-explorer: {context}]
 
 

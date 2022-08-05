@@ -1,7 +1,7 @@
 // This assembly is included in the following assemblies:
 //
 // */whats_new/master.adoc
-
+:_content-type: ASSEMBLY
 ifdef::context[:parent-context-of-assembly-whats-new: {context}]
 
 

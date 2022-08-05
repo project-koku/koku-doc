@@ -1,6 +1,6 @@
 // Module included in the following assemblies:
 // assembly-using-cost-explorer.adoc
-:_module-type: Procedure
+:_content-type: Procedure
 :experimental:
 
 

@@ -1,7 +1,7 @@
 // Module included in the following assemblies:
 //
 // assembly-cost-management-next-steps.adoc
-:_module-type: CONCEPT
+:_content-type: CONCEPT
 :experimental:
 
 [id="cost-explorer-next-step_{context}"]

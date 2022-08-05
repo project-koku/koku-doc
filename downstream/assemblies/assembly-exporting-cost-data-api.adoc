@@ -1,7 +1,7 @@
 // This assembly is included in the following assemblies:
 //
 // */exporting_data_using_api/master.adoc
-
+:_content-type: ASSEMBLY
 ifdef::context[:parent-context-of-assembly-exporting-cost-data-api: {context}]
 
 ifndef::context[]

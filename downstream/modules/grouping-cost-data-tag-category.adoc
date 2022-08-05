@@ -1,7 +1,7 @@
 // Module included in the following assemblies:
 //
 // assembly-viewing-and-exporting-your-cost-data.adoc
-:_module-type: PROCEDURE
+:_content-type: PROCEDURE
 :experimental:
 
 [id="grouping-cost-data-tag-category_{context}"]
