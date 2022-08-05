@@ -1,7 +1,7 @@
 // Module included in the following assemblies:
 //
 // assembly-additional-resources-tags.adoc
-:_module-type: REFERENCE
+:_content-type: REFERENCE
 :experimental:
 
 [id="tagging-specifications_{context}"]

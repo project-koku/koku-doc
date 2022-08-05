@@ -1,7 +1,7 @@
 // Module included in the following assemblies:
 //
 // assembly-viewing-and-exporting-your-cost-data.adoc
-:_module-type: PROCEDURE
+:_content-type: PROCEDURE
 :experimental:
 
 [id="exporting-cost-data-reporting_{context}"]

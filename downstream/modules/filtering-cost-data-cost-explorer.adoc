@@ -1,6 +1,6 @@
 // Module included in the following assemblies:
 // assembly-using-cost-explorer.adoc
-:_module-type: Concept
+:_content-type: Concept
 :experimental:
 
 [id="filtering-cost-data-cost-explorer_{context}"]

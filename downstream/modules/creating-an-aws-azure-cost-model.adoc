@@ -1,7 +1,7 @@
 // Module included in the following assemblies:
 //
 // assembly-setting-up-cost-models.adoc
-:_module-type: PROCEDURE
+:_content-type: PROCEDURE
 :experimental:
 
 [id="creating-an-AWS-Azure-cost-model_{context}"]

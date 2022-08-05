@@ -2,7 +2,7 @@
 //
 // assembly-cost-management-next-steps.adoc
 // assembly-introduction-to-cost-management.adoc
-:_module-type: CONCEPT
+:_content-type: CONCEPT
 :experimental:
 
 [id="limiting-access_{context}"]

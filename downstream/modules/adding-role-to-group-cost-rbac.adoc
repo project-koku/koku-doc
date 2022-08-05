@@ -1,7 +1,7 @@
 // Module included in the following assemblies:
 //
 // assembly-cost-limiting-access-rbac.adoc
-:_module-type: PROCEDURE
+:_content-type: PROCEDURE
 :experimental:
 
 

@@ -1,7 +1,7 @@
 // Module included in the following assemblies:
 //
 // assembly-adding-gcp-sources.adoc
-:_module-type: PROCEDURE
+:_content-type: PROCEDURE
 :experimental:
 
 [id="proc_adding-a-gcp-account_{context}"]

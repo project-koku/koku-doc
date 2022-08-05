@@ -1,9 +1,7 @@
 // This assembly is included in the following assemblies:
 //
 // using_cost_models/master.adoc
-
-
-//Retains the context of the parent assembly if this assembly is nested within another assembly.
+:_content-type: ASSEMBLY
 ifdef::context[:parent-context-of-assembly-setting-up-cost-models: {context}]
 
 

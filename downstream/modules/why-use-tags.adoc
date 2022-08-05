@@ -1,7 +1,7 @@
 // Module included in the following assemblies:
 //
 // assembly-planning-your-tagging-strategy.adoc
-:_module-type: CONCEPT
+:_content-type: CONCEPT
 :experimental:
 
 [id="why-use-tags_{context}"]

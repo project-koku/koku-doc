@@ -1,7 +1,7 @@
 // Module included in the following assemblies:
 //
 // assembly-adding-aws-sources.adoc
-:_module-type: PROCEDURE
+:_content-type: PROCEDURE
 :experimental:
 
 [id="activating-aws-tags_{context}"]

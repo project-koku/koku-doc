@@ -1,7 +1,7 @@
 // This assembly is included in the following assemblies:
 //
 // */getting_started/master.adoc
-
+:_content-type: ASSEMBLY
 ifdef::context[:parent-context-of-assembly-cost-management-next-steps-ocp: {context}]
 
 ifndef::context[]
@@ -22,7 +22,6 @@ On the {product-title} *Overview* page ({link-cost-management}), your cost data 
 You can also use the left navigation menu to view the additional details of your costs by service.
 
 .Additional resources
-
 * _{link-adding-aws}_
 * _{link-adding-gcp}_
 * _{link-adding-azure}_

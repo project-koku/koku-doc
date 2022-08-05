@@ -1,5 +1,8 @@
 // Module included in the following assemblies:
 // assembly_adding_ocp_sources.adoc
+:_content-type: CONCEPT
+:experimental:
+
 [id="adding_an_ocp_cluster"]
 == Adding your OpenShift Container Platform cluster as a source
 

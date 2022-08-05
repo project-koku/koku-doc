@@ -1,7 +1,7 @@
 // Module included in the following assemblies:
 //
 // assembly-adding-a-restricted-network-source.adoc
-:_module-type: PROCEDURE
+:_content-type: PROCEDURE
 :experimental:
 
 [id="proc_downloading-reports_{context}"]

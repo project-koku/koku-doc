@@ -1,7 +1,7 @@
 ////
 
 ////
-:_module-type: PROCEDURE
+:_content-type: PROCEDURE
 
 [id="configuring-aws-savings-plans_{context}"]
 = Configuring AWS billing plans

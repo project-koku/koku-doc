@@ -1,7 +1,7 @@
 // Module included in the following assemblies:
 //
 // <List assemblies here, each on a new line>
-:_module-type: REFERENCE
+:_content-type: REFERENCE
 :experimental:
 // Base the file name and the ID on the module title. For example:
 // * file name: my-reference-a.adoc
