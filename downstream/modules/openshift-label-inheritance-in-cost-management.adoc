@@ -1,0 +1,12 @@
+// Module included in the following assemblies:
+//
+// assembly-configuring-tags-and-labels-in-cost-management.adoc
+
+:_content-type: CONCEPT
+:experimental:
+
+
+[id="understanding-openshift-label-inheritance-in-cost-management_{context}"]
+= OpenShift label inheritance in cost management
+
+OpenShift labels follow an inheritance pattern from node -> project -> pod. Key/value pairs from node labels and pod labels are inherited at the pod level when we summarize OpenShift data. This grants the ability to group OpenShift data on node or project level tags without having to specifically label pods in the OpenShift cluster. If a specific key already exists in the pod, then the value for that key in the pod will remain. We will not overwrite the value with the project or node value. The same applies from node to project. E.g. A pod has the "app" label with the value "cost", the project also has the "app" label, but with the value "cost-management". The cost value will remain because it is at the lowest level, the pod.

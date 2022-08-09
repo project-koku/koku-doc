@@ -1,0 +1,15 @@
+// Module included in the following assemblies:
+//
+// assembly-configuring-tags-and-labels-in-cost-management.adoc
+
+:_content-type: CONCEPT
+:experimental:
+
+[id="tag-matching-hierarchy_{context}"]
+= Tag matching hierarchy in {product-title}
+
+To identify your OpenShift resources running on AWS or Azure instances, {product-title} matches tags between sources in the following order:
+
+. Direct resource matching (AWS EC2 instance ID or Azure virtual machine instance ID)
+. Special OpenShift tags
+. Custom tags

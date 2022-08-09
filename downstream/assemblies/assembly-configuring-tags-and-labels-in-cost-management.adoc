@@ -29,7 +29,11 @@ See the _{link-getting-started}_ guide for instructions on configuring sources.
 ====
 
 include::../modules/how-cost-associates-tags.adoc[leveloffset=+1]
-
+include::../modules/tag-matching-hierarchy.adoc[leveloffset=+2]
+include::../modules/openshift-label-inheritance-in-cost-management.adoc[leveloffset=+2]
+include::../modules/direct-resource-matching.adoc[leveloffset=+2]
+include::../modules/special-openshift-tags.adoc[leveloffset=+2]
+include::../modules/custom-tags.adoc[leveloffset=+2]
 include::../assemblies/assembly-configuring-tags-sources.adoc[leveloffset=+1]
 
 ////
