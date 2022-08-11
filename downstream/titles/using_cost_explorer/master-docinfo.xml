@@ -3,7 +3,7 @@
 <productnumber>2022</productnumber>
 <subtitle>Use Cost Explorer to visualize and understand your costs</subtitle>
 <abstract>
-    <para>This guide describes how to manage your costs using the interactive Cost Explorer.</para>
+    <para>This guide describes how to manage your costs using the interactive Cost Explorer. Cost management is part of the <link xlink:type="simple" xlink:href="https://redhat.com/insights">Red Hat Insights</link> portfolio of services. The Red Hat Insights suite of advanced analytical tools helps you to identify and prioritize impacts on your operations, security, and business.</para>
 </abstract>
 <authorgroup>
     <orgname>Red Hat Customer Content Services</orgname>

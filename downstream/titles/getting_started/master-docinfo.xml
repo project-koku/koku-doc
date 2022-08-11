@@ -3,7 +3,7 @@
 <productnumber>2022</productnumber>
 <subtitle>Learn about and configure cost management</subtitle>
 <abstract>
-    <para>This guide describes the initial steps to begin using cost management.</para>
+    <para>This guide describes the initial steps to begin using cost management. Cost management is part of the <link xlink:type="simple" xlink:href="https://redhat.com/insights">Red Hat Insights</link> portfolio of services. The Red Hat Insights suite of advanced analytical tools helps you to identify and prioritize impacts on your operations, security, and business.</para>
 </abstract>
 <authorgroup>
     <orgname>Red Hat Customer Content Services</orgname>
