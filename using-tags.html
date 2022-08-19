@@ -631,7 +631,7 @@ div.unbreakable { page-break-inside: avoid; }
 <li><a href="#further-reading-tags_additional-resources-tags">5.2. Further reading</a></li>
 </ul>
 </li>
-<li><a href="#proc-providing-feedback-on-redhat-documentation">Providing feedback on Red Hat Cost Management documentation</a></li>
+<li><a href="#proc-providing-feedback-on-redhat-documentation">Providing feedback on Red Hat documentation</a></li>
 </ul>
 </div>
 </div>
@@ -650,7 +650,7 @@ div.unbreakable { page-break-inside: avoid; }
 <div class="sect2">
 <h3 id="why-use-tags_planning-your-tagging-strategy">2.1. Why use tags?</h3>
 <div class="paragraph _abstract">
-<p>Tags (also sometimes called labels) are a string of custom metadata assigned to resources that your organization can utilize in multiple ways.</p>
+<p>Tags (also sometimes called labels) are a string of custom metadata assigned to resources that your organization can use in multiple ways.</p>
 </div>
 <div class="paragraph">
 <p>In the context of cost management, tags help you to differentiate and allocate costs between various parts of your environment for a more accurate view of your cost data, filling the gap between business logic and the resource. This allows you to assign organizational-specific details to help digest information later.</p>
@@ -659,13 +659,13 @@ div.unbreakable { page-break-inside: avoid; }
 <p>As many projects and technical services (for example, environment, region, cost center) support a business service, tags can map business concepts to reports providing clarity. In that way, a properly allocated tag can help you to show costs grouped by those business concepts. Tags should be used to complement hierarchies in clouds, or specific hierarchies already present in your clusters (like projects).</p>
 </div>
 <div class="paragraph">
-<p>Tags are sometimes utilized in more applications than cost management. For example, it is possible and recommended to use them to define certain operations, like business automation, operational profiles, or access and security controls. You can then apply policies based on those tags. However, this document does not consider those use cases.  Cloud providers place limits on the number of tags or labels associated with resources, so you should consider all of those uses before defining your tagging strategy for cost management.</p>
+<p>Tags are sometimes utilized in more applications than cost management. For example, it is possible and recommended to use them to define certain operations, like business automation, operational profiles, or access and security controls. You can then apply policies based on those tags. However, this document does not consider those use cases. Cloud providers place limits on the number of tags or labels associated with resources, so you should consider all of those uses before defining your tagging strategy for cost management.</p>
 </div>
 <div class="paragraph">
-<p>Additionally, tags are sometimes used to split resources into smaller units when it is not possible to directly organize resources into projects or subprojects. For example, a shared cluster running many services to provide different business capabilities can use tags to differentiate applications instead of splitting them into projects. Additionally, an AWS account can run multiple different services for projects, and sometimes those services are shared between several applications (like the load balancer or any other shared resource).</p>
+<p>Additionally, tags are sometimes used to split resources into smaller units when it is not possible to directly organize resources into projects or subprojects. For example, a shared cluster running many services to provide different business capabilities can use tags to differentiate applications rather than splitting them into projects. Additionally, an AWS account can run multiple different services for projects, and sometimes those services are shared between several applications (like the load balancer or any other shared resource).</p>
 </div>
 <div class="paragraph">
-<p>Furthermore, tags also help you identify relationships between sources, allowing you to group applications across multiple clusters tagged with the same environment, cost center, or team. Thus, making it possible to identify the costs of an application when running on the development, quality, or production clusters. Tags can also help to identify dependencies when there is not a direct link between a resource, such as the link between an RDS database and the OpenShift project using it.</p>
+<p>Furthermore, tags also help you identify relationships between sources, allowing you to group applications across multiple clusters tagged with the same environment, cost center, or team. Therefore, making it possible to identify the costs of an application when running on the development, quality, or production clusters. Tags can also help to identify dependencies when there is not a direct link between a resource, such as the link between an RDS database and the OpenShift project using it.</p>
 </div>
 </div>
 <div class="sect2">
@@ -710,7 +710,7 @@ div.unbreakable { page-break-inside: avoid; }
 <p>Create a clear tagging policy that defines what resources need to be tagged, what tags are mandatory and what tags are optional, making sure that there is no room for interpretation.</p>
 </div>
 <div class="paragraph">
-<p>If the values need to be chosen between a list, make sure that those values are defined, consistent, and easily accessible, or that the list is presented to the user. For example, if you are defining development with the key “Development”, do not also use variations such as “Dev”, “DEV”, or “R&amp;D” to also identify resources as “Development”.</p>
+<p>If the values need to be chosen between a list, verify that those values are defined, consistent, and easily accessible, or that the list is presented to the user. For example, if you are defining development with the key “Development”, do not also use variations such as “Dev”, “DEV”, or “R&amp;D” to also identify resources as “Development”.</p>
 </div>
 </dd>
 <dt class="hdlist1">Tag all elements on your sources (manually or through automation)</dt>
@@ -722,7 +722,7 @@ div.unbreakable { page-break-inside: avoid; }
 <p>In Azure, you can use Azure Policies to enforce tagging rules and conventions and avoid resources being deployed that do not comply with your expectations. You can create a policy that automatically applies necessary tags during provisioning, that enforces a predefined format for dates, or that makes some tags mandatory for some resource type.</p>
 </li>
 <li>
-<p>In AWS, you can use IAM policies for the same. Additionally, you can use an automation tool such as Ansible to add the necessary tags during provisioning and to make sure that all the resources have been properly tagged.</p>
+<p>In AWS, you can use IAM policies for the same. Additionally, you can use an automation tool such as Ansible to add the necessary tags during provisioning and to verify that all the resources have been properly tagged.</p>
 </li>
 <li>
 <p>OpenShift Container Platform does not presently have a method of automating labelling.</p>
@@ -841,7 +841,7 @@ div.unbreakable { page-break-inside: avoid; }
 <p>If an AWS resource tag matches with multiple OpenShift projects, the cost and usage of that resource are split evenly between the matched projects.</p>
 </div>
 <div class="paragraph">
-<p>Note that this is not the case with AWS compute resources that are matched via the instance ID-node relationship. In that case, cost and usage are broken down using information about a project’s resource consumption within the OpenShift cluster.</p>
+<p>This is not the case with AWS compute resources that are matched through the instance ID-node relationship. In that case, cost and usage are broken down using information about a project’s resource consumption within the OpenShift cluster.</p>
 </div>
 <div class="paragraph">
 <p>By default, cost management tracks AWS compute usage and costs by associating the Amazon EC2 instance ID or Azure virtual machine instance ID with the OpenShift Container Platform node running on that instance.</p>
@@ -963,12 +963,12 @@ div.unbreakable { page-break-inside: avoid; }
 <div class="sect2">
 <h3 id="assembly-configuring-tags-sources_configuring-tags-and-labels">3.2. Configuring tags on your sources</h3>
 <div class="paragraph _abstract">
-<p>In order to control which tags cost management imports, activate or enable the tags you want to view by source:</p>
+<p>To control the tags cost management imports, activate or enable the tags you want to view by source:</p>
 </div>
 <div class="ulist">
 <ul>
 <li>
-<p>AWS tags must be activated, and are then selected and exported to cost management in the Cost and Usage report. See <em><a href="https://project-koku.github.io/koku-doc/aws-source.html#activating-aws-tags_adding-aws-sources">Activating AWS tags for cost management</a></em> in the <em>Adding an Amazon Web Services (AWS) source_</em> guide for instructions.</p>
+<p>AWS tags must be activated, and are then selected and exported to cost management in the Cost and Usage report. See <em><a href="https://project-koku.github.io/koku-doc/aws-source.html#activating-aws-tags_adding-aws-sources">Activating AWS tags for cost management</a></em> in the <em>Adding an Amazon Web Services (AWS) source</em> guide for instructions.</p>
 </li>
 <li>
 <p>Azure tags are exported to cost management in the cost export report configured in <em><a href="https://project-koku.github.io/koku-doc/azure-source.html#configuring-an-azure-daily-export-schedule_adding-an-azure-source">Configuring a daily Azure data export schedule</a></em> in <em>Getting started with cost management</em>.</p>
@@ -999,7 +999,7 @@ div.unbreakable { page-break-inside: avoid; }
 </div>
 </li>
 <li>
-<p>Activate the tags you want to be collected by the cost management application via the Cost and Usage Report. In the AWS Billing console, select the tags you want to activate from the Cost Allocation Tags area.</p>
+<p>Activate the tags you want to be collected by the cost management application through the Cost and Usage Report. In the AWS Billing console, select the tags you want to activate from the Cost Allocation Tags area.</p>
 <div class="paragraph">
 <p>See <a href="https://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/activate-built-in-tags.html"><em>Activating the AWS-Generated Cost Allocation Tags</em></a> in the AWS documentation for instructions.</p>
 </div>
@@ -1136,7 +1136,7 @@ div.unbreakable { page-break-inside: avoid; }
 <div class="sect2">
 <h3 id="filtering-cost-data-views_viewing-and-exporting-data">4.1. Filtering your cost data view</h3>
 <div class="paragraph _abstract">
-<p>Tags allow you to customize your view of cost data. You can view resources by type (for example, project, node, cluster) or tag or label in order to investigate why certain resources show an increase in cost, or when data looks abnormal.</p>
+<p>Tags allow you to customize your view of cost data. You can view resources by type (for example, project, node, cluster) or tag or label to investigate why certain resources show an increase in cost, or when data looks abnormal.</p>
 </div>
 <div class="paragraph">
 <p>This example shows how to see how much each OpenShift project within a cluster is costing.</p>
@@ -1263,7 +1263,7 @@ div.unbreakable { page-break-inside: avoid; }
 <p>Click <strong>View historical data</strong> to open the daily usage comparison view, which compares usage, request, and limits by day between months for that resource.</p>
 </li>
 <li>
-<p>Click <strong>Export data</strong> to create a .csv file for for reporting. Specify a daily or monthly aggregate and click <strong>Generate and download</strong>.</p>
+<p>Click <strong>Export data</strong> to create a .CSV file for for reporting. Specify a daily or monthly aggregate and click <strong>Generate and download</strong>.</p>
 </li>
 </ul>
 </div>
@@ -1330,7 +1330,7 @@ div.unbreakable { page-break-inside: avoid; }
 </td>
 <td class="content">
 <div class="paragraph">
-<p>You can also export your data as a .csv file from the <span class="image"><img src="images/more-options.png" alt="more options"></span>(<strong>more options</strong>) &gt; <strong>Export data</strong> menu on each resource.</p>
+<p>You can also export your data as a .CSV file from the <span class="image"><img src="images/more-options.png" alt="more options"></span>(<strong>more options</strong>) &gt; <strong>Export data</strong> menu on each resource.</p>
 </div>
 </td>
 </tr>
@@ -1521,7 +1521,7 @@ Not all resource types support tags.</p></td>
 </div>
 </div>
 <div class="sect1">
-<h2 id="proc-providing-feedback-on-redhat-documentation">Providing feedback on Red Hat Cost Management documentation</h2>
+<h2 id="proc-providing-feedback-on-redhat-documentation">Providing feedback on Red Hat documentation</h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>We appreciate your feedback on our documentation.
@@ -1545,7 +1545,7 @@ To provide feedback, highlight text in a document and add comments.</p>
 <div class="olist arabic">
 <ol class="arabic">
 <li>
-<p>Click the <strong>Feedback</strong> button in the top-right corner of the document to see existing feedback.</p>
+<p>Click the <strong>Feedback</strong> button in the upper-right corner of the document to see existing feedback.</p>
 <div class="admonitionblock note">
 <table>
 <tr>
@@ -1584,7 +1584,7 @@ The feedback feature is enabled only in the <strong>Multi-page HTML</strong> for
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2022-08-19 12:15:52 UTC
+Last updated 2022-08-19 13:50:41 UTC
 </div>
 </div>
 </body>

@@ -615,7 +615,7 @@ div.unbreakable { page-break-inside: avoid; }
 <li><a href="#cost-explorer-next-step_next-steps-gcp">2.4. Use the Cost Explorer to visualize your costs</a></li>
 </ul>
 </li>
-<li><a href="#proc-providing-feedback-on-redhat-documentation">Providing feedback on Red Hat Cost Management documentation</a></li>
+<li><a href="#proc-providing-feedback-on-redhat-documentation">Providing feedback on Red Hat documentation</a></li>
 </ul>
 </div>
 </div>
@@ -728,7 +728,7 @@ div.unbreakable { page-break-inside: avoid; }
 <div class="title">Additional resources</div>
 <ul>
 <li>
-<p>For additional information on creating projects, see the Google Cloud documentation <a href="https://cloud.google.com/resource-manager/docs/creating-managing-projects"><em>Creating and managing projects</em></a>.</p>
+<p>For additional information about creating projects, see the Google Cloud documentation <a href="https://cloud.google.com/resource-manager/docs/creating-managing-projects"><em>Creating and managing projects</em></a>.</p>
 </li>
 </ul>
 </div>
@@ -841,7 +841,7 @@ div.unbreakable { page-break-inside: avoid; }
 <div class="title">Additional resources</div>
 <ul>
 <li>
-<p>For additional information on roles and their usage, see the Google Cloud documentation <a href="https://cloud.google.com/iam/docs/understanding-roles"><em>Understanding roles</em></a> and <a href="https://cloud.google.com/iam/docs/creating-custom-roles"><em>Creating and managing custom roles</em></a>.</p>
+<p>For additional information about roles and their usage, see the Google Cloud documentation <a href="https://cloud.google.com/iam/docs/understanding-roles"><em>Understanding roles</em></a> and <a href="https://cloud.google.com/iam/docs/creating-custom-roles"><em>Creating and managing custom roles</em></a>.</p>
 </li>
 </ul>
 </div>
@@ -919,7 +919,7 @@ div.unbreakable { page-break-inside: avoid; }
 <div class="title">Additional resources</div>
 <ul>
 <li>
-<p>For additional information on roles and their usage, see the Google Cloud documentation <a href="https://cloud.google.com/iam/docs/understanding-roles"><em>Understanding roles</em></a> and <a href="https://cloud.google.com/iam/docs/creating-custom-roles"><em>Creating and managing custom roles</em></a>.</p>
+<p>For additional information about roles and their usage, see the Google Cloud documentation <a href="https://cloud.google.com/iam/docs/understanding-roles"><em>Understanding roles</em></a> and <a href="https://cloud.google.com/iam/docs/creating-custom-roles"><em>Creating and managing custom roles</em></a>.</p>
 </li>
 </ul>
 </div>
@@ -1171,17 +1171,17 @@ div.unbreakable { page-break-inside: avoid; }
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Incorrect IAM permissions for project <em>yourprojectID</em>.</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">The billing service account member does not have the correct role or permissions for cost management.</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Make sure the billing service account has the <a href="#creating-iam-role-gcp_adding-gcp-sources">cost management role</a> with the correct permissions.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Verify the billing service account has the <a href="#creating-iam-role-gcp_adding-gcp-sources">cost management role</a> with the correct permissions.</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Unable to find dataset: <em>yourdatasetID</em> in project: <em>yourprojectID</em>.</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">The BigQuery dataset ID was entered incorrectly or does not exist.</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Make sure the <a href="#creating-a-dataset-gcp_adding-gcp-sources">BigQuery dataset ID</a> matches the one created for cost management.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Verify the <a href="#creating-a-dataset-gcp_adding-gcp-sources">BigQuery dataset ID</a> matches the one created for cost management.</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Source status <em>"Unknown"</em> longer than 24 hours.</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Cost management cannot find cost data in the BigQuery dataset provided.</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Make sure your <a href="#exporting-billing-data-gcp_adding-gcp-sources">billing export</a> is configured and <a href="#viewing-data-collected-gcp_adding-gcp-sources">billing tables</a> exist in your BigQuery dataset.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Verify your <a href="#exporting-billing-data-gcp_adding-gcp-sources">billing export</a> is configured and <a href="#viewing-data-collected-gcp_adding-gcp-sources">billing tables</a> exist in your BigQuery dataset.</p></td>
 </tr>
 </tbody>
 </table>
@@ -1214,7 +1214,7 @@ div.unbreakable { page-break-inside: avoid; }
 <div class="sect2">
 <h3 id="limiting-access_next-steps-gcp">2.1. Limit access to cost management resources</h3>
 <div class="paragraph _abstract">
-<p>After adding and configuring sources in cost management, it is a good idea to limit access to cost data and resources. For example, you may not want users to have access to all cost data, but instead only data specific to their projects or organization. Using role-based access control, you can limit the visibility of resources involved in cost management reports. For example, you may want to restrict a user&#8217;s view to only AWS sources, instead of the entire environment.</p>
+<p>After adding and configuring sources in cost management, it is a good idea to limit access to cost data and resources. For example, you may not want users to have access to all cost data, but instead only data specific to their projects or organization. Using role-based access control, you can limit the visibility of resources involved in cost management reports. For example, you may want to restrict a user&#8217;s view to only AWS sources, rather than the entire environment.</p>
 </div>
 <div class="paragraph">
 <p>For more information about limiting access see, <em><a href="https://project-koku.github.io/koku-doc/getting-started.html">Limiting access to cost management resources</a></em>.</p>
@@ -1312,7 +1312,7 @@ div.unbreakable { page-break-inside: avoid; }
 </div>
 </div>
 <div class="sect1">
-<h2 id="proc-providing-feedback-on-redhat-documentation">Providing feedback on Red Hat Cost Management documentation</h2>
+<h2 id="proc-providing-feedback-on-redhat-documentation">Providing feedback on Red Hat documentation</h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>We appreciate your feedback on our documentation.
@@ -1336,7 +1336,7 @@ To provide feedback, highlight text in a document and add comments.</p>
 <div class="olist arabic">
 <ol class="arabic">
 <li>
-<p>Click the <strong>Feedback</strong> button in the top-right corner of the document to see existing feedback.</p>
+<p>Click the <strong>Feedback</strong> button in the upper-right corner of the document to see existing feedback.</p>
 <div class="admonitionblock note">
 <table>
 <tr>
@@ -1375,7 +1375,7 @@ The feedback feature is enabled only in the <strong>Multi-page HTML</strong> for
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2022-08-19 12:15:52 UTC
+Last updated 2022-08-19 13:50:41 UTC
 </div>
 </div>
 </body>
