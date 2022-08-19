@@ -2,7 +2,7 @@
 :imagesdir: images
 :toc: left
 :toclevels: 3
-:numbered!:
+:numbered:
 :compat-mode:
 :experimental:
 :stylesheet: ../../stylesheets/panda.css
@@ -16,3 +16,5 @@ include::attributes/sharedattributes.adoc[]
 include::assemblies/assembly-using-cost-models.adoc[leveloffset=+1]
 
 include::assemblies/assembly-setting-up-cost-models.adoc[leveloffset=+1]
+
+include::modules/providing-feedback.adoc[]
