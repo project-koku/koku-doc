@@ -15,6 +15,7 @@ To provide data within the web interface and API, {product-title} needs to consu
 . From the AWS Identity and Access Management (IAM) console, create a new IAM policy for the S3 bucket you configured previously.
 .. Select the JSON tab and paste the following content in the JSON policy text box:
 +
+[source,json]
 ----
 {
   "Version": "2012-10-17",
@@ -27,8 +28,8 @@ To provide data within the web interface and API, {product-title} needs to consu
         "s3:List*"
       ],
         "Resource": [
-        "arn:aws:s3:::bucket_name",
-        "arn:aws:s3:::bucket_name/*"
+        "arn:aws:s3:::<your_bucket_name>", <1>
+        "arn:aws:s3:::<your_bucket_name>/*" 
       ]
     },
 
@@ -45,18 +46,7 @@ To provide data within the web interface and API, {product-title} needs to consu
 }
 ----
 +
-////
-REMOVED FOR COST-148 / COST-161
-////
-////
-+
-[NOTE]
-====
-* Including the Action _iam:ListAccountAliases_ allows {product-title} to display the AWS account alias, rather than the account ID.
-* (Optional) Including Actions _organization:List*_ and _organizations:Describe*_ allows {product-title} to obtain the display names of AWS member accounts if you are using consolidated billing rather than the account ID.
-====
-+
-////
+<1> Replace `<your_bucket_name>` in both locations with the name of the Amazon s3 bucket you configured previously. 
 
 .. Provide a name for the policy and complete the creation of the policy. Keep the AWS IAM console open as you will need it for the next step.
 . In the {platform-title} *Sources* wizard, click *Next* to move to the next screen.
