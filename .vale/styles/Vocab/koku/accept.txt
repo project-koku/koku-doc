@@ -3,4 +3,3 @@
 qe
 dev
 GZIP
-Asciidoctor
