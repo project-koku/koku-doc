@@ -1,6 +1,13 @@
+// Module included in the following assemblies:
+//
+// All master.adoc files
+:_content-type: PROCEDURE
+:experimental:
+
+
 [preface]
 [id="proc-providing-feedback-on-redhat-documentation"]
-= Providing feedback on Red Hat Cost Management documentation
+= Providing feedback on Red Hat documentation
 
 We appreciate your feedback on our documentation.
 To provide feedback, highlight text in a document and add comments.
@@ -14,7 +21,7 @@ To provide feedback, highlight text in a document and add comments.
 
 To provide your feedback, perform the following steps:
 
-. Click the *Feedback* button in the top-right corner of the document to see existing feedback.
+. Click the *Feedback* button in the upper-right corner of the document to see existing feedback.
 +
 NOTE: The feedback feature is enabled only in the *Multi-page HTML* format.
 

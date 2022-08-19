@@ -7,7 +7,7 @@
 = Creating an Azure resource group and storage account
 
 [role="_abstract"]
-Cost export data is written to a storage account, which exists within a resource group. The resource group must be accessible by {product-title} in order to read the Azure cost data.
+Cost export data is written to a storage account, which exists within a resource group. The resource group must be accessible by {product-title} to read the Azure cost data.
 
 Create a new storage account in Azure to contain the cost data and metrics that {product-title} will collect. This requires a resource group; Red Hat recommends creating a dedicated resource group for this storage account.
 

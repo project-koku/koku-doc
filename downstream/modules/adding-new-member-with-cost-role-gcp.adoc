@@ -40,4 +40,4 @@ A new billing service account member must be created in your project that can ex
 
 [role="_additional-resources"]
 .Additional resources
-* For additional information on roles and their usage, see the Google Cloud documentation link:https://cloud.google.com/iam/docs/understanding-roles[_Understanding roles_] and link:https://cloud.google.com/iam/docs/creating-custom-roles[_Creating and managing custom roles_].
+* For additional information about roles and their usage, see the Google Cloud documentation link:https://cloud.google.com/iam/docs/understanding-roles[_Understanding roles_] and link:https://cloud.google.com/iam/docs/creating-custom-roles[_Creating and managing custom roles_].

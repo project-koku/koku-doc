@@ -31,7 +31,7 @@ The CSV file will download to your local system, and you can use it in your desi
 
 [NOTE]
 ====
-You can also export your data as a .csv file from the image:more-options.png[](*more options*) > *Export data* menu on each resource.
+You can also export your data as a .CSV file from the image:more-options.png[](*more options*) > *Export data* menu on each resource.
 ====
 
 Click *Clear all filters* to reset your OpenShift details view.

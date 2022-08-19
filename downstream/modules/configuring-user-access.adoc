@@ -14,7 +14,7 @@ To provide a user with access to resources, create a group, add users to the gro
 The Red Hat account login searched must be an exact match.
 ====
 +
-Continue to add users, and click *Next* when all the users you wish to add to the group are listed in the *Users to add* table. Click *Next*.
+Continue to add users, and click *Next* when all the users you need to add to the group are listed in the *Users to add* table. Click *Next*.
 . Create a policy to control permissions for the users in the group.
 .. Enter a name and description for the policy.
 .. Select one or more roles for the group and click *Next*. Select only the permissions the users within your group require.

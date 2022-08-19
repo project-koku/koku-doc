@@ -22,7 +22,7 @@ Tags in AWS and Azure and labels in OpenShift consist of key:value pairs. When t
 
 If an AWS resource tag matches with multiple OpenShift projects, the cost and usage of that resource are split evenly between the matched projects.
 
-Note that this is not the case with AWS compute resources that are matched via the instance ID-node relationship. In that case, cost and usage are broken down using information about a project’s resource consumption within the OpenShift cluster.
+This is not the case with AWS compute resources that are matched through the instance ID-node relationship. In that case, cost and usage are broken down using information about a project’s resource consumption within the OpenShift cluster.
 
 By default, {product-title} tracks AWS compute usage and costs by associating the Amazon EC2 instance ID or Azure virtual machine instance ID with the OpenShift Container Platform node running on that instance.
 

@@ -1,14 +1,10 @@
-// This assembly is included in the following assemblies:
-//
-// <List assemblies here, each on a new line>
-
 ////
 Retains the context of the parent assembly if this assembly is nested within another assembly.
 For more information about nesting assemblies, see: https://redhat-documentation.github.io/modular-docs/#nesting-assemblies
 See also the complementary step on the last line of this file.
 ////
 
-ifdef::context[:parent-context-of-assembly_template_assembly_a-collection-of-modules: {context}]
+ifdef::context[:parent-context-of-assembly-template: {context}]
 
 ////
 Base the file name and the ID on the assembly title. For example:
@@ -19,25 +15,34 @@ Base the file name and the ID on the assembly title. For example:
 The ID is an anchor that links to the module. Avoid changing it after the module has been published to ensure existing links are not broken. Include {context} in the ID so the assembly can be reused.
 ////
 
+////
+Indicate the content type in one of the following
+ways:
+Add the prefix assembly- or assembly_ to the file name.
+Add the following attribute before the module ID:
+////
+:_content-type: ASSEMBLY
+
 ifndef::context[]
-[id="assembly_template_assembly_a-collection-of-modules"]
+[id="assembly-template"]
 endif::[]
 ifdef::context[]
-[id="assembly_template_assembly_a-collection-of-modules_{context}"]
+[id="assembly-template_{context}"]
 endif::[]
-= TEMPLATE_ASSEMBLY_a-collection-of-modules
+= Assembly template
 ////
+Be sure to include a line break between the title and the :context: variable and the :context: variable and the assembly introduction.
+
 If the assembly covers a task, start the title with a verb in the gerund form, such as Creating or Configuring.
 ////
 
-:context: assembly_template_assembly_a-collection-of-modules
+:context: assembly-template
 
 ////
 The `context` attribute enables module reuse. Every module ID includes {context}, which ensures that the module has a unique ID so you can include it multiple times in the same guide.
 ////
 
-[role="_abstract"]
-This paragraph is the assembly introduction. It explains what the user will accomplish by working through the modules in the assembly and sets the context for the user story the assembly is based on. The text that immediately follows the `[role="_abstract"]` tag is used for search metadata.
+This paragraph is the assembly introduction. It explains what the user will accomplish by working through the modules in the assembly and sets the context for the user story the assembly is based on.
 
 == Prerequisites
 
@@ -59,6 +64,7 @@ Include modules here.
 [leveloffset=+1] ensures that when a module title is a level 1 heading (= Title), the heading will be interpreted as a level-2 heading (== Title) in the assembly. Use [leveloffset=+2] and [leveloffset=+3] to nest modules in an assembly.
 
 include::modules/TEMPLATE_PROCEDURE_doing_one_procedure.adoc[leveloffset=+2]
+// Add a blank line after each 'include::' statement.
 
 include::modules/TEMPLATE_PROCEDURE_reference-material.adoc[leveloffset=2]
 ////
@@ -68,14 +74,13 @@ include::modules/TEMPLATE_PROCEDURE_reference-material.adoc[leveloffset=2]
 ////
 Optional. Delete if not used.
 ////
-
-* A bulleted list of links to other material closely related to the contents of the assembly, including xref links to other assemblies in your collection.
+* A bulleted list of links to other closely-related material. These links can include `link:` and `xref:` macros.
 * For more details on writing assemblies, see the link:https://github.com/redhat-documentation/modular-docs#modular-documentation-reference-guide[Modular Documentation Reference Guide].
 * Use a consistent system for file names, IDs, and titles. For tips, see _Anchor Names and File Names_ in link:https://github.com/redhat-documentation/modular-docs#modular-documentation-reference-guide[Modular Documentation Reference Guide].
 
 ////
 Restore the context to what it was before this assembly.
 ////
-ifdef::parent-context-of-assembly_template_assembly_a-collection-of-modules[:context: {parent-context-of-assembly_template_assembly_a-collection-of-modules}]
-ifndef::parent-context-of-assembly_template_assembly_a-collection-of-modules[:!context:]
+ifdef::parent-context-of-assembly-template[:context: {parent-context-of-assembly-template}]
+ifndef::parent-context-of-assembly-template[:!context:]
 

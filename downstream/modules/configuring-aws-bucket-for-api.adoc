@@ -20,7 +20,7 @@ An AWS S3 bucket is required to export cost data to.
 
 .Procedure
 
-. Create an AWS S3 bucket or choose one you wish to use for receiving data exports from {product-title}.
+. Create an AWS S3 bucket or choose one you want to use for receiving data exports from {product-title}.
 . Edit this bucket's Permissions/Access Control List.
 . Add "Access for other AWS accounts" to allow {product-title}'s canonical ID for "list objects" and "write objects"
 

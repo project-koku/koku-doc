@@ -9,6 +9,6 @@
 = Limit access to {product-title} resources
 
 [role="_abstract"]
-After adding and configuring sources in {product-title}, it is a good idea to limit access to cost data and resources. For example, you may not want users to have access to all cost data, but instead only data specific to their projects or organization. Using role-based access control, you can limit the visibility of resources involved in {product-title} reports. For example, you may want to restrict a user's view to only AWS sources, instead of the entire environment.
+After adding and configuring sources in {product-title}, it is a good idea to limit access to cost data and resources. For example, you may not want users to have access to all cost data, but instead only data specific to their projects or organization. Using role-based access control, you can limit the visibility of resources involved in {product-title} reports. For example, you may want to restrict a user's view to only AWS sources, rather than the entire environment.
 
 For more information about limiting access see, _{link-limiting-access}_.

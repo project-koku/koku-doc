@@ -1,2 +1,10 @@
 [Kk]oku
 [Cc]loud
+qe
+dev
+GZIP
+bucket_name
+openshift
+Unblended
+start_date
+end_date
