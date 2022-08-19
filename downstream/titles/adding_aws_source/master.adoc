@@ -5,7 +5,7 @@
 :numbered:
 :compat-mode:
 :experimental:
-
+:stylesheet: ../../stylesheets/panda.css
 
 // Custom attributes
 :koku:
