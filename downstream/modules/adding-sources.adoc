@@ -14,7 +14,7 @@ Currently, {product-title} can track costs for Amazon Web Services (AWS), Micros
 
 From {link-sources}, you can view, edit, and delete sources connected to {product-title}.
 
-For more information on how to add sources to {product-title}, follow these guides:
+For more information about how to add sources to {product-title}, follow these guides:
 
 * _{link-adding-ocp}_
 * _{link-adding-aws}_

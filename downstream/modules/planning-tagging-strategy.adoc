@@ -40,7 +40,7 @@ Consistency is the most important aspect of a tagging strategy to deliver accura
 +
 Create a clear tagging policy that defines what resources need to be tagged, what tags are mandatory and what tags are optional, making sure that there is no room for interpretation.
 +
-If the values need to be chosen between a list, make sure that those values are defined, consistent, and easily accessible, or that the list is presented to the user. For example, if you are defining development with the key “Development”, do not also use variations such as “Dev”, “DEV”, or “R&D” to also identify resources as “Development”.
+If the values need to be chosen between a list, verify that those values are defined, consistent, and easily accessible, or that the list is presented to the user. For example, if you are defining development with the key “Development”, do not also use variations such as “Dev”, “DEV”, or “R&D” to also identify resources as “Development”.
 
 
 Tag all elements on your sources (manually or through automation)::
@@ -48,7 +48,7 @@ Tag all elements on your sources (manually or through automation)::
 Since untagged resources cannot be reported, tag as many elements as possible, ideally using automation to prevent human error. Sources have different automation features to take advantage of for tagging:
 
 * In Azure, you can use Azure Policies to enforce tagging rules and conventions and avoid resources being deployed that do not comply with your expectations. You can create a policy that automatically applies necessary tags during provisioning, that enforces a predefined format for dates, or that makes some tags mandatory for some resource type.
-* In AWS, you can use IAM policies for the same. Additionally, you can use an automation tool such as Ansible to add the necessary tags during provisioning and to make sure that all the resources have been properly tagged.
+* In AWS, you can use IAM policies for the same. Additionally, you can use an automation tool such as Ansible to add the necessary tags during provisioning and to verify that all the resources have been properly tagged.
 * OpenShift Container Platform does not presently have a method of automating labelling.
 
 Review your tags often and refine as needed::

@@ -28,4 +28,4 @@ It is strongly recommended that you create a new Google Cloud project to gather 
 
 [role="_additional-resources"]
 .Additional resources
-* For additional information on creating projects, see the Google Cloud documentation link:https://cloud.google.com/resource-manager/docs/creating-managing-projects[_Creating and managing projects_].
+* For additional information about creating projects, see the Google Cloud documentation link:https://cloud.google.com/resource-manager/docs/creating-managing-projects[_Creating and managing projects_].

@@ -15,7 +15,7 @@ endif::[]
 :context: limiting-access
 
 [role="_abstract"]
-You may not want users to have access to all cost data, but instead only data specific to their projects or organization. Using role-based access control, you can limit the visibility of resources involved in {product-title} reports. For example, you may want to restrict a user's view to only AWS sources, instead of the entire environment.
+You may not want users to have access to all cost data, but instead only data specific to their projects or organization. Using role-based access control, you can limit the visibility of resources involved in {product-title} reports. For example, you may want to restrict a user's view to only AWS sources, rather than the entire environment.
 
 Role-based access control works by organizing users into groups, which can be associated with one or more roles. A role defines a permission and a set of resource definitions.
 

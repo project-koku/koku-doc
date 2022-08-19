@@ -48,13 +48,13 @@ Google may take several hours to gather and export billing data to {product-titl
 
 | Incorrect IAM permissions for project _yourprojectID_.
 | The billing service account member does not have the correct role or permissions for {product-title}.
-| Make sure the billing service account has the xref:creating-iam-role-gcp_{context}[{product-title} role] with the correct permissions.
+| Verify the billing service account has the xref:creating-iam-role-gcp_{context}[{product-title} role] with the correct permissions.
 
 | Unable to find dataset: _yourdatasetID_ in project: _yourprojectID_.
 | The BigQuery dataset ID was entered incorrectly or does not exist.
-| Make sure the xref:creating-a-dataset-gcp_{context}[BigQuery dataset ID] matches the one created for {product-title}.
+| Verify the xref:creating-a-dataset-gcp_{context}[BigQuery dataset ID] matches the one created for {product-title}.
 
 | Source status _"Unknown"_ longer than 24 hours.
 | Cost management cannot find cost data in the BigQuery dataset provided.
-| Make sure your xref:exporting-billing-data-gcp_{context}[billing export] is configured and xref:viewing-data-collected-gcp_{context}[billing tables] exist in your BigQuery dataset.
+| Verify your xref:exporting-billing-data-gcp_{context}[billing export] is configured and xref:viewing-data-collected-gcp_{context}[billing tables] exist in your BigQuery dataset.
 |===

@@ -1,2 +1,5 @@
 [Kk]oku
 [Cc]loud
+qe
+dev
+GZIP

@@ -48,7 +48,7 @@ To configure the +{operator}+ to use or create a different PVC, update the `volu
 ====
 The +{operator}+ creates one report every *360 minutes* by default. Therefore, the default value of *30* reports and *360* minutes gives you *7.5 days* of reports.
 
-Any report generated after the total number specified will replace the oldest report in storage. Make sure to download generated reports from your PVC before they are lost.
+Any report generated after the total number specified will replace the oldest report in storage. Download generated reports from your PVC before they are lost.
 ====
 
 . Set `upload_toggle` to `false`.
