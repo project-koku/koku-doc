@@ -593,27 +593,28 @@ div.unbreakable { page-break-inside: avoid; }
 <div id="toc" class="toc2">
 <div id="toctitle">Table of Contents</div>
 <ul class="sectlevel1">
-<li><a href="#assembly-adding-azure-sources">Adding a Microsoft Azure source to cost management</a>
+<li><a href="#assembly-adding-azure-sources">1. Adding a Microsoft Azure source to cost management</a>
 <ul class="sectlevel2">
-<li><a href="#creating-an-azure-storage-account_adding-an-azure-source">Creating an Azure resource group and storage account</a></li>
-<li><a href="#configuring-azure-roles_adding-an-azure-source">Configuring Azure roles</a></li>
-<li><a href="#configuring-an-azure-daily-export-schedule_adding-an-azure-source">Configuring a daily Azure data export schedule</a></li>
+<li><a href="#creating-an-azure-storage-account_adding-an-azure-source">1.1. Creating an Azure resource group and storage account</a></li>
+<li><a href="#configuring-azure-roles_adding-an-azure-source">1.2. Configuring Azure roles</a></li>
+<li><a href="#configuring-an-azure-daily-export-schedule_adding-an-azure-source">1.3. Configuring a daily Azure data export schedule</a></li>
 </ul>
 </li>
-<li><a href="#assembly-cost-management-next-steps-azure">Next steps for managing your costs</a>
+<li><a href="#assembly-cost-management-next-steps-azure">2. Next steps for managing your costs</a>
 <ul class="sectlevel2">
-<li><a href="#limiting-access_next-steps-azure">Limit access to cost management resources</a></li>
-<li><a href="#configure-tagging-next-step_next-steps-azure">Configure tagging for your sources</a></li>
-<li><a href="#configure-cost-models-next-step_next-steps-azure">Configure cost models to accurately report costs</a></li>
-<li><a href="#cost-explorer-next-step_next-steps-azure">Use the Cost Explorer to visualize your costs</a></li>
+<li><a href="#limiting-access_next-steps-azure">2.1. Limit access to cost management resources</a></li>
+<li><a href="#configure-tagging-next-step_next-steps-azure">2.2. Configure tagging for your sources</a></li>
+<li><a href="#configure-cost-models-next-step_next-steps-azure">2.3. Configure cost models to accurately report costs</a></li>
+<li><a href="#cost-explorer-next-step_next-steps-azure">2.4. Use the Cost Explorer to visualize your costs</a></li>
 </ul>
 </li>
+<li><a href="#proc-providing-feedback-on-redhat-documentation">Providing feedback on Red Hat Cost Management documentation</a></li>
 </ul>
 </div>
 </div>
 <div id="content">
 <div class="sect1">
-<h2 id="assembly-adding-azure-sources">Adding a Microsoft Azure source to cost management</h2>
+<h2 id="assembly-adding-azure-sources">1. Adding a Microsoft Azure source to cost management</h2>
 <div class="sectionbody">
 <div class="paragraph _abstract">
 <p>Configure your Microsoft Azure account to allow cost management access.</p>
@@ -653,7 +654,7 @@ div.unbreakable { page-break-inside: avoid; }
 <a href="https://console.redhat.com/settings/sources">https://console.redhat.com/settings/sources</a>.</p>
 </div>
 <div class="sect2">
-<h3 id="creating-an-azure-storage-account_adding-an-azure-source">Creating an Azure resource group and storage account</h3>
+<h3 id="creating-an-azure-storage-account_adding-an-azure-source">1.1. Creating an Azure resource group and storage account</h3>
 <div class="paragraph _abstract">
 <p>Cost export data is written to a storage account, which exists within a resource group. The resource group must be accessible by cost management in order to read the Azure cost data.</p>
 </div>
@@ -713,7 +714,7 @@ div.unbreakable { page-break-inside: avoid; }
 </div>
 </div>
 <div class="sect2">
-<h3 id="configuring-azure-roles_adding-an-azure-source">Configuring Azure roles</h3>
+<h3 id="configuring-azure-roles_adding-an-azure-source">1.2. Configuring Azure roles</h3>
 <div class="paragraph _abstract">
 <p>Red Hat recommends configuring dedicated credentials to grant cost management read-only access to Azure cost data.  Configure a Storage Account Contributor and Reader role in Azure to provide this access to cost management.</p>
 </div>
@@ -756,7 +757,7 @@ div.unbreakable { page-break-inside: avoid; }
 </div>
 </div>
 <div class="sect2">
-<h3 id="configuring-an-azure-daily-export-schedule_adding-an-azure-source">Configuring a daily Azure data export schedule</h3>
+<h3 id="configuring-an-azure-daily-export-schedule_adding-an-azure-source">1.3. Configuring a daily Azure data export schedule</h3>
 <div class="paragraph _abstract">
 <p>Create a recurring task to export your cost data on a daily basis automatically to your Azure storage account, where cost management will retrieve the data.</p>
 </div>
@@ -810,7 +811,7 @@ div.unbreakable { page-break-inside: avoid; }
 </div>
 </div>
 <div class="sect1">
-<h2 id="assembly-cost-management-next-steps-azure">Next steps for managing your costs</h2>
+<h2 id="assembly-cost-management-next-steps-azure">2. Next steps for managing your costs</h2>
 <div class="sectionbody">
 <div class="paragraph _abstract">
 <p>After adding your OpenShift Container Platform and Microsoft Azure sources, in addition to showing cost data by source, cost management will automatically show Azure cost and usage related to running your OpenShift Container Platform clusters on their platform.</p>
@@ -836,7 +837,7 @@ div.unbreakable { page-break-inside: avoid; }
 </ul>
 </div>
 <div class="sect2">
-<h3 id="limiting-access_next-steps-azure">Limit access to cost management resources</h3>
+<h3 id="limiting-access_next-steps-azure">2.1. Limit access to cost management resources</h3>
 <div class="paragraph _abstract">
 <p>After adding and configuring sources in cost management, it is a good idea to limit access to cost data and resources. For example, you may not want users to have access to all cost data, but instead only data specific to their projects or organization. Using role-based access control, you can limit the visibility of resources involved in cost management reports. For example, you may want to restrict a user&#8217;s view to only AWS sources, instead of the entire environment.</p>
 </div>
@@ -845,7 +846,7 @@ div.unbreakable { page-break-inside: avoid; }
 </div>
 </div>
 <div class="sect2">
-<h3 id="configure-tagging-next-step_next-steps-azure">Configure tagging for your sources</h3>
+<h3 id="configure-tagging-next-step_next-steps-azure">2.2. Configure tagging for your sources</h3>
 <div class="paragraph _abstract">
 <p>The cost management application tracks cloud and infrastructure costs using tags (called labels in OpenShift), which you can refine to filter and attribute to resources. Tags in cost management allow you to organize your resources by cost and to allocate the costs to different parts of your cloud infrastructure.</p>
 </div>
@@ -881,7 +882,7 @@ div.unbreakable { page-break-inside: avoid; }
 </div>
 </div>
 <div class="sect2">
-<h3 id="configure-cost-models-next-step_next-steps-azure">Configure cost models to accurately report costs</h3>
+<h3 id="configure-cost-models-next-step_next-steps-azure">2.3. Configure cost models to accurately report costs</h3>
 <div class="paragraph _abstract">
 <p>Now that you have configured your sources to collect cost and usage data into cost management, you can configure cost models to associate prices to metrics and usage, and fine-tune the costs of running your cloud.</p>
 </div>
@@ -909,7 +910,7 @@ div.unbreakable { page-break-inside: avoid; }
 </div>
 </div>
 <div class="sect2">
-<h3 id="cost-explorer-next-step_next-steps-azure">Use the Cost Explorer to visualize your costs</h3>
+<h3 id="cost-explorer-next-step_next-steps-azure">2.4. Use the Cost Explorer to visualize your costs</h3>
 <div class="paragraph _abstract">
 <p>The cost management <a href="https://console.redhat.com/openshift/cost-management/explorer">Cost Explorer</a> allows you to create custom graphs of time-scaled cost and usage information to better visualize and interpret your costs.</p>
 </div>
@@ -935,10 +936,71 @@ div.unbreakable { page-break-inside: avoid; }
 </div>
 </div>
 </div>
+<div class="sect1">
+<h2 id="proc-providing-feedback-on-redhat-documentation">Providing feedback on Red Hat Cost Management documentation</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>We appreciate your feedback on our documentation.
+To provide feedback, highlight text in a document and add comments.</p>
+</div>
+<div class="ulist">
+<div class="title">Prerequisites</div>
+<ul>
+<li>
+<p>You are logged in to the Red Hat Customer Portal.</p>
+</li>
+<li>
+<p>In the Red Hat Customer Portal, the document is in the <strong>Multi-page HTML</strong> viewing format.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<div class="title">Procedure</div>
+<p>To provide your feedback, perform the following steps:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Click the <strong>Feedback</strong> button in the top-right corner of the document to see existing feedback.</p>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<div class="title">Note</div>
+</td>
+<td class="content">
+The feedback feature is enabled only in the <strong>Multi-page HTML</strong> format.
+</td>
+</tr>
+</table>
+</div>
+</li>
+<li>
+<p>Highlight the section of the document where you want to provide feedback.</p>
+</li>
+<li>
+<p>Click the <strong>Add Feedback</strong> pop-up that appears near the highlighted text.</p>
+<div class="paragraph">
+<p>A text box appears in the feedback section on the right side of the page.</p>
+</div>
+</li>
+<li>
+<p>Enter your feedback in the text box and click <strong>Submit</strong>.</p>
+<div class="paragraph">
+<p>A documentation issue is created.</p>
+</div>
+</li>
+<li>
+<p>To view the issue, click the issue link in the feedback view.</p>
+</li>
+</ol>
+</div>
+</div>
+</div>
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2022-08-19 08:49:28 UTC
+Last updated 2022-08-19 09:38:38 UTC
 </div>
 </div>
 </body>

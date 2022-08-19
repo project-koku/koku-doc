@@ -593,34 +593,35 @@ div.unbreakable { page-break-inside: avoid; }
 <div id="toc" class="toc2">
 <div id="toctitle">Table of Contents</div>
 <ul class="sectlevel1">
-<li><a href="#assembly-adding-gcp-sources">Adding a Google Cloud source to cost management</a>
+<li><a href="#assembly-adding-gcp-sources">1. Adding a Google Cloud source to cost management</a>
 <ul class="sectlevel2">
-<li><a href="#creating-a-project-gcp_adding-gcp-sources">Creating a Google Cloud project</a></li>
-<li><a href="#creating-iam-role-gcp_adding-gcp-sources">Creating a Google Cloud Identity and Access Management role</a></li>
-<li><a href="#adding-new-member-with-cost-role-gcp_adding-gcp-sources">Adding a billing service account member to your Google Cloud project</a></li>
-<li><a href="#creating-a-dataset-gcp_adding-gcp-sources">Creating a Google Cloud BigQuery dataset</a></li>
-<li><a href="#exporting-billing-data-gcp_adding-gcp-sources">Exporting Google Cloud billing data to BigQuery</a>
+<li><a href="#creating-a-project-gcp_adding-gcp-sources">1.1. Creating a Google Cloud project</a></li>
+<li><a href="#creating-iam-role-gcp_adding-gcp-sources">1.2. Creating a Google Cloud Identity and Access Management role</a></li>
+<li><a href="#adding-new-member-with-cost-role-gcp_adding-gcp-sources">1.3. Adding a billing service account member to your Google Cloud project</a></li>
+<li><a href="#creating-a-dataset-gcp_adding-gcp-sources">1.4. Creating a Google Cloud BigQuery dataset</a></li>
+<li><a href="#exporting-billing-data-gcp_adding-gcp-sources">1.5. Exporting Google Cloud billing data to BigQuery</a>
 <ul class="sectlevel3">
-<li><a href="#viewing-data-collected-gcp_adding-gcp-sources">Viewing billing tables in BigQuery</a></li>
+<li><a href="#viewing-data-collected-gcp_adding-gcp-sources">1.5.1. Viewing billing tables in BigQuery</a></li>
 </ul>
 </li>
-<li><a href="#proc_adding-a-gcp-account_adding-gcp-sources">Adding your Google Cloud account as a source</a></li>
+<li><a href="#proc_adding-a-gcp-account_adding-gcp-sources">1.6. Adding your Google Cloud account as a source</a></li>
 </ul>
 </li>
-<li><a href="#assembly-cost-management-next-steps-gcp">Next steps for managing your costs</a>
+<li><a href="#assembly-cost-management-next-steps-gcp">2. Next steps for managing your costs</a>
 <ul class="sectlevel2">
-<li><a href="#limiting-access_next-steps-gcp">Limit access to cost management resources</a></li>
-<li><a href="#configure-tagging-next-step_next-steps-gcp">Configure tagging for your sources</a></li>
-<li><a href="#configure-cost-models-next-step_next-steps-gcp">Configure cost models to accurately report costs</a></li>
-<li><a href="#cost-explorer-next-step_next-steps-gcp">Use the Cost Explorer to visualize your costs</a></li>
+<li><a href="#limiting-access_next-steps-gcp">2.1. Limit access to cost management resources</a></li>
+<li><a href="#configure-tagging-next-step_next-steps-gcp">2.2. Configure tagging for your sources</a></li>
+<li><a href="#configure-cost-models-next-step_next-steps-gcp">2.3. Configure cost models to accurately report costs</a></li>
+<li><a href="#cost-explorer-next-step_next-steps-gcp">2.4. Use the Cost Explorer to visualize your costs</a></li>
 </ul>
 </li>
+<li><a href="#proc-providing-feedback-on-redhat-documentation">Providing feedback on Red Hat Cost Management documentation</a></li>
 </ul>
 </div>
 </div>
 <div id="content">
 <div class="sect1">
-<h2 id="assembly-adding-gcp-sources">Adding a Google Cloud source to cost management</h2>
+<h2 id="assembly-adding-gcp-sources">1. Adding a Google Cloud source to cost management</h2>
 <div class="sectionbody">
 <div class="paragraph _abstract">
 <p>To add a Google Cloud account to cost management, you must configure your Google Cloud to provide metrics, then add your Google Cloud account as a source from the <a href="https://console.redhat.com">Red Hat Hybrid Cloud Console</a> user interface.</p>
@@ -680,7 +681,7 @@ div.unbreakable { page-break-inside: avoid; }
 </table>
 </div>
 <div class="sect2">
-<h3 id="creating-a-project-gcp_adding-gcp-sources">Creating a Google Cloud project</h3>
+<h3 id="creating-a-project-gcp_adding-gcp-sources">1.1. Creating a Google Cloud project</h3>
 <div class="paragraph _abstract">
 <p>It is strongly recommended that you create a new Google Cloud project to gather and send your cost reports to <a href="https://console.redhat.com">Red Hat Hybrid Cloud Console</a>. This procedure outlines the steps required to create and name a new project from the Google Cloud Console.</p>
 </div>
@@ -733,7 +734,7 @@ div.unbreakable { page-break-inside: avoid; }
 </div>
 </div>
 <div class="sect2">
-<h3 id="creating-iam-role-gcp_adding-gcp-sources">Creating a Google Cloud Identity and Access Management role</h3>
+<h3 id="creating-iam-role-gcp_adding-gcp-sources">1.2. Creating a Google Cloud Identity and Access Management role</h3>
 <div class="paragraph _abstract">
 <p>A custom Identity and Access Management (IAM) role for cost management gives access to specific cost related resources required to enable a Google Cloud Platform source and prohibits access to other resources.</p>
 </div>
@@ -846,7 +847,7 @@ div.unbreakable { page-break-inside: avoid; }
 </div>
 </div>
 <div class="sect2">
-<h3 id="adding-new-member-with-cost-role-gcp_adding-gcp-sources">Adding a billing service account member to your Google Cloud project</h3>
+<h3 id="adding-new-member-with-cost-role-gcp_adding-gcp-sources">1.3. Adding a billing service account member to your Google Cloud project</h3>
 <div class="paragraph _abstract">
 <p>A new billing service account member must be created in your project that can export cost reports to <a href="https://console.redhat.com">Red Hat Hybrid Cloud Console</a>.</p>
 </div>
@@ -924,7 +925,7 @@ div.unbreakable { page-break-inside: avoid; }
 </div>
 </div>
 <div class="sect2">
-<h3 id="creating-a-dataset-gcp_adding-gcp-sources">Creating a Google Cloud BigQuery dataset</h3>
+<h3 id="creating-a-dataset-gcp_adding-gcp-sources">1.4. Creating a Google Cloud BigQuery dataset</h3>
 <div class="paragraph _abstract">
 <p>Create a BigQuery dataset to collect and store the billing data for cost management.</p>
 </div>
@@ -972,7 +973,7 @@ div.unbreakable { page-break-inside: avoid; }
 </div>
 </div>
 <div class="sect2">
-<h3 id="exporting-billing-data-gcp_adding-gcp-sources">Exporting Google Cloud billing data to BigQuery</h3>
+<h3 id="exporting-billing-data-gcp_adding-gcp-sources">1.5. Exporting Google Cloud billing data to BigQuery</h3>
 <div class="paragraph _abstract">
 <p>Enabling a billing export to BigQuery sends your Google Cloud billing data (such as usage, cost estimates, and pricing data) automatically to the cost management BigQuery dataset.</p>
 </div>
@@ -1022,7 +1023,7 @@ div.unbreakable { page-break-inside: avoid; }
 </ol>
 </div>
 <div class="sect3">
-<h4 id="viewing-data-collected-gcp_adding-gcp-sources">Viewing billing tables in BigQuery</h4>
+<h4 id="viewing-data-collected-gcp_adding-gcp-sources">1.5.1. Viewing billing tables in BigQuery</h4>
 <div class="paragraph _abstract">
 <p>You may want to review the metrics collected and sent to cost management. This can also assist with troubleshooting incorrect or missing data in cost management.</p>
 </div>
@@ -1068,7 +1069,7 @@ div.unbreakable { page-break-inside: avoid; }
 </div>
 </div>
 <div class="sect2">
-<h3 id="proc_adding-a-gcp-account_adding-gcp-sources">Adding your Google Cloud account as a source</h3>
+<h3 id="proc_adding-a-gcp-account_adding-gcp-sources">1.6. Adding your Google Cloud account as a source</h3>
 <div class="paragraph _abstract">
 <p>Using the information from the previous steps, you can now add your Google Cloud account as a source. After adding a Google Cloud source, the cost management application processes the cost and usage data from your Google Cloud account and makes it viewable.</p>
 </div>
@@ -1188,7 +1189,7 @@ div.unbreakable { page-break-inside: avoid; }
 </div>
 </div>
 <div class="sect1">
-<h2 id="assembly-cost-management-next-steps-gcp">Next steps for managing your costs</h2>
+<h2 id="assembly-cost-management-next-steps-gcp">2. Next steps for managing your costs</h2>
 <div class="sectionbody">
 <div class="paragraph _abstract">
 <p>After adding your OpenShift Container Platform and Google Cloud sources, on the cost management <strong>Overview</strong> page (<a href="https://console.redhat.com/openshift/cost-management/">console.redhat.com/openshift/cost-management/</a>), your cost data will be sorted into <strong>OpenShift</strong> and <strong>Infrastructure</strong> tabs. From here, you can use <strong>Perspective</strong> to select different views of your cost data.</p>
@@ -1211,7 +1212,7 @@ div.unbreakable { page-break-inside: avoid; }
 </ul>
 </div>
 <div class="sect2">
-<h3 id="limiting-access_next-steps-gcp">Limit access to cost management resources</h3>
+<h3 id="limiting-access_next-steps-gcp">2.1. Limit access to cost management resources</h3>
 <div class="paragraph _abstract">
 <p>After adding and configuring sources in cost management, it is a good idea to limit access to cost data and resources. For example, you may not want users to have access to all cost data, but instead only data specific to their projects or organization. Using role-based access control, you can limit the visibility of resources involved in cost management reports. For example, you may want to restrict a user&#8217;s view to only AWS sources, instead of the entire environment.</p>
 </div>
@@ -1220,7 +1221,7 @@ div.unbreakable { page-break-inside: avoid; }
 </div>
 </div>
 <div class="sect2">
-<h3 id="configure-tagging-next-step_next-steps-gcp">Configure tagging for your sources</h3>
+<h3 id="configure-tagging-next-step_next-steps-gcp">2.2. Configure tagging for your sources</h3>
 <div class="paragraph _abstract">
 <p>The cost management application tracks cloud and infrastructure costs using tags (called labels in OpenShift), which you can refine to filter and attribute to resources. Tags in cost management allow you to organize your resources by cost and to allocate the costs to different parts of your cloud infrastructure.</p>
 </div>
@@ -1256,7 +1257,7 @@ div.unbreakable { page-break-inside: avoid; }
 </div>
 </div>
 <div class="sect2">
-<h3 id="configure-cost-models-next-step_next-steps-gcp">Configure cost models to accurately report costs</h3>
+<h3 id="configure-cost-models-next-step_next-steps-gcp">2.3. Configure cost models to accurately report costs</h3>
 <div class="paragraph _abstract">
 <p>Now that you have configured your sources to collect cost and usage data into cost management, you can configure cost models to associate prices to metrics and usage, and fine-tune the costs of running your cloud.</p>
 </div>
@@ -1284,7 +1285,7 @@ div.unbreakable { page-break-inside: avoid; }
 </div>
 </div>
 <div class="sect2">
-<h3 id="cost-explorer-next-step_next-steps-gcp">Use the Cost Explorer to visualize your costs</h3>
+<h3 id="cost-explorer-next-step_next-steps-gcp">2.4. Use the Cost Explorer to visualize your costs</h3>
 <div class="paragraph _abstract">
 <p>The cost management <a href="https://console.redhat.com/openshift/cost-management/explorer">Cost Explorer</a> allows you to create custom graphs of time-scaled cost and usage information to better visualize and interpret your costs.</p>
 </div>
@@ -1310,10 +1311,71 @@ div.unbreakable { page-break-inside: avoid; }
 </div>
 </div>
 </div>
+<div class="sect1">
+<h2 id="proc-providing-feedback-on-redhat-documentation">Providing feedback on Red Hat Cost Management documentation</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>We appreciate your feedback on our documentation.
+To provide feedback, highlight text in a document and add comments.</p>
+</div>
+<div class="ulist">
+<div class="title">Prerequisites</div>
+<ul>
+<li>
+<p>You are logged in to the Red Hat Customer Portal.</p>
+</li>
+<li>
+<p>In the Red Hat Customer Portal, the document is in the <strong>Multi-page HTML</strong> viewing format.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<div class="title">Procedure</div>
+<p>To provide your feedback, perform the following steps:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Click the <strong>Feedback</strong> button in the top-right corner of the document to see existing feedback.</p>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<div class="title">Note</div>
+</td>
+<td class="content">
+The feedback feature is enabled only in the <strong>Multi-page HTML</strong> format.
+</td>
+</tr>
+</table>
+</div>
+</li>
+<li>
+<p>Highlight the section of the document where you want to provide feedback.</p>
+</li>
+<li>
+<p>Click the <strong>Add Feedback</strong> pop-up that appears near the highlighted text.</p>
+<div class="paragraph">
+<p>A text box appears in the feedback section on the right side of the page.</p>
+</div>
+</li>
+<li>
+<p>Enter your feedback in the text box and click <strong>Submit</strong>.</p>
+<div class="paragraph">
+<p>A documentation issue is created.</p>
+</div>
+</li>
+<li>
+<p>To view the issue, click the issue link in the feedback view.</p>
+</li>
+</ol>
+</div>
+</div>
+</div>
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2022-08-19 08:49:28 UTC
+Last updated 2022-08-19 09:38:38 UTC
 </div>
 </div>
 </body>

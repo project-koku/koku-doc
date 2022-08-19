@@ -593,36 +593,37 @@ div.unbreakable { page-break-inside: avoid; }
 <div id="toc" class="toc2">
 <div id="toctitle">Table of Contents</div>
 <ul class="sectlevel1">
-<li><a href="#assembly-using-cost-models">Using cost models</a>
+<li><a href="#assembly-using-cost-models">1. Using cost models</a>
 <ul class="sectlevel2">
-<li><a href="#what-is-a-cost-model_using-cost-models">What is a cost model?</a></li>
-<li><a href="#cost-model-terms_using-cost-models">Cost model concepts</a>
+<li><a href="#what-is-a-cost-model_using-cost-models">1.1. What is a cost model?</a></li>
+<li><a href="#cost-model-terms_using-cost-models">1.2. Cost model concepts</a>
 <ul class="sectlevel3">
-<li><a href="#cost-layers">Cost layers</a></li>
-<li><a href="#cost-model-terminology">Cost model terminology</a></li>
+<li><a href="#cost-layers">1.2.1. Cost layers</a></li>
+<li><a href="#cost-model-terminology">1.2.2. Cost model terminology</a></li>
 </ul>
 </li>
-<li><a href="#cost-model-workflow_using-cost-models">The cost model workflow</a></li>
+<li><a href="#cost-model-workflow_using-cost-models">1.3. The cost model workflow</a></li>
 </ul>
 </li>
-<li><a href="#assembly-setting-up-cost-models">Setting up a cost model</a>
+<li><a href="#assembly-setting-up-cost-models">2. Setting up a cost model</a>
 <ul class="sectlevel2">
-<li><a href="#creating-an-AWS-Azure-cost-model_setting-up-cost-models">Applying a markup or discount to cloud sources</a></li>
-<li><a href="#creating-an-ocp-cost-model_setting-up-cost-models">Creating a cost model for an OpenShift Container Platform cluster</a></li>
+<li><a href="#creating-an-AWS-Azure-cost-model_setting-up-cost-models">2.1. Applying a markup or discount to cloud sources</a></li>
+<li><a href="#creating-an-ocp-cost-model_setting-up-cost-models">2.2. Creating a cost model for an OpenShift Container Platform cluster</a></li>
 </ul>
 </li>
+<li><a href="#proc-providing-feedback-on-redhat-documentation">Providing feedback on Red Hat Cost Management documentation</a></li>
 </ul>
 </div>
 </div>
 <div id="content">
 <div class="sect1">
-<h2 id="assembly-using-cost-models">Using cost models</h2>
+<h2 id="assembly-using-cost-models">1. Using cost models</h2>
 <div class="sectionbody">
 <div class="paragraph _abstract">
 <p>You can use cost models in cost management to apply a price to usage in your hybrid cloud environment, then distribute the costs to resources.</p>
 </div>
 <div class="sect2">
-<h3 id="what-is-a-cost-model_using-cost-models">What is a cost model?</h3>
+<h3 id="what-is-a-cost-model_using-cost-models">1.1. What is a cost model?</h3>
 <div class="paragraph _abstract">
 <p>It can be difficult to find out the real cost of cloud-based IT systems. Different sources provide a variety of cost
 data and metrics, which can be complicated to calculate together and accurately distribute the costs.</p>
@@ -639,7 +640,7 @@ and then distribute the charges to your resources and/or end customers. It helps
 </div>
 </div>
 <div class="sect2">
-<h3 id="cost-model-terms_using-cost-models">Cost model concepts</h3>
+<h3 id="cost-model-terms_using-cost-models">1.2. Cost model concepts</h3>
 <div class="paragraph _abstract">
 <p>These terms and concepts are important for understanding cost management’s cost model workflow.</p>
 </div>
@@ -652,7 +653,7 @@ and then distribute the charges to your resources and/or end customers. It helps
 </dl>
 </div>
 <div class="sect3">
-<h4 id="cost-layers">Cost layers</h4>
+<h4 id="cost-layers">1.2.1. Cost layers</h4>
 <div class="paragraph">
 <p>Costs can be created at different layers of the environment. In cost management, all costs can be classified as either infrastructure or supplementary costs (including your costs that are not identified as infrastructure). In your cost model, you can choose to allocate and present your costs as any of those cost layers. As a result, you can customize what cost management shows on each details page.</p>
 </div>
@@ -694,7 +695,7 @@ and then distribute the charges to your resources and/or end customers. It helps
 </div>
 </div>
 <div class="sect3">
-<h4 id="cost-model-terminology">Cost model terminology</h4>
+<h4 id="cost-model-terminology">1.2.2. Cost model terminology</h4>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Cost</dt>
@@ -764,7 +765,7 @@ and then distribute the charges to your resources and/or end customers. It helps
 </div>
 </div>
 <div class="sect2">
-<h3 id="cost-model-workflow_using-cost-models">The cost model workflow</h3>
+<h3 id="cost-model-workflow_using-cost-models">1.3. The cost model workflow</h3>
 <div class="paragraph _abstract">
 <p>The following diagram shows the cost model workflow that cost management uses to apply a price to metrics and inventory, normalize cost data from different sources, apply a markup (or discount), then distribute the costs across the relevant resources.</p>
 </div>
@@ -831,13 +832,13 @@ and then distribute the charges to your resources and/or end customers. It helps
 </div>
 </div>
 <div class="sect1">
-<h2 id="assembly-setting-up-cost-models">Setting up a cost model</h2>
+<h2 id="assembly-setting-up-cost-models">2. Setting up a cost model</h2>
 <div class="sectionbody">
 <div class="paragraph _abstract">
 <p>Configure cost models in cost management based on your requirements.</p>
 </div>
 <div class="sect2">
-<h3 id="creating-an-AWS-Azure-cost-model_setting-up-cost-models">Applying a markup or discount to cloud sources</h3>
+<h3 id="creating-an-AWS-Azure-cost-model_setting-up-cost-models">2.1. Applying a markup or discount to cloud sources</h3>
 <div class="paragraph _abstract">
 <p>Create a AWS, Azure, or Google Cloud cost model to apply a markup or discount to your cloud infrastructure costs.</p>
 </div>
@@ -968,7 +969,7 @@ and then distribute the charges to your resources and/or end customers. It helps
 </div>
 </div>
 <div class="sect2">
-<h3 id="creating-an-ocp-cost-model_setting-up-cost-models">Creating a cost model for an OpenShift Container Platform cluster</h3>
+<h3 id="creating-an-ocp-cost-model_setting-up-cost-models">2.2. Creating a cost model for an OpenShift Container Platform cluster</h3>
 <div class="paragraph _abstract">
 <p>As metrics and inventory from OpenShift Container Platform sources do not have costs associated, you must create a cost model to associate a price to resources.</p>
 </div>
@@ -1207,10 +1208,71 @@ and then distribute the charges to your resources and/or end customers. It helps
 </div>
 </div>
 </div>
+<div class="sect1">
+<h2 id="proc-providing-feedback-on-redhat-documentation">Providing feedback on Red Hat Cost Management documentation</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>We appreciate your feedback on our documentation.
+To provide feedback, highlight text in a document and add comments.</p>
+</div>
+<div class="ulist">
+<div class="title">Prerequisites</div>
+<ul>
+<li>
+<p>You are logged in to the Red Hat Customer Portal.</p>
+</li>
+<li>
+<p>In the Red Hat Customer Portal, the document is in the <strong>Multi-page HTML</strong> viewing format.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<div class="title">Procedure</div>
+<p>To provide your feedback, perform the following steps:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Click the <strong>Feedback</strong> button in the top-right corner of the document to see existing feedback.</p>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<div class="title">Note</div>
+</td>
+<td class="content">
+The feedback feature is enabled only in the <strong>Multi-page HTML</strong> format.
+</td>
+</tr>
+</table>
+</div>
+</li>
+<li>
+<p>Highlight the section of the document where you want to provide feedback.</p>
+</li>
+<li>
+<p>Click the <strong>Add Feedback</strong> pop-up that appears near the highlighted text.</p>
+<div class="paragraph">
+<p>A text box appears in the feedback section on the right side of the page.</p>
+</div>
+</li>
+<li>
+<p>Enter your feedback in the text box and click <strong>Submit</strong>.</p>
+<div class="paragraph">
+<p>A documentation issue is created.</p>
+</div>
+</li>
+<li>
+<p>To view the issue, click the issue link in the feedback view.</p>
+</li>
+</ol>
+</div>
+</div>
+</div>
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2022-08-19 08:49:28 UTC
+Last updated 2022-08-19 09:38:38 UTC
 </div>
 </div>
 </body>

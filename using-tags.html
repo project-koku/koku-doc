@@ -593,50 +593,51 @@ div.unbreakable { page-break-inside: avoid; }
 <div id="toc" class="toc2">
 <div id="toctitle">Table of Contents</div>
 <ul class="sectlevel1">
-<li><a href="#assembly-managing-cost-data-tagging">Managing cost data using tagging</a></li>
-<li><a href="#assembly-planning-your-tagging-strategy">Planning your tagging strategy</a>
+<li><a href="#assembly-managing-cost-data-tagging">1. Managing cost data using tagging</a></li>
+<li><a href="#assembly-planning-your-tagging-strategy">2. Planning your tagging strategy</a>
 <ul class="sectlevel2">
-<li><a href="#why-use-tags_planning-your-tagging-strategy">Why use tags?</a></li>
-<li><a href="#planning-tagging-strategy_planning-your-tagging-strategy">Considerations for your tagging strategy</a></li>
+<li><a href="#why-use-tags_planning-your-tagging-strategy">2.1. Why use tags?</a></li>
+<li><a href="#planning-tagging-strategy_planning-your-tagging-strategy">2.2. Considerations for your tagging strategy</a></li>
 </ul>
 </li>
-<li><a href="#assembly-configuring-tags-and-labels-in-cost-management">Configuring tags and labels in cost management</a>
+<li><a href="#assembly-configuring-tags-and-labels-in-cost-management">3. Configuring tags and labels in cost management</a>
 <ul class="sectlevel2">
-<li><a href="#how-cost-associates-tags_configuring-tags-and-labels">How cost management associates tags</a>
+<li><a href="#how-cost-associates-tags_configuring-tags-and-labels">3.1. How cost management associates tags</a>
 <ul class="sectlevel3">
-<li><a href="#_tag_matching_hierarchy_in_cost_management">Tag matching hierarchy in cost management</a></li>
+<li><a href="#_tag_matching_hierarchy_in_cost_management">3.1.1. Tag matching hierarchy in cost management</a></li>
 </ul>
 </li>
-<li><a href="#assembly-configuring-tags-sources_configuring-tags-and-labels">Configuring tags on your sources</a>
+<li><a href="#assembly-configuring-tags-sources_configuring-tags-and-labels">3.2. Configuring tags on your sources</a>
 <ul class="sectlevel3">
-<li><a href="#adding-tags-to-an-AWS-resource_configuring-tags-sources">Adding tags to an AWS resource</a></li>
-<li><a href="#adding-tags-to-an-Azure-resource_configuring-tags-sources">Adding tags to an Azure resource</a></li>
-<li><a href="#adding-tags-to-a-gcp-resource_configuring-tags-sources">Adding tags to a Google Cloud resource</a></li>
-<li><a href="#adding-tags-to-an-OCP-resource_configuring-tags-sources">Viewing labels in an OpenShift namespace</a></li>
-<li><a href="#disabling-tags_configuring-tags-sources">Disabling tags in cost management</a></li>
+<li><a href="#adding-tags-to-an-AWS-resource_configuring-tags-sources">3.2.1. Adding tags to an AWS resource</a></li>
+<li><a href="#adding-tags-to-an-Azure-resource_configuring-tags-sources">3.2.2. Adding tags to an Azure resource</a></li>
+<li><a href="#adding-tags-to-a-gcp-resource_configuring-tags-sources">3.2.3. Adding tags to a Google Cloud resource</a></li>
+<li><a href="#adding-tags-to-an-OCP-resource_configuring-tags-sources">3.2.4. Viewing labels in an OpenShift namespace</a></li>
+<li><a href="#disabling-tags_configuring-tags-sources">3.2.5. Disabling tags in cost management</a></li>
 </ul>
 </li>
 </ul>
 </li>
-<li><a href="#assembly-viewing-and-exporting-your-cost-data">Viewing and exporting your cost data</a>
+<li><a href="#assembly-viewing-and-exporting-your-cost-data">4. Viewing and exporting your cost data</a>
 <ul class="sectlevel2">
-<li><a href="#filtering-cost-data-views_viewing-and-exporting-data">Filtering your cost data view</a></li>
-<li><a href="#grouping-cost-data-tag-category_viewing-and-exporting-data">Grouping cost data by tag category</a></li>
-<li><a href="#exporting-cost-data-reporting_viewing-and-exporting-data">Exporting cost data to a reporting tool</a></li>
+<li><a href="#filtering-cost-data-views_viewing-and-exporting-data">4.1. Filtering your cost data view</a></li>
+<li><a href="#grouping-cost-data-tag-category_viewing-and-exporting-data">4.2. Grouping cost data by tag category</a></li>
+<li><a href="#exporting-cost-data-reporting_viewing-and-exporting-data">4.3. Exporting cost data to a reporting tool</a></li>
 </ul>
 </li>
-<li><a href="#assembly-additional-resources-tags">Additional resources</a>
+<li><a href="#assembly-additional-resources-tags">5. Additional resources</a>
 <ul class="sectlevel2">
-<li><a href="#tagging-specifications_additional-resources-tags">Tag specifications by source type</a></li>
-<li><a href="#further-reading-tags_additional-resources-tags">Further reading</a></li>
+<li><a href="#tagging-specifications_additional-resources-tags">5.1. Tag specifications by source type</a></li>
+<li><a href="#further-reading-tags_additional-resources-tags">5.2. Further reading</a></li>
 </ul>
 </li>
+<li><a href="#proc-providing-feedback-on-redhat-documentation">Providing feedback on Red Hat Cost Management documentation</a></li>
 </ul>
 </div>
 </div>
 <div id="content">
 <div class="sect1">
-<h2 id="assembly-managing-cost-data-tagging">Managing cost data using tagging</h2>
+<h2 id="assembly-managing-cost-data-tagging">1. Managing cost data using tagging</h2>
 <div class="sectionbody">
 <div class="paragraph _abstract">
 <p>This guide explains in depth how tagging works in cost management, and how you can use tagging to best organize and view your resources to manage your costs.</p>
@@ -644,10 +645,10 @@ div.unbreakable { page-break-inside: avoid; }
 </div>
 </div>
 <div class="sect1">
-<h2 id="assembly-planning-your-tagging-strategy">Planning your tagging strategy</h2>
+<h2 id="assembly-planning-your-tagging-strategy">2. Planning your tagging strategy</h2>
 <div class="sectionbody">
 <div class="sect2">
-<h3 id="why-use-tags_planning-your-tagging-strategy">Why use tags?</h3>
+<h3 id="why-use-tags_planning-your-tagging-strategy">2.1. Why use tags?</h3>
 <div class="paragraph _abstract">
 <p>Tags (also sometimes called labels) are a string of custom metadata assigned to resources that your organization can utilize in multiple ways.</p>
 </div>
@@ -668,7 +669,7 @@ div.unbreakable { page-break-inside: avoid; }
 </div>
 </div>
 <div class="sect2">
-<h3 id="planning-tagging-strategy_planning-your-tagging-strategy">Considerations for your tagging strategy</h3>
+<h3 id="planning-tagging-strategy_planning-your-tagging-strategy">2.2. Considerations for your tagging strategy</h3>
 <div class="paragraph _abstract">
 <p>When planning your tagging strategy, these considerations can help you decide how to organize and report costs for your sources.</p>
 </div>
@@ -769,7 +770,7 @@ div.unbreakable { page-break-inside: avoid; }
 </div>
 </div>
 <div class="sect1">
-<h2 id="assembly-configuring-tags-and-labels-in-cost-management">Configuring tags and labels in cost management</h2>
+<h2 id="assembly-configuring-tags-and-labels-in-cost-management">3. Configuring tags and labels in cost management</h2>
 <div class="sectionbody">
 <div class="paragraph _abstract">
 <p>You must configure tags in each source before cost management can use the tags to automatically organize your cost data.</p>
@@ -805,7 +806,7 @@ div.unbreakable { page-break-inside: avoid; }
 </table>
 </div>
 <div class="sect2">
-<h3 id="how-cost-associates-tags_configuring-tags-and-labels">How cost management associates tags</h3>
+<h3 id="how-cost-associates-tags_configuring-tags-and-labels">3.1. How cost management associates tags</h3>
 <div class="paragraph _abstract">
 <p>Tags in AWS and Azure and labels in OpenShift consist of key:value pairs. When the key:value pairs match, the AWS/Azure and OpenShift costs are automatically associated by cost management. Tag matching in cost management is not case sensitive: for example, an AWS resource tagged <em>APP</em> and an OpenShift resource tagged <em>app</em> are a match:</p>
 </div>
@@ -846,7 +847,7 @@ div.unbreakable { page-break-inside: avoid; }
 <p>By default, cost management tracks AWS compute usage and costs by associating the Amazon EC2 instance ID or Azure virtual machine instance ID with the OpenShift Container Platform node running on that instance.</p>
 </div>
 <div class="sect3">
-<h4 id="_tag_matching_hierarchy_in_cost_management">Tag matching hierarchy in cost management</h4>
+<h4 id="_tag_matching_hierarchy_in_cost_management">3.1.1. Tag matching hierarchy in cost management</h4>
 <div class="paragraph">
 <p>To identify your OpenShift resources running on AWS or Azure instances, cost management matches tags between sources in the following order:</p>
 </div>
@@ -960,7 +961,7 @@ div.unbreakable { page-break-inside: avoid; }
 </div>
 </div>
 <div class="sect2">
-<h3 id="assembly-configuring-tags-sources_configuring-tags-and-labels">Configuring tags on your sources</h3>
+<h3 id="assembly-configuring-tags-sources_configuring-tags-and-labels">3.2. Configuring tags on your sources</h3>
 <div class="paragraph _abstract">
 <p>In order to control which tags cost management imports, activate or enable the tags you want to view by source:</p>
 </div>
@@ -978,7 +979,7 @@ div.unbreakable { page-break-inside: avoid; }
 </ul>
 </div>
 <div class="sect3">
-<h4 id="adding-tags-to-an-AWS-resource_configuring-tags-sources">Adding tags to an AWS resource</h4>
+<h4 id="adding-tags-to-an-AWS-resource_configuring-tags-sources">3.2.1. Adding tags to an AWS resource</h4>
 <div class="paragraph _abstract">
 <p>Amazon creates certain identifiers automatically, like the EC2 instance resource identifier (a number such as <code>i-123456789</code>), which cost management uses similarly to a tag.</p>
 </div>
@@ -1007,7 +1008,7 @@ div.unbreakable { page-break-inside: avoid; }
 </div>
 </div>
 <div class="sect3">
-<h4 id="adding-tags-to-an-Azure-resource_configuring-tags-sources">Adding tags to an Azure resource</h4>
+<h4 id="adding-tags-to-an-Azure-resource_configuring-tags-sources">3.2.2. Adding tags to an Azure resource</h4>
 <div class="paragraph">
 <p>Adding an Azure source creates identifiers for virtual machine instances automatically, which cost management uses similarly to tags to associate Azure resources to related OpenShift resources.</p>
 </div>
@@ -1019,7 +1020,7 @@ div.unbreakable { page-break-inside: avoid; }
 </div>
 </div>
 <div class="sect3">
-<h4 id="adding-tags-to-a-gcp-resource_configuring-tags-sources">Adding tags to a Google Cloud resource</h4>
+<h4 id="adding-tags-to-a-gcp-resource_configuring-tags-sources">3.2.3. Adding tags to a Google Cloud resource</h4>
 <div class="paragraph _abstract">
 <p>You can apply custom labels to Google cloud resources, such as virtual machine instances, images, and persistent disks. These labels are automatically added to your BigQuery export and sent to cost management.</p>
 </div>
@@ -1036,7 +1037,7 @@ div.unbreakable { page-break-inside: avoid; }
 </div>
 </div>
 <div class="sect3">
-<h4 id="adding-tags-to-an-OCP-resource_configuring-tags-sources">Viewing labels in an OpenShift namespace</h4>
+<h4 id="adding-tags-to-an-OCP-resource_configuring-tags-sources">3.2.4. Viewing labels in an OpenShift namespace</h4>
 <div class="paragraph _abstract">
 <p>The AWS or Azure tag equivalent in OpenShift is a label, which also consists of a key:value pair. cost management collects OpenShift tag data from nodes, pods, and persistent volumes (or persistent volume claims) using Prometheus metrics and Koku Metrics Operator.</p>
 </div>
@@ -1089,7 +1090,7 @@ div.unbreakable { page-break-inside: avoid; }
 </div>
 </div>
 <div class="sect3">
-<h4 id="disabling-tags_configuring-tags-sources">Disabling tags in cost management</h4>
+<h4 id="disabling-tags_configuring-tags-sources">3.2.5. Disabling tags in cost management</h4>
 <div class="paragraph _abstract">
 <p>All cloud provider tags are activated in cost management by default. Sometimes having too many resource tags can affect cost management performance. Unnecessary tags can also make managing your costs more complicated when grouping tags and matching key:value pairs. Therefore, Red Hat recommends that you disable tags you are not actively using to reduce these potential issues.</p>
 </div>
@@ -1130,10 +1131,10 @@ div.unbreakable { page-break-inside: avoid; }
 </div>
 </div>
 <div class="sect1">
-<h2 id="assembly-viewing-and-exporting-your-cost-data">Viewing and exporting your cost data</h2>
+<h2 id="assembly-viewing-and-exporting-your-cost-data">4. Viewing and exporting your cost data</h2>
 <div class="sectionbody">
 <div class="sect2">
-<h3 id="filtering-cost-data-views_viewing-and-exporting-data">Filtering your cost data view</h3>
+<h3 id="filtering-cost-data-views_viewing-and-exporting-data">4.1. Filtering your cost data view</h3>
 <div class="paragraph _abstract">
 <p>Tags allow you to customize your view of cost data. You can view resources by type (for example, project, node, cluster) or tag or label in order to investigate why certain resources show an increase in cost, or when data looks abnormal.</p>
 </div>
@@ -1199,7 +1200,7 @@ div.unbreakable { page-break-inside: avoid; }
 </div>
 </div>
 <div class="sect2">
-<h3 id="grouping-cost-data-tag-category_viewing-and-exporting-data">Grouping cost data by tag category</h3>
+<h3 id="grouping-cost-data-tag-category_viewing-and-exporting-data">4.2. Grouping cost data by tag category</h3>
 <div class="paragraph _abstract">
 <p>You can group resources by tag category to further investigate your cost data.</p>
 </div>
@@ -1277,7 +1278,7 @@ div.unbreakable { page-break-inside: avoid; }
 </div>
 </div>
 <div class="sect2">
-<h3 id="exporting-cost-data-reporting_viewing-and-exporting-data">Exporting cost data to a reporting tool</h3>
+<h3 id="exporting-cost-data-reporting_viewing-and-exporting-data">4.3. Exporting cost data to a reporting tool</h3>
 <div class="paragraph _abstract">
 <p>Tags allow you to customize your view of cost data. This is useful when you want to investigate further why certain resources show an increase in cost, or data looks abnormal.</p>
 </div>
@@ -1342,10 +1343,10 @@ div.unbreakable { page-break-inside: avoid; }
 </div>
 </div>
 <div class="sect1">
-<h2 id="assembly-additional-resources-tags">Additional resources</h2>
+<h2 id="assembly-additional-resources-tags">5. Additional resources</h2>
 <div class="sectionbody">
 <div class="sect2">
-<h3 id="tagging-specifications_additional-resources-tags">Tag specifications by source type</h3>
+<h3 id="tagging-specifications_additional-resources-tags">5.1. Tag specifications by source type</h3>
 <div class="paragraph _abstract">
 <p>Tagging standards differ between source types. To use the same tags/labels across sources, you must use the most common of all the restrictions across the different providers.</p>
 </div>
@@ -1457,7 +1458,7 @@ Not all resource types support tags.</p></td>
 </table>
 </div>
 <div class="sect2">
-<h3 id="further-reading-tags_additional-resources-tags">Further reading</h3>
+<h3 id="further-reading-tags_additional-resources-tags">5.2. Further reading</h3>
 <div class="paragraph _abstract">
 <p>The following links provide further guidance on tagging for each source type.</p>
 </div>
@@ -1519,10 +1520,71 @@ Not all resource types support tags.</p></td>
 </div>
 </div>
 </div>
+<div class="sect1">
+<h2 id="proc-providing-feedback-on-redhat-documentation">Providing feedback on Red Hat Cost Management documentation</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>We appreciate your feedback on our documentation.
+To provide feedback, highlight text in a document and add comments.</p>
+</div>
+<div class="ulist">
+<div class="title">Prerequisites</div>
+<ul>
+<li>
+<p>You are logged in to the Red Hat Customer Portal.</p>
+</li>
+<li>
+<p>In the Red Hat Customer Portal, the document is in the <strong>Multi-page HTML</strong> viewing format.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<div class="title">Procedure</div>
+<p>To provide your feedback, perform the following steps:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Click the <strong>Feedback</strong> button in the top-right corner of the document to see existing feedback.</p>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<div class="title">Note</div>
+</td>
+<td class="content">
+The feedback feature is enabled only in the <strong>Multi-page HTML</strong> format.
+</td>
+</tr>
+</table>
+</div>
+</li>
+<li>
+<p>Highlight the section of the document where you want to provide feedback.</p>
+</li>
+<li>
+<p>Click the <strong>Add Feedback</strong> pop-up that appears near the highlighted text.</p>
+<div class="paragraph">
+<p>A text box appears in the feedback section on the right side of the page.</p>
+</div>
+</li>
+<li>
+<p>Enter your feedback in the text box and click <strong>Submit</strong>.</p>
+<div class="paragraph">
+<p>A documentation issue is created.</p>
+</div>
+</li>
+<li>
+<p>To view the issue, click the issue link in the feedback view.</p>
+</li>
+</ol>
+</div>
+</div>
+</div>
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2022-08-19 08:49:28 UTC
+Last updated 2022-08-19 09:38:38 UTC
 </div>
 </div>
 </body>

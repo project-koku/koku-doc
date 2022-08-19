@@ -593,31 +593,32 @@ div.unbreakable { page-break-inside: avoid; }
 <div id="toc" class="toc2">
 <div id="toctitle">Table of Contents</div>
 <ul class="sectlevel1">
-<li><a href="#assembly-introduction-cost-management">Introduction to cost management</a>
+<li><a href="#assembly-introduction-cost-management">1. Introduction to cost management</a>
 <ul class="sectlevel2">
-<li><a href="#about-cost-management_getting-started">About cost management</a></li>
-<li><a href="#planning-cost-management">Planning for cost management</a></li>
+<li><a href="#about-cost-management_getting-started">1.1. About cost management</a></li>
+<li><a href="#planning-cost-management">1.2. Planning for cost management</a></li>
 </ul>
 </li>
-<li><a href="#assembly-installing-cost-management">Configuring cost management</a>
+<li><a href="#assembly-installing-cost-management">2. Configuring cost management</a>
 <ul class="sectlevel2">
-<li><a href="#adding-sources_configuring">Add sources to cost management</a></li>
-<li><a href="#limiting-access_configuring">Limit access to cost management resources</a></li>
-<li><a href="#configure-tagging-next-step_configuring">Configure tagging for your sources</a></li>
-<li><a href="#configure-cost-models-next-step_configuring">Configure cost models to accurately report costs</a></li>
+<li><a href="#adding-sources_configuring">2.1. Add sources to cost management</a></li>
+<li><a href="#limiting-access_configuring">2.2. Limit access to cost management resources</a></li>
+<li><a href="#configure-tagging-next-step_configuring">2.3. Configure tagging for your sources</a></li>
+<li><a href="#configure-cost-models-next-step_configuring">2.4. Configure cost models to accurately report costs</a></li>
 </ul>
 </li>
-<li><a href="#assembly-using-cost-management">Using Cost Management</a>
+<li><a href="#assembly-using-cost-management">3. Using Cost Management</a>
 <ul class="sectlevel2">
-<li><a href="#cost-explorer-next-step_using-cost-management">Use the Cost Explorer to visualize your costs</a></li>
+<li><a href="#cost-explorer-next-step_using-cost-management">3.1. Use the Cost Explorer to visualize your costs</a></li>
 </ul>
 </li>
+<li><a href="#proc-providing-feedback-on-redhat-documentation">Providing feedback on Red Hat Cost Management documentation</a></li>
 </ul>
 </div>
 </div>
 <div id="content">
 <div class="sect1">
-<h2 id="assembly-introduction-cost-management">Introduction to cost management</h2>
+<h2 id="assembly-introduction-cost-management">1. Introduction to cost management</h2>
 <div class="sectionbody">
 <div class="paragraph _abstract">
 <p>This document provides instructions to begin using cost management, including prerequisites and instructions for connecting your cloud environments, and configuring users and permissions.</p>
@@ -626,7 +627,7 @@ div.unbreakable { page-break-inside: avoid; }
 <p>After completing the setup described in this guide, you will be able to track cost and usage data for your Amazon Web Services (AWS), Microsoft Azure, Google Cloud, and OpenShift Container Platform environments.</p>
 </div>
 <div class="sect2">
-<h3 id="about-cost-management_getting-started">About cost management</h3>
+<h3 id="about-cost-management_getting-started">1.1. About cost management</h3>
 <div class="paragraph _abstract">
 <p>Cost management is an OpenShift Container Platform service that enables you to better understand and track costs for clouds and containers. It is based on the upstream project Koku.</p>
 </div>
@@ -670,7 +671,7 @@ div.unbreakable { page-break-inside: avoid; }
 </div>
 </div>
 <div class="sect2">
-<h3 id="planning-cost-management">Planning for cost management</h3>
+<h3 id="planning-cost-management">1.2. Planning for cost management</h3>
 <div class="paragraph _abstract">
 <p>When configuring cost management for your needs, consider the scope of your environments that you want to manage costs for, and the users who will have access to the data.</p>
 </div>
@@ -726,7 +727,7 @@ div.unbreakable { page-break-inside: avoid; }
 </div>
 </div>
 <div class="sect1">
-<h2 id="assembly-installing-cost-management">Configuring cost management</h2>
+<h2 id="assembly-installing-cost-management">2. Configuring cost management</h2>
 <div class="sectionbody">
 <div class="paragraph _abstract">
 <p>Before you begin to use cost management, you must complete these tasks to properly configure the cost management application:</p>
@@ -749,7 +750,7 @@ div.unbreakable { page-break-inside: avoid; }
 </ul>
 </div>
 <div class="sect2">
-<h3 id="adding-sources_configuring">Add sources to cost management</h3>
+<h3 id="adding-sources_configuring">2.1. Add sources to cost management</h3>
 <div class="paragraph _abstract">
 <p>A source is a provider account that is connected to cost management to be monitored, for example, an OpenShift Container Platform deployment, or a cloud infrastructure provider. To use cost management to monitor your cloud costs, you must first connect a data source to the cost management application.</p>
 </div>
@@ -780,7 +781,7 @@ div.unbreakable { page-break-inside: avoid; }
 </div>
 </div>
 <div class="sect2">
-<h3 id="limiting-access_configuring">Limit access to cost management resources</h3>
+<h3 id="limiting-access_configuring">2.2. Limit access to cost management resources</h3>
 <div class="paragraph _abstract">
 <p>After adding and configuring sources in cost management, it is a good idea to limit access to cost data and resources. For example, you may not want users to have access to all cost data, but instead only data specific to their projects or organization. Using role-based access control, you can limit the visibility of resources involved in cost management reports. For example, you may want to restrict a user&#8217;s view to only AWS sources, instead of the entire environment.</p>
 </div>
@@ -789,7 +790,7 @@ div.unbreakable { page-break-inside: avoid; }
 </div>
 </div>
 <div class="sect2">
-<h3 id="configure-tagging-next-step_configuring">Configure tagging for your sources</h3>
+<h3 id="configure-tagging-next-step_configuring">2.3. Configure tagging for your sources</h3>
 <div class="paragraph _abstract">
 <p>The cost management application tracks cloud and infrastructure costs using tags (called labels in OpenShift), which you can refine to filter and attribute to resources. Tags in cost management allow you to organize your resources by cost and to allocate the costs to different parts of your cloud infrastructure.</p>
 </div>
@@ -825,7 +826,7 @@ div.unbreakable { page-break-inside: avoid; }
 </div>
 </div>
 <div class="sect2">
-<h3 id="configure-cost-models-next-step_configuring">Configure cost models to accurately report costs</h3>
+<h3 id="configure-cost-models-next-step_configuring">2.4. Configure cost models to accurately report costs</h3>
 <div class="paragraph _abstract">
 <p>Now that you have configured your sources to collect cost and usage data into cost management, you can configure cost models to associate prices to metrics and usage, and fine-tune the costs of running your cloud.</p>
 </div>
@@ -855,10 +856,10 @@ div.unbreakable { page-break-inside: avoid; }
 </div>
 </div>
 <div class="sect1">
-<h2 id="assembly-using-cost-management">Using Cost Management</h2>
+<h2 id="assembly-using-cost-management">3. Using Cost Management</h2>
 <div class="sectionbody">
 <div class="sect2 _abstract">
-<h3 id="cost-explorer-next-step_using-cost-management">Use the Cost Explorer to visualize your costs</h3>
+<h3 id="cost-explorer-next-step_using-cost-management">3.1. Use the Cost Explorer to visualize your costs</h3>
 <div class="paragraph _abstract">
 <p>The cost management <a href="https://console.redhat.com/openshift/cost-management/explorer">Cost Explorer</a> allows you to create custom graphs of time-scaled cost and usage information to better visualize and interpret your costs.</p>
 </div>
@@ -884,10 +885,71 @@ div.unbreakable { page-break-inside: avoid; }
 </div>
 </div>
 </div>
+<div class="sect1">
+<h2 id="proc-providing-feedback-on-redhat-documentation">Providing feedback on Red Hat Cost Management documentation</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>We appreciate your feedback on our documentation.
+To provide feedback, highlight text in a document and add comments.</p>
+</div>
+<div class="ulist">
+<div class="title">Prerequisites</div>
+<ul>
+<li>
+<p>You are logged in to the Red Hat Customer Portal.</p>
+</li>
+<li>
+<p>In the Red Hat Customer Portal, the document is in the <strong>Multi-page HTML</strong> viewing format.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<div class="title">Procedure</div>
+<p>To provide your feedback, perform the following steps:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Click the <strong>Feedback</strong> button in the top-right corner of the document to see existing feedback.</p>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<div class="title">Note</div>
+</td>
+<td class="content">
+The feedback feature is enabled only in the <strong>Multi-page HTML</strong> format.
+</td>
+</tr>
+</table>
+</div>
+</li>
+<li>
+<p>Highlight the section of the document where you want to provide feedback.</p>
+</li>
+<li>
+<p>Click the <strong>Add Feedback</strong> pop-up that appears near the highlighted text.</p>
+<div class="paragraph">
+<p>A text box appears in the feedback section on the right side of the page.</p>
+</div>
+</li>
+<li>
+<p>Enter your feedback in the text box and click <strong>Submit</strong>.</p>
+<div class="paragraph">
+<p>A documentation issue is created.</p>
+</div>
+</li>
+<li>
+<p>To view the issue, click the issue link in the feedback view.</p>
+</li>
+</ol>
+</div>
+</div>
+</div>
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2022-08-19 08:49:28 UTC
+Last updated 2022-08-19 09:38:38 UTC
 </div>
 </div>
 </body>
