@@ -794,7 +794,7 @@ div.unbreakable { page-break-inside: avoid; }
 <p>Select the JSON tab and paste the following content in the JSON policy text box:</p>
 <div class="listingblock">
 <div class="content">
-<pre>{
+<pre class="highlight"><code class="language-json" data-lang="json">{
   "Version": "2012-10-17",
   "Statement": [
     {
@@ -805,8 +805,8 @@ div.unbreakable { page-break-inside: avoid; }
         "s3:List*"
       ],
         "Resource": [
-        "arn:aws:s3:::bucket_name",
-        "arn:aws:s3:::bucket_name/*"
+        "arn:aws:s3:::&lt;your_bucket_name&gt;", <b class="conum">(1)</b>
+        "arn:aws:s3:::&lt;your_bucket_name&gt;/*"
       ]
     },
 
@@ -820,30 +820,30 @@ div.unbreakable { page-break-inside: avoid; }
       "Resource": "*"
     }
   ]
-}</pre>
+}</code></pre>
 </div>
 </div>
+<div class="colist arabic">
+<ol>
+<li>
+<p>Replace <code>&lt;your_bucket_name&gt;</code> in both locations with the name of the Amazon s3 bucket you configured previously.</p>
 </li>
 </ol>
 </div>
 </li>
-</ol>
-</div>
-<div class="olist loweralpha">
-<ol class="loweralpha" type="a">
 <li>
 <p>Provide a name for the policy and complete the creation of the policy. Keep the AWS IAM console open as you will need it for the next step.</p>
-<div class="olist arabic">
-<ol class="arabic">
+</li>
+</ol>
+</div>
+</li>
 <li>
 <p>In the <a href="https://console.redhat.com">Red Hat Hybrid Cloud Console</a> <strong>Sources</strong> wizard, click <strong>Next</strong> to move to the next screen.</p>
 </li>
 <li>
 <p>In the AWS IAM console, create a new IAM role:</p>
-</li>
-</ol>
-</div>
-</li>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
 <li>
 <p>For the type of trusted entity, select <strong>Another AWS account</strong>.</p>
 </li>
@@ -855,8 +855,10 @@ div.unbreakable { page-break-inside: avoid; }
 </li>
 <li>
 <p>Enter a role name (and description if desired) and finish creating the policy.</p>
-<div class="olist arabic">
-<ol class="arabic">
+</li>
+</ol>
+</div>
+</li>
 <li>
 <p>In the <a href="https://console.redhat.com">Red Hat Hybrid Cloud Console</a> <strong>Sources</strong> wizard, click <strong>Next</strong> to move to the next screen.</p>
 </li>
@@ -868,9 +870,6 @@ div.unbreakable { page-break-inside: avoid; }
 </li>
 <li>
 <p>Review the details and click <strong>Finish</strong> to add the AWS account to cost management.</p>
-</li>
-</ol>
-</div>
 </li>
 </ol>
 </div>
@@ -909,7 +908,7 @@ to obtain the display names of AWS member accounts if you are using consolidated
 <p>Select the JSON tab and paste the following content in the JSON policy text box:</p>
 <div class="listingblock">
 <div class="content">
-<pre>{
+<pre class="highlight"><code class="language-json" data-lang="json">{
   "Version": "2012-10-17",
   "Statement": [
     {
@@ -920,8 +919,8 @@ to obtain the display names of AWS member accounts if you are using consolidated
         "s3:List*"
       ],
       "Resource": [
-        "arn:aws:s3:::bucket",
-        "arn:aws:s3:::bucket/*"
+        "arn:aws:s3:::&lt;your_bucket_name&gt;", <b class="conum">(1)</b>
+        "arn:aws:s3:::&lt;your_bucket_name&gt;/*"
       ]
     },
     {
@@ -937,8 +936,15 @@ to obtain the display names of AWS member accounts if you are using consolidated
       "Resource": "*"
     }
   ]
-}</pre>
+}</code></pre>
 </div>
+</div>
+<div class="colist arabic">
+<ol>
+<li>
+<p>Replace <code>&lt;your_bucket_name&gt;</code> in both locations with the name of the Amazon s3 bucket you configured previously.</p>
+</li>
+</ol>
 </div>
 <div class="paragraph">
 <p>The remainder of the configuration steps are the same as in <a href="#enabling-aws-account-access_adding-aws-sources">Enabling minimal account access for cost and usage consumption</a></p>
@@ -1135,7 +1141,7 @@ to obtain the display names of AWS member accounts if you are using consolidated
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2022-08-05 09:24:09 UTC
+Last updated 2022-08-19 08:46:25 UTC
 </div>
 </div>
 </body>
