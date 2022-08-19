@@ -2,10 +2,10 @@
 :imagesdir: images
 :toc: left
 :toclevels: 3
-:numbered!:
+:numbered:
 :compat-mode:
 :experimental:
-:stylesheet: ../../stylesheets/panda.css
+
 
 // Custom attributes
 :koku:
@@ -16,3 +16,5 @@ include::attributes/sharedattributes.adoc[]
 include::assemblies/assembly-adding-azure-sources.adoc[leveloffset=+1]
 
 include::assemblies/assembly-cost-management-next-steps-azure.adoc[leveloffset=+1]
+
+include::modules/providing-feedback.adoc[]
