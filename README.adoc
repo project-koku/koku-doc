@@ -8,9 +8,9 @@ We welcome all contributors! See the Developer Certificate of Origin (DCO) for g
 
 To submit an issue please visit https://issues.redhat.com/projects/COST/
 
-This repository contains documentation written in AsciiDoc. For more information on AsciiDoc markup and syntax, see https://asciidoctor.org/docs/asciidoc-syntax-quick-reference/.
+This repository contains documentation written in AsciiDoc. For more information about AsciiDoc markup and syntax, see https://asciidoctor.org/docs/asciidoc-syntax-quick-reference/.
 
-To test build the documentation, use Asciidoctor. For more information on installing and using Asciidoctor, see https://asciidoctor.org/.
+To test build the documentation, use Asciidoctor. For more information about installing and using Asciidoctor, see https://asciidoctor.org/.
 
 
 == Modular documentation structure
