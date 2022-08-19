@@ -3,7 +3,7 @@
 <productnumber>2022</productnumber>
 <subtitle>Organize resources and allocate costs with tags</subtitle>
 <abstract>
-    <para>This guide explains how tagging works in cost management, and outlines strategies for managing your cost data with tags and labels.</para>
+    <para>This guide explains how tagging works in cost management, and outlines strategies for managing your cost data with tags and labels. Cost management is part of the <link xlink:type="simple" xlink:href="https://redhat.com/insights">Red Hat Insights</link> portfolio of services. The Red Hat Insights suite of advanced analytical tools helps you to identify and prioritize impacts on your operations, security, and business.</para>
 </abstract>
 <authorgroup>
     <orgname>Red Hat Customer Content Services </orgname>
