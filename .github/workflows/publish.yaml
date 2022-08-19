@@ -25,8 +25,7 @@ jobs:
             && asciidoctor -D community/ -o aws-source.html downstream/titles/adding_aws_source/master.adoc
             && asciidoctor -D community/ -o azure-source.html downstream/titles/adding_azure_source/master.adoc
             && asciidoctor -D community/ -o gcp-source.html downstream/titles/adding_gcp_source/master.adoc
-            && asciidoctor -D community/ -o ocp-source.html downstream/titles/adding_ocp_source/master.adoc
-          "
+            && asciidoctor -D community/ -o ocp-source.html downstream/titles/adding_ocp_source/master.adoc "
 
     - name: Copy Image folder to community/ dir
       run: sudo cp -a downstream/images/. community/images
