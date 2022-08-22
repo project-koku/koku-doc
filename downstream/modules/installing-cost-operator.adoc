@@ -27,6 +27,6 @@ endif::koku[]
 
 [IMPORTANT]
 ====
-If a proxy with a custom CA certificate is configured, additional configuration  is required to inject this certificate into {operator-formal}. 
-See, link:https://access.redhat.com/documentation/en-us/openshift_container_platform/4.10/html/operators/administrator-tasks#olm-inject-custom-ca_olm-configuring-proxy-support[_Injecting a custom CA certificate_] in the {openshift} documentation for details. 
+If a proxy with a custom CA certificate is configured, additional configuration is required to inject this certificate into {operator-formal}. 
+See, link:https://access.redhat.com/documentation/en-us/openshift_container_platform/4.11/html/operators/administrator-tasks#olm-inject-custom-ca_olm-configuring-proxy-support[_Injecting a custom CA certificate_] in the {openshift} documentation for details. 
 ====
