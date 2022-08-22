@@ -73,4 +73,4 @@ $ oc delete -f volume-shell.yaml
 [role="_additional-resources"]
 .Additional resources
 
-* For more information about persistent volume claims, see link:https://access.redhat.com/documentation/en-us/openshift_container_platform/4.10/html/storage/understanding-persistent-storage[Understanding persistent storage].
+* For more information about persistent volume claims, see link:https://access.redhat.com/documentation/en-us/openshift_container_platform/4.11/html/storage/understanding-persistent-storage[Understanding persistent storage].
