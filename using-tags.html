@@ -604,7 +604,11 @@ div.unbreakable { page-break-inside: avoid; }
 <ul class="sectlevel2">
 <li><a href="#how-cost-associates-tags_configuring-tags-and-labels">3.1. How cost management associates tags</a>
 <ul class="sectlevel3">
-<li><a href="#_tag_matching_hierarchy_in_cost_management">3.1.1. Tag matching hierarchy in cost management</a></li>
+<li><a href="#tag-matching-hierarchy_configuring-tags-and-labels">3.1.1. Tag matching hierarchy in cost management</a></li>
+<li><a href="#understanding-openshift-label-inheritance-in-cost-management_configuring-tags-and-labels">3.1.2. OpenShift label inheritance in cost management</a></li>
+<li><a href="#direct-resource-matching_configuring-tags-and-labels">3.1.3. Direct resource matching (instance ID)</a></li>
+<li><a href="#special-openshift-tags_configuring-tags-and-labels">3.1.4. Special OpenShift tags</a></li>
+<li><a href="#custom-tags_configuring-tags-and-labels">3.1.5. Custom tags</a></li>
 </ul>
 </li>
 <li><a href="#assembly-configuring-tags-sources_configuring-tags-and-labels">3.2. Configuring tags on your sources</a>
@@ -847,7 +851,7 @@ div.unbreakable { page-break-inside: avoid; }
 <p>By default, cost management tracks AWS compute usage and costs by associating the Amazon EC2 instance ID or Azure virtual machine instance ID with the OpenShift Container Platform node running on that instance.</p>
 </div>
 <div class="sect3">
-<h4 id="_tag_matching_hierarchy_in_cost_management">3.1.1. Tag matching hierarchy in cost management</h4>
+<h4 id="tag-matching-hierarchy_configuring-tags-and-labels">3.1.1. Tag matching hierarchy in cost management</h4>
 <div class="paragraph">
 <p>To identify your OpenShift resources running on AWS or Azure instances, cost management matches tags between sources in the following order:</p>
 </div>
@@ -864,8 +868,24 @@ div.unbreakable { page-break-inside: avoid; }
 </li>
 </ol>
 </div>
-<div class="sect4">
-<h5 id="_direct_resource_matching_instance_id">Direct resource matching (instance ID)</h5>
+</div>
+<div class="sect3">
+<h4 id="understanding-openshift-label-inheritance-in-cost-management_configuring-tags-and-labels">3.1.2. OpenShift label inheritance in cost management</h4>
+<div class="paragraph">
+<p>OpenShift labels follow an inheritance pattern from node &#8594; project &#8594; pod. Key/value pairs from node and project labels are inherited at the pod level in cost management. This allows you to associate costs at the node or project level without labeling every pod in your cluster.</p>
+</div>
+<div class="paragraph">
+<p>If a key already exists in the pod, then the value for that key in the pod will remain. Cost management will not overwrite the pod value with the project or node value. This same logic applies from node to project.</p>
+</div>
+<div class="paragraph">
+<p><em>Example 1: Your organization assigns the label <code>app</code> and the value <code>costpod1</code> to a pod. The project for this pod has the label <code>app</code> but the value <code>cost-project</code>. These resources are running on a node with the label <code>us-east-1</code>. The label <code>app</code> and the value <code>costpod1</code> will remain associated with the pod as it is the lowest level.</em></p>
+</div>
+<div class="paragraph">
+<p><em>Example 2: Your organization has a project with the label <code>app</code> and the value <code>cost-project</code>. This project has three pods running and they have not been labeled. Cost management will associate the label <em>app</em> and the value <code>cost-project</code> to these pods.</em></p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="direct-resource-matching_configuring-tags-and-labels">3.1.3. Direct resource matching (instance ID)</h4>
 <div class="paragraph">
 <p>The sources apply these identifiers automatically. This form of tagging provides a direct link between Azure or AWS instances and OpenShift nodes.</p>
 </div>
@@ -873,8 +893,8 @@ div.unbreakable { page-break-inside: avoid; }
 <p>AWS assigns every EC2 instance a resource identifier (a number such as <code>i-01f44b3d90ef90055</code>). OpenShift nodes are matched directly to the AWS EC2 instance the cluster is running on using the AWS resource identifier. The OpenShift reports in cost management (generated from Prometheus data) include this identifier for nodes. Similarly in Azure, each virtual machine instance ID is included in the OpenShift reports for cost management.</p>
 </div>
 </div>
-<div class="sect4">
-<h5 id="_special_openshift_tags">Special OpenShift tags</h5>
+<div class="sect3">
+<h4 id="special-openshift-tags_configuring-tags-and-labels">3.1.4. Special OpenShift tags</h4>
 <div class="paragraph">
 <p>There are three special-case AWS tags you can use to associate cost with OpenShift:</p>
 </div>
@@ -925,8 +945,8 @@ div.unbreakable { page-break-inside: avoid; }
 </tbody>
 </table>
 </div>
-<div class="sect4">
-<h5 id="_custom_tags">Custom tags</h5>
+<div class="sect3">
+<h4 id="custom-tags_configuring-tags-and-labels">3.1.5. Custom tags</h4>
 <div class="paragraph">
 <p>You can use any key:value combination as tags, and cost management will associate identical tag key and values together. You can then group costs by tag key, account, service, region, and more to view your costs and charge for that tag.</p>
 </div>
@@ -957,7 +977,6 @@ div.unbreakable { page-break-inside: avoid; }
 </tr>
 </tbody>
 </table>
-</div>
 </div>
 </div>
 <div class="sect2">
@@ -1584,7 +1603,7 @@ The feedback feature is enabled only in the <strong>Multi-page HTML</strong> for
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2022-08-22 08:28:13 UTC
+Last updated 2022-08-23 13:40:58 UTC
 </div>
 </div>
 </body>
