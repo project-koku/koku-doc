@@ -1,0 +1,13 @@
+// Module included in the following assemblies:
+//
+// assembly-configuring-tags-and-labels-in-cost-management.adoc
+
+:_content-type: CONCEPT
+
+[id="direct-resource-matching_{context}"]
+= Direct resource matching (instance ID)
+
+The sources apply these identifiers automatically. This form of tagging provides a direct link between Azure or AWS instances and OpenShift nodes.
+
+
+AWS assigns every EC2 instance a resource identifier (a number such as `i-01f44b3d90ef90055`). OpenShift nodes are matched directly to the AWS EC2 instance the cluster is running on using the AWS resource identifier. The OpenShift reports in {product-title} (generated from Prometheus data) include this identifier for nodes. Similarly in Azure, each virtual machine instance ID is included in the OpenShift reports for {product-title}.

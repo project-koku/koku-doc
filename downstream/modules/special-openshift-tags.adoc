@@ -1,0 +1,32 @@
+// Module included in the following assemblies:
+//
+// assembly-configuring-tags-and-labels-in-cost-management.adoc
+
+:_content-type: CONCEPT
+:experimental:
+
+[id="special-openshift-tags_{context}"]
+= Special OpenShift tags
+
+There are three special-case AWS tags you can use to associate cost with OpenShift:
+
+* `openshift_cluster`
+* `openshift_node`
+* `openshift_project`
+
+These tags have matching priority over custom tags, and are especially useful in differentiating the costs of different OpenShift clusters running on the same AWS instance.
+
+To use this tagging method to identify an OpenShift cluster, tag your AWS instance with the key `openshift_cluster`, and provide the OpenShift source name as the value. In the following example, the name of OpenShift source in the {product-title} application is `dev-cluster`:
+
+
+.Example: Special OpenShift tags
+[options="header"]
+|====
+|Source and resource type|Key|Value
+|AWS resource (RDS)|`openshift_cluster`|`dev-cluster`
+|OpenShift cluster|
+No tags needed. This will match if the name of the OpenShift source in {product-title} is  `dev-cluster`.
+
+|No tags needed.
+|====
+

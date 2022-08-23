@@ -1,0 +1,19 @@
+// Module included in the following assemblies:
+//
+// assembly-configuring-tags-and-labels-in-cost-management.adoc
+
+:_content-type: CONCEPT
+:experimental:
+
+[id="custom-tags_{context}"]
+= Custom tags
+
+You can use any key:value combination as tags, and {product-title} will associate identical tag key and values together. You can then group costs by tag key, account, service, region, and more to view your costs and charge for that tag.
+
+.Example: Custom tags
+[options="header"]
+|====
+|Source and resource type|Key|Value
+|AWS resource (RDS)|`team`|`engineering`
+|OpenShift pod|`team`|`engineering`
+|====
