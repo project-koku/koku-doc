@@ -28,7 +28,7 @@ Using the information from the previous steps, you can now add your Google Cloud
 . Enter your *Project ID* and click *Next*.
 . Click btn:[Next] to verify you have created an *Identity and Access Management (IAM) role*.
 . Click btn:[Next] to verify you have created a new *billing service account user* and assigned the correct role.
-. Enter your *BigQuery Dataset ID* and click btn:[Next]
+. Enter your *BigQuery Dataset ID* and click btn:[Next] The Dataset ID should *NOT* include your project ID
 . Click btn:[Next] to verify you have enabled your *BigQuery billing export*.
 . Review the details and click btn:[Add]
 
