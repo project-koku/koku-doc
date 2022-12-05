@@ -12,15 +12,38 @@ Create a recurring task to export your cost data on a daily basis automatically 
 
 [NOTE]
 ====
-Cost management requires a data export from a *Subscription* level scope. You must create the cost data export from *Subscriptions*. For more information about how scopes work in Azure, see link:https://docs.microsoft.com/en-us/azure/cost-management-billing/costs/understand-work-scopes[_Understand and work with scopes_] in the Azure documentation. 
+Cost management requires a data export from a *Subscription* level scope. You must create the cost data export from *Subscriptions*. For more information about how scopes work in Azure, see link:https://docs.microsoft.com/en-us/azure/cost-management-billing/costs/understand-work-scopes[_Understand and work with scopes_] in the Azure documentation.
 ====
 
-. In Azure, add a new export as described in the instructions in the link:https://docs.microsoft.com/en-us/azure/cost-management/tutorial-export-acm-data[Azure article] _Create and manage exported data_.
-* For *Export type*, select *Daily export of billing-period-to-date costs*.
-* For *Storage account*, select the account you created earlier.
-* Enter any value for the container name and directory path for the export. These values provide the tree structure in the storage account where report files are stored.
-* Click *Run now* to start exporting data to the Azure storage container.
+. In the Azure Portal, navigate to *All Services > Cost Management + Billing|Cost Management*
+. Under *Settings*, click *Exports*
+. At the top of the *Exports* window, ensure the selected scope is a subscription, not a resource group.
+
++
+image::cost-management-exports-scope.png[width=80%,align="center"]
+
+    * To change the scope, click the Scope button
+    * In the *Select scope* panel, click on the correct subscription
+    * Click *Select this subscription*
+
++
+image::select-scope-flyout.png[width=60%,align="center"]
+
+    * Verify subscription is now set as the scope for the export
+
+. Click *Add*.
+
+    * Enter any name for the export
+    * For *Export type*, select *Daily export of month-to-date costs*.
+    * For *Subscription*, select the same subscription as earlier.
+    * For *Storage account*, select the account created earlier.
+    * Enter any value for the container name and directory path for the export. These values provide the tree structure in the storage account where report files are stored.
+
+. Click *Create*.
+. In the *Exports* window, select the newly created export and click *Run now* to start exporting data to the Azure storage container.
 . In the {platform-title} *Sources* wizard, click *Next* when you have created the export schedule and review the source details.
 . Click *Finish* to complete adding the Azure source to {product-title}.
 
 After the schedule is created, {product-title} will begin polling Azure for cost data, which will appear on the {product-title} dashboard ({link-cost-management}).
+
+See link:https://docs.microsoft.com/en-us/azure/cost-management/tutorial-export-acm-data[Create and manage exported data] from the Azure documentation for more details.
