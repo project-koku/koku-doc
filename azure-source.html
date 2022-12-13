@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="generator" content="Asciidoctor 2.0.17">
+<meta name="generator" content="Asciidoctor 2.0.18">
 <title>Adding a Microsoft Azure source to cost management</title>
 <style>
 @import url(//openshift.redhat.com/app/assets-20130701203230/overpass.css);
@@ -778,23 +778,71 @@ div.unbreakable { page-break-inside: avoid; }
 <div class="olist arabic">
 <ol class="arabic">
 <li>
-<p>In Azure, add a new export as described in the instructions in the <a href="https://docs.microsoft.com/en-us/azure/cost-management/tutorial-export-acm-data">Azure article</a> <em>Create and manage exported data</em>.</p>
+<p>In the Azure Portal, navigate to <strong>All Services &gt; Cost Management + Billing|Cost Management</strong></p>
+</li>
+<li>
+<p>Under <strong>Settings</strong>, click <strong>Exports</strong></p>
+</li>
+<li>
+<p>At the top of the <strong>Exports</strong> window, ensure the selected scope is a subscription, not a resource group.</p>
+<div class="imageblock text-center">
+<div class="content">
+<img src="images/cost-management-exports-scope.png" alt="cost management exports scope" width="80%">
+</div>
+</div>
 <div class="ulist">
 <ul>
 <li>
-<p>For <strong>Export type</strong>, select <strong>Daily export of billing-period-to-date costs</strong>.</p>
+<p>To change the scope, click the Scope button</p>
 </li>
 <li>
-<p>For <strong>Storage account</strong>, select the account you created earlier.</p>
+<p>In the <strong>Select scope</strong> panel, click on the correct subscription</p>
+</li>
+<li>
+<p>Click <strong>Select this subscription</strong></p>
+</li>
+</ul>
+</div>
+<div class="imageblock text-center">
+<div class="content">
+<img src="images/select-scope-flyout.png" alt="select scope flyout" width="60%">
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Verify subscription is now set as the scope for the export</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Click <strong>Add</strong>.</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Enter any name for the export</p>
+</li>
+<li>
+<p>For <strong>Export type</strong>, select <strong>Daily export of month-to-date costs</strong>.</p>
+</li>
+<li>
+<p>For <strong>Subscription</strong>, select the same subscription as earlier.</p>
+</li>
+<li>
+<p>For <strong>Storage account</strong>, select the account created earlier.</p>
 </li>
 <li>
 <p>Enter any value for the container name and directory path for the export. These values provide the tree structure in the storage account where report files are stored.</p>
 </li>
-<li>
-<p>Click <strong>Run now</strong> to start exporting data to the Azure storage container.</p>
-</li>
 </ul>
 </div>
+</li>
+<li>
+<p>Click <strong>Create</strong>.</p>
+</li>
+<li>
+<p>In the <strong>Exports</strong> window, select the newly created export and click <strong>Run now</strong> to start exporting data to the Azure storage container.</p>
 </li>
 <li>
 <p>In the <a href="https://console.redhat.com">Red Hat Hybrid Cloud Console</a> <strong>Sources</strong> wizard, click <strong>Next</strong> when you have created the export schedule and review the source details.</p>
@@ -806,6 +854,9 @@ div.unbreakable { page-break-inside: avoid; }
 </div>
 <div class="paragraph">
 <p>After the schedule is created, cost management will begin polling Azure for cost data, which will appear on the cost management dashboard (<a href="https://console.redhat.com/openshift/cost-management/">console.redhat.com/openshift/cost-management/</a>).</p>
+</div>
+<div class="paragraph">
+<p>See <a href="https://docs.microsoft.com/en-us/azure/cost-management/tutorial-export-acm-data">Create and manage exported data</a> from the Azure documentation for more details.</p>
 </div>
 </div>
 </div>
@@ -1000,7 +1051,7 @@ The feedback feature is enabled only in the <strong>Multi-page HTML</strong> for
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2022-09-15 14:11:08 UTC
+Last updated 2022-12-13 16:27:16 UTC
 </div>
 </div>
 </body>
